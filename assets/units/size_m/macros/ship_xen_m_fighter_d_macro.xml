@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="ship_xen_m_fighter_d_macro" class="ship_m">
+    <component ref="ship_xen_m_fighter_d" />
+    <properties>
+      <identification name="{20403,4}" description="{48001,4}" icon="ship_m_bomber" />
+      <software>
+        <software ware="software_dockmk2" compatible="1" />
+        <software ware="software_flightassistmk1" default="1" />
+        <software ware="software_scannerlongrangemk1" default="1" />
+        <software ware="software_scannerlongrangemk2" compatible="1" />
+        <software ware="software_scannerobjectmk1" default="1" />
+        <software ware="software_scannerobjectmk2" compatible="1" />
+        <software ware="software_targetmk1" default="1" />
+        <software ware="software_trademk1" compatible="1" />
+      </software>
+      <hull max="51500" />
+      <secrecy level="2" />
+      <purpose primary="fight" />
+      <people capacity="0" />
+      <physics mass="34.9">
+        <inertia pitch="11.4" yaw="11.4" roll="11.4" />
+        <drag forward="8.5" reverse="25.777" horizontal="19" vertical="19" pitch="21" yaw="21" roll="21" />
+      </physics>
+      <thruster tags="medium" /> 
+      <loadouts>
+        <loadout id="default">
+          <macros>
+            <engine macro="engine_xen_m_combat_01_mk1_macro" path="../con_engine_01" />
+            <shield macro="shield_xen_m_standard_01_mk1_macro" path="../con_shield_01" optional="1" />
+            <shield macro="shield_xen_m_standard_01_mk1_macro" path="../con_shield_02" optional="1" />
+            <shield macro="ishield_xen_m_fighter_d_macro" path="../con_ishield_01" optional="1" />
+            <turret macro="turret_xen_m_laser_01_mk1_macro" path="../con_turret_bottom" optional="1" />
+            <turret macro="turret_xen_m_laser_01_mk1_macro" path="../con_turret_top_01" optional="1" />
+            <turret macro="turret_xen_m_laser_01_mk1_macro" path="../con_turret_top_02" optional="1" />
+            <turret macro="turret_xen_m_laser_01_mk1_macro" path="../con_turret_top_03" optional="1" />	
+            <weapon macro="weapon_xen_m_laser_01_mk1_macro" path="../con_primaryweapon_01" optional="1" />
+            <weapon macro="weapon_xen_m_laser_01_mk1_macro" path="../con_primaryweapon_02" optional="1" />		
+          </macros>
+          <ammunition>
+            <ammunition macro="countermeasure_flares_01_macro" min="16" max="16" optional="1" />
+          </ammunition>
+          <virtualmacros>
+            <thruster macro="thruster_gen_m_combat_01_mk3_macro" />
+          </virtualmacros>
+        </loadout>
+      </loadouts>
+      <capture allow="0" />
+      <ship type="gunboat" />	 	  
+    </properties>
+    <connections>
+      <connection ref="con_cockpit">
+        <macro ref="cockpit_gen_virtual_01_macro" connection="ship" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

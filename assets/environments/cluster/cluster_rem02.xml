@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<components>
+	<component name="Cluster_REM02" class="celestialbody">
+		<source geometry="extensions\reemergence\assets\environments\cluster\Cluster_rem02_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="255" g="246" b="230" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_mars" trigger="1" intensity="1.68" specularintensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="-3.045196E+08" y="5.369502E+07" z="0"/>
+						</offset>
+					</omni>
+					<ambient name="XU Ambient001" r="27" g="31" b="34" range="1E+11" intensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="5.922367E+07" y="0" z="7.721783E+07"/>
+						</offset>
+					</ambient>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="celestialbody">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="part_c03_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.p1_env_bg_vertexcolor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.52497E+08" y="4.525E+08" z="4.52497E+08"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part  ">
+				<offset>
+					<position x="1.226121E+07" y="0" z="8100438"/>
+					<quaternion qx="-0" qy="-6.975656E-02" qz="-0" qw="-0.9975641"/>
+				</offset>
+				<parts>
+					<part name="Background">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.backgroundstars"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.255449E+08" y="4.25545E+08" z="4.25545E+08"/>
+							<center x="76.17188" y="31.25" z="-0.9765625"/>
+						</size>
+						<pivot>
+							<offset>
+								<position x="0" y="-50000" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part  ">
+				<offset>
+					<position x="1.226121E+07" y="0" z="8100438"/>
+					<quaternion qx="-0" qy="-6.975656E-02" qz="-0" qw="-0.9975641"/>
+				</offset>
+				<parts>
+					<part name="background_milkyway">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1terranenv.milkyway_dim"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.069424E+08" y="4.069425E+08" z="4.069425E+08"/>
+							<center x="76.17188" y="31.25" z="-0.9765625"/>
+						</size>
+						<pivot>
+							<offset>
+								<position x="0" y="-50000" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part  ">
+				<offset>
+					<position x="1531058" y="-2525000" z="4340701"/>
+				</offset>
+				<parts>
+					<part name="part_mars">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1terranenv.planet_mars"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3396000" y="3396000" z="3396000"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part  ">
+				<offset>
+					<position x="1531058" y="-2525000" z="4340701"/>
+				</offset>
+				<parts>
+					<part name="part_mars_atmo">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1terranenv.atmo_planet_mars"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3446000" y="3446000" z="3446000"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection06" tags="part animation  ">
+				<offset>
+					<position x="-4226835" y="-162345.1" z="1.664145E+07"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="108000"/>
+				</animations>
+				<parts>
+					<part name="part_deimos">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1terranenv.planet_moon_deimos"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.137176E+07" y="207979.8" z="1.136659E+07"/>
+							<center x="6758419" y="162017.1" z="-9300913"/>
+						</size>
+						<size_raw>
+							<max x="12300.5" y="9725.488" z="8607.639"/>
+							<center x="478.0273" y="-331.8634" z="52.73438"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection07" tags="part animation  ">
+				<offset>
+					<position x="-2058751" y="103050.2" z="7051865"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="108000"/>
+				</animations>
+				<parts>
+					<part name="part_phobos">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1terranenv.planet_moon_phobos"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4602966" y="113900.5" z="4606266"/>
+							<center x="4590047" y="-102894.7" z="290876.5"/>
+						</size>
+						<size_raw>
+							<max x="12878.66" y="10844.07" z="14287.67"/>
+							<center x="-40.03906" y="161.7966" z="608.8867"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+		</connections>
+	</component>
+</components>

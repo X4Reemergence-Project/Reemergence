@@ -1,0 +1,1872 @@
+<?xml version="1.0"?>
+<components>
+	<component name="Cluster_rem28" class="celestialbody">
+		<source geometry="extensions\reemergence\assets\environments\cluster\Cluster_rem28_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="244" g="47" b="3" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_c_423" trigger="1" intensity="2.1" specularintensity="1">
+						<animations>
+							<animation name="loop" start="0" end="10000"/>
+						</animations>
+						<lightanimations>
+							<lightanimation name="intensity" controller="bezier_float">
+								<key frame="0" value="1.5" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="9899" value="0.35" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="9951" value="3" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="9998" value="1.5" in_tangent_type="auto" out_tangent_type="auto"/>
+							</lightanimation>
+						</lightanimations>
+						<offset>
+							<position x="0" y="0" z="-1.546239E+08"/>
+						</offset>
+					</omni>
+					<ambient name="XU Ambient001" r="24" g="1" b="1" range="1E+11" intensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="5.922367E+07" y="0" z="7.721783E+07"/>
+						</offset>
+					</ambient>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="celestialbody">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+				</offset>
+				<parts>
+					<part name="part_c03_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.p1_env_bg_vertexcolor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.52497E+08" y="4.525E+08" z="4.52497E+08"/>
+							<center x="0" y="0" z="15.625"/>
+						</size>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>			
+			<connection name="Connection02" tags="part  " parent="part_c03_bg">
+				<offset>
+					<position x="5289843" y="-1.654493E+07" z="-7424375"/>
+				</offset>
+				<parts>
+					<part name="mediumstar001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.190706E+08" y="3.616261E+08" z="4.29686E+08"/>
+							<center x="0.9765625" y="9.765625" z="15.625"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part  " parent="part_c03_bg">
+				<offset>
+					<position x="-1.168802E+07" y="1.581795E+07" z="1906500"/>
+					<quaternion qx="-3.106704E-07" qy="3.106704E-07" qz="-0.9263279" qw="0.3767182"/>
+				</offset>
+				<parts>
+					<part name="nebula001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.778657E+08" y="1.925481E+08" z="3.917571E+08"/>
+							<center x="4.882813" y="-22.46094" z="15.625"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part  " parent="part_c03_bg">
+				<offset>
+					<position x="-1.168802E+07" y="1.581795E+07" z="1906500"/>
+					<quaternion qx="-0.7539044" qy="-0.4647239" qz="0.3953202" qw="-0.2436839"/>
+				</offset>
+				<parts>
+					<part name="nebula002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.778657E+08" y="1.925482E+08" z="3.917571E+08"/>
+							<center x="5.859375" y="-39.0625" z="31.25"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection06" tags="part  " parent="part_c03_bg">
+				<offset>
+					<position x="1.226121E+07" y="0" z="8100438"/>
+					<quaternion qx="-0" qy="6.975656E-02" qz="-0" qw="0.997564"/>
+				</offset>
+				<parts>
+					<part name="Background">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.backgroundstars"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.255449E+08" y="4.25545E+08" z="4.25545E+08"/>
+							<center x="46.875" y="31.25" z="15.625"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection07" tags="part animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="10000"/>
+				</animations>
+				<parts>
+					<part name="part_sun">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.381456E+07" y="2.383656E+07" z="2.381481E+07"/>
+							<center x="-1.953125" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.604388E+07" y="1.605871E+07" z="1.604405E+07"/>
+							<center x="-1.464844" y="-0.4882813" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="9998" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="Connection09" tags="part nocollision  " parent="part_sun">
+				<offset>
+					<position x="17.57813" y="0" z="0"/>
+				</offset>
+				<parts>
+					<part name="sphere_smoothclouds">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.42204E+07" y="2.421913E+07" z="2.421763E+07"/>
+							<center x="5.859375" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.63173E+07" y="1.631644E+07" z="1.631543E+07"/>
+							<center x="-0.9765625" y="0" z="15.625"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection10" tags="part nocollision animation textureanimation  " parent="part_sun">
+				<offset>
+					<position x="1.757813E-02" y="0" z="0"/>
+					<quaternion qx="-6.470971E-02" qy="0.0260955" qz="1.69276E-03" qw="0.9975615"/>
+				</offset>
+				<parts>
+					<part name="sphere_smoothclouds2">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.125959E+09" y="1.125935E+09" z="1.125891E+09"/>
+							<center x="7794.922" y="-45125" z="5421.875"/>
+						</size>
+						<size_raw>
+							<max x="1.624721E+07" y="1.624762E+07" z="1.624633E+07"/>
+							<center x="111.3281" y="-649.4141" z="78.125"/>
+						</size_raw>
+            <uv_animations>
+              <uv_animation mapchannel="2">
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="0" value="0"/>
+                  <key frame="9850" value="2"/>
+                  <key frame="10000" value="0"/>
+                </uv_property>
+              </uv_animation>
+            </uv_animations>
+					</part>
+				</parts>
+				<animations>
+					<animation name="loop" start="0" end="10000"/>
+				</animations>
+			</connection>
+			<connection name="Connection11" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="1.218296E+07" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="1.218296E+07" y="0" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.6833245"/>
+									<key frame="1000" value="1.316676"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection12" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-8.715573E-02" qw="-0.9961947"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="1.247864E+07" y="2200321" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="1.247864E+07" y="2200321" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.4331466"/>
+									<key frame="1000" value="1.566853"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection13" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.1736482" qw="-0.9848078"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane003">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342762" z="0.1461168"/>
+							<center x="8621568" y="3137994" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="8621566" y="3137994" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-2.039076E-02"/>
+									<key frame="1000" value="1.979609"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection14" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.258819" qw="-0.9659259"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane004">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="1.037342E+07" y="5989095" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="1.037342E+07" y="5989094" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.9217327"/>
+									<key frame="1000" value="1.078267"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection15" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.3420201" qw="-0.9396926"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane005">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="9956261" y="8354293" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="9956258" y="8354291" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.3379363"/>
+									<key frame="1000" value="1.662064"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection16" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.4226184" qw="-0.9063078"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane006">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342765" z="0.1461168"/>
+							<center x="7020738" y="8366988" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="7020739" y="8366987" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.4466148"/>
+									<key frame="1000" value="1.553385"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection17" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.4999999" qw="-0.8660254"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane007">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="6139604" y="1.06341E+07" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="6139603" y="1.06341E+07" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.6885504"/>
+									<key frame="1000" value="1.31145"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection18" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.5735765" qw="-0.819152"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane008">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="3518839" y="9667921" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="3518839" y="9667921" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.7200486"/>
+									<key frame="1000" value="1.279951"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection19" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.6427875" qw="-0.7660446"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane009">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="2056419" y="1.166251E+07" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="2056419" y="1.166251E+07" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-3.272153E-02"/>
+									<key frame="1000" value="1.967278"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection20" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.7071066" qw="-0.7071069"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane010">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="3.173828" y="1.049747E+07" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="3.295898" y="1.049747E+07" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.2352493"/>
+									<key frame="1000" value="1.764751"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection21" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.7660446" qw="-0.6427873"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane011">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="-1993494" y="1.130569E+07" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-1993494" y="1.130569E+07" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.3467365"/>
+									<key frame="1000" value="1.653263"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection22" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.8191522" qw="-0.5735762"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane012">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-3874302" y="1.064457E+07" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-3874301" y="1.064457E+07" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.1866833"/>
+									<key frame="1000" value="1.813317"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection23" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.8660254" qw="-0.5"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane013">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342765" z="0.1461168"/>
+							<center x="-5876200" y="1.017789E+07" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-5876200" y="1.017789E+07" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.8986392"/>
+									<key frame="1000" value="1.101361"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection24" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9063079" qw="-0.4226181"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane014">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="-8294236" y="9884686" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-8294237" y="9884686" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.6842757"/>
+									<key frame="1000" value="1.315724"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection25" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9396927" qw="-0.3420199"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane015">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="-8062115" y="6764925" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="-8062115" y="6764925" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-9.776728E-02"/>
+									<key frame="1000" value="1.902233"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection26" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9659259" qw="-0.2588188"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane016">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="-9626070" y="5557615" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-9626071" y="5557615" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.6602126"/>
+									<key frame="1000" value="1.339787"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection27" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9848078" qw="-0.173648"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane017">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-9619340" y="3501160" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-9619342" y="3501160" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-7.924439E-02"/>
+									<key frame="1000" value="1.920756"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection28" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9961947" qw="-8.715557E-02"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane018">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-8723671" y="1538224" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-8723671" y="1538224" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.6775696"/>
+									<key frame="1000" value="1.32243"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection29" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-1" qw="4.371139E-08"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane019">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342766" z="1.229902"/>
+							<center x="-1.072567E+07" y="0.7324219" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-1.072567E+07" y="2.319336" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.8937877"/>
+									<key frame="1000" value="1.106212"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection30" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9961947" qw="8.715545E-02"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane020">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342766" z="0.1461168"/>
+							<center x="-1.232684E+07" y="-2173547" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-1.232684E+07" y="-2173549" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.1761651"/>
+									<key frame="1000" value="1.823835"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection31" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9848078" qw="0.1736479"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane021">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342765" z="0.1461168"/>
+							<center x="-8856513" y="-3223501" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-8856512" y="-3223502" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.2103027"/>
+									<key frame="1000" value="1.789697"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection32" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9659259" qw="0.2588188"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane022">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342766" z="0.1461168"/>
+							<center x="-9944689" y="-5741563" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-9944688" y="-5741565" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.4078364"/>
+									<key frame="1000" value="1.592164"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection33" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9396927" qw="0.3420199"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane023">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342766" z="0.1461168"/>
+							<center x="-8097802" y="-6794856" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-8097800" y="-6794858" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.1789702"/>
+									<key frame="1000" value="1.82103"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection34" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.9063079" qw="0.4226181"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane024">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342766" z="0.1461168"/>
+							<center x="-5870591" y="-6996289" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-5870589" y="-6996291" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.2957576"/>
+									<key frame="1000" value="1.704242"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection35" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="-0.8660256" qw="0.4999996"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane025">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342765" z="0.1461168"/>
+							<center x="-4998495" y="-8657643" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-4998494" y="-8657643" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.9208888"/>
+									<key frame="1000" value="1.079111"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection36" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.8191522" qw="-0.5735762"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane026">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342766" z="0.1461168"/>
+							<center x="-3497451" y="-9609162" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="-3497449" y="-9609162" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.5754647"/>
+									<key frame="1000" value="1.424535"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection37" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.7660447" qw="-0.6427873"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane027">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342766" z="0.1461168"/>
+							<center x="-2240512" y="-1.270656E+07" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="-2240510" y="-1.270656E+07" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.381824"/>
+									<key frame="1000" value="1.618176"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection38" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.7071065" qw="-0.707107"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane028">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342765" z="0.1461168"/>
+							<center x="-4.882813" y="-1.216804E+07" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="-2.807617" y="-1.216804E+07" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.7139274"/>
+									<key frame="1000" value="1.286073"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection39" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.6427878" qw="-0.7660442"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane029">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="1640821" y="-9305598" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="1640823" y="-9305597" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.3872192"/>
+									<key frame="1000" value="1.612781"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection40" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.5735767" qw="-0.8191519"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane030">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342766" z="0.1461168"/>
+							<center x="4186839" y="-1.150327E+07" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="4186841" y="-1.150327E+07" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.1323001"/>
+									<key frame="1000" value="1.8677"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection41" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.5000002" qw="-0.8660253"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane031">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342765" z="0.1461168"/>
+							<center x="5289538" y="-9161760" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="5289539" y="-9161758" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-3.836405E-02"/>
+									<key frame="1000" value="1.961636"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection42" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.4226185" qw="-0.9063077"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane032">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="7909630" y="-9426338" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="7909632" y="-9426338" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-5.291121E-02"/>
+									<key frame="1000" value="1.947089"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection43" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.3420205" qw="-0.9396925"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane033">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="7505537" y="-6297902" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="7505538" y="-6297901" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.4704699"/>
+									<key frame="1000" value="1.52953"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection44" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.2588194" qw="-0.9659258"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane034">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342765" z="0.1461168"/>
+							<center x="7960538" y="-4596025" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="7960537" y="-4596024" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.7265918"/>
+									<key frame="1000" value="1.273408"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection45" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="0.1736485" qw="-0.9848077"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane035">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342766" z="0.1461168"/>
+							<center x="1.125917E+07" y="-4098013" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342764" z="0.1461168"/>
+							<center x="1.125917E+07" y="-4098011" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.8273896"/>
+									<key frame="1000" value="1.17261"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection46" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<position x="0" y="0" z="-1.546239E+08"/>
+					<quaternion qx="-0" qy="-0" qz="8.715611E-02" qw="-0.9961947"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="1000"/>
+				</animations>
+				<parts>
+					<part name="Plane036">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_423_sun_atmo4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.103257E+07" y="3342765" z="0.1461168"/>
+							<center x="8972490" y="-1582099" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.103257E+07" y="3342763" z="0.1461168"/>
+							<center x="8972489" y="-1582097" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0.7476212"/>
+									<key frame="1000" value="1.252379"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>		
+			<connection name="Connection47" tags="part cluster_l_detail  ">
+				<offset>
+					<position x="3937080" y="-3887714" z="-318525.9"/>
+				</offset>
+				<parts>
+					<part name="part_asteroidx">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="asteroids.ast_ore_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3027662" y="174076.3" z="7402040"/>
+							<center x="-0.2441406" y="0.2441406" z="3.051758E-02"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection48" tags="part cluster_l_detail  ">
+				<offset>
+					<position x="147620.1" y="-98822.27" z="732000"/>
+				</offset>
+				<parts>
+					<part name="part_asteroid001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="asteroids.ast_ore_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="50251.87" y="39971.63" z="76647.55"/>
+							<center x="-340.2863" y="7170.524" z="-3717.651"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection49" tags="part cluster_l_detail  ">
+				<offset>
+					<position x="704043.9" y="-98822.27" z="253712.8"/>
+				</offset>
+				<parts>
+					<part name="part_asteroida002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="asteroids.ast_ore_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="47054.8" y="71261.88" z="41759.98"/>
+							<center x="-3709.595" y="-5289.307" z="6580.2"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection50" tags="part cluster_l_detail  ">
+				<offset>
+					<position x="229086.9" y="-98822.27" z="-782912.5"/>
+				</offset>
+				<parts>
+					<part name="part_asteroidb003">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="asteroids.ast_ore_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="64308.31" y="91629.95" z="62295.43"/>
+							<center x="-4253.235" y="-2339.096" z="-4000.122"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection51" tags="part cluster_l_detail  ">
+				<offset>
+					<position x="-1039721" y="-112237.1" z="-662801.4"/>
+				</offset>
+				<parts>
+					<part name="part_asteroidc004">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="asteroids.ast_ore_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="52061.72" y="41411.24" z="79408.08"/>
+							<center x="-352.6611" y="7428.101" z="-3851.624"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection52" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="nebula01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.706153E+08" y="3.699232E+08" z="3.661966E+08"/>
+							<center x="3117485" y="272625" z="4238813"/>
+						</size>
+					</part>
+				</parts>
+			</connection>			
+		</connections>
+	</component>
+</components>

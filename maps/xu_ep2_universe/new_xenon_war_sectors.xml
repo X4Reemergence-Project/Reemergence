@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>	
+	<!-- Bad Debt -->
+	<macro name="Cluster_nxw01_Sector001_macro" class="sector">
+		<component ref="standardsector" />
+		<connections>
+			<!-- Inactive Gate-->
+			<connection name="Zone_Gate1_Cluster_nxw01_Sector001_connection" ref="zones">
+				<offset>
+					<position x="-12700" y="500" z="-185000"/>
+				</offset>
+				<macro ref="Zone_Gate1_Cluster_nxw01_Sector001_macro" connection="sector" />
+			</connection>
+			<!-- Bad Debt - Spaceweed Grove -->			
+			<connection name="Zone_Gate2_Cluster_nxw01_Sector001_connection" ref="zones">
+				<offset>
+					<position x="12700" y="-500" z="185000"/>
+				</offset>
+				<macro ref="Zone_Gate2_Cluster_nxw01_Sector001_macro" connection="sector" />
+			</connection>
+			
+			<!-- Zones -->
+<!--Zone1-->			
+			<connection name="Zone001_Cluster_nxw01_Sector001_connection" ref="zones">
+				<offset>
+					<position x="-12700" y="1000" z="-148000"/>	
+				</offset>
+				<macro ref="Zone001_Cluster_nxw01_Sector001_macro" connection="sector" />
+			</connection>
+<!--Zone2-->			
+			<connection name="Zone002_Cluster_nxw01_Sector001_connection" ref="zones">
+				<offset>
+					<position x="16250" y="-1500" z="-160000"/>
+				</offset>
+				<macro ref="Zone002_Cluster_nxw01_Sector001_macro" connection="sector" />
+			</connection>
+<!--Zone3-->				
+			<connection name="Zone003_Cluster_nxw01_Sector001_connection" ref="zones">
+				<offset>
+					<position x="-45500" y="-3750" z="-115000" />
+				</offset>
+				<macro ref="Zone003_Cluster_nxw01_Sector001_macro" connection="sector" />
+			</connection>	
+<!--Zone4-->	
+			<connection name="Zone004_Cluster_nxw01_Sector001_connection" ref="zones">
+				<offset>
+					<position x="69500" y="2550" z="12250" />
+				</offset>
+				<macro ref="Zone004_Cluster_nxw01_Sector001_macro" connection="sector" />
+			</connection>
+<!--ZoneSP-->	
+			<connection name="ZoneSP_Cluster_nxw01_Sector001_connection" ref="zones">
+				<offset>
+					<position x="-78500" y="3750" z="135250" />
+				</offset>
+				<macro ref="ZoneSP_Cluster_nxw01_Sector001_macro" connection="sector" />
+			</connection>	
+<!--ZoneWF-->	
+			<connection name="ZoneWF_Cluster_nxw01_Sector001_connection" ref="zones">
+				<offset>
+					<position x="155500" y="2550" z="-15255" />
+				</offset>
+				<macro ref="ZoneWF_Cluster_nxw01_Sector001_macro" connection="sector" />
+			</connection>			
+		</connections>
+	</macro>
+
+	<!-- Matrix #695A -->
+	<macro name="Cluster_nxw02_Sector001_macro" class="sector">
+		<component ref="standardsector" />
+		<connections>
+			<!-- Inactive -->
+			<connection name="Zone_Gate1_Cluster_nxw02_Sector001_connection" ref="zones">
+				<offset>
+					<position x="135000" y="500" z="105000"/>
+				</offset>
+				<macro ref="Zone_Gate1_Cluster_nxw02_Sector001_macro" connection="sector" />
+			</connection>
+			
+			<!-- Matrix #695A - Matrix #695B Gate -->
+			<connection name="Zone_Gate2_Cluster_nxw02_Sector001_connection" ref="zones">
+				<offset>
+					<position x="-135000" y="0" z="-105000"/>
+				</offset>
+				<macro ref="Zone_Gate2_Cluster_nxw02_Sector001_macro" connection="sector" />
+			</connection>	
+
+			<!-- Matrix #695A - Perpetual Sin I -->
+			<connection name="Zone_Gate3_Cluster_nxw02_Sector001_connection" ref="zones">
+				<offset>
+					<position x="95000" y="-300" z="-165000"/>
+				</offset>
+				<macro ref="Zone_Gate3_Cluster_nxw02_Sector001_macro" connection="sector" />
+			</connection>			
+			
+			<!-- Zones -->
+<!--Zone1-->			
+			<connection name="Zone001_Cluster_nxw02_Sector001_connection" ref="zones">
+				<offset>
+					<position x="-100000" y="0" z="98500"/>	
+				</offset>
+				<macro ref="Zone001_Cluster_nxw02_Sector001_macro" connection="sector" />
+			</connection>
+<!--Zone2-->				
+			<connection name="Zone002_Cluster_nxw02_Sector001_connection" ref="zones">
+				<offset>
+					<position x="135000" y="1200" z="87000"/>
+				</offset>
+				<macro ref="Zone002_Cluster_nxw02_Sector001_macro" connection="sector" />
+			</connection>
+<!--Zone3-->				
+			<connection name="Zone003_Cluster_nxw02_Sector001_connection" ref="zones">
+				<offset>
+					<position x="-117000" y="250" z="-87000"/>	
+				</offset>
+				<macro ref="Zone003_Cluster_nxw02_Sector001_macro" connection="sector" />
+			</connection>
+<!--Zone4-->				
+			<connection name="Zone004_Cluster_nxw02_Sector001_connection" ref="zones">
+				<offset>
+					<position x="24750" y="1650" z="65750" />
+				</offset>
+				<macro ref="Zone004_Cluster_nxw02_Sector001_macro" connection="sector" />
+			</connection>				
+		</connections>
+	</macro>
+	
+	
+
+	<!-- Matrix #695B -->
+	<macro name="Cluster_nxw02_Sector002_macro" class="sector">
+		<component ref="standardsector" />
+		<connections>
+			<!-- Matrix #695B - Matrix #695A Gate -->
+			<connection name="Zone_Gate_Cluster_nxw02_Sector002_connection" ref="zones">
+				<offset>
+					<position x="125000" y="500" z="95000"/>
+				</offset>
+				<macro ref="Zone_Gate_Cluster_nxw02_Sector002_macro" connection="sector" />
+			</connection>		
+		
+			<!-- Zones -->
+<!--Zone1-->			
+			<connection name="Zone001_Cluster_nxw02_Sector002_connection" ref="zones">
+				<offset>
+					<position x="109000" y="750" z="77000"/>
+				</offset>
+				<macro ref="Zone001_Cluster_nxw02_Sector002_macro" connection="sector" />
+			</connection>
+<!--Zone2-->	
+			<connection name="Zone002_Cluster_nxw02_Sector002_connection" ref="zones">
+				<offset>
+					<position x="-72555" y="-2500" z="95000" />
+				</offset>
+				<macro ref="Zone002_Cluster_nxw02_Sector002_macro" connection="sector" />
+			</connection>
+<!--Zone3-->	
+			<connection name="Zone003_Cluster_nxw02_Sector002_connection" ref="zones">
+				<offset>
+					<position x="87750" y="5500" z="-62375" />
+				</offset>
+				<macro ref="Zone003_Cluster_nxw02_Sector002_macro" connection="sector" />
+			</connection>
+<!--Zone4-->	
+			<connection name="Zone004_Cluster_nxw02_Sector002_connection" ref="zones">
+				<offset>
+					<position x="0" y="0" z="0"/>
+				</offset>
+				<macro ref="Zone004_Cluster_nxw02_Sector002_macro" connection="sector" />
+			</connection>
+<!--ZoneSP-->	
+			<connection name="ZoneSP_Cluster_nxw02_Sector002_connection" ref="zones">
+				<offset>
+					<position x="-101525" y="250" z="-87000"/>	
+				</offset>
+				<macro ref="ZoneSP_Cluster_nxw02_Sector002_macro" connection="sector" />
+			</connection>
+<!--ZoneWF-->	
+			<connection name="ZoneWF_Cluster_nxw02_Sector002_connection" ref="zones">
+				<offset>
+					<position x="57515" y="1850" z="131525" />
+				</offset>
+				<macro ref="ZoneWF_Cluster_nxw02_Sector002_macro" connection="sector" />
+			</connection>			
+		</connections>
+	</macro>
+</macros>

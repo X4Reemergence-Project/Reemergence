@@ -1,0 +1,1467 @@
+<?xml version="1.0"?>
+<components>
+	<component name="Cluster_REM27" class="celestialbody">
+		<source geometry="extensions\reemergence\assets\environments\cluster\Cluster_rem27_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="255" g="212" b="129" range="1E+11" shadowrange="1E+11" lighteffect="1" trigger="1" intensity="1.82" specularintensity="1">
+						<animations>
+							<animation name="wave_inactive" start="10" end="100"/>
+							<animation name="wave_warningactivating" start="100" end="1900"/>
+							<animation name="wave_warningactive" start="1900" end="3700"/>
+							<animation name="wave_active" start="3700" end="7300"/>
+							<animation name="wave_warningdeactivating" start="7301" end="9100"/>
+						</animations>
+						<lightanimations>
+							<lightanimation name="intensity" controller="bezier_float">
+								<key frame="0" value="1.82" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="1900" value="2.38" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="3700" value="2.38" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="4000" value="2.8" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="5500" value="1.82" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="7300" value="1.82" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="7301" value="2.38" in_tangent_type="auto" out_tangent_type="auto"/>
+								<key frame="9100" value="1.82" in_tangent_type="auto" out_tangent_type="auto"/>
+							</lightanimation>
+						</lightanimations>
+						<offset>
+							<position x="7.146938E+07" y="-193625" z="1.053174E+08"/>
+							<quaternion qx="-0" qy="-0.9848078" qz="-0" qw="-0.1736482"/>
+						</offset>
+					</omni>
+					<ambient name="XU Ambient001" r="27" g="31" b="34" range="1E+11" intensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="5.922367E+07" y="0" z="7.721783E+07"/>
+						</offset>
+					</ambient>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="celestialbody">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset>
+					<position x="6.397548E+07" y="0" z="1.007096E+08"/>
+				</offset>
+				<parts>
+					<part name="part_c03_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.p1_env_bg_vertexcolor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="6.846707E+08" y="6.846752E+08" z="6.846707E+08"/>
+							<center x="50.78125" y="0" z="39.0625"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part  ">
+				<offset>
+					<position x="7.623669E+07" y="0" z="1.0881E+08"/>
+					<quaternion qx="-0" qy="-6.975656E-02" qz="-0" qw="-0.9975641"/>
+				</offset>
+				<parts>
+					<part name="Background">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.backgroundstars"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="6.339219E+08" y="6.339219E+08" z="6.33922E+08"/>
+							<center x="109.375" y="31.25" z="0"/>
+						</size>
+						<offset>
+							<position x="-15.625" y="0" z="7.8125"/>
+						</offset>
+						<pivot>
+							<offset>
+								<position x="0" y="-50000" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part animation textureanimation  ">
+				<offset>
+					<position x="7.146938E+07" y="-193624" z="1.053174E+08"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="10800"/>
+				</animations>
+				<parts>
+					<part name="anim_sun_core">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sun_base_material"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.051741E+07" y="2.073339E+07" z="2.05174E+07"/>
+							<center x="0" y="0.9765625" z="0"/>
+						</size>
+						<size_raw>
+							<max x="2.05174E+07" y="2.073339E+07" z="2.05174E+07"/>
+							<center x="0" y="0.9765625" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="10800" value="2"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="10800" value="1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part animation textureanimation  ">
+				<offset>
+					<position x="7.260944E+07" y="480673.8" z="1.006576E+08"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="2500"/>
+				</animations>
+				<parts>
+					<part name="part_flare01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v2"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.443655E+07" y="2.539718E+07" z="1.590442E+07"/>
+							<center x="-1861680" y="-754554.7" z="-3879852"/>
+						</size>
+						<size_raw>
+							<max x="2.443655E+07" y="2.539717E+07" z="1.590441E+07"/>
+							<center x="-1861672" y="-754555.7" z="-3879860"/>
+						</size_raw>
+						<offset>
+							<position x="-7.8125" y="0" z="7.8125"/>
+						</offset>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="2500" value="1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part animation textureanimation  ">
+				<offset>
+					<position x="7.244353E+07" y="639632.8" z="1.015978E+08"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="2500"/>
+				</animations>
+				<parts>
+					<part name="part_magneto01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.456122E+07" y="2.490764E+07" z="1.650324E+07"/>
+							<center x="-1259078" y="-1013079" z="-4584680"/>
+						</size>
+						<size_raw>
+							<max x="2.456122E+07" y="2.490764E+07" z="1.650324E+07"/>
+							<center x="-1259078" y="-1013076" z="-4584680"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="2500" value="-1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="2500" value="2"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="2500" value="1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection06" tags="part animation  ">
+				<offset>
+					<position x="7.146938E+07" y="-193624" z="1.053174E+08"/>
+				</offset>
+				<animations>
+					<animation name="wave_inactive" start="10" end="100"/>
+					<animation name="wave_warningactivating" start="100" end="1900"/>
+					<animation name="wave_warningactive" start="1900" end="3700"/>
+					<animation name="wave_active" start="3700" end="7300"/>
+					<animation name="wave_warningdeactivating" start="7300" end="9100"/>
+				</animations>
+				<parts>
+					<part name="anim_wavedummmy1">
+						<lods>
+							<lod index="0"/>
+						</lods>
+						<size>
+							<max x="1000" y="1000" z="1000"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1000" y="1000" z="1000"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="Connection07" tags="part animation textureanimation iklink  " parent="anim_wavedummmy1">
+				<offset>
+					<quaternion qx="-0" qy="-0.7071068" qz="-0" qw="0.7071067"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="5000"/>
+				</animations>
+				<parts>
+					<part name="anim_sun_smalla_layer08">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.071213E+07" y="2.099267E+07" z="2.056777E+07"/>
+							<center x="0" y="-0.9765625" z="0"/>
+						</size>
+						<size_raw>
+							<max x="2.071213E+07" y="2.099267E+07" z="2.056777E+07"/>
+							<center x="0" y="-0.9765625" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="4">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="5000" value="-1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="bezier_float">
+									<key frame="0" value="-0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="5000" value="1" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="bezier_float">
+									<key frame="0" value="-0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="5000" value="-1" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection08" tags="part animation textureanimation iklink  " parent="anim_wavedummmy1">
+				<animations>
+					<animation name="loop" start="0" end="5000"/>
+				</animations>
+				<parts>
+					<part name="anim_sun_smalla_layer009">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.071213E+07" y="2.099267E+07" z="2.056777E+07"/>
+							<center x="0" y="-0.9765625" z="0"/>
+						</size>
+						<size_raw>
+							<max x="2.071213E+07" y="2.099267E+07" z="2.056777E+07"/>
+							<center x="0" y="-0.9765625" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="4">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="1"/>
+								</uv_property>
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="5000" value="-1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="-1"/>
+								</uv_property>
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="5000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="2"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection09" tags="part animation textureanimation iklink  " parent="anim_wavedummmy1">
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="anim_lighting">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.325159E+07" y="2.094112E+07" z="2.286874E+07"/>
+							<center x="750546.9" y="286202.2" z="-514843.8"/>
+						</size>
+						<size_raw>
+							<max x="2.250104E+07" y="2.065492E+07" z="2.338358E+07"/>
+							<center x="750546.9" y="286202.2" z="-514843.8"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="750" value="-1"/>
+									<key frame="1500" value="-2"/>
+									<key frame="2250" value="-1"/>
+									<key frame="3000" value="-0"/>
+									<key frame="3750" value="-1"/>
+									<key frame="4500" value="-0"/>
+									<key frame="5250" value="-1"/>
+									<key frame="6000" value="-0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection10" tags="part animation textureanimation iklink  " parent="anim_wavedummmy1">
+				<offset>
+					<quaternion qx="-0.1047252" qy="-0.9294892" qz="-0.3454336" qw="-7.588214E-02"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="anim_lighting001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.32516E+07" y="2.094112E+07" z="2.286873E+07"/>
+							<center x="-794609.4" y="74663.09" z="522812.5"/>
+						</size>
+						<size_raw>
+							<max x="2.250104E+07" y="2.065492E+07" z="2.338358E+07"/>
+							<center x="-794609.4" y="74659.18" z="522812.5"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="750" value="-1"/>
+									<key frame="1500" value="-2"/>
+									<key frame="2250" value="-1"/>
+									<key frame="3000" value="-0"/>
+									<key frame="3750" value="-1"/>
+									<key frame="4500" value="-0"/>
+									<key frame="5250" value="-1"/>
+									<key frame="6000" value="-0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection11" tags="part animation textureanimation iklink  " parent="anim_wavedummmy1">
+				<offset>
+					<quaternion qx="-7.588213E-02" qy="0.3454335" qz="-0.9294893" qw="0.1047252"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="anim_lighting002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.245993E+07" y="2.094112E+07" z="2.286873E+07"/>
+							<center x="-29429.69" y="120961.9" z="-577210.9"/>
+						</size>
+						<size_raw>
+							<max x="2.250104E+07" y="2.065492E+07" z="2.338358E+07"/>
+							<center x="-29421.88" y="120961.9" z="-577210.9"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="750" value="-1"/>
+									<key frame="1500" value="-2"/>
+									<key frame="2250" value="-1"/>
+									<key frame="3000" value="-0"/>
+									<key frame="3750" value="-1"/>
+									<key frame="4500" value="-0"/>
+									<key frame="5250" value="-1"/>
+									<key frame="6000" value="-0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection12" tags="part animation textureanimation iklink  " parent="anim_wavedummmy1">
+				<offset>
+					<position x="-452.75" y="383.6365" z="-111.4531"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="anim_lighting003">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.345694E+07" y="2.180179E+07" z="2.392039E+07"/>
+							<center x="-106890.6" y="612409.4" z="-201140.6"/>
+						</size>
+						<size_raw>
+							<max x="2.291799E+07" y="2.118938E+07" z="2.253094E+07"/>
+							<center x="-569562.5" y="612410.4" z="-113312.5"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="750" value="-1"/>
+									<key frame="1500" value="-2"/>
+									<key frame="2250" value="-1"/>
+									<key frame="3000" value="-0"/>
+									<key frame="3750" value="-1"/>
+									<key frame="4500" value="-0"/>
+									<key frame="5250" value="-1"/>
+									<key frame="6000" value="-0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection13" tags="part animation textureanimation iklink  " parent="anim_wavedummmy1">
+				<offset>
+					<position x="-452.75" y="383.6365" z="-111.4531"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="anim_lighting004">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.260686E+07" y="2.136444E+07" z="2.290606E+07"/>
+							<center x="169093.8" y="159208.3" z="-255078.1"/>
+						</size>
+						<size_raw>
+							<max x="2.240328E+07" y="2.120523E+07" z="2.076221E+07"/>
+							<center x="-142000" y="159208.3" z="944390.6"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="750" value="-1"/>
+									<key frame="1500" value="-2"/>
+									<key frame="2250" value="-1"/>
+									<key frame="3000" value="-0"/>
+									<key frame="3750" value="-1"/>
+									<key frame="4500" value="-0"/>
+									<key frame="5250" value="-1"/>
+									<key frame="6000" value="-0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection14" tags="part animation textureanimation iklink  " parent="anim_wavedummmy1">
+				<offset>
+					<position x="-452.75" y="383.6365" z="-111.4531"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="anim_lighting005">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.327562E+07" y="2.438221E+07" z="2.299314E+07"/>
+							<center x="151468.8" y="613118.4" z="160453.1"/>
+						</size>
+						<size_raw>
+							<max x="2.312416E+07" y="2.376909E+07" z="2.283268E+07"/>
+							<center x="151468.8" y="613118.4" z="-448859.4"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="750" value="-1"/>
+									<key frame="1500" value="-2"/>
+									<key frame="2250" value="-1"/>
+									<key frame="3000" value="-0"/>
+									<key frame="3750" value="-1"/>
+									<key frame="4500" value="-0"/>
+									<key frame="5250" value="-1"/>
+									<key frame="6000" value="-0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection15" tags="part animation textureanimation iklink  " parent="anim_wavedummmy1">
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="anim_lighting06">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v4"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.572614E+07" y="2.316978E+07" z="2.530254E+07"/>
+							<center x="829640.6" y="322399.4" z="-592601.6"/>
+						</size>
+						<size_raw>
+							<max x="2.48965E+07" y="2.284738E+07" z="2.589514E+07"/>
+							<center x="829640.6" y="322399.4" z="-592601.6"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="750" value="-1"/>
+									<key frame="1500" value="-2"/>
+									<key frame="2250" value="-1"/>
+									<key frame="3000" value="-0"/>
+									<key frame="3750" value="-1"/>
+									<key frame="4500" value="-0"/>
+									<key frame="5250" value="-1"/>
+									<key frame="6000" value="-0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection16" tags="part animation  ">
+				<offset>
+					<position x="7.146938E+07" y="-193624" z="1.053174E+08"/>
+				</offset>
+				<animations>
+					<animation name="wave_inactive" start="10" end="100"/>
+					<animation name="wave_warningactivating" start="100" end="1900"/>
+					<animation name="wave_warningactive" start="1900" end="3700"/>
+					<animation name="wave_active" start="3700" end="7300"/>
+					<animation name="wave_warningdeactivating" start="7300" end="9100"/>
+				</animations>
+				<parts>
+					<part name="anim_wavedummmy02">
+						<lods>
+							<lod index="0"/>
+						</lods>
+						<size>
+							<max x="1000" y="1000" z="1000"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1000" y="1000" z="1000"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="Connection17" tags="part animation textureanimation iklink  " parent="anim_wavedummmy02">
+				<offset>
+					<quaternion qx="-0" qy="-0.7071068" qz="-0" qw="0.7071067"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="5000"/>
+				</animations>
+				<parts>
+					<part name="anim_sun_smalla_layer03">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.071213E+07" y="2.099267E+07" z="2.056777E+07"/>
+							<center x="0" y="-0.9765625" z="0"/>
+						</size>
+						<size_raw>
+							<max x="2.071213E+07" y="2.099267E+07" z="2.056777E+07"/>
+							<center x="0" y="-0.9765625" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="4">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="2"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="-1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="-2"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection18" tags="part animation textureanimation iklink  " parent="anim_wavedummmy02">
+				<animations>
+					<animation name="loop" start="0" end="5000"/>
+				</animations>
+				<parts>
+					<part name="anim_sun_smalla_layer02">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.071213E+07" y="2.099267E+07" z="2.056777E+07"/>
+							<center x="0" y="-0.9765625" z="0"/>
+						</size>
+						<size_raw>
+							<max x="2.071213E+07" y="2.099267E+07" z="2.056777E+07"/>
+							<center x="0" y="-0.9765625" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="4">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="-1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="5000" value="2"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="5000" value="2"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection19" tags="part animation  ">
+				<offset>
+					<position x="7.146938E+07" y="-193624" z="1.053174E+08"/>
+				</offset>
+				<animations>
+					<animation name="wave_inactive" start="10" end="100"/>
+					<animation name="wave_warningactivating" start="100" end="1900"/>
+					<animation name="wave_warningactive" start="1900" end="3700"/>
+					<animation name="wave_active" start="3700" end="7300"/>
+					<animation name="wave_warningdeactivating" start="7300" end="9100"/>
+				</animations>
+				<parts>
+					<part name="anim_wavedummmy_wave">
+						<lods>
+							<lod index="0"/>
+						</lods>
+						<size>
+							<max x="32109.38" y="9091.004" z="32109.38"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1000" y="1000" z="1000"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="Connection20" tags="part animation textureanimation iklink  " parent="anim_wavedummmy_wave">
+				<offset>
+					<quaternion qx="-0" qy="-1" qz="-0" qw="-4.331258E-07"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="300"/>
+				</animations>
+				<parts>
+					<part name="anim_sun_smalla_layer006">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.wave_v3"/>
+									<material id="2" ref="environmentsv2.wave_v2"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="6.650915E+08" y="3.873727E+08" z="6.604559E+08"/>
+							<center x="125" y="-0.9765625" z="-109.375"/>
+						</size>
+						<size_raw>
+							<max x="2.071213E+07" y="4.261054E+07" z="2.056776E+07"/>
+							<center x="0" y="0.2441406" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="300" value="1"/>
+								</uv_property>
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="300" value="-1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="300" value="-1"/>
+								</uv_property>
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="300" value="-1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="300" value="1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection21" tags="part animation  ">
+				<offset>
+					<position x="7.146938E+07" y="-193624" z="1.053174E+08"/>
+				</offset>
+				<animations>
+					<animation name="wave_inactive" start="10" end="100"/>
+					<animation name="wave_warningactivating" start="100" end="1900"/>
+					<animation name="wave_warningactive" start="1900" end="3700"/>
+					<animation name="wave_active" start="3700" end="7300"/>
+					<animation name="wave_warningdeactivating" start="7300" end="9100"/>
+				</animations>
+				<parts>
+					<part name="anim_wavedummmyflares">
+						<lods>
+							<lod index="0"/>
+						</lods>
+						<size>
+							<max x="1000" y="1000" z="1000"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1000" y="1000" z="1000"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="Connection22" tags="part animation textureanimation iklink  " parent="anim_wavedummmyflares">
+				<offset>
+					<position x="-422.6563" y="-74.92578" z="-3564.984"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="600"/>
+				</animations>
+				<parts>
+					<part name="anim_flares">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.sunflare_v5"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.883007E+07" y="2.474957E+07" z="2.441726E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="2.883007E+07" y="2.474956E+07" z="2.441726E+07"/>
+							<center x="0" y="0.9765625" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="603" value="1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection23" tags="part nocollision textureanimation animation fx detail_xl  ">
+				<offset>
+					<position x="-46.63745" y="400" z="-453.4893"/>
+				</offset>
+				<animations>
+					<animation name="mode_inactive" start="0" end="0"/>
+					<animation name="mode_activating" start="0" end="1"/>
+					<animation name="mode_active" start="1" end="299"/>
+					<animation name="mode_deactivating" start="299" end="300"/>
+				</animations>
+				<parts>
+					<part name="fx_whirl">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_highway_streamclouds_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="14.70249" y="36.60591" z="18.02951"/>
+							<center x="-2.491873" y="2.980232E-05" z="-5.818903"/>
+						</size>
+						<size_raw>
+							<max x="12.21062" y="36.60591" z="12.21062"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1" value="-0"/>
+									<key frame="299" value="0.002"/>
+									<key frame="300" value="0.002"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1" value="-0"/>
+									<key frame="299" value="0.004"/>
+									<key frame="300" value="0.004"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="1" value="0"/>
+									<key frame="299" value="0.001"/>
+									<key frame="300" value="0.001"/>
+								</uv_property>
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="1" value="-0"/>
+									<key frame="299" value="-0"/>
+									<key frame="300" value="-0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection24" tags="part detail_l nocollision animation forceoutline  ">
+				<offset>
+					<position x="0" y="452.3661" z="0"/>
+				</offset>
+				<animations>
+					<animation name="mode_inactive" start="0" end="0"/>
+					<animation name="mode_activating" start="0" end="1"/>
+					<animation name="mode_active" start="1" end="299"/>
+					<animation name="mode_deactivating" start="299" end="300"/>
+				</animations>
+				<parts>
+					<part name="anim_core">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_alphatexture"/>
+									<material id="2" ref="generic.generic_p1_hulltexture_01_aged"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="53.48778" y="220.0192" z="53.43059"/>
+							<center x="3.72529E-06" y="50.04358" z="5.719811E-02"/>
+						</size>
+						<size_raw>
+							<max x="53.48778" y="220.0192" z="53.43051"/>
+							<center x="3.72529E-06" y="50.04352" z="5.725771E-02"/>
+						</size_raw>
+						<lights>
+							<omni name="XU Omni_25" shadow="0" r="255" g="113" b="0" range="1000" shadowrange="1000" lighteffect="1" trigger="1" intensity="0" specularintensity="1">
+								<lightanimations>
+									<lightanimation name="intensity" controller="linear_float">
+										<key frame="0" value="0"/>
+										<key frame="1" value="2"/>
+										<key frame="299" value="2"/>
+										<key frame="300" value="0"/>
+									</lightanimation>
+								</lightanimations>
+								<offset>
+									<position x="0" y="-47.0064" z="0"/>
+								</offset>
+							</omni>
+						</lights>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="Connection25" tags="part nocollision animation fx detail_xl  ">
+				<offset>
+					<position x="-52.58797" y="369.1387" z="-478.8525"/>
+				</offset>
+				<animations>
+					<animation name="mode_inactive" start="0" end="0"/>
+					<animation name="mode_activating" start="0" end="1"/>
+					<animation name="mode_active" start="1" end="299"/>
+					<animation name="mode_deactivating" start="299" end="300"/>
+				</animations>
+				<parts>
+					<part name="fx_glow">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_lightcone_soft"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5682.958" y="5684.944" z="5681.379"/>
+							<center x="3.050268E-02" y="4.768372E-04" z="-0.1290143"/>
+						</size>
+						<size_raw>
+							<max x="5682.958" y="5684.941" z="5681.375"/>
+							<center x="3.056228E-02" y="2.980232E-04" z="-0.1288652"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection26" tags="part nocollision textureanimation animation fx detail_xl  ">
+				<offset>
+					<position x="9599.02" y="400" z="0"/>
+				</offset>
+				<animations>
+					<animation name="mode_inactive" start="0" end="0"/>
+					<animation name="mode_activating" start="0" end="1"/>
+					<animation name="mode_active" start="1" end="299"/>
+					<animation name="mode_deactivating" start="299" end="300"/>
+				</animations>
+				<parts>
+					<part name="fx_whirl001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="Material #1974"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="10.66989" y="0.7323902" z="10.66989"/>
+							<center x="0" y="3574.875" z="0"/>
+						</size>
+						<size_raw>
+							<max x="10.66989" y="0.7323884" z="10.66989"/>
+							<center x="0" y="3574.875" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+								<uv_property name="rotation_angle" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="30" value="0"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection27" tags="part nocollision textureanimation animation fx detail_xl  ">
+				<offset>
+					<position x="9599.02" y="400" z="0"/>
+				</offset>
+				<animations>
+					<animation name="mode_inactive" start="0" end="0"/>
+					<animation name="mode_activating" start="0" end="1"/>
+					<animation name="mode_active" start="1" end="299"/>
+					<animation name="mode_deactivating" start="299" end="300"/>
+				</animations>
+				<parts>
+					<part name="fx_whirl02">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.wave_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="10.66989" y="0.7323865" z="10.66989"/>
+							<center x="0" y="3574.875" z="0"/>
+						</size>
+						<size_raw>
+							<max x="10.66989" y="0.7323846" z="10.66989"/>
+							<center x="0" y="3574.875" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+								<uv_property name="rotation_angle" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="30" value="0"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection28" tags="part nocollision textureanimation animation fx detail_xl  ">
+				<offset>
+					<position x="6.356428E+07" y="400" z="0"/>
+				</offset>
+				<animations>
+					<animation name="mode_inactive" start="0" end="0"/>
+					<animation name="mode_activating" start="0" end="1"/>
+					<animation name="mode_active" start="1" end="299"/>
+					<animation name="mode_deactivating" start="299" end="300"/>
+				</animations>
+				<parts>
+					<part name="fx_whirl003">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv2.wave_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="10.68115" y="2.76438" z="10.65696"/>
+							<center x="0" y="3371.674" z="1.192093E-04"/>
+						</size>
+						<size_raw>
+							<max x="10.65696" y="2.764378" z="10.65696"/>
+							<center x="0" y="3371.674" z="1.192093E-04"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+								<uv_property name="rotation_angle" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="30" value="0"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection29" tags="part nocollision textureanimation animation fx detail_xl  ">
+				<offset>
+					<position x="6.356428E+07" y="400" z="0"/>
+				</offset>
+				<animations>
+					<animation name="mode_inactive" start="0" end="0"/>
+					<animation name="mode_activating" start="0" end="1"/>
+					<animation name="mode_active" start="1" end="299"/>
+					<animation name="mode_deactivating" start="299" end="300"/>
+				</animations>
+				<parts>
+					<part name="fx_whirl004">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="Material #1974"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="10.68115" y="2.764387" z="10.65696"/>
+							<center x="0" y="3371.675" z="1.192093E-04"/>
+						</size>
+						<size_raw>
+							<max x="10.65696" y="2.764385" z="10.65696"/>
+							<center x="0" y="3371.675" z="1.192093E-04"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+								<uv_property name="rotation_angle" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="30" value="0"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="30" value="0.001"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection30" tags="part  ">
+				<offset>
+					<position x="1.168802E+07" y="1.581795E+07" z="1906498"/>
+				</offset>
+				<parts>
+					<part name="nebula001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.076727E+08" y="4.255364E+08" z="2.815167E+08"/>
+							<center x="1.503298E+07" y="1.91714E+07" z="-2.191439E+08"/>
+						</size>
+					</part>
+				</parts>
+			</connection>			
+			<connection name="Connection31" tags="part  ">
+				<offset>
+					<position x="1.168802E+07" y="1.581795E+07" z="-1906498"/>
+					<quaternion qx="4.371138E-08" qy="-1" qz="-4.37114E-08" qw="7.549791E-08"/>					
+				</offset>
+				<parts>
+					<part name="nebula002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.076727E+08" y="4.255364E+08" z="2.815167E+08"/>
+							<center x="1.503298E+07" y="1.91714E+07" z="-2.191439E+08"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection32" tags="part  ">
+				<offset>
+					<position x="-6720938" y="-2631805" z="1.409685E+07"/>
+				</offset>
+				<parts>
+					<part name="smallstar001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.629115E+08" y="3.756473E+08" z="4.349863E+08"/>
+							<center x="-2297172" y="9612914" z="-1.401967E+07"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection33" tags="part  ">
+				<offset>
+					<position x="1.951873E+07" y="1797188" z="-2.542509E+07"/>
+				</offset>
+				<parts>
+					<part name="mediumstar001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.973601E+08" y="3.897852E+08" z="4.074593E+08"/>
+							<center x="-2.606033E+07" y="-2147563" z="1.197723E+07"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection34" tags="part  ">
+				<offset>
+					<position x="-1.221131E+07" y="1.409961E+07" z="562281.3"/>
+				</offset>
+				<parts>
+					<part name="bigstar001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.297935E+08" y="3.849125E+08" z="4.254092E+08"/>
+							<center x="-2.819609E+07" y="-1.007108E+07" z="2.216956E+07"/>
+						</size>
+					</part>
+				</parts>
+			</connection>	
+			<connection name="Connection35" tags="part  ">
+				<offset>
+					<position x="-1.987388E+08" y="4.757775E+07" z="-9.50707E+07"/>
+				</offset>
+				<parts>
+					<part name="moon001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="newplanets.planet_cluster31_moon1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.498911E+07" y="1.493333E+07" z="1.498911E+07"/>
+							<center x="-12156.25" y="0" z="-12164.06"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection36" tags="part  ">
+				<offset>
+					<position x="-1.987388E+08" y="4.757775E+07" z="-9.507071E+07"/>
+				</offset>
+				<parts>
+					<part name="atmosphereb">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="newplanets.atmo_cluster31_moon1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.575784E+07" y="1.575607E+07" z="1.575488E+07"/>
+							<center x="-80125" y="115109.4" z="38867.19"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection37" tags="part  ">
+				<offset>
+					<position x="2.754181E+08" y="1.119621E+08" z="5.320799E+07"/>
+				</offset>
+				<parts>
+					<part name="moon002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="newplanets.planet_cluster31_moon1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.863793E+07" y="3.86336E+07" z="3.863069E+07"/>
+							<center x="-80082.03" y="115308.6" z="38867.19"/>
+						</size>
+					</part>
+				</parts>
+			</connection>			
+			<connection name="Connection38" tags="part  ">
+				<offset>
+					<position x="2.754181E+08" y="1.119621E+08" z="5.320799E+07"/>
+				</offset>
+				<parts>
+					<part name="atmospherec">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="newplanets.atmo_cluster31_moon1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.960395E+07" y="3.960394E+07" z="3.960395E+07"/>
+							<center x="-102750" y="91565.43" z="47734.38"/>
+						</size>
+					</part>
+				</parts>
+			</connection>			
+		</connections>
+	</component>
+</components>

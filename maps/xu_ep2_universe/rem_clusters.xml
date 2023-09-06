@@ -1,0 +1,2507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>	
+		<!--Sector REM00 - Oort Cloud Beta-->
+		<macro name="Cluster_REM00_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_116" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM00_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM00_Sector001_macro" connection="cluster" />
+				</connection>
+				  <connection name="Cluster116_Sector001_Region001_connection" ref="regions">
+					<offset>
+					  <position x="0" y="-20000" z="0" />
+					</offset>
+					<macro name="Cluster116_Sector001_Region001_macro">
+					  <component connection="cluster" ref="standardregion" />
+					  <properties>
+						<region ref="oort_field" />
+					  </properties>
+					</macro>
+				  </connection>
+				  <connection name="Cluster116_Sector001_AudioRegion01_connection" ref="regions">
+					<offset>
+					  <position x="0" y="0" z="0" />
+					</offset>
+					<macro name="Cluster116_Sector001_AudioRegion01_macro">
+					  <component connection="cluster" ref="standardregion" />
+					  <properties>
+						<region ref="audioregion_cluster_116_sector_001" />
+					  </properties>
+					</macro>
+				  </connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM01 - Matrix #01-->
+		<macro name="Cluster_REM01_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_116" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM01_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM01_Sector001_macro" connection="cluster" />
+				</connection>
+				  <connection name="Cluster116_Sector001_Region001_connection" ref="regions">
+					<offset>
+					  <position x="0" y="-20000" z="0" />
+					</offset>
+					<macro name="Cluster116_Sector001_Region001_macro">
+					  <component connection="cluster" ref="standardregion" />
+					  <properties>
+						<region ref="oort_field" />
+					  </properties>
+					</macro>
+				  </connection>
+				  <connection name="Cluster116_Sector001_AudioRegion01_connection" ref="regions">
+					<offset>
+					  <position x="0" y="0" z="0" />
+					</offset>
+					<macro name="Cluster116_Sector001_AudioRegion01_macro">
+					  <component connection="cluster" ref="standardregion" />
+					  <properties>
+						<region ref="audioregion_cluster_116_sector_001" />
+					  </properties>
+					</macro>
+				  </connection>				
+			</connections>
+		</macro>		
+		
+		<!--Sector REM02 - Mars Beta-->
+		<macro name="Cluster_REM02_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem02" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM02_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM02_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM02_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM02_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem02_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM02_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM02_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem02_field2" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+
+		<!--Sector REM03 - Mercury Beta-->
+		<macro name="Cluster_REM03_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem03" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM03_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM03_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM03_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="-75000" />
+					</offset>
+					<macro name="REM03_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem03_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM04 - Althes-->
+		<macro name="Cluster_REM04_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_606" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM04_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM04_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM04_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM04_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem04_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM04_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM04_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem04_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM05 - Megnir-->
+		<macro name="Cluster_REM05_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem05" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM05_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM05_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM05_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM05_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem05_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+
+		<!--Sector REM06 - Matrix #48-->
+		<macro name="Cluster_REM06_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem06" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM06_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM06_Sector001_macro" connection="cluster" />
+				</connection>	
+				<connection name="REM06_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM06_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem06_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+
+		<!--Sector REM07 - Matrix #79A-->
+		<macro name="Cluster_REM07_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_33" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM07_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM07_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM07_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM07_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem07_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM07_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM07_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem07_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM08 - Power Circle Cluster-->
+		<macro name="Cluster_REM08_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem08" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM08_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM08_Sector001_macro" connection="cluster" />
+				</connection>						
+				<connection name="Cluster_REM08_Sector002_connection" ref="sectors">
+					<offset>
+						<position x="26673982" y="0" z="-55409964" />
+					</offset>
+					<macro ref="Cluster_REM08_Sector002_macro" connection="cluster" />
+				</connection>
+				<!--connection name="REM08_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM08_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem08_field1" />
+					</properties>
+					</macro>
+				</connection-->
+				<connection name="REM08_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM08_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem08_field2" />
+					</properties>
+					</macro>
+				</connection>				
+				<!--connection name="REM08_Sector002_Region001_connection" ref="regions">
+					<offset>
+						<position x="26673982" y="0" z="-55409964" />
+					</offset>
+					<macro name="REM08_Sector002_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem08_field1" />
+					</properties>
+					</macro>
+				</connection-->					
+				<connection name="SuperHighway001_Cluster_REM08_connection" ref="sechighways">
+					<offset>
+						<position x="13387653" y="0" z="-27704982" />
+					</offset>
+					<macro ref="SuperHighway001_Cluster_REM08_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM08_Sector001SHCon6_GateZone_macro" path="../../Cluster_REM08_Sector001_connection/tzoneCluster_REM08_Sector001SHCon6_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM08_Sector002SHCon5_GateZone_macro" path="../../Cluster_REM08_Sector002_connection/tzoneCluster_REM08_Sector002SHCon5_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway002_Cluster_REM08_connection" ref="sechighways">
+					<offset>
+						<position x="13397669" y="0" z="-27704982" />
+					</offset>
+					<macro ref="SuperHighway002_Cluster_REM08_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM08_Sector001SHCon10_GateZone_macro" path="../../Cluster_REM08_Sector001_connection/tzoneCluster_REM08_Sector001SHCon10_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM08_Sector002SHCon9_GateZone_macro" path="../../Cluster_REM08_Sector002_connection/tzoneCluster_REM08_Sector002SHCon9_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>		
+
+		<!--Sector REM09 - Teladi Gain-->
+		<macro name="Cluster_REM09_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem09" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM09_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM09_Sector001_macro" connection="cluster" />
+				</connection>	
+				<connection name="REM09_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM09_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem09_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM10 - Herron's Nebula-->
+		<macro name="Cluster_REM10_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem10" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM10_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM10_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM10_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM10_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem10_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM11 - Montalaar-->
+		<macro name="Cluster_REM11_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem11" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM11_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM11_Sector001_macro" connection="cluster" />
+				</connection>	
+				<connection name="REM11_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM11_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem11_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM12 - Split Fire-->
+		<macro name="Cluster_REM12_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem12" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM12_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM12_Sector001_macro" connection="cluster" />
+				</connection>	
+				<connection name="REM12_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM12_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem12_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM13 - Dark Waters-->
+		<macro name="Cluster_REM13_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem13" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM13_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM13_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM13_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="" y="-40000" z="" />
+					</offset>
+					<macro name="REM13_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem13_field1" />
+					</properties>
+					</macro>
+				</connection>	
+				<connection name="REM13_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="-35" y="-40000" z="-1200" />
+					</offset>
+					<macro name="REM13_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem13_field2" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+
+		<!--Sector REM14 - Mists of Elysium-->
+		<macro name="Cluster_REM14_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem14" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM14_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM14_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM14_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM14_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem14_field1" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+
+		<!--Sector REM15 - Depths of Silence-->
+		<macro name="Cluster_REM15_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem15" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM15_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM15_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM15_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="" y="-40000" z="" />
+					</offset>
+					<macro name="REM15_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem15_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM15_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM15_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem15_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM16 - Light Water-->
+		<macro name="Cluster_REM16_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem16" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM16_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM16_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM16_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM16_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem16_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM17 - Shining Currents-->
+		<macro name="Cluster_REM17_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem17" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM17_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM17_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM17_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM17_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem17_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+
+		<!--Sector REM18 - Shore of Infinity-->
+		<macro name="Cluster_REM18_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem18" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM18_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM18_Sector001_macro" connection="cluster" />
+				</connection>	
+				<connection name="REM18_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-25000" z="0" />
+					</offset>
+					<macro name="REM18_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem18_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM19 - Reservoir of Tranquillity-->
+		<macro name="Cluster_REM19_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem19" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM19_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM19_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM19_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-40000" z="0" />
+					</offset>
+					<macro name="REM19_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem19_field1" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+
+		<!--Sector REM20 - Duke's Domain-->
+		<macro name="Cluster_REM20_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem20" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM20_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM20_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM20_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM20_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem20_field1" />
+					</properties>
+					</macro>
+				</connection>			
+			</connections>
+		</macro>
+
+		<!--Sector REM21 - Perpetual Sin Cluster-->
+		<macro name="Cluster_REM21_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem21" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM21_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM21_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="Cluster_REM21_Sector002_connection" ref="sectors">
+					<offset>
+						<position x="0" y="0" z="37855015" />
+					</offset>
+					<macro ref="Cluster_REM21_Sector002_macro" connection="cluster" />
+				</connection>
+				<connection name="SuperHighway001_Cluster_REM21_connection" ref="sechighways">
+					<offset>
+						<position x="39315.52734375" y="0" z="18927508" />
+					</offset>
+					<macro ref="SuperHighway001_Cluster_REM21_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM21_Sector001SHCon6_GateZone_macro" path="../../Cluster_REM21_Sector001_connection/tzoneCluster_REM21_Sector001SHCon6_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM21_Sector002SHCon5_GateZone_macro" path="../../Cluster_REM21_Sector002_connection/tzoneCluster_REM21_Sector002SHCon5_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway002_Cluster_REM21_connection" ref="sechighways">
+					<offset>
+						<position x="49201.66796875" y="0" z="18927508" />
+					</offset>
+					<macro ref="SuperHighway002_Cluster_REM21_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM21_Sector001SHCon10_GateZone_macro" path="../../Cluster_REM21_Sector001_connection/tzoneCluster_REM21_Sector001SHCon10_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM21_Sector002SHCon9_GateZone_macro" path="../../Cluster_REM21_Sector002_connection/tzoneCluster_REM21_Sector002SHCon9_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="REM21_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="207500" y="0" z="37855000" />
+					</offset>
+					<macro name="REM21_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem21_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM22 - Pontifex' Seclusion-->
+		<macro name="Cluster_REM22_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem22" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM22_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM22_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM22_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM22_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem22_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM22_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM22_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem22_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM23 - Unholy Descent-->
+		<macro name="Cluster_REM23_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem23" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM23_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM23_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM23_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM23_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem23_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM24 - Cathedral of Xaar-->
+		<macro name="Cluster_REM24_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem24" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM24_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM24_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM24_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM24_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem24_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM25 - Clarity's End-->
+		<macro name="Cluster_REM25_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem25" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM25_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM25_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM25_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM25_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem25_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+
+		<!--Sector REM26 - Desecrated Skies-->
+		<macro name="Cluster_REM26_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem26" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM26_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM26_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM26_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM26_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem26_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>		
+
+		<!--Sector REM27 - Perdition's End-->
+		<macro name="Cluster_REM27_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem27" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM27_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM27_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM27_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM27_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem27_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM27_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM27_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem27_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM28 - Ket's Reckoning-->
+		<macro name="Cluster_REM28_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem28" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM28_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM28_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM28_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM28_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem28_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>		
+		
+		<!--Sector REM29 - Sanctum Verge-->
+		<macro name="Cluster_REM29_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem29" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM29_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM29_Sector001_macro" connection="cluster" />
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM30 - Xaar's Belt Cluster-->
+		<macro name="Cluster_REM30_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem30" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM30_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM30_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="Cluster_REM30_Sector002_connection" ref="sectors">
+					<offset>
+						<position x="-21113958" y="0" z="7381814.5" />
+					</offset>
+					<macro ref="Cluster_REM30_Sector002_macro" connection="cluster" />
+				</connection>
+				<connection name="Cluster_REM30_Sector003_connection" ref="sectors">
+					<offset>
+						<position x="38620000" y="0" z="53635320" />
+					</offset>
+					<macro ref="Cluster_REM30_Sector003_macro" connection="cluster" />
+				</connection>
+				<connection name="SuperHighway001_Cluster_REM30_connection" ref="sechighways">
+					<offset>
+						<position x="8703021" y="0" z="30508566" />
+					</offset>
+					<macro ref="SuperHighway001_Cluster_REM30_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM30_Sector002SHCon5_GateZone_macro" path="../../Cluster_REM30_Sector002_connection/tzoneCluster_REM30_Sector002SHCon5_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM30_Sector003SHCon6_GateZone_macro" path="../../Cluster_REM30_Sector003_connection/tzoneCluster_REM30_Sector003SHCon6_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway002_Cluster_REM30_connection" ref="sechighways">
+					<offset>
+						<position x="8803021" y="0" z="30508566" />
+					</offset>
+					<macro ref="SuperHighway002_Cluster_REM30_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM30_Sector002SHCon9_GateZone_macro" path="../../Cluster_REM30_Sector002_connection/tzoneCluster_REM30_Sector002SHCon9_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM30_Sector003SHCon10_GateZone_macro" path="../../Cluster_REM30_Sector003_connection/tzoneCluster_REM30_Sector003SHCon10_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway003_Cluster_REM30_connection" ref="sechighways">
+					<offset>
+						<position x="19365896" y="0" z="26817660" />
+					</offset>
+					<macro ref="SuperHighway003_Cluster_REM30_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM30_Sector001SHCon5_GateZone_macro" path="../../Cluster_REM30_Sector001_connection/tzoneCluster_REM30_Sector001SHCon5_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM30_Sector003SHCon4_GateZone_macro" path="../../Cluster_REM30_Sector003_connection/tzoneCluster_REM30_Sector003SHCon4_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway004_Cluster_REM30_connection" ref="sechighways">
+					<offset>
+						<position x="19435000" y="0" z="26817264" />
+					</offset>
+					<macro ref="SuperHighway004_Cluster_REM30_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM30_Sector001SHCon9_GateZone_macro" path="../../Cluster_REM30_Sector001_connection/tzoneCluster_REM30_Sector001SHCon9_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM30_Sector003SHCon12_GateZone_macro" path="../../Cluster_REM30_Sector003_connection/tzoneCluster_REM30_Sector003SHCon12_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway005_Cluster_REM30_connection" ref="sechighways">
+					<offset>
+						<position x="-10556979" y="0" z="3695883.25" />
+					</offset>
+					<macro ref="SuperHighway005_Cluster_REM30_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM30_Sector001SHCon7_GateZone_macro" path="../../Cluster_REM30_Sector001_connection/tzoneCluster_REM30_Sector001SHCon7_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM30_Sector002SHCon11_GateZone_macro" path="../../Cluster_REM30_Sector002_connection/tzoneCluster_REM30_Sector002SHCon11_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway006_Cluster_REM30_connection" ref="sechighways">
+					<offset>
+						<position x="-10556979" y="0" z="3685907" />
+					</offset>
+					<macro ref="SuperHighway006_Cluster_REM30_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM30_Sector001SHCon8_GateZone_macro" path="../../Cluster_REM30_Sector001_connection/tzoneCluster_REM30_Sector001SHCon8_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM30_Sector002SHCon12_GateZone_macro" path="../../Cluster_REM30_Sector002_connection/tzoneCluster_REM30_Sector002SHCon12_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="REM30_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM30_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem30_field2" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM30_Sector002_Region001_connection" ref="regions">
+					<offset>
+						<position x="-21113958" y="0" z="7381814.5" />
+					</offset>
+					<macro name="REM30_Sector002_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem30_field3" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM30_Sector003_Region001_connection" ref="regions">
+					<offset>
+						<position x="38620000" y="0" z="53635320" />
+					</offset>
+					<macro name="REM30_Sector003_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem30_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>	
+		</macro>	
+		
+		<!--Sector REM31 - The Shallows -->
+		<macro name="Cluster_REM31_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem31" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM31_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM31_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM31_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="5750" y="-15750" z="-9650" />
+					</offset>
+					<macro name="REM31_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem31_field1" />
+					</properties>
+					</macro>
+				</connection>				
+				<connection name="REM31_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM31_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem31_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM32 - Family Rhak Cluster-->
+		<macro name="Cluster_REM32_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem32" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM32_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM32_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="Cluster_REM32_Sector002_connection" ref="sectors">
+					<offset>
+						<position x="0" y="0" z="-37855016" />
+					</offset>
+					<macro ref="Cluster_REM32_Sector002_macro" connection="cluster" />
+				</connection>
+				<connection name="SuperHighway001_Cluster_REM32_connection" ref="sechighways">
+					<offset>
+						<position x="39315.52734375" y="0" z="-18927508" />
+					</offset>
+					<macro ref="SuperHighway001_Cluster_REM32_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM32_Sector001SHCon6_GateZone_macro" path="../../Cluster_REM32_Sector001_connection/tzoneCluster_REM32_Sector001SHCon6_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM32_Sector002SHCon5_GateZone_macro" path="../../Cluster_REM32_Sector002_connection/tzoneCluster_REM32_Sector002SHCon5_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway002_Cluster_REM32_connection" ref="sechighways">
+					<offset>
+						<position x="49201.66796875" y="0" z="-18927508" />
+					</offset>
+					<macro ref="SuperHighway002_Cluster_REM32_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM32_Sector001SHCon10_GateZone_macro" path="../../Cluster_REM32_Sector001_connection/tzoneCluster_REM32_Sector001SHCon10_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM32_Sector002SHCon9_GateZone_macro" path="../../Cluster_REM32_Sector002_connection/tzoneCluster_REM32_Sector002SHCon9_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="REM32_Sector002_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="-37855016" />
+					</offset>
+					<macro name="REM32_Sector002_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem32_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM33 - Thyn's Abyss-->
+		<macro name="Cluster_REM33_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem33" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM33_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM33_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM33_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM33_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem33_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM33_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM33_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem33_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM34 - Thyn's Excavation-->
+		<macro name="Cluster_REM34_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem34" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM34_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM34_Sector001_macro" connection="cluster" />
+				</connection>	
+				<connection name="REM34_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="-294845" y="0" z="92330" />
+					</offset>
+					<macro name="REM34_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem34_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM34_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="-294845" y="0" z="92330" />
+					</offset>
+					<macro name="REM34_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem34_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM35 - Hila's Joy Cluster-->
+		<macro name="Cluster_REM35_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem35" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM35_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM35_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="Cluster_REM35_Sector002_connection" ref="sectors">
+					<offset>
+						<position x="0" y="0" z="37855016" />
+					</offset>
+					<macro ref="Cluster_REM35_Sector002_macro" connection="cluster" />
+				</connection>
+				<connection name="REM35_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-7500" z="0" />
+					</offset>
+					<macro name="REM35_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem35_field" />
+					</properties>
+					</macro>
+				</connection>					
+				<connection name="SuperHighway001_Cluster_REM35_connection" ref="sechighways">
+					<offset>
+						<position x="39315.52734375" y="0" z="18927508" />
+					</offset>
+					<macro ref="SuperHighway001_Cluster_REM35_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM35_Sector001SHCon6_GateZone_macro" path="../../Cluster_REM35_Sector001_connection/tzoneCluster_REM35_Sector001SHCon6_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM35_Sector002SHCon5_GateZone_macro" path="../../Cluster_REM35_Sector002_connection/tzoneCluster_REM35_Sector002SHCon5_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway002_Cluster_REM35_connection" ref="sechighways">
+					<offset>
+						<position x="49201.66796875" y="0" z="18927508" />
+					</offset>
+					<macro ref="SuperHighway002_Cluster_REM35_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM35_Sector001SHCon10_GateZone_macro" path="../../Cluster_REM35_Sector001_connection/tzoneCluster_REM35_Sector001SHCon10_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM35_Sector002SHCon9_GateZone_macro" path="../../Cluster_REM35_Sector002_connection/tzoneCluster_REM35_Sector002SHCon9_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM36 - Great Trench-->
+		<macro name="Cluster_REM36_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem36" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM36_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM36_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM36_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="-7500" z="0" />
+					</offset>
+					<macro name="REM36_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem36_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM37 - Lucky Planets-->
+		<macro name="Cluster_REM37_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem37" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM37_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM37_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM37_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM37_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem37_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM37_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM37_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem37_field2" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM37_Sector001_Region003_connection" ref="regions">
+					<offset>
+						<position x="0" y="-7500" z="0" />
+					</offset>
+					<macro name="REM37_Sector001_Region003_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem37_field3" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM38 - Queen's Space-->
+		<macro name="Cluster_REM38_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem38" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM38_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM38_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM38_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM38_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem38_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM38_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM38_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem38_field2" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM39 - Matrix #472D-->
+		<macro name="Cluster_REM39_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem39" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM39_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM39_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM39_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="" y="0" z="" />
+					</offset>
+					<macro name="REM39_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem39_field1" />
+					</properties>
+					</macro>
+				</connection>				
+				<connection name="REM39_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="-35000" />
+					</offset>
+					<macro name="REM39_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem39_field2" />
+					</properties>
+					</macro>
+				</connection>				  		  
+			</connections>
+		</macro>
+		
+		<!--Sector REM40 - Ocracoke's Storm Cluster-->
+		<macro name="Cluster_REM40_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem40" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM40_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM40_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="Cluster_REM40_Sector002_connection" ref="sectors">
+					<offset>
+						<position x="0" y="0" z="-37855016" />
+					</offset>
+					<macro ref="Cluster_REM40_Sector002_macro" connection="cluster" />
+				</connection>
+				<connection name="SuperHighway001_Cluster_REM40_connection" ref="sechighways">
+					<offset>
+						<position x="39315.52734375" y="0" z="-18927508" />
+					</offset>
+					<macro ref="SuperHighway001_Cluster_REM40_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM40_Sector001SHCon6_GateZone_macro" path="../../Cluster_REM40_Sector001_connection/tzoneCluster_REM40_Sector001SHCon6_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM40_Sector002SHCon5_GateZone_macro" path="../../Cluster_REM40_Sector002_connection/tzoneCluster_REM40_Sector002SHCon5_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway002_Cluster_REM40_connection" ref="sechighways">
+					<offset>
+						<position x="49201.66796875" y="0" z="-18927508" />
+					</offset>
+					<macro ref="SuperHighway002_Cluster_REM40_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM40_Sector001SHCon10_GateZone_macro" path="../../Cluster_REM40_Sector001_connection/tzoneCluster_REM40_Sector001SHCon10_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM40_Sector002SHCon89_GateZone_macro" path="../../Cluster_REM40_Sector002_connection/tzoneCluster_REM40_Sector002SHCon9_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="REM40_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="-130000" y="0" z="-95000" />
+					</offset>
+					<macro name="REM40_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem40_field1" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM41 - Shadows of Giants Cluster-->
+		<macro name="Cluster_REM41_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem41" />					
+					</macro>
+				</connection>
+				<connection name="Cluster_REM41_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM41_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="Cluster_REM41_Sector002_connection" ref="sectors">
+					<offset>
+						<position x="26673982" y="0" z="-55409964" />
+					</offset>
+					<macro ref="Cluster_REM41_Sector002_macro" connection="cluster" />
+				</connection>
+				<connection name="SuperHighway001_Cluster_REM41_connection" ref="sechighways">
+					<offset>
+						<position x="13387653" y="0" z="-27704982" />
+					</offset>
+					<macro ref="SuperHighway001_Cluster_REM41_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM41_Sector001SHCon6_GateZone_macro" path="../../Cluster_REM41_Sector001_connection/tzoneCluster_REM41_Sector001SHCon6_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM41_Sector002SHCon5_GateZone_macro" path="../../Cluster_REM41_Sector002_connection/tzoneCluster_REM41_Sector002SHCon5_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway002_Cluster_REM41_connection" ref="sechighways">
+					<offset>
+						<position x="13397669" y="0" z="-27704982" />
+					</offset>
+					<macro ref="SuperHighway002_Cluster_REM41_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM41_Sector001SHCon10_GateZone_macro" path="../../Cluster_REM41_Sector001_connection/tzoneCluster_REM41_Sector001SHCon10_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM41_Sector002SHCon9_GateZone_macro" path="../../Cluster_REM41_Sector002_connection/tzoneCluster_REM41_Sector002SHCon9_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="REM41_Sector002_Region001_connection" ref="regions">
+					<offset>
+						<position x="26673982" y="-7500" z="-55409964" />
+					</offset>
+					<macro name="REM41_Sector002_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem41_field1" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>	
+		
+		<!--Sector REM42 - Bala Gi's Joy-->
+		<macro name="Cluster_REM42_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem42" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM42_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM42_Sector001_macro" connection="cluster" />
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM43 - Blue Profit-->
+		<macro name="Cluster_REM43_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem43" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM43_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM43_Sector001_macro" connection="cluster" />
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM44 - PTNI Headquarters-->
+		<macro name="Cluster_REM44_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem44" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM44_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM44_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM44_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="" y="-40000" z="" />
+					</offset>
+					<macro name="REM44_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem44_field1" />
+					</properties>
+					</macro>
+				</connection>					
+				<connection name="REM44_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM44_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem44_field2" />
+					</properties>
+					</macro>
+				</connection>			
+			</connections>
+		</macro>
+		
+		<!--Sector REM45 - The Vault-->
+		<macro name="Cluster_REM45_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem45" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM45_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM45_Sector001_macro" connection="cluster" />
+				</connection>	
+				<connection name="REM45_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-40000" z="0" />
+					</offset>
+					<macro name="REM45_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem45_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM46 - Recovered Capital-->
+		<macro name="Cluster_REM46_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem46" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM46_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM46_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM46_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM46_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem46_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM47 - Spaceweed Grove-->
+		<macro name="Cluster_REM47_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem47" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM47_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM47_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM47_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-10500" z="0" />
+					</offset>
+					<macro name="REM47_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem47_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM48 - Wretched Skies Cluster-->
+		<macro name="Cluster_REM48_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem48" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM48_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM48_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="Cluster_REM48_Sector002_connection" ref="sectors">
+					<offset>
+						<position x="26673982" y="0" z="-55409964" />
+					</offset>
+					<macro ref="Cluster_REM48_Sector002_macro" connection="cluster" />
+				</connection>
+				<connection name="SuperHighway001_Cluster_REM48_connection" ref="sechighways">
+					<offset>
+						<position x="13387653" y="0" z="-27704982" />
+					</offset>
+					<macro ref="SuperHighway001_Cluster_REM48_macro" connection="cluster">
+						<connections>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM48_Sector001SHCon6_GateZone_macro" path="../../Cluster_REM48_Sector001_connection/tzoneCluster_REM48_Sector001SHCon6_GateZone_connection" connection="exitpoint1" />
+							</connection>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM48_Sector002SHCon5_GateZone_macro" path="../../Cluster_REM48_Sector002_connection/tzoneCluster_REM48_Sector002SHCon5_GateZone_connection" connection="entrypoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>
+				<connection name="SuperHighway002_Cluster_REM48_connection" ref="sechighways">
+					<offset>
+						<position x="13397669" y="0" z="-27704982" />
+					</offset>
+					<macro ref="SuperHighway002_Cluster_REM48_macro" connection="cluster">
+						<connections>
+							<connection ref="exitpoint">
+								<macro ref="tzoneCluster_REM48_Sector001SHCon10_GateZone_macro" path="../../Cluster_REM48_Sector001_connection/tzoneCluster_REM48_Sector001SHCon10_GateZone_connection" connection="entrypoint1" />
+							</connection>
+							<connection ref="entrypoint">
+								<macro ref="tzoneCluster_REM48_Sector002SHCon9_GateZone_macro" path="../../Cluster_REM48_Sector002_connection/tzoneCluster_REM48_Sector002SHCon9_GateZone_connection" connection="exitpoint1" />
+							</connection>
+						</connections>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM49 - Duke's Vision I-->
+		<macro name="Cluster_REM49_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem49" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM49_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM49_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM49_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM49_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem49_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM50 - Duke's Vision II-->
+		<macro name="Cluster_REM50_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem50" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM50_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM50_Sector001_macro" connection="cluster" />
+				</connection>	
+				<connection name="REM50_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM50_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem50_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM51 - LooMankStrat's Legacy-->
+		<macro name="Cluster_REM51_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_116" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM51_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM51_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM51_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM51_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem51_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM52 - Danna's Chance-->
+		<macro name="Cluster_REM52_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem52" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM52_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM52_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM52_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-7500" z="0" />
+					</offset>
+					<macro name="REM52_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem52_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM53 - Legend's Home Alpha-->
+		<macro name="Cluster_REM53_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem53" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM53_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM53_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM53_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM53_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem53_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>	
+		
+		<!--Sector REM54 - Legend's Home Beta-->
+		<macro name="Cluster_REM54_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem54" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM54_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM54_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM54_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-40000" z="0" />
+					</offset>
+					<macro name="REM54_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem54_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM54_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="-15000" z="0" />
+					</offset>
+					<macro name="REM54_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem54_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM55 - Akeela's Beacon-->
+		<macro name="Cluster_REM55_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem55" />						
+					</macro>
+				</connection>
+				<connection name="Cluster_REM55_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM55_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM55_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="-65000" />
+					</offset>
+					<macro name="REM55_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem55_field1" />
+					</properties>
+					</macro>
+				</connection>	
+				<connection name="REM55_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="-4500" z="-85000" />
+					</offset>
+					<macro name="REM55_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem55_field2" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>	
+		
+		<!--Sector REM56 - Aladna Hill-->
+		<macro name="Cluster_REM56_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem56" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM56_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM56_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM56_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-2750" z="0" />
+					</offset>
+					<macro name="REM56_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem56_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM57 - Light of Heart-->
+		<macro name="Cluster_REM57_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem57" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM57_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM57_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM57_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM57_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem57_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM58 - Moo-Kye's Revenge-->
+		<macro name="Cluster_REM58_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem58" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM58_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM58_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM58_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM58_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem58_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM59 - Mines of Fortune-->
+		<macro name="Cluster_REM59_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem59" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM59_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM59_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM59_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM59_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem59_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM59_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0"/>
+					</offset>
+					<macro name="REM59_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem59_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM60 - Zyarth's Stand-->
+		<macro name="Cluster_REM60_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem60" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM60_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM60_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM60_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-6500" z="0" />
+					</offset>
+					<macro name="REM60_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem60_field1" />
+					</properties>
+				</macro>
+				</connection>
+				<connection name="REM60_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="-6500" z="0" />
+					</offset>
+					<macro name="REM60_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem60_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>			
+		</macro>	
+		
+		<!--Sector REM61 - Zyarth's Fall-->
+		<macro name="Cluster_REM61_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem61" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM61_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM61_Sector001_macro" connection="cluster" />
+				</connection>	
+				<connection name="REM61_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM61_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem61_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM61_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM61_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem61_field2" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM62 - Elena's Fortune-->
+		<macro name="Cluster_REM62_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem62" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM62_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM62_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM62_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="27570" y="-2500" z="0" />
+					</offset>
+					<macro name="REM62_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem62_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM63 - Nyana's Hideout-->
+		<macro name="Cluster_REM63_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem63" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM63_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM63_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM63_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM63_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem63_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM63_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM63_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem63_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM64 - Interworlds-->
+		<macro name="Cluster_REM64_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem64" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM64_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM64_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM64_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM64_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem64_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM65 - Wastelands-->
+		<macro name="Cluster_REM65_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem65" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM65_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM65_Sector001_macro" connection="cluster" />
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM66 - Ghinn's Escape-->
+		<macro name="Cluster_REM66_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem66" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM66_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM66_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM66_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM66_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem66_field" />
+					</properties>
+					</macro>
+				</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM67 - Kha'ak Sector Alpha-->
+		<macro name="Cluster_REM67_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem67" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM67_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM67_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM67_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM67_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem67_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM68 - Kha'ak Sector Beta-->
+		<macro name="Cluster_REM68_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem67" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM68_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM68_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM68_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM68_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem68_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM69 - Kha'ak Sector Gamma-->
+		<macro name="Cluster_REM69_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem67" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM69_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM69_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM69_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM69_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem69_field1" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM70 - Unknown Kha'ak Sector-->
+		<macro name="Cluster_REM70_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem67" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM70_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM70_Sector001_macro" connection="cluster" />
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM71 - Unknown Sector-->
+		<macro name="Cluster_REM71_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem67" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM71_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM71_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM71_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem71_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM71_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem71_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>	
+
+		<!--Sector REM72 - Kha'ak Hive-->
+		<macro name="Cluster_REM72_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem72" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM72_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM72_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM72_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM72_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem72_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM72_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM72_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem72_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>		
+</macros>	

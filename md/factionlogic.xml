@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+	<add sel="//cue[@name='FactionLogicManagers']/cues">
+        <cue name="OTASFactionLogic">
+          <cues>
+            <cue name="OTASFactionLogic_Manager" ref="md.FactionLogic.Manager">
+              <param name="Faction" value="faction.otas"/>
+              <param name="BaseAggressionLevel" value="moodlevel.high"/>
+              <param name="BaseAvariceLevel" value="moodlevel.normal"/>
+              <param name="BaseLawfulness" value="0.6"/>
+			  <param name="PreferredHQSpaceMacro" value="macro.Cluster_REM53_Sector001_macro" />
+			  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation']"/>
+              <param name="SatelliteNetworkGoal" value="20"/>
+              <param name="LasertowerNetworkGoal" value="5"/>
+              <param name="DebugChance" value="0"/>
+              <param name="DebugChance2" value="0"/>
+            </cue>
+          </cues>
+        </cue>
+	</add>	
+	
+	<add sel="//cue[@name='FactionLogicManagers']/cues">		
+		<cue name="SetupOTASFactionLogic" version="1" comment="">
+		  <actions>
+			<set_value name="md.$FactionData.{faction.otas}" exact="table[]" />
+		  </actions>
+		  <patch sinceversion="1">
+			<set_value name="OTASFactionLogic.$PreferredHQSpaceMacro" exact="macro.Cluster_REM53_Sector001_macro" />
+			<set_value name="$PreferredHQTypes" exact="['shipbuilding', 'equipmentdock', 'tradestation']"/>
+		  </patch>
+		</cue>	
+	</add>
+</diff>

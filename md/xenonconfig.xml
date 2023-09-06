@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="xenonconfig">
+	<cues>
+<!--Activation-->	
+		<cue name="ActivateMiners" instantiate="true">
+			<conditions>			
+				<event_cue_signalled cue="md.Setup.Start" />
+				<check_value value="player.age ge 2h"/>		<!-- 2h -->			
+			</conditions>
+			<actions>
+				<set_job_active job="'xenon_miner_emperor_pride'" activate="true"/>
+				<set_job_active job="'xenon_miner_matrix598'" activate="true" />
+				<set_job_active job="'xenon_miner_matrix79b'" activate="true" />
+				<set_job_active job="'xenon_miner_matrix9'" activate="true" />
+				<set_job_active job="'xenon_miner_atiyas_misfortune'" activate="true" />
+				<set_job_active job="'xenon_miner_scale_plate_green'" activate="true" />
+				<set_job_active job="'xenon_miner_savage_spur'" activate="true" />				
+				<debug_text text="'Additonal Xenon miners activated'" />				
+			</actions>
+		</cue>	
+		
+		<cue name="ActivateTraders" instantiate="true">
+			<conditions>			
+				<event_cue_signalled cue="md.Setup.Start" />
+				<check_value value="player.age ge 2h"/>		<!-- 2h -->			
+			</conditions>
+			<actions>
+				<set_job_active job="'xenon_trader_emperor_pride'" activate="true"/>
+				<set_job_active job="'xenon_trader_matrix598'" activate="true" />
+				<set_job_active job="'xenon_trader_matrix79b'" activate="true" />
+				<set_job_active job="'xenon_trader_matrix9'" activate="true" />
+				<set_job_active job="'xenon_trader_atiyas_misfortune'" activate="true" />
+				<set_job_active job="'xenon_trader_scale_plate_green'" activate="true" />
+				<set_job_active job="'xenon_trader_savage_spur'" activate="true" />	
+				<debug_text text="'Additonal Xenon traders activated'" />				
+			</actions>
+		</cue>
+
+		<cue name="ActivateDefender1" instantiate="true">
+			<conditions>
+				<event_cue_signalled cue="md.Setup.Start" />
+				<check_value value="player.age ge 3h"/>	<!-- 3h -->
+			</conditions>
+			<actions>		
+				<set_job_active job="'xenon_strike_craft_emperor_pride'" activate="true"/>
+				<set_job_active job="'xenon_strike_craft_matrix598'" activate="true"/>
+				<set_job_active job="'xenon_strike_craft_matrix79b'" activate="true"/>
+				<set_job_active job="'xenon_strike_craft_matrix9'" activate="true"/>
+				<set_job_active job="'xenon_strike_craft_atiyas_misfortune'" activate="true"/>
+				<set_job_active job="'xenon_strike_craft_scale_plate_green'" activate="true"/>
+				<set_job_active job="'xenon_strike_craft_bad_debt'" activate="true"/>
+				<set_job_active job="'xenon_strike_craft_matrix695b'" activate="true"/>	
+							<!--X:Reemergence-->				
+				<set_job_active job="'xenon_strike_craft_matrix01'" activate="true"/>				
+				<set_job_active job="'xenon_strike_craft_matrix48'" activate="true"/>		
+				<set_job_active job="'xenon_strike_craft_split_fire'" activate="true"/>		
+				<set_job_active job="'xenon_strike_craft_depths_of_silence'" activate="true"/>		
+				<set_job_active job="'xenon_strike_craft_desecrated_skies'" activate="true"/>		
+				<set_job_active job="'xenon_strike_craft_matrix472d'" activate="true"/>		
+				<set_job_active job="'xenon_strike_craft_ptni_headquarters'" activate="true"/>						
+				<debug_text text="'First Defenders activated'"/>
+			</actions>
+		</cue>
+		
+		<cue name="ActivateDefender2" instantiate="true">
+			<conditions>
+				<event_cue_signalled cue="md.Setup.Start" />
+				<check_value value="player.age ge 5h"/> <!-- 5h -->
+			</conditions>
+			<actions>			
+				<set_job_active job="'xenon_destroyers_emperor_pride'" activate="true"/>
+				<set_job_active job="'xenon_destroyers_matrix598'" activate="true"/>
+				<set_job_active job="'xenon_destroyers_matrix79b'" activate="true"/>
+				<set_job_active job="'xenon_destroyers_matrix9'" activate="true"/>
+				<set_job_active job="'xenon_destroyers_atiyas_misfortune'" activate="true"/>
+				<set_job_active job="'xenon_destroyers_scale_plate_green'" activate="true"/>
+				<set_job_active job="'xenon_destroyers_savage_spur'" activate="true"/>
+				<set_job_active job="'xenon_destroyers_bad_debt'" activate="true"/>
+				<set_job_active job="'xenon_destroyers_matrix695b'" activate="true"/>
+							<!--X:Reemergence-->				
+				<set_job_active job="'xenon_destroyers_matrix01'" activate="true"/>				
+				<set_job_active job="'xenon_destroyers_matrix48'" activate="true"/>		
+				<set_job_active job="'xenon_destroyers_split_fire'" activate="true"/>		
+				<set_job_active job="'xenon_destroyers_depths_of_silence'" activate="true"/>		
+				<set_job_active job="'xenon_destroyers_desecrated_skies'" activate="true"/>		
+				<set_job_active job="'xenon_destroyers_matrix472d'" activate="true"/>		
+				<set_job_active job="'xenon_destroyers_ptni_headquarters'" activate="true"/>					
+				<debug_text text="'Second Defenders activated'"/>
+			</actions>
+		</cue>		
+		
+		<cue name="ActivateDefender3" instantiate="true">
+			<conditions>
+				<event_cue_signalled cue="md.Setup.Start" />
+				<check_value value="player.age ge 10h"/> <!-- 10h -->
+			</conditions>
+			<actions>			
+				<set_job_active job="'xenon_carrier_emperor_pride'" activate="true"/>
+				<set_job_active job="'xenon_carrier_matrix598'" activate="true"/>
+				<set_job_active job="'xenon_carrier_matrix79b'" activate="true"/>
+				<set_job_active job="'xenon_carrier_matrix9'" activate="true"/>
+				<set_job_active job="'xenon_carrier_atiyas_misfortune'" activate="true"/>
+				<set_job_active job="'xenon_carrier_scale_plate_green'" activate="true"/>
+				<set_job_active job="'xenon_carrier_savage_spur'" activate="true"/>
+				<set_job_active job="'xenon_carrier_bad_debt'" activate="true"/>
+				<set_job_active job="'xenon_carrier_matrix695b'" activate="true"/>
+							<!--X:Reemergence-->				
+				<set_job_active job="'xenon_carrier_matrix01'" activate="true"/>				
+				<set_job_active job="'xenon_carrier_matrix48'" activate="true"/>		
+				<set_job_active job="'xenon_carrier_split_fire'" activate="true"/>		
+				<set_job_active job="'xenon_carrier_depths_of_silence'" activate="true"/>		
+				<set_job_active job="'xenon_carrier_desecrated_skies'" activate="true"/>		
+				<set_job_active job="'xenon_carrier_matrix472d'" activate="true"/>		
+				<set_job_active job="'xenon_carrier_ptni_headquarters'" activate="true"/>					
+				<debug_text text="'Third Defenders activated'"/>
+			</actions>
+		</cue>	
+	</cues>
+</mdscript>

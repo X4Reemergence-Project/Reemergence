@@ -1,0 +1,4314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>		
+		<!--Sector REM00 - Oort Cloud Beta-->
+		<macro name="Cluster_REM00_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM00_Sector001_connection" ref="zones"><!--Oort Cloud-->
+					<offset>
+						<position x="-32775" y="500" z="-185000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM00_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM00_Sector001_connection" ref="zones"><!--Matrix #01-->
+					<offset>
+						<position x="82700" y="500" z="16750"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM00_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM00_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM00_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM00_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM00_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM00_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM00_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM00_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM00_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM00_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM00_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM01 - Matrix #01-->
+		<macro name="Cluster_REM01_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM01_Sector001_connection" ref="zones"><!--Oort Cloud Beta-->
+					<offset>
+						<position x="-82700" y="500" z="125000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM01_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM01_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM01_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM01_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM01_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM01_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM01_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM01_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM01_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM01_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM01_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM01_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="175000" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM01_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM01_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="45000" y="0" z="-85000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM01_Sector001_macro" connection="sector"/>	
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM02 - Mars Beta-->		
+	    <macro name="Cluster_REM02_Sector001_macro" class="sector">
+		  <component ref="standardsector" />
+		  <connections>
+		    <connection name="Zone001_Cluster_REM02_Sector001_connection" ref="zones"><!--North-->
+				<offset>
+					<position x="0" y="0" z="175000" />
+				</offset>
+			<macro ref="Zone001_Cluster_REM02_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone002_Cluster_REM02_Sector001_connection" ref="zones"><!--Northeast-->
+				<offset>
+					<position x="150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone002_Cluster_REM02_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone003_Cluster_REM02_Sector001_connection" ref="zones"><!--Southeast-->
+				<offset>
+					<position x="150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone003_Cluster_REM02_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone004_Cluster_REM02_Sector001_connection" ref="zones"><!--South\Mars-->
+				<offset>
+					<position x="0" y="0" z="-175000" />
+				</offset>
+			<macro ref="Zone004_Cluster_REM02_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone005_Cluster_REM02_Sector001_connection" ref="zones"><!--Southwest-->
+				<offset>
+					<position x="-150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone005_Cluster_REM02_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone006_Cluster_REM02_Sector001_connection" ref="zones"><!--Northwest-->
+				<offset>
+					<position x="-150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone006_Cluster_REM02_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone007_Cluster_REM02_Sector001_connection" ref="zones"><!--Center-->
+				<offset>
+					<position x="0" y="0" z="0" />
+				</offset>
+			<macro ref="Zone007_Cluster_REM02_Sector001_macro" connection="sector" />
+		    </connection>
+		  </connections>
+	    </macro>		
+		
+		<!--Sector REM03 - Mercury Beta-->
+	    <macro name="Cluster_REM03_Sector001_macro" class="sector">
+		  <component ref="standardsector" />
+		  <connections>
+		    <connection name="Zone001_Cluster_REM03_Sector001_connection" ref="zones"><!--North-->
+				<offset>
+					<position x="0" y="0" z="175000" />
+				</offset>
+			<macro ref="Zone001_Cluster_REM03_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone002_Cluster_REM03_Sector001_connection" ref="zones"><!--Northeast-->
+				<offset>
+					<position x="150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone002_Cluster_REM03_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone003_Cluster_REM03_Sector001_connection" ref="zones"><!--Southeast\Mercury-->
+				<offset>
+					<position x="150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone003_Cluster_REM03_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone004_Cluster_REM03_Sector001_connection" ref="zones"><!--South-->
+				<offset>
+					<position x="0" y="0" z="-175000" />
+				</offset>
+			<macro ref="Zone004_Cluster_REM03_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone005_Cluster_REM03_Sector001_connection" ref="zones"><!--Southwest-->
+				<offset>
+					<position x="-150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone005_Cluster_REM03_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone006_Cluster_REM03_Sector001_connection" ref="zones"><!--Northwest-->
+				<offset>
+					<position x="-150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone006_Cluster_REM03_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone007_Cluster_REM03_Sector001_connection" ref="zones"><!--Center-->
+				<offset>
+					<position x="0" y="0" z="0" />
+				</offset>
+			<macro ref="Zone007_Cluster_REM03_Sector001_macro" connection="sector" />
+		    </connection>
+		  </connections>
+	    </macro>
+		
+		<!--Sector REM04 - Althes-->
+		<macro name="Cluster_REM04_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM04_Sector001_connection" ref="zones"><!--Megnir-->
+					<offset>
+						<position x="142740" y="500" z="-115045"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM04_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM04_Sector001_connection" ref="zones"><!--Matrix #48-->
+					<offset>
+						<position x="-81700" y="500" z="125620"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM04_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM04_Sector001_connection" ref="zones"><!--Mists of Elysium-->
+					<offset>
+						<position x="-96055" y="500" z="-92655"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM04_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM04_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM04_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM04_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM04_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM04_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM04_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM04_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM04_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM04_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM04_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM05 - Megnir-->
+		<macro name="Cluster_REM05_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM05_Sector001_connection" ref="zones"><!--Segaris-->
+					<offset>
+						<position x="125620" y="500" z="-74825"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM05_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM05_Sector001_connection" ref="zones"><!--Althes-->
+					<offset>
+						<position x="-124855" y="500" z="75060"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM05_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM05_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="64855" y="500" z="195560"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM05_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM05_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM05_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM05_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM05_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM05_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM05_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM05_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM05_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM05_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM05_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM06 - Matrix #48-->
+		<macro name="Cluster_REM06_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM06_Sector001_connection" ref="zones"><!--Althes-->
+					<offset>
+						<position x="92700" y="500" z="-105065"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM06_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM05_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="125060" y="7500" z="114855"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM05_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM05_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-124855" y="500" z="-9060"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM05_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM06_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM06_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM06_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM06_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM06_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM06_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM06_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM06_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM06_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM06_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM06_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="75000" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM06_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM06_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="-75000" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM06_Sector001_macro" connection="sector"/>	
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM07 - Matrix #79A-->
+		<macro name="Cluster_REM07_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM07_Sector001_connection" ref="zones"><!--Matrix #79B-->
+					<offset>
+						<position x="92700" y="500" z="145000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM07_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM07_Sector001_connection" ref="zones"><!--Power Circle III-->
+					<offset>
+						<position x="12700" y="500" z="-175000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM07_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM07_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM07_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM07_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM07_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM07_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM07_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM07_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM07_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM07_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM07_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM08 - Power Circle III-->
+		<macro name="Cluster_REM08_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM08_Sector001_connection" ref="zones"><!--Matrix #79A-->
+					<offset>
+						<position x="-22700" y="500" z="45750"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM08_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM08_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM08_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM08_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM08_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM08_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM08_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM08_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM08_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM08_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM08_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM08_Sector001SHCon6_GateZone_connection"  ref="zones">	<offset>	<position x="151323.765625" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM08_Sector001SHCon6_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM08_Sector001SHCon10_GateZone_connection" ref="zones">	<offset>	<position x="161340.546875" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM08_Sector001SHCon10_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM08 - Power Circle I-->
+		<macro name="Cluster_REM08_Sector002_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM08_Sector002_connection" ref="zones"><!--Second Contact XI-->
+					<offset>
+						<position x="-62700" y="500" z="-55750"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM08_Sector002_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM08_Sector002_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="162700" y="500" z="75750"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM08_Sector002_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM08_Sector002_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM08_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM08_Sector002_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM08_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM08_Sector002_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM08_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM08_Sector002_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM08_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM08_Sector002_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM08_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM08_Sector002SHCon5_GateZone_connection" ref="zones">	<offset>	<position x="-50000"     y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM08_Sector002SHCon5_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM08_Sector002SHCon9_GateZone_connection" ref="zones">	<offset>	<position x="-39984.375" y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM08_Sector002SHCon9_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM09 - Teladi Gain-->
+		<macro name="Cluster_REM09_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM09_Sector001_connection" ref="zones"><!--The Void-->
+					<offset>
+						<position x="-98700" y="500" z="185000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM09_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM09_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-95250" y="500" z="-182500"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM09_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM09_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="99750" y="500" z="6525"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM09_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM09_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM09_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM09_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM09_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM09_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM09_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM09_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM09_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM09_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM09_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM10 - Herron's Nebula-->
+		<macro name="Cluster_REM10_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM10_Sector001_connection" ref="zones"><!--Light Water-->
+					<offset>
+						<position x="-72700" y="500" z="125000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM10_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM10_Sector001_connection" ref="zones"><!--The Reach-->
+					<offset>
+						<position x="72700" y="500" z="-125000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM10_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM10_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="122700" y="500" z="135000"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM10_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG4_Cluster_REM10_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-122700" y="500" z="-135000"/>
+					</offset>
+					<macro ref="ZoneG4_Cluster_REM10_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM10_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM10_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM10_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM10_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM10_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM10_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM10_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM10_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM10_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM10_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM11 - Montalaar-->
+		<macro name="Cluster_REM11_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM11_Sector001_connection" ref="zones"><!--Argon Prime-->
+					<offset>
+						<position x="-182700" y="500" z="6850"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM11_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM11_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="36850" y="500" z="-182700"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM11_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG3_Cluster_REM11_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="142700" y="500" z="106850"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM11_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM11_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM11_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM11_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM11_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM11_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM11_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM11_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM11_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM11_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM11_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM12 - Split Fire-->
+		<macro name="Cluster_REM12_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM12_Sector001_connection" ref="zones"><!--Tharka's Cascade XV-->
+					<offset>
+						<position x="127000" y="500" z="-88500"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM12_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM12_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-38500" y="1200" z="127000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM12_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM12_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="3750" y="3675" z="-187000"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM12_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM12_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM12_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM12_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM12_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM12_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM12_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM12_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM12_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM12_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM12_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM12_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="-75000" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM12_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM12_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="95000" y="0" z="-175000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM12_Sector001_macro" connection="sector"/>	
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM13 - Dark Waters-->
+		<macro name="Cluster_REM13_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM13_Sector001_connection" ref="zones"><!--Depths of Silence-->
+					<offset>
+						<position x="-12700" y="500" z="185000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM13_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM13_Sector001_connection" ref="zones"><!--Shining Currents-->
+					<offset>
+						<position x="127000" y="500" z="-28500"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM13_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM13_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-107000" y="500" z="-88500"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM13_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM13_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM13_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM13_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM13_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM13_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM13_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM13_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM13_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM13_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM13_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM14 - Mists of Elysium-->
+		<macro name="Cluster_REM14_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM14_Sector001_connection" ref="zones"><!--Althes-->
+					<offset>
+						<position x="32700" y="500" z="145000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM14_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM14_Sector001_connection" ref="zones"><!--Reservoir of Tranquillity-->
+					<offset>
+						<position x="-32700" y="500" z="-145000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM14_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM14_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="182700" y="500" z="-5750"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM14_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM14_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM14_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM14_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM14_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM14_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM14_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM14_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM14_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM14_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM14_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM15 - Depths of Silence-->
+		<macro name="Cluster_REM15_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM15_Sector001_connection" ref="zones"><!--Dark Waters-->
+					<offset>
+						<position x="-12700" y="500" z="-185000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM15_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM15_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM15_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM15_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM15_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM15_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM15_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM15_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM15_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM15_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM15_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM15_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="-75000" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM15_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM15_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="85000" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM15_Sector001_macro" connection="sector"/>	
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM16 - Light Water-->
+		<macro name="Cluster_REM16_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM16_Sector001_connection" ref="zones"><!--Reservoir of Tranquillity-->
+					<offset>
+						<position x="-118700" y="500" z="58500"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM16_Sector001_macro" connection="sector" />
+				</connection>	
+				<!--
+				<connection name="ZoneG2_Cluster_REM16_Sector001_connection" ref="zones">
+					<offset>
+						<position x="82700" y="500" z="105000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM16_Sector001_macro" connection="sector" />
+				</connection>	
+				-->
+				<connection name="ZoneG3_Cluster_REM16_Sector001_connection" ref="zones"><!--Herron's Nebula-->
+					<offset>
+						<position x="62700" y="500" z="-108500"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM16_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM16_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM16_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM16_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM16_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM16_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM16_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM16_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM16_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM16_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM16_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM17 - Shining Currents-->
+		<macro name="Cluster_REM17_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM17_Sector001_connection" ref="zones"><!--Sanctuary of Darkness-->
+					<offset>
+						<position x="92700" y="500" z="185000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM17_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM17_Sector001_connection" ref="zones"><!--Dark Waters-->
+					<offset>
+						<position x="-94700" y="500" z="-95000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM17_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM17_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM17_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM17_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM17_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM17_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM17_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM17_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM17_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM17_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM17_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM18 - Shore of Infinity-->
+		<macro name="Cluster_REM18_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM18_Sector001_connection" ref="zones"><!--Reservoir of Tranquillity-->
+					<offset>
+						<position x="82700" y="500" z="-145000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM18_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM18_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="82700" y="500" z="145000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM18_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM18_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-82700" y="500" z="-145000"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM18_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM18_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM18_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM18_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM18_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM18_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM18_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM18_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM18_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM18_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM18_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM19 - Reservoir of Tranquillity-->
+		<macro name="Cluster_REM19_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM19_Sector001_connection" ref="zones"><!--Shore of Infinity-->
+					<offset>
+						<position x="-62700" y="500" z="25850"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM19_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM19_Sector001_connection" ref="zones"><!--Mists of Elysium-->
+					<offset>
+						<position x="92700" y="500" z="88500"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM19_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG3_Cluster_REM19_Sector001_connection" ref="zones"><!--Light Water-->
+					<offset>
+						<position x="82700" y="500" z="-185000"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM19_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG4_Cluster_REM19_Sector001_connection" ref="zones"><!--Menelaus' Oasis-->
+					<offset>
+						<position x="-102700" y="500" z="-185000"/>
+					</offset>
+					<macro ref="ZoneG4_Cluster_REM19_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM19_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM19_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM19_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM19_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM19_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM19_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM19_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM19_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM19_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM19_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM20 - Duke's Domain-->
+		<macro name="Cluster_REM20_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM20_Sector001_connection" ref="zones"><!--Lasting Vengeance-->
+					<offset>
+						<position x="-127000" y="-1000" z="-85000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM20_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM20_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-97000" y="3100" z="105000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM20_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM20_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="127000" y="2800" z="85000"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM20_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM20_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM20_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM20_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM20_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM20_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM20_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM20_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM20_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM20_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM20_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM21 - Perpetual Sin III-->
+		<macro name="Cluster_REM21_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM21_Sector001_connection" ref="zones"><!--Cardinal's Redress-->
+					<offset>
+						<position x="-112700" y="500" z="125200"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM21_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM21_Sector001_connection" ref="zones"><!--Sanctum Verge-->
+					<offset>
+						<position x="-82700" y="500" z="-24065"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM21_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM21_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM21_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM21_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM21_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM21_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM21_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM21_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM21_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM21_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM21_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM21_Sector001SHCon6_GateZone_connection"  ref="zones">	<offset>	<position x="-55535.78125"    y="0" z="200000"  />	</offset>	<macro ref="tzoneCluster_REM21_Sector001SHCon6_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM21_Sector001SHCon10_GateZone_connection" ref="zones">	<offset>	<position x="-45588.63671875" y="0" z="200000"  />	</offset>	<macro ref="tzoneCluster_REM21_Sector001SHCon10_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>	
+
+		<!--Sector REM21 - Perpetual Sin I-->
+		<macro name="Cluster_REM21_Sector002_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM21_Sector002_connection" ref="zones"><!--Unholy Descent-->
+					<offset>
+						<position x="292700" y="500" z="-42750"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM21_Sector002_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM21_Sector002_connection" ref="zones"><!--Matrix #695A-->
+					<offset>
+						<position x="-92700" y="500" z="142750"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM21_Sector002_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM21_Sector002_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM21_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM21_Sector002_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM21_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM21_Sector002_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM21_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM21_Sector002_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM21_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM21_Sector002_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM21_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM21_Sector002SHCon5_GateZone_connection" ref="zones">	<offset>	<position x="134166.84375" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM21_Sector002SHCon5_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM21_Sector002SHCon9_GateZone_connection" ref="zones">	<offset>	<position x="143991.96875" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM21_Sector002SHCon9_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM22 - Pontifex' Seclusion-->
+		<macro name="Cluster_REM22_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM22_Sector001_connection" ref="zones"><!--True Sight-->
+					<offset>
+						<position x="149725" y="500" z="5750"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM22_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM22_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="89725" y="500" z="-215750"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM22_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM22_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-109725" y="500" z="125750"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM22_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG4_Cluster_REM22_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-89725" y="500" z="-145750"/>
+					</offset>
+					<macro ref="ZoneG4_Cluster_REM22_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM22_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM22_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM22_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM22_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM22_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM22_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM22_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM22_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM22_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM22_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM23 - Unholy Descent-->
+		<macro name="Cluster_REM23_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM23_Sector001_connection" ref="zones"><!--Perpetual Sin I-->
+					<offset>
+						<position x="-127000" y="500" z="47500"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM23_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM23_Sector001_connection" ref="zones"><!--Family Rhak I-->
+					<offset>
+						<position x="102700" y="500" z="17250"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM23_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM23_Sector001_connection" ref="zones"><!--Kha'ak Sector Alpha-->
+					<offset>
+						<position x="72700" y="500" z="175265"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM23_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM23_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM23_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM23_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM23_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM23_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM23_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM23_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM23_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM23_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM23_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM24 - Cathedral of Xaar-->
+		<macro name="Cluster_REM24_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM24_Sector001_connection" ref="zones"><!--Pious Mists IV-->
+					<offset>
+						<position x="-127000" y="500" z="-85000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM24_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM24_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM24_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM24_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM24_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM24_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM24_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM24_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM24_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM24_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM24_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM25 - Clarity's End-->
+		<macro name="Cluster_REM25_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM25_Sector001_connection" ref="zones"><!--Sacred Relic-->
+					<offset>
+						<position x="-127000" y="500" z="45000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM25_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM25_Sector001_connection" ref="zones"><!--Xaar's Belt III-->
+					<offset>
+						<position x="87000" y="500" z="-145000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM25_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM25_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="57000" y="500" z="145000"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM25_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM25_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM25_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM25_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM25_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM25_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM25_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM25_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM25_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM25_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM25_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM26 - Desecrated Skies-->
+		<macro name="Cluster_REM26_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM26_Sector001_connection" ref="zones"><!--Xaar's Belt I-->
+					<offset>
+						<position x="-127000" y="500" z="45000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM26_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM26_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="167000" y="500" z="75000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM26_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG3_Cluster_REM26_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="187000" y="500" z="-85000"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM26_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM26_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM26_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM26_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM26_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM26_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM26_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM26_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM26_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM26_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM26_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM26_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="-25000" y="0" z="175000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM26_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM26_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="75000" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM26_Sector001_macro" connection="sector"/>	
+				</connection>					
+			</connections>		
+		</macro>		
+		
+		<!--Sector REM27 - Perdition's End-->
+		<macro name="Cluster_REM27_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM27_Sector001_connection" ref="zones"><!--Trinity Sanctum VII-->
+					<offset>
+						<position x="-122500" y="500" z="-52500"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM27_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM27_Sector001_connection" ref="zones"><!--Xaar's Belt II-->
+					<offset>
+						<position x="122500" y="500" z="52500"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM27_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM27_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM27_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM27_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM27_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM27_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM27_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM27_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM27_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM27_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM27_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM28 - Ket's Reckoning-->	
+		<macro name="Cluster_REM28_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM28_Sector001_connection" ref="zones"><!--Windfall III-->
+					<offset>
+						<position x="127000" y="500" z="45000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM28_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM28_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM28_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM28_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM28_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM28_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM28_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM28_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM28_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM28_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM28_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>		
+	
+		<!--Sector REM29 - Sanctum Verge -->
+		<macro name="Cluster_REM29_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM29_Sector001_connection" ref="zones"><!--Pontifex's Claim-->
+					<offset>
+						<position x="-127000" y="500" z="-45000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM29_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM29_Sector001_connection" ref="zones"><!--Perpetual Sin III-->
+					<offset>
+						<position x="127000" y="500" z="45000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM29_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM29_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM29_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM29_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM29_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM29_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM29_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM29_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM29_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM29_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM29_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM30 - Xaar's Belt I-->
+		<macro name="Cluster_REM30_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM30_Sector001_connection" ref="zones"><!--Desecrated Skies-->
+					<offset>
+						<position x="-12700" y="500" z="5000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM30_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM30_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM30_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM30_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM30_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM30_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM30_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM30_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM30_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM30_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM30_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM30_Sector001SHCon5_GateZone_connection" ref="zones">	<offset>	<position x="39898.99609375" y="0" z="200000"      />	</offset>	<macro ref="tzoneCluster_REM30_Sector001SHCon5_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM30_Sector001SHCon7_GateZone_connection" ref="zones">	<offset>	<position x="-200000"        y="0" z="50000"       />	</offset>	<macro ref="tzoneCluster_REM30_Sector001SHCon7_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM30_Sector001SHCon8_GateZone_connection" ref="zones">	<offset>	<position x="-200000"        y="0" z="39999.71875" />	</offset>	<macro ref="tzoneCluster_REM30_Sector001SHCon8_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM30_Sector001SHCon9_GateZone_connection" ref="zones">	<offset>	<position x="50000"          y="0" z="200000"      />	</offset>	<macro ref="tzoneCluster_REM30_Sector001SHCon9_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM30 - Xaar's Belt II-->
+		<macro name="Cluster_REM30_Sector002_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM30_Sector002_connection" ref="zones"><!--Perdition's End-->
+					<offset>
+						<position x="-12700" y="500" z="5000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM30_Sector002_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM30_Sector002_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM30_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM30_Sector002_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM30_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM30_Sector002_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM30_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM30_Sector002_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM30_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM30_Sector002_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM30_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM30_Sector002SHCon5_GateZone_connection"  ref="zones">	<offset>	<position x="40468.75" y="0" z="200000"         />	</offset>	<macro ref="tzoneCluster_REM30_Sector002SHCon5_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM30_Sector002SHCon9_GateZone_connection"  ref="zones">	<offset>	<position x="50000"    y="0" z="200000"         />	</offset>	<macro ref="tzoneCluster_REM30_Sector002SHCon9_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM30_Sector002SHCon11_GateZone_connection" ref="zones">	<offset>	<position x="200000"   y="0" z="-40047.8515625" />	</offset>	<macro ref="tzoneCluster_REM30_Sector002SHCon11_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM30_Sector002SHCon12_GateZone_connection" ref="zones">	<offset>	<position x="200000"   y="0" z="-50000"         />	</offset>	<macro ref="tzoneCluster_REM30_Sector002SHCon12_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM30 - Xaar's Belt III-->
+		<macro name="Cluster_REM30_Sector003_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM30_Sector003_connection" ref="zones"><!--Clarity's End-->
+					<offset>
+						<position x="62700" y="500" z="5000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM30_Sector003_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM30_Sector003_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM30_Sector003_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM30_Sector003_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM30_Sector003_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM30_Sector003_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM30_Sector003_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM30_Sector003_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM30_Sector003_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM30_Sector003_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM30_Sector003_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM30_Sector003SHCon4_GateZone_connection"  ref="zones">	<offset>	<position x="160195.3125" y="0" z="-200000"       />	</offset>	<macro ref="tzoneCluster_REM30_Sector003SHCon4_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM30_Sector003SHCon6_GateZone_connection"  ref="zones">	<offset>	<position x="-50000"      y="0" z="-200000"       />	</offset>	<macro ref="tzoneCluster_REM30_Sector003SHCon6_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM30_Sector003SHCon10_GateZone_connection" ref="zones">	<offset>	<position x="-39492.1875" y="0" z="-200000"       />	</offset>	<macro ref="tzoneCluster_REM30_Sector003SHCon10_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM30_Sector003SHCon12_GateZone_connection" ref="zones">	<offset>	<position x="170218.75"   y="0" z="-200035.15625" />	</offset>	<macro ref="tzoneCluster_REM30_Sector003SHCon12_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>		
+		
+		<!--Sector REM31 - The Shallows -->
+		<macro name="Cluster_REM31_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM31_Sector001_connection" ref="zones"><!--Family Rhak III-->
+					<offset>
+						<position x="-147050" y="500" z="55060"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM31_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM31_Sector001_connection" ref="zones"><!--Queen's Space-->
+					<offset>
+						<position x="-42785" y="500" z="-128270"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM31_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM31_Sector001_connection" ref="zones"><!--Thyn's Excavation-->
+					<offset>
+						<position x="122700" y="500" z="35065"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM31_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM31_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM31_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM31_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM31_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM31_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM31_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM31_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM31_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM31_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM31_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM32 - Family Rhak I-->
+		<macro name="Cluster_REM32_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM32_Sector001_connection" ref="zones"><!--The Shallows-->
+					<offset>
+						<position x="62700" y="500" z="0"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM32_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM32_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM32_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM32_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM32_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM32_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM32_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM32_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM32_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM32_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM32_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM32_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="-75000" y="0" z="-95000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM32_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM32_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="-75000" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM32_Sector001_macro" connection="sector"/>	
+				</connection>				
+				<connection name="tzoneCluster_REM32_Sector001SHCon6_GateZone_connection"  ref="zones">	<offset>	<position x="-55535.78125" y="0" z="-200000"  />	</offset>	<macro ref="tzoneCluster_REM32_Sector001SHCon6_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM32_Sector001SHCon10_GateZone_connection" ref="zones">	<offset>	<position x="-45588.63671875" y="0" z="-200000"  />	</offset>	<macro ref="tzoneCluster_REM32_Sector001SHCon10_GateZone_macro" connection="sector" />	</connection>					
+			</connections>
+		</macro>
+		
+		<!--Sector REM32 - Family Rhak III-->
+		<macro name="Cluster_REM32_Sector002_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM32_Sector002_connection" ref="zones"><!--Unholy Descent-->
+					<offset>
+						<position x="115755" y="500" z="-174500"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM32_Sector002_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM32_Sector002_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM32_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM32_Sector002_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM32_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM32_Sector002_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM32_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM32_Sector002_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM32_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM32_Sector002_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM32_Sector002_macro" connection="sector"/>	
+				</connection>	
+				<connection name="tzoneCluster_REM32_Sector002SHCon5_GateZone_connection" ref="zones">	<offset>	<position x="134166.84375" y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM32_Sector002SHCon5_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM32_Sector002SHCon9_GateZone_connection" ref="zones">	<offset>	<position x="143991.96875" y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM32_Sector002SHCon9_GateZone_macro" connection="sector" />	</connection>			
+			</connections>
+		</macro>	
+		
+		<!--Sector REM33 - Thyn's Abyss-->
+		<macro name="Cluster_REM33_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM33_Sector001_connection" ref="zones"><!--Thyn's Excavation-->
+					<offset>
+						<position x="-112700" y="500" z="67850"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM33_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM33_Sector001_connection" ref="zones"><!--Matrix #472D-->
+					<offset>
+						<position x="-72650" y="500" z="-135780"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM33_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM33_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM33_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM33_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM33_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM33_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM33_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM33_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM33_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM33_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM33_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM34 - Thyn's Excavation-->
+		<macro name="Cluster_REM34_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM34_Sector001_connection" ref="zones"><!--The Shallows-->
+					<offset>
+						<position x="-132700" y="500" z="25750"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM34_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM34_Sector001_connection" ref="zones"><!--Thyn's Abyss-->
+					<offset>
+						<position x="122700" y="500" z="-47850"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM34_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM34_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM34_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM34_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM34_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM34_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM34_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM34_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM34_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM34_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM34_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM35 - Hila's Joy IV-->
+		<macro name="Cluster_REM35_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM35_Sector001_connection" ref="zones"><!--Great Trench-->
+					<offset>
+						<position x="127000" y="500" z="5000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM35_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM35_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM35_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM35_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM35_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM35_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM35_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM35_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM35_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM35_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM35_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM35_Sector001SHCon6_GateZone_connection"  ref="zones">	<offset>	<position x="-55535.78125"    y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM35_Sector001SHCon6_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM35_Sector001SHCon10_GateZone_connection" ref="zones">	<offset>	<position x="-45588.63671875" y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM35_Sector001SHCon10_GateZone_macro" connection="sector" />	</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM35 - Hila's Joy IX-->
+		<macro name="Cluster_REM35_Sector002_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM35_Sector002_connection" ref="zones"><!--Queen's Space-->
+					<offset>
+						<position x="-12700" y="500" z="5000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM35_Sector002_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM35_Sector002_connection" ref="zones"><!--Lucky Planets-->
+					<offset>
+						<position x="-875" y="500" z="-185650"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM35_Sector002_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM35_Sector002_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM35_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM35_Sector002_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM35_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM35_Sector002_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM35_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM5_Sector002_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM35_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM35_Sector002_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM35_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM35_Sector002_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="75000" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM35_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM35_Sector002_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="75000" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM35_Sector002_macro" connection="sector"/>	
+				</connection>				
+				<connection name="tzoneCluster_REM35_Sector002SHCon5_GateZone_connection" ref="zones">	<offset>	<position x="134166.84375" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM35_Sector002SHCon5_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM35_Sector002SHCon9_GateZone_connection" ref="zones">	<offset>	<position x="143991.96875" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM35_Sector002SHCon9_GateZone_macro" connection="sector" />	</connection>					
+			</connections>
+		</macro>	
+		
+		<!--Sector REM36 - Great Trench-->
+		<macro name="Cluster_REM36_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM36_Sector001_connection" ref="zones"><!--Hila's Joy IX-->
+					<offset>
+						<position x="-138650" y="500" z="-75750"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM36_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM36_Sector001_connection" ref="zones"><!--Ocracoke's Storm I-->
+					<offset>
+						<position x="112700" y="500" z="-101250"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM36_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM36_Sector001_connection" ref="zones"><!--Matrix #472D-->
+					<offset>
+						<position x="-82700" y="500" z="97625"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM36_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM36_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM36_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM36_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM36_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM36_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM36_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM36_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM36_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM36_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM36_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM37 - Lucky Planets-->
+		<macro name="Cluster_REM37_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM37_Sector001_connection" ref="zones"><!--Queen's Space-->
+					<offset>
+						<position x="25775" y="500" z="132775"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM37_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM37_Sector001_connection" ref="zones"><!--Hila's Joy IV-->
+					<offset>
+						<position x="130365" y="500" z="52750"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM37_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM37_Sector001_connection" ref="zones"><!--Sacred Relic-->
+					<offset>
+						<position x="-96725" y="500" z="-52350"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM37_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM37_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM37_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM37_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM37_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM37_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM37_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM37_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM37_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM37_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM37_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM38 - Queen's Space-->
+		<macro name="Cluster_REM38_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM38_Sector001_connection" ref="zones"><!--The Shallows-->
+					<offset>
+						<position x="27540" y="500" z="98115"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM38_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM38_Sector001_connection" ref="zones"><!--Lucky Planets-->
+					<offset>
+						<position x="-57095" y="500" z="-142515"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM38_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM38_Sector001_connection" ref="zones"><!--Hila's Joy IV-->
+					<offset>
+						<position x="117040" y="500" z="-31620"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM38_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM38_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM38_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM38_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM38_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM38_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM38_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM38_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM38_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM38_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM38_Sector001_macro" connection="sector"/>	
+				</connection>>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM39 - Matrix #472D-->
+		<macro name="Cluster_REM39_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM39_Sector001_connection" ref="zones"><!--Thyn's Abyss-->
+					<offset>
+						<position x="82780" y="500" z="55950"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM39_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM39_Sector001_connection" ref="zones"><!--Great Trench-->
+					<offset>
+						<position x="27015" y="500" z="-94535"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM39_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM39_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM39_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM39_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM39_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM39_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM39_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM39_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM39_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM39_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM39_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM39_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="-55400" y="0" z="-175000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM39_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM39_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="-25050" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM39_Sector001_macro" connection="sector"/>	
+				</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM40 - Ocracoke's Storm I-->
+		<macro name="Cluster_REM40_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM40_Sector001_connection" ref="zones"><!--Great Trench-->
+					<offset>
+						<position x="-42760" y="500" z="45850"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM40_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM40_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM40_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM40_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM40_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM40_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM40_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM40_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM40_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM40_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM40_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM40_Sector001SHCon6_GateZone_connection"  ref="zones">	<offset>	<position x="-55535.78125" y="0" z="-200000"  />	</offset>	<macro ref="tzoneCluster_REM40_Sector001SHCon6_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM40_Sector001SHCon10_GateZone_connection" ref="zones">	<offset>	<position x="-45588.63671875" y="0" z="-200000"  />	</offset>	<macro ref="tzoneCluster_REM40_Sector001SHCon10_GateZone_macro" connection="sector" />	</connection>								
+			</connections>
+		</macro>
+		
+		<!--Sector REM40 - Ocracoke's Storm II-->
+		<macro name="Cluster_REM40_Sector002_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM40_Sector002_connection" ref="zones"><!--Shadows of Giants VI-->
+					<offset>
+						<position x="-12750" y="0" z="-85000"/>	
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM40_Sector002_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM40_Sector002_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-72750" y="0" z="95250"/>	
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM40_Sector002_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM40_Sector002_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM40_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM40_Sector002_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM40_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM40_Sector002_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM40_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM40_Sector002_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM40_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM40_Sector002_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM40_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM40_Sector002SHCon5_GateZone_connection" ref="zones">	<offset>	<position x="134166.84375" y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM40_Sector002SHCon5_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM40_Sector002SHCon9_GateZone_connection" ref="zones">	<offset>	<position x="143991.96875" y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM40_Sector002SHCon9_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM41 - Shadows of Giants VI-->
+		<macro name="Cluster_REM41_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM41_Sector001_connection" ref="zones"><!--Ocracoke's Storm II-->
+					<offset>
+						<position x="2745" y="500" z="25950"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM41_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM41_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM41_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM41_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM41_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM41_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM41_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM41_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM41_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM41_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM41_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM41_Sector001SHCon6_GateZone_connection"  ref="zones">	<offset>	<position x="151323.765625" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM41_Sector001SHCon6_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM41_Sector001SHCon10_GateZone_connection" ref="zones">	<offset>	<position x="161340.546875" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM41_Sector001SHCon10_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM41 - Shadows of Giants VII-->
+		<macro name="Cluster_REM41_Sector002_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM41_Sector002_connection" ref="zones"><!--Turquoise Sean IX-->
+					<offset>
+						<position x="17745" y="500" z="-60950"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM41_Sector002_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM41_Sector002_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM41_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM41_Sector002_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM41_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM41_Sector002_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM41_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM41_Sector002_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM41_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM41_Sector002_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM41_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM41_Sector002SHCon5_GateZone_connection" ref="zones">	<offset>	<position x="-50000"     y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM41_Sector002SHCon5_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM41_Sector002SHCon9_GateZone_connection" ref="zones">	<offset>	<position x="-39984.375" y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM41_Sector002SHCon9_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM42 - Bala Gi's Joy-->
+		<macro name="Cluster_REM42_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM42_Sector001_connection" ref="zones"><!--Grand Exchange III-->
+					<offset>
+						<position x="97850" y="500" z="41500"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM42_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM42_Sector001_connection" ref="zones"><!--Silent Witness I-->
+					<offset>
+						<position x="22715" y="500" z="-145625"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM42_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="ZoneG3_Cluster_REM42_Sector001_connection" ref="zones"><!--Windfall IV-->
+					<offset>
+						<position x="-92775" y="500" z="45365"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM42_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM42_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM42_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM42_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM42_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM42_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM42_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM42_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM42_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM42_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM42_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM43 - Blue Profit-->
+		<macro name="Cluster_REM43_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM43_Sector001_connection" ref="zones"><!--Moo-Kye's Revenge-->
+					<offset>
+						<position x="-72700" y="500" z="-158650"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM43_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM43_Sector001_connection" ref="zones"><!--PTNI Headquarters-->
+					<offset>
+						<position x="81625" y="500" z="12385"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM43_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG3_Cluster_REM43_Sector001_connection" ref="zones"><!--The Vault-->
+					<offset>
+						<position x="21675" y="500" z="95845"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM43_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM43_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM43_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM43_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM43_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM43_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM43_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM43_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM43_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM43_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM43_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM44 - PTNI Headquarters-->
+		<macro name="Cluster_REM44_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM44_Sector001_connection" ref="zones"><!--Blue Profit-->
+					<offset>
+						<position x="-72625" y="500" z="-132625"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM44_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM44_Sector001_connection" ref="zones"><!--The Vault-->
+					<offset>
+						<position x="-95250" y="500" z="65250"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM44_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG3_Cluster_REM44_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="255250" y="-2300" z="35250"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM44_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM44_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM44_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM44_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM44_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM44_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM44_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM44_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM44_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM44_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM44_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM44_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="-5000" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM44_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM44_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="75000" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM44_Sector001_macro" connection="sector"/>	
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM45 - The Vault-->
+		<macro name="Cluster_REM45_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM45_Sector001_connection" ref="zones"><!--Blue Proft-->
+					<offset>
+						<position x="32950" y="500" z="-168750"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM45_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM45_Sector001_connection" ref="zones"><!--PTNI Headquarters-->
+					<offset>
+						<position x="148895" y="500" z="-28975"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM45_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM45_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM45_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM45_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM45_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM45_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM45_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM45_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM45_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM45_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM45_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>	
+		
+		<!--Sector REM46 - Recovered Capital-->
+		<macro name="Cluster_REM46_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM46_Sector001_connection" ref="zones"><!--Wretched Skies IV Family Valka-->
+					<offset>
+						<position x="122740" y="500" z="-35900"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM46_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM46_Sector001_connection" ref="zones"><!--Wretched Skies VII-->
+					<offset>
+						<position x="-138950" y="500" z="-75950"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM46_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM46_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM46_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM46_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM46_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM46_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM46_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM46_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM46_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM46_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM46_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM47 - Spaceweed Grove-->
+		<macro name="Cluster_REM47_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM47_Sector001_connection" ref="zones"><!--Eighteen Billion-->
+					<offset>
+						<position x="-31800" y="500" z="-131980"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM47_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM47_Sector001_connection" ref="zones"><!--Bad Debt-->
+					<offset>
+						<position x="182700" y="500" z="75975"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM47_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM47_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM47_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM47_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM47_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM47_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM47_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM47_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM47_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM47_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM47_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM48 - Wretched Skies II-->
+		<macro name="Cluster_REM48_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM48_Sector001_connection" ref="zones"><!--Wretched Skies X-->
+					<offset>
+						<position x="12765" y="500" z="45860"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM48_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM72_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM48_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM48_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM48_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM48_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM48_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM48_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM48_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM48_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM48_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM48_Sector001SHCon6_GateZone_connection"  ref="zones">	<offset>	<position x="151323.765625" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM48_Sector001SHCon6_GateZone_macro"  connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM48_Sector001SHCon10_GateZone_connection" ref="zones">	<offset>	<position x="161340.546875" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM48_Sector001SHCon10_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM48 - Wretched Skies VII-->
+		<macro name="Cluster_REM48_Sector002_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM48_Sector002_connection" ref="zones"><!--Recovered Capital-->
+					<offset>
+						<position x="142740" y="500" z="115900"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM48_Sector002_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM48_Sector002_connection" ref="zones"><!--Duke's Vision I-->
+					<offset>
+						<position x="-18950" y="500" z="-75950"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM48_Sector002_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM48_Sector002_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM48_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM48_Sector002_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM48_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM48_Sector002_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM48_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM48_Sector002_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM48_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM48_Sector002_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM48_Sector002_macro" connection="sector"/>	
+				</connection>
+				<connection name="tzoneCluster_REM48_Sector002SHCon5_GateZone_connection" ref="zones">	<offset>	<position x="-50000"     y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM48_Sector002SHCon5_GateZone_macro" connection="sector" />	</connection>
+				<connection name="tzoneCluster_REM48_Sector002SHCon9_GateZone_connection" ref="zones">	<offset>	<position x="-39984.375" y="0" z="200000" />	</offset>	<macro ref="tzoneCluster_REM48_Sector002SHCon9_GateZone_macro" connection="sector" />	</connection>				
+			</connections>
+		</macro>	
+		
+		<!--Sector REM49 - Duke's Vision I-->
+		<macro name="Cluster_REM49_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM49_Sector001_connection" ref="zones"><!--Wretched Skies VII-->
+					<offset>
+						<position x="162700" y="500" z="-15085"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM49_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM49_Sector001_connection" ref="zones"><!--Duke's Vision II-->
+					<offset>
+						<position x="-68740" y="500" z="-145095"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM49_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM49_Sector001_connection" ref="zones"><!--LooMankStrat's Legacy-->
+					<offset>
+						<position x="-59925" y="500" z="146755"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM49_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM49_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM49_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM49_Sector001_connection" ref="zones"><!--North-->
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM49_Sector001_macro" connection="sector"/>
+				</connection>
+				<connection name="Zone003_Cluster_REM49_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM49_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM49_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM49_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM49_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM49_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM50 - Duke's Vision II-->
+		<macro name="Cluster_REM50_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM50_Sector001_connection" ref="zones"><!--Duke's Vision I-->
+					<offset>
+						<position x="146720" y="500" z="25000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM50_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM50_Sector001_connection" ref="zones"><!--LooMankStrat's Legacy-->
+					<offset>
+						<position x="-43650" y="500" z="95070"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM50_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM50_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM50_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM50_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM50_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM50_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM50_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM50_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM50_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM50_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM50_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM50_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="-5000" y="0" z="-55000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM50_Sector001_macro" connection="sector"/>	
+				</connection>					
+			</connections>
+		</macro>	
+		
+		<!--Sector REM51 - LooMankStrat's Legacy-->
+		<macro name="Cluster_REM51_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM51_Sector001_connection" ref="zones"><!--Duke's Vision I-->
+					<offset>
+						<position x="142870" y="500" z="-75860"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM51_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM51_Sector001_connection" ref="zones"><!--Duke's Vision II-->
+					<offset>
+						<position x="-128725" y="500" z="-135945"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM51_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM51_Sector001_connection" ref="zones"><!--Litany of Fury IX-->
+					<offset>
+						<position x="-12345" y="500" z="145820"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM51_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM51_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM51_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM51_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM51_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM51_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM51_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM51_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM51_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM51_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM51_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM52 - Danna's Chance-->
+		<macro name="Cluster_REM52_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM52_Sector001_connection" ref="zones"><!--Litany of Fury IX-->
+					<offset>
+						<position x="114700" y="1500" z="-135870"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM52_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM52_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-135870" y="500" z="114700"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM52_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM52_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-114700" y="-3750" z="-75870"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM52_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM52_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM52_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM52_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM52_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM52_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM52_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM52_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM52_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM52_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM52_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM53 - Legend's Home Alpha-->
+		<macro name="Cluster_REM53_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM53_Sector001_connection" ref="zones"><!--Akeela's Beacon-->
+					<offset>
+						<position x="-35735" y="500" z="155275"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM53_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM53_Sector001_connection" ref="zones"><!--Legend's Home Beta-->
+					<offset>
+						<position x="32725" y="500" z="-165050"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM53_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM53_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM53_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM53_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM53_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM53_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM53_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM53_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM53_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM53_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM53_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneSP_Cluster_REM53_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="75075" y="0" z="-97500"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM53_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM53_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="117500" y="0" z="77500"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM53_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneTD_Cluster_REM53_Sector001_connection" ref="zones"><!--Trading Station-->	
+					<offset>	
+						<position x="-145000" y="0" z="5775"/>	
+					</offset>	
+					<macro ref="ZoneTD_Cluster_REM53_Sector001_macro" connection="sector"/>	
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM54 - Legend's Home Beta-->
+		<macro name="Cluster_REM54_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM54_Sector001_connection" ref="zones"><!--Legend's Home Alpha-->
+					<offset>
+						<position x="12700" y="500" z="155035"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM54_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM54_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM54_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM54_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM54_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM54_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM54_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM54_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM54_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM54_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM54_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM55 - Akeela's Beacon-->
+		<macro name="Cluster_REM55_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM55_Sector001_connection" ref="zones"><!--Legend's Home Alpha-->
+					<offset>
+						<position x="-29700" y="500" z="-165750"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM55_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM55_Sector001_connection" ref="zones"><!--Alanda Hill-->
+					<offset>
+						<position x="-132090" y="500" z="-59725"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM55_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM55_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM55_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM55_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM55_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM55_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM55_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM55_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM55_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM55_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM55_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM56 - Aladna Hill-->
+		<macro name="Cluster_REM56_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM56_Sector001_connection" ref="zones"><!--Akeela's Beacon-->
+					<offset>
+						<position x="132700" y="3550" z="-98055"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM56_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM56_Sector001_connection" ref="zones"><!--Light of Heart-->
+					<offset>
+						<position x="-52700" y="3500" z="95085"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM56_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM56_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-32700" y="0" z="-115085"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM56_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM56_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM56_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM56_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM56_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM56_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM56_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM56_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM56_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM56_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM56_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM57 - Light of Heart-->
+		<macro name="Cluster_REM57_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM57_Sector001_connection" ref="zones"><!--Alanda Hill-->
+					<offset>
+						<position x="42700" y="0" z="-145600"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM57_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM57_Sector001_connection" ref="zones"><!--Moo-Kye's Revenge-->
+					<offset>
+						<position x="-92700" y="0" z="85800"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM57_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM57_Sector001_connection" ref="zones"><!--Profit Center Alpha-->
+					<offset>
+						<position x="142700" y="2500" z="35755"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM57_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG4_Cluster_REM57_Sector001_connection" ref="zones"><!--Silent Witness I-->
+					<offset>
+						<position x="-95755" y="2500" z="-35700"/>
+					</offset>
+					<macro ref="ZoneG4_Cluster_REM57_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM57_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM57_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM57_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM57_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM57_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM57_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM57_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM57_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM57_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM57_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneEQ_Cluster_REM57_Sector001_connection" ref="zones"><!--Equipment Dock-->	
+					<offset>	
+						<position x="87500" y="0" z="95000"/>	
+					</offset>	
+					<macro ref="ZoneEQ_Cluster_REM57_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneTD_Cluster_REM57_Sector001_connection" ref="zones"><!--Trading Station-->	
+					<offset>	
+						<position x="-9750" y="0" z="-45750"/>	
+					</offset>	
+					<macro ref="ZoneTD_Cluster_REM57_Sector001_macro" connection="sector"/>	
+				</connection>				
+			</connections>
+		</macro>
+		
+		<!--Sector REM58 - Moo-Kye's Revenge-->
+		<macro name="Cluster_REM58_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM58_Sector001_connection" ref="zones"><!--Grand Exchange I-->
+					<offset>
+						<position x="-122700" y="500" z="65065"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM58_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM58_Sector001_connection" ref="zones"><!--Blue Profit-->
+					<offset>
+						<position x="82725" y="500" z="92500"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM58_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG3_Cluster_REM58_Sector001_connection" ref="zones"><!--Light of Heart-->
+					<offset>
+						<position x="62700" y="500" z="-142750"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM58_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM58_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM58_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM58_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM58_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM58_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM58_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM58_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM58_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM58_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM58_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM59 - Mines of Fortune-->
+		<macro name="Cluster_REM59_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM59_Sector001_connection" ref="zones"><!--Company Regard-->
+					<offset>
+						<position x="-132750" y="500" z="-135025"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM59_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM59_Sector001_connection" ref="zones"><!--Turquoise Sea IX-->
+					<offset>
+						<position x="62700" y="500" z="58570"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM59_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM59_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM59_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM59_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM59_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM59_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM59_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM59_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM59_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM59_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM59_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM60 - Zyarth's Stand-->
+		<macro name="Cluster_REM60_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM60_Sector001_connection" ref="zones"><!--Zyarth's Dominion X-->
+					<offset>
+						<position x="112700" y="500" z="155075"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM60_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM60_Sector001_connection" ref="zones"><!--Zyarth's Fall-->
+					<offset>
+						<position x="95600" y="500" z="-165750"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM60_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM60_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM60_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM60_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM60_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM60_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM60_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM60_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM60_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM60_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM60_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM61 - Zyarth's Fall-->
+		<macro name="Cluster_REM61_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM61_Sector001_connection" ref="zones"><!--Zyarth's Dominion X-->
+					<offset>
+						<position x="12700" y="0" z="165000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM61_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM61_Sector001_connection" ref="zones"><!--Zyarth's Stand-->
+					<offset>
+						<position x="-102700" y="0" z="57535"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM61_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG3_Cluster_REM61_Sector001_connection" ref="zones"><!--Elena's Fortune-->
+					<offset>
+						<position x="92700" y="0" z="-95500"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM61_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM61_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM61_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM61_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM61_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM61_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM61_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM61_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM61_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM61_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM61_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM62 - Elena's Fortune-->
+		<macro name="Cluster_REM62_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM62_Sector001_connection" ref="zones"><!--Zyarth's Fall-->
+					<offset>
+						<position x="-112700" y="0" z="-65750"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM62_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM62_Sector001_connection" ref="zones"><!--Guiding Star VII-->
+					<offset>
+						<position x="112700" y="0" z="34500"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM62_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM62_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM62_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM62_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM62_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM62_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM62_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM62_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM62_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM62_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM62_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM63 - Nyana's Hideout-->
+		<macro name="Cluster_REM63_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM63_Sector001_connection" ref="zones"><!--Guiding Star V-->
+					<offset>
+						<position x="-52700" y="0" z="105000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM63_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM63_Sector001_connection" ref="zones"><!--Interworlds-->
+					<offset>
+						<position x="152700" y="0" z="-95000"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM63_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM72_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM63_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM63_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM63_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM63_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM63_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM63_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM63_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM63_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM63_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM64 - Interworlds-->
+		<macro name="Cluster_REM64_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM64_Sector001_connection" ref="zones"><!--Nyana's Hideout-->
+					<offset>
+						<position x="-132750" y="0" z="-15550"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM64_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM64_Sector001_connection" ref="zones"><!--Wastelands-->
+					<offset>
+						<position x="92750" y="0" z="65750"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM64_Sector001_macro" connection="sector" />
+				</connection>				
+				<connection name="Zone001_Cluster_REM64_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM64_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM64_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM64_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM64_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM64_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM64_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM64_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM64_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM64_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM65 - Wastelands-->
+		<macro name="Cluster_REM65_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM65_Sector001_connection" ref="zones"><!--Two Grand-->
+					<offset>
+						<position x="-117050" y="0" z="-25000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM65_Sector001_macro" connection="sector" />
+				</connection>
+				<connection name="ZoneG2_Cluster_REM65_Sector001_connection" ref="zones"><!--Fires of Defeat-->
+					<offset>
+						<position x="127325" y="0" z="35785"/>					
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM65_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG3_Cluster_REM65_Sector001_connection" ref="zones"><!--Interworlds-->
+					<offset>
+						<position x="--82735" y="0" z="-150000"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM65_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM65_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM65_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM65_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM65_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM65_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM65_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM65_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM65_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM65_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM65_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM66 - Ghinn's Escape-->
+		<macro name="Cluster_REM66_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM66_Sector001_connection" ref="zones"><!--Thuruk's Demise III-->
+					<offset>
+						<position x="42750" y="0" z="185050"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM66_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG2_Cluster_REM66_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="142750" y="0" z="105050"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM66_Sector001_macro" connection="sector" />
+				</connection>	
+				<connection name="ZoneG3_Cluster_REM66_Sector001_connection" ref="zones"><!--Inactive-->
+					<offset>
+						<position x="-12750" y="0" z="-185050"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM66_Sector001_macro" connection="sector" />
+				</connection>					
+				<connection name="Zone001_Cluster_REM66_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM66_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM66_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM66_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM66_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM66_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM66_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM66_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM66_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM66_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM67 - Kha'ak Sector Alpha-->
+		<macro name="Cluster_REM67_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM67_Sector001_connection" ref="zones"><!--Unholy Descent-->
+					<offset>
+						<position x="-32750" y="0" z="-145755"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM67_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM67_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM67_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM67_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="95000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM67_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM67_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="95000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM67_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM67_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-95000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM67_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM67_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-95000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM67_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM68 - Kha'ak Sector Beta-->
+		<macro name="Cluster_REM68_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM68_Sector001_connection" ref="zones"><!--Sanctuary of Darkness-->
+					<offset>
+						<position x="-82700" y="0" z="-175000"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM68_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM68_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM68_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM68_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="95000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM68_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM68_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="95000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM68_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM68_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-95000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM68_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM68_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-95000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM68_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM69 - Kha'ak Sector Gamma-->
+		<macro name="Cluster_REM69_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM69_Sector001_connection" ref="zones"><!--Silent Witness XII-->
+					<offset>
+						<position x="-152700" y="0" z="57800"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM69_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM69_Sector001_connection" ref="zones"><!--Center-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM69_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM69_Sector001_connection" ref="zones"><!--North-->	
+					<offset>	
+						<position x="0" y="0" z="95000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM69_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM69_Sector001_connection" ref="zones"><!--East-->
+					<offset>	
+						<position x="95000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM69_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM69_Sector001_connection" ref="zones"><!--South-->
+					<offset>	
+						<position x="0" y="0" z="-95000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM69_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM69_Sector001_connection" ref="zones"><!--West-->	
+					<offset>	
+						<position x="-95000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM69_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>
+		
+		<!--Sector REM70 - Unknown Kha'ak Sector-->
+	    <macro name="Cluster_REM70_Sector001_macro" class="sector">
+		  <component ref="standardsector" />
+		  <connections>
+		    <connection name="Zone001_Cluster_REM70_Sector001_connection" ref="zones"><!--North-->
+				<offset>
+					<position x="0" y="0" z="175000" />
+				</offset>
+			<macro ref="Zone001_Cluster_REM70_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone002_Cluster_REM70_Sector001_connection" ref="zones"><!--Northeast-->
+				<offset>
+					<position x="150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone002_Cluster_REM70_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone003_Cluster_REM70_Sector001_connection" ref="zones"><!--Southeast-->
+				<offset>
+					<position x="150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone003_Cluster_REM70_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone004_Cluster_REM70_Sector001_connection" ref="zones"><!--South-->
+				<offset>
+					<position x="0" y="0" z="-175000" />
+				</offset>
+			<macro ref="Zone004_Cluster_REM70_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone005_Cluster_REM70_Sector001_connection" ref="zones"><!--Southwest-->
+				<offset>
+					<position x="-150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone005_Cluster_REM70_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone006_Cluster_REM70_Sector001_connection" ref="zones"><!--Northwest-->
+				<offset>
+					<position x="-150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone006_Cluster_REM70_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone007_Cluster_REM70_Sector001_connection" ref="zones"><!--Center-->
+				<offset>
+					<position x="0" y="0" z="0" />
+				</offset>
+			<macro ref="Zone007_Cluster_REM70_Sector001_macro" connection="sector" />
+		    </connection>
+		  </connections>
+	    </macro>
+		
+		<!--Sector REM71 - Unknown Sector-->
+	    <macro name="Cluster_REM71_Sector001_macro" class="sector">
+		  <component ref="standardsector" />
+		  <connections>
+		    <connection name="Zone001_Cluster_REM71_Sector001_connection" ref="zones"><!--North-->
+				<offset>
+					<position x="0" y="0" z="175000" />
+				</offset>
+			<macro ref="Zone001_Cluster_REM71_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone002_Cluster_REM71_Sector001_connection" ref="zones"><!--Northeast-->
+				<offset>
+					<position x="150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone002_Cluster_REM71_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone003_Cluster_REM71_Sector001_connection" ref="zones"><!--Southeast-->
+				<offset>
+					<position x="150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone003_Cluster_REM71_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone004_Cluster_REM71_Sector001_connection" ref="zones"><!--South-->
+				<offset>
+					<position x="0" y="0" z="-175000" />
+				</offset>
+			<macro ref="Zone004_Cluster_REM71_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone005_Cluster_REM71_Sector001_connection" ref="zones"><!--Southwest-->
+				<offset>
+					<position x="-150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone005_Cluster_REM71_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone006_Cluster_REM71_Sector001_connection" ref="zones"><!--Northwest-->
+				<offset>
+					<position x="-150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone006_Cluster_REM71_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone007_Cluster_REM71_Sector001_connection" ref="zones"><!--Center-->
+				<offset>
+					<position x="0" y="0" z="0" />
+				</offset>
+			<macro ref="Zone007_Cluster_REM71_Sector001_macro" connection="sector" />
+		    </connection>
+		  </connections>
+	    </macro>
+
+		<!--Sector REM72 - Kha'ak Hive-->
+	    <macro name="Cluster_REM72_Sector001_macro" class="sector">
+		  <component ref="standardsector" />
+		  <connections>
+		    <connection name="Zone001_Cluster_REM72_Sector001_connection" ref="zones"><!--North-->
+				<offset>
+					<position x="0" y="0" z="175000" />
+				</offset>
+			<macro ref="Zone001_Cluster_REM72_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone002_Cluster_REM72_Sector001_connection" ref="zones"><!--Northeast-->
+				<offset>
+					<position x="150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone002_Cluster_REM72_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone003_Cluster_REM72_Sector001_connection" ref="zones"><!--Southeast-->
+				<offset>
+					<position x="150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone003_Cluster_REM72_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone004_Cluster_REM72_Sector001_connection" ref="zones"><!--South-->
+				<offset>
+					<position x="0" y="0" z="-175000" />
+				</offset>
+			<macro ref="Zone004_Cluster_REM72_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone005_Cluster_REM72_Sector001_connection" ref="zones"><!--Southwest-->
+				<offset>
+					<position x="-150000" y="0" z="-150000" />
+				</offset>
+			<macro ref="Zone005_Cluster_REM72_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone006_Cluster_REM72_Sector001_connection" ref="zones"><!--Northwest-->
+				<offset>
+					<position x="-150000" y="0" z="150000" />
+				</offset>
+			<macro ref="Zone006_Cluster_REM72_Sector001_macro" connection="sector" />
+		    </connection>
+		    <connection name="Zone007_Cluster_REM72_Sector001_connection" ref="zones"><!--Center-->
+				<offset>
+					<position x="0" y="0" z="0" />
+				</offset>
+			<macro ref="Zone007_Cluster_REM72_Sector001_macro" connection="sector" />
+		    </connection>
+		  </connections>
+	    </macro>			
+</macros>

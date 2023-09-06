@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<components>
+	<component name="Cluster_REM25" class="celestialbody">
+		<source geometry="extensions\reemergence\assets\environments\cluster\Cluster_rem25_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="225" g="255" b="251" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_c_19" trigger="1" intensity="1.4">
+						<lightanimations/>
+						<offset>
+							<position x="2.250737E+08" y="9.13032E+07" z="3.133954E+08"/>
+						</offset>
+					</omni>
+					<ambient name="XU Ambient001" r="25" g="50" b="54" range="1E+11" intensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="-5.036438E+07" y="0" z="-7.443225E+07"/>
+						</offset>
+					</ambient>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="celestialbody">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset>
+					<quaternion qx="-0" qy="-6.975656E-02" qz="-0" qw="-0.9975641"/>
+				</offset>
+				<parts>
+					<part name="Background">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.backgroundstars"/>
+									<material id="2" ref="p1.staratlas_screen"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.664776E+08" y="4.664777E+08" z="4.664776E+08"/>
+							<center x="31.25" y="-31.25" z="0"/>
+						</size>
+						<pivot>
+							<offset>
+								<position x="0" y="-50000" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part  ">
+				<offset>
+					<position x="-62.50001" y="0" z="62.49999"/>
+				</offset>
+				<parts>
+					<part name="part_c36_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.p1_env_bg_vertexcolor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.958535E+08" y="5.967806E+08" z="5.958535E+08"/>
+							<center x="0" y="0" z="1.490116E-05"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part  ">
+				<offset>
+					<position x="-1.047569E+08" y="2.879067E+07" z="1.181667E+07"/>
+				</offset>
+				<parts>
+					<part name="planet001c">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="newplanets.planet_cluster30_planet1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.863793E+07" y="3.86336E+07" z="3.863069E+07"/>
+							<center x="-80085.94" y="115308.6" z="38867.19"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part  ">
+				<offset>
+					<position x="-1.047569E+08" y="2.879067E+07" z="1.181667E+07"/>
+				</offset>
+				<parts>
+					<part name="atmosphere001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="newplanets.atmo_cluster30_planet1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.960395E+07" y="3.960394E+07" z="3.960395E+07"/>
+							<center x="-102742.2" y="91564.45" z="47740.23"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part  ">
+				<offset>
+					<position x="1.168802E+07" y="1.581795E+07" z="-1906498"/>
+					<quaternion qx="-4.371138E-08" qy="-1" qz="-4.37114E-08" qw="7.549791E-08"/>				
+				</offset>
+				<parts>
+					<part name="nebula01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.821096E+08" y="4.712483E+08" z="4.870942E+08"/>
+							<center x="1.460414E+07" y="-1.772228E+07" z="2.693464E+07"/>
+						</size>
+					</part>
+				</parts>
+			</connection>			
+		</connections>
+	</component>
+</components>

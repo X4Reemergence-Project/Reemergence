@@ -1,0 +1,1028 @@
+<?xml version="1.0"?>
+<components>
+	<component name="Cluster_REM55" class="celestialbody">
+		<source geometry="extensions\reemergence\assets\environments\cluster\Cluster_rem55_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<!--1st Sun-->
+					<omni name="XU Omni01" shadow="0" r="255" g="201" b="138" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_corona_v1" trigger="1" intensity="1" specularintensity="1.4">
+						<lightanimations/>
+						<offset>
+							<position x="3.08337E+08" y="5.875661E+07" z="-1.71506E+08"/>
+						</offset>
+					</omni>
+					<!--2nd Sun-->
+					<omni name="XU Omni02" shadow="0" r="245" g="255" b="255" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_c_402" trigger="1" intensity="1.89" specularintensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="2.38337E+08" y="-5.575661E+07" z="2.71506E+08"/>
+						</offset>
+					</omni>
+					<!--3rd Sun-->
+					<omni name="XU Omni03" shadow="0" r="245" g="255" b="255" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_c_402" trigger="1" intensity="1.89" specularintensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="4.18337E+08" y="-13.075661E+07" z="2.71506E+08"/>
+						</offset>
+					</omni>
+					<!--4th Sun-->
+					<omni name="XU Omni04" shadow="0" r="245" g="255" b="255" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_c_402" trigger="1" intensity="1.89" specularintensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="-0.68337E+08" y="3.075661E+07" z="-5.11506E+08"/>
+						</offset>
+					</omni>					
+					<ambient name="XU Ambient001" r="40" g="46" b="51" range="1E+11" intensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="5.922367E+07" y="0" z="7.721783E+07"/>
+						</offset>
+					</ambient>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="celestialbody">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="part_c09_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.p1_env_bg_vertexcolor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.441645E+08" y="4.441674E+08" z="4.441645E+08"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part  ">
+				<offset>
+					<position x="1.226121E+07" y="0" z="8100438"/>
+					<quaternion qx="-0" qy="-6.975656E-02" qz="-0" qw="-0.9975641"/>
+				</offset>
+				<parts>
+					<part name="Background">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.backgroundstars"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.255449E+08" y="4.25545E+08" z="4.25545E+08"/>
+							<center x="76.17188" y="31.25" z="-0.9765625"/>
+						</size>
+						<pivot>
+							<offset>
+								<position x="0" y="-50000" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="bigstar01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.006628E+08" y="3.154535E+08" z="3.544251E+08"/>
+							<center x="-5.718659E+07" y="-5.86132E+07" z="2.167692E+07"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="nebula01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.161516E+08" y="4.302194E+08" z="4.611511E+08"/>
+							<center x="1188422" y="-2.821639E+07" z="-524156.3"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="mediumstar01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.656268E+08" y="3.585102E+08" z="3.773093E+08"/>
+							<center x="-1.351267E+07" y="8682266" z="-1350250"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection06" tags="part nocollision  ">
+				<offset>
+					<position x="-2661.139" y="-2971.232" z="-1272.658"/>
+					<quaternion qx="1" qy="0" qz="0" qw="0"/>						
+				</offset>
+				<parts>
+					<part name="FogPlane041">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.fogtest"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="507269" y="473350.8" z="483973.4"/>
+							<center x="1712.637" y="39082.44" z="5254.897"/>
+						</size>
+					</part>
+				</parts>
+			</connection>		
+			<connection name="Connection07" tags="part nocollision  ">
+				<offset>
+					<position x="2661.139" y="2971.232" z="1272.658"/>
+					<quaternion qx="-1" qy="0" qz="0" qw="0"/>							
+				</offset>
+				<parts>
+					<part name="FogPlane041">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.fogtest"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="507269" y="473350.8" z="483973.4"/>
+							<center x="1712.637" y="39082.44" z="5254.897"/>
+						</size>
+					</part>
+				</parts>
+			</connection>			
+			<connection name="Connection08" tags="part  ">
+				<offset>
+					<position x="2.73029E+07" y="6.083589E+07" z="-3551157"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>							
+				</offset>
+				<parts>
+					<part name="nebula02">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.564331E+08" y="-3.50215E+08" z="3.744296E+08"/>
+							<center x="-13.67188" y="-11.71875" z="0.9765625"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection09" tags="part  ">
+				<offset>
+					<position x="2.73029E+07" y="0.783589E+07" z="-3551157"/>
+					<quaternion qx="-0.9754705" qy="0.2167712" qz="0" qw="-0.0383084"/>							
+				</offset>
+				<parts>
+					<part name="nebula02">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.564331E+08" y="-3.50215E+08" z="3.744296E+08"/>
+							<center x="-13.67188" y="-11.71875" z="0.9765625"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection10" tags="part  ">
+				<offset>
+					<position x="2.73029E+07" y="3.783589E+07" z="-3551157"/>
+					<quaternion qx="-0.8553624" qy="-0.2138406" qz="0" qw="0.4718341"/>							
+				</offset>
+				<parts>
+					<part name="nebula02">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.564331E+08" y="-3.50215E+08" z="3.744296E+08"/>
+							<center x="-13.67188" y="-11.71875" z="0.9765625"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection101" tags="part animation textureanimation  ">
+				<offset>
+					<position x="-46627078" y="3440276" z="-0.317731E+07"/>
+					<quaternion qx="-0" qy="-0.7071068" qz="-0" qw="-0.7071067"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="108000"/>
+				</animations>
+				<parts>
+					<part name="part_earthlike">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_414_earthlike"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.604682E+07" y="1.621577E+07" z="1.604682E+07"/>
+							<center x="0.9765625" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="1.604682E+07" y="1.621577E+07" z="1.604682E+07"/>
+							<center x="0.9765625" y="0.4882813" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="108000" value="1"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="108000" value="1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection102" tags="part  ">
+				<offset>
+					<position x="-46627078" y="3440276" z="-0.317731E+07"/>
+					<quaternion qx="-0" qy="-0.7071068" qz="-0" qw="-0.7071067"/>
+				</offset>
+				<parts>
+					<part name="part_earthlike_atmo">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_414_earthlike_atmo"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.620196E+07" y="1.624766E+07" z="1.620196E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>			
+			<!--1st Sun-->
+			<connection name="Connection11" tags="part nocollision  ">
+				<offset>
+					<position x="3.08337E+08" y="5.875661E+07" z="-1.71506E+08"/>
+				</offset>
+				<parts>
+					<part name="part_sun">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.487706E+07" y="4.487706E+07" z="4.487706E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection111" tags="part nocollision  ">
+				<offset>
+					<position x="3.08337E+08" y="5.875661E+07" z="-1.71506E+08"/>
+				</offset>
+				<parts>
+					<part name="part_sun_atmo1">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun_atmo1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.539999E+07" y="4.54E+07" z="4.539999E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<offset>
+							<position x="0" y="0" z="15.625"/>
+						</offset>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection112" tags="part nocollision  ">
+				<offset>
+					<position x="3.08337E+08" y="5.875661E+07" z="-1.71506E+08"/>
+					<quaternion qx="-8.682406E-02" qy="0.0868241" qz="7.596127E-03" qw="-0.9924039"/>
+				</offset>
+				<parts>
+					<part name="part_sun_atmo2">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun_atmo1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.559437E+07" y="4.559437E+07" z="4.559437E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection113" tags="part animation textureanimation  ">
+				<offset>
+					<position x="3.08337E+08" y="5.875661E+07" z="-1.71506E+08"/>
+					<quaternion qx="-0.1042543" qy="7.379108E-02" qz="-1.048818E-02" qw="-0.9917539"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809636E+07" y="5.809636E+07" z="22.86541"/>
+							<center x="592357.4" y="855953.1" z="-3974453"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.20703"/>
+							<center x="592353.5" y="855953.1" z="-3974438"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="15" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection114" tags="part animation textureanimation  ">
+				<offset>
+					<position x="3.08337E+08" y="5.875661E+07" z="-1.71506E+08"/>
+					<quaternion qx="9.455918E-02" qy="0.0858641" qz="-0.9660997" qw="0.2243599"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809634E+07" y="5.809633E+07" z="32.84812"/>
+							<center x="592349.6" y="855941.4" z="-3974422"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.69531"/>
+							<center x="592353.5" y="855945.3" z="-3974438"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="-28" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection115" tags="part animation textureanimation  ">
+				<offset>
+					<position x="3.08337E+08" y="5.875661E+07" z="-1.71506E+08"/>
+					<quaternion qx="-1.387564E-02" qy="0.1269709" qz="-0.7494189" qw="-0.6496592"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809634E+07" y="5.809633E+07" z="22.89379"/>
+							<center x="592353.5" y="855945.3" z="-3974422"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.69531"/>
+							<center x="592349.6" y="855945.3" z="-3974422"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="52" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>						
+			<!--2nd Sun-->
+			<connection name="Connection12" tags="part nocollision  ">
+				<offset>
+					<position x="2.38337E+08" y="-5.575661E+07" z="2.71506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<parts>
+					<part name="part_sun">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.487706E+07" y="4.487706E+07" z="4.487706E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection121" tags="part nocollision  ">
+				<offset>
+					<position x="2.38337E+08" y="-5.575661E+07" z="2.71506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<parts>
+					<part name="part_sun_atmo1">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun_atmo1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.539999E+07" y="4.54E+07" z="4.539999E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<offset>
+							<position x="0" y="0" z="15.625"/>
+						</offset>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection122" tags="part nocollision  ">
+				<offset>
+					<position x="2.38337E+08" y="-5.575661E+07" z="2.71506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<parts>
+					<part name="part_sun_atmo2">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun_atmo1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.559437E+07" y="4.559437E+07" z="4.559437E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection123" tags="part animation textureanimation  ">
+				<offset>
+					<position x="2.38337E+08" y="-5.575661E+07" z="2.71506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809636E+07" y="5.809636E+07" z="22.86541"/>
+							<center x="592357.4" y="855953.1" z="-3974453"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.20703"/>
+							<center x="592353.5" y="855953.1" z="-3974438"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="15" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection124" tags="part animation textureanimation  ">
+				<offset>
+					<position x="2.38337E+08" y="-5.575661E+07" z="2.71506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809634E+07" y="5.809633E+07" z="32.84812"/>
+							<center x="592349.6" y="855941.4" z="-3974422"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.69531"/>
+							<center x="592353.5" y="855945.3" z="-3974438"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="-28" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection125" tags="part animation textureanimation  ">
+				<offset>
+					<position x="2.38337E+08" y="-5.575661E+07" z="2.71506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809634E+07" y="5.809633E+07" z="22.89379"/>
+							<center x="592353.5" y="855945.3" z="-3974422"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.69531"/>
+							<center x="592349.6" y="855945.3" z="-3974422"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="52" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>					
+			<!--3rd Sun-->
+			<connection name="Connection13" tags="part nocollision  ">
+				<offset>
+					<position x="4.18337E+08" y="-13.075661E+07" z="2.71506E+08"/>
+				</offset>
+				<parts>
+					<part name="part_sun">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.487706E+07" y="4.487706E+07" z="4.487706E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection131" tags="part nocollision  ">
+				<offset>
+					<position x="4.18337E+08" y="-13.075661E+07" z="2.71506E+08"/>
+				</offset>
+				<parts>
+					<part name="part_sun_atmo1">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun_atmo1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.539999E+07" y="4.54E+07" z="4.539999E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<offset>
+							<position x="0" y="0" z="15.625"/>
+						</offset>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection132" tags="part nocollision  ">
+				<offset>
+					<position x="4.18337E+08" y="-13.075661E+07" z="2.71506E+08"/>
+					<quaternion qx="-8.682406E-02" qy="0.0868241" qz="7.596127E-03" qw="-0.9924039"/>
+				</offset>
+				<parts>
+					<part name="part_sun_atmo2">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun_atmo1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.559437E+07" y="4.559437E+07" z="4.559437E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection133" tags="part animation textureanimation  ">
+				<offset>
+					<position x="4.18337E+08" y="-13.075661E+07" z="2.71506E+08"/>
+					<quaternion qx="-0.1042543" qy="7.379108E-02" qz="-1.048818E-02" qw="-0.9917539"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809636E+07" y="5.809636E+07" z="22.86541"/>
+							<center x="592357.4" y="855953.1" z="-3974453"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.20703"/>
+							<center x="592353.5" y="855953.1" z="-3974438"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="15" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection134" tags="part animation textureanimation  ">
+				<offset>
+					<position x="4.18337E+08" y="-13.075661E+07" z="2.71506E+08"/>
+					<quaternion qx="9.455918E-02" qy="0.0858641" qz="-0.9660997" qw="0.2243599"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809634E+07" y="5.809633E+07" z="32.84812"/>
+							<center x="592349.6" y="855941.4" z="-3974422"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.69531"/>
+							<center x="592353.5" y="855945.3" z="-3974438"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="-28" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection135" tags="part animation textureanimation  ">
+				<offset>
+					<position x="4.18337E+08" y="-13.075661E+07" z="2.71506E+08"/>
+					<quaternion qx="-1.387564E-02" qy="0.1269709" qz="-0.7494189" qw="-0.6496592"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809634E+07" y="5.809633E+07" z="22.89379"/>
+							<center x="592353.5" y="855945.3" z="-3974422"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.69531"/>
+							<center x="592349.6" y="855945.3" z="-3974422"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="52" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>						
+			<!--4th Sun-->
+			<connection name="Connection14" tags="part nocollision  ">
+				<offset>
+					<position x="-0.68337E+08" y="3.075661E+07" z="-5.11506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<parts>
+					<part name="part_sun">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.487706E+07" y="4.487706E+07" z="4.487706E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection141" tags="part nocollision  ">
+				<offset>
+					<position x="-0.68337E+08" y="3.075661E+07" z="-5.11506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<parts>
+					<part name="part_sun_atmo1">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun_atmo1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.539999E+07" y="4.54E+07" z="4.539999E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<offset>
+							<position x="0" y="0" z="15.625"/>
+						</offset>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection142" tags="part nocollision  ">
+				<offset>
+					<position x="-0.68337E+08" y="3.075661E+07" z="-5.11506E+08"/>
+					<quaternion qx="-8.682406E-02" qy="0.0868241" qz="7.596127E-03" qw="-0.9924039"/>
+				</offset>
+				<parts>
+					<part name="part_sun_atmo2">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_402_sun_atmo1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.559437E+07" y="4.559437E+07" z="4.559437E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection143" tags="part animation textureanimation  ">
+				<offset>
+					<position x="-0.68337E+08" y="3.075661E+07" z="-5.11506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809636E+07" y="5.809636E+07" z="22.86541"/>
+							<center x="592357.4" y="855953.1" z="-3974453"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.20703"/>
+							<center x="592353.5" y="855953.1" z="-3974438"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="15" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection144" tags="part animation textureanimation  ">
+				<offset>
+					<position x="-0.68337E+08" y="3.075661E+07" z="-5.11506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809634E+07" y="5.809633E+07" z="32.84812"/>
+							<center x="592349.6" y="855941.4" z="-3974422"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.69531"/>
+							<center x="592353.5" y="855945.3" z="-3974438"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="-28" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection145" tags="part animation textureanimation  ">
+				<offset>
+					<position x="-0.68337E+08" y="3.075661E+07" z="-5.11506E+08"/>
+					<quaternion qx="0" qy="-0.3420201" qz="0" qw="0.9396926"/>		
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="6000"/>
+				</animations>
+				<parts>
+					<part name="part_corona_v1a002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.sun_corona_v3"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.809634E+07" y="5.809633E+07" z="22.89379"/>
+							<center x="592353.5" y="855945.3" z="-3974422"/>
+						</size>
+						<size_raw>
+							<max x="5.809634E+07" y="5.809634E+07" z="12.69531"/>
+							<center x="592349.6" y="855945.3" z="-3974422"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1" rotaroundcenter="true">
+								<uv_property name="rotation_angle" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="3000" value="52" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="6000" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>			
+		</connections>
+	</component>
+</components>
