@@ -299,15 +299,17 @@
 
 	
 <!--New Gates-->
-	<!--Mod - Farnham's Legend Revision-->
-	<remove sel="/macros/macro[@name='Zone004_Cluster_113_Sector001_macro']/connections/connection[@name='connection_ClusterGate113ToMFL01']" />
-	<add sel="/macros/macro[@name='Zone003_Cluster_113_Sector001_macro']/connections"><!--Segaris to Farnham's Legend V-->
-		<connection name="connection_ClusterGate113ToMFL01" ref="gates">
-			<offset>
-				<position x="-9750" y="1" z="-15750" />
-				<quaternion qx="0" qy="0" qz="0" qw="1" />
-			</offset>
-			<macro ref="props_gates_anc_gate_macro" connection="space" />
-		</connection>
-	</add>		
+  <!--Mod - Farnham's Legend Revision-->
+  <remove sel="/macros/macro[@name='Zone004_Cluster_113_Sector001_macro']/connections/connection[@name='connection_ClusterGate113ToMFL01']" />
+  <add sel="/macros/macro[@name='Zone003_Cluster_113_Sector001_macro']/connections"><!--Segaris to Farnham's Legend V-->
+	<connection name="connection_ClusterGate113ToMFL01" ref="gates">
+	  <offset>
+		<position x="-9750" y="1" z="-15750" />
+		<quaternion qx="0" qy="0" qz="0" qw="1" />
+	  </offset>
+	  <macro ref="props_gates_anc_gate_macro" connection="space" />
+	</connection>
+  </add>
+  <!--Mod - Aldrin Shippack-->
+  <remove sel="/macros/macro[@name='Zone003_Cluster_113_Sector001_macro']/connections/connection[@name='connection_ClusterGate113ToALD01']" />  
 </diff>

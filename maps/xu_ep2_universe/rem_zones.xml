@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <macros>
-	<!--REM00 - Oort Cloud Beta-->
-		<!--Oort Cloud-->
-		<macro name="ZoneG1_Cluster_REM00_Sector001_macro" class="zone">
+	<!--REM00 - OORT CLOUD BETA-->
+		<macro name="ZoneG1_Cluster_REM00_Sector001_macro" class="zone"><!--OORT CLOUD-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM00To116" ref="gates">
@@ -13,9 +12,8 @@
 					<macro ref="props_ter_accelerator_01_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Matrix #01-->
-		<macro name="ZoneG2_Cluster_REM00_Sector001_macro" class="zone">
+		</macro>		
+		<macro name="ZoneG2_Cluster_REM00_Sector001_macro" class="zone"><!--MATRIX #01-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM00ToREM01" ref="gates">
@@ -44,9 +42,8 @@
 		</macro>		
 
 		
-	<!--REM01 - Matrix #01-->
-		<!--Oort Cloud Beta-->
-		<macro name="ZoneG1_Cluster_REM01_Sector001_macro" class="zone">
+	<!--REM01 - MATRIX #01-->	
+		<macro name="ZoneG1_Cluster_REM01_Sector001_macro" class="zone"><!--OORT CLOUD BETA-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM01ToREM00" ref="gates">
@@ -81,7 +78,7 @@
 		</macro>		
 
 		
-	<!--REM02 - Mars Beta-->
+	<!--REM02 - MARS BETA-->
 		<macro name="Zone001_Cluster_REM02_Sector001_macro" class="zone"><!--NORTH-->
 			<component ref="standardzone" />
 		</macro>
@@ -91,7 +88,7 @@
 		<macro name="Zone003_Cluster_REM02_Sector001_macro" class="zone"><!--SOUTHEAST-->
 			<component ref="standardzone" />
 		</macro>
-		<macro name="Zone004_Cluster_REM02_Sector001_macro" class="zone"><!--SOUTH\Mars-->
+		<macro name="Zone004_Cluster_REM02_Sector001_macro" class="zone"><!--SOUTH\MARS-->
 			<component ref="standardzone" />
 			<connections>			
 				<connection name="connection_ClusterGateREM02To101" ref="gates">
@@ -114,14 +111,14 @@
 		</macro>		
 
 		
-	<!--REM03 - Mercury Beta-->
+	<!--REM03 - MERCURY BETA-->
 		<macro name="Zone001_Cluster_REM03_Sector001_macro" class="zone"><!--NORTH-->
 			<component ref="standardzone" />
 		</macro>
 		<macro name="Zone002_Cluster_REM03_Sector001_macro" class="zone"><!--NORTHEAST-->
 			<component ref="standardzone" />
 		</macro>
-		<macro name="Zone003_Cluster_REM03_Sector001_macro" class="zone"><!--SOUTHEAST\Mercury-->
+		<macro name="Zone003_Cluster_REM03_Sector001_macro" class="zone"><!--SOUTHEAST\MERCURY-->
 			<component ref="standardzone" />
 			<connections>			
 				<connection name="connection_ClusterGateREM03To106" ref="gates">
@@ -147,9 +144,8 @@
 		</macro>
 
 		
-	<!--REM04 - Althes-->
-		<!--Megnir-->
-		<macro name="ZoneG1_Cluster_REM04_Sector001_macro" class="zone">
+	<!--REM04 - ALTHES-->
+		<macro name="ZoneG1_Cluster_REM04_Sector001_macro" class="zone"><!--MEGNIR-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM04ToREM05" ref="gates">
@@ -160,9 +156,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Matrix #48-->
-		<macro name="ZoneG2_Cluster_REM04_Sector001_macro" class="zone">
+		</macro>		
+		<macro name="ZoneG2_Cluster_REM04_Sector001_macro" class="zone"><!--MATRIX #48-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM04ToREM06" ref="gates">
@@ -173,9 +168,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Mists of Elysium-->
-		<macro name="ZoneG3_Cluster_REM04_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG3_Cluster_REM04_Sector001_macro" class="zone"><!--MISTS OF ELYSIUM-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM04ToREM14" ref="gates">
@@ -204,7 +198,7 @@
 		</macro>
 
 		
-	<!--REM05 - Megnir-->
+	<!--REM05 - MEGNIR-->
 		<macro name="ZoneG1_Cluster_REM05_Sector001_macro" class="zone"><!--SEGARIS-->
 			<component ref="standardzone" />
 			<connections>
@@ -232,7 +226,7 @@
 		<macro name="ZoneG3_Cluster_REM05_Sector001_macro" class="zone"><!--ALDRIN-->
 			<component ref="standardzone" />
 			<connections>
-				<connection name="connection_ClusterGateREM05To" ref="gates">
+				<connection name="connection_ClusterGateREM05ToALD01" ref="gates">
 					<offset>
 						<position x="1" y="1" z="1"/>
 						<quaternion qx="0" qy="-0.3826834" qz="0" qw="-0.9238795"/>					
@@ -258,9 +252,8 @@
 		</macro>
 
 		
-	<!--REM06 - Matrix #48-->
-		<!--Althes-->
-		<macro name="ZoneG1_Cluster_REM06_Sector001_macro" class="zone">
+	<!--REM06 - MATRIX #48-->		
+		<macro name="ZoneG1_Cluster_REM06_Sector001_macro" class="zone"><!--ALTHES-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM06ToREM04" ref="gates">
@@ -271,9 +264,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG2_Cluster_REM06_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG2_Cluster_REM06_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM06To" ref="gates">
@@ -284,15 +276,14 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM06_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG3_Cluster_REM06_Sector001_macro" class="zone"><!--THE BASTION-->
 			<component ref="standardzone" />
 			<connections>
-				<connection name="connection_ClusterGateREM06To" ref="gates">
+				<connection name="connection_ClusterGateREM06ToALD02" ref="gates">
 					<offset>
 						<position x="1" y="1" z="1"/>
-						<quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068"/>					
+						<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795"/>					
 					</offset>
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
@@ -321,9 +312,8 @@
 		</macro>
 		
 		
-	<!--REM07 - Matrix #79A-->
-		<!--Matrix #79B-->
-		<macro name="ZoneG1_Cluster_REM07_Sector001_macro" class="zone">
+	<!--REM07 - MATRIX #79A-->	
+		<macro name="ZoneG1_Cluster_REM07_Sector001_macro" class="zone"><!--MATRIX #79B-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM07To033" ref="gates">
@@ -334,9 +324,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Power Circle III-->
-		<macro name="ZoneG2_Cluster_REM07_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG2_Cluster_REM07_Sector001_macro" class="zone"><!--POWER CIRCLE III-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM07ToREM08" ref="gates">
@@ -365,9 +354,8 @@
 		</macro>
 
 		
-	<!--REM08 - Power Circle III-->
-		<!--Matrix #79A-->
-		<macro name="ZoneG1_Cluster_REM08_Sector001_macro" class="zone">
+	<!--REM08 - POWER CIRCLE III-->		
+		<macro name="ZoneG1_Cluster_REM08_Sector001_macro" class="zone"><!--MATRIX #79A-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM08ToREM07" ref="gates">
@@ -396,9 +384,8 @@
 		</macro>		
 
 		
-	<!--REM08 - Power Circle I-->
-		<!--Second Contact XI-->
-		<macro name="ZoneG1_Cluster_REM08_Sector002_macro" class="zone">
+	<!--REM08 - POWER CIRCLE I-->		
+		<macro name="ZoneG1_Cluster_REM08_Sector002_macro" class="zone"><!--SECOND CONTACT XI-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM08To041" ref="gates">
@@ -409,9 +396,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>	
-		<!--Inactive-->
-		<macro name="ZoneG2_Cluster_REM08_Sector002_macro" class="zone">
+		</macro>		
+		<macro name="ZoneG2_Cluster_REM08_Sector002_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM08To" ref="gates">
@@ -439,7 +425,7 @@
 			<component ref="standardzone" />
 		</macro>
 		
-		<!--Power Belt Superhighways-->
+		<!--POWER BELT SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM08_Sector001SHCon6_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -466,9 +452,8 @@
 		</macro>
 
 		
-	<!--REM09 - Teladi Gain-->
-		<!--The Void-->
-		<macro name="ZoneG1_Cluster_REM09_Sector001_macro" class="zone">
+	<!--REM09 - TELADI GAIN-->		
+		<macro name="ZoneG1_Cluster_REM09_Sector001_macro" class="zone"><!--THE VOID-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM09To027" ref="gates">
@@ -479,9 +464,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG2_Cluster_REM09_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG2_Cluster_REM09_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM09To" ref="gates">
@@ -492,9 +476,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM09_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG3_Cluster_REM09_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM09To" ref="gates">
@@ -523,9 +506,8 @@
 		</macro>
 
 		
-	<!--REM10 - Herron's Nebula-->
-		<!--Light Water-->
-		<macro name="ZoneG1_Cluster_REM10_Sector001_macro" class="zone">
+	<!--REM10 - HERRON'S NEBULA-->	
+		<macro name="ZoneG1_Cluster_REM10_Sector001_macro" class="zone"><!--LIGHT WATER-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM10ToREM16" ref="gates">
@@ -536,9 +518,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--The Reach-->
-		<macro name="ZoneG2_Cluster_REM10_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG2_Cluster_REM10_Sector001_macro" class="zone"><!--THE REACH-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM10To007" ref="gates">
@@ -549,9 +530,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM10_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG3_Cluster_REM10_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM10To" ref="gates">
@@ -562,9 +542,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG4_Cluster_REM10_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG4_Cluster_REM10_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM10To" ref="gates">
@@ -593,9 +572,8 @@
 		</macro>
 
 		
-	<!--REM11 - Montalaar-->
-		<!--Argon Prime-->
-		<macro name="ZoneG1_Cluster_REM11_Sector001_macro" class="zone">
+	<!--REM11 - MONTALAAR-->
+		<macro name="ZoneG1_Cluster_REM11_Sector001_macro" class="zone"><!--ARGON PRIME-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM11To014" ref="gates">
@@ -607,8 +585,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG2_Cluster_REM11_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM11_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM11To" ref="gates">
@@ -619,9 +596,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM11_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG3_Cluster_REM11_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM11To" ref="gates">
@@ -650,9 +626,8 @@
 		</macro>
 
 		
-	<!--REM12 - Split Fire-->
-		<!--Tharka's Cascade XVII-->
-		<macro name="ZoneG1_Cluster_REM12_Sector001_macro" class="zone">
+	<!--REM12 - SPLIT FIRE-->
+		<macro name="ZoneG1_Cluster_REM12_Sector001_macro" class="zone"><!--THARKA'S CASCADE XVII-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM12To032" ref="gates">
@@ -711,9 +686,8 @@
 		</macro>
 		
 		
-	<!--REM13 - Dark Waters-->
-		<!--Depths of Silence-->
-		<macro name="ZoneG1_Cluster_REM13_Sector001_macro" class="zone">
+	<!--REM13 - DARK  WATERS-->	
+		<macro name="ZoneG1_Cluster_REM13_Sector001_macro" class="zone"><!--DEPTHS OF SILENCE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM13ToREM15" ref="gates">
@@ -729,8 +703,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Shining Currents-->
-		<macro name="ZoneG2_Cluster_REM13_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM13_Sector001_macro" class="zone"><!--SHINING CURRENTS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM13ToREM17" ref="gates">
@@ -742,7 +715,7 @@
 				</connection>
 			</connections>
 		</macro>	
-		<!--Inactive-->
+		<!--INACTIVE-->
 		<macro name="ZoneG3_Cluster_REM13_Sector001_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -772,9 +745,8 @@
 		</macro>
 
 		
-	<!--REM14 - Mists of Elysium-->
-		<!--Althes-->
-		<macro name="ZoneG1_Cluster_REM14_Sector001_macro" class="zone">
+	<!--REM14 - MISTS OF ELYSIUM-->	
+		<macro name="ZoneG1_Cluster_REM14_Sector001_macro" class="zone"><!--ALTHES-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM14ToREM04" ref="gates">
@@ -786,8 +758,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Reservoir of Tranquillity-->
-		<macro name="ZoneG2_Cluster_REM14_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM14_Sector001_macro" class="zone"><!--RESERVOIR OF TRANQUILLITY-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM14ToREM19" ref="gates">
@@ -799,8 +770,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM14_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM14_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM14To" ref="gates">
@@ -829,9 +799,9 @@
 		</macro>
 
 		
-	<!--REM15 - Depths of Silence-->
-		<!--Dark Waters-->
-		<macro name="ZoneG1_Cluster_REM15_Sector001_macro" class="zone">
+	<!--REM15 - DEPTHS OF SILENCE-->
+		
+		<macro name="ZoneG1_Cluster_REM15_Sector001_macro" class="zone"><!--DARK  WATERS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM15ToREM13" ref="gates">
@@ -870,9 +840,8 @@
 		</macro>
 		
 		
-	<!--REM16 - Light Water-->
-		<!--Reservoir of Tranquillity-->
-		<macro name="ZoneG1_Cluster_REM16_Sector001_macro" class="zone">
+	<!--REM16 - LIGHT WATER-->	
+		<macro name="ZoneG1_Cluster_REM16_Sector001_macro" class="zone"><!--RESERVOIR OF TRANQUILLITY-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM16ToREM19" ref="gates">
@@ -883,9 +852,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Herron's Nebula-->
-		<macro name="ZoneG3_Cluster_REM16_Sector001_macro" class="zone">
+		</macro>		
+		<macro name="ZoneG3_Cluster_REM16_Sector001_macro" class="zone"><!--HERRON'S NEBULA-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM16ToREM10" ref="gates">
@@ -914,9 +882,8 @@
 		</macro>
 
 		
-	<!--REM17 - Shining Currents-->
-		<!--Sancturary of Darkness-->
-		<macro name="ZoneG1_Cluster_REM17_Sector001_macro" class="zone">
+	<!--REM17 - SHINING CURRENTS-->
+		<macro name="ZoneG1_Cluster_REM17_Sector001_macro" class="zone"><!--SANCTURARY OF DARKNESS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM17To605" ref="gates">
@@ -932,8 +899,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Dark Waters-->
-		<macro name="ZoneG2_Cluster_REM17_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM17_Sector001_macro" class="zone"><!--DARK WATERS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM17ToREM13" ref="gates">
@@ -962,9 +928,8 @@
 		</macro>
 
 		
-	<!--REM18 - Shore of Infinity-->
-		<!--Reservoir of Tranquillity-->
-		<macro name="ZoneG1_Cluster_REM18_Sector001_macro" class="zone">
+	<!--REM18 - SHORE OF INFINITY-->
+		<macro name="ZoneG1_Cluster_REM18_Sector001_macro" class="zone"><!--RESERVOIR OF TRANQUILLITY-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM18ToREM19" ref="gates">
@@ -1017,9 +982,8 @@
 		</macro>
 
 		
-	<!--REM19 - Reservoir of Tranquillity-->
-		<!--Shore of Infinity-->
-		<macro name="ZoneG1_Cluster_REM19_Sector001_macro" class="zone">
+	<!--REM19 - RESERVOIR OF TRANQUILLITY-->
+		<macro name="ZoneG1_Cluster_REM19_Sector001_macro" class="zone"><!--SHORE OF INFINITY-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM19ToREM18" ref="gates">
@@ -1030,9 +994,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Mists of Elysium-->
-		<macro name="ZoneG2_Cluster_REM19_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG2_Cluster_REM19_Sector001_macro" class="zone"><!--MISTS OF ELYSIUM-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM19ToREM14" ref="gates">
@@ -1044,8 +1007,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Light Water-->
-		<macro name="ZoneG3_Cluster_REM19_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM19_Sector001_macro" class="zone"><!--LIGHT WATER-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM19ToREM16" ref="gates">
@@ -1057,8 +1019,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Menelaus' Oasis-->
-		<macro name="ZoneG4_Cluster_REM19_Sector001_macro" class="zone">
+		<macro name="ZoneG4_Cluster_REM19_Sector001_macro" class="zone"><!--MENELAUS' OASIS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM19To609" ref="gates">
@@ -1091,9 +1052,8 @@
 		</macro>
 
 		
-	<!--REM20 - Duke's Domain-->
-		<!--Lasting Vengeance-->
-		<macro name="ZoneG1_Cluster_REM20_Sector001_macro" class="zone">
+	<!--REM20 - DUKE'S DOMAIN-->
+		<macro name="ZoneG1_Cluster_REM20_Sector001_macro" class="zone"><!--LASTING VENGEANCE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM20To035" ref="gates">
@@ -1105,8 +1065,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG2_Cluster_REM20_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM20_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM20To" ref="gates">
@@ -1117,9 +1076,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM20_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG3_Cluster_REM20_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM20To" ref="gates">
@@ -1148,9 +1106,8 @@
 		</macro>
 
 		
-	<!--REM21 - Perpetual Sin III-->
-		<!--Cardinal's Redress-->
-		<macro name="ZoneG1_Cluster_REM21_Sector001_macro" class="zone">
+	<!--REM21 - PERPETUAL SIN III-->
+		<macro name="ZoneG1_Cluster_REM21_Sector001_macro" class="zone"><!--CARDINAL'S REDRESS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM21To036" ref="gates">
@@ -1162,8 +1119,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Sanctum Verge-->
-		<macro name="ZoneG2_Cluster_REM21_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM21_Sector001_macro" class="zone"><!--SANCTUM VERGE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM21ToREM29" ref="gates">
@@ -1192,9 +1148,8 @@
 		</macro>
 
 		
-	<!--REM21 - Perpetual Sin I-->
-		<!--Unholy Descent-->
-		<macro name="ZoneG1_Cluster_REM21_Sector002_macro" class="zone">
+	<!--REM21 - PERPETUAL SIN I-->
+		<macro name="ZoneG1_Cluster_REM21_Sector002_macro" class="zone"><!--UNHOLY DESCENT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM21ToREM23" ref="gates">
@@ -1205,9 +1160,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Matrix #695A-->
-		<macro name="ZoneG2_Cluster_REM21_Sector002_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG2_Cluster_REM21_Sector002_macro" class="zone"><!--MATRIX #695A-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM21ToNXW02" ref="gates">
@@ -1236,7 +1190,7 @@
 		</macro>
 
 		
-		<!--Perpetual Sin Superhighways-->
+		<!--PERPETUAL SIN SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM21_Sector001SHCon6_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -1263,9 +1217,8 @@
 		</macro>		
 
 		
-	<!--REM22 - Pontifex' Seclusion-->
-		<!--True Sight-->
-		<macro name="ZoneG1_Cluster_REM22_Sector001_macro" class="zone">
+	<!--REM22 - PONTIFEX' SECLUSION-->
+		<macro name="ZoneG1_Cluster_REM22_Sector001_macro" class="zone"><!--TRUE SIGHT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM22To012" ref="gates">
@@ -1330,9 +1283,8 @@
 		</macro>
 
 		
-	<!--REM23 - Unholy Descent-->
-		<!--Perpetual Sin-->
-		<macro name="ZoneG1_Cluster_REM23_Sector001_macro" class="zone">
+	<!--REM23 - UNHOLY DESCENT-->
+		<macro name="ZoneG1_Cluster_REM23_Sector001_macro" class="zone"><!--PERPETUAL SIN-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM23ToREM21" ref="gates">
@@ -1344,8 +1296,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Family Rhak III-->
-		<macro name="ZoneG2_Cluster_REM23_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM23_Sector001_macro" class="zone"><!--FAMILY RHAK III-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM23ToREM32" ref="gates">
@@ -1361,8 +1312,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Kha'ak Sector Alpha-->
-		<macro name="ZoneG3_Cluster_REM23_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM23_Sector001_macro" class="zone"><!--KHA'AK SECTOR ALPHA-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM23ToREM67" ref="gates">
@@ -1391,9 +1341,8 @@
 		</macro>
 
 		
-	<!--REM24 - Cathedral of Xaar-->
-		<!--Pios Mists IV-->
-		<macro name="ZoneG1_Cluster_REM24_Sector001_macro" class="zone">
+	<!--REM24 - CATHEDRAL OF XAAR-->		
+		<macro name="ZoneG1_Cluster_REM24_Sector001_macro" class="zone"><!--PIOS MISTS IV-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM24To037" ref="gates">
@@ -1422,9 +1371,8 @@
 		</macro>
 
 		
-	<!--REM25 - Clarity's End-->
-		<!--Sacred Relic-->
-		<macro name="ZoneG1_Cluster_REM25_Sector001_macro" class="zone">
+	<!--REM25 - CLARITY'S End-->		
+		<macro name="ZoneG1_Cluster_REM25_Sector001_macro" class="zone"><!--SACRED RELIC-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM25To023" ref="gates">
@@ -1436,8 +1384,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Xaar's Belt III-->
-		<macro name="ZoneG2_Cluster_REM25_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM25_Sector001_macro" class="zone"><!--XAAR'S BELT III-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM25ToREM30" ref="gates">
@@ -1449,8 +1396,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM25_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM25_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM25To" ref="gates">
@@ -1479,9 +1425,8 @@
 		</macro>
 
 		
-	<!--REM26 - Desecrated Skies-->
-		<!--Xaar's Belt I-->
-		<macro name="ZoneG1_Cluster_REM26_Sector001_macro" class="zone">
+	<!--REM26 - DESECRATED SKIES-->
+		<macro name="ZoneG1_Cluster_REM26_Sector001_macro" class="zone"><!--XAAR'S BELT I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM26ToREM30" ref="gates">
@@ -1493,8 +1438,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG2_Cluster_REM26_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM26_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM26To" ref="gates">
@@ -1506,8 +1450,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM26_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM26_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM26To" ref="gates">
@@ -1542,9 +1485,8 @@
 		</macro>
 		
 		
-	<!--REM27 - Perdition's End-->
-		<!--Trinity Sanctum VII-->
-		<macro name="ZoneG1_Cluster_REM27_Sector001_macro" class="zone">
+	<!--REM27 - PERDITION'S END-->
+		<macro name="ZoneG1_Cluster_REM27_Sector001_macro" class="zone"><!--TRINITY SANCTUM VII-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM27To047" ref="gates">
@@ -1556,8 +1498,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Xaar's Belt II-->
-		<macro name="ZoneG2_Cluster_REM27_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM27_Sector001_macro" class="zone"><!--XAAR'S BELT II-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM27ToREM30" ref="gates">
@@ -1586,9 +1527,8 @@
 		</macro>
 
 		
-	<!--REM28 - Ket's Reckoning-->
-		<!--Windfall III-->
-		<macro name="ZoneG1_Cluster_REM28_Sector001_macro" class="zone">
+	<!--REM28 - KET'S RECKONING-->
+		<macro name="ZoneG1_Cluster_REM28_Sector001_macro" class="zone"><!--WINDFALL III-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM28To502" ref="gates">
@@ -1617,9 +1557,8 @@
 		</macro>
 		
 		
-	<!--REM29 - Sanctum Verge-->
-		<!--Pontifex's Claim-->
-		<macro name="ZoneG1_Cluster_REM29_Sector001_macro" class="zone">
+	<!--REM29 - SANCTUM VERGE-->
+		<macro name="ZoneG1_Cluster_REM29_Sector001_macro" class="zone"><!--PONTIFEX'S CLAIM-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM29To011" ref="gates">
@@ -1631,8 +1570,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Perpetual Sin-->
-		<macro name="ZoneG2_Cluster_REM29_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM29_Sector001_macro" class="zone"><!--PERPETUAL SIN-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM29ToREM21" ref="gates">
@@ -1661,9 +1599,8 @@
 		</macro>
 
 		
-	<!--REM30 - Xaar's Belt I-->
-		<!--Desecrated Skies-->
-		<macro name="ZoneG1_Cluster_REM30_Sector001_macro" class="zone">
+	<!--REM30 - XAAR'S BELT I-->
+		<macro name="ZoneG1_Cluster_REM30_Sector001_macro" class="zone"><!--DESECRATED SKIES-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM30ToREM26" ref="gates">
@@ -1691,9 +1628,8 @@
 			<component ref="standardzone" />
 		</macro>	
 
-	<!--REM30 - Xaar's Belt II-->
-		<!--Perdition's End-->
-		<macro name="ZoneG1_Cluster_REM30_Sector002_macro" class="zone">
+	<!--REM30 - XAAR'S BELT II-->
+		<macro name="ZoneG1_Cluster_REM30_Sector002_macro" class="zone"><!--PERDITION'S END-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM30ToREM27" ref="gates">
@@ -1721,8 +1657,8 @@
 			<component ref="standardzone" />
 		</macro>
 
-	<!--REM30 - Xaar's Belt III-->
-		<!--Clarity's End-->
+	<!--REM30 - XAAR'S BELT III-->
+		<!--CLARITY'S END-->
 		<macro name="ZoneG1_Cluster_REM30_Sector003_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -1751,7 +1687,7 @@
 			<component ref="standardzone" />
 		</macro>
 		
-	<!--REM30 - Xaar's Belt Superhighways-->
+	<!--REM30 - XAAR'S BELT SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM30_Sector001SHCon5_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -1826,9 +1762,8 @@
 		</macro>			
 
 		
-	<!--REM31 - The Shallows-->
-		<!--Family Rhak I-->
-		<macro name="ZoneG1_Cluster_REM31_Sector001_macro" class="zone">
+	<!--REM31 - THE SHALLOWS-->
+		<macro name="ZoneG1_Cluster_REM31_Sector001_macro" class="zone"><!--FAMILY RHAK I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM31ToREM32" ref="gates">
@@ -1840,8 +1775,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Queen's Space-->
-		<macro name="ZoneG2_Cluster_REM31_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM31_Sector001_macro" class="zone"><!--QUEEN'S SPACE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM31ToREM38" ref="gates">
@@ -1857,8 +1791,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Thyn's Excavation-->
-		<macro name="ZoneG3_Cluster_REM31_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM31_Sector001_macro" class="zone"><!--THYN'S EXCAVATION-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM31ToREM34" ref="gates">
@@ -1887,9 +1820,8 @@
 		</macro>
 
 		
-	<!--REM32 - Family Rhak I-->
-		<!--The Shallows-->
-		<macro name="ZoneG1_Cluster_REM32_Sector001_macro" class="zone">
+	<!--REM32 - FAMILY RHAK I-->
+		<macro name="ZoneG1_Cluster_REM32_Sector001_macro" class="zone"><!--THE SHALLOWS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM32ToREM31" ref="gates">
@@ -1924,9 +1856,8 @@
 		</macro>	
 		
 		
-	<!--REM32 - Family Rhak III-->
-		<!--Unholy Descent-->
-		<macro name="ZoneG1_Cluster_REM32_Sector002_macro" class="zone">
+	<!--REM32 - FAMILY RHAK III-->
+		<macro name="ZoneG1_Cluster_REM32_Sector002_macro" class="zone"><!--UNHOLY DESCENT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM32ToREM23" ref="gates">
@@ -1958,7 +1889,7 @@
 			<component ref="standardzone" />
 		</macro>
 
-	<!--REM32 - Family Rhak Superhighways-->
+	<!--REM32 - FAMILY RHAK SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM32_Sector001SHCon6_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -1985,9 +1916,8 @@
 		</macro>		
 
 		
-	<!--REM33 - Thyn's Abyss-->
-		<!--Thyn's Excavation-->
-		<macro name="ZoneG1_Cluster_REM33_Sector001_macro" class="zone">
+	<!--REM33 - THYN'S ABYSS-->
+		<macro name="ZoneG1_Cluster_REM33_Sector001_macro" class="zone"><!--THYN'S EXCAVATION-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM33ToREM34" ref="gates">
@@ -2003,8 +1933,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Matrix #472D-->
-		<macro name="ZoneG2_Cluster_REM33_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM33_Sector001_macro" class="zone"><!--MATRIX #472D-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM33ToREM39" ref="gates">
@@ -2037,9 +1966,8 @@
 		</macro>
 
 		
-	<!--REM34 - Thyn's Excavation-->
-		<!--The Shallows-->
-		<macro name="ZoneG1_Cluster_REM34_Sector001_macro" class="zone">
+	<!--REM34 - THYN'S EXCAVATION-->
+		<macro name="ZoneG1_Cluster_REM34_Sector001_macro" class="zone"><!--THE SHALLOWS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM34ToREM31" ref="gates">
@@ -2050,9 +1978,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Thyn's Abyss-->
-		<macro name="ZoneG2_Cluster_REM34_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG2_Cluster_REM34_Sector001_macro" class="zone"><!--THYN'S ABYSS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM34ToREM33" ref="gates">
@@ -2085,9 +2012,8 @@
 		</macro>
 
 		
-	<!--REM35 - Hila's Joy IX-->
-		<!--Great Trench-->
-		<macro name="ZoneG1_Cluster_REM35_Sector001_macro" class="zone">
+	<!--REM35 - HILA'S JOY IX-->
+		<macro name="ZoneG1_Cluster_REM35_Sector001_macro" class="zone"><!--GREAT TRENCH-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM35ToREM36" ref="gates">			
@@ -2120,9 +2046,8 @@
 			<component ref="standardzone" />
 		</macro>		
 		
-	<!--REM35 - Hila's Joy IV-->
-		<!--Queen's Space-->
-		<macro name="ZoneG1_Cluster_REM35_Sector002_macro" class="zone">
+	<!--REM35 - HILA'S JOY IV-->
+		<macro name="ZoneG1_Cluster_REM35_Sector002_macro" class="zone"><!--QUEEN'S SPACE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM35ToREM38" ref="gates">
@@ -2133,9 +2058,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Lucky Planets-->		
-		<macro name="ZoneG2_Cluster_REM35_Sector002_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG2_Cluster_REM35_Sector002_macro" class="zone"><!--LUCKY PLANETS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM35ToREM37" ref="gates">
@@ -2169,7 +2093,7 @@
 			<component ref="standardzone" />
 		</macro>		
 		
-	<!--REM35 - Hila's Joy Superhighways-->
+	<!--REM35 - HILA'S JOY SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM35_Sector001SHCon6_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -2196,9 +2120,8 @@
 		</macro>
 
 		
-	<!--REM36 - Great Trench-->
-		<!--Hila's Joy IX-->
-		<macro name="ZoneG1_Cluster_REM36_Sector001_macro" class="zone">
+	<!--REM36 - GREAT TRENCH-->
+		<macro name="ZoneG1_Cluster_REM36_Sector001_macro" class="zone"><!--HILA'S JOY IX-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM36ToREM35" ref="gates">
@@ -2214,8 +2137,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Ocracoke's Storm I-->
-		<macro name="ZoneG2_Cluster_REM36_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM36_Sector001_macro" class="zone"><!--OCRACOKE'S STORM I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM36ToREM40" ref="gates">
@@ -2226,9 +2148,8 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--Matrix #472D-->
-		<macro name="ZoneG3_Cluster_REM36_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG3_Cluster_REM36_Sector001_macro" class="zone"><!--MATRIX #472D-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM36ToREM39" ref="gates">
@@ -2261,9 +2182,8 @@
 		</macro>
 
 		
-	<!--REM37 - Lucky Planets-->
-		<!--Queen's Space-->
-		<macro name="ZoneG1_Cluster_REM37_Sector001_macro" class="zone">
+	<!--REM37 - LUCKY PLANETS-->
+		<macro name="ZoneG1_Cluster_REM37_Sector001_macro" class="zone"><!--QUEEN'S SPACE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM37ToREM38" ref="gates">
@@ -2275,8 +2195,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Hila's Joy IV-->
-		<macro name="ZoneG2_Cluster_REM37_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM37_Sector001_macro" class="zone"><!--HILA'S JOY IV-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM37ToREM35" ref="gates">
@@ -2288,8 +2207,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Sacred Relic-->
-		<macro name="ZoneG3_Cluster_REM37_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM37_Sector001_macro" class="zone"><!--SACRED RELIC-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM37To023" ref="gates">
@@ -2322,9 +2240,8 @@
 		</macro>
 
 		
-	<!--REM38 - Queen's Space-->
-		<!--The Shallows-->
-		<macro name="ZoneG1_Cluster_REM38_Sector001_macro" class="zone">
+	<!--REM38 - QUEEN'S SPACE-->
+		<macro name="ZoneG1_Cluster_REM38_Sector001_macro" class="zone"><!--THE SHALLOWS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM38ToREM31" ref="gates">
@@ -2340,8 +2257,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Lucky Planets-->
-		<macro name="ZoneG2_Cluster_REM38_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM38_Sector001_macro" class="zone"><!--LUCKY PLANETS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM38ToREM37" ref="gates">
@@ -2353,8 +2269,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Hila's Joy IV-->
-		<macro name="ZoneG3_Cluster_REM38_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM38_Sector001_macro" class="zone"><!--HILA'S JOY IV-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM38ToREM35" ref="gates">
@@ -2383,9 +2298,8 @@
 		</macro>
 
 		
-	<!--REM39 - Matrix #472D-->
-		<!--Thyn's Abyss-->
-		<macro name="ZoneG1_Cluster_REM39_Sector001_macro" class="zone">
+	<!--REM39 - MATRIX #472D-->
+		<macro name="ZoneG1_Cluster_REM39_Sector001_macro" class="zone"><!--THYN'S ABYSS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM39ToREM33" ref="gates">
@@ -2401,8 +2315,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Great Trench-->
-		<macro name="ZoneG2_Cluster_REM39_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM39_Sector001_macro" class="zone"><!--GREAT TRENCH-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM39ToREM36" ref="gates">
@@ -2441,9 +2354,8 @@
 		</macro>		
 
 		
-	<!--REM40 - Ocracoke's Storm I-->
-		<!--Great Trench-->
-		<macro name="ZoneG1_Cluster_REM40_Sector001_macro" class="zone">
+	<!--REM40 - OCRACOKE'S STORM I-->
+		<macro name="ZoneG1_Cluster_REM40_Sector001_macro" class="zone"><!--GREAT TRENCH-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM40ToREM36" ref="gates">
@@ -2471,9 +2383,8 @@
 			<component ref="standardzone" />
 		</macro>
 
-	<!--REM40 - Ocracoke's Storm II-->
-		<!--Shadows of Giants VI-->
-		<macro name="ZoneG1_Cluster_REM40_Sector002_macro" class="zone">
+	<!--REM40 - OCRACOKE'S STORM II-->	
+		<macro name="ZoneG1_Cluster_REM40_Sector002_macro" class="zone"><!--SHADOWS OF GIANTS VI-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM40ToREM41" ref="gates">
@@ -2513,7 +2424,7 @@
 			<component ref="standardzone" />
 		</macro>
 		
-	<!--REM40 - Ocracoke's Storm Superhighways-->
+	<!--REM40 - OCRACOKE'S STORM SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM40_Sector001SHCon6_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -2540,9 +2451,8 @@
 		</macro>		
 		
 
-	<!--REM41 - Shadows of Giants VI-->
-		<!--Ocracoke's Storm II-->
-		<macro name="ZoneG1_Cluster_REM41_Sector001_macro" class="zone">
+	<!--REM41 - SHADOWS OF GIANTS VI-->
+		<macro name="ZoneG1_Cluster_REM41_Sector001_macro" class="zone"><!--OCRACOKE'S STORM II-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM41ToREM40" ref="gates">
@@ -2570,9 +2480,8 @@
 			<component ref="standardzone" />
 		</macro>
 		
-	<!--REM41 - Shadows of Giants VII-->
-		<!--Turquoise Sea IX-->
-		<macro name="ZoneG1_Cluster_REM41_Sector002_macro" class="zone">
+	<!--REM41 - SHADOWS OF GIANTS VII-->
+		<macro name="ZoneG1_Cluster_REM41_Sector002_macro" class="zone"><!--TURQUOISE SEA IX-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM41To050" ref="gates">
@@ -2604,7 +2513,7 @@
 			<component ref="standardzone" />
 		</macro>
 
-	<!--REM41 - Shadows of Giants Superhighways-->
+	<!--REM41 - SHADOWS OF GIANTS SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM41_Sector001SHCon6_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -2631,9 +2540,8 @@
 		</macro>		
 
 		
-	<!--REM42 - Bala Gi's Joy-->
-		<!--Grand Exchange III-->
-		<macro name="ZoneG1_Cluster_REM42_Sector001_macro" class="zone">
+	<!--REM42 - BALA GI'S JOY-->
+		<macro name="ZoneG1_Cluster_REM42_Sector001_macro" class="zone"><!--GRAND EXCHANGE III-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM42To001" ref="gates">
@@ -2645,8 +2553,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Silent Witness I-->
-		<macro name="ZoneG2_Cluster_REM42_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM42_Sector001_macro" class="zone"><!--SILENT WITNESS I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM42To008" ref="gates">
@@ -2658,8 +2565,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Windfall IV-->
-		<macro name="ZoneG3_Cluster_REM42_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM42_Sector001_macro" class="zone"><!--WINDFALL IV-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM42To503" ref="gates">
@@ -2688,9 +2594,8 @@
 		</macro>
 		
 
-	<!--REM43 - Blue Profit-->
-		<!--Moo-Kye's Revenge-->
-		<macro name="ZoneG1_Cluster_REM43_Sector001_macro" class="zone">
+	<!--REM43 - BLUE PROFIT-->
+		<macro name="ZoneG1_Cluster_REM43_Sector001_macro" class="zone"><!--MOO-KYE'S REVENGE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM43ToREM58" ref="gates">
@@ -2702,8 +2607,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--PTNI Headquarters-->
-		<macro name="ZoneG2_Cluster_REM43_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM43_Sector001_macro" class="zone"><!--PTNI HEADQUARTERS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM43ToREM44" ref="gates">
@@ -2715,8 +2619,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--The Vault-->
-		<macro name="ZoneG3_Cluster_REM43_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM43_Sector001_macro" class="zone"><!--THE VAULT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM43ToREM45" ref="gates">
@@ -2745,9 +2648,8 @@
 		</macro>
 		
 
-	<!--REM44 - PTNI Headquarters-->
-		<!--Blue Profit-->
-		<macro name="ZoneG1_Cluster_REM44_Sector001_macro" class="zone">
+	<!--REM44 - PTNI HEADQUARTERS-->
+		<macro name="ZoneG1_Cluster_REM44_Sector001_macro" class="zone"><!--BLUE PROFIT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM44ToREM43" ref="gates">
@@ -2759,8 +2661,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--The Vault-->
-		<macro name="ZoneG2_Cluster_REM44_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM44_Sector001_macro" class="zone"><!--THE VAULT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM44ToREM45" ref="gates">
@@ -2772,8 +2673,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM44_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM44_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM44To" ref="gates">
@@ -2808,9 +2708,8 @@
 		</macro>		
 		
 
-	<!--REM45 - The Vault-->
-		<!--Blue Profit-->
-		<macro name="ZoneG1_Cluster_REM45_Sector001_macro" class="zone">
+	<!--REM45 - THE VAULT-->
+		<macro name="ZoneG1_Cluster_REM45_Sector001_macro" class="zone"><!--BLUE PROFIT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM45ToREM43" ref="gates">
@@ -2822,8 +2721,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--PTNI Headquarters-->
-		<macro name="ZoneG2_Cluster_REM45_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM45_Sector001_macro" class="zone"><!--PTNI HEADQUARTERS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM45ToREM44" ref="gates">
@@ -2852,9 +2750,8 @@
 		</macro>
 		
 
-	<!--REM46 - Recovered Capital-->
-		<!--Wretched Skies IV-->
-		<macro name="ZoneG1_Cluster_REM46_Sector001_macro" class="zone">
+	<!--REM46 - RECOVERED CAPITAL-->
+		<macro name="ZoneG1_Cluster_REM46_Sector001_macro" class="zone"><!--WRETCHED SKIES IV-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM46To400" ref="gates">
@@ -2866,8 +2763,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Wretched Skies VII-->
-		<macro name="ZoneG2_Cluster_REM46_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM46_Sector001_macro" class="zone"><!--WRETCHED SKIES VII-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM46ToREM48" ref="gates">
@@ -2896,9 +2792,8 @@
 		</macro>
 		
 
-	<!--REM47 - Spaceweed Grove-->
-		<!--Eighteen Billion-->
-		<macro name="ZoneG1_Cluster_REM47_Sector001_macro" class="zone">
+	<!--REM47 - SPACEWEED GROVE-->
+		<macro name="ZoneG1_Cluster_REM47_Sector001_macro" class="zone"><!--EIGHTEEN BILLION-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM47To002" ref="gates">
@@ -2910,8 +2805,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Bad Debt-->
-		<macro name="ZoneG2_Cluster_REM47_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM47_Sector001_macro" class="zone"><!--BAD DEBT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM47ToNXW01" ref="gates">
@@ -2940,9 +2834,8 @@
 		</macro>
 		
 
-	<!--REM48 - Wretched Skies II-->
-		<!--Wretched Skies X-->
-		<macro name="ZoneG1_Cluster_REM48_Sector001_macro" class="zone">
+	<!--REM48 - WRETCHED SKIES II-->
+		<macro name="ZoneG1_Cluster_REM48_Sector001_macro" class="zone"><!--WRETCHED SKIES X-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM48To422" ref="gates">
@@ -2971,9 +2864,8 @@
 		</macro>
 
 
-	<!--REM48 - Wretched Skies VII-->
-		<!--Recovered Capital-->
-		<macro name="ZoneG1_Cluster_REM48_Sector002_macro" class="zone">
+	<!--REM48 - WRETCHED SKIES VII-->
+		<macro name="ZoneG1_Cluster_REM48_Sector002_macro" class="zone"><!--RECOVERED CAPITAL-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM48ToREM46" ref="gates">
@@ -2985,8 +2877,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Duke's Vision I-->
-		<macro name="ZoneG2_Cluster_REM48_Sector002_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM48_Sector002_macro" class="zone"><!--DUKE'S VISION I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM48ToREM49" ref="gates">
@@ -3014,7 +2905,7 @@
 			<component ref="standardzone" />
 		</macro>
 		
-	<!--REM48 - Wretched Skies Superhighways-->
+	<!--REM48 - WRETCHED SKIES SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM48_Sector001SHCon6_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -3041,9 +2932,8 @@
 		</macro>		
 		
 
-	<!--REM49 - Duke's Vision I-->
-		<!--Wretched Skies VII-->
-		<macro name="ZoneG1_Cluster_REM49_Sector001_macro" class="zone">
+	<!--REM49 - DUKE'S VISION I-->
+		<macro name="ZoneG1_Cluster_REM49_Sector001_macro" class="zone"><!--WRETCHED SKIES VII-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM49ToREM48" ref="gates">
@@ -3055,8 +2945,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Duke's Vision II-->
-		<macro name="ZoneG2_Cluster_REM49_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM49_Sector001_macro" class="zone"><!--DUKE'S VISION II-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM49ToREM50" ref="gates">
@@ -3067,9 +2956,8 @@
 					<macro ref="props_gates_orb_accelerator_01_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>
-		<!--LooMankStrat's Legacy-->
-		<macro name="ZoneG3_Cluster_REM49_Sector001_macro" class="zone">
+		</macro>	
+		<macro name="ZoneG3_Cluster_REM49_Sector001_macro" class="zone"><!--LOOMANKSTRAT'S LEGACY-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM49ToREM51" ref="gates">
@@ -3098,9 +2986,8 @@
 		</macro>
 		
 
-	<!--REM50 - Duke's Vision II-->
-		<!--Duke's Vision I-->
-		<macro name="ZoneG1_Cluster_REM50_Sector001_macro" class="zone">
+	<!--REM50 - DUKE'S VISION II-->
+		<macro name="ZoneG1_Cluster_REM50_Sector001_macro" class="zone"><!--DUKE'S VISION I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM50ToREM49" ref="gates">
@@ -3112,8 +2999,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--LooMankStrat's Legacy-->
-		<macro name="ZoneG2_Cluster_REM50_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM50_Sector001_macro" class="zone"><!--LOOMANKSTRAT'S LEGACY-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM50ToREM51" ref="gates">
@@ -3145,9 +3031,8 @@
 		</macro>		
 		
 
-	<!--REM51 - LooMankStrat's Legacy-->
-		<!--Duke's Vision I-->
-		<macro name="ZoneG1_Cluster_REM51_Sector001_macro" class="zone">
+	<!--REM51 - LOOMANKSTRAT'S LEGACY-->
+		<macro name="ZoneG1_Cluster_REM51_Sector001_macro" class="zone"><!--DUKE'S VISION I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM51ToREM49" ref="gates">
@@ -3159,8 +3044,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Duke's Vision II-->
-		<macro name="ZoneG2_Cluster_REM51_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM51_Sector001_macro" class="zone"><!--DUKE'S VISION II-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM51ToREM50" ref="gates">
@@ -3172,8 +3056,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Litany of Fury IX-->
-		<macro name="ZoneG3_Cluster_REM51_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM51_Sector001_macro" class="zone"><!--LITANY OF FURY IX-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM51To423" ref="gates">
@@ -3202,9 +3085,8 @@
 		</macro>
 		
 
-	<!--REM52 - Danna's Chance-->
-		<!--Litany of Fury IX-->
-		<macro name="ZoneG1_Cluster_REM52_Sector001_macro" class="zone">
+	<!--REM52 - DANNA'S CHANCE-->
+		<macro name="ZoneG1_Cluster_REM52_Sector001_macro" class="zone"><!--LITANY OF FURY IX-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM52To423" ref="gates">
@@ -3216,8 +3098,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG2_Cluster_REM52_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM52_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM52To" ref="gates">
@@ -3229,8 +3110,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM52_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM52_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM52To" ref="gates">
@@ -3259,9 +3139,8 @@
 		</macro>
 		
 
-	<!--REM53 - Legend's Home Alpha-->
-		<!--Akeela's Beacon-->
-		<macro name="ZoneG1_Cluster_REM53_Sector001_macro" class="zone">
+	<!--REM53 - LEGEND'S HOME ALPHA-->
+		<macro name="ZoneG1_Cluster_REM53_Sector001_macro" class="zone"><!--AKEELA'S BEACON-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM53ToREM55" ref="gates">
@@ -3273,8 +3152,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Legend's Home Beta-->
-		<macro name="ZoneG2_Cluster_REM53_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM53_Sector001_macro" class="zone"><!--LEGEND'S HOME BETA-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM53ToREM54" ref="gates">
@@ -3307,14 +3185,13 @@
 		<macro name="ZoneWF_Cluster_REM53_Sector001_macro" class="zone"> <!--WHARF-->
 			<component ref="standardzone" />
 		</macro>
-		<macro name="ZoneTD_Cluster_REM53_Sector001_macro" class="zone"> <!--Trade Station-->
+		<macro name="ZoneTD_Cluster_REM53_Sector001_macro" class="zone"> <!--TRADE STATION-->
 			<component ref="standardzone" />
 		</macro>		
 		
 
-	<!--REM54 - Legend's Home Beta-->
-		<!--Legend's Home Alpha-->
-		<macro name="ZoneG1_Cluster_REM54_Sector001_macro" class="zone">
+	<!--REM54 - LEGEND'S HOME BETA-->
+		<macro name="ZoneG1_Cluster_REM54_Sector001_macro" class="zone"><!--LEGEND'S HOME ALPHA-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM54ToREM53" ref="gates">
@@ -3343,9 +3220,8 @@
 		</macro>
 		
 
-	<!--REM55 - Akeela's Beacon-->
-		<!--Legend's Home Alpha-->
-		<macro name="ZoneG1_Cluster_REM55_Sector001_macro" class="zone">
+	<!--REM55 - AKEELA'S BEACON-->
+		<macro name="ZoneG1_Cluster_REM55_Sector001_macro" class="zone"><!--LEGEND'S HOME ALPHA-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM55ToREM53" ref="gates">
@@ -3357,8 +3233,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Alanda Hill-->
-		<macro name="ZoneG2_Cluster_REM55_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM55_Sector001_macro" class="zone"><!--ALANDA HILL-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM55ToREM56" ref="gates">
@@ -3387,9 +3262,8 @@
 		</macro>
 
 
-	<!--REM56 - Aladna Hill-->
-		<!--Akeela's Beacon-->
-		<macro name="ZoneG1_Cluster_REM56_Sector001_macro" class="zone">
+	<!--REM56 - ALADNA HILL-->
+		<macro name="ZoneG1_Cluster_REM56_Sector001_macro" class="zone"><!--AKEELA'S BEACON-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM56ToREM55" ref="gates">
@@ -3401,8 +3275,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Light of Heart-->
-		<macro name="ZoneG2_Cluster_REM56_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM56_Sector001_macro" class="zone"><!--LIGHT OF HEART-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM56ToREM57" ref="gates">
@@ -3414,14 +3287,13 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM56_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM56_Sector001_macro" class="zone"><!--TWO GRAND-->
 			<component ref="standardzone" />
 			<connections>
-				<connection name="connection_ClusterGateREM56To" ref="gates">
+				<connection name="connection_ClusterGateREM56To420" ref="gates">
 					<offset>
 						<position x="1" y="1" z="1"/>
-						<quaternion qx="0" qy="1" qz="0" qw="0"/>					
+						<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795"/>					
 					</offset>
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
@@ -3444,9 +3316,8 @@
 		</macro>
 		
 
-	<!--REM57 - Light of Heart-->
-		<!--Alanda Hill-->
-		<macro name="ZoneG1_Cluster_REM57_Sector001_macro" class="zone">
+	<!--REM57 - LIGHT OF HEART-->
+		<macro name="ZoneG1_Cluster_REM57_Sector001_macro" class="zone"><!--ALADNA HILL-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM57ToREM56" ref="gates">
@@ -3458,8 +3329,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Moo-Kye's Revenge-->
-		<macro name="ZoneG2_Cluster_REM57_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM57_Sector001_macro" class="zone"><!--MOO-KYE'S REVENGE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM57ToREM58" ref="gates">
@@ -3471,8 +3341,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Profit CENTER Alpha-->
-		<macro name="ZoneG3_Cluster_REM57_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM57_Sector001_macro" class="zone"><!--PROFIT CENTER ALPHA-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM57To034" ref="gates">
@@ -3484,8 +3353,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Silent Witness I-->
-		<macro name="ZoneG4_Cluster_REM57_Sector001_macro" class="zone">
+		<macro name="ZoneG4_Cluster_REM57_Sector001_macro" class="zone"><!--SILENT WITNESS I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM57To008" ref="gates">
@@ -3512,16 +3380,15 @@
 		<macro name="Zone005_Cluster_REM57_Sector001_macro" class="zone"> <!--WEST-->
 			<component ref="standardzone" />
 		</macro>
-		<macro name="ZoneEQ_Cluster_REM57_Sector001_macro" class="zone"> <!--Equipment Dock-->
+		<macro name="ZoneEQ_Cluster_REM57_Sector001_macro" class="zone"> <!--EQUIPMENT DOCK-->
 			<component ref="standardzone" />
 		</macro>
-		<macro name="ZoneTD_Cluster_REM57_Sector001_macro" class="zone"> <!--Trade Station-->
+		<macro name="ZoneTD_Cluster_REM57_Sector001_macro" class="zone"> <!--TRADE STATION-->
 			<component ref="standardzone" />
 		</macro>		
 
-	<!--REM58 - Moo-Kye's Revenge-->
-		<!--Grand Exchange IV-->
-		<macro name="ZoneG1_Cluster_REM58_Sector001_macro" class="zone">
+	<!--REM58 - Moo-Kye'S REVENGE-->
+		<macro name="ZoneG1_Cluster_REM58_Sector001_macro" class="zone"><!--GRAND EXCHANGE IV-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM58To001" ref="gates">
@@ -3533,8 +3400,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Blue Profit-->
-		<macro name="ZoneG2_Cluster_REM58_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM58_Sector001_macro" class="zone"><!--BLUE PROFIT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM58ToREM43" ref="gates">
@@ -3546,8 +3412,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Light of Heart-->
-		<macro name="ZoneG3_Cluster_REM58_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM58_Sector001_macro" class="zone"><!--LIGHT OF HEART-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM58ToREM57" ref="gates">
@@ -3576,9 +3441,8 @@
 		</macro>
 		
 
-	<!--REM59 - Mines of Fortune-->
-		<!--Company Regard-->
-		<macro name="ZoneG1_Cluster_REM59_Sector001_macro" class="zone">
+	<!--REM59 - MINES OF FORTUNE-->
+		<macro name="ZoneG1_Cluster_REM59_Sector001_macro" class="zone"><!--COMPANY REGARD-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM59To020" ref="gates">
@@ -3590,8 +3454,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Turquoise Sea IX-->
-		<macro name="ZoneG2_Cluster_REM59_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM59_Sector001_macro" class="zone"><!--TURQUOISE SEA IX-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM59To050" ref="gates">
@@ -3620,9 +3483,8 @@
 		</macro>
 		
 
-	<!--REM60 - Zyarth's Stand-->
-		<!--Zyarth's Dominion X-->
-		<macro name="ZoneG1_Cluster_REM60_Sector001_macro" class="zone">
+	<!--REM60 - ZYARTH'S STAND-->
+		<macro name="ZoneG1_Cluster_REM60_Sector001_macro" class="zone"><!--ZYARTH'S DOMINION X-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM60To406" ref="gates">
@@ -3634,8 +3496,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Zyarth's Fall-->
-		<macro name="ZoneG2_Cluster_REM60_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM60_Sector001_macro" class="zone"><!--ZYARTH'S FALL-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM60ToREM61" ref="gates">
@@ -3664,9 +3525,8 @@
 		</macro>
 		
 
-	<!--REM61 - Zyarth's Fall-->
-		<!--Zyarth's Dominion X-->
-		<macro name="ZoneG1_Cluster_REM61_Sector001_macro" class="zone">
+	<!--REM61 - ZYARTH'S FALL-->
+		<macro name="ZoneG1_Cluster_REM61_Sector001_macro" class="zone"><!--ZYARTH'S DOMINION X-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM61To406" ref="gates">
@@ -3678,8 +3538,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Zyarth's Stand-->
-		<macro name="ZoneG2_Cluster_REM61_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM61_Sector001_macro" class="zone"><!--ZYARTH'S STAND-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM61ToREM60" ref="gates">
@@ -3691,8 +3550,7 @@
 				</connection>
 			</connections>
 		</macro>	
-		<!--Elena's Fortune-->
-		<macro name="ZoneG3_Cluster_REM61_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM61_Sector001_macro" class="zone"><!--ELENA'S FORTUNE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM61ToREM62" ref="gates">
@@ -3721,9 +3579,8 @@
 		</macro>
 		
 
-	<!--REM62 - Elena's Fortune-->
-		<!--Zyarth's Fall-->
-		<macro name="ZoneG1_Cluster_REM62_Sector001_macro" class="zone">
+	<!--REM62 - ELENA'S FORTUNE-->
+		<macro name="ZoneG1_Cluster_REM62_Sector001_macro" class="zone"><!--ZYARTH'S FALL-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM62ToREM61" ref="gates">
@@ -3735,8 +3592,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Guiding Star VII-->
-		<macro name="ZoneG2_Cluster_REM62_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM62_Sector001_macro" class="zone"><!--GUIDING STAR VII-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM62To416" ref="gates">
@@ -3765,9 +3621,8 @@
 		</macro>
 		
 
-	<!--REM63 - Nyana's Hideout-->
-		<!--Guiding Star V-->
-		<macro name="ZoneG1_Cluster_REM63_Sector001_macro" class="zone">
+	<!--REM63 - NYANA'S HIDEOUT-->
+		<macro name="ZoneG1_Cluster_REM63_Sector001_macro" class="zone"><!--GUIDING STAR V-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM63To416" ref="gates">
@@ -3779,8 +3634,7 @@
 				</connection>
 			</connections>
 		</macro>		
-		<!--Interworlds-->
-		<macro name="ZoneG2_Cluster_REM63_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM63_Sector001_macro" class="zone"><!--INTERWORLDS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM63ToREM64" ref="gates">
@@ -3809,9 +3663,8 @@
 		</macro>
 		
 
-	<!--REM64 - Interworlds-->
-		<!--Nyana's Hideout-->
-		<macro name="ZoneG1_Cluster_REM64_Sector001_macro" class="zone">
+	<!--REM64 - INTERWORLDS-->
+		<macro name="ZoneG1_Cluster_REM64_Sector001_macro" class="zone"><!--NYANA'S HIDEOUT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM64ToREM63" ref="gates">
@@ -3823,8 +3676,7 @@
 				</connection>
 			</connections>
 		</macro>		
-		<!--Wasteland-->
-		<macro name="ZoneG2_Cluster_REM64_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM64_Sector001_macro" class="zone"><!--WASTELAND-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM64ToREM65" ref="gates">
@@ -3853,9 +3705,8 @@
 		</macro>
 		
 
-	<!--REM65 - Wastelands-->
-		<!--Two Grand-->
-		<macro name="ZoneG1_Cluster_REM65_Sector001_macro" class="zone">
+	<!--REM65 - WASTELANDS-->
+		<macro name="ZoneG1_Cluster_REM65_Sector001_macro" class="zone"><!--TWO GRAND-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM65To420" ref="gates">
@@ -3867,8 +3718,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Fires of Defeat-->
-		<macro name="ZoneG2_Cluster_REM65_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM65_Sector001_macro" class="zone"><!--FIRES OF DEFEAT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM65To421" ref="gates">
@@ -3880,8 +3730,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Interworlds-->
-		<macro name="ZoneG3_Cluster_REM65_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM65_Sector001_macro" class="zone"><!--INTERWORLDS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM65ToREM64" ref="gates">
@@ -3910,9 +3759,8 @@
 		</macro>
 		
 
-	<!--REM66 - Ghinn's Escape-->
-		<!--Thuruk's Demise-->
-		<macro name="ZoneG1_Cluster_REM66_Sector001_macro" class="zone">
+	<!--REM66 - GHINN'S ESCAPE-->
+		<macro name="ZoneG1_Cluster_REM66_Sector001_macro" class="zone"><!--THURUK'S DEMISE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM66To408" ref="gates">
@@ -3924,8 +3772,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<!--Inactive-->
-		<macro name="ZoneG2_Cluster_REM66_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM66_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM66To" ref="gates">
@@ -3937,8 +3784,7 @@
 				</connection>
 			</connections>
 		</macro>	
-		<!--Inactive-->
-		<macro name="ZoneG3_Cluster_REM66_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM66_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM66To" ref="gates">
@@ -3967,9 +3813,8 @@
 		</macro>
 		
 
-	<!--REM67 - Kha'ak Sector Alpha-->
-		<!--Unholy Descent-->
-		<macro name="ZoneG1_Cluster_REM67_Sector001_macro" class="zone">
+	<!--REM67 - KHA'AK SECTOR ALPHA-->
+		<macro name="ZoneG1_Cluster_REM67_Sector001_macro" class="zone"><!--UNHOLY DESCENT-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM67ToREM23" ref="gates">
@@ -3998,9 +3843,8 @@
 		</macro>	
 		
 
-	<!--REM68 - Kha'ak Sector Beta-->
-		<!--Sancturary of Darkness-->
-		<macro name="ZoneG1_Cluster_REM68_Sector001_macro" class="zone">
+	<!--REM68 - KHA'AK SECTOR BETA-->
+		<macro name="ZoneG1_Cluster_REM68_Sector001_macro" class="zone"><!--SANCTURARY OF DARKNESS-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM68To605" ref="gates">
@@ -4033,9 +3877,8 @@
 		</macro>	
 		
 
-	<!--REM69 - Kha'ak Sector Gamma-->
-		<!--Silent Witness XII-->
-		<macro name="ZoneG1_Cluster_REM69_Sector001_macro" class="zone">
+	<!--REM69 - KHA'AK SECTOR GAMMA-->
+		<macro name="ZoneG1_Cluster_REM69_Sector001_macro" class="zone"><!--SILENT WITNESS XII-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM69To045" ref="gates">
@@ -4064,7 +3907,7 @@
 		</macro>	
 		
 
-	<!--REM70 - Unknown Kha'ak Sector-->
+	<!--REM70 - UNKNOWN KHA'AK SECTOR-->
 		<macro name="Zone001_Cluster_REM70_Sector001_macro" class="zone"><!--NORTH-->
 			<component ref="standardzone" />
 		</macro>
@@ -4088,7 +3931,7 @@
 		</macro>	
 		
 
-	<!--REM71 - Unknown Sector-->
+	<!--REM71 - UNKNOWN SECTOR-->
 		<macro name="Zone001_Cluster_REM71_Sector001_macro" class="zone"><!--NORTH-->
 			<component ref="standardzone" />
 		</macro>
@@ -4112,7 +3955,7 @@
 		</macro>		
 		
 
-	<!--REM72 - Kha'ak Hive-->
+	<!--REM72 - KHA'AK HIVE-->
 		<macro name="Zone001_Cluster_REM72_Sector001_macro" class="zone"><!--NORTH-->
 			<component ref="standardzone" />
 		</macro>
