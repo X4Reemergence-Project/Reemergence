@@ -3299,7 +3299,13 @@
 						<position x="32725" y="500" z="-165050"/>
 					</offset>
 					<macro ref="ZoneG2_Cluster_REM53_Sector001_macro" connection="sector" />
-				</connection>				
+				</connection>
+				<connection name="ZoneG3_Cluster_REM53_Sector001_connection" ref="zones"><!--Shadow's End-->
+					<offset>
+						<position x="172725" y="0" z="115050"/>
+					</offset>
+					<macro ref="ZoneG3_Cluster_REM53_Sector001_macro" connection="sector" />
+				</connection>					
 				<connection name="Zone001_Cluster_REM53_Sector001_connection" ref="zones"><!--CENTER-->
 					<offset>	
 						<position x="0" y="0" z="0"/>	
@@ -4310,5 +4316,48 @@
 			<macro ref="Zone007_Cluster_REM72_Sector001_macro" connection="sector" />
 		    </connection>
 		  </connections>
-	    </macro>			
+	    </macro>
+
+		<!--Sector REM73 - Shadow's End-->
+		<macro name="Cluster_REM73_Sector001_macro" class="sector">
+			<component ref="standardsector" />
+			<connections>
+				<connection name="ZoneG1_Cluster_REM73_Sector001_connection" ref="zones"><!--Legend's Home Alpha-->
+					<offset>
+						<position x="-112700" y="500" z="-155035"/>
+					</offset>
+					<macro ref="ZoneG1_Cluster_REM73_Sector001_macro" connection="sector" />
+				</connection>			
+				<connection name="Zone001_Cluster_REM73_Sector001_connection" ref="zones"><!--CENTER-->
+					<offset>	
+						<position x="0" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone001_Cluster_REM73_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone002_Cluster_REM73_Sector001_connection" ref="zones"><!--NORTH-->	
+					<offset>	
+						<position x="0" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="Zone002_Cluster_REM73_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone003_Cluster_REM73_Sector001_connection" ref="zones"><!--EAST-->
+					<offset>	
+						<position x="75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone003_Cluster_REM73_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone004_Cluster_REM73_Sector001_connection" ref="zones"><!--SOUTH-->
+					<offset>	
+						<position x="0" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="Zone004_Cluster_REM73_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="Zone005_Cluster_REM73_Sector001_connection" ref="zones"><!--WEST-->	
+					<offset>	
+						<position x="-75000" y="0" z="0"/>	
+					</offset>	
+					<macro ref="Zone005_Cluster_REM73_Sector001_macro" connection="sector"/>	
+				</connection>
+			</connections>
+		</macro>		
 </macros>

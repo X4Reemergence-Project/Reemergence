@@ -1910,18 +1910,7 @@
 					<macro name="REM54_Sector001_Region001_macro">
 					<component connection="cluster" ref="standardregion" />
 					<properties>
-						<region ref="rem54_field1" />
-					</properties>
-					</macro>
-				</connection>
-				<connection name="REM54_Sector001_Region002_connection" ref="regions">
-					<offset>
-						<position x="0" y="-15000" z="0" />
-					</offset>
-					<macro name="REM54_Sector001_Region002_macro">
-					<component connection="cluster" ref="standardregion" />
-					<properties>
-						<region ref="rem54_field2" />
+						<region ref="rem54_field" />
 					</properties>
 					</macro>
 				</connection>				
@@ -2427,6 +2416,42 @@
 					<component connection="cluster" ref="standardregion" />
 					<properties>
 						<region ref="rem72_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+	<!--Sector REM73 - Shadow's End-->
+		<macro name="Cluster_REM73_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_rem73" />
+					</macro>
+				</connection>
+				<connection name="Cluster_REM73_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM73_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM73_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-40000" z="0" />
+					</offset>
+					<macro name="REM73_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="REM73_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM73_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="-15000" z="0" />
+					</offset>
+					<macro name="REM73_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem73_field2" />
 					</properties>
 					</macro>
 				</connection>				

@@ -1025,6 +1025,12 @@
 		<connection name="Cluster_REM72_connection" ref="clusters">
 			<offset><position x="165000000" y="0" z="-112580000" /></offset>
 			<macro ref="Cluster_REM72_macro" connection="galaxy" />
+		</connection>
+
+		<!--Sector REM73 - Shadow's End-->
+		<connection name="Cluster_REM73_connection" ref="clusters">
+			<offset><position x="60000000" y="0" z="-69280000" /></offset>
+			<macro ref="Cluster_REM73_macro" connection="galaxy" />
 		</connection>		
 	</add>
 
@@ -1621,6 +1627,10 @@
 	<!-- Legend's Home Alpha - Legend's Home Beta -->
 	<connection name="ClusterGateREM53ToREM54" ref="destination" path="../Cluster_REM53_connection/Cluster_REM53_Sector001_connection/ZoneG2_Cluster_REM53_Sector001_connection/connection_ClusterGateREM53ToREM54">
 		<macro connection="destination" path="../../../../../Cluster_REM54_connection/Cluster_REM54_Sector001_connection/ZoneG1_Cluster_REM54_Sector001_connection/connection_ClusterGateREM54ToREM53" />
+	</connection>
+	<!-- Legend's Home Alpha - Shadow's End -->
+	<connection name="ClusterGateREM53ToREM73" ref="destination" path="../Cluster_REM53_connection/Cluster_REM53_Sector001_connection/ZoneG3_Cluster_REM53_Sector001_connection/connection_ClusterGateREM53ToREM73">
+		<macro connection="destination" path="../../../../../Cluster_REM73_connection/Cluster_REM73_Sector001_connection/ZoneG1_Cluster_REM73_Sector001_connection/connection_ClusterGateREM73ToREM53" />
 	</connection>	
 	<!-- Akeela's Beacon - Aladna Hill -->
 	<connection name="ClusterGateREM55ToREM56" ref="destination" path="../Cluster_REM55_connection/Cluster_REM55_Sector001_connection/ZoneG2_Cluster_REM55_Sector001_connection/connection_ClusterGateREM55ToREM56">

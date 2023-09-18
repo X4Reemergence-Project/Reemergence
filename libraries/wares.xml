@@ -477,6 +477,12 @@
 	<add sel="/wares/ware[@id='missile_rgw']">
 		<owner faction="otas"/>	
 	</add>	
+  <add sel="/wares/ware[@id='spacefuel']">
+    <illegal factions="otas" />
+  </add>
+  <add sel="/wares/ware[@id='spaceweed']">
+    <illegal factions="otas" />
+  </add>  
 
 	<!--SHIPS-->
 	<add sel="/wares/ware[@id='ship_arg_xs_police_01_a']">
@@ -966,8 +972,8 @@
 	<replace sel="/wares/ware[@id='ship_otas_s_auster']/owner[@faction='argon']/@faction">otas</replace-->		
 	<replace sel="/wares/ware[@id='ship_otas_s_eurus']/owner[@faction='argon']/@faction">otas</replace>		
 	<replace sel="/wares/ware[@id='ship_otas_s_notus']/owner[@faction='argon']/@faction">otas</replace>	
-	<!--replace sel="/wares/ware[@id='ship_otas_s_solano']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_s_venti']/owner[@faction='argon']/@faction">otas</replace>		
+	<replace sel="/wares/ware[@id='ship_otas_s_solano']/owner[@faction='argon']/@faction">otas</replace>	
+	<!--replace sel="/wares/ware[@id='ship_otas_s_venti']/owner[@faction='argon']/@faction">otas</replace>		
 	<replace sel="/wares/ware[@id='ship_otas_xl_vesuvius']/owner[@faction='argon']/@faction">otas</replace>		
 	<replace sel="/wares/ware[@id='ship_otas_xl_genthus']/owner[@faction='argon']/@faction">otas</replace>	
 	<replace sel="/wares/ware[@id='ship_otas_xl_andaman']/owner[@faction='argon']/@faction">otas</replace-->	
@@ -1055,18 +1061,6 @@
 		  </production>
 		  <component ref="ship_otas_s_auster_temp_macro" amount="1"/>
 		  <restriction licence="militaryship"/>
-		  <owner faction="otas"/>
-		</ware>
-		<ware id="ship_otas_s_solano_temp" name="{96000,705}" description="{96000,805}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="103156" average="128945" max="154734" />
-		  <production time="8" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="52"/>
-			  <ware ware="hullparts" amount="107"/>
-			</primary>
-		  </production>
-		  <component ref="ship_otas_s_solano_temp_macro" amount="1"/>
-		  <restriction licence="generaluseship"/>
 		  <owner faction="otas"/>
 		</ware>
 		<ware id="ship_otas_s_venti_temp" name="{96000,708}" description="{96000,808}" group="ships_argon" transport="ship" volume="1" tags="ship">
