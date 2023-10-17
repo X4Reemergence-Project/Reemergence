@@ -120,7 +120,7 @@
 								<append_to_list name="$JobSectorsActivated" exact="event.object"/>
 								<debug_text text="'Activated Matrix472D Reclaimer.'"/>
 							</do_elseif>
-							<do_elseif value="(event.object == $PTNI_Headquarter) and (not $JobSectorsActivated.indexof.{event.object})">
+							<do_elseif value="(event.object == $PTNI_Headquarters) and (not $JobSectorsActivated.indexof.{event.object})">
 								<set_job_active job="'xenon_reclaimer_ptni_headquarters'" activate="true"/>
 								<append_to_list name="$JobSectorsActivated" exact="event.object"/>
 								<debug_text text="'Activated PTNI Headquarters Reclaimer.'"/>

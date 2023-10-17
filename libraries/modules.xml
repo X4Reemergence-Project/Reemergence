@@ -200,10 +200,17 @@
 		<module id="prod_otas_spacefuel" group="prod_arg_spacefuel">
 			<category ware="spacefuel" tags="[production, module]" race="otas" faction="[otas]"/>
 			<compatibilities>
-				<production ware="spacefuel" chance="80"/>
+				<production ware="spacefuel" chance="100"/>
 				<limits production="10"/>
 			</compatibilities>
 		</module>
+		<module id="prod_otas_stimulants" group="prod_otas_stimulants">
+			<category ware="stimulants" tags="[production, module]" race="otas" faction="[otas]"/>
+			<compatibilities>
+				<production ware="stimulants" chance="100"/>
+				<limits production="10"/>
+			</compatibilities>
+		</module>		
 		<module id="prod_otas_wheat" group="prod_arg_wheat">
 			<category ware="wheat" tags="[production, module]" race="otas" faction="[otas]"/>
 			<compatibilities>
@@ -247,6 +254,9 @@
 		<module id="conn_otas" group="conn_arg">
 			<category tags="[connection, module]" race="otas" faction="[otas]"/>
 		</module>
+		<module id="conn_otas" group="conn_otas">
+			<category tags="[connection, module]" race="otas" faction="[otas]"/>
+		</module>		
 		<!-- Welfare Modules -->
 		<module id="welfare_otas" group="welfare_gen">
 			<category tags="[welfare, module]" race="[otas]" faction="[otas]" />

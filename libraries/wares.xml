@@ -168,6 +168,9 @@
 	<add sel="/wares/ware[@id='module_gen_prod_engineparts_01']">
 		<owner faction="otas"/>
 	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_fieldcoils_01']">
+		<owner faction="otas"/>
+	</add>	
 	<add sel="/wares/ware[@id='module_gen_prod_graphene_01']">
 		<owner faction="otas"/>
 	</add>
@@ -201,9 +204,12 @@
 	<add sel="/wares/ware[@id='module_gen_prod_siliconwafers_01']">
 		<owner faction="otas"/>
 	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_spices_01']">
+	<add sel="/wares/ware[@id='module_gen_prod_smartchips_01']">
 		<owner faction="otas"/>
 	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_spices_01']">
+		<owner faction="otas"/>
+	</add>	
 	<add sel="/wares/ware[@id='module_gen_prod_superfluidcoolant_01']">
 		<owner faction="otas"/>
 	</add>
@@ -493,9 +499,10 @@
 		<owner faction="freesplit"/>
 		<owner faction="split"/>
 		<owner faction="ministry"/>		
-	</add>		
+	</add>	
 	<!--STATION MODULES-->
     <replace sel="/wares/ware[@id='struct_otas_cross_01']/owner[@faction='argon']/@faction">otas</replace>
+    <replace sel="/wares/ware[@id='module_otas_prod_stimulants_01']/owner[@faction='argon']/@faction">otas</replace>	
 	<!--TURRETS-->
 	<replace sel="/wares/ware[@id='turret_otas_l_hammer']/owner[@faction='argon']/@faction">otas</replace>	
 	<replace sel="/wares/ware[@id='missile_otas_l_hammer']/owner[@faction='argon']/@faction">otas</replace>	
@@ -509,7 +516,7 @@
 	<!--ENGINES-->
 	<add sel="//wares">		
 		<!--L-->
-		<ware id="engine_otas_l_allround_01_mk1" name="{96000,600}" description="{96000,6001}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_l_allround_01_mk1" name="{19530002,600}" description="{19530002,6001}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="321518" average="357242" max="392966" />
 			<production time="20" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -523,7 +530,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="engine_otas_l_travel_01_mk1" name="{96000,601}" description="{96000,6011}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_l_travel_01_mk1" name="{19530002,601}" description="{19530002,6011}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="337593" average="375104" max="412614" />
 			<production time="20" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -538,7 +545,7 @@
 			<owner faction="otas"/>
 		</ware>
 		<!--M-->
-		<ware id="engine_otas_m_allround_01_mk1" name="{96000,602}" description="{96000,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_m_allround_01_mk1" name="{19530002,602}" description="{19530002,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="11767" average="13074" max="14382" />
 			<production time="15" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -552,7 +559,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="engine_otas_m_allround_01_mk2" name="{96000,603}" description="{96000,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_m_allround_01_mk2" name="{19530002,603}" description="{19530002,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="58166" average="64629" max="71092" />
 			<production time="15" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -566,7 +573,7 @@
 			<use threshold="0.4"/>
 			<owner faction="otas"/>
 		</ware>		
-		<ware id="engine_otas_m_allround_01_mk3" name="{96000,604}" description="{96000,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_m_allround_01_mk3" name="{19530002,604}" description="{19530002,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="287722" average="319691" max="351660" />
 			<production time="15" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -580,7 +587,7 @@
 			<use threshold="0.7"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="engine_otas_m_combat_01_mk1" name="{96000,605}" description="{96000,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_m_combat_01_mk1" name="{19530002,605}" description="{19530002,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="14357" average="15952" max="17547" />
 			<production time="15" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -594,7 +601,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="engine_otas_m_combat_01_mk2" name="{96000,606}" description="{96000,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_m_combat_01_mk2" name="{19530002,606}" description="{19530002,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="69711" average="77457" max="85202" />
 			<production time="15" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -608,7 +615,7 @@
 			<use threshold="0.4"/>
 			<owner faction="otas"/>
 		</ware>		
-		<ware id="engine_otas_m_combat_01_mk3" name="{96000,607}" description="{96000,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_m_combat_01_mk3" name="{19530002,607}" description="{19530002,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="345444" average="383827" max="422209" />
 			<production time="15" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -622,7 +629,7 @@
 			<use threshold="0.7"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="engine_otas_m_travel_01_mk1" name="{96000,608}" description="{96000,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_m_travel_01_mk1" name="{19530002,608}" description="{19530002,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="13062" average="14513" max="15964" />
 			<production time="15" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -636,7 +643,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="engine_otas_m_travel_01_mk2" name="{96000,609}" description="{96000,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_m_travel_01_mk2" name="{19530002,609}" description="{19530002,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="65234" average="72482" max="79730" />
 			<production time="15" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -650,7 +657,7 @@
 			<use threshold="0.4"/>
 			<owner faction="otas"/>
 		</ware>		
-		<ware id="engine_otas_m_travel_01_mk3" name="{96000,610}" description="{96000,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_m_travel_01_mk3" name="{19530002,610}" description="{19530002,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="331013" average="367793" max="404572" />
 			<production time="15" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -665,7 +672,7 @@
 			<owner faction="otas"/>
 		</ware>		
 		<!--S-->
-		<ware id="engine_otas_s_allround_01_mk1" name="{96000,611}" description="{96000,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_s_allround_01_mk1" name="{19530002,611}" description="{19530002,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="5526" average="6140" max="6754" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -678,7 +685,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>	
-		<ware id="engine_otas_s_allround_01_mk2" name="{96000,612}" description="{96000,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_s_allround_01_mk2" name="{19530002,612}" description="{19530002,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="26370" average="29300" max="32230" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -692,7 +699,7 @@
 			<use threshold="0.4"/>
 			<owner faction="otas"/>
 		</ware>	
-		<ware id="engine_otas_s_allround_01_mk3" name="{96000,613}" description="{96000,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_s_allround_01_mk3" name="{19530002,613}" description="{19530002,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="123301" average="137001" max="150701" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -706,7 +713,7 @@
 			<use threshold="0.7"/>
 			<owner faction="otas"/>
 		</ware>	
-		<ware id="engine_otas_s_combat_01_mk1" name="{96000,614}" description="{96000,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_s_combat_01_mk1" name="{19530002,614}" description="{19530002,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="8116" average="9017" max="9919" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -719,7 +726,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>	
-		<ware id="engine_otas_s_combat_01_mk2" name="{96000,615}" description="{96000,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_s_combat_01_mk2" name="{19530002,615}" description="{19530002,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="40504" average="45005" max="49505" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -733,7 +740,7 @@
 			<use threshold="0.4"/>
 			<owner faction="otas"/>
 		</ware>	
-		<ware id="engine_otas_s_combat_01_mk3" name="{96000,616}" description="{96000,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_s_combat_01_mk3" name="{19530002,616}" description="{19530002,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="181023" average="201137" max="221250" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -747,7 +754,7 @@
 			<use threshold="0.7"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="engine_otas_s_travel_01_mk1" name="{96000,617}" description="{96000,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_s_travel_01_mk1" name="{19530002,617}" description="{19530002,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="6821" average="7579" max="8336" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -760,7 +767,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>	
-		<ware id="engine_otas_s_travel_01_mk2" name="{96000,618}" description="{96000,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_s_travel_01_mk2" name="{19530002,618}" description="{19530002,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="34732" average="38591" max="42450" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -774,7 +781,7 @@
 			<use threshold="0.4"/>
 			<owner faction="otas"/>
 		</ware>	
-		<ware id="engine_otas_s_travel_01_mk3" name="{96000,619}" description="{96000,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_s_travel_01_mk3" name="{19530002,619}" description="{19530002,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="166592" average="185103" max="203613" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -789,7 +796,7 @@
 			<owner faction="otas"/>
 		</ware>			
 		<!--XL-->
-		<ware id="engine_otas_xl_allround_01_mk1" name="{96000,620}" description="{96000,6201}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_xl_allround_01_mk1" name="{19530002,620}" description="{19530002,6201}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="424061" average="471179" max="518297" />
 			<production time="30" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -803,7 +810,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="engine_otas_xl_travel_01_mk1" name="{96000,621}" description="{96000,6211}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+		<ware id="engine_otas_xl_travel_01_mk1" name="{19530002,621}" description="{19530002,6211}" group="engines" transport="equipment" volume="1" tags="engine equipment">
 			<price min="445263" average="494737" max="544210" />
 			<production time="30" amount="1" method="default" name="{20206,101}">
 			  <primary>
@@ -820,7 +827,7 @@
 	</add>	
 	<!--SHIELDS-->
 	<add sel="//wares">
-		<ware id="shield_otas_l_standard_01_mk1" name="{96000,500}" description="{96000,500}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_l_standard_01_mk1" name="{19530002,500}" description="{19530002,500}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="42166" average="46851" max="51536"/>
 			<production time="20" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -834,7 +841,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="shield_otas_l_standard_01_mk2" name="{96000,501}" description="{20106,3042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_l_standard_01_mk2" name="{19530002,501}" description="{20106,3042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="205644" average="228494" max="251343"/>
 			<production time="20" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -848,7 +855,7 @@
 			<use threshold="0.25"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="shield_otas_m_standard_01_mk1" name="{96000,502}" description="{20106,2002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_m_standard_01_mk1" name="{19530002,502}" description="{20106,2002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="12838" average="14264" max="15691"/>
 			<production time="10" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -862,7 +869,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="shield_otas_m_standard_01_mk2" name="{96000,503}" description="{20106,2042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_m_standard_01_mk2" name="{19530002,503}" description="{20106,2042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="62115" average="69017" max="75918"/>
 			<production time="10" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -876,7 +883,7 @@
 			<use threshold="0.25"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="shield_otas_m_standard_02_mk1" name="{96000,502}" description="{20106,2002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_m_standard_02_mk1" name="{19530002,502}" description="{20106,2002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="12838" average="14264" max="15691"/>
 			<production time="10" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -890,7 +897,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="shield_otas_m_standard_02_mk2" name="{96000,503}" description="{20106,2042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_m_standard_02_mk2" name="{19530002,503}" description="{20106,2042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="61597" average="68441" max="75285"/>
 			<production time="10" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -904,7 +911,7 @@
 			<use threshold="0.25"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="shield_otas_s_standard_01_mk1" name="{96000,504}" description="{20106,1002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_s_standard_01_mk1" name="{19530002,504}" description="{20106,1002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="1218" average="1354" max="1489"/>
 			<production time="10" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -917,7 +924,7 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="shield_otas_s_standard_01_mk2" name="{96000,505}" description="{20106,1042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_s_standard_01_mk2" name="{19530002,505}" description="{20106,1042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="10186" average="11318" max="12449"/>
 			<production time="10" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -931,7 +938,7 @@
 			<use threshold="0.25"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="shield_otas_s_standard_01_mk3" name="{96000,506}" description="{20106,1082}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_s_standard_01_mk3" name="{19530002,506}" description="{20106,1082}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="49892" average="55436" max="60979"/>
 			<production time="10" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -945,7 +952,7 @@
 			<use threshold="0.55"/>
 			<owner faction="otas"/>
 		</ware>
-		<ware id="shield_otas_xl_standard_01_mk1" name="{96000,507}" description="{20106,4002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<ware id="shield_otas_xl_standard_01_mk1" name="{19530002,507}" description="{20106,4002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
 			<price min="225671" average="250745" max="275820"/>
 			<production time="20" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -979,7 +986,7 @@
 	<replace sel="/wares/ware[@id='ship_otas_xl_andaman']/owner[@faction='argon']/@faction">otas</replace-->	
 	<!--SHIPS-->  
 	<add sel="//wares">
-		<ware id="ship_otas_l_aquilo_temp" name="{96000,702}" description="{96000,802}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_l_aquilo_temp" name="{19530002,702}" description="{19530002,802}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="10198750" average="11983531" max="13768312" />
 		  <production time="260" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -991,7 +998,7 @@
 		  <restriction licence="capitalship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_l_astraeus_temp" name="{96000,710}" description="{96000,810}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_l_astraeus_temp" name="{19530002,710}" description="{19530002,810}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="9675000" average="11368125" max="13061250" />
 		  <production time="260" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1003,7 +1010,7 @@
 		  <restriction licence="capitalship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_l_mistral_temp" name="{96000,711}" description="{96000,811}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_l_mistral_temp" name="{19530002,711}" description="{19530002,811}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="4614858" average="5422456" max="6230058" />
 		  <production time="350" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1015,7 +1022,7 @@
 		  <restriction licence="generaluseship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_l_zephyrus_temp" name="{96000,709}" description="{96000,809}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_l_zephyrus_temp" name="{19530002,709}" description="{19530002,809}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="5075000" average="5963125" max="6851250" />
 		  <production time="430" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1027,7 +1034,7 @@
 		  <restriction licence="capitalship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_m_skiron_temp" name="{96000,703}" description="{96000,803}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_m_skiron_temp" name="{19530002,703}" description="{19530002,803}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="839862" average="1049827" max="1259792" />
 		  <production time="32" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1039,7 +1046,7 @@
 		  <restriction licence="militaryship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_m_sirokos_temp" name="{96000,704}" description="{96000,804}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_m_sirokos_temp" name="{19530002,704}" description="{19530002,804}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="1074160" average="1342700" max="1611240" />
 		  <production time="41" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1051,7 +1058,7 @@
 		  <restriction licence="militaryship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_s_auster_temp" name="{96000,701}" description="{96000,801}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_s_auster_temp" name="{19530002,701}" description="{19530002,801}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="222104" average="333156" max="277630" />
 		  <production time="17" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1063,7 +1070,7 @@
 		  <restriction licence="militaryship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_s_venti_temp" name="{96000,708}" description="{96000,808}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_s_venti_temp" name="{19530002,708}" description="{19530002,808}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="196532" average="245665" max="294798" />
 		  <production time="14" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1075,7 +1082,7 @@
 		  <restriction licence="militaryship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_xl_vesuvius_temp" name="{20101,200401}" description="{96000,813}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_xl_vesuvius_temp" name="{20101,200401}" description="{19530002,813}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="9306200" average="10948470" max="12590741" />
 		  <production time="527" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1087,7 +1094,7 @@
 		  <restriction licence="generaluseship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_xl_genthus_temp" name="{20101,81401}" description="{96000,814}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_xl_genthus_temp" name="{20101,81401}" description="{19530002,814}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="7310438" average="8600515" max="9890592" />
 		  <production time="527" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1099,7 +1106,7 @@
 		  <restriction licence="militaryship"/>
 		  <owner faction="otas"/>
 		</ware>
-		<ware id="ship_otas_xl_andaman_temp" name="{20101,81901}" description="{96000,815}" group="ships_argon" transport="ship" volume="1" tags="ship">
+		<ware id="ship_otas_xl_andaman_temp" name="{20101,81901}" description="{19530002,815}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="16038308" average="18650950" max="21263593" />
 		  <production time="583" amount="1" method="default" name="{20206,101}">
 			<primary>
@@ -1114,7 +1121,7 @@
 	</add> 
 	<!--STALWARTS-->
 	<add sel="//wares">	
-	  <ware id="ship_otas_l_magnetar_mineral_stalwart" name="{96000,716}" description="{20101,11113}" transport="ship" volume="1" tags="ship">
+	  <ware id="ship_otas_l_magnetar_mineral_stalwart" name="{19530002,716}" description="{20101,11113}" transport="ship" volume="1" tags="ship">
 		<price min="1348181" average="1586095" max="1824009" />
 		<production time="101" amount="1" method="default" name="{20206,101}">
 		  <primary>
@@ -1126,7 +1133,7 @@
 		<restriction licence="generaluseship" />
 		<owner faction="otas" />
 	  </ware>	
-	  <ware id="ship_otas_l_magnetar_gas_stalwart" name="{96000,717}" description="{20101,11114}" transport="ship" volume="1" tags="ship">
+	  <ware id="ship_otas_l_magnetar_gas_stalwart" name="{19530002,717}" description="{20101,11114}" transport="ship" volume="1" tags="ship">
 		<price min="1111460" average="1307600" max="1503740" />
 		<production time="83" amount="1" method="default" name="{20206,101}">
 		  <primary>
@@ -1138,7 +1145,7 @@
 		<restriction licence="generaluseship" />
 		<owner faction="otas" />
 	  </ware>
-	  <ware id="ship_otas_m_drill_stalwart" name="{96000,718}" description="{20101,10813}" transport="ship" volume="1" tags="ship">
+	  <ware id="ship_otas_m_drill_stalwart" name="{19530002,718}" description="{20101,10813}" transport="ship" volume="1" tags="ship">
 		<price min="132528" average="155915" max="179302" />
 		<production time="15" amount="1" method="default" name="{20206,101}">
 		  <primary>
@@ -1150,7 +1157,7 @@
 		<restriction licence="generaluseship" />
 		<owner faction="otas" />
 	  </ware>
-	  <ware id="ship_otas_m_sunder_stalwart" name="{96000,719}" description="{20101,10913}" transport="ship" volume="1" tags="ship">
+	  <ware id="ship_otas_m_sunder_stalwart" name="{19530002,719}" description="{20101,10913}" transport="ship" volume="1" tags="ship">
 		<price min="137173" average="161380" max="185587" />
 		<production time="15" amount="1" method="default" name="{20206,101}">
 		  <primary>
@@ -1162,7 +1169,7 @@
 		<restriction licence="generaluseship" />
 		<owner faction="otas" />
 	  </ware>
-	  <ware id="ship_otas_m_mercury_stalwart" name="{96000,720}" description="{20101,10713}" transport="ship" volume="1" tags="ship">
+	  <ware id="ship_otas_m_mercury_stalwart" name="{19530002,720}" description="{20101,10713}" transport="ship" volume="1" tags="ship">
 		<price min="177000" average="208235" max="239470" />
 		<production time="20" amount="1" method="default" name="{20206,101}">
 		  <primary>
@@ -1174,7 +1181,7 @@
 		<restriction licence="generaluseship" />
 		<owner faction="otas" />
 	  </ware>	  
-	  <ware id="ship_otas_m_ides_stalwart" name="{96000,721}" description="{20101,11713}" transport="ship" volume="1" tags="ship">
+	  <ware id="ship_otas_m_ides_stalwart" name="{19530002,721}" description="{20101,11713}" transport="ship" volume="1" tags="ship">
 		<price min="177000" average="208235" max="239470" />
 		<production time="20" amount="1" method="default" name="{20206,101}">
 		  <primary>
@@ -1186,7 +1193,7 @@
 		<restriction licence="generaluseship" />
 		<owner faction="otas" />
 	  </ware>
-	  <ware id="ship_otas_s_courier_miner_stalwart" name="{96000,722}" description="{20101,11614}" transport="ship" volume="1" tags="ship">
+	  <ware id="ship_otas_s_courier_miner_stalwart" name="{19530002,722}" description="{20101,11614}" transport="ship" volume="1" tags="ship">
 		<price min="70775" average="83265" max="95755" />
 		<production time="6" amount="1" method="default" name="{20206,101}">
 		  <primary>
@@ -1198,7 +1205,7 @@
 		<restriction licence="generaluseship" />
 		<owner faction="otas" />
 	  </ware>
-	  <ware id="ship_otas_s_courier_stalwart" name="{96000,723}" description="{20101,11613}" transport="ship" volume="1" tags="ship">
+	  <ware id="ship_otas_s_courier_stalwart" name="{19530002,723}" description="{20101,11613}" transport="ship" volume="1" tags="ship">
 		<price min="158083" average="185980" max="213877" />
 		<production time="14" amount="1" method="default" name="{20206,101}">
 		  <primary>
@@ -1210,7 +1217,7 @@
 		<restriction licence="generaluseship" />
 		<owner faction="otas" />
 	  </ware>
-	  <ware id="ship_otas_s_callisto_stalwart" name="{96000,724}" description="{20101,12913}" transport="ship" volume="1" tags="ship">
+	  <ware id="ship_otas_s_callisto_stalwart" name="{19530002,724}" description="{20101,12913}" transport="ship" volume="1" tags="ship">
 		<price min="83687" average="98455" max="113223" />
 		<production time="8" amount="1" method="default" name="{20206,101}">
 		  <primary>
@@ -1227,7 +1234,20 @@
 <!--New Xenon War Assets-->
 	 <add sel="//wares">
 	<!--SHIPS-->
-		<ware id="ship_xen_m_fighter_y" name="{20403,25}" description="{48001,1}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
+		<ware id="ship_xen_xl_reclaimer" name="{48003,6}" description="{19530004,7}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
+		  <price min="4300932" average="5059920" max="5818908" />
+		  <production time="1550" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
+		    <primary>
+			  <ware ware="energycells" amount="8075" />
+			  <ware ware="ore" amount="7250" />
+			  <ware ware="silicon" amount="6250" />
+			</primary>
+		  </production>
+		  <component ref="ship_xen_xl_reclaimer_macro" />
+		  <restriction licence="capitalship" />
+		  <owner faction="xenon" />
+		</ware>		
+		<ware id="ship_xen_m_fighter_y" name="{20403,25}" description="{19530004,1}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
 		  <price min="86827" average="98620" max="110413" />
 		  <production time="25" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
 		    <primary>
@@ -1240,7 +1260,7 @@
 		  <restriction licence="militaryship" />
 		  <owner faction="xenon" />
 		</ware>	
-		<ware id="ship_xen_m_fighter_d" name="{20403,4}" description="{48001,4}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
+		<ware id="ship_xen_m_fighter_d" name="{20403,4}" description="{19530004,4}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
 		  <price min="96827" average="108620" max="120413" />
 		  <production time="31" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
 			<primary>
@@ -1254,7 +1274,7 @@
 		  <owner faction="xenon" />
 		</ware>	
 	<!--WEAPONS-->
-		<ware id="weapon_xen_m_plasmabomb" name="{48003,1}" description="{48003,2}" group="weapons" transport="equipment" volume="1" tags="equipment weapon"> <!-- tags="noplayerblueprint ship" -->
+		<ware id="weapon_xen_m_plasmabomb" name="{19530006,1}" description="{19530006,2}" group="weapons" transport="equipment" volume="1" tags="equipment weapon"> <!-- tags="noplayerblueprint ship" -->
 		  <price min="1578" average="1664" max="1750" />
 		  <production time="6" amount="1" method="default" name="{20206,101}"> <!--  tags="noplayerbuild" -->
 			<primary>
@@ -1264,11 +1284,22 @@
 		  </production>
 		  <component ref="weapon_xen_m_plasmabomb_macro" amount="1" />
 		  <restriction licence="generaluseequipment" />
-		  <use threshold="0" factions="xenon" />
+		  <use threshold="0" />
 		  <owner faction="xenon" />
 		</ware>		  	  
 	<!--iSHIELDS-->	
-		<ware id="ishield_xen_m_fighter_y" name="{48001,2}" description="{48001,2}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
+		<ware id="ishield_xen_xl_reclaimer" name="{19530004,8}" description="{19530004,8}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
+		  <price min="1" average="1" max="1" />
+		  <production time="1" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
+			<primary>
+			  <ware ware="energycells" amount="1" />
+			</primary>
+		  </production>	  
+		  <component ref="ishield_xen_xl_reclaimer_macro" amount="1" />
+		  <use threshold="0" />
+		  <restriction licence="generaluseequipment" />
+		</ware>		
+		<ware id="ishield_xen_m_fighter_y" name="{19530004,2}" description="{19530004,2}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
 		  <price min="1" average="1" max="1" />
 		  <production time="1" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
 			<primary>
@@ -1279,7 +1310,7 @@
 		  <use threshold="0" />
 		  <restriction licence="generaluseequipment" />
 		</ware>	
-		<ware id="ishield_xen_m_fighter_d" name="{48001,5}" description="{48001,5}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
+		<ware id="ishield_xen_m_fighter_d" name="{19530004,5}" description="{19530004,5}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
 		  <price min="1" average="1" max="1" />
 		  <production time="1" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
 			<primary>

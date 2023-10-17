@@ -43,8 +43,8 @@
       <asteroid groupref="asteroid_ore_xs" densityfactor="0.04" rotation="360" rotationvariation="32" noisescale="1500" seed="8888" minnoisevalue="0.65" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="ore" yield="low" />
-      <resource ware="hydrogen" yield="medium" />
+      <resource ware="ore" yield="medium" />
+      <resource ware="hydrogen" yield="high" />
     </resources>
   </region>
   <region name="rem02_field2" density="0.6" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
@@ -87,7 +87,7 @@
       <asteroid groupref="asteroid_ore_xs" densityfactor="0.04" rotation="360" rotationvariation="32" noisescale="1500" seed="8888" minnoisevalue="0.65" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="ore" yield="low" />
+      <resource ware="ore" yield="high" />
       <resource ware="methane" yield="medium" />
     </resources>
   </region>
@@ -135,7 +135,7 @@
       <asteroid groupref="asteroid_silicon_nores_s" densityfactor="0.1" rotation="360" rotationvariation="16" noisescale="1500" seed="8888" minnoisevalue="0.5" maxnoisevalue="1"/>	  
     </fields>
     <resources>
-      <resource ware="silicon" yield="medium" />
+      <resource ware="silicon" yield="high" />
     </resources>
   </region>
 <!--REM04 Althes-->
@@ -184,7 +184,7 @@
       <debris groupref="debris_s" densityfactor="0.1" rotation="10" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="rawscrap" yield="low" />
+      <resource ware="rawscrap" yield="medium" />
     </resources>
   </region>
 <!--REM05 Megnir-->
@@ -302,7 +302,7 @@
       <asteroid groupref="asteroid_ice_xs" densityfactor="1" rotation="0" rotationvariation="64" noisescale="5000" seed="26041984" minnoisevalue="0.65" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="ice" yield="lowest" />
+      <resource ware="ice" yield="low" />
       <resource ware="rawscrap" yield="medium" />
     </resources>
   </region>
@@ -737,8 +737,8 @@
       <asteroid groupref="asteroid_nividium_l" densityfactor="0.01" rotation="360" rotationvariation="4" noisescale="15000" seed="42" minnoisevalue="0.5" maxnoisevalue="0.8"/>
     </fields>
     <resources>
-      <resource ware="ore" yield="verylow" />
-      <resource ware="silicon" yield="verylow" />
+      <resource ware="ore" yield="low" />
+      <resource ware="silicon" yield="low" />
       <resource ware="nividium" yield="veryhigh" />
       <resource ware="helium" yield="medium" />
     </resources>
@@ -1034,9 +1034,9 @@
       <asteroid groupref="asteroid_silicon_xl" densityfactor="0.005" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="ore" yield="lowest"/>
-      <resource ware="silicon" yield="lowest" />
-      <resource ware="ice" yield="verylow" />
+      <resource ware="ore" yield="verylow"/>
+      <resource ware="silicon" yield="verylow" />
+      <resource ware="ice" yield="low" />
     </resources>
   </region>  
 <!--REM31 The Shallows-->
@@ -1133,7 +1133,6 @@
       </radial>
     </falloff>
     <fields>
-      <gravidar factor="0.0" noisescale="50000" seed="42" minnoisevalue="0.70" maxnoisevalue="0.80"/>
       <nebula ref="fogpattern_v2_macro" localred="161" localgreen="194" localblue="226" localdensity="0.05" uniformred="10" uniformgreen="14" uniformblue="20" uniformdensity="0.3" backgroundfog="false" resources="helium" />
 
       <volumetricfog multiplier="1.0" medium="fog_red" texture="assets/textures/environments/volumefog/vf_structured_01_diff" lodrule="nebulafar" size="24000" sizevariation="0.95" densityfactor="0.10" rotation="0" rotationvariation="0.50" noisescale="50000" seed="42" minnoisevalue="0.70" maxnoisevalue="0.80" distancefactor="0.40"/>
@@ -1146,8 +1145,8 @@
       <asteroid groupref="asteroid_ore_nores_m" densityfactor="1.5" rotation="360" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>	  
     </fields>
     <resources>
-      <resource ware="ore" yield="low" />
-      <resource ware="helium" yield="medium" />
+      <resource ware="ore" yield="medlow" />
+      <resource ware="helium" yield="high" />
     </resources>
   </region>    
 <!--REM33 Thyn's Abyss-->
@@ -1224,7 +1223,7 @@
       <volumetricfog multiplier="0.082" medium="fog_grey_emissive2" texture="assets/textures/environments/fog_patterncloud_03" lodrule="nebulafar" size="44000" sizevariation="0.15" densityfactor="0.1" rotation="0" rotationvariation="0.50" noisescale="50000" seed="42" minnoisevalue="0.2" maxnoisevalue="0.40" distancefactor="1.0"/>
     </fields>
     <resources>
-      <resource ware="hydrogen" yield="low" />
+      <resource ware="hydrogen" yield="medium" />
     </resources>
   </region>
   <region name="rem34_field2" density="1.25" rotation="0" noisescale="10000" seed="62" minnoisevalue="0.15" maxnoisevalue="1">
@@ -1269,7 +1268,7 @@
       <asteroid groupref="asteroid_silicon_m" densityfactor="0.75" rotation="360" rotationvariation="8" noisescale="25000" seed="30041982" minnoisevalue="0.75" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="silicon" yield="lowest" />
+      <resource ware="silicon" yield="medium" />
     </resources>
   </region>  
 <!--REM35 Hila's Joy-->
@@ -1359,7 +1358,7 @@
       <volumetricfog multiplier="0.9" medium="fog_turquoise" texture="assets/textures/environments/fog_patterncloud_08" lodrule="nebulafar" size="60000" sizevariation="0.632" densityfactor="0.001" rotation="0" rotationvariation="0.05" noisescale="50000" seed="2804" minnoisevalue="0.30" maxnoisevalue="1.0" distancefactor="0.50"/>
     </fields>
     <resources>
-      <resource ware="hydrogen" yield="low" />
+      <resource ware="hydrogen" yield="medium" />
     </resources>
   </region>
   <region name="rem37_field2" density="1" rotation="0" noisescale="15000" seed="42" minnoisevalue="0.15" maxnoisevalue="1">
@@ -1385,7 +1384,7 @@
       <volumetricfog multiplier="0.9" medium="fog_turquoise" texture="assets/textures/environments/fog_patterncloud_08" lodrule="nebulafar" size="60000" sizevariation="0.632" densityfactor="0.001" rotation="0" rotationvariation="0.05" noisescale="50000" seed="2804" minnoisevalue="0.30" maxnoisevalue="1.0" distancefactor="0.50"/>
     </fields>
     <resources>
-      <resource ware="helium" yield="low" />
+      <resource ware="helium" yield="medium" />
     </resources>
   </region>  
   <region name="rem37_field3" density="0.05" rotation="0" noisescale="15000" seed="42" minnoisevalue="0.15" maxnoisevalue="1">
@@ -1410,7 +1409,7 @@
       <asteroid groupref="asteroid_ore_nores_m" lodrule="asteroidxl" densityfactor="0.015" rotation="360" rotationvariation="8" noisescale="15000" seed="42" minnoisevalue="0.6" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="ore" yield="lowest" />
+      <resource ware="ore" yield="low" />
     </resources>
   </region>  
 <!--REM38 Queen's Space-->
@@ -1444,7 +1443,6 @@
       </radial>
     </falloff>
     <fields>
-      <gravidar factor="0.33" noisescale="15000" seed="3214" minnoisevalue="0.6" maxnoisevalue="1.0"/>
       <!--Lockboxes-->
       <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1"/>
       <!--Lockboxes end-->
@@ -1992,7 +1990,6 @@
     <falloff>
     </falloff>
     <fields>
-      <gravidar factor="0.0" noisescale="5000" seed="42" minnoisevalue="0.4" maxnoisevalue="1.0"/>
       <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1"/>
   
       <asteroid groupref="asteroid_ore_xxl" lodrule="asteroidxl" densityfactor="0.08" rotation="360" rotationvariation="4" noisescale="5000" seed="42" minnoisevalue="0.7" maxnoisevalue="0.8"/>

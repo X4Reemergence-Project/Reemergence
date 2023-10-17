@@ -227,18 +227,7 @@
 	  <station>
 		<select faction="hatikvah" tags="[defence]" />
 	  </station>
-	</station>	
-	 <station id="piratebase_scaleplate_cluster_39" race="teladi" owner="scaleplate" type="piratebase">
-	  <quotas>
-		<quota galaxy="1" />
-	  </quotas>
-	  <location class="sector" macro="cluster_39_sector001_macro" solitary="true" matchextension="false" >	  
-		<corerange min="1.2" max="1.4"/>
-	  </location>
-	  <station>
-		<select faction="scaleplate" tags="[piratebase]" />
-	  </station>
-	</station>	
+	 </station>	
 <!--REM00 Oort Cloud Beta-->	
 <!--REM01 Matrix #01-->
 	<station id="xen_defence_cluster_REM01_sector001" race="xenon" owner="xenon" type="defence">
@@ -815,8 +804,8 @@
 		</loadout>
 	  </station>
 	</station>	
-<!--REM32 Family Rhak Cluster-->
-	<station id="split_shipyard_cluster_REM32_001" race="split" owner="split" type="factory">
+<!--REM32 Family Than Cluster-->
+	<station id="split_shipyard_cluster_REM32_001" race="split" owner="freesplit" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
 	  </quotas>
@@ -829,7 +818,7 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="split_wharf_cluster_REM32_001" race="split" owner="split" type="factory">
+	<station id="split_wharf_cluster_REM32_001" race="split" owner="freesplit" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
 	  </quotas>
@@ -842,7 +831,7 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="spl_defence_cluster_REM32_002" race="split" owner="split" type="factory">
+	<station id="spl_defence_cluster_REM32_002" race="split" owner="freesplit" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="2" />
 	  </quotas>
@@ -855,7 +844,7 @@
 	</station>	
 <!--REM33 Thyn's Abyss-->
 <!--REM34 Thyn's Excavation-->
-	<station id="spl_defence_cluster_REM34_001" race="split" owner="split" type="factory">
+	<station id="spl_defence_cluster_REM34_001" race="split" owner="freesplit" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
 	  </quotas>
@@ -1082,7 +1071,7 @@
 <!--REM46 Recovered Capital-->
 	<station id="tel_defence_cluster_REM46_sector001" race="teladi" owner="teladi" type="factory">
 	  <quotas>
-		<quota galaxy="2" zone="1" />
+		<quota galaxy="1" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM46_sector001_macro" />
 	  <station>
@@ -1149,13 +1138,13 @@
 	  </station>
 	</station>	
 <!--REM51 LooMankStrat's Legacy-->
-<!--REM52 Danna's Chance-->
+<!--REM52 Danna's Chance-->	
 <!--REM53 Legend's Home Alpha-->
 	<station id="otas_defenceG1_cluster_REM53_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="zoneG1_cluster_REM53_sector001_macro" matchextension="false"/>
+	  <location class="zone" macro="zoneG1_cluster_REM53_sector001_macro" />
 	  <position  x="-5500" y="0" z="-18000" yaw="0" roll="0" pitch="0"/>			
 	  <station>
 		<select faction="otas" tags="[defence]"/>
@@ -1165,7 +1154,7 @@
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="zone001_cluster_REM53_sector001_macro" matchextension="false"/>
+	  <location class="zone" macro="zone001_cluster_REM53_sector001_macro" />
 	  <station>
 		<select faction="otas" tags="[defence]"/>
 	  </station>
@@ -1174,7 +1163,7 @@
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="zoneSP_cluster_REM53_sector001_macro" matchextension="false"/>
+	  <location class="zone" macro="zoneSP_cluster_REM53_sector001_macro" />
 	  <station>
 		<select faction="otas" tags="[shipyard]"/>
 		<loadout>
@@ -1186,7 +1175,7 @@
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="ZoneWF_Cluster_REM53_sector001_macro" matchextension="false"/>
+	  <location class="zone" macro="ZoneWF_Cluster_REM53_sector001_macro" />
 	  <station>
 		<select faction="otas" tags="[wharf]"/>
 		<loadout>
@@ -1198,7 +1187,7 @@
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="zoneTD_cluster_REM53_sector001_macro" matchextension="false"/>
+	  <location class="zone" macro="zoneTD_cluster_REM53_sector001_macro" />
 	  <station>
 		<select faction="otas" tags="[tradestation]"/>
 		<loadout>
@@ -1209,9 +1198,9 @@
 <!--REM54 Legend's Home Beta-->
 	<station id="otas_defence_cluster_REM54_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="2" />
+		<quota galaxy="2" zone="1" />
 	  </quotas>
-	  <location class="sector" macro="cluster_REM54_sector001_macro" matchextension="false"/>
+	  <location class="sector" macro="cluster_REM54_sector001_macro" />
 	  <station>
 		<select faction="otas" tags="[defence]"/>
 	  </station>
@@ -1219,9 +1208,9 @@
 <!--REM55 Akeela's Beacon-->	
 	<station id="otas_defence_cluster_REM55_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="2" />
+		<quota galaxy="2" zone="1" />
 	  </quotas>
-	  <location class="sector" macro="cluster_REM55_sector001_macro" matchextension="false"/>
+	  <location class="sector" macro="cluster_REM55_sector001_macro" />
 	  <station>
 		<select faction="otas" tags="[defence]"/>
 	  </station>
@@ -1229,9 +1218,9 @@
 <!--REM56 Aladna Hill-->	
 	<station id="otas_defence_cluster_REM56_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="2" />
+		<quota galaxy="2" zone="1" />
 	  </quotas>
-	  <location class="sector" macro="cluster_REM56_sector001_macro" matchextension="false"/>		
+	  <location class="sector" macro="cluster_REM56_sector001_macro" />		
 	  <station>
 		<select faction="otas" tags="[defence]"/>
 	  </station>
@@ -1241,7 +1230,7 @@
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="zoneG2_cluster_REM57_sector001_macro" matchextension="false"/>
+	  <location class="zone" macro="zoneG2_cluster_REM57_sector001_macro" />
 	  <position  x="18000" y="0" z="-1750" yaw="0" roll="0" pitch="0"/>			
 	  <station>
 		<select faction="otas" tags="[defence]"/>
@@ -1251,29 +1240,29 @@
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="zoneG4_cluster_REM57_sector001_macro" matchextension="false"/>
+	  <location class="zone" macro="zoneG4_cluster_REM57_sector001_macro" />
 	  <position  x="18000" y="0" z="1750" yaw="0" roll="0" pitch="0"/>			
 	  <station>
 		<select faction="otas" tags="[defence]"/>
 	  </station>
-	</station>				
-	<station id="otas_trade_REM57" race="argon" owner="otas" type="tradingstation">
+	</station>
+	<!--station id="otas_trade_REM57" race="argon" owner="otas" type="tradingstation">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="zoneTD_cluster_REM57_sector001_macro" matchextension="false"/>
+	  <location class="zone" macro="zoneTD_cluster_REM57_sector001_macro" />
 	  <station>
 		<select faction="otas" tags="[tradestation]"/>
 		<loadout>
 		  <level exact="1.0"/>
 		</loadout>
 	  </station>
-	</station>
+	</station-->
 	<station id="equipmentdock_otas_cluster_REM57" race="argon" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="zoneEQ_cluster_REM57_sector001_macro" matchextension="false"/>
+	  <location class="zone" macro="zoneEQ_cluster_REM57_sector001_macro" />
 	  <station>
 		<select faction="otas" tags="[equipmentdock]"/>
 		<loadout>
@@ -1325,7 +1314,7 @@
 <!--REM66 Ghinn's Escape-->	
 	<station id="spl_tradestation_cluster_REM66_001" race="split" owner="fallensplit" type="tradingstation">
 	  <quotas>
-		<quota galaxy="1" zone="2" />
+		<quota galaxy="1" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM66_sector001_macro" />
 	  <position x="107418.086" z="-33812.773" yaw="0" pitch="0" roll="0"/>		  
@@ -2088,7 +2077,7 @@
 	  <quotas>
 		<quota galaxy="2" zone="1" />
 	  </quotas>
-	  <location class="sector" macro="cluster_REM73_sector001_macro" matchextension="false"/>
+	  <location class="sector" macro="cluster_REM73_sector001_macro" />
 	  <station>
 		<select faction="otas" tags="[defence]"/>
 	  </station>
@@ -2458,7 +2447,7 @@
       </module>
     </product>
 	<!--Split-->
-    <product id="spl_advancedcomposites_REMS" ware="advancedcomposites" owner="split" type="factory">
+    <product id="spl_advancedcomposites_REMS" ware="advancedcomposites" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="1"/>
       </quotas>
@@ -2469,7 +2458,7 @@
         <select ware="advancedcomposites" race="argon" />
       </module>
     </product>
-    <product id="spl_antimattercells_REMS" ware="antimattercells" owner="split" type="factory">
+    <product id="spl_antimattercells_REMS" ware="antimattercells" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="1"/>
       </quotas>
@@ -2480,7 +2469,7 @@
         <select ware="antimattercells" race="argon"/>
       </module>
     </product>
-    <product id="spl_antimatterconverters_REMS" ware="antimatterconverters" owner="split" type="factory">
+    <product id="spl_antimatterconverters_REMS" ware="antimatterconverters" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="1"/>
       </quotas>
@@ -2491,7 +2480,7 @@
         <select ware="antimatterconverters" race="argon"/>
       </module>
     </product>
-    <product id="spl_cheltmeat_REMS" ware="cheltmeat" owner="split" type="factory">
+    <product id="spl_cheltmeat_REMS" ware="cheltmeat" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="2" sector="1"/>
       </quotas>
@@ -2502,7 +2491,7 @@
         <select ware="cheltmeat" race="split"/>
       </module>
     </product>
-    <product id="spl_claytronics_REMS" ware="claytronics" owner="split" type="factory">
+    <product id="spl_claytronics_REMS" ware="claytronics" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="2" sector="1"/>
       </quotas>
@@ -2513,7 +2502,7 @@
         <select ware="claytronics" race="argon" />
       </module>
     </product>
-    <product id="spl_energycells_REMS" ware="energycells" owner="split" type="factory">
+    <product id="spl_energycells_REMS" ware="energycells" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="3" sector="1"/>
       </quotas>
@@ -2525,7 +2514,7 @@
         <select ware="energycells" race="argon"/>
       </module>
     </product>
-    <product id="spl_engineparts_REMS" ware="engineparts" owner="split" type="factory">
+    <product id="spl_engineparts_REMS" ware="engineparts" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="1"/>
       </quotas>
@@ -2536,7 +2525,7 @@
         <select ware="engineparts" race="argon"/>
       </module>
     </product>
-    <product id="spl_graphene_REMS" ware="graphene" owner="split" type="factory">
+    <product id="spl_graphene_REMS" ware="graphene" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="2" sector="1"/>
       </quotas>
@@ -2547,7 +2536,7 @@
         <select ware="graphene" race="argon"/>
       </module>
     </product>
-    <product id="spl_hullparts_REMS" ware="hullparts" owner="split" type="factory">
+    <product id="spl_hullparts_REMS" ware="hullparts" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="3" sector="1"/>
       </quotas>
@@ -2558,7 +2547,7 @@
         <select ware="hullparts" race="argon"/>
       </module>
     </product>
-    <product id="spl_medicalsupplies_REMS" ware="medicalsupplies" owner="split" type="factory">
+    <product id="spl_medicalsupplies_REMS" ware="medicalsupplies" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="3" sector="1"/>
       </quotas>
@@ -2569,7 +2558,7 @@
         <select ware="medicalsupplies" race="split"/>
       </module>
     </product>
-    <product id="spl_microchips_REMS" ware="microchips" owner="split" type="factory">
+    <product id="spl_microchips_REMS" ware="microchips" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="2" sector="1"/>
       </quotas>
@@ -2580,7 +2569,7 @@
         <select ware="microchips" race="argon"/>
       </module>
     </product>
-    <product id="spl_missilecomponents_REMS" ware="missilecomponents" owner="split" type="factory">
+    <product id="spl_missilecomponents_REMS" ware="missilecomponents" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="1"/>
       </quotas>
@@ -2591,7 +2580,7 @@
         <select ware="missilecomponents" race="argon"/>
       </module>
     </product>
-    <product id="spl_plasmaconductors_REMS" ware="plasmaconductors" owner="split" type="factory">
+    <product id="spl_plasmaconductors_REMS" ware="plasmaconductors" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="1"/>
       </quotas>
@@ -2602,7 +2591,7 @@
         <select ware="plasmaconductors" race="argon"/>
       </module>
     </product>
-    <product id="spl_quantumtubes_REMS" ware="quantumtubes" owner="split" type="factory">
+    <product id="spl_quantumtubes_REMS" ware="quantumtubes" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="1"/>
       </quotas>
@@ -2613,7 +2602,7 @@
         <select ware="quantumtubes" race="argon"/>
       </module>
     </product>
-    <product id="spl_refinedmetals_REMS" ware="refinedmetals" owner="split" type="factory">
+    <product id="spl_refinedmetals_REMS" ware="refinedmetals" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="3" sector="2" />
       </quotas>
@@ -2625,7 +2614,7 @@
         <select ware="refinedmetals" race="argon"/>
       </module>
     </product>
-    <product id="spl_scanningarrays_REMS" ware="scanningarrays" owner="split" type="factory">
+    <product id="spl_scanningarrays_REMS" ware="scanningarrays" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="2" sector="1"/>
       </quotas>
@@ -2636,7 +2625,7 @@
         <select ware="scanningarrays" race="argon"/>
       </module>
     </product>
-    <product id="spl_scruffinfruits_REMS" ware="scruffinfruits" owner="split" type="factory">
+    <product id="spl_scruffinfruits_REMS" ware="scruffinfruits" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="2" sector="1"/>
       </quotas>
@@ -2647,7 +2636,7 @@
         <select ware="scruffinfruits" race="split"/>
       </module>
     </product>
-    <product id="spl_siliconwafers_REMS" ware="siliconwafers" owner="split" type="factory">
+    <product id="spl_siliconwafers_REMS" ware="siliconwafers" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="4" sector="2" />
       </quotas>
@@ -2659,7 +2648,7 @@
         <select ware="siliconwafers" race="argon"/>
       </module>
     </product>
-    <product id="spl_spices_REMS" ware="spices" owner="split" type="factory">
+    <product id="spl_spices_REMS" ware="spices" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="2" sector="1"/>
       </quotas>
@@ -2670,7 +2659,7 @@
         <select ware="spices" race="argon"/>
       </module>
     </product>
-    <product id="spl_superfluidcoolant_REMS" ware="superfluidcoolant" owner="split" type="factory">
+    <product id="spl_superfluidcoolant_REMS" ware="superfluidcoolant" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="2" sector="1"/>
       </quotas>
@@ -2681,7 +2670,7 @@
         <select ware="superfluidcoolant" race="argon"/>
       </module>
     </product>
-    <product id="spl_water_REMS" ware="water" owner="split" type="factory">
+    <product id="spl_water_REMS" ware="water" owner="freesplit" type="factory">
       <quotas>
         <quota galaxy="2" sector="1"/>
       </quotas>
@@ -2727,7 +2716,7 @@
 <!--REMs 53-57 - OTAS-->
 	<product id="otas_advancedcomposites" ware="advancedcomposites" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="2" sector="1"/>
+		<quota galaxy="3" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="ge" matchextension="false">
 		<economy min="0.5" maxbound="false" />
@@ -2802,9 +2791,18 @@
 		<select ware="energycells" race="argon"/>
 	  </module>
 	</product>
+	<product id="otas_energycells_REM55_sector01" ware="energycells" owner="otas" type="factory">
+	  <quotas>
+		<quota galaxy="1" sector="1"/>
+	  </quotas>
+	  <location class="sector" macro="Cluster_REM55_sector001_macro" faction="[otas]" matchextension="false"/>
+	  <module>
+		<select ware="energycells" race="argon"/>
+	  </module>
+	</product>	
 	<product id="otas_engineparts" ware="engineparts" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="4" sector="1"/>
+		<quota galaxy="3" sector="1"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="ge" matchextension="false">
 		<economy min="0.5" maxbound="0.9" />
@@ -2890,7 +2888,7 @@
 	</product>
 	<product id="otas_microchips" ware="microchips" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="8" sector="2"/>
+		<quota galaxy="7" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="ge" matchextension="false">
 		<economy min="0.25" max="0.75" />
@@ -2923,7 +2921,7 @@
 	</product>
 	<product id="otas_quantumtubes" ware="quantumtubes" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="4" sector="1"/>
+		<quota galaxy="3" sector="1"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="ge" matchextension="false">
 		<economy min="0.5" maxbound="false" />
@@ -2978,7 +2976,7 @@
 	</product>
 	<product id="otas_smartchips" ware="smartchips" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="6" sector="2"/>
+		<quota galaxy="5" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="ge" matchextension="false">
 		<economy min="0.5" maxbound="false" />	
@@ -2987,6 +2985,15 @@
 		<select ware="smartchips" race="argon"/>
 	  </module>
 	</product>
+	<product id="otas_spacefuel_REM73_sector001" ware="spacefuel" owner="otas" type="factory">
+	  <quotas>
+		<quota galaxy="1" sector="1"/>
+	  </quotas>
+	  <location class="sector" macro="Cluster_REM73_sector001_macro" faction="[otas]" relation="self" matchextension="false"/>
+	  <module>
+		<select ware="spacefuel" race="argon"/>
+	  </module>
+	</product>	
 	<product id="otas_spices" ware="spices" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="5" sector="2"/>
@@ -2998,6 +3005,15 @@
 		<select ware="spices" race="argon"/>
 	  </module>
 	</product>
+	<product id="otas_stimulants_REM54_sector001" ware="stimulants" owner="otas" type="factory">
+	  <quotas>
+		<quota galaxy="1" sector="1"/>
+	  </quotas>
+	  <location class="sector" macro="Cluster_REM54_sector001_macro" relation="self" matchextension="false"/>
+	  <module>
+		<select ware="stimulants" race="otas"/>
+	  </module>
+	</product>		
 	<product id="otas_superfluidcoolant" ware="superfluidcoolant" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="3" sector="2"/>

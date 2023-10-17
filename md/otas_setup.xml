@@ -34,9 +34,6 @@
 
 		<library name="Start_Actions">
 			<actions>
-				<!-- <set_value name="$DebugChance" exact="100"/> -->
-				
-				<debug_to_file text="this.name + ' - ' + 'otas'" name="'otas_setup.log'" directory="'otas'" chance="$DebugChance" />	
 				<do_if value="not md.$EquipmentTable?">
 					<set_value name="md.$EquipmentTable" exact="table[]"/>
 				</do_if>
@@ -64,8 +61,8 @@
 				<do_if value="ware.cheltmeat?" comment="detect split dlc">
 					<set_faction_relation faction="faction.otas" otherfaction="faction.court" value="-0.032"/>
 					<set_faction_relation faction="faction.otas" otherfaction="faction.fallensplit" value="-0.32"/>
-					<set_faction_relation faction="faction.otas" otherfaction="faction.freesplit" value="-0.032"/>
-					<set_faction_relation faction="faction.otas" otherfaction="faction.split" value="0.032"/>							
+					<set_faction_relation faction="faction.otas" otherfaction="faction.freesplit" value="0"/>
+					<set_faction_relation faction="faction.otas" otherfaction="faction.split" value="0.1"/>							
 				</do_if>
 				<do_if value="ware.ship_atf_xl_battleship_01_a?" comment="detect terran dlc">
 					<set_faction_relation faction="faction.otas" otherfaction="faction.terran" value="-0.06"/>
@@ -88,9 +85,8 @@
 							
 				<!-- If Thuruk's Demise exists then check licences,add available and create station-->
 				<find_cluster name="$otas_cluster" space="player.galaxy" macro="macro.Cluster_REM53_Sector001_macro"/>
-				<debug_to_file text="this.name + ' - ' + 'Sector: %1'.[$otas_cluster]" name="'otas_setup.log'" directory="'otas'" chance="$DebugChance" />	
+				<debug_to_file text="this.name + ' - ' + 'Sector: %1'.[$otas_cluster]" name="'otas_setup.log'" directory="'otas'" />	
 				<do_if value="$otas_cluster">
-					
 					<set_faction_known faction="faction.otas" known="true"/>									
 					<set_value name="$Faction" exact="faction.otas"/>
 					<do_all exact="$Faction.licences.count" counter="$i">
@@ -99,7 +95,6 @@
 							<add_licence licence="$licence"/>
 						</do_if>
 					</do_all>
-					
 					<signal_cue cue="md.otas_stations.root"/>
 				</do_if>				
 			</actions>
