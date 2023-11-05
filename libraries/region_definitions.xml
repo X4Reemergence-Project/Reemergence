@@ -336,7 +336,7 @@
       <asteroid groupref="asteroid_xenon_xs" densityfactor="1.0" rotation="360" rotationvariation="4" noisescale="50000" seed="1309" minnoisevalue="0.93" maxnoisevalue="1" boxchecks="true" allowyawrotation="true" allowpitchrotation="false" allowrollrotation="false"/>
     </fields>
   </region>  
-<!--REM08 Power Cirlce I-->
+<!--REM08 Power Circle I-->
   <region name="rem08_field1" density="1.5" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="sphere">
       <size r="500000" />
@@ -344,10 +344,12 @@
     <falloff>
     </falloff>
     <fields>
-      <nebula ref="fogpattern_v2_macro" localred="70" localgreen="27" localblue="11" localdensity="0.12" uniformred="139" uniformgreen="55" uniformblue="22" uniformdensity="0.33" noisescale="35000" seed="64" minnoisevalue="0.0" maxnoisevalue="1" backgroundfog="true" fogdistance="125000"/>
-      <volumetricfog multiplier="0.9" medium="fog_red" texture="assets/textures/environments/fog_patterncloud_08" lodrule="nebulafar" size="60000" sizevariation="0.632" densityfactor="0.001" rotation="0" rotationvariation="0.05" noisescale="50000" seed="2804" minnoisevalue="0.30" maxnoisevalue="1.0" distancefactor="0.50"/>	  
-      <!--volumetricfog multiplier="0.05" medium="fog_red" texture="assets/textures/environments/fog_patterncloud_08" lodrule="nebula" size="64000" sizevariation="0.5" densityfactor="0.1" rotation="360" rotationvariation="0.5" noisescale="25000" seed="30041982" minnoisevalue="0.90" maxnoisevalue="1.0" distancefactor="0.6"/-->
+      <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.005" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.0" backgroundfog="false" resources="methane" fogdistance="15000"/>	
+      <volumetricfog multiplier="0.9" medium="fog_red" texture="assets/textures/environments/fog_patterncloud_08" lodrule="nebulafar" size="60000" sizevariation="0.632" densityfactor="0.001" rotation="0" rotationvariation="0.05" noisescale="50000" seed="2804" minnoisevalue="0.30" maxnoisevalue="1.0" distancefactor="0.50"/>	
     </fields>
+    <resources>
+      <resource ware="methane" yield="low" />
+    </resources>	
   </region> 
   <region name="rem08_field2" density="5" rotation="0" noisescale="15000" seed="42" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="sphere">
@@ -424,8 +426,8 @@
         <step position="1.0" value="0.0" />
       </radial>
     </falloff>
-    <fields>
-      <volumetricfog multiplier="0.05" medium="fog_greystructure" texture="assets/textures/environments/fog_maskrnd_07" lodrule="nebulafar" size="40000" sizevariation="0.25" densityfactor="0.025" rotation="360" rotationvariation="0.0" noisescale="1000" seed="32" minnoisevalue="0.0" maxnoisevalue="1.0" distancefactor="0.0"/>	
+    <fields>	
+      <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.005" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.0" backgroundfog="false" resources="methane" fogdistance="15000"/>		  
       <asteroid groupref="asteroid_ore_nores_l" densityfactor="1.5" rotation="360" rotationvariation="1" noisescale="1500" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_silicon_nores_l" densityfactor="1.5" rotation="360" rotationvariation="1" noisescale="1500" seed="8888" minnoisevalue="0.5" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_ore_xl" lodrule="asteroidxl" densityfactor="0.05" rotation="360" rotationvariation="4" noisescale="5000" seed="42" minnoisevalue="0.75" maxnoisevalue="0.8"/>
@@ -434,6 +436,7 @@
     <resources>
       <resource ware="ore" yield="verylow" />
       <resource ware="silicon" yield="lowest" />
+      <resource ware="methane" yield="medium" />	  
     </resources>
   </region>     
 <!--REM12 Split Fire-->
@@ -503,7 +506,7 @@
     <resources>
       <resource ware="ore" yield="verylow" />
       <resource ware="silicon" yield="low" />
-      <resource ware="methane" yield="medhigh" />	  
+      <resource ware="methane" yield="medium" />	  
     </resources>
   </region>  
 <!--REM14 Mists of Elysium-->
@@ -2241,7 +2244,7 @@
       <nebula ref="fogpattern_v2_macro" localred="161" localgreen="194" localblue="226" localdensity="0.075" uniformred="10" uniformgreen="14" uniformblue="20" uniformdensity="0.3" backgroundfog="true" resources="methane" />
     </fields>
     <resources>
-      <resource ware="methane" yield="low" />
+      <resource ware="methane" yield="medium" />
     </resources>
   </region>
   <region name="rem63_field2" density="0.10" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
