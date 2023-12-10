@@ -19,34 +19,6 @@ UI value mapping (analogously for negative values):
   0.0032    = 5
 -->
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<!--Kha'ak-->
-  <replace sel="//faction[@id='khaak']">
-  <faction id="khaak" name="{20203,1501}" description="{20203,1502}" shortname="{20203,1503}" prefixname="{20203,1504}" primaryrace="khaak" behaviourset="khaak" tags="claimspace notradeoffer privateloadout privateship">  
-    <color r="240" g="174" b="237" />
-    <icon active="faction_khaak" inactive="faction_khaak" />
-    <relations locked="1">
-      <relation faction="alliance" relation="-1" />
-      <relation faction="antigone" relation="-1" />
-      <relation faction="argon" relation="-1" />
-      <relation faction="buccaneers" relation="-1" />
-      <relation faction="civilian" relation="-1" />
-      <relation faction="criminal" relation="-1" />
-      <relation faction="hatikvah" relation="-1" />
-      <relation faction="holyorder" relation="-1" />
-      <relation faction="holyorderfanatic" relation="-1" />
-      <relation faction="ministry" relation="-1" />
-      <relation faction="paranid" relation="-1" />
-      <relation faction="player" relation="-1" />
-      <relation faction="scaleplate" relation="-1" />
-      <relation faction="smuggler" relation="-1" />
-      <relation faction="teladi" relation="-1" />
-      <relation faction="trinity" relation="-1" />
-      <relation faction="visitor" relation="-1" />
-      <relation faction="xenon" relation="-1" /> 
-    </relations>
-    <signals>
-      <response signal="policehalt" response="attack" />
-    </signals>
-  </faction>
-  </replace>  
+  <replace sel="/factions/faction[@id='hatikvah']/@tags">economic protective watchdoguser privateloadout privateship plunder</replace>
+  <replace sel="/factions/faction[@id='khaak']/@tags">claimspace notradeoffer privateloadout privateship</replace>  
 </diff>

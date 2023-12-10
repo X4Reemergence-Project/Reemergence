@@ -273,29 +273,7 @@
 					</offset>
 					<macro ref="Cluster_REM08_Sector002_macro" connection="cluster" />
 				</connection>
-				<!--connection name="REM08_Sector001_Region001_connection" ref="regions">
-					<offset>
-						<position x="0" y="0" z="0" />
-					</offset>
-					<macro name="REM08_Sector001_Region001_macro">
-					<component connection="cluster" ref="standardregion" />
-					<properties>
-						<region ref="rem08_field1" />
-					</properties>
-					</macro>
-				</connection-->
-				<connection name="REM08_Sector001_Region002_connection" ref="regions">
-					<offset>
-						<position x="0" y="-5000" z="0" />
-					</offset>
-					<macro name="REM08_Sector001_Region002_macro">
-					<component connection="cluster" ref="standardregion" />
-					<properties>
-						<region ref="rem08_field2" />
-					</properties>
-					</macro>
-				</connection>				
-				<!--connection name="REM08_Sector002_Region001_connection" ref="regions">
+				<connection name="REM08_Sector002_Region001_connection" ref="regions">
 					<offset>
 						<position x="26673982" y="0" z="-55409964" />
 					</offset>
@@ -305,7 +283,18 @@
 						<region ref="rem08_field1" />
 					</properties>
 					</macro>
-				</connection-->					
+				</connection>
+				<connection name="REM08_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="-5000" z="0" />
+					</offset>
+					<macro name="REM08_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem08_field2" />
+					</properties>
+					</macro>
+				</connection>								
 				<connection name="SuperHighway001_Cluster_REM08_connection" ref="sechighways">
 					<offset>
 						<position x="13387653" y="0" z="-27704982" />
@@ -2351,34 +2340,34 @@
 				</connection>				
 			</connections>
 		</macro>		
-	<!--Sector REM71 - Unknown Sector-->
-		<macro name="Cluster_REM71_macro" class="cluster">
+	<!--Sector REM71a - Unknown Sector A-->
+		<macro name="Cluster_REM71a_macro" class="cluster">
 			<component ref="standardcluster" />
 			<connections>
 				<connection ref="content">
 					<macro>
-						<component connection="space" ref="Cluster_rem67" />
+						<component connection="space" ref="Cluster_504" />
 					</macro>
+				</connection>				
+				<connection name="Cluster_REM71a_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM71a_Sector001_macro" connection="cluster" />
 				</connection>
-				<connection name="Cluster_REM71_Sector001_connection" ref="sectors">
-					<macro ref="Cluster_REM71_Sector001_macro" connection="cluster" />
-				</connection>
-				<connection name="REM71_Sector001_Region001_connection" ref="regions">
+				<connection name="REM71a_Sector001_Region001_connection" ref="regions">
 					<offset>
 						<position x="0" y="0" z="0" />
 					</offset>
-					<macro name="REM71_Sector001_Region001_macro">
+					<macro name="REM71a_Sector001_Region001_macro">
 					<component connection="cluster" ref="standardregion" />
 					<properties>
-						<region ref="rem71_field1" />
+						<region ref="rem67_field1" />
 					</properties>
 					</macro>
 				</connection>
-				<connection name="REM71_Sector001_Region001_connection" ref="regions">
+				<connection name="REM71a_Sector001_Region001_connection" ref="regions">
 					<offset>
 						<position x="0" y="0" z="0" />
 					</offset>
-					<macro name="REM71_Sector001_Region001_macro">
+					<macro name="REM71a_Sector001_Region001_macro">
 					<component connection="cluster" ref="standardregion" />
 					<properties>
 						<region ref="rem71_field2" />
@@ -2386,7 +2375,187 @@
 					</macro>
 				</connection>				
 			</connections>
+		</macro>
+	<!--Sector REM71b - Unknown Sector B-->
+		<macro name="Cluster_REM71b_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_504" />
+					</macro>
+				</connection>			
+				<connection name="Cluster_REM71b_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM71b_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM71b_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71b_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem71_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM71b_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71b_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem05_field" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
 		</macro>	
+	<!--Sector REM71c - Unknown Sector C-->
+		<macro name="Cluster_REM71c_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_504" />
+					</macro>
+				</connection>				
+				<connection name="Cluster_REM71c_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM71c_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM71c_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71c_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem71_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM71c_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71c_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem71_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+	<!--Sector REM71d - Unknown Sector D-->
+		<macro name="Cluster_REM71d_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_504" />
+					</macro>
+				</connection>				
+				<connection name="Cluster_REM71d_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM71d_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM71d_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71d_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem67_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM71d_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71d_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem71_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+	<!--Sector REM71e - Unknown Sector E-->
+		<macro name="Cluster_REM71e_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_504" />
+					</macro>
+				</connection>				
+				<connection name="Cluster_REM71e_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM71e_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM71e_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71e_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem67_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM71e_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71e_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem71_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>
+	<!--Sector REM71f - Unknown Sector F-->
+		<macro name="Cluster_REM71f_macro" class="cluster">
+			<component ref="standardcluster" />
+			<connections>
+				<connection ref="content">
+					<macro>
+						<component connection="space" ref="Cluster_504" />
+					</macro>
+				</connection>				
+				<connection name="Cluster_REM71f_Sector001_connection" ref="sectors">
+					<macro ref="Cluster_REM71f_Sector001_macro" connection="cluster" />
+				</connection>
+				<connection name="REM71f_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71f_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem67_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM71f_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM71f_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem71_field2" />
+					</properties>
+					</macro>
+				</connection>				
+			</connections>
+		</macro>		
 	<!--Sector REM72 - Kha'ak Hive-->
 		<macro name="Cluster_REM72_macro" class="cluster">
 			<component ref="standardcluster" />

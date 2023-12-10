@@ -1231,99 +1231,7 @@
 	  </ware>
 	</add>
 	<!-- iShields -->		
-<!--New Xenon War Assets-->
-	 <add sel="//wares">
-	<!--SHIPS-->
-		<ware id="ship_xen_xl_reclaimer" name="{48003,6}" description="{19530004,7}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
-		  <price min="4300932" average="5059920" max="5818908" />
-		  <production time="1550" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
-		    <primary>
-			  <ware ware="energycells" amount="8075" />
-			  <ware ware="ore" amount="7250" />
-			  <ware ware="silicon" amount="6250" />
-			</primary>
-		  </production>
-		  <component ref="ship_xen_xl_reclaimer_macro" />
-		  <restriction licence="capitalship" />
-		  <owner faction="xenon" />
-		</ware>		
-		<ware id="ship_xen_m_fighter_y" name="{20403,25}" description="{19530004,1}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
-		  <price min="86827" average="98620" max="110413" />
-		  <production time="25" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
-		    <primary>
-			  <ware ware="energycells" amount="124" />
-			  <ware ware="ore" amount="99" />
-			  <ware ware="silicon" amount="99" />
-			</primary>
-		  </production>
-		  <component ref="ship_xen_m_fighter_y_macro" />
-		  <restriction licence="militaryship" />
-		  <owner faction="xenon" />
-		</ware>	
-		<ware id="ship_xen_m_fighter_d" name="{20403,4}" description="{19530004,4}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
-		  <price min="96827" average="108620" max="120413" />
-		  <production time="31" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
-			<primary>
-			  <ware ware="energycells" amount="139" />
-			  <ware ware="ore" amount="109" />
-			  <ware ware="silicon" amount="109" />
-			</primary>
-		  </production>
-		  <component ref="ship_xen_m_fighter_d_macro" />
-		  <restriction licence="militaryship" />
-		  <owner faction="xenon" />
-		</ware>	
-	<!--WEAPONS-->
-		<ware id="weapon_xen_m_plasmabomb" name="{19530006,1}" description="{19530006,2}" group="weapons" transport="equipment" volume="1" tags="equipment weapon"> <!-- tags="noplayerblueprint ship" -->
-		  <price min="1578" average="1664" max="1750" />
-		  <production time="6" amount="1" method="default" name="{20206,101}"> <!--  tags="noplayerbuild" -->
-			<primary>
-			  <ware ware="energycells" amount="65" />
-			  <ware ware="ore" amount="11" />
-			</primary>
-		  </production>
-		  <component ref="weapon_xen_m_plasmabomb_macro" amount="1" />
-		  <restriction licence="generaluseequipment" />
-		  <use threshold="0" />
-		  <owner faction="xenon" />
-		</ware>		  	  
-	<!--iSHIELDS-->	
-		<ware id="ishield_xen_xl_reclaimer" name="{19530004,8}" description="{19530004,8}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
-		  <price min="1" average="1" max="1" />
-		  <production time="1" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
-			<primary>
-			  <ware ware="energycells" amount="1" />
-			</primary>
-		  </production>	  
-		  <component ref="ishield_xen_xl_reclaimer_macro" amount="1" />
-		  <use threshold="0" />
-		  <restriction licence="generaluseequipment" />
-		</ware>		
-		<ware id="ishield_xen_m_fighter_y" name="{19530004,2}" description="{19530004,2}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
-		  <price min="1" average="1" max="1" />
-		  <production time="1" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
-			<primary>
-			  <ware ware="energycells" amount="1" />
-			</primary>
-		  </production>	  
-		  <component ref="ishield_xen_m_fighter_y_macro" amount="1" />
-		  <use threshold="0" />
-		  <restriction licence="generaluseequipment" />
-		</ware>	
-		<ware id="ishield_xen_m_fighter_d" name="{19530004,5}" description="{19530004,5}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
-		  <price min="1" average="1" max="1" />
-		  <production time="1" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
-			<primary>
-			  <ware ware="energycells" amount="1" />
-			</primary>
-		  </production>	  
-		  <component ref="ishield_xen_m_fighter_d_macro" amount="1" />
-		  <use threshold="0" />
-		  <restriction licence="generaluseequipment" />
-		</ware>	
-	</add>	
-
-<!--ship additions-->
+<!--RE Wares-->
 	 <add sel="//wares">
 	<!--SHIPS-->
     <ware id="ship_spl_l_cheetah" name="{19530007,700}" description="{19530007,800}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
@@ -1342,19 +1250,54 @@
     </ware>
     <ware id="ship_spl_s_wolf" name="{19530007,710}" description="{19530007,810}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
       <price min="260648" average="291350" max="362053" />
-			<production time="12" amount="1" method="default" name="{999903,4}">
-				<primary>
-				  <ware ware="energycells" amount="120" />
-				  <ware ware="hullparts" amount="280" />
-				</primary>
-			</production>
-			<component ref="ship_spl_s_wolf_macro" amount="1" />
-			<restriction licence="militaryship" />
-		  <owner faction="court" />
-		  <owner faction="freesplit" />
-		  <owner faction="fallensplit" />
+	  <production time="12" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="120" />
+		  <ware ware="hullparts" amount="280" />
+		</primary>
+	  </production>
+	  <component ref="ship_spl_s_wolf_macro" amount="1" />
+	  <restriction licence="militaryship" />
+	  <owner faction="court" />
+	  <owner faction="freesplit" />
+	  <owner faction="fallensplit" />
     </ware>
 	<!--WEAPONS-->
+    <ware id="weapon_gen_s_plasmabomb" name="{19530007,200}" description="{19530007,300}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+      <price min="150867" average="167630" max="184393" />
+      <production time="8" amount="1" method="default" name="{20206,101}">
+        <primary>
+		  <ware ware="advancedelectronics" amount="15" />
+		  <ware ware="energycells" amount="61" />
+		  <ware ware="weaponcomponents" amount="30" />
+        </primary>
+      </production>
+      <production time="8" amount="1" method="terran" name="{20206,901}">
+        <primary>
+		  <ware ware="computronicsubstrate" amount="2" />
+		  <ware ware="energycells" amount="50" />
+		  <ware ware="metallicmicrolattice" amount="30" />
+		  <ware ware="siliconcarbide" amount="3" />
+        </primary>
+      </production>		
+      <component ref="weapon_gen_s_plasmabomb_macro" amount="1" />
+      <restriction licence="militaryequipment" />
+      <use threshold="0" />
+      <owner faction="antigone" />
+      <owner faction="argon" />
+      <owner faction="ministry" />
+      <owner faction="teladi" />
+      <owner faction="alliance" />		
+      <owner faction="holyorder" />
+      <owner faction="paranid" />		
+      <owner faction="trinity" />
+      <owner faction="court" />
+      <owner faction="freesplit" />
+      <owner faction="split" />
+      <owner faction="pioneers" />
+      <owner faction="terran" />	  
+      <owner faction="otas" />		
+    </ware>		
 	<!--iSHIELDS-->
     <ware id="ishield_spl_s_cheetah" name="{19530007,900}" description="{19530007,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
       <price min="12" average="16" max="21" />
@@ -1379,4 +1322,95 @@
       <restriction licence="generaluseequipment" />	
     </ware>
 	</add>	
+<!--New Xenon War Assets-->
+	<add sel="//wares">
+	<!--SHIPS-->
+	  <ware id="ship_xen_xl_reclaimer" name="{48003,6}" description="{19530004,7}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
+		<price min="4300932" average="5059920" max="5818908" />
+		<production time="1550" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
+		  <primary>
+			<ware ware="energycells" amount="8075" />
+			<ware ware="ore" amount="7250" />
+			<ware ware="silicon" amount="6250" />
+		  </primary>
+		</production>
+		<component ref="ship_xen_xl_reclaimer_macro" />
+		<restriction licence="capitalship" />
+		<owner faction="xenon" />
+	  </ware>		
+	  <ware id="ship_xen_m_fighter_y" name="{20403,25}" description="{19530004,1}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
+		<price min="86827" average="98620" max="110413" />
+		<production time="25" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
+		  <primary>
+			<ware ware="energycells" amount="124" />
+			<ware ware="ore" amount="99" />
+			<ware ware="silicon" amount="99" />
+		  </primary>
+		</production>
+		<component ref="ship_xen_m_fighter_y_macro" />
+		<restriction licence="militaryship" />
+		<owner faction="xenon" />
+	  </ware>	
+	  <ware id="ship_xen_m_fighter_d" name="{20403,4}" description="{19530004,4}" group="ships_xenon" transport="ship" volume="1" tags="ship"> <!-- tags="noplayerblueprint ship" -->	
+		<price min="96827" average="108620" max="120413" />
+		<production time="31" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
+		  <primary>
+			<ware ware="energycells" amount="139" />
+			<ware ware="ore" amount="109" />
+			<ware ware="silicon" amount="109" />
+		  </primary>
+		</production>
+		<component ref="ship_xen_m_fighter_d_macro" />
+		<restriction licence="militaryship" />
+		<owner faction="xenon" />
+	  </ware>	
+	<!--WEAPONS-->
+	  <ware id="weapon_xen_m_plasmabomb" name="{19530006,1}" description="{19530006,2}" group="weapons" transport="equipment" volume="1" tags="equipment weapon"> <!-- tags="noplayerblueprint ship" -->
+		<price min="1578" average="1664" max="1750" />
+		<production time="6" amount="1" method="default" name="{20206,101}"> <!--  tags="noplayerbuild" -->
+		  <primary>
+			<ware ware="energycells" amount="65" />
+			<ware ware="ore" amount="11" />
+		  </primary>
+		</production>
+		<component ref="weapon_xen_m_plasmabomb_macro" amount="1" />
+		<restriction licence="generaluseequipment" />
+		<use threshold="0" />
+		<owner faction="xenon" />
+	  </ware>		  	  
+	<!--iSHIELDS-->	
+	  <ware id="ishield_xen_xl_reclaimer" name="{19530004,8}" description="{19530004,8}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
+		<price min="1" average="1" max="1" />
+		<production time="1" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
+		  <primary>
+			<ware ware="energycells" amount="1" />
+		  </primary>
+		</production>	  
+		<component ref="ishield_xen_xl_reclaimer_macro" amount="1" />
+		<use threshold="0" />
+		<restriction licence="generaluseequipment" />
+	  </ware>		
+	  <ware id="ishield_xen_m_fighter_y" name="{19530004,2}" description="{19530004,2}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
+		<price min="1" average="1" max="1" />
+		<production time="1" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
+		  <primary>
+			<ware ware="energycells" amount="1" />
+		  </primary>
+		</production>	  
+		<component ref="ishield_xen_m_fighter_y_macro" amount="1" />
+		<use threshold="0" />
+		<restriction licence="generaluseequipment" />
+	  </ware>	
+	  <ware id="ishield_xen_m_fighter_d" name="{19530004,5}" description="{19530004,5}" group="shields" transport="equipment" volume="1" tags="equipment shield"> <!-- tags="noplayerblueprint ship" -->
+		<price min="1" average="1" max="1" />
+		<production time="1" amount="1" method="default" name="{20206,601}"> <!--  tags="noplayerbuild" -->
+		  <primary>
+			<ware ware="energycells" amount="1" />
+		  </primary>
+		</production>	  
+		<component ref="ishield_xen_m_fighter_d_macro" amount="1" />
+		<use threshold="0" />
+		<restriction licence="generaluseequipment" />
+	  </ware>	
+	</add>		
 </diff>
