@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<macros>
+  <macro name="ship_spl_l_cheetah_macro" class="ship_l">
+    <component ref="ship_spl_l_cheetah" />
+    <properties>
+      <identification name="{19530007,700}" basename="{19530007,700}" makerrace="split" description="{19530007,800}" icon="ship_l_frigate" />
+      <software>
+        <software ware="software_dockmk2" compatible="1" />
+        <software ware="software_flightassistmk1" default="1" />
+        <software ware="software_scannerlongrangemk1" default="1" />
+        <software ware="software_scannerlongrangemk2" compatible="1" />
+        <software ware="software_scannerobjectmk1" default="1" />
+        <software ware="software_scannerobjectmk2" compatible="1" />
+        <software ware="software_targetmk1" default="1" />
+        <software ware="software_trademk1" compatible="1" />
+      </software>
+      <explosiondamage value="1000" shield="6000" />
+      <storage missile="80" unit="23" />
+      <hull max="181000" />
+      <secrecy level="2" />
+      <purpose primary="fight" />
+      <people capacity="37" />
+      <physics mass="120.954">
+        <inertia pitch="130.708" yaw="130.708" roll="130.567" />
+        <drag forward="70.5" reverse="300" horizontal="200" vertical="200" pitch="120" yaw="120" roll="120" />
+      </physics>
+      <thruster tags="large" />
+      <ship type="carrier" />
+      <radar range="55000" />
+      <threatscore value="10" />
+    </properties>
+    <connections>
+       <connection ref="con_cockpit">
+        <macro ref="bridge_spl_l_01_macro" connection="con_cockpit" />
+      </connection>
+      <connection ref="con_dockarea_s_02_01">
+        <macro ref="dockarea_arg_s_ship_02_macro" connection="Connection01" />
+      </connection>
+      <connection ref="con_dockarea_s_02_02">
+        <macro ref="dockarea_arg_s_ship_02_macro" connection="Connection01" />
+      </connection>
+      <connection ref="con_dock_xs">
+        <macro ref="dock_gen_xs_ship_01_macro" connection="Connection_component" />
+      </connection>
+      <connection ref="con_shipstorage_s_01">
+        <macro ref="shipstorage_gen_s_sixteen_macro" connection="object" />
+      </connection>
+      <connection ref="con_storage_01">
+        <macro ref="storage_spl_m_trans_container_01_a_macro" connection="ShipConnection" />
+      </connection>
+	  
+      <connection ref="launchtube_S">
+        <macro ref="launchtube_arg_s_short_macro" connection="Connection02" />
+      </connection>
+      <connection ref="launchtube_S001">
+        <macro ref="launchtube_arg_s_short_macro" connection="Connection02" />
+      </connection>
+      <connection ref="launchtube_S002">
+        <macro ref="launchtube_arg_s_short_macro" connection="Connection02" />
+      </connection>
+      <connection ref="launchtube_S003">
+        <macro ref="launchtube_arg_s_short_macro" connection="Connection02" />
+      </connection>
+      <connection ref="launchtube_S004">
+        <macro ref="launchtube_arg_s_short_macro" connection="Connection02" />
+      </connection>
+      <connection ref="launchtube_S005">
+        <macro ref="launchtube_arg_s_short_macro" connection="Connection02" /> 
+      </connection>
+	  
+      <connection ref="con_buildmodule">
+        <macro ref="buildmodule_gen_carrier_macro" connection="object" />
+      </connection>
+
+	  
+    </connections>
+  </macro>
+</macros>
