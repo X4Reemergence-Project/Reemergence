@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jobs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libraries.xsd">
+<diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <add sel="//jobs">
 	<job id="otas_bio_trader_l" name="{20204,1301}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -5577,5 +5578,585 @@
 			<select faction="khaak" tags="[fighter]" size="ship_m"/>
 			<owner exact="khaak" overridenpc="true"/>
 		</ship>
-	</job>
-</jobs>
+    </job>	
+  </add>
+<!--VIG Rework-->
+<!--
+500 - Avarice
+501 - Union Summit/Iceunion
+502 - The Hoard/Scrapyard
+503 - Aurora
+504 - Leap of Faith
+-->
+  <remove sel="//jobs/job[@id='loanshark_plunderer_iceunion']"/>
+  <remove sel="//jobs/job[@id='loanshark_plunderer_scrapyard']"/>
+  <remove sel="//jobs/job[@id='loanshark_plunderer_aurora']"/>
+  <remove sel="//jobs/job[@id='loanshark_raider_iceunion']"/>
+  <remove sel="//jobs/job[@id='loanshark_raider_scrapyard']"/>
+  <remove sel="//jobs/job[@id='loanshark_raider_aurora']"/>
+  <remove sel="//jobs/job[@id='loanshark_raider_common']"/>
+  <remove sel="//jobs/job[@id='loanshark_patrol_iceunion']"/>
+  <remove sel="//jobs/job[@id='loanshark_patrol_scrapyard']"/>
+  <remove sel="//jobs/job[@id='loanshark_patrol_aurora']"/>
+  <remove sel="//jobs/job[@id='loanshark_patrol_common']"/>
+  
+<add sel="//jobs">
+<!--Plunderer - Iceunion-->
+  <job id="vig_union_plunderer_large" name="{20204,11301}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="0"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[plunderer, iceunion, large]" size="ship_l"/>
+    <quota galaxy="2"/>
+    <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>
+  </job>
+  <job id="vig_union_plunderer_fighter" name="{20204,11301}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="0"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[plunderer, iceunion, fighter]" size="ship_s"/>
+    <quota galaxy="4"/>
+    <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+  </job> 
+<!--Plunderer - Scrapyard-->
+  <job id="vig_scrapyard_plunderer_large" name="{20204,13401}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="0"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[plunderer, scrapyard, large]" size="ship_l"/>
+    <quota galaxy="3"/>
+    <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>
+  </job> 
+  <job id="vig_scrapyard_plunderer_fighter" name="{20204,13401}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="0"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[plunderer, scrapyard, fighter]" size="ship_s"/>
+    <quota galaxy="5"/>
+    <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+  </job>   
+<!--Plunderer - Aurora-->  
+  <job id="vig_aurora_plunderer_large" name="{20204,14501}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="0"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[plunderer, aurora, large]" size="ship_l"/>
+    <quota galaxy="2"/>
+    <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>
+  </job>
+  <job id="vig_aurora_plunderer_fighter" name="{20204,14501}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="0"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[plunderer, aurora, fighter]" size="ship_s"/>
+    <quota galaxy="4"/>
+    <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+  </job> 
+<!--Raider - Iceunion-->  
+  <job id="vig_iceunion_raider_large" name="{20204,11201}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="2"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, raider, iceunion, large]" size="ship_l"/>
+    <quota galaxy="5" cluster="2"/>
+    <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+      <subordinate job="vig_escort_large" assignment="attack"/>	
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>	
+  </job>
+  <job id="vig_iceunion_raider_fighter" name="{20204,11201}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="2"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, raider, iceunion, fighter]" size="ship_s"/>
+    <quota galaxy="7" cluster="3"/>
+    <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>		
+  </job> 
+<!--Raider - Scrapyard--> 
+  <job id="vig_scrapyard_raider_large" name="{20204,13201}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="2"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, raider, scrapyard, large]" size="ship_l"/>
+    <quota galaxy="5" cluster="2"/>
+    <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+      <subordinate job="vig_escort_large" assignment="attack"/>	
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>	
+  </job>
+  <job id="vig_scrapyard_raider_fighter" name="{20204,13201}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="2"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, raider, scrapyard, fighter]" size="ship_s"/>
+    <quota galaxy="7" cluster="3"/>
+    <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>		
+  </job>
+<!--Raider - Aurora-->
+  <job id="vig_aurora_raider_large" name="{20204,14201}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="2"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, raider, aurora, large]" size="ship_l"/>
+    <quota galaxy="5" cluster="2"/>
+    <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+      <subordinate job="vig_escort_large" assignment="attack"/>	
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>	
+  </job>
+  <job id="vig_aurora_raider_fighter" name="{20204,14201}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="2"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, raider, aurora, fighter]" size="ship_s"/>
+    <quota galaxy="7" cluster="3"/>
+    <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>		
+  </job>
+<!--Raider - Common-->    
+  <job id="vig_common_raider_large" name="{20204,3401}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="2"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, raider, common, large]" size="ship_l"/>
+    <quota galaxy="5" cluster="2"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+      <subordinate job="vig_escort_large" assignment="attack"/>	
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>	
+  </job>
+  <job id="vig_common_raider_fighter" name="{20204,3401}">
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'sector'"/>
+        <param name="plundermode" value="2"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, raider, common, fighter]" size="ship_s"/>
+    <quota galaxy="7" cluster="3"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <basket basket="pirate_container"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+	<subordinates>
+	  <subordinate job="vig_escort_fighters" assignment="defence"/>
+	</subordinates>		
+  </job> 
+<!--Patrol - Iceunion-->
+  <job id="vig_iceunion_patrol_large" name="{20204,11601}" comment="expansion">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Patrol" default="true">
+        <param name="range" value="class.zone"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, iceunion, large]" size="ship_l"/>
+    <quota galaxy="2"/>
+    <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+    <subordinates>
+      <subordinate job="vig_escort_large" assignment="attack"/>
+      <subordinate job="vig_escort_fighters" assignment="defence"/>
+    </subordinates>
+  </job>
+  <job id="vig_iceunion_patrol_fighter" name="{20204,11601}" comment="expansion">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Patrol" default="true">
+        <param name="range" value="class.zone"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, iceunion, fighter]" size="ship_s"/>
+    <quota galaxy="2" />
+    <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+    <subordinates>
+      <subordinate job="vig_escort_fighters" assignment="attack"/>
+    </subordinates>
+  </job>    
+<!--Patrol - Scrapyard--> 
+  <job id="vig_scrapyard_patrol_large" name="{20204,13601}" comment="expansion">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Patrol" default="true">
+        <param name="range" value="class.zone"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, scrapyard, large]" size="ship_l"/>
+    <quota galaxy="2"/>
+    <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+    <subordinates>
+      <subordinate job="vig_escort_large" assignment="attack"/>
+      <subordinate job="vig_escort_fighters" assignment="defence"/>
+    </subordinates>
+  </job>
+  <job id="vig_scrapyard_patrol_fighter" name="{20204,13601}" comment="expansion">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Patrol" default="true">
+        <param name="range" value="class.zone"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, scrapyard, fighter]" size="ship_s"/>
+    <quota galaxy="2" />
+    <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+    <subordinates>
+      <subordinate job="vig_escort_fighters" assignment="attack"/>
+    </subordinates>
+  </job>    
+<!--Patrol - Aurora--> 
+  <job id="vig_aurora_patrol_large" name="{20204,14601}" comment="expansion">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Patrol" default="true">
+        <param name="range" value="class.zone"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, aurora, large]" size="ship_l"/>
+    <quota galaxy="2"/>
+    <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+    <subordinates>
+      <subordinate job="vig_escort_large" assignment="attack"/>
+      <subordinate job="vig_escort_fighters" assignment="defence"/>
+    </subordinates>
+  </job>
+  <job id="vig_aurora_patrol_fighter" name="{20204,14601}" comment="expansion">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Patrol" default="true">
+        <param name="range" value="class.zone"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, aurora, fighter]" size="ship_s"/>
+    <quota galaxy="2" />
+    <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+    <subordinates>
+      <subordinate job="vig_escort_fighters" assignment="attack"/>
+    </subordinates>
+  </job>      
+<!--Patrol - Common--> 
+  <job id="vig_common_patrol_large" name="{20204,3501}" comment="expansion">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Patrol" default="true">
+        <param name="range" value="class.zone"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, common, large]" size="ship_l"/>
+    <quota galaxy="8" sector="3"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+    <subordinates>
+      <subordinate job="vig_escort_large" assignment="attack"/>
+      <subordinate job="vig_escort_fighters" assignment="defence"/>
+    </subordinates>
+  </job>
+  <job id="vig_common_patrol_fighter" name="{20204,3501}" comment="expansion">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Patrol" default="true">
+        <param name="range" value="class.zone"/>
+      </order>
+    </orders>
+    <category faction="loanshark" tags="[military, common, fighter]" size="ship_s"/>
+    <quota galaxy="6" sector="3"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+    <subordinates>
+      <subordinate job="vig_escort_fighters" assignment="attack"/>
+    </subordinates>
+  </job>  
+<!--Escorts-->
+  <job id="vig_escort_large" name="{20204,2601}" startactive="false">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Escort" default="true"/>
+    </orders>
+    <category faction="loanshark" tags="[military]" size="ship_l"/>
+    <quota wing="1" variation="1"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[plunderer]" size="ship_l"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+  </job>
+  <job id="vig_escort_fighters" name="{20204,2601}" startactive="false">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Escort" default="true"/>
+    </orders>
+    <category faction="loanshark" tags="[military]" size="ship_s"/>
+    <quota wing="4" variation="1"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="loanshark" tags="[fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+      </loadout>
+      <owner exact="loanshark" overridenpc="true"/>
+    </ship>
+  </job>
+</add>   
+</diff>
