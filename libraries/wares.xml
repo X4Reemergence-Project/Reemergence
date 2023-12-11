@@ -1250,6 +1250,34 @@
 	  <owner faction="freesplit" />
 	  <owner faction="fallensplit" />
     </ware>
+    <ware id="ship_ter_l_chiba_e" name="{19530007,701}" description="{19530007,801}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="6058790" average="7833870" max="8608951" />
+      <production time="140" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="200" />
+          <ware ware="energycells" amount="900" />
+          <ware ware="metallicmicrolattice" amount="250" />
+        </primary>
+      </production>
+      <component ref="ship_ter_l_chiba_e_macro" amount="1" />
+      <restriction licence="militaryship" />
+      <owner faction="pioneers" />
+      <owner faction="terran" />
+    </ware>
+    <ware id="ship_ter_s_falchion" name="{19530007,711}" description="{19530007,811}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="291338" average="342750" max="394163" />
+      <production time="11" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="8" />
+          <ware ware="energycells" amount="60" />
+          <ware ware="metallicmicrolattice" amount="27" />
+        </primary>
+      </production>
+      <component ref="ship_ter_s_falchion_macro" />
+      <restriction licence="militaryship" />
+      <owner faction="pioneers" />
+      <owner faction="terran" />
+    </ware>
 	<!--WEAPONS-->
     <ware id="weapon_gen_s_plasmabomb" name="{19530007,200}" description="{19530007,300}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
       <price min="150867" average="167630" max="184393" />
@@ -1283,11 +1311,10 @@
       <owner faction="freesplit" />
       <owner faction="split" />
       <owner faction="pioneers" />
-      <owner faction="terran" />	  
-      <owner faction="otas" />		
+      <owner faction="terran" />	  	
     </ware>		
 	<!--iSHIELDS-->
-    <ware id="ishield_spl_s_cheetah" name="{19530007,900}" description="{19530007,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+    <ware id="ishield_spl_l_cheetah" name="{19530007,900}" description="{19530007,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
       <price min="12" average="16" max="21" />
       <production time="1" amount="1" method="default" name="{20206,101}">
         <primary>
@@ -1309,7 +1336,29 @@
       <use threshold="0" />
       <restriction licence="generaluseequipment" />	
     </ware>
-	</add>	
+    <ware id="ishield_ter_l_chiba_e" name="{19530007,901}" description="{19530007,901}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_ter_l_chiba_e_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+    <ware id="ishield_ter_s_falchion" name="{19530007,911}" description="{19530007,911}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_ter_s_falchion" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+	</add>		
 <!--New Xenon War Assets-->
 	<add sel="//wares">
 	<!--SHIPS-->
