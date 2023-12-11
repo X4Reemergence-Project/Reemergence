@@ -3,13 +3,12 @@
   <macro name="bullet_gen_s_plasmabomb_macro" class="bullet">
     <component ref="bullet_gen_s_plasmabomb" />
     <properties>
-	  <bullet speed="1300" lifetime="4.25" range="5525" barrelamount="1" maxhits="1" ricochet="0" restitution="1" scale="0" angle="0.3" attach="0" icon="weapon_sticky_mk2" sticktime="4" />		
-      <heat value="2555" />
-      <reload rate="0.5" />
-      <areadamage value="1000" time="1" lifetime="1" />
-      <damage value="1000" hull="1000" >
-      <multiplier surfaceelement="1.5" />
-      </damage>
+	  <bullet speed="600" lifetime="6" range="3600" barrelamount="1" maxhits="1" ricochet="0" restitution="1" scale="0" angle="1.0" attach="0" icon="weapon_plasma_mk2" />		
+      <heat value="500" />
+      <reload rate="0.2" />
+      <areadamage value="2500" time="10" lifetime="10" />
+<!--      <damage value="3000" >
+      </damage> -->
       <effects>
         <impact ref="impact_bor_l_flak_01_mk1" inside="impact_bor_l_flak_01_mk1_inside" />
         <bigobjectimpact ref="impact_bor_l_flak_01_mk1_bigobject" inside="impact_bor_l_flak_01_mk1_bigobject_inside" />
