@@ -259,6 +259,38 @@
     </pilot>
     <drop ref="masstraffic_civilian"/>
   </ship>
+  
+  <!--SPLIT-->
+  <ship id="split_tug_m" group="common_tug_m">
+	<category tags="[tug, mission]" faction="[split]" size="ship_m"/>
+	<pilot>
+		<select faction="split" tags="traderpilot"/>
+	</pilot>
+	<basket basket="all_container"/>
+	<drop ref="ship_medium_civilian"/>
+	<people ref="split_freighter_crew"/>
+  </ship>
+  <ship id="faf_cheetah" group="faf_cheetah">
+    <category tags="[military, large, cheetah]" faction="[fallensplit]" size="ship_l"/>
+    <owner exact="fallensplit" overridenpc="true"/>
+    <pilot>
+      <select faction="split" tags="fighterpilot"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_large_military"/>
+    <people ref="split_elite_military_crew"/>
+  </ship> 
+  <ship id="faf_wolf" group="faf_wolf">
+    <category tags="[military, small, wolf]" faction="[fallensplit]" size="ship_s"/>
+    <owner exact="fallensplit" overridenpc="true"/>
+    <pilot>
+      <select faction="split" tags="fighterpilot"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_small_military"/>
+    <people ref="split_military_crew"/>
+  </ship>   
+  
   <!--New Xenon War Assets--> 
   <ship id="xenon_reclaimer" group="xen_reclaimer" capturable="false">
 	<category tags="[reclaimer]" faction="[xenon]" size="ship_xl"/>
@@ -302,14 +334,4 @@
 	</pilot>
 	<drop ref="ship_small_xenon"/>
   </ship>
-  <!--Split Scrapper-->
-  <ship id="split_tug_m" group="common_tug_m">
-	<category tags="[tug, mission]" faction="[split]" size="ship_m"/>
-	<pilot>
-		<select faction="split" tags="traderpilot"/>
-	</pilot>
-	<basket basket="all_container"/>
-	<drop ref="ship_medium_civilian"/>
-	<people ref="split_freighter_crew"/>
-  </ship>    
 </ships>

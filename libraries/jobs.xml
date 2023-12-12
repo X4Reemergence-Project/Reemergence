@@ -5580,6 +5580,55 @@
 		</ship>
     </job>	
   </add>
+  <!--SPLIT-->
+  <job id="faf_cheetah_patrol" name="{20204,4201}">
+	<modifiers commandeerable="false"/>
+	<orders>
+      <order order="Patrol" default="true">
+		<param name="range_internal" value="'cluster'"/>
+		<param name="plundermode" value="0"/>	
+      </order>
+	</orders>
+	<category faction="fallensplit" tags="[plunderer, cheetah]" />
+	<quota galaxy="2" sector="1"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[court, freesplit]" relation="self" comparison="exact" matchextension="false"/>
+	<environment buildatshipyard="true"/>
+	<basket basket="pirate_container"/>
+	<ship>
+	  <select faction="fallensplit" tags="[military, large, cheetah]" />
+	  <loadout>
+		<level min="0.7" max="1.0"/>
+	  </loadout>
+	  <owner exact="fallensplit" overridenpc="true"/>
+	</ship>
+	<subordinates>
+	  <subordinate job="faf_escort_mixed"/>
+	</subordinates>
+  </job>
+  
+  <job id="faf_escort_mixed" name="{20204,2901}" startactive="false">
+	<orders>
+	  <order order="Escort" default="true"/>
+        <param name="formation" value="formationshape.pointguard"/>
+        <param name="overrideformationskill" value="true"/>	  
+	</orders>
+	<category faction="fallensplit" tags="[military, fighter]" size="ship_s"/>
+	<quota wing="5" variation="1"/>
+	<location class="galaxy" macro="xu_ep2_universe_macro"/>
+    <environment buildatshipyard="true"/>
+    <modifiers subordinate="true"/>
+	<ship>
+	  <select faction="fallensplit" tags="[military, fighter, heavy]" size="ship_s"/>
+	  <loadout>
+		<level min="0.9" max="1.0"/>
+	  </loadout>
+	  <owner exact="fallensplit" overridenpc="true"/>
+	</ship>
+  </job>
+  
+  <remove sel="//jobs/job[@id='fallensplit_panther_mixed_cluster']" />    
+  
+  
 <!--VIG Rework-->
 <!--
 500 - Avarice

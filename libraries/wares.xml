@@ -983,7 +983,9 @@
 	<!--replace sel="/wares/ware[@id='ship_otas_s_venti']/owner[@faction='argon']/@faction">otas</replace>		
 	<replace sel="/wares/ware[@id='ship_otas_xl_vesuvius']/owner[@faction='argon']/@faction">otas</replace>		
 	<replace sel="/wares/ware[@id='ship_otas_xl_genthus']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_xl_andaman']/owner[@faction='argon']/@faction">otas</replace-->	
+	<replace sel="/wares/ware[@id='ship_otas_xl_andaman']/owner[@faction='argon']/@faction">otas</replace-->
+	<remove sel="//wares/ware[@id='ship_spl_l_panther_a']/owner[@faction='freesplit']"/>
+	<remove sel="//wares/ware[@id='ship_spl_l_panther_a']/owner[@faction='fallensplit']"/>	
 	<!--SHIPS-->  
 	<add sel="//wares">
 		<ware id="ship_otas_l_aquilo_temp" name="{19530002,702}" description="{19530002,802}" group="ships_argon" transport="ship" volume="1" tags="ship">
@@ -1217,8 +1219,7 @@
 		<restriction licence="generaluseship" />
 		<owner faction="otas" />
 	  </ware>
-	</add>
-	<!-- iShields -->		
+	</add>	
 <!--RE Wares-->
 	 <add sel="//wares">
 	<!--SHIPS-->
@@ -1249,6 +1250,7 @@
 	  <owner faction="court" />
 	  <owner faction="freesplit" />
 	  <owner faction="fallensplit" />
+	  <owner faction="split" />	  
     </ware>
     <ware id="ship_ter_l_chiba_e" name="{19530007,701}" description="{19530007,801}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
       <price min="6058790" average="7833870" max="8608951" />
