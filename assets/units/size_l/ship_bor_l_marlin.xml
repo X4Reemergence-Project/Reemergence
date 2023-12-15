@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported on 2023-04-04 16:59:41-->
+<components>
+  <component name="ship_bor_l_marlin" class="ship_l">
+    <source geometry="extensions\reemergence\assets\units\size_l\ship_bor_l_marlin_data" />
+    <layers>
+      <layer>
+        <waypoints>
+          <waypoint name="mt_lane_01_waypoint_01" tags="dynamicmasstraffic end speed_normal typedock " x="-4.956785" y="0.1239624" z="90.6929" qx="0" qy="0" qz="0" qw="-1" />
+          <waypoint name="mt_lane_01_waypoint_02" tags="dynamicmasstraffic speed_normal typenormal " x="-4.956785" y="0.1239624" z="185.0666" qx="0.7071068" qy="0.7071068" qz="0" qw="0">
+            <links>
+              <link ref="mt_lane_01_waypoint_01" />
+            </links>
+          </waypoint>
+          <waypoint name="mt_lane_01_waypoint_03" tags="dynamicmasstraffic speed_normal typenormal " x="-13.52646" y="17.32068" z="231.9903" qx="-0.7046909" qy="-0.6827323" qz="0.05840268" qw="-0.1840561">
+            <links>
+              <link ref="mt_lane_01_waypoint_02" />
+            </links>
+          </waypoint>
+          <waypoint name="mt_lane_01_waypoint_04" tags="closelink dynamicmasstraffic speed_normal start typenormal " x="-13.52646" y="17.32068" z="279.1283" qx="0.7071068" qy="0.7071068" qz="0" qw="0">
+            <links>
+              <link ref="mt_lane_01_waypoint_03" />
+            </links>
+          </waypoint>
+          <waypoint name="mt_lane_01_waypoint_05" tags="dynamicmasstraffic speed_normal typenormal " x="13.52646" y="17.32068" z="231.9903" qx="0.6637682" qy="0.7069147" qz="-0.2437456" qw="-0.01648024">
+            <links>
+              <link ref="mt_lane_01_waypoint_02" />
+            </links>
+          </waypoint>
+          <waypoint name="mt_lane_01_waypoint_06" tags="closelink dynamicmasstraffic speed_normal start typenormal " x="13.52646" y="17.32068" z="279.1283" qx="0.7071068" qy="0.7071068" qz="0" qw="0">
+            <links>
+              <link ref="mt_lane_01_waypoint_05" />
+            </links>
+          </waypoint>
+          <waypoint name="mt_lane_02_waypoint_01" tags="dynamicmasstraffic speed_normal start typedock " x="4.923166" y="0.1239624" z="90.6929" qx="0" qy="0" qz="-0.7071068" qw="-0.7071068">
+            <links>
+              <link ref="mt_lane_02_waypoint_02" />
+            </links>
+          </waypoint>
+          <waypoint name="mt_lane_02_waypoint_02" tags="dynamicmasstraffic speed_normal typenormal " x="4.923166" y="0.1239624" z="185.0666" qx="-0.1842789" qy="0.05814415" qz="-0.6826721" qw="-0.7047122">
+            <links>
+              <link ref="mt_lane_02_waypoint_03" />
+              <link ref="mt_lane_02_waypoint_05" />
+            </links>
+          </waypoint>
+          <waypoint name="mt_lane_02_waypoint_03" tags="dynamicmasstraffic speed_normal typenormal " x="-13.52646" y="-17.07275" z="231.9903" qx="0" qy="0" qz="-0.7071068" qw="-0.7071068">
+            <links>
+              <link ref="mt_lane_02_waypoint_04" />
+            </links>
+          </waypoint>
+          <waypoint name="mt_lane_02_waypoint_04" tags="closelink dynamicmasstraffic end speed_normal typenormal " x="-13.52646" y="-117.07275" z="379.1283" qx="0" qy="0" qz="0" qw="-1" />
+          <waypoint name="mt_lane_02_waypoint_05" tags="dynamicmasstraffic speed_normal typenormal " x="13.52646" y="-17.07275" z="231.9903" qx="2.86e-08" qy="2.86e-08" qz="-0.7071068" qw="-0.7071068">
+            <links>
+              <link ref="mt_lane_02_waypoint_06" />
+            </links>
+          </waypoint>
+          <waypoint name="mt_lane_02_waypoint_06" tags="closelink dynamicmasstraffic end speed_normal typenormal " x="13.52646" y="-17.07275" z="279.1283" qx="0" qy="0" qz="0" qw="-1" />
+        </waypoints>
+      </layer>
+    </layers>
+    <connections>
+      <connection name="space" tags="ship_l ship" />
+      <connection name="position" tags="position" value="1" />
+      <connection name="con_dock_xs_01" tags="dock_xs ">
+        <offset>
+          <position x="0" y="19.3367" z="95.7484" />
+          <quaternion qx="0.7071068" qy="0" qz="0" qw="-0.7071068" />
+        </offset>
+      </connection>
+      <connection name="con_dockarea_arg_s_ship_01" tags="dockarea ">
+        <offset>
+          <position x="0.07889199" y="13.50579" z="36.355" />
+          <quaternion qx="-2.19e-08" qy="0" qz="0" qw="-1" />
+        </offset>
+      </connection>
+      <connection name="con_engine_01" group="group_engines " tags="boron engine large ">
+        <offset>
+          <position x="-46.6713" y="-1.029193" z="1.2586" />
+        </offset>
+      </connection>
+      <connection name="con_engine_02" group="group_engines " tags="boron engine large ">
+        <offset>
+          <position x="-20.14827" y="-6.577796" z="-13.65884" />
+        </offset>
+      </connection>
+      <connection name="con_engine_03" group="group_engines " tags="boron engine large ">
+        <offset>
+          <position x="20.14827" y="-6.577796" z="-13.65886" />
+        </offset>
+      </connection>
+      <connection name="con_engine_04" group="group_engines " tags="boron engine large ">
+        <offset>
+          <position x="46.6713" y="-1.029193" z="1.2586" />
+        </offset>
+      </connection>
+      <connection name="con_shield_l_01" tags="boron large shield ">
+        <offset>
+          <position x="9.537e-07" y="13.00118" z="-12.40258" />
+        </offset>
+      </connection>
+      <connection name="con_shield_l_02" tags="boron large shield ">
+        <offset>
+          <position x="0" y="-2.47453" z="-101.93147" />
+		  <rotation pitch="-7.5" yaw="0" roll="0" />
+        </offset>
+      </connection>
+		<connection name="con_ishield_01" tags="ishield shield ishield_bor_l_marlin">
+			<offset>
+				<position x="0" y="0" z="0"/>
+				<quaternion qx="0" qy="0" qz="0" qw="0"/>
+			</offset>
+		</connection>	  
+      <connection name="con_shield_m_01" group="group_front_down_right " tags="boron hittable medium shield ">
+        <offset>
+          <position x="16.46169" y="-19.69135" z="68.5213" />
+          <quaternion qx="-0.7071067" qy="2.22e-07" qz="-0.7071068" qw="-2.22e-07" />
+        </offset>
+      </connection>
+      <connection name="con_shield_m_02" group="group_front_down_left " tags="boron hittable medium shield ">
+        <offset>
+          <position x="-16.46169" y="-19.69135" z="68.5213" />
+          <quaternion qx="-0.7071067" qy="-3.063e-07" qz="0.7071068" qw="-3.063e-07" />
+        </offset>
+      </connection>
+      <connection name="con_shield_m_03" group="group_mid_down_left " tags="boron hittable medium shield ">
+        <offset>
+          <position x="-17.41826" y="-21.78542" z="-21.6656" />
+          <quaternion qx="0.7673734" qy="-0.0798579" qz="-0.6316063" qw="-0.0763827" />
+        </offset>
+      </connection>
+      <connection name="con_shield_m_04" group="group_mid_down_right " tags="boron hittable medium shield ">
+        <offset>
+          <position x="17.41826" y="-21.78542" z="-21.6656" />
+          <quaternion qx="0.7673733" qy="0.07985787" qz="0.6316063" qw="-0.07638273" />
+        </offset>
+      </connection>
+      <connection name="con_shield_m_05" group="group_engines " tags="boron hittable medium shield ">
+        <offset>
+          <position x="2.2942e-06" y="-15.25261" z="-57.41322" />
+          <quaternion qx="9.02e-08" qy="-0.05548868" qz="0.9984593" qw="-1.6227e-06" />
+        </offset>
+      </connection>
+      <connection name="con_shield_m_06" group="group_engines " tags="boron hittable medium shield ">
+        <offset>
+          <position x="-2.6952e-06" y="-13.95568" z="-67.67168" />
+          <quaternion qx="1.629e-07" qy="0.0554885" qz="-0.9984593" qw="-2.932e-06" />
+        </offset>
+      </connection>
+      <connection name="con_shield_m_07" group="group_engines " tags="boron hittable medium shield ">
+        <offset>
+          <position x="3.6985e-06" y="-12.86701" z="-77.8938" />
+          <quaternion qx="1.629e-07" qy="0.0554885" qz="-0.9984593" qw="-2.932e-06" />
+        </offset>
+      </connection>
+      <connection name="con_shield_m_08" group="group_engines " tags="boron hittable medium shield ">
+        <offset>
+          <position x="1.05567e-05" y="-11.69928" z="-86.19395" />
+          <quaternion qx="1.629e-07" qy="0.0554885" qz="-0.9984593" qw="-2.932e-06" />
+        </offset>
+      </connection>
+      <connection name="con_shield_m_10" group="group_front_up_left " tags="boron hittable medium shield ">
+        <offset>
+          <position x="-34.70919" y="16.37291" z="10.3176" />
+          <quaternion qx="0.08785879" qy="-0.7042466" qz="-0.1031075" qw="-0.6969121" />
+        </offset>
+      </connection>
+      <connection name="con_shield_m_11" group="group_front_up_right " tags="boron hittable medium shield ">
+        <offset>
+          <position x="34.46994" y="16.49021" z="10.3168" />
+          <quaternion qx="0.0878588" qy="0.7042465" qz="0.1031075" qw="-0.6969122" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_01" group="group_front_down_right " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="16.57044" y="-19.80906" z="61.3348" />
+          <quaternion qx="-1.629e-07" qy="-5.205e-07" qz="1" qw="-7.55e-08" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_02" group="group_front_down_right " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="16.22677" y="-19.77736" z="75.7245" />
+          <quaternion qx="-1.629e-07" qy="-5.205e-07" qz="1" qw="-7.55e-08" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_03" group="group_front_down_left " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="-16.22677" y="-19.80906" z="61.3182" />
+          <quaternion qx="-4.888e-07" qy="-7.59e-07" qz="1" qw="-7.55e-08" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_04" group="group_front_down_left " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="-16.57044" y="-19.77736" z="75.7078" />
+          <quaternion qx="-4.888e-07" qy="-7.59e-07" qz="1" qw="-7.55e-08" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_05" group="group_mid_down_left " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="-15.75396" y="-22.00079" z="-28.42962" />
+          <quaternion qx="0.08769783" qy="-0.001529577" qz="-0.9899988" qw="-0.1104963" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_06" group="group_mid_down_left " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="-18.84935" y="-21.58731" z="-13.0482" />
+          <quaternion qx="0.08769771" qy="-0.001530743" qz="-0.989999" qw="-0.1104934" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_07" group="group_mid_down_right " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="15.75396" y="-22.00079" z="-28.42962" />
+          <quaternion qx="0.08769786" qy="0.001529528" qz="0.9899986" qw="-0.1104964" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_08" group=" group_mid_down_right " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="18.84935" y="-21.58731" z="-13.0482" />
+          <quaternion qx="0.08769763" qy="0.001530754" qz="0.9899991" qw="-0.1104936" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_11" group="group_front_up_left " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="-34.44" y="16.54455" z="2.4535" />
+          <quaternion qx="0.01078247" qy="0.005186137" qz="-0.1350334" qw="-0.9907688" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_12" group="group_front_up_left " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="-34.62046" y="16.37867" z="18.1079" />
+          <quaternion qx="0.009749967" qy="-0.0023867" qz="-0.1351119" qw="-0.9907795" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_13" group="group_front_up_right " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="34.51471" y="16.38206" z="18.1342" />
+          <quaternion qx="0.01078259" qy="-0.005186185" qz="0.1350334" qw="-0.9907688" />
+        </offset>
+      </connection>
+      <connection name="con_turret_m_14" group="group_front_up_right " tags="boron combat hittable medium missile turret ">
+        <offset>
+          <position x="34.75451" y="16.43118" z="2.4796" />
+          <quaternion qx="0.009750002" qy="0.00238686" qz="0.1351119" qw="-0.9907795" />
+        </offset>
+      </connection>
+		<connection name="con_weapon_01" tags="component weapon large bor_marlin ">
+			<offset>
+				<position x="0" y="0" z="117.9"/>
+			</offset>
+		</connection>	  
+      <connection name="ConnectionForanim_hatch" tags="anim_dockdoor animation detail_xl forceoutline nocollision part ">
+        <offset>
+          <position x="4.00692e-05" y="0" z="117.9" />
+        </offset>
+        <animations>
+          <animation name="dockingbay_closed" start="1" end="2" />
+          <animation name="dockingbay_opening" start="2" end="26" />
+          <animation name="dockingbay_open" start="26" end="27" />
+          <animation name="dockingbay_closing" start="27" end="51" />
+        </animations>
+        <parts>
+          <part name="anim_hatch">
+            <size>
+              <max x="1.506629" y="0.6076345" z="3.017113" />
+              <center x="-9.686e-07" y="0.2010784" z="-99.510162" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionFordetail_l_main" tags="detail_l forceoutline nocollision part ">
+        <offset>
+          <position x="0" y="0" z="-100" />
+        </offset>
+        <parts>
+          <part name="detail_l_main">
+            <size>
+              <max x="69.45573" y="29.69016" z="176.9607" />
+              <center x="7.6294e-06" y="4.1891" z="-68.88324" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+
+      <connection name="ConnectionFordetail_s_main" tags="detail_s forceoutline nocollision part ">
+        <offset>
+          <position x="0" y="0" z="-100" />
+        </offset>
+        <parts>
+          <part name="detail_s_main">
+            <size>
+              <max x="71.78221" y="38.72614" z="302.8919" />
+              <center x="1.150379" y="-5.220736" z="-109.881332" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionForfx_logo" tags="detail_l forceoutline fx nocollision part ">
+        <offset>
+          <position x="0.0006866455" y="10.70667" z="63.2289" />
+        </offset>
+        <parts>
+          <part name="fx_logo">
+            <size>
+              <max x="50.02325" y="3.079596" z="23.90328" />
+              <center x="-0.0006952286" y="0.6785536" z="-98.422606" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+
+      <connection name="ConnectionForpart_main" tags="part ">
+        <offset>
+          <position x="0" y="0" z="-100" />
+        </offset>        
+		<parts>
+          <part name="part_main" wreck="part_main_wreck">
+            <size>
+              <max x="71.64638" y="30.83459" z="303.8151" />
+              <center x="3.8147e-06" y="-2.438962" z="-124.16489" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="con_cockpit_01" tags="cockpit cockpit_visible ">
+        <offset>
+          <position x="0" y="29.12331" z="117.9724" />
+        </offset>
+      </connection>
+      <connection name="con_countermeasures_01" tags="countermeasures ">
+        <offset>
+          <position x="-10.65054" y="6.875627" z="167.5941" />
+          <quaternion qx="0" qy="0.5" qz="0" qw="-0.8660254" />
+        </offset>
+      </connection>
+      <connection name="con_countermeasures_02" tags="countermeasures ">
+        <offset>
+          <position x="10.66068" y="6.875627" z="167.5941" />
+          <quaternion qx="0" qy="-0.5735766" qz="0" qw="-0.819152" />
+        </offset>
+      </connection>
+      <connection name="con_countermeasures_03" tags="countermeasures ">
+        <offset>
+          <position x="-69.87809" y="0.3128436" z="-5.86312" />
+          <quaternion qx="0" qy="0.7660446" qz="0" qw="-0.6427876" />
+        </offset>
+      </connection>
+      <connection name="con_countermeasures_04" tags="countermeasures ">
+        <offset>
+          <position x="70.0661" y="0.3128436" z="-5.86312" />
+          <quaternion qx="0" qy="-0.7933534" qz="0" qw="-0.6087614" />
+        </offset>
+      </connection>
+      <connection name="con_playercontrol_01" tags="playercontrol ">
+        <offset>
+          <position x="0" y="29.12331" z="85.9409" />
+        </offset>
+      </connection>
+      <connection name="con_room_01" tags="dynamicroom window " value="-1">
+        <offset>
+          <position x="0" y="-24.61249" z="-87.20002" />
+          <quaternion qx="0" qy="-1" qz="0" qw="-1.947e-07" />
+        </offset>
+      </connection>
+      <connection name="con_shipstorage_s_01" tags="dockingbay ">
+        <offset>
+          <position x="0" y="29.12331" z="82.9409" />
+        </offset>
+      </connection>
+      <connection name="con_storage_01" tags="storage ">
+        <offset>
+          <position x="0" y="29.12331" z="76.9409" />
+        </offset>
+      </connection>
+      <connection name="con_shipstorage_xs_01" tags="dockingbay ">
+        <offset>
+          <position x="0" y="29.12331" z="79.9409" />
+        </offset>
+      </connection>
+      <connection name="con_aimtarget_01" tags="aimtarget ">
+        <offset>
+          <position x="0" y="0" z="34.4415" />
+        </offset>
+      </connection>
+
+    </connections>
+  </component>
+</components>
