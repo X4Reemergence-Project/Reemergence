@@ -259,37 +259,60 @@
     </pilot>
     <drop ref="masstraffic_civilian"/>
   </ship>
+
+  <!--BORON-->
+  <ship id="bor_marlin" group="bor_marlin">
+    <category tags="[military, large, marlin]" faction="boron" size="ship_l"/>
+    <pilot>
+      <select faction="boron" tags="fighterpilot" />
+    </pilot>
+    <drop ref="ship_large_military" />
+    <people ref="boron_military_crew" />
+  </ship>
   
   <!--SPLIT-->
   <ship id="split_tug_m" group="common_tug_m">
-	<category tags="[tug, mission]" faction="[split]" size="ship_m"/>
+	<category tags="[tug, mission]" faction="[court, split, freesplit]" size="ship_m"/>
 	<pilot>
 		<select faction="split" tags="traderpilot"/>
 	</pilot>
-	<basket basket="all_container"/>
 	<drop ref="ship_medium_civilian"/>
 	<people ref="split_freighter_crew"/>
   </ship>
-  <ship id="faf_cheetah" group="faf_cheetah">
-    <category tags="[military, large, cheetah]" faction="[fallensplit]" size="ship_l"/>
-    <owner exact="fallensplit" overridenpc="true"/>
+  <ship id="frf_cheetah" group="frf_cheetah">
+    <category tags="[military, large, cheetah]" faction="[freesplit, fallensplit]" size="ship_l"/>
     <pilot>
       <select faction="split" tags="fighterpilot"/>
     </pilot>
-    <basket basket="pirate_container"/>
     <drop ref="ship_large_military"/>
     <people ref="split_elite_military_crew"/>
   </ship> 
-  <ship id="faf_wolf" group="faf_wolf">
-    <category tags="[military, small, wolf]" faction="[fallensplit]" size="ship_s"/>
-    <owner exact="fallensplit" overridenpc="true"/>
+  <ship id="frf_wolf" group="frf_wolf">
+    <category tags="[military, small, wolf]" faction="[freesplit, fallensplit]" size="ship_s"/>
     <pilot>
       <select faction="split" tags="fighterpilot"/>
     </pilot>
-    <basket basket="pirate_container"/>
     <drop ref="ship_small_military"/>
     <people ref="split_military_crew"/>
   </ship>   
+
+  <!--TERRAN-->
+  <ship id="ter_falchion" group="ter_falchion">
+    <category tags="[military, falchion]" faction="[terran]" size="ship_s"/>
+    <pilot>
+      <select faction="terran" tags="fighterpilot"/>
+    </pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="terran_military_crew"/>
+  </ship>
+  <ship id="pio_falchion" group="pio_falchion">
+    <category tags="[military, falchion]" faction="[pioneers]" size="ship_s"/>
+    <pilot>
+      <select faction="pioneers" tags="fighterpilot"/>
+    </pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="pioneers_military_crew"/>
+  </ship>    
   
   <!--New Xenon War Assets--> 
   <ship id="xenon_reclaimer" group="xen_reclaimer" capturable="false">
