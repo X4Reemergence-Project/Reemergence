@@ -1280,6 +1280,19 @@
       <owner faction="pioneers" />
       <owner faction="terran" />
     </ware>
+    <ware id="ship_bor_l_marlin" name="{19530007,720}" description="{19530007,820}" group="ships_boron" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="3653390" average="4401675" max="5149960" />
+      <production time="90" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1500" />
+          <ware ware="hullparts" amount="3900" />
+          <ware ware="water" amount="760" />
+        </primary>
+      </production>
+      <component ref="ship_bor_l_marlin_macro" amount="1" />
+      <restriction licence="militaryship" />
+      <owner faction="boron" />
+    </ware>	
 	<!--WEAPONS-->
     <ware id="weapon_gen_s_plasmabomb" name="{19530007,200}" description="{19530007,300}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
       <price min="150867" average="167630" max="184393" />
@@ -1314,6 +1327,20 @@
       <owner faction="split" />
       <owner faction="pioneers" />
       <owner faction="terran" />	  	
+    </ware>	
+    <ware id="weapon_bor_l_erppc" name="{19530007,201}" description="{19530007,301}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+      <price min="1200201" average="1311335" max="1422468" />
+      <production time="10" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="advancedelectronics" amount="60" />
+          <ware ware="energycells" amount="200" />
+          <ware ware="weaponcomponents" amount="91" />
+        </primary>
+      </production>	
+      <component ref="weapon_bor_l_erppc_macro" amount="1" />
+      <restriction licence="capitalequipment" />
+      <use threshold="0" />
+      <owner faction="boron" />  	
     </ware>		
 	<!--iSHIELDS-->
     <ware id="ishield_spl_l_cheetah" name="{19530007,900}" description="{19530007,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
@@ -1357,6 +1384,17 @@
         </primary>
       </production>
       <component ref="ishield_ter_s_falchion_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+    <ware id="ishield_bor_l_marlin" name="{19530007,920}" description="{19530007,920}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_bor_l_marlin_macro" amount="1" />
       <use threshold="0" />
       <restriction licence="generaluseequipment" />	
     </ware>
