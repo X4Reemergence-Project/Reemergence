@@ -969,7 +969,7 @@
 	</add>			
 	<!-- SHIPS -->  
 	<replace sel="/wares/ware[@id='ship_otas_xl_tempest']/owner[@faction='argon']/@faction">otas</replace>	
-	<!--replace sel="/wares/ware[@id='ship_otas_l_aquilo']/owner[@faction='argon']/@faction">otas</replace-->	
+	<replace sel="/wares/ware[@id='ship_otas_l_aquilo']/owner[@faction='argon']/@faction">otas</replace>	
 	<replace sel="/wares/ware[@id='ship_otas_l_astraeus']/owner[@faction='argon']/@faction">otas</replace>	
 	<replace sel="/wares/ware[@id='ship_otas_l_boreas']/owner[@faction='argon']/@faction">otas</replace>		
 	<!--replace sel="/wares/ware[@id='ship_otas_l_mistral']/owner[@faction='argon']/@faction">otas</replace>	
@@ -988,18 +988,6 @@
 	<remove sel="//wares/ware[@id='ship_spl_l_panther_a']/owner[@faction='fallensplit']"/>	
 	<!--SHIPS-->  
 	<add sel="//wares">
-		<ware id="ship_otas_l_aquilo_temp" name="{19530002,702}" description="{19530002,802}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="10198750" average="11983531" max="13768312" />
-		  <production time="260" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="2280" />
-			  <ware ware="hullparts" amount="10630" />
-		    </primary>
-		  </production>
-		  <component ref="ship_otas_l_aquilo_temp_macro" amount="1"/>
-		  <restriction licence="capitalship"/>
-		  <owner faction="otas"/>
-		</ware>
 		<ware id="ship_otas_l_mistral_temp" name="{19530002,711}" description="{19530002,811}" group="ships_argon" transport="ship" volume="1" tags="ship">
 		  <price min="4614858" average="5422456" max="6230058" />
 		  <production time="350" amount="1" method="default" name="{20206,101}">
