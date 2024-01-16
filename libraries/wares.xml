@@ -1330,7 +1330,87 @@
       <restriction licence="capitalequipment" />
       <use threshold="0" />
       <owner faction="boron" />  	
-    </ware>		
+    </ware>	
+	<!--DRONES-->
+  <replace sel="//wares/ware[@id='ship_gen_s_fightingdrone_01_a']">
+    <ware id="ship_gen_s_fightingdrone_01_a" name="{19530007,1100}" description="{19530007,11001}" group="drones" transport="equipment" volume="1" tags="drone equipment">
+      <price min="11611" average="13660" max="15709" />
+      <production time="90" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="dronecomponents" amount="1" />
+          <ware ware="energycells" amount="50" />
+          <ware ware="smartchips" amount="30" />
+        </primary>
+      </production>
+      <component ref="ship_gen_s_fightingdrone_01_a_macro" />
+      <container ref="sm_gen_pickup_equipment_01_macro" />
+      <restriction licence="generaluseequipment" />	  
+      <use threshold="0" />
+      <owner faction="antigone" />
+      <owner faction="argon" />
+      <owner faction="hatikvah" />	  
+      <owner faction="ministry" />
+      <owner faction="teladi" />
+      <owner faction="scaleplate" />	  
+      <owner faction="alliance" />		
+      <owner faction="holyorder" />
+      <owner faction="paranid" />		
+      <owner faction="trinity" />
+      <owner faction="court" />
+      <owner faction="freesplit" />
+      <owner faction="split" />	
+      <owner faction="loanshark" />	
+      <owner faction="scavenger" />		  
+      <owner faction="otas" />	 	  
+    </ware>
+  </replace>	
+  <ware id="ship_xen_s_fightingdrone_01" name="{19530007,1101}" description="{19530007,11011}" group="drones" transport="equipment" volume="1" tags="noplayerblueprint drone equipment">
+    <price min="11611" average="13660" max="15709" />
+    <production time="10" amount="1" method="xenon" name="{20206,601}" tags="noplayerbuild">
+      <primary>
+        <ware ware="energycells" amount="15" />
+        <ware ware="ore" amount="10" />
+        <ware ware="silicon" amount="10" />
+      </primary>
+    </production>
+    <component ref="ship_xen_s_fightingdrone_01_macro" />
+    <container ref="sm_gen_pickup_equipment_01_macro" />
+    <restriction licence="generaluseequipment" />	
+    <use threshold="0" />
+    <owner faction="xenon" />	
+  </ware>
+  <ware id="ship_ter_s_fightingdrone_01" name="{19530007,1102}" description="{19530007,11021}" group="drones" transport="equipment" volume="1" tags="drone equipment">
+    <price min="11611" average="13660" max="15709" />
+    <production time="90" amount="1" method="terran" name="{20206,901}">
+      <primary>
+        <ware ware="energycells" amount="500" />
+        <ware ware="metallicmicrolattice" amount="29" />
+        <ware ware="siliconcarbide" amount="3" />
+      </primary>
+    </production>
+    <component ref="ship_ter_s_fightingdrone_01_macro" />
+    <container ref="sm_gen_pickup_equipment_01_macro" />
+    <restriction licence="generaluseequipment" />	
+    <use threshold="0" />
+    <owner faction="terran" /> 
+    <owner faction="pioneers" /> 
+    <owner faction="yaki" /> 	
+  </ware>
+  <ware id="ship_bor_s_fightingdrone_01" name="{19530007,1103}" description="{19530007,11031}" group="drones" transport="equipment" volume="1" tags="drone equipment">
+    <price min="11611" average="13660" max="15709" />
+    <production time="90" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="dronecomponents" amount="1" />
+        <ware ware="energycells" amount="50" />
+        <ware ware="smartchips" amount="30" />
+      </primary>
+    </production>
+    <component ref="ship_bor_s_fightingdrone_01_macro" />
+    <container ref="sm_gen_pickup_equipment_01_macro" />
+    <restriction licence="generaluseequipment" />	
+    <use threshold="0" />
+    <owner faction="boron" /> 	
+  </ware>  
 	<!--iSHIELDS-->
     <ware id="ishield_spl_l_cheetah" name="{19530007,900}" description="{19530007,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
       <price min="12" average="16" max="21" />
