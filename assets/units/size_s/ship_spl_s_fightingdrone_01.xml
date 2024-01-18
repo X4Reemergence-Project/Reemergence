@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<components>
+	<component name="ship_spl_s_fightingdrone_01" class="ship_s">
+		<source geometry="extensions\reemergence\assets\units\size_s\ship_spl_s_fightingdrone_01_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights/>
+				<trailemitters>
+					<emitter name="trail_ship_s_01" type="trail_ship_s_01">
+						<offset>
+							<position x="0" y="0" z="-6.82013"/>
+						</offset>
+					</emitter>
+					<emitter name="wingtip_vortex_ship_s_01" type="wingtip_vortex_ship_s_01">
+						<offset>
+							<position x="4.91427" y="-0.026766" z="-2.89722"/>
+						</offset>
+					</emitter>
+					<emitter name="wingtip_vortex_ship_s_01" type="wingtip_vortex_ship_s_01">
+						<offset>
+							<position x="-4.91427" y="-0.026766" z="-2.89722"/>
+						</offset>
+					</emitter>
+				</trailemitters>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="ship ship_s">
+				<offset/>
+			</connection>
+			
+<!-- START GEOMETRY -->				
+			
+      <connection name="detail_l" tags="detail_l forceoutline nocollision part ">
+        <parts>
+          <part name="detail_l">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture_01_aged" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="5.021552" y="1.224654" z="7.288249" />
+              <center x="0" y="0.07834816" z="3.184752" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="fx_decals" tags="detail_s forceoutline nocollision part ">
+        <parts>
+          <part name="fx_decals">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="p1paint.paint_p1_decal_01_spl" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="5.022692" y="1.717248" z="6.553518" />
+              <center x="-1.192093e-07" y="0.2565298" z="2.598102" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="fx_licence" tags="detail_l forceoutline nocollision part ">
+        <parts>
+          <part name="fx_licence">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="p1paint.paint_idcode" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="1.277828" y="0.1977703" z="1.231613" />
+              <center x="0" y="1.175478" z="3.422246" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="part_main" tags="animation part ">
+        <parts>
+          <part name="part_main">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture_01_aged" />
+                  <material id="2" ref="p1split.split_p1_hulltexture_01" />
+                  <material id="3" ref="p1split.spl_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="1">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture_01_aged" />
+                  <material id="2" ref="p1split.split_p1_hulltexture_01" />
+                  <material id="3" ref="p1split.spl_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="2">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture_01_aged" />
+                  <material id="2" ref="p1split.split_p1_hulltexture_01" />
+                  <material id="3" ref="p1split.spl_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="3">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture_01_aged" />
+                  <material id="2" ref="p1split.split_p1_hulltexture_01" />
+                  <material id="3" ref="p1split.spl_p1_fx" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="4.914272" y="1.962035" z="9.132929" />
+              <center x="0" y="0.33054" z="1.00329" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+			
+<!-- END GEOMETRY -->			
+			
+			
+			<connection name="con_dockpos" tags="dockpos ">
+				<offset>
+					<position x="0" y="-1.45397" z="13.2149"/>
+				</offset>
+			</connection>
+			<connection name="con_jumpdrive_001" tags="jumpdrive small">
+				<offset>
+					<position x="0" y="-3.295714" z="-1.563344"/>
+				</offset>
+			</connection>
+			<connection name="con_shield_01" tags="small shield unhittable platformcollision standard">
+				<offset>
+					<position x="0" y="1.178161" z="2.818297"/>
+				</offset>
+			</connection>
+			<connection name="con_ishield_01" tags="ishield shield  ishield_gen_s_fightingdrone_01_a">
+				<offset>
+					<position x="0" y="0" z="0"/>
+				</offset>
+			</connection>
+			<connection name="con_cockpit" tags="cockpit cockpit_visible">
+				<offset>
+					<position x="0" y="-3.281446" z="0.9834399"/>
+				</offset>
+			</connection>
+			<connection name="con_pickuptarget" tags="pickuptarget ">
+				<offset>
+					<position x="0" y="15.19454" z="0"/>
+					<quaternion qx="0.7071068" qy="-0" qz="-0" qw="-0.7071068"/>
+				</offset>
+			</connection>
+			<connection name="con_storage01" tags="storage ">
+				<offset>
+					<position x="0" y="-3.286104" z="3.450597"/>
+				</offset>
+			</connection>
+			<connection name="con_weapon_01" tags="weapon small standard missile  combat">
+				<offset>
+					<position x="0" y="-0.024555" z="5.9564"/>
+					<rotation pitch="0" yaw="0" roll="90"/>
+				</offset>
+			</connection>
+			<connection name="con_engine_01" tags="engine small platformcollision standard">
+				<offset>
+					<position x="0" y="0.06" z="-1.7629"/>
+				</offset>
+			</connection>
+			<connection name="con_cargotube" tags="cargotube">
+				<offset>
+					<position x="0" y="0.1368124" z="0.8490996"/>
+				</offset>
+			</connection>
+			<connection name="con_countermeasures_01" tags="countermeasures ">
+				<offset>
+					<position x="0" y="-0.4895115" z="1.704097"/>
+					<quaternion qx="-0.819152" qy="-0" qz="-0" qw="-0.5735765"/>
+				</offset>
+			</connection>
+			
+			
+		</connections>
+	</component>
+</components>

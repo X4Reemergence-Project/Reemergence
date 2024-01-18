@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <macros>
   <macro name="ship_ter_s_fightingdrone_01_macro" class="ship_s">
-    <component ref="ship_gen_s_fightingdrone_01" />
+    <component ref="ship_ter_s_fightingdrone_01" />
     <properties>
       <identification name="{19530007,1102}" basename="{19530007,1102}" makerrace="terran" description="{19530007,11021}" unit="1" icon="ship_s_drone" />
       <software>
@@ -15,19 +15,19 @@
         <software ware="software_trademk1" compatible="1" />
       </software>
       <storage countermeasure="0" />
-      <hull max="1200" />
+      <hull max="1450" />
       <secrecy level="2" />
       <purpose primary="fight" />
-      <physics mass="7.365">
+      <physics mass="8.5">
         <inertia pitch="1.323" yaw="1.323" roll="1.059" />
-        <drag forward="1.5" reverse="12.365" horizontal="6.494" vertical="6.494" pitch="3.239" yaw="3.239" roll="3.239" />
+        <drag forward="1.825" reverse="13" horizontal="7" vertical="7" pitch="3.5" yaw="3.5" roll="3.5" />
       </physics>
       <thruster tags="small" />
       <loadouts>
         <loadout id="default">
           <macros>
-            <engine macro="engine_arg_s_combat_01_mk2_macro" path="../con_engine_01" />
-            <weapon macro="weapon_gen_s_laser_01_mk1_macro" path="../con_weapon_01" optional="1" />
+            <engine macro="engine_xen_s_combat_01_mk1_macro" path="../con_engine_01" />
+            <weapon macro="weapon_ter_s_laser_01_mk1_macro" path="../con_weapon_01" optional="1" />
             <shield macro="ishield_gen_s_fightingdrone_01_a_macro" path="../con_ishield_01" optional="1" />
           </macros>
           <virtualmacros>

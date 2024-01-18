@@ -1,0 +1,485 @@
+<?xml version="1.0"?>
+<components>
+	<component name="ship_ter_s_fightingdrone_01" class="ship_s">
+		<source geometry="extensions\reemergence\assets\units\size_s\ship_ter_s_fightingdrone_01_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights/>
+				<trailemitters>
+					<emitter name="trail_ship_s_01" type="trail_ship_s_01">
+						<offset>
+							<position x="0" y="0" z="-7.82013"/>
+						</offset>
+					</emitter>
+					<emitter name="wingtip_vortex_ship_s_01" type="wingtip_vortex_ship_s_01">
+						<offset>
+							<position x="4.599127" y="0.1032779" z="-6.651718"/>
+						</offset>
+					</emitter>
+					<emitter name="wingtip_vortex_ship_s_01" type="wingtip_vortex_ship_s_01">
+						<offset>
+							<position x="-4.976405" y="0.1032779" z="-6.651718"/>
+						</offset>
+					</emitter>
+				</trailemitters>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="ship ship_s">
+				<offset/>
+			</connection>
+			
+<!-- START GEOMETRY -->				
+			
+			
+<connection name="ConnectionFordetail_l" tags="detail_l forceoutline nocollision part ">
+        <parts>
+          <part name="detail_l">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="1.629469" y="1.678063" z="6.489311" />
+              <center x="-2.980232e-08" y="-0.1165342" z="-0.04083157" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionFordetail_m" tags="detail_m forceoutline nocollision part ">
+        <parts>
+          <part name="detail_m">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="0.8789299" y="2.415013" z="5.768097" />
+              <center x="-1.122057e-05" y="-0.0186677" z="4.397679" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionForfx_licence" tags="detail_s forceoutline nocollision part ">
+        <parts>
+          <part name="fx_licence">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="p1paint.paint_idcode" />
+                  <material id="2" ref="p1paint.paint_logo" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="1.966096" y="0.782234" z="4.890268" />
+              <center x="3.874302e-07" y="-0.08516037" z="-0.2053213" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionFormarkings_mk1_blue" tags="forceoutline nocollision part ">
+        <parts>
+          <part name="markings_mk1_blue">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="p1terran.ter_p1_hullpattern_01_b" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="0.6547664" y="1.986543" z="3.195543" />
+              <center x="-1.490116e-08" y="2.071922" z="-1.105542" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <!-- <connection name="ConnectionFormarkings_mk2_red" tags="forceoutline nocollision part ">
+        <parts>
+          <part name="markings_mk2_red">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="p1terran.ter_p1_hullpattern_01_b" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="0.6547664" y="1.986543" z="3.195543" />
+              <center x="-1.490116e-08" y="2.071922" z="-1.105542" />
+            </size>
+          </part>
+        </parts>
+      </connection>-->
+      <connection name="ConnectionForpart_main" tags="animation part ">
+        <animations>
+			<animation name="landinggears_inactive" start="1" end="1"/>
+			<animation name="landinggears_activating" start="1" end="60"/>
+			<animation name="landinggears_active" start="60" end="60"/>
+			<animation name="landinggears_deactivating" start="60" end="120"/>
+		</animations>
+		<parts>
+          <part name="part_main" wreck="part_main_wreck">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="p1terran.ter_p1_hullpattern_01" />
+                  <material id="3" ref="generic.generic_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="1">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="p1terran.ter_p1_hullpattern_01" />
+                  <material id="3" ref="generic.generic_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="2">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="p1terran.ter_p1_hullpattern_01" />
+                  <material id="3" ref="generic.generic_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="3">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="p1terran.ter_p1_hullpattern_01" />
+                  <material id="3" ref="generic.generic_p1_fx" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="4.674574" y="3.177979" z="8.574373" />
+              <center x="0" y="1.099443" z="-1.047494" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+			
+			
+		<!-- LANDING GEAR -->			
+			
+			
+			
+			<connection name="Connection06" tags="part animation iklink nocollision forceoutline detail_xl  " parent="part_main">
+				<offset>
+					<position x="0.2320422" y="-1.64945" z="-1.29646" />
+				</offset>
+				<animations/>
+				<parts>
+					<part name="detail_xl_gear_R">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.4478422" y="1.090206" z="3.605683"/>
+							<center x="-1.382308" y="0.2885469" z="-0.1572322"/>
+						</size>
+						<size_raw>
+							<max x="1.825761" y="0.2071501" z="3.762915"/>
+							<center x="-1.380113" y="0.5858018" z="-0.1572319"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection07" tags="part animation iklink nocollision forceoutline detail_xl  " parent="part_main">
+				<offset>
+					<position x="-0.232042" y="-1.64945" z="-1.29646" />
+				</offset>
+				<animations/>
+				<parts>
+					<part name="detail_xl_gear_L">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.4478422" y="1.090207" z="3.605683"/>
+							<center x="1.382308" y="0.2885467" z="-0.1572322"/>
+						</size>
+						<size_raw>
+							<max x="0.9344653" y="0.2071512" z="3.762915"/>
+							<center x="1.380113" y="0.5858018" z="-0.1572319"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			
+			
+<!-- END GEOMETRY -->			
+			
+			
+			<connection name="con_dockpos" tags="dockpos ">
+				<offset>
+					<position x="0" y="-2.43368" z="13.2149"/>
+				</offset>
+			</connection>
+			<connection name="con_jumpdrive_001" tags="jumpdrive small">
+				<offset>
+					<position x="0" y="-3.295714" z="-1.563344"/>
+				</offset>
+			</connection>
+			<connection name="con_shield_01" tags="small shield unhittable platformcollision standard">
+				<offset>
+					<position x="0" y="1.178161" z="2.818297"/>
+				</offset>
+			</connection>
+			<connection name="con_ishield_01" tags="ishield shield  ishield_gen_s_fightingdrone_01_a">
+				<offset>
+					<position x="0" y="0" z="0"/>
+				</offset>
+			</connection>
+			<connection name="con_cockpit" tags="cockpit cockpit_visible">
+				<offset>
+					<position x="0" y="-3.281446" z="0.9834399"/>
+				</offset>
+			</connection>
+			<connection name="con_pickuptarget" tags="pickuptarget ">
+				<offset>
+					<position x="0" y="15.19454" z="0"/>
+					<quaternion qx="0.7071068" qy="-0" qz="-0" qw="-0.7071068"/>
+				</offset>
+			</connection>
+			<connection name="con_storage01" tags="storage ">
+				<offset>
+					<position x="0" y="-3.286104" z="3.450597"/>
+				</offset>
+			</connection>
+			<connection name="con_weapon_01" tags="weapon small standard missile  combat">
+				<offset>
+					<position x="0" y="-1.22044" z="2.95193"/>
+					<rotation pitch="0" yaw="0" roll="90"/>
+				</offset>
+			</connection>
+			<connection name="con_engine_01" tags="engine small platformcollision standard">
+				<offset>
+					<position x="0" y="0.8460547" z="-0.1564285"/>
+				</offset>
+			</connection>
+			<connection name="con_cargotube" tags="cargotube">
+				<offset>
+					<position x="0" y="0.1368124" z="0.8490996"/>
+				</offset>
+			</connection>
+			<connection name="con_countermeasures_01" tags="countermeasures ">
+				<offset>
+					<position x="0" y="-0.4895115" z="1.704097"/>
+					<quaternion qx="-0.819152" qy="-0" qz="-0" qw="-0.5735765"/>
+				</offset>
+			</connection>
+			
+			
+<!-- exhaust -->
+
+ <connection name="ConnectionForfx_exhaust_01" tags="animation detail_l fx nocollision part speedscale_forward textureanimation useobjectrotation ">
+        <offset>
+          <position x="0.8408859" y="-0.7134969" z="-7.100711" />
+        </offset>
+        <restrictions>
+          <restriction type="rotation_x">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+          <restriction type="rotation_y">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+        </restrictions>
+        <animations>
+          <animation name="loop" start="1" end="120" />
+        </animations>
+        <parts>
+          <part name="fx_exhaust_01">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="enginefxp1.engine_fx_arg_gas" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="0.5484011" y="0.5404496" z="2.26313" />
+              <center x="0.06044364" y="0.1293895" z="-2.249765" />
+            </size>
+            <size_raw>
+              <max x="0.548401" y="0.5404496" z="2.26313" />
+              <center x="0.07701247" y="0.1196306" z="-9.608229" />
+            </size_raw>
+            <uv_animations>
+              <uv_animation mapchannel="1">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="8" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="0" />
+                </uv_property>
+              </uv_animation>
+              <uv_animation mapchannel="2">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="2" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="-16" />
+                </uv_property>
+              </uv_animation>
+            </uv_animations>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionForfx_exhaust_02" tags="animation detail_l fx nocollision part speedscale_forward textureanimation useobjectrotation ">
+        <offset>
+          <position x="-1.057618" y="-0.3982445" z="-7.100711" />
+        </offset>
+        <restrictions>
+          <restriction type="rotation_x">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+          <restriction type="rotation_y">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+        </restrictions>
+        <animations>
+          <animation name="loop" start="1" end="120" />
+        </animations>
+        <parts>
+          <part name="fx_exhaust_02">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="enginefxp1.engine_fx_arg_gas" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="0.5434198" y="0.5396259" z="2.298532" />
+              <center x="0.08109647" y="-0.1018809" z="-2.284958" />
+            </size>
+            <size_raw>
+              <max x="0.5434198" y="0.5396259" z="2.298532" />
+              <center x="0.1017352" y="-0.09274594" z="-9.60823" />
+            </size_raw>
+            <uv_animations>
+              <uv_animation mapchannel="1">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="8" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="0" />
+                </uv_property>
+              </uv_animation>
+              <uv_animation mapchannel="2">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="2" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="-16" />
+                </uv_property>
+              </uv_animation>
+            </uv_animations>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionForfx_exhaust_03" tags="animation detail_l fx nocollision part speedscale_forward textureanimation useobjectrotation ">
+        <offset>
+          <position x="0.1604765" y="1.022744" z="-7.100711" />
+        </offset>
+        <restrictions>
+          <restriction type="rotation_x">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+          <restriction type="rotation_y">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+        </restrictions>
+        <animations>
+          <animation name="loop" start="1" end="120" />
+        </animations>
+        <parts>
+          <part name="fx_exhaust_03">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="enginefxp1.engine_fx_arg_gas" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="0.5464886" y="0.5065075" z="2.054324" />
+              <center x="-0.125168" y="-0.01627481" z="-2.042192" />
+            </size>
+            <size_raw>
+              <max x="0.5464886" y="0.5065075" z="2.054323" />
+              <center x="-0.175689" y="-0.01657671" z="-9.60823" />
+            </size_raw>
+            <uv_animations>
+              <uv_animation mapchannel="1">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="8" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="0" />
+                </uv_property>
+              </uv_animation>
+              <uv_animation mapchannel="2">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="2" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="-16" />
+                </uv_property>
+              </uv_animation>
+            </uv_animations>
+          </part>
+        </parts>
+      </connection>			
+			
+		</connections>
+	</component>
+</components>
