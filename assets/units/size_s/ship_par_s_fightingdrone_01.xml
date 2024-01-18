@@ -34,7 +34,24 @@
 			
 <!-- START GEOMETRY -->				
 			
-      <connection name="ConnectionForpart_decals" tags="part ">
+     <connection name="ConnectionForfx_licence" tags="detail_m forceoutline nocollision part ">
+        <parts>
+          <part name="fx_licence">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="p1paint.paint_idcode" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="6.28171" y="0.1990058" z="1.247338" />
+              <center x="-1.192093e-07" y="0.05230911" z="-1.217615" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="part_decals" tags="detail_m forceoutline nocollision part ">
         <parts>
           <part name="part_decals">
             <lods>
@@ -51,7 +68,7 @@
           </part>
         </parts>
       </connection>
-      <connection name="ConnectionForpart_main" tags="part ">
+      <connection name="part_main" tags="part ">
         <parts>
           <part name="part_main">
             <lods>
@@ -62,21 +79,42 @@
                   <material id="3" ref="p1paranid.paranid_p1_fx" />
                 </materials>
               </lod>
+              <lod index="1">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="p1paranid.paranid_p1_hullpattern_01" />
+                  <material id="3" ref="p1paranid.paranid_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="2">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="p1paranid.paranid_p1_hullpattern_01" />
+                  <material id="3" ref="p1paranid.paranid_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="3">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="p1paranid.paranid_p1_hullpattern_01" />
+                  <material id="3" ref="p1paranid.paranid_p1_fx" />
+                </materials>
+              </lod>
             </lods>
             <size>
-              <max x="7.287579" y="1.642617" z="8.771555" />
-              <center x="3.576279e-07" y="-0.1503689" z="-0.882875" />
+              <max x="7.287579" y="1.642619" z="8.771555" />
+              <center x="3.576279e-07" y="-0.1503711" z="-0.882875" />
             </size>
           </part>
         </parts>
-      </connection>			
+      </connection>		
 			
 <!-- END GEOMETRY -->			
 			
 			
 			<connection name="con_dockpos" tags="dockpos ">
 				<offset>
-					<position x="0" y="-2.43368" z="13.2149"/>
+					<position x="0" y="-1.79299" z="13.2149"/>
 				</offset>
 			</connection>
 			<connection name="con_jumpdrive_001" tags="jumpdrive small">
@@ -115,7 +153,13 @@
 					<position x="0" y="-0.960969" z="0.811739"/>
 					<rotation pitch="0" yaw="0" roll="90"/>
 				</offset>
-			</connection>
+			</connection> <!-- second Rail Slugger to compensate for it's shit stats and terrible drone accuracy -->
+			<connection name="con_weapon_02" tags="weapon small standard missile  combat">
+				<offset>
+					<position x="0" y="-0.960969" z="0.811739"/>
+					<rotation pitch="0" yaw="0" roll="90"/>
+				</offset>
+			</connection>			
 			<connection name="con_engine_01" tags="engine small platformcollision standard">
 				<offset>
 					<position x="0" y="0.8460547" z="-0.1564285"/>
