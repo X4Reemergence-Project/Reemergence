@@ -501,8 +501,34 @@
 		<owner faction="ministry"/>		
 	</add>	
 	<!--STATION MODULES-->
-    <replace sel="/wares/ware[@id='struct_otas_cross_01']/owner[@faction='argon']/@faction">otas</replace>
-    <replace sel="/wares/ware[@id='module_otas_prod_stimulants_01']/owner[@faction='argon']/@faction">otas</replace>	
+	<add sel="//wares">  
+      <ware id="struct_otas_cross_01" name="{19530002,400}" description="{19530002,400}" transport="container" volume="1" tags="module">
+		<price min="95300" average="106824" max="118348" />
+		<production time="47" amount="1" method="default" name="{20206,101}">
+          <primary>
+            <ware ware="claytronics" amount="12" />
+            <ware ware="energycells" amount="24" />
+            <ware ware="hullparts" amount="44" />
+          </primary>
+        </production>
+        <component ref="struct_otas_cross_01_macro" amount="1" />
+        <restriction licence="station_gen_basic" />
+        <owner faction="otas" />
+      </ware>
+      <ware id="module_otas_prod_stimulants" name="{19530002,402}" description="{20104,15802}" transport="container" volume="1" tags="module">
+	    <price min="1735171" average="2041378" max="2347585" />
+        <production time="787" amount="1" method="default" name="{20206,901}">
+          <primary>
+            <ware ware="claytronics" amount="319" />
+            <ware ware="energycells" amount="638" />
+            <ware ware="hullparts" amount="1168" />
+          </primary>
+        </production>
+        <component ref="prod_otas_stimulants_macro" />
+        <restriction licence="station_gen_basic" />
+        <owner faction="otas" />
+      </ware>	
+	</add>		
 	<!--TURRETS-->
 	<replace sel="/wares/ware[@id='missile_otas_l_anemoi']/owner[@faction='argon']/@faction">otas</replace>	
 	<replace sel="/wares/ware[@id='turret_otas_l_palc']/owner[@faction='argon']/@faction">otas</replace>	
@@ -1347,7 +1373,7 @@
           <ware ware="metallicmicrolattice" amount="29" />
           <ware ware="siliconcarbide" amount="3" />
         </primary>
-      </production>	 	  
+      </production>	  
       <component ref="ship_gen_s_fightingdrone_01_a_macro" />
       <container ref="sm_gen_pickup_equipment_01_macro" />
       <restriction licence="generaluseequipment" />	  
@@ -1410,7 +1436,7 @@
     <restriction licence="militaryequipment" />	
     <use threshold="0" />
     <owner faction="boron" /> 	
-  </ware>
+  </ware> 
   <ware id="ship_spl_s_fightingdrone_01" name="{19530007,1104}" description="{19530007,11041}" group="drones" transport="equipment" volume="1" tags="drone equipment">
     <price min="11611" average="13660" max="15709" />
     <production time="90" amount="1" method="default" name="{20206,101}">
@@ -1444,7 +1470,7 @@
     <owner faction="holyorder" />
     <owner faction="paranid" />		
     <owner faction="trinity" />	
-  </ware>      
+  </ware>    
 	<!--iSHIELDS-->
     <ware id="ishield_spl_l_cheetah" name="{19530007,900}" description="{19530007,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
       <price min="12" average="16" max="21" />

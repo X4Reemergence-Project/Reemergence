@@ -8,8 +8,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>			
 			</order>
 		</orders>
 		<basket basket="bio_argon"/>
@@ -55,8 +54,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>				
 			</order>
 		</orders>
 		<basket basket="bio_argon"/>
@@ -159,8 +157,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>			
 			</order>
 		</orders>
 		<basket basket="energycells"/>
@@ -249,8 +246,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>			
 			</order>
 		</orders>
 		<basket basket="equipment"/>
@@ -316,8 +312,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>				
 			</order>
 		</orders>
 		<basket basket="construction_stations"/>
@@ -383,8 +378,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>			
 			</order>
 		</orders>
 		<basket basket="construction_ships"/>
@@ -450,8 +444,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>			
 			</order>
 		</orders>
 		<basket basket="refined_gas"/>
@@ -517,8 +510,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>			
 			</order>
 		</orders>
 		<basket basket="refined_mineral_normal_otas"/>
@@ -607,8 +599,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>				
 			</order>
 		</orders>
 		<basket basket="tech"/>
@@ -677,8 +668,7 @@
 				<param name="minbuy" value="0"/>
 				<param name="maxbuy" value="5"/>
 				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-				<param name="dajobsmyfactionfirst" value="true"/>				
+				<param name="maxsell" value="5"/>			
 			</order>
 		</orders>
 		<basket basket="water"/>
@@ -5666,12 +5656,11 @@
 <add sel="//jobs">  
   <job id="faf_cheetah_plunder" name="{20204,4201}">
 	<modifiers commandeerable="false"/>
-	<orders>
+    <orders>
       <order order="Patrol" default="true">
-		<param name="range_internal" value="'cluster'"/>
-		<param name="plundermode" value="0"/>	
+        <param name="range" value="class.sector" />
       </order>
-	</orders>
+    </orders>
 	<category faction="fallensplit" tags="[plunderer, cheetah]" />
 	<quota galaxy="2" sector="1"/>
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="[court, freesplit]" relation="self" comparison="exact" matchextension="false"/>
@@ -5877,10 +5866,10 @@
     <orders>
       <order order="Plunder" default="true">
         <param name="range_internal" value="'sector'"/>
-        <param name="plundermode" value="2"/>
+        <param name="plundermode" value="0"/>
       </order>
     </orders>
-    <category faction="loanshark" tags="[military, raider, iceunion, large]" size="ship_l"/>
+    <category faction="loanshark" tags="[military, plunderer, iceunion, large]" size="ship_l"/>
     <quota galaxy="5" cluster="2"/>
     <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
@@ -5902,10 +5891,10 @@
     <orders>
       <order order="Plunder" default="true">
         <param name="range_internal" value="'sector'"/>
-        <param name="plundermode" value="2"/>
+        <param name="plundermode" value="0"/>
       </order>
     </orders>
-    <category faction="loanshark" tags="[military, raider, iceunion, fighter]" size="ship_s"/>
+    <category faction="loanshark" tags="[military, plunderer, iceunion, fighter]" size="ship_s"/>
     <quota galaxy="7" cluster="3"/>
     <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
@@ -5927,10 +5916,10 @@
     <orders>
       <order order="Plunder" default="true">
         <param name="range_internal" value="'sector'"/>
-        <param name="plundermode" value="2"/>
+        <param name="plundermode" value="0"/>
       </order>
     </orders>
-    <category faction="loanshark" tags="[military, raider, scrapyard, large]" size="ship_l"/>
+    <category faction="loanshark" tags="[military, plunderer, scrapyard, large]" size="ship_l"/>
     <quota galaxy="5" cluster="2"/>
     <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
@@ -5952,10 +5941,10 @@
     <orders>
       <order order="Plunder" default="true">
         <param name="range_internal" value="'sector'"/>
-        <param name="plundermode" value="2"/>
+        <param name="plundermode" value="0"/>
       </order>
     </orders>
-    <category faction="loanshark" tags="[military, raider, scrapyard, fighter]" size="ship_s"/>
+    <category faction="loanshark" tags="[military, plunderer, scrapyard, fighter]" size="ship_s"/>
     <quota galaxy="7" cluster="3"/>
     <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
@@ -5977,10 +5966,10 @@
     <orders>
       <order order="Plunder" default="true">
         <param name="range_internal" value="'sector'"/>
-        <param name="plundermode" value="2"/>
+        <param name="plundermode" value="0"/>
       </order>
     </orders>
-    <category faction="loanshark" tags="[military, raider, aurora, large]" size="ship_l"/>
+    <category faction="loanshark" tags="[military, plunderer, aurora, large]" size="ship_l"/>
     <quota galaxy="5" cluster="2"/>
     <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
@@ -6002,10 +5991,10 @@
     <orders>
       <order order="Plunder" default="true">
         <param name="range_internal" value="'sector'"/>
-        <param name="plundermode" value="2"/>
+        <param name="plundermode" value="0"/>
       </order>
     </orders>
-    <category faction="loanshark" tags="[military, raider, aurora, fighter]" size="ship_s"/>
+    <category faction="loanshark" tags="[military, plunderer, aurora, fighter]" size="ship_s"/>
     <quota galaxy="7" cluster="3"/>
     <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
@@ -6027,10 +6016,10 @@
     <orders>
       <order order="Plunder" default="true">
         <param name="range_internal" value="'sector'"/>
-        <param name="plundermode" value="2"/>
+        <param name="plundermode" value="0"/>
       </order>
     </orders>
-    <category faction="loanshark" tags="[military, raider, common, large]" size="ship_l"/>
+    <category faction="loanshark" tags="[military, plunderer, common, large]" size="ship_l"/>
     <quota galaxy="5" cluster="2"/>
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
@@ -6052,10 +6041,10 @@
     <orders>
       <order order="Plunder" default="true">
         <param name="range_internal" value="'sector'"/>
-        <param name="plundermode" value="2"/>
+        <param name="plundermode" value="0"/>
       </order>
     </orders>
-    <category faction="loanshark" tags="[military, raider, common, fighter]" size="ship_s"/>
+    <category faction="loanshark" tags="[military, plunderer, common, fighter]" size="ship_s"/>
     <quota galaxy="7" cluster="3"/>
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
