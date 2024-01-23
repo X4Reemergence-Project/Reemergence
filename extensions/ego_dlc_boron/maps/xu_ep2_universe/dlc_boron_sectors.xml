@@ -149,5 +149,22 @@
 			</offset>
 			<macro ref="Zone_Gate_Cluster_609_Sector001_macro" connection="sector"/>
 		</connection>
-	</add>			
+	</add>
+	<!--Remove Highways but SoD-->
+  <remove sel="/macros/macro[@name='Cluster_606_Sector001_macro']/connections/connection[@name='Highway01_Cluster606_S1_connection'][@ref='zonehighways']"/>
+  <remove sel="/macros/macro[@name='Cluster_606_Sector001_macro']/connections/connection[@name='Highway02_Cluster606_S1_connection'][@ref='zonehighways']"/>
+  
+  <remove sel="/macros/macro[@name='Cluster_606_Sector002_macro']/connections/connection[@name='Highway01_Cluster606_S2_connection'][@ref='zonehighways']"/>
+  <remove sel="/macros/macro[@name='Cluster_606_Sector002_macro']/connections/connection[@name='Highway02_Cluster606_S2_connection'][@ref='zonehighways']"/>
+  <remove sel="/macros/macro[@name='Cluster_606_Sector002_macro']/connections/connection[@name='Highway03_Cluster606_S2_connection'][@ref='zonehighways']"/>
+  <remove sel="/macros/macro[@name='Cluster_606_Sector002_macro']/connections/connection[@name='Highway04_Cluster606_S2_connection'][@ref='zonehighways']"/>  
+  
+  <remove sel="/macros/macro[@name='Cluster_606_Sector003_macro']/connections/connection[@name='Highway01_Cluster606_S3_connection'][@ref='zonehighways']"/>
+  <remove sel="/macros/macro[@name='Cluster_606_Sector003_macro']/connections/connection[@name='Highway02_Cluster606_S3_connection'][@ref='zonehighways']"/> 
+  
+  <remove sel="/macros/macro[@name='Cluster_608_Sector001_macro']/connections/connection[@name='Highway01_Cluster608_S1_connection'][@ref='zonehighways']"/>
+  <remove sel="/macros/macro[@name='Cluster_608_Sector001_macro']/connections/connection[@name='Highway02_Cluster608_S1_connection'][@ref='zonehighways']"/> 
+  
+  <remove sel="/macros/macro[@name='Cluster_609_Sector001_macro']/connections/connection[@name='Highway01_Cluster609_S1_connection'][@ref='zonehighways']"/>
+  <remove sel="/macros/macro[@name='Cluster_609_Sector001_macro']/connections/connection[@name='Highway02_Cluster609_S1_connection'][@ref='zonehighways']"/>   
 </diff>

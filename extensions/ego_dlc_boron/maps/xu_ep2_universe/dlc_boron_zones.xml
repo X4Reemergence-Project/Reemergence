@@ -228,5 +228,34 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
+	</add>
+	<!--Remove Highway except SoD-->
+  <remove sel="/macros/macro[@name='Zone001_Cluster_606_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+  <remove sel="/macros/macro[@name='Zone001_Cluster_606_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>	
+  <remove sel="/macros/macro[@name='Zone002_Cluster_606_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+  <remove sel="/macros/macro[@name='Zone002_Cluster_606_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+  
+  <remove sel="/macros/macro[@name='Zone002_Cluster_606_Sector002_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>  
+  <remove sel="/macros/macro[@name='Zone002_Cluster_606_Sector002_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+  <remove sel="/macros/macro[@name='Zone003_Cluster_606_Sector002_macro']/connections/connection[@ref='Highway04Connection01_gate']"/>  
+  <remove sel="/macros/macro[@name='Zone003_Cluster_606_Sector002_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>  
+  <remove sel="/macros/macro[@name='Zone005_Cluster_606_Sector002_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>  
+  <remove sel="/macros/macro[@name='Zone005_Cluster_606_Sector002_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>  
+  <remove sel="/macros/macro[@name='Zone005_Cluster_606_Sector002_macro']/connections/connection[@ref='Highway03Connection01_gate']"/> 
+  <remove sel="/macros/macro[@name='Zone005_Cluster_606_Sector002_macro']/connections/connection[@ref='Highway04Connection02_gate']"/>
+  
+  <remove sel="/macros/macro[@name='Zone001_Cluster_606_Sector003_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+  <remove sel="/macros/macro[@name='Zone001_Cluster_606_Sector003_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>  
+  <remove sel="/macros/macro[@name='Zone004_Cluster_606_Sector003_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+  <remove sel="/macros/macro[@name='Zone004_Cluster_606_Sector003_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+  
+  <remove sel="/macros/macro[@name='Zone002_Cluster_608_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+  <remove sel="/macros/macro[@name='Zone002_Cluster_608_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+  <remove sel="/macros/macro[@name='Zone004_Cluster_608_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+  <remove sel="/macros/macro[@name='Zone004_Cluster_608_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+  
+  <remove sel="/macros/macro[@name='Zone002_Cluster_609_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+  <remove sel="/macros/macro[@name='Zone002_Cluster_609_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+  <remove sel="/macros/macro[@name='Zone004_Cluster_609_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+  <remove sel="/macros/macro[@name='Zone004_Cluster_609_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>	  
 </diff>
