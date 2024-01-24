@@ -575,20 +575,24 @@
 	</connection>
 		
 	<!--Sector NXW2 - Matrix #695-->
+	<!--
 	<connection name="Cluster_nxw02_connection" ref="clusters">
 	  <offset><position x="60000000" y="0" z="69280000" /></offset>
 	  <macro ref="Cluster_nxw02_macro" connection="galaxy" />
 	</connection>
-		
+	-->
 	<!--Matrix#695A - Matrix#695B-->
+	<!--
 	<connection name="ClusterGateNXW02AToNXW02B" ref="destination" path="../Cluster_nxw02_connection/Cluster_nxw02_Sector001_connection/Zone_Gate2_Cluster_nxw02_Sector001_connection/connection_ClusterGateNXW02AToNXW02B">
 	  <macro connection="destination" path="../../../../../Cluster_nxw02_connection/Cluster_nxw02_Sector002_connection/Zone_Gate_Cluster_nxw02_Sector002_connection/connection_ClusterGateNXW02BToNXW02A"/>
 	</connection>
-
+	-->
 	<!--Matrix#695A - Pious Mists IV-->
+	<!--
 	<connection name="ClusterGateNXW02ATo037" ref="destination" path="../Cluster_nxw02_connection/Cluster_nxw02_Sector001_connection/Zone_Gate3_Cluster_nxw02_Sector001_connection/connection_ClusterGateNXW02To037">
 	  <macro connection="destination" path="../../../../../Cluster_37_connection/Cluster_37_Sector001_connection/Zone_Gate2_Cluster_37_Sector001_connection/connection_ClusterGate037ToNXW02"/>
-	</connection>		
+	</connection>	
+	-->
   </add>
 	
 	
@@ -1067,6 +1071,12 @@
 			<offset><position x="60000000" y="0" z="-69280000" /></offset>
 			<macro ref="Cluster_REM73_macro" connection="galaxy" />
 		</connection>		
+		
+		<!--Sector REM73 - Tebathimanckatt's Legacy-->
+		<connection name="Cluster_REM74_connection" ref="clusters">
+			<offset><position x="60000000" y="0" z="69280000" /></offset>
+			<macro ref="Cluster_REM74_macro" connection="galaxy" />
+		</connection>			
 	</add>
 
 	<!--Removed Gate Connections-->
@@ -1487,9 +1497,13 @@
 	<connection name="ClusterGateREM21ToREM29" ref="destination" path="../Cluster_REM21_connection/Cluster_REM21_Sector001_connection/ZoneG1_Cluster_REM21_Sector001_connection/connection_ClusterGateREM21ToREM29">
 		<macro connection="destination" path="../../../../../Cluster_REM29_connection/Cluster_REM29_Sector001_connection/ZoneG2_Cluster_REM29_Sector001_connection/connection_ClusterGateREM29ToREM21" />
 	</connection>
-	<!-- Perpetual Sin III - Matrix #695A -->
-	<connection name="ClusterGateREM21ToNXW02" ref="destination" path="../Cluster_REM21_connection/Cluster_REM21_Sector001_connection/ZoneG2_Cluster_REM21_Sector001_connection/connection_ClusterGateREM21ToNXW02">
-		<macro connection="destination" path="../../../../../Cluster_NXW02_connection/Cluster_NXW02_Sector001_connection/Zone_Gate1_Cluster_NXW02_Sector001_connection/connection_ClusterGateNXW02ToREM21" />
+	<!-- Perpetual Sin III - Tebathimanckatt's Legacy -->
+	<connection name="ClusterGateREM21ToREM74" ref="destination" path="../Cluster_REM21_connection/Cluster_REM21_Sector001_connection/ZoneG2_Cluster_REM21_Sector001_connection/connection_ClusterGateREM21ToREM74">
+		<macro connection="destination" path="../../../../../Cluster_REM74_connection/Cluster_REM74_Sector001_connection/Zone_G1_Cluster_REM74_Sector001_connection/connection_ClusterGateREM74ToREM21" />
+	</connection>	
+	<!-- Tebathimanckatt's Legacy - Pious Mists IV -->
+	<connection name="ClusterGateREM74ATo037" ref="destination" path="../Cluster_REM74_connection/Cluster_REM74_Sector001_connection/Zone_G2_Cluster_REM74_Sector001_connection/connection_ClusterGateREM74To037">
+	  <macro connection="destination" path="../../../../../Cluster_37_connection/Cluster_37_Sector001_connection/Zone_Gate2_Cluster_37_Sector001_connection/connection_ClusterGate037ToREM74"/>
 	</connection>	
 	<!-- Perpetual Sin I - Unholy Descent -->
 	<connection name="ClusterGateREM21ToREM23" ref="destination" path="../Cluster_REM21_connection/Cluster_REM21_Sector002_connection/ZoneG1_Cluster_REM21_Sector002_connection/connection_ClusterGateREM21ToREM23">

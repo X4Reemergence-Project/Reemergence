@@ -56,12 +56,12 @@
 	<!--Xenon Stations-->
 	<add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='@$DesiredShipyardPatchMarker']" pos="after">
 		<do_if value="$Faction == faction.xenon">
-			<set_value name="$DesiredShipyards" operation="add" exact="8"/><!--9-->
+			<set_value name="$DesiredShipyards" operation="add" exact="6"/>
 		</do_if>
 	</add>
 	<add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='@$DesiredWharfPatchMarker']" pos="after">
 		<do_if value="$Faction == faction.xenon">
-			<set_value name="$DesiredWharfs" operation="add" exact="8"/><!--9-->
+			<set_value name="$DesiredWharfs" operation="add" exact="7"/>
 		</do_if>
 	</add>	 
 </diff>

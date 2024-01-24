@@ -2627,5 +2627,41 @@
 					</macro>
 				</connection>				
 			</connections>
-		</macro>		
+		</macro>
+	<!--Sector REM74 - Tebathimanckatt's Legacy-->
+  <macro name="Cluster_REM74_macro" class="cluster">
+	<component ref="standardcluster" />
+	<connections>
+	  <connection ref="content">
+		<macro>
+		  <component connection="space" ref="Cluster_rem74" />
+		</macro>
+	  </connection>
+	  <connection name="Cluster_REM74_Sector001_connection" ref="sectors">
+		<macro ref="Cluster_REM74_Sector001_macro" connection="cluster" />
+	  </connection>
+	  <connection name="REM74_Sector001_Region001_connection" ref="regions">
+		<offset>
+		  <position x="0" y="0" z="0" />
+		</offset>
+		<macro name="REM74_Sector001_Region001_macro">
+		<component connection="cluster" ref="standardregion" />
+		<properties>
+		  <region ref="REM74_field1" />
+		</properties>
+		</macro>
+	  </connection>
+	  <connection name="REM74_Sector001_Region002_connection" ref="regions">
+		<offset>
+		  <position x="0" y="0" z="0" />
+		</offset>
+		<macro name="REM74_Sector001_Region002_macro">
+		<component connection="cluster" ref="standardregion" />
+		<properties>
+		  <region ref="rem74_field2" />
+		</properties>
+		</macro>
+	  </connection>				
+	</connections>
+  </macro>		
 </macros>	

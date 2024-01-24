@@ -2551,7 +2551,77 @@
       <resource ware="silicon" yield="medium" />
       <resource ware="methane" yield="high" />
     </resources>
-  </region>   
+  </region>  
+<!--REM74 Tebathimanckatt's Legacy-->  
+  <region name="rem74_field1" density="0.10" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="cylinder">
+      <size r="3500000" linear="40000" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.50" />
+        <step position="0.4" value="0.50" />
+        <step position="0.5" value="1.0" />
+        <step position="0.6" value="0.50" />
+        <step position="1.0" value="0.50" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.9" value="0.30" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <asteroid groupref="asteroid_ore_xxl" lodrule="asteroidxl" densityfactor="0.015" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.65" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ore_xl" lodrule="asteroidxl" densityfactor="0.015" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_nividium_l" densityfactor="0.25" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.8" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ore_l" densityfactor="0.01" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.2" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ore_m" densityfactor="0.04" rotation="360" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.2" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ice_l" densityfactor="0.03" rotation="0" rotationvariation="8" noisescale="15000" seed="888" minnoisevalue="0.75" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ice_m" densityfactor="0.8" rotation="0" rotationvariation="16" noisescale="15000" seed="888" minnoisevalue="0.75" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_silicon_l" densityfactor="0.04" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.2" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_silicon_m" densityfactor="0..1" rotation="360" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.2" maxnoisevalue="1"/>
+    </fields>
+    <resources>
+      <resource ware="ore" yield="verylow" />
+      <resource ware="silicon" yield="verylow" />
+      <resource ware="nividium" yield="medium" />
+      <resource ware="ice" yield="verylow" />
+    </resources>
+  </region>
+  <region name="rem74_field2" density="0.03" rotation="0" noisescale="50000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="cylinder">
+      <size r="1250000" linear="50000" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1"/>
+      <!--Lockboxes end-->	  
+      <debris groupref="debris_xenon_xl" densityfactor="0.7" rotation="8" rotationvariation="4" noisescale="10000" seed="666" minnoisevalue="0.50" maxnoisevalue="1" distancefactor="2.0"/>
+      <debris groupref="debris_xenon_l" densityfactor="0.2" rotation="10" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.50" maxnoisevalue="1" distancefactor="2.0"/>
+      <debris groupref="debris_xenon_m" densityfactor="0.4" rotation="10" rotationvariation="10" noisescale="10000" seed="16" minnoisevalue="0.50" maxnoisevalue="1" distancefactor="2.0"/>
+      <debris groupref="debris_paranid_xl" densityfactor="0.7" rotation="10" rotationvariation="10" noisescale="10000" seed="666" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
+      <debris groupref="debris_paranid_l" densityfactor="0.3" rotation="10" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
+    </fields>
+    <resources>
+      <resource ware="rawscrap" yield="low" />
+    </resources>
+  </region> 
 <!--New Xenon War Assets-->
 <!--NXW01 Bad Debt-->
   <region name="nxw01_field1" density="0.60" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">

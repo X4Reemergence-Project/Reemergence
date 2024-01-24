@@ -1214,7 +1214,7 @@
 					</offset>
 					<macro ref="ZoneG1_Cluster_REM21_Sector001_macro" connection="sector" />
 				</connection>	
-				<connection name="ZoneG2_Cluster_REM21_Sector001_connection" ref="zones"><!--Matrix #695A-->
+				<connection name="ZoneG2_Cluster_REM21_Sector001_connection" ref="zones"><!--Tebathimanckatt's Legacy-->
 					<offset>
 						<position x="92700" y="0" z="142750"/>
 					</offset>
@@ -4604,5 +4604,54 @@
 					<macro ref="Zone005_Cluster_REM73_Sector001_macro" connection="sector"/>	
 				</connection>
 			</connections>
-		</macro>		
+		</macro>
+
+	<!--Sector REM74 - Tebathimanckatt's Legacy-->
+  <macro name="Cluster_REM74_Sector001_macro" class="sector">
+	<component ref="standardsector" />
+	<connections>
+	  <connection name="Zone_G1_Cluster_REM74_Sector001_connection" ref="zones"><!--PERPETUAL SIN III-->
+		<offset>
+		  <position x="-117500" y="1500" z="95000"/>
+		</offset>
+		<macro ref="Zone_G1_Cluster_REM74_Sector001_macro" connection="sector" />
+	  </connection>
+	  <connection name="Zone_G2_Cluster_REM74_Sector001_connection" ref="zones"><!--PIOUS MISTS IV-->
+		<offset>
+		  <position x="135000" y="-1000" z="-125000"/>
+		</offset>
+		<macro ref="Zone_G2_Cluster_REM74_Sector001_macro" connection="sector" />
+	  </connection>			
+	  <connection name="Zone001_Cluster_REM74_Sector001_connection" ref="zones"><!--CENTER-->
+		<offset>	
+		  <position x="0" y="0" z="0"/>	
+		</offset>	
+		<macro ref="Zone001_Cluster_REM74_Sector001_macro" connection="sector"/>	
+	  </connection>
+	  <connection name="Zone002_Cluster_REM74_Sector001_connection" ref="zones"><!--NORTH-->	
+		<offset>	
+		  <position x="0" y="0" z="75000"/>	
+		</offset>	
+		<macro ref="Zone002_Cluster_REM74_Sector001_macro" connection="sector"/>	
+	  </connection>
+	  <connection name="Zone003_Cluster_REM74_Sector001_connection" ref="zones"><!--EAST-->
+		<offset>	
+		  <position x="75000" y="0" z="0"/>	
+		</offset>	
+		<macro ref="Zone003_Cluster_REM74_Sector001_macro" connection="sector"/>	
+	  </connection>
+	  <connection name="Zone004_Cluster_REM74_Sector001_connection" ref="zones"><!--SOUTH-->
+		<offset>	
+		  <position x="0" y="0" z="-75000"/>	
+		</offset>	
+		<macro ref="Zone004_Cluster_REM74_Sector001_macro" connection="sector"/>	
+	  </connection>
+	  <connection name="Zone005_Cluster_REM74_Sector001_connection" ref="zones"><!--WEST-->	
+		<offset>	
+		  <position x="-75000" y="0" z="0"/>	
+		</offset>	
+		<macro ref="Zone005_Cluster_REM74_Sector001_macro" connection="sector"/>	
+	  </connection>
+	</connections>
+  </macro>		
 </macros>

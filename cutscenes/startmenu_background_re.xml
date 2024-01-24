@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+
+<cutscene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cutscenes.xsd">
+
+  <!-- This is the key name used to load and reference the scene. -->
+  <director key="startmenu_re_background" />
+
+  <!-- The environment is automatically deduced from the reference object. -->
+  <environments>
+    <environment_plot name="scenezone">
+      <anchor name="startmenu_reemergence_macro" />
+      <!-- teleport zone="@auto:@playership" -->
+      <teleport zone="tzonecluster_black_sector01_zone_macro">
+        <offset>
+          <position x="0" y="0" z="0"/>
+          <!--<position x="-11680" y="15000" z="11900"/>
+          <rotation yaw="-50"/>-->
+        </offset>
+      </teleport>
+    </environment_plot>
+  </environments>
+
+  <!-- The scene consists of a single sequence of a single shot. -->
+  <presentation>
+    <actions>
+      <sequence name="start_menutest" start="0">
+        <shot name="TestShot" environment="scenezone" duration="onevent:stopscene">
+
+          <camera_animated reference="animobject">
+          </camera_animated>
+
+        </shot>
+      </sequence>
+    </actions>
+  </presentation>
+
+</cutscene>
+

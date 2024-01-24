@@ -431,49 +431,6 @@
 <!--REM13 Dark Waters-->
 <!--REM14 Mists of Elysium-->
 <!--REM15 Depths of Silence-->
-<!-- Disabled due to Boron ineptitude
-	<station id="xen_defence_cluster_REM15_sector001" race="xenon" owner="xenon" type="defence">
-	  <quotas>
-		<quota galaxy="2"/>
-	  </quotas>
-	  <location class="zone" macro="zoneG1_cluster_REM15_sector001_macro" /> 		  
-	  <station>
-		<select faction="xenon" tags="[defence]" />
-		<loadout>
-		  <level exact="1.0" />
-		  <variation exact="0"/>
-		</loadout>
-	 </station>
-	</station>		
-	<station id="shipyard_xenon_cluster_REM15" race="xenon" owner="xenon" type="shipyard" respawnable="true">
-	  <quotas>
-		<quota galaxy="1" />
-	  </quotas>
-	  <location class="zone" macro="zoneSP_cluster_REM15_sector001_macro" />
-	  <position yaw="0" pitch="0" roll="0" />		  	  
-	  <station>
-		<select faction="xenon" tags="[shipyard]" />
-		<loadout>
-		  <level exact="1.0" />
-		  <variation exact="0"/>
-		</loadout>
-	  </station>
-	</station>
-	<station id="wharf_xenon_cluster_REM15" race="xenon" owner="xenon" type="shipyard" respawnable="true">
-	  <quotas>
-		<quota galaxy="1" />
-	  </quotas>
-	  <location class="zone" macro="zoneWF_cluster_REM15_sector001_macro" />
-	  <position yaw="0" pitch="0" roll="0" />		  	  
-	  <station>
-		<select faction="xenon" tags="[wharf]" />
-		<loadout>
-		  <level exact="1.0" />
-		  <variation exact="0"/>
-		</loadout>
-	  </station>
-	</station>	
--->	
 	<!--Station 1-->	
 	<station id="kha_station_01_REM15" owner="khaak" race="khaak">
 	  <quotas>
@@ -1230,6 +1187,7 @@
 		</loadout>
 	  </station>
 	</station>
+	<!-- Disabled in 1.6 in attempt to balance Xenon threat
 	<station id="shipyard_xenon_cluster_REM39" race="xenon" owner="xenon" type="shipyard" respawnable="true">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
@@ -1244,6 +1202,7 @@
 		</loadout>
 	  </station>
 	</station>	
+	-->
 	<station id="wharf_xenon_cluster_REM39" race="xenon" owner="xenon" type="shipyard" respawnable="true">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
@@ -2322,7 +2281,12 @@
 	  </station>
 	</station>	
 <!--REM70 Unknown Kha'ak Sector-->	
-<!--REM71 Unknown Sector-->	
+<!--REM71a Unknown Sector (A)-->	
+<!--REM71b Unknown Sector (B)-->	
+<!--REM71c Unknown Sector (C)-->	
+<!--REM71d Unknown Sector (D)-->	
+<!--REM71e Unknown Sector (E)-->	
+<!--REM71f Unknown Sector (F)-->			
 <!--REM72 Kha'ak Hive-->
 <!--REM73 Shadow's End-->	
 	<station id="otas_defence_cluster_REM73_sector001" race="argon" owner="otas" type="factory">
@@ -2335,7 +2299,7 @@
 	  </station>
 	</station>	
   </add>
-
+<!--REM74 Tebathimanckatt's Legacy-->
 	
   <add sel="/god/products">
 <!--REM00 Oort Cloud Beta-->	
@@ -3284,8 +3248,15 @@
 <!--REM68 Kha'ak Sector Beta-->	
 <!--REM69 Kha'ak Sector Gamma-->	
 <!--REM70 Unknown Kha'ak Sector-->	
-<!--REM71 Unknown Sector-->	
-<!--REM72 Kha'ak Hive-->		
+<!--REM71a Unknown Sector (A)-->	
+<!--REM71b Unknown Sector (B)-->	
+<!--REM71c Unknown Sector (C)-->	
+<!--REM71d Unknown Sector (D)-->	
+<!--REM71e Unknown Sector (E)-->	
+<!--REM71f Unknown Sector (F)-->	
+<!--REM72 Kha'ak Hive-->	
+<!--REM73 Shadow's End-->	
+<!--REM74 Tebathimanckatt's Legacy-->	
   </add>
 	
 <!--New Xenon War Assets-->
@@ -3377,6 +3348,7 @@
 	  </station>
 	</station>		
 	<!-- Matrix #695A -->
+	<!--
 	<station id="xen_defence_nxw02_02" race="xenon" owner="xenon" type="defence">
 	  <quotas>
 		<quota galaxy="3" zone="2" />
@@ -3416,8 +3388,9 @@
 		</loadout>
 	  </station>
 	</station>			
-
+	-->
 	<!-- Matrix #695B -->
+	<!--
 	<station id="xen_defence_nxw02_02_zone01" race="xenon" owner="xenon" type="defence">
 	  <quotas>
 		<quota galaxy="2" />
@@ -3484,7 +3457,8 @@
 		  <variation exact="0.0"/>
 		</loadout>
 	  </station>
-	</station>				
+	</station>	
+	-->
   </add>
 	
   <add sel="/god/products">
@@ -3498,7 +3472,8 @@
 		<select ware="energycells" race="xenon" />
 	  </module>
 	</product>	
-	<!-- Matrix #695A Energy -->		
+	<!-- Matrix #695A Energy -->
+	<!--
 	<product id="nxw_xen_energycells_nxw02_01" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
 		<quota galaxy="2" />
@@ -3508,7 +3483,9 @@
 		<select ware="energycells" race="xenon" />
 	  </module>
 	</product>
-	<!-- Matrix #695B Energy -->		
+	-->
+	<!-- Matrix #695B Energy -->
+	<!--
 	<product id="nxw_xen_energycells_nxw02_02" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
 		<quota galaxy="1" />
@@ -3526,6 +3503,7 @@
 	  <module>
 		<select ware="energycells" race="xenon" />
 	  </module>
-	</product>			
+	</product>
+	-->
   </add>		
 </diff>	

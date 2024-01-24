@@ -1,0 +1,784 @@
+<?xml version="1.0"?>
+<components>
+	<component name="startmenu_reemergence" class="cutsceneanchor">
+		<source geometry="extensions\reemergence\assets\cutscenecore\\startmenu_reemergence_data"/>
+		<properties>
+			<events>
+				<event name="playNext" frame="12000" param1="0" param2="" param3="startmenu_background" param4=""/>
+			</events>
+		</properties>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni001" shadow="0" r="0" g="33" b="52" range="50000" shadowrange="50000" lighteffect="1" trigger="1" intensity="1" specularintensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="-22303.19" y="-8919.183" z="-7837.414"/>
+						</offset>
+					</omni>
+					<omni name="XU Omni01" shadow="0" r="255" g="255" b="223" range="500000" shadowrange="500000" lighteffect="1" lenseffect="sun_c_14" trigger="1" intensity="0.15" specularintensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="-358837.5" y="69504" z="-518242"/>
+						</offset>
+					</omni>
+					<ambient name="XU Ambient01" r="19" g="28" b="35" range="1E+11" intensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="19221.66" y="-13625" z="45102.23"/>
+						</offset>
+					</ambient>
+					<omni name="XU Omni05" shadow="0" r="152" g="179" b="196" range="10000" shadowrange="10000" lighteffect="1" trigger="1" intensity="0.5" specularintensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="-27.98949" y="666.706" z="-16.96429"/>
+						</offset>
+					</omni>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="cutsceneanchor">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part animation  ">
+				<offset/>
+				<animations>
+					<animation name="cutsceneloop" start="1" end="10"/>
+					<animation name="gamestart1" start="1000" end="2000"/>
+					<animation name="gamestart3" start="3000" end="4000"/>
+					<animation name="gamestart4" start="5000" end="6000"/>
+					<animation name="gamestart5" start="7000" end="8500"/>
+				</animations>
+				<parts>
+					<part name="anim_anchor">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="argon.ar_hulls_02"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.5" y="0.5" z="0.5"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="0.5" z="0.5"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+				<camera name="Camera01" fov="90"/>
+				<offset>
+					<quaternion qx="0.7071076" qy="1.928291E-08" qz="8.188592E-08" qw="-0.7071059"/>
+				</offset>
+			</connection>
+			<connection name="Connection02" tags="part animation  " parent="anim_anchor">
+				<offset>
+					<position x="1028.227" y="0" z="26.40137"/>
+				</offset>
+				<parts>
+					<part name="ShipDummy01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="48677.96" y="11.84022" z="255398"/>
+							<center x="-48677.46" y="-10.83018" z="-255397.6"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="3.552714E-15" z="0.5"/>
+							<center x="0" y="0.5000001" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<animations/>
+			</connection>
+			<connection name="ConnectionFor_ship_arg_s_fighter_02_a_macro" tags="ship_s iklink" parent="ShipDummy01"/>
+			<connection name="Connection03" tags="part animation  " parent="anim_anchor">
+				<offset>
+					<position x="1028.227" y="0" z="26.40137"/>
+				</offset>
+				<parts>
+					<part name="ShipDummy03">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="116443" y="8.579237" z="232947.7"/>
+							<center x="116442.4" y="-7.450026" z="-232946.8"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="3.552714E-15" z="0.5"/>
+							<center x="0" y="0.5000001" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<animations/>
+			</connection>
+			<connection name="ConnectionFor_ship_arg_s_scout_01_a_macro" tags="ship_s iklink" parent="ShipDummy03"/>
+			<connection name="Connection04" tags="part animation  " parent="anim_anchor">
+				<offset>
+					<position x="1028.227" y="0" z="26.40137"/>
+				</offset>
+				<parts>
+					<part name="ShipDummy02">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4758.715" y="11.26205" z="97309.48"/>
+							<center x="-4757.953" y="-10.14695" z="-97308.57"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="3.552714E-15" z="0.5"/>
+							<center x="0" y="0.5000001" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<animations/>
+			</connection>
+			<connection name="ConnectionFor_ship_par_s_fighter_01_a_macro" tags="ship_s iklink" parent="ShipDummy02"/>
+			<connection name="Connection05" tags="part animation noshadowcaster  " parent="anim_anchor">
+				<offset>
+					<position x="-38302.22" y="24.50354" z="32139.38"/>
+					<quaternion qx="-0" qy="-0.4226182" qz="-0" qw="0.9063078"/>
+				</offset>
+				<parts>
+					<part name="triggerpart_eventhorizon">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.lightcone_soft"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1765.369" y="1765.368" z="1.984597E-03"/>
+							<center x="2.074219" y="2.671753" z="2.464844"/>
+						</size>
+						<size_raw>
+							<max x="1762.147" y="1762.696" z="6.317707E-05"/>
+							<center x="2.070313" y="2.671814" z="2.466797"/>
+						</size_raw>
+					</part>
+				</parts>
+				<animations>
+					<animation name="loop" start="2" end="2"/>
+				</animations>
+			</connection>
+			<connection name="Connection06" tags="part iklink nocollision animation noshadowcaster  " parent="triggerpart_eventhorizon">
+				<offset>
+					<quaternion qx="2.193503E-07" qy="-2.618747E-07" qz="-0.8660254" qw="0.5"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="100" end="1300"/>
+				</animations>
+				<parts>
+					<part name="anim_whirl002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_gatewhirl_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1821.341" y="1821.342" z="27.23656"/>
+							<center x="-7.257813" y="-6.275177E-04" z="6.091797"/>
+						</size>
+						<size_raw>
+							<max x="1821.339" y="1821.339" z="17.74961"/>
+							<center x="-7.265625" y="1.049042E-04" z="6.095703"/>
+						</size_raw>
+						<offset>
+							<position x="1.726151E-03" y="-4.036903E-03" z="-1.171875E-02"/>
+						</offset>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection07" tags="part iklink nocollision animation noshadowcaster  " parent="triggerpart_eventhorizon">
+				<animations>
+					<animation name="loop" start="100" end="1300"/>
+				</animations>
+				<parts>
+					<part name="anim_whirl001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_gatewhirl_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1921.447" y="1921.447" z="29.2207"/>
+							<center x="29.14063" y="0" z="-24.45117"/>
+						</size>
+						<size_raw>
+							<max x="1921.446" y="1921.446" z="67.26141"/>
+							<center x="29.14063" y="0" z="-24.45117"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection08" tags="part iklink nocollision animation textureanimation noshadowcaster  " parent="triggerpart_eventhorizon">
+				<animations>
+					<animation name="loop" start="100" end="1300"/>
+				</animations>
+				<parts>
+					<part name="anim_whirl_center">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_gatewhirl_02"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1761.205" y="1761.204" z="75.66803"/>
+							<center x="0.984375" y="0" z="-0.8261719"/>
+						</size>
+						<size_raw>
+							<max x="1761.204" y="1761.204" z="76.95325"/>
+							<center x="0.984375" y="0" z="-0.8261719"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="100" value="0"/>
+									<key frame="1300" value="1"/>
+								</uv_property>
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="100" value="-0"/>
+									<key frame="1300" value="-2"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="100" value="0"/>
+									<key frame="1300" value="1"/>
+								</uv_property>
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="100" value="-0"/>
+									<key frame="1300" value="-2"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="100" value="0"/>
+									<key frame="1300" value="1"/>
+								</uv_property>
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="100" value="-0"/>
+									<key frame="1300" value="-2"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection09" tags="part animation  ">
+				<offset>
+					<position x="11.64666" y="6.406616" z="17.84414"/>
+					<quaternion qx="0.1312886" qy="-0.2143735" qz="1.337503E-02" qw="-0.9677956"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="506"/>
+				</animations>
+				<parts>
+					<part name="Shape02">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.multimat"/>
+									<material id="2" ref="p1.multimat"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.199563" y="2.253201" z="0.3515083"/>
+							<center x="7.629395E-06" y="-3.814697E-06" z="-5.722046E-06"/>
+						</size>
+						<size_raw>
+							<max x="3.199562" y="2.2532" z="0.3515063"/>
+							<center x="7.629395E-06" y="-4.291534E-06" z="-1.907349E-06"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="reemergence_text" tags="animation iklink part " parent="Shape02">
+				<offset>
+					<position x="-0.2846708" y="-2.572113" z="0.05868721" />
+				</offset>
+				<parts>
+					<part name="reemergence">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture" />
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.042112" y="0.2464153" z="0.2314233" />
+							<center x="0.1272335" y="-0.02337202" z="0.04858916" />
+						</size>
+					</part>
+				</parts>
+			</connection>			
+			<connection name="Connection10" tags="part animation  " parent="Shape02">
+				<parts>
+					<part name="logo_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2effects.logo_bor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.285477" y="1.760736" z="3.046649E-05"/>
+							<center x="-0.436285" y="-0.2324672" z="0.6773968"/>
+						</size>
+						<size_raw>
+							<max x="2.941101" y="2.147865" z="0.3514485"/>
+							<center x="-0.436285" y="-0.2324662" z="0.6773968"/>
+						</size_raw>
+					</part>
+				</parts>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+			</connection>
+			<connection name="Connection11" tags="part animation iklink  " parent="Shape02">
+				<offset>
+					<position x="2.477842" y="1.760513" z="-1.781891"/>
+				</offset>
+				<animations/>
+				<parts>
+					<part name="Sphere006">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.105917" y="0.1074245" z="0.1032763"/>
+							<center x="1.602173E-04" y="-1.29509E-03" z="-9.202957E-04"/>
+						</size>
+						<size_raw>
+							<max x="0.1" y="0.1" z="0.1"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+						<lights>
+							<omni name="XU Omni004" shadow="0" r="243" g="243" b="243" range="4" shadowrange="4" lighteffect="1" trigger="1" intensity="1.2" specularintensity="1">
+								<lightanimations/>
+								<offset/>
+							</omni>
+						</lights>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection12" tags="part iklink  " parent="Shape02">
+				<offset>
+					<position x="-1.239505" y="-1.737565" z="-3.312559"/>
+				</offset>
+				<parts>
+					<part name="Sphere002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.1049132" y="0.1043755" z="0.104948"/>
+							<center x="-1.664162E-03" y="-2.096176E-03" z="6.160736E-04"/>
+						</size>
+						<size_raw>
+							<max x="0.1" y="0.1" z="0.1"/>
+							<center x="0" y="0" z="9.536743E-07"/>
+						</size_raw>
+						<lights>
+							<omni name="XU Omni003" shadow="0" r="243" g="243" b="243" range="10" shadowrange="10" lighteffect="1" trigger="1" intensity="1.5" specularintensity="1">
+								<lightanimations/>
+								<offset/>
+							</omni>
+						</lights>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection13" tags="part animation iklink  " parent="Shape02">
+				<offset>
+					<position x="-0.5990419" y="0" z="-3.060095"/>
+				</offset>
+				<animations/>
+				<parts>
+					<part name="Sphere01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.1059177" y="0.1074245" z="0.1032743"/>
+							<center x="1.592636E-04" y="-1.296043E-03" z="-9.231567E-04"/>
+						</size>
+						<size_raw>
+							<max x="0.1" y="0.1" z="0.1"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+						<lights>
+							<omni name="XU Omni02" shadow="0" r="243" g="243" b="243" range="10" shadowrange="10" lighteffect="1" trigger="1" intensity="2" specularintensity="1">
+								<lightanimations/>
+								<offset/>
+							</omni>
+						</lights>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection14" tags="part animation  ">
+				<offset>
+					<position x="-14802.51" y="-141.4244" z="6984.238"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="ShipDummy_ter_xl">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="13810.47" y="0.5" z="6097.058"/>
+							<center x="13809.97" y="0.5" z="-6096.553"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="0.5" z="0.5"/>
+							<center x="0" y="0.5" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="ConnectionFor_ship_otas_xl_tempest_macro" tags="ship_xl iklink" parent="ShipDummy_ter_xl"/>
+			<connection name="Connection15" tags="part animation  ">
+				<offset>
+					<position x="1405.63" y="231.2124" z="3469.177"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="ShipDummy_spl_l001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="6295.182" y="903.3" z="4409.938"/>
+							<center x="-157.6691" y="-848.2191" z="-2859.168"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="0.5" z="0.5"/>
+							<center x="0" y="0.5" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection16" tags="part animation  ">
+				<offset>
+					<position x="-16.1937" y="-370.4066" z="3853.58"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="ShipDummy_mt_xs030">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1349.89" y="142.7344" z="2156.738"/>
+							<center x="44.40757" y="142.7175" z="-714.1951"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="0.5" z="0.5"/>
+							<center x="0" y="0.5" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection17" tags="part animation  ">
+				<offset>
+					<position x="0" y="-372.0067" z="1272.061"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="stationDummy_t001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="10023.03" y="0.664463" z="0.7412173"/>
+							<center x="614.4824" y="0.4531555" z="-0.2081299"/>
+						</size>
+						<size_raw>
+							<max x="0.6077867" y="0.664463" z="0.7411925"/>
+							<center x="-3.669339E-02" y="0.4531555" z="-0.2081299"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection18" tags="part animation  ">
+				<offset>
+					<position x="888.056" y="-26.34586" z="-403.1829"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="ShipDummy_ter_s">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3995.164" y="0.7325325" z="2532.989"/>
+							<center x="-3259.156" y="0.3778915" z="187.7544"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="0.5" z="0.5"/>
+							<center x="0" y="0.5" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="ConnectionFor_ship_otas_s_eurus_macro" tags="ship_m iklink" parent="ShipDummy_ter_s"/>
+			<connection name="Connection19" tags="part animation  ">
+				<offset>
+					<position x="2919.142" y="-116.9329" z="-1040.926"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="ShipDummy_ter_s001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2736.894" y="0.5000381" z="2599.818"/>
+							<center x="-2000.886" y="0.4999619" z="273.7147"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="0.5" z="0.5"/>
+							<center x="0" y="0.5" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="ConnectionFor_ship_otas_l_aquilo_macro" tags="ship_m iklink" parent="ShipDummy_ter_s001"/>
+			<connection name="Connection20" tags="part animation ">
+				<offset>
+					<position x="7538.54" y="50" z="-3447.264"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="stationdummy">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2effects.logo_bor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="12936.13" y="50" z="50"/>
+							<center x="-7412.192" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="50" y="50" z="50"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection21" tags="part animation  ">
+				<offset>
+					<position x="-14802.51" y="705.1213" z="6984.238"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="ShipDummy_ter_xl001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="13796.66" y="0.5" z="5788.651"/>
+							<center x="13796.16" y="0.5" z="-5788.146"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="0.5" z="0.5"/>
+							<center x="0" y="0.5" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="ConnectionFor_ship_otas_xl_tempest_macro1" tags="ship_xl iklink" parent="ShipDummy_ter_xl001"/>
+			<connection name="Connection22" tags="part animation  ">
+				<offset>
+					<position x="-14802.51" y="1568.296" z="6984.238"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="ShipDummy_ter_xl002">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="13641.31" y="0.5" z="3090.107"/>
+							<center x="13640.81" y="0.5" z="-3089.602"/>
+						</size>
+						<size_raw>
+							<max x="0.5" y="0.5" z="0.5"/>
+							<center x="0" y="0.5" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="ConnectionFor_ship_otas_xl_tempest_macro2" tags="ship_xl iklink" parent="ShipDummy_ter_xl002"/>
+			<connection name="Connection23" tags="part animation ">
+				<offset>
+					<position x="643.0275" y="-167.7712" z="4393.983"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="12000"/>
+				</animations>
+				<parts>
+					<part name="asteroid_dummy">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="dummy.transparent"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="35.35535" y="25" z="35.35547"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="25" y="25" z="25"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="ConnectionFor_env_asteroid_xenon_xxl_07_macro" tags="asteroid iklink" parent="asteroid_dummy">
+				<offset>
+					<position x="56.40234" y="5.60202" z="7.580078"/>
+					<quaternion qx="9.440965E-03" qy="-0.2162336" qz="-4.258543E-02" qw="0.9753668"/>
+				</offset>
+			</connection>
+			<connection name="PlayerConnection01" value="-1" tags="player ">
+				<offset/>
+			</connection>
+			<connection name="lensConnection" value="-1" tags="lensflare">
+				<offset>
+					<position x="128.8594" y="0" z="1.536123E-05"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionFor_props_gates_anc_gate_macro" tags="gate">
+				<offset>
+					<position x="-38302.22" y="24.50354" z="32139.38"/>
+					<quaternion qx="-0" qy="-0.9063078" qz="-0" qw="-0.4226182"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionFor_env_asteroid_xenon_xxl_05_macro" tags="asteroid">
+				<offset>
+					<position x="-693.8087" y="1391.348" z="9329.048"/>
+					<quaternion qx="-0" qy="-0.6755901" qz="-0" qw="-0.7372774"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionFor_env_asteroid_xenon_xxl_05_macro1" tags="asteroid">
+				<offset>
+					<position x="4327.448" y="-1063.003" z="5701.48"/>
+					<quaternion qx="-0" qy="0.6755902" qz="-0" qw="-0.7372774"/>
+				</offset>
+			</connection>
+		</connections>
+	</component>
+</components>
