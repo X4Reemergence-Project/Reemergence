@@ -1280,8 +1280,12 @@
       <component ref="ship_bor_l_marlin_macro" amount="1" />
       <restriction licence="militaryship" />
       <owner faction="boron" />
-    </ware>	
+    </ware>
+	</add>
 	<!--WEAPONS-->
+	<replace sel="/wares/ware[@id='turret_otas_l_missilefrigate']/owner[@faction='argon']/@faction">otas</replace>
+	<remove sel="/wares/ware[@id='weapon_missile_lint_kitsune_ware']"/>
+	<add sel="//wares">
     <ware id="weapon_gen_s_plasmabomb" name="{19530007,200}" description="{19530007,300}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
       <price min="150867" average="167630" max="184393" />
       <production time="8" amount="1" method="default" name="{20206,101}">
@@ -1330,6 +1334,44 @@
       <use threshold="0" />
       <owner faction="boron" />  	
     </ware>	
+	<ware id="weapon_rangefinder_22km" name="{19530007,202}" description="{19530007,302}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	  <price min="1" average="1" max="1" />
+	  <production time="1" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="1" />
+		</primary>
+	  </production>
+	  <component ref="weapon_rangefinder_22km_macro" amount="1" />
+	  <restriction licence="capitalequipment" />
+	  <use threshold="0" />	  
+	</ware>
+	<ware id="weapon_rangefinder_30km" name="{19530007,203}" description="{19530007,303}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	  <price min="1" average="1" max="1" />
+	  <production time="1" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="1" />
+		</primary>
+	  </production>
+	  <component ref="weapon_rangefinder_30km_macro" amount="1" />
+	  <restriction licence="capitalequipment" />
+	  <use threshold="0" />	  
+	</ware>
+		<ware id="turret_ter_l_missilefrigate" name="{19530007,204}" description="{19530007,304}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+		  <price min="150000" average="200000" max="250000" />
+		  <production time="10" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="computronicsubstrate" amount="123" />
+				<ware ware="energycells" amount="200" />
+				<ware ware="metallicmicrolattice" amount="500" />
+				<ware ware="siliconcarbide" amount="100" />
+			</primary>
+		  </production>
+		  <component ref="turret_ter_l_missilefrigate_macro" amount="1" />
+		  <restriction licence="capitalequipment" />
+		  <use threshold="0" />
+		  <owner faction="terran" />
+		  <owner faction="pioneers" />			
+		</ware>	
 	<!--DRONES-->
   <replace sel="//wares/ware[@id='ship_gen_s_fightingdrone_01_a']">
     <ware id="ship_gen_s_fightingdrone_01_a" name="{19530007,1100}" description="{19530007,11001}" group="drones" transport="equipment" volume="1" tags="drone equipment">
