@@ -179,7 +179,132 @@
 			
 			
 <!-- EXHAUST -->
-	
+      <connection name="ConnectionForfx_exhaust_01" tags="animation detail_l fx nocollision part speedscale_forward textureanimation useobjectrotation ">
+        <offset>
+          <position x="3.529937" y="0.4707303" z="-3.183685" />
+        </offset>
+        <restrictions>
+          <restriction type="rotation_x">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+          <restriction type="rotation_y">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+        </restrictions>
+        <animations>
+          <animation name="loop" start="1" end="120" />
+        </animations>
+        <parts>
+          <part name="fx_exhaust_01">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="enginefxp1.engine_fx_arg_gas" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="1.014544" y="0.2801076" z="2.583616" />
+              <center x="-0.1370149" y="-0.05430907" z="-2.570251" />
+            </size>
+            <size_raw>
+              <max x="1.014544" y="0.2801076" z="2.583616" />
+              <center x="-0.06970159" y="-0.107941" z="-2.354645" />
+            </size_raw>
+            <uv_animations>
+              <uv_animation mapchannel="1">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="8" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="0" />
+                </uv_property>
+              </uv_animation>
+              <uv_animation mapchannel="2">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="2" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="-16" />
+                </uv_property>
+              </uv_animation>
+            </uv_animations>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionForfx_exhaust_02" tags="animation detail_l fx nocollision part speedscale_forward textureanimation useobjectrotation ">
+        <offset>
+          <position x="-3.52994" y="0.4707303" z="-3.183685" />
+        </offset>
+        <restrictions>
+          <restriction type="rotation_x">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+          <restriction type="rotation_y">
+            <limits>
+              <min value="-4.99999985454646" />
+              <max value="4.99999985454646" />
+            </limits>
+          </restriction>
+        </restrictions>
+        <animations>
+          <animation name="loop" start="1" end="120" />
+        </animations>
+        <parts>
+          <part name="fx_exhaust_02">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="enginefxp1.engine_fx_arg_gas" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="1.014544" y="0.2801076" z="2.583616" />
+              <center x="0.1370146" y="-0.05430904" z="-2.57025" />
+            </size>
+            <size_raw>
+              <max x="1.014544" y="0.2801076" z="2.583616" />
+              <center x="0.1370147" y="-0.05430905" z="-2.57025" />
+            </size_raw>
+            <uv_animations>
+              <uv_animation mapchannel="1">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="8" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="0" />
+                </uv_property>
+              </uv_animation>
+              <uv_animation mapchannel="2">
+                <uv_property name="u_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="2" />
+                </uv_property>
+                <uv_property name="v_offset" controller="linear_float">
+                  <key frame="1" value="0" />
+                  <key frame="120" value="-16" />
+                </uv_property>
+              </uv_animation>
+            </uv_animations>
+          </part>
+        </parts>
+      </connection>	
 			
 		</connections>
 	</component>
