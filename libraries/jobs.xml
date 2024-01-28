@@ -2477,7 +2477,7 @@
 			<subordinate job="xenon_frigate_m_escort_sa" rebuild="true" />				
 			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />			
 		</subordinates>
-	</job>	
+	</job>
 	<job id="xenon_destroyers_matrix01" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
@@ -2555,28 +2555,6 @@
 		<category faction="xenon" tags="[military, defender]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="2" />
 		<location class="sector" macro="Cluster_rem26_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="desecrated"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
-			<owner exact="xenon" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="xenon_destroyer_escort_sa" rebuild="true" />
-			<subordinate job="xenon_frigate_m_escort_sa" rebuild="true" />				
-			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />			
-		</subordinates>
-	</job>
-	<job id="xenon_destroyers_matrix472d" name="{19530003,1}" startactive="false">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-				<param name="stayinspace" value="true"/>				
-			</order>
-		</orders>
-		<category faction="xenon" tags="[military, defender]" size="ship_xl"/>
-		<quota galaxy="1" maxgalaxy="2" />
-		<location class="sector" macro="Cluster_rem39_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix472d"/>
 		<environment buildatshipyard="true"/>
 		<ship>
 			<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
@@ -2899,32 +2877,6 @@
 			<subordinate job="xenon_frigate_m_escort_sa" assignment="defence" group="2" rebuild="true" />			
 		</subordinates>
 	</job>
-	<!--NOTE: Doesn't activate, disabled in 1.6 in attempt to balance Xenon threat
-	<job id="xenon_battleship_matrix472d" name="{19530003,1}" startactive="false">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-			  <param name="range" value="class.sector"/>
-			  <param name="stayinspace" value="true"/>
-			  <param name="defences_maxgatedistance" value="1" />
-			  <param name="defences_includedassignments" value="[assignment.attack]" />					
-			</order>
-		</orders>
-		<category faction="xenon" tags="[military, battleship]" size="ship_xl"/>
-		<quota galaxy="1" maxgalaxy="1" />
-		<location class="sector" macro="Cluster_rem39_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix472d"/>
-		<environment buildatshipyard="true"/>
-        <time start="0" interval="7200"/>			
-		<ship>
-			<select faction="xenon" tags="[military, battleship]" size="ship_xl"/>
-			<owner exact="xenon" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="xenon_destroyer_escort_sa" assignment="defence" group="1" rebuild="true" />
-			<subordinate job="xenon_frigate_m_escort_sa" assignment="defence" group="2" rebuild="true" />			
-		</subordinates>
-	</job>
-	-->
 	<job id="xenon_battleship_ptni_headquarters" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
@@ -4483,7 +4435,7 @@
 				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
-		</job>		
+		</job>			
 <!--Desecrated Skies-->
 		<job id="xenon_battleship_patrol_xl_defence_desecrated_skies" name="{20204,5201}" >
 			<modifiers commandeerable="false"/>
@@ -4654,51 +4606,6 @@
 			</ship>
 		</job>		
 <!--Matrix #472D-->
-	<!--NOTE: Doesn't activate, disabled in 1.6 in attempt to balance Xenon threat
-		<job id="xenon_battleship_patrol_xl_defence_matrix472d" name="{20204,5201}" >
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>	
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, carrier]" size="ship_xl"/>
-			<quota galaxy="1" sector="1"/>
-			<location class="sector" macro="Cluster_rem39_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<time start="3600" interval="3600"/>			
-			<ship>
-				<select faction="xenon" tags="[military, carrier]" size="ship_xl"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_destroyer_escort"/>
-				<subordinate job="xenon_frigate_m_escort"/>				
-			</subordinates>
-		</job>
-		<job id="xenon_destroyer_patrol_xl_matrix472d" name="{20204,3801}">
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>	
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
-			<quota galaxy="2" maxgalaxy="3"/>
-			<location class="sector" macro="Cluster_rem39_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_frigate_m_escort"/>
-				<subordinate job="xenon_frigate_s_escort"/>				
-			</subordinates>
-		</job>
-	-->	
 		<job id="xenon_patrol_m_matrix472d" name="{20204,5201}" >
 			<modifiers commandeerable="true"/>
 			<orders>
