@@ -986,6 +986,7 @@
 	<replace sel="/wares/ware[@id='ship_otas_xl_andaman']/owner[@faction='argon']/@faction">otas</replace-->
 	<remove sel="//wares/ware[@id='ship_spl_l_panther_a']/owner[@faction='freesplit']"/>
 	<remove sel="//wares/ware[@id='ship_spl_l_panther_a']/owner[@faction='fallensplit']"/>	
+	<remove sel="/wares/ware[@id='ship_ter_l_carrier_01']"/>	<!--Remove VRO Chiba-->	
 	<!--SHIPS-->  
 	<add sel="//wares">
 		<ware id="ship_otas_l_mistral_temp" name="{19530002,711}" description="{19530002,811}" group="ships_argon" transport="ship" volume="1" tags="ship">
@@ -1374,15 +1375,15 @@
 	<!--DRONES-->
   <replace sel="//wares/ware[@id='ship_gen_s_fightingdrone_01_a']">
     <ware id="ship_gen_s_fightingdrone_01_a" name="{19530007,1100}" description="{19530007,11001}" group="drones" transport="equipment" volume="1" tags="drone equipment">
-      <price min="11611" average="13660" max="15709" />
-      <production time="90" amount="1" method="default" name="{20206,101}">
+      <price min="8128" average="9562" max="11000" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
         <primary>
           <ware ware="dronecomponents" amount="1" />
-          <ware ware="energycells" amount="50" />
-          <ware ware="smartchips" amount="30" />
+          <ware ware="energycells" amount="35" />
+          <ware ware="smartchips" amount="20" />
         </primary>
       </production>
-      <production time="90" amount="1" method="terran" name="{20206,901}">
+      <production time="1" amount="1" method="terran" name="{20206,901}">
         <primary>
           <ware ware="energycells" amount="500" />
           <ware ware="metallicmicrolattice" amount="29" />
@@ -1422,7 +1423,7 @@
   </ware>
   <ware id="ship_ter_s_fightingdrone_01" name="{19530007,1102}" description="{19530007,11021}" group="drones" transport="equipment" volume="1" tags="drone equipment">
     <price min="11611" average="13660" max="15709" />
-    <production time="90" amount="1" method="terran" name="{20206,901}">
+    <production time="1" amount="1" method="terran" name="{20206,901}">
       <primary>
         <ware ware="energycells" amount="500" />
         <ware ware="metallicmicrolattice" amount="29" />
@@ -1439,7 +1440,7 @@
   </ware>
   <ware id="ship_bor_s_fightingdrone_01" name="{19530007,1103}" description="{19530007,11031}" group="drones" transport="equipment" volume="1" tags="drone equipment">
     <price min="11611" average="13660" max="15709" />
-    <production time="90" amount="1" method="default" name="{20206,101}">
+    <production time="1" amount="1" method="default" name="{20206,101}">
       <primary>
         <ware ware="dronecomponents" amount="1" />
         <ware ware="energycells" amount="50" />
@@ -1454,7 +1455,7 @@
   </ware> 
   <ware id="ship_spl_s_fightingdrone_01" name="{19530007,1104}" description="{19530007,11041}" group="drones" transport="equipment" volume="1" tags="drone equipment">
     <price min="11611" average="13660" max="15709" />
-    <production time="90" amount="1" method="default" name="{20206,101}">
+    <production time="1" amount="1" method="default" name="{20206,101}">
       <primary>
         <ware ware="dronecomponents" amount="1" />
         <ware ware="energycells" amount="50" />
@@ -1471,7 +1472,7 @@
   </ware>  
   <ware id="ship_par_s_fightingdrone_01" name="{19530007,1105}" description="{19530007,11051}" group="drones" transport="equipment" volume="1" tags="drone equipment">
     <price min="11611" average="13660" max="15709" />
-    <production time="90" amount="1" method="default" name="{20206,101}">
+    <production time="1" amount="1" method="default" name="{20206,101}">
       <primary>
         <ware ware="dronecomponents" amount="1" />
         <ware ware="energycells" amount="50" />

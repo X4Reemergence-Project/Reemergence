@@ -14,12 +14,10 @@
 				<find_sector name="$Savage_Spur" space="player.galaxy" macro="macro.cluster_112_sector001_macro" required="true"/>
 					<!--New Xenon War-->
 				<find_sector name="$Bad_Debt" space="player.galaxy" macro="macro.cluster_nxw01_sector001_macro" required="true"/>
-				<!--find_sector name="$Matrix695b" space="player.galaxy" macro="macro.cluster_nxw02_sector002_macro" required="true"/-->	
 					<!--X:Reemergence-->
 				<find_sector name="$Matrix01" space="player.galaxy" macro="macro.cluster_rem01_sector001_macro" required="true"/>
 				<find_sector name="$Matrix48" space="player.galaxy" macro="macro.cluster_rem06_sector001_macro" required="true"/>
 				<find_sector name="$Split_Fire" space="player.galaxy" macro="macro.cluster_rem12_sector001_macro" required="true"/>
-				<!--find_sector name="$Depths_Of_Silence" space="player.galaxy" macro="macro.cluster_rem15_sector001_macro" required="true"/-->
 				<find_sector name="$Desecrated_Skies" space="player.galaxy" macro="macro.cluster_rem26_sector001_macro" required="true"/>
 				<find_sector name="$Matrix472d" space="player.galaxy" macro="macro.cluster_rem39_sector001_macro" required="true"/>	
 				<find_sector name="$PTNI_Headquarters" space="player.galaxy" macro="macro.cluster_rem44_sector001_macro" required="true"/>				
@@ -101,15 +99,6 @@
 								<set_job_active job="'xenon_reclaimer_bad_debt'" activate="false"/>
 								<debug_text text="'Deactivated Bad Debt Reclaimer.'"/>								
 							</do_elseif>
-							<!--
-							<do_elseif value="(event.object == $Matrix695b) and (not $JobSectorsActivated.indexof.{event.object})">
-								<set_job_active job="'xenon_reclaimer_matrix695b'" activate="true"/>
-								<append_to_list name="$JobSectorsActivated" exact="event.object"/>
-								<debug_text text="'Activated Matrix695B Reclaimer.'"/>
-								<set_job_active job="'xenon_reclaimer_matrix695b'" activate="false"/>
-								<debug_text text="'Deactivated Matrix695B Reclaimer.'"/>								
-							</do_elseif>
-							-->
 							<!--X:Reemergence-->
 							<do_elseif value="(event.object == $Matrix01) and (not $JobSectorsActivated.indexof.{event.object})">
 								<set_job_active job="'xenon_reclaimer_matrix01'" activate="true"/>
@@ -132,15 +121,6 @@
 								<set_job_active job="'xenon_reclaimer_split_fire'" activate="false"/>
 								<debug_text text="'Deactivated Split Fire Reclaimer.'"/>								
 							</do_elseif>
-							<!--
-							<do_elseif value="(event.object == $Depths_Of_Silence) and (not $JobSectorsActivated.indexof.{event.object})">
-								<set_job_active job="'xenon_reclaimer_depths_of_silence'" activate="true"/>
-								<append_to_list name="$JobSectorsActivated" exact="event.object"/>
-								<debug_text text="'Activated Depths of Silence Reclaimer.'"/>
-								<set_job_active job="'xenon_reclaimer_depths_of_silence'" activate="false"/>
-								<debug_text text="'Deactivated Depths of Silence Reclaimer.'"/>								
-							</do_elseif>
-							-->
 							<do_elseif value="(event.object == $Desecrated_Skies) and (not $JobSectorsActivated.indexof.{event.object})">
 								<set_job_active job="'xenon_reclaimer_desecrated_skies'" activate="true"/>
 								<append_to_list name="$JobSectorsActivated" exact="event.object"/>
@@ -163,7 +143,7 @@
 								<debug_text text="'Deactivated PTNI Headquarters Reclaimer.'"/>									
 							</do_elseif>							
 							<!-- Cleanup -->
-							<do_if value="$JobSectorsActivated.count ge 14"> <!--16-->
+							<do_if value="$JobSectorsActivated.count ge 14">
 								<cancel_cue cue="MainCheck.static"/>
 								<debug_text text="'ActivateReclaimer: Canceling MainCheck.static.'"/>
 							</do_if>
