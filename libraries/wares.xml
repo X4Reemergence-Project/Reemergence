@@ -498,7 +498,8 @@
 		<owner faction="otas"/>
 		<owner faction="freesplit"/>
 		<owner faction="split"/>
-		<owner faction="ministry"/>		
+		<owner faction="ministry"/>	
+		
 	</add>	
 	<!--STATION MODULES-->	
 	<replace sel="/wares/ware[@id='struct_otas_cross_01']/owner[@faction='argon']/@faction">otas</replace>	
@@ -1282,7 +1283,47 @@
       <restriction licence="militaryship" />
       <owner faction="boron" />
     </ware>
-	</add>
+    <ware id="ship_arg_m_tm" name="{19530007,733}" description="{19530007,833}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="354000" average="416470" max="478940" />
+		<production time="20" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="108" />
+				<ware ware="hullparts" amount="191" />
+			</primary>
+		</production>
+      <component ref="ship_arg_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="argon" />
+	  <owner faction="antigone" />
+    </ware>
+    <ware id="ship_tel_m_tm" name="{19530007,734}" description="{19530007,834}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="419716" average="493784" max="567851" />
+		<production time="31" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="161" />
+				<ware ware="hullparts" amount="283" />
+			</primary>
+		</production>
+      <component ref="ship_tel_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="teladi" />
+	  <owner faction="ministry" />
+    </ware>
+    <ware id="ship_par_m_tm" name="{20101,120901}" description="{19530007,832}" group="ships_paranid" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="389386" average="458100" max="526816" />
+		<production time="31" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="120" />
+				<ware ware="hullparts" amount="210" />
+			</primary>
+		</production>
+      <component ref="ship_par_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="paranid" />
+	  <owner faction="holyorder" />
+    </ware>
+	</add>		
+	
 	<!--WEAPONS-->
 	<remove sel="/wares/ware[@id='weapon_missile_lint_kitsune_ware']"/>
 	<add sel="//wares">
