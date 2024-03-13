@@ -4961,41 +4961,140 @@
      </ship>
    </job>
 	<!--Kha'ak-->
-	<job id="khaak_awoken_sector_fighter_s_group" name="{20204,3401}">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
-		<quota galaxy="20" maxgalaxy="25"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
-		<environment buildatshipyard="false" gate="true"/>
-		<ship>
-			<select faction="khaak" tags="[fighter]" size="ship_m"/>
-			<owner exact="khaak" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="khaak_fighter_escort_s" assignment="attack"/>	
-		</subordinates>
+	<job id="khaak_awoken_fighter_m_cluster" name="{20204,3401}">
+	  <modifiers commandeerable="false"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+	  <quota galaxy="10" maxgalaxy="15"/>
+	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[fighter]" size="ship_m"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_escort_s" assignment="attack" rebuild="false"/>	
+	  </subordinates>
 	</job>
-	<job id="khaak_awoken_sector_fighter_s_single" name="{20204,5401}">
-	<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
-		<quota galaxy="40" maxgalaxy="45"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
-		<environment buildatshipyard="false" gate="true"/>
-		<ship>
-			<select faction="khaak" tags="[fighter]" size="ship_m"/>
-			<owner exact="khaak" overridenpc="true"/>
-		</ship>
+	<job id="khaak_awoken_fighter_m_single" name="{20204,5401}">
+	  <modifiers commandeerable="false"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+	  <quota galaxy="20" maxgalaxy="25"/>
+	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[fighter]" size="ship_m"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
     </job>	
+    <job id="khaak_invader_fighter_alpha" name="{20204,4201}">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+      <quota galaxy="3" maxgalaxy="5"/>
+      <time interval="600"/>
+      <location class="sector" macro="Cluster_REM67_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
+      </subordinates>
+    </job>
+    <job id="khaak_invader_fighter_beta" name="{20204,4201}">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+      <quota galaxy="3" maxgalaxy="5"/>
+      <time interval="600"/>
+      <location class="sector" macro="Cluster_REM68_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
+      </subordinates>
+    </job>
+    <job id="khaak_invader_fighter_gamma" name="{20204,4201}">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+      <quota galaxy="3" maxgalaxy="5"/>
+      <time interval="600"/>
+      <location class="sector" macro="Cluster_REM69_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
+      </subordinates>
+    </job>
+    <job id="khaak_fighter_m_escort" name="{20204,4201}" startactive="false">
+      <orders>
+        <order order="Escort" default="true">
+          <param name="formation" value="formationshape.halfcircle"/>
+          <param name="formationparam" value="32.5"/>
+          <param name="rollformation" value="true"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[military, fighter]" size="ship_s"/>
+      <quota wing="4" variation="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <modifiers subordinate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_escort_s2" assignment="attack" rebuild="false"/>
+      </subordinates>
+    </job>
+    <job id="khaak_fighter_escort_s2" name="{20204,4201}" startactive="false">
+      <orders>
+        <order order="Escort" default="true">
+          <param name="formation" value="formationshape.halfcircle"/>
+          <param name="formationparam" value="32.5"/>
+          <param name="rollformation" value="true"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[military, fighter]" size="ship_s"/>
+      <quota wing="5" variation="2"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <modifiers subordinate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter, escort]" size="ship_s"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+    </job> 	
   </add>
   <!--BORON-->
 <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector']" pos="after">  
@@ -5025,50 +5124,51 @@
   </job>  
 </add>  
   <!--SPLIT-->
-<add sel="//jobs">  
-  <job id="faf_cheetah_plunder" name="{20204,4201}">
-	<modifiers commandeerable="false"/>
-    <orders>
-      <order order="Patrol" default="true">
-        <param name="range" value="class.sector" />
-      </order>
-    </orders>
-	<category faction="fallensplit" tags="[plunderer, cheetah]" />
-	<quota galaxy="2" sector="1"/>
-    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[court, freesplit]" relation="self" comparison="exact" matchextension="false"/>
-	<environment buildatshipyard="true"/>
-	<basket basket="pirate_container"/>
-	<ship>
-	  <select faction="fallensplit" tags="[military, large, cheetah]" />
-	  <loadout>
-		<level min="0.7" max="1.0"/>
-	  </loadout>
-	  <owner exact="fallensplit" overridenpc="true"/>
-	</ship>
-	<subordinates>
-	  <subordinate job="faf_escort_mixed"/>
-	</subordinates>
-  </job>
-  <job id="faf_escort_mixed" name="{20204,3401}" startactive="false">
-	<orders>
-	  <order order="Escort" default="true"/>
-        <param name="formation" value="formationshape.pointguard"/>
-        <param name="overrideformationskill" value="true"/>	  
-	</orders>
-	<category faction="fallensplit" tags="[military, fighter]" size="ship_s"/>
-	<quota wing="5" variation="1"/>
-	<location class="galaxy" macro="xu_ep2_universe_macro"/>
-    <environment buildatshipyard="true"/>
-    <modifiers subordinate="true"/>
-	<ship>
-	  <select faction="fallensplit" tags="[military, fighter, heavy]" size="ship_s"/>
-	  <loadout>
-		<level min="0.9" max="1.0"/>
-	  </loadout>
-	  <owner exact="fallensplit" overridenpc="true"/>
-	</ship>
-  </job>
-</add>  
+  <add sel="//jobs">
+    <job id="faf_cheetah_plunder" name="{20204,4201}">
+	  <modifiers commandeerable="false"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector" />
+        </order>
+      </orders>
+	  <category faction="fallensplit" tags="[plunderer, cheetah]" />
+	  <quota galaxy="5" sector="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="[court, freesplit, strongarms]" relation="self" comparison="exact" matchextension="false"/>
+	  <environment buildatshipyard="true"/>
+	  <basket basket="pirate_container"/>
+	  <ship>
+	    <select faction="fallensplit" tags="[military, large, cheetah]" />
+	    <loadout>
+		  <level min="0.7" max="1.0"/>
+	    </loadout>
+	    <owner exact="fallensplit" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+	    <subordinate job="faf_escort_mixed"/>
+	  </subordinates>
+   </job>
+    <job id="faf_escort_mixed" name="{20204,3401}" startactive="false">
+	  <orders>
+	    <order order="Escort" default="true">
+          <param name="formation" value="formationshape.pointguard"/>
+          <param name="overrideformationskill" value="true"/>	
+        </order>		  
+	  </orders>
+	  <category faction="fallensplit" tags="[military, fighter]" size="ship_s"/>
+	  <quota wing="5" variation="1"/>
+	  <location class="galaxy" macro="xu_ep2_universe_macro"/>
+      <environment buildatshipyard="true"/>
+      <modifiers subordinate="true"/>
+	  <ship>
+	    <select faction="fallensplit" tags="[military, fighter, heavy]" size="ship_s"/>
+	    <loadout>
+		  <level min="0.9" max="1.0"/>
+	    </loadout>
+	    <owner exact="fallensplit" overridenpc="true"/>
+	  </ship>
+    </job>
+  </add> 
 	<!--Modified Jobs-->
   <remove sel="//jobs/job[@id='fallensplit_panther_mixed_cluster']" />	<!--VRO: Removed since the Cheetah replaces it for Free Families and Fallen Split-->    
  

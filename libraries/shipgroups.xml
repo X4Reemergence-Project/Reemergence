@@ -84,13 +84,6 @@
 	  <select macro="ship_otas_s_solano_macro" weight="100"/>			
 	</group>
   </add>	
-
-	<!--BORON-->
-  <add sel="//groups">		
-	<group name="bor_marlin">	
-	  <select macro="ship_bor_l_marlin_macro" weight="100" /> 
-	</group>
-  </add>    
   
 	<!--SPLIT-->
   <add sel="/groups/group[@name='spl_panther_l']">
@@ -161,7 +154,14 @@
   <add sel="/groups/group[@name='pio_fighter_s']"> 
 	<select macro="ship_ter_s_falchion_macro" weight="20" />  	
   </add>   
-  
+ 
+	<!--BORON-->
+  <add sel="//groups">		
+	<group name="bor_marlin">	
+	  <select macro="ship_bor_l_marlin_macro" weight="100" /> 
+	</group>
+  </add>    
+ 
 	<!--XENON-->
   <add sel="/groups/group[@name='xen_fighter_m']">
 	<select macro="ship_xen_m_fighter_y_macro" weight="10" />

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libraries.xsd">
+<diff>
+  <add sel="//ships">
   <ship id="otas_builder_xl" group="otas_builder_xl">
     <category tags="[builder, mission]" faction="[otas]" size="ship_xl"/>
     <pilot>
@@ -259,16 +260,6 @@
     </pilot>
     <drop ref="masstraffic_civilian"/>
   </ship>
-
-  <!--BORON-->
-  <ship id="bor_marlin" group="bor_marlin">
-    <category tags="[military, large, marlin]" faction="boron" size="ship_l"/>
-    <pilot>
-      <select faction="boron" tags="fighterpilot" />
-    </pilot>
-    <drop ref="ship_large_military" />
-    <people ref="boron_military_crew" />
-  </ship>
   
   <!--SPLIT-->
   <ship id="split_tug_m" group="common_tug_m">
@@ -314,6 +305,16 @@
     <people ref="pioneers_military_crew"/>
   </ship>    
   
+  <!--BORON-->
+  <ship id="bor_marlin" group="bor_marlin">
+    <category tags="[military, large, marlin]" faction="boron" size="ship_l"/>
+    <pilot>
+      <select faction="boron" tags="fighterpilot" />
+    </pilot>
+    <drop ref="ship_large_military" />
+    <people ref="boron_military_crew" />
+  </ship>  
+  
   <!--New Xenon War Assets--> 
   <ship id="xenon_reclaimer" group="xen_reclaimer" capturable="false">
 	<category tags="[reclaimer]" faction="[xenon]" size="ship_xl"/>
@@ -357,4 +358,5 @@
 	</pilot>
 	<drop ref="ship_small_xenon"/>
   </ship>
-</ships>
+</add>
+</diff>
