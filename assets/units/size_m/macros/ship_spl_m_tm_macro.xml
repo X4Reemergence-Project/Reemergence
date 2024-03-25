@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: Michael (192.168.3.59) at 13.10.2021_12-21-44-->
+<macros>
+  <macro name="ship_spl_m_tm_macro" class="ship_m">
+    <component ref="ship_spl_m_tm" />
+    <properties>
+      <identification name="{19530007,730}" basename="{19530007,730}" makerrace="split" description="{19530007,830}" icon="ship_m_neutral_01" />
+      <software>
+        <software ware="software_dockmk2" compatible="1" />
+        <software ware="software_flightassistmk1" default="1" />
+        <software ware="software_scannerlongrangemk1" default="1" />
+        <software ware="software_scannerlongrangemk2" compatible="1" />
+        <software ware="software_scannerobjectmk1" default="1" />
+        <software ware="software_scannerobjectmk2" compatible="1" />
+        <software ware="software_targetmk1" compatible="1" />
+        <software ware="software_trademk1" default="1" />
+      </software>
+      <explosiondamage value="100" shield="500" />
+      <storage missile="20" />
+      <hull max="24200" />
+      <secrecy level="1" />
+      <purpose primary="fight" />
+      <people capacity="19" />
+      <physics mass="56.286">
+        <inertia pitch="15.581" yaw="15.581" roll="12.465" />
+        <drag forward="6.0" reverse="20.0" horizontal="18.34" vertical="18.34" pitch="16.572" yaw="16.572" roll="16.572" />
+      </physics>
+      <thruster tags="medium" />
+      <ship type="carrier" />
+      <sound_occlusion inside="0.4" />
+    </properties>
+    <connections>
+      <connection ref="con_cockpit">
+        <macro ref="cockpit_gen_virtual_01_macro" connection="ship" />
+      </connection>
+      <connection ref="con_dock_xs">
+        <macro ref="dock_gen_xs_ship_01_macro" connection="Connection_component" />
+      </connection>
+      <connection ref="con_shipstorage_xs_01">
+        <macro ref="shipstorage_gen_xs_01_macro" connection="object" />
+      </connection>
+      <connection ref="con_storage01">
+        <macro ref="storage_spl_s_trans_container_01_a_macro" connection="ShipConnection" />
+      </connection>
+	<connection ref="con_dockingarea_invisible_left_01">
+		<macro ref="dockarea_invisible_s_macro" connection="Connection01" />
+	</connection>
+	<connection ref="con_dockingarea_invisible_left_02">
+		<macro ref="dockarea_invisible_s_macro" connection="Connection01" />
+	</connection>
+	<connection ref="con_dockingarea_invisible_right_01">
+		<macro ref="dockarea_invisible_s_macro" connection="Connection01" />
+	</connection>
+	<connection ref="con_dockingarea_invisible_right_02">
+		<macro ref="dockarea_invisible_s_macro" connection="Connection01" />
+	</connection>
+    <connection ref="con_buildmodule">
+        <macro ref="buildmodule_gen_carrier_macro" connection="object" />
+    </connection>		  
+	  
+	  
+    </connections>
+  </macro>
+</macros>
