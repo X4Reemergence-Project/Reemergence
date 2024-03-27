@@ -887,15 +887,15 @@
 	  <macro ref="Cluster_REM52_macro" connection="galaxy" />
 	</connection>
 	
-	<!--Sector REM53 - Legend's Home-->
+	<!--Sector REM53 - Legend's Home Alpha-->
 	<connection name="Cluster_REM53_connection" ref="clusters">
 	  <offset><position x="45000000" y="0" z="-77940000" /></offset>
 	  <macro ref="Cluster_REM53_macro" connection="galaxy" />
 	</connection>
 	
-	<!--Sector REM54 - PTNI Headquarters-->
+	<!--Sector REM54 - Legend's Home Beta-->
 	<connection name="Cluster_REM54_connection" ref="clusters">
-	  <offset><position x="90000000" y="0" z="-34640000" /></offset>
+	  <offset><position x="45000000" y="0" z="-95260000" /></offset>
 	  <macro ref="Cluster_REM54_macro" connection="galaxy" />
 	</connection>	
 	
@@ -1302,14 +1302,26 @@
 	
 	
 <!--TERRAN-->	
-	<!-- Mars - Mars Beta -->
+	<!-- Mars - Ares -->
 	<connection name="ClusterGate101ToREM02" ref="destination" path="../Cluster_101_connection/Cluster_101_Sector001_connection/Zone002_Cluster_101_Sector001_connection/connection_ClusterGate101ToREM02">
 		<macro connection="destination" path="../../../../../Cluster_REM02_connection/Cluster_REM02_Sector001_connection/Zone004_Cluster_REM02_Sector001_connection/connection_ClusterGateREM02To101" />
+	</connection>
+	<!-- Earth - The Moon -->
+	<connection name="ClusterGate104s1To104s2" ref="destination" path="../Cluster_104_connection/Cluster_104_Sector001_connection/Zone_Gate1_Cluster_104_Sector001_connection/connection_ClusterGate104s1To104s2">
+		<macro connection="destination" path="../../../../../Cluster_104_connection/Cluster_104_Sector002_connection/Zone_Gate1_Cluster_104_Sector002_connection/connection_ClusterGate104s2To104s1" />
 	</connection>	
-	<!-- Mercury - Mercury Beta -->
+	<!-- Mercury - Hermes -->
 	<connection name="ClusterGate106ToREM03" ref="destination" path="../Cluster_106_connection/Cluster_106_Sector001_connection/Zone002_Cluster_106_Sector001_connection/connection_ClusterGate106ToREM03">
 		<macro connection="destination" path="../../../../../Cluster_REM03_connection/Cluster_REM03_Sector001_connection/Zone003_Cluster_REM03_Sector001_connection/connection_ClusterGateREM03To106" />
 	</connection>
+	<!-- Saturn I - Titan -->
+	<connection name="ClusterGate108s1To108s2" ref="destination" path="../Cluster_108_connection/Cluster_108_Sector001_connection/Zone_Gate2_Cluster_108_Sector001_connection/connection_ClusterGate108s1To108s2">
+		<macro connection="destination" path="../../../../../Cluster_108_connection/Cluster_108_Sector002_connection/Zone_Gate1_Cluster_108_Sector002_connection/connection_ClusterGate108s2To108s1" />
+	</connection>	
+	<!-- Saturn I - Saturn II -->
+	<connection name="ClusterGate108s1To108s3" ref="destination" path="../Cluster_108_connection/Cluster_108_Sector001_connection/Zone_Gate1_Cluster_108_Sector001_connection/connection_ClusterGate108s1To108s3">
+		<macro connection="destination" path="../../../../../Cluster_108_connection/Cluster_108_Sector003_connection/Zone_Gate1_Cluster_108_Sector003_connection/connection_ClusterGate108s3To108s1" />
+	</connection>	
 	<!-- Titan - Uranus -->
 	<connection name="ClusterGate108To109" ref="destination" path="../Cluster_108_connection/Cluster_108_Sector002_connection/Zone003_Cluster_108_Sector002_connection/connection_ClusterGate108To109">
 		<macro connection="destination" path="../../../../../Cluster_109_connection/Cluster_109_Sector001_connection/Zone002_Cluster_109_Sector001_connection/connection_ClusterGate109To108" />
@@ -1539,7 +1551,7 @@
 	<connection name="ClusterGateREM31ToREM32" ref="destination" path="../Cluster_REM31_connection/Cluster_REM31_Sector001_connection/ZoneG1_Cluster_REM31_Sector001_connection/connection_ClusterGateREM31ToREM32">
 		<macro connection="destination" path="../../../../../Cluster_REM32_connection/Cluster_REM32_Sector001_connection/ZoneG1_Cluster_REM32_Sector001_connection/connection_ClusterGateREM32ToREM31" />
 	</connection>
-	<!-- The Shallows - Queen's Space -->
+	<!-- The Shallows - Queen's Retribution -->
 	<connection name="ClusterGateREM31ToREM38" ref="destination" path="../Cluster_REM31_connection/Cluster_REM31_Sector001_connection/ZoneG2_Cluster_REM31_Sector001_connection/connection_ClusterGateREM31ToREM38">
 		<macro connection="destination" path="../../../../../Cluster_REM38_connection/Cluster_REM38_Sector001_connection/ZoneG1_Cluster_REM38_Sector001_connection/connection_ClusterGateREM38ToREM31" />
 	</connection>
@@ -1555,15 +1567,15 @@
 	<connection name="ClusterGateREM33ToREM39" ref="destination" path="../Cluster_REM33_connection/Cluster_REM33_Sector001_connection/ZoneG2_Cluster_REM33_Sector001_connection/connection_ClusterGateREM33ToREM39">
 		<macro connection="destination" path="../../../../../Cluster_REM39_connection/Cluster_REM39_Sector001_connection/ZoneG1_Cluster_REM39_Sector001_connection/connection_ClusterGateREM39ToREM33" />
 	</connection>	
-	<!-- Hila's Joy IV - Queen's Space -->
+	<!-- Blue Horizon I - Queen's Retribution -->
 	<connection name="ClusterGateREM35ToREM38" ref="destination" path="../Cluster_REM35_connection/Cluster_REM35_Sector002_connection/ZoneG1_Cluster_REM35_Sector002_connection/connection_ClusterGateREM35ToREM38">
 		<macro connection="destination" path="../../../../../Cluster_REM38_connection/Cluster_REM38_Sector001_connection/ZoneG3_Cluster_REM38_Sector001_connection/connection_ClusterGateREM38ToREM35" />
 	</connection>
-	<!-- Hila's Joy IV - Lucky Planets -->
-	<connection name="ClusterGateREM35ToREM37" ref="destination" path="../Cluster_REM35_connection/Cluster_REM35_Sector002_connection/ZoneG2_Cluster_REM35_Sector002_connection/connection_ClusterGateREM35ToREM37">
+	<!-- Blue Horizon IV - Queen's Harbour -->
+	<connection name="ClusterGateREM35ToREM37" ref="destination" path="../Cluster_REM35_connection/Cluster_REM35_Sector001_connection/ZoneG2_Cluster_REM35_Sector001_connection/connection_ClusterGateREM35ToREM37">
 		<macro connection="destination" path="../../../../../Cluster_REM37_connection/Cluster_REM37_Sector001_connection/ZoneG2_Cluster_REM37_Sector001_connection/connection_ClusterGateREM37ToREM35" />
 	</connection>
-	<!-- Hila's Joy IX - Great Trench -->
+	<!-- Blue Horizon IV - Great Trench -->
 	<connection name="ClusterGateREM35ToREM36" ref="destination" path="../Cluster_REM35_connection/Cluster_REM35_Sector001_connection/ZoneG1_Cluster_REM35_Sector001_connection/connection_ClusterGateREM35ToREM36">
 		<macro connection="destination" path="../../../../../Cluster_REM36_connection/Cluster_REM36_Sector001_connection/ZoneG1_Cluster_REM36_Sector001_connection/connection_ClusterGateREM36ToREM35" />
 	</connection>
@@ -1575,13 +1587,13 @@
 	<connection name="ClusterGateREM36ToREM39" ref="destination" path="../Cluster_REM36_connection/Cluster_REM36_Sector001_connection/ZoneG3_Cluster_REM36_Sector001_connection/connection_ClusterGateREM36ToREM39">
 		<macro connection="destination" path="../../../../../Cluster_REM39_connection/Cluster_REM39_Sector001_connection/ZoneG2_Cluster_REM39_Sector001_connection/connection_ClusterGateREM39ToREM36" />
 	</connection>	
-	<!-- Lucky Planets - Queen's Space -->
+	<!-- Queen's Harbour - Queen's Retribution -->
 	<connection name="ClusterGateREM37ToREM38" ref="destination" path="../Cluster_REM37_connection/Cluster_REM37_Sector001_connection/ZoneG1_Cluster_REM37_Sector001_connection/connection_ClusterGateREM37ToREM38">
 		<macro connection="destination" path="../../../../../Cluster_REM38_connection/Cluster_REM38_Sector001_connection/ZoneG2_Cluster_REM38_Sector001_connection/connection_ClusterGateREM38ToREM37" />
 	</connection>	
-	<!-- Lucky Planets - Sacred Relic -->
+	<!-- Queen's Harbour - Sacred Relic -->
 	<connection name="ClusterGateREM37To023" ref="destination" path="../Cluster_REM37_connection/Cluster_REM37_Sector001_connection/ZoneG3_Cluster_REM37_Sector001_connection/connection_ClusterGateREM37To023">
-		<macro connection="destination" path="../../../../../Cluster_23_connection/Cluster_23_Sector001_connection/Zone_Gate_Cluster_23_Sector001_connection/connection_ClusterGate023ToREM37" />
+		<macro connection="destination" path="../../../../../Cluster_23_connection/Cluster_23_Sector001_connection/Zone_Gate1_Cluster_23_Sector001_connection/connection_ClusterGate023ToREM37" />
 	</connection>
 	<!-- Ocracoke's Storm II - Shadows of Giants VI -->
 	<connection name="ClusterGateREM40ToREM41" ref="destination" path="../Cluster_REM40_connection/Cluster_REM40_Sector002_connection/ZoneG1_Cluster_REM40_Sector002_connection/connection_ClusterGateREM40ToREM41">

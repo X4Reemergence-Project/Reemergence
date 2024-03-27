@@ -119,7 +119,23 @@
 		<offset>
           <position x="18335" y="0" z="-85625" />
 		</offset>
-	</replace>	
+	</replace>
+	<add sel="//macro[@name='Cluster_104_Sector001_macro']/connections"><!--Earth <-> The Moon-->
+		<connection name="Zone_Gate1_Cluster_104_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-50000" y="0" z="-200000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_104_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>		
+	<add sel="//macro[@name='Cluster_104_Sector002_macro']/connections"><!--The Moon <-> Earth-->
+		<connection name="Zone_Gate1_Cluster_104_Sector002_connection" ref="zones">
+			<offset>
+				<position x="50000" y="0" z="200000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_104_Sector002_macro" connection="sector"/>
+		</connection>
+	</add>	
 
 	
 	<!-- Sector 106 - Mercury -->
@@ -153,7 +169,7 @@
 	</replace>
 	
 	
-	<!-- Sector 108 - Saturn 1/Titan/2 -->
+	<!-- Sector 108 - Saturn 1/2/Titan -->
 	<replace sel="/macros/macro[@name='Cluster_108_Sector001_macro']/connections/connection[@name='Zone001_Cluster_108_Sector001_connection']/offset"><!---->
 		<offset>
           <position x="-114155" y="0" z="116120" />
@@ -179,6 +195,38 @@
           <position x="-44815" y="0" z="-136465" />
 		</offset>
 	</replace>
+	<add sel="//macro[@name='Cluster_108_Sector001_macro']/connections"><!--Saturn 1 <-> Saturn 2-->
+		<connection name="Zone_Gate1_Cluster_108_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-85000" y="0" z="150000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_108_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>		
+	<add sel="//macro[@name='Cluster_108_Sector001_macro']/connections"><!--Saturn 1 <-> Titan-->
+		<connection name="Zone_Gate2_Cluster_108_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-50000" y="0" z="-200000"/>
+			</offset>
+			<macro ref="Zone_Gate2_Cluster_108_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>	
+	<add sel="//macro[@name='Cluster_108_Sector002_macro']/connections"><!--Titan <-> Saturn 1-->
+		<connection name="Zone_Gate1_Cluster_108_Sector002_connection" ref="zones">
+			<offset>
+				<position x="50000" y="0" z="200000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_108_Sector002_macro" connection="sector"/>
+		</connection>
+	</add>
+	<add sel="//macro[@name='Cluster_108_Sector003_macro']/connections"><!--Saturn 2 <-> Saturn 1-->
+		<connection name="Zone_Gate1_Cluster_108_Sector003_connection" ref="zones">
+			<offset>
+				<position x="8500" y="0" z="-1750"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_108_Sector003_macro" connection="sector"/>
+		</connection>
+	</add>
 
 	
 	<!-- Sector 109 - Uranus -->

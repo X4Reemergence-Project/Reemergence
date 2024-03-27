@@ -1322,6 +1322,33 @@
       <owner faction="paranid" />
 	  <owner faction="holyorder" />
     </ware>
+    <ware id="ship_bor_m_tm" name="{20101,51501}" description="{19530007,835}" group="ships_boron" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="302277" average="355620" max="408963" />
+		<production time="31" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="92" />
+				<ware ware="hullparts" amount="210" />
+				<ware ware="water" amount="108" />
+			</primary>
+		</production>
+      <component ref="ship_bor_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="boron" />
+    </ware>
+    <ware id="ship_spl_m_tm" name="{19530007,730}" description="{19530007,830}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="317679" average="373740" max="429801" />
+		<production time="31" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="126" />
+				<ware ware="hullparts" amount="300" />
+			</primary>
+		</production>
+      <component ref="ship_spl_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="split" />
+	  <owner faction="fallensplit" />
+	  <owner faction="freesplit" />
+    </ware>	
 	</add>		
 	
 	<!--WEAPONS-->

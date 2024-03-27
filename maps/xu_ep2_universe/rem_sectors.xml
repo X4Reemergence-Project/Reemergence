@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <macros>		
-		<!--Sector REM00 - OORT CLOUD BETA-->
+		<!--Sector REM00 - PLANET 9-->
 		<macro name="Cluster_REM00_Sector001_macro" class="sector">
 			<component ref="standardsector" />
 			<connections>
@@ -10,7 +10,7 @@
 					</offset>
 					<macro ref="ZoneG1_Cluster_REM00_Sector001_macro" connection="sector" />
 				</connection>	
-				<connection name="ZoneG2_Cluster_REM00_Sector001_connection" ref="zones"><!--MATRIX #01-->
+				<connection name="ZoneG2_Cluster_REM00_Sector001_connection" ref="zones"><!--McCALLUM RELAY-->
 					<offset>
 						<position x="82700" y="500" z="16750"/>
 					</offset>
@@ -49,11 +49,11 @@
 			</connections>
 		</macro>
 		
-		<!--Sector REM01 - MATRIX #01-->
+		<!--Sector REM01 - MCCALLUM RELAY-->
 		<macro name="Cluster_REM01_Sector001_macro" class="sector">
 			<component ref="standardsector" />
 			<connections>
-				<connection name="ZoneG1_Cluster_REM01_Sector001_connection" ref="zones"><!--OORT CLOUD BETA-->
+				<connection name="ZoneG1_Cluster_REM01_Sector001_connection" ref="zones"><!--PLANET 9-->
 					<offset>
 						<position x="-82700" y="500" z="125000"/>
 					</offset>
@@ -104,7 +104,7 @@
 			</connections>
 		</macro>
 		
-		<!--Sector REM02 - MARS BETA-->		
+		<!--Sector REM02 - ARES-->		
 	    <macro name="Cluster_REM02_Sector001_macro" class="sector">
 		  <component ref="standardsector" />
 		  <connections>
@@ -153,7 +153,7 @@
 		  </connections>
 	    </macro>		
 		
-		<!--Sector REM03 - MERCURY BETA-->
+		<!--Sector REM03 - HERMES-->
 	    <macro name="Cluster_REM03_Sector001_macro" class="sector">
 		  <component ref="standardsector" />
 		  <connections>
@@ -2124,7 +2124,7 @@
 			</connections>
 		</macro>	
 		
-		<!--Sector REM35 - Hila's Joy IV-->
+		<!--Sector REM35 - Blue Horizon IV-->
 		<macro name="Cluster_REM35_Sector001_macro" class="sector">
 			<component ref="standardsector" />
 			<connections>
@@ -2133,7 +2133,13 @@
 						<position x="127000" y="500" z="5000"/>
 					</offset>
 					<macro ref="ZoneG1_Cluster_REM35_Sector001_macro" connection="sector" />
-				</connection>			
+				</connection>
+				<connection name="ZoneG2_Cluster_REM35_Sector001_connection" ref="zones"><!--Queen's Harbour-->
+					<offset>
+						<position x="-80875" y="500" z="-105650"/>
+					</offset>
+					<macro ref="ZoneG2_Cluster_REM35_Sector001_macro" connection="sector" />
+				</connection>				
 				<connection name="Zone001_Cluster_REM35_Sector001_connection" ref="zones"><!--CENTER-->
 					<offset>	
 						<position x="0" y="0" z="0"/>	
@@ -2169,21 +2175,15 @@
 			</connections>
 		</macro>
 		
-		<!--Sector REM35 - Hila's Joy IX-->
+		<!--Sector REM35 - Blue Horizon I-->
 		<macro name="Cluster_REM35_Sector002_macro" class="sector">
 			<component ref="standardsector" />
 			<connections>
-				<connection name="ZoneG1_Cluster_REM35_Sector002_connection" ref="zones"><!--Queen's Space-->
+				<connection name="ZoneG1_Cluster_REM35_Sector002_connection" ref="zones"><!--Queen's Retribution-->
 					<offset>
 						<position x="-12700" y="500" z="5000"/>
 					</offset>
 					<macro ref="ZoneG1_Cluster_REM35_Sector002_macro" connection="sector" />
-				</connection>
-				<connection name="ZoneG2_Cluster_REM35_Sector002_connection" ref="zones"><!--Lucky Planets-->
-					<offset>
-						<position x="-875" y="500" z="-185650"/>
-					</offset>
-					<macro ref="ZoneG2_Cluster_REM35_Sector002_macro" connection="sector" />
 				</connection>					
 				<connection name="Zone001_Cluster_REM35_Sector002_connection" ref="zones"><!--CENTER-->
 					<offset>	
@@ -2214,18 +2214,6 @@
 						<position x="-75000" y="0" z="0"/>	
 					</offset>	
 					<macro ref="Zone005_Cluster_REM35_Sector002_macro" connection="sector"/>	
-				</connection>
-				<connection name="ZoneSP_Cluster_REM35_Sector002_connection" ref="zones"><!--Shipyard-->	
-					<offset>	
-						<position x="75000" y="0" z="75000"/>	
-					</offset>	
-					<macro ref="ZoneSP_Cluster_REM35_Sector002_macro" connection="sector"/>	
-				</connection>
-				<connection name="ZoneWF_Cluster_REM35_Sector002_connection" ref="zones"><!--Wharf-->	
-					<offset>	
-						<position x="75000" y="0" z="-75000"/>	
-					</offset>	
-					<macro ref="ZoneWF_Cluster_REM35_Sector002_macro" connection="sector"/>	
 				</connection>				
 				<connection name="tzoneCluster_REM35_Sector002SHCon5_GateZone_connection" ref="zones">	<offset>	<position x="134166.84375" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM35_Sector002SHCon5_GateZone_macro" connection="sector" />	</connection>
 				<connection name="tzoneCluster_REM35_Sector002SHCon9_GateZone_connection" ref="zones">	<offset>	<position x="143991.96875" y="0" z="-200000" />	</offset>	<macro ref="tzoneCluster_REM35_Sector002SHCon9_GateZone_macro" connection="sector" />	</connection>					
@@ -2287,19 +2275,19 @@
 			</connections>
 		</macro>	
 		
-		<!--Sector REM37 - Lucky Planets-->
+		<!--Sector REM37 - Queen's Harbour-->
 		<macro name="Cluster_REM37_Sector001_macro" class="sector">
 			<component ref="standardsector" />
 			<connections>
-				<connection name="ZoneG1_Cluster_REM37_Sector001_connection" ref="zones"><!--Queen's Space-->
+				<connection name="ZoneG1_Cluster_REM37_Sector001_connection" ref="zones"><!--Queen's Retribution-->
 					<offset>
 						<position x="25775" y="500" z="132775"/>
 					</offset>
 					<macro ref="ZoneG1_Cluster_REM37_Sector001_macro" connection="sector" />
 				</connection>
-				<connection name="ZoneG2_Cluster_REM37_Sector001_connection" ref="zones"><!--Hila's Joy IV-->
+				<connection name="ZoneG2_Cluster_REM37_Sector001_connection" ref="zones"><!--Blue Horizon IV-->
 					<offset>
-						<position x="130365" y="500" z="52750"/>
+						<position x="130365" y="500" z="-52750"/>
 					</offset>
 					<macro ref="ZoneG2_Cluster_REM37_Sector001_macro" connection="sector" />
 				</connection>
@@ -2339,10 +2327,22 @@
 					</offset>	
 					<macro ref="Zone005_Cluster_REM37_Sector001_macro" connection="sector"/>	
 				</connection>
+				<connection name="ZoneSP_Cluster_REM37_Sector001_connection" ref="zones"><!--Shipyard-->	
+					<offset>	
+						<position x="75000" y="0" z="75000"/>	
+					</offset>	
+					<macro ref="ZoneSP_Cluster_REM37_Sector001_macro" connection="sector"/>	
+				</connection>
+				<connection name="ZoneWF_Cluster_REM37_Sector001_connection" ref="zones"><!--Wharf-->	
+					<offset>	
+						<position x="75000" y="0" z="-75000"/>	
+					</offset>	
+					<macro ref="ZoneWF_Cluster_REM37_Sector001_macro" connection="sector"/>	
+				</connection>				
 			</connections>
 		</macro>	
 		
-		<!--Sector REM38 - Queen's Space-->
+		<!--Sector REM38 - Queen's Retribution-->
 		<macro name="Cluster_REM38_Sector001_macro" class="sector">
 			<component ref="standardsector" />
 			<connections>
@@ -2352,13 +2352,13 @@
 					</offset>
 					<macro ref="ZoneG1_Cluster_REM38_Sector001_macro" connection="sector" />
 				</connection>
-				<connection name="ZoneG2_Cluster_REM38_Sector001_connection" ref="zones"><!--Lucky Planets-->
+				<connection name="ZoneG2_Cluster_REM38_Sector001_connection" ref="zones"><!--Queen's Harbour-->
 					<offset>
 						<position x="-57095" y="500" z="-142515"/>
 					</offset>
 					<macro ref="ZoneG2_Cluster_REM38_Sector001_macro" connection="sector" />
 				</connection>
-				<connection name="ZoneG3_Cluster_REM38_Sector001_connection" ref="zones"><!--Hila's Joy IV-->
+				<connection name="ZoneG3_Cluster_REM38_Sector001_connection" ref="zones"><!--Blue Horizon I-->
 					<offset>
 						<position x="117040" y="500" z="-31620"/>
 					</offset>
@@ -4653,5 +4653,60 @@
 		<macro ref="Zone005_Cluster_REM74_Sector001_macro" connection="sector"/>	
 	  </connection>
 	</connections>
-  </macro>		
+  </macro>
+
+	<!-- Sector NXW01 - BAD DEBT -->
+  <macro name="Cluster_nxw01_Sector001_macro" class="sector">
+	<component ref="standardsector" />
+	  <connections>
+		<connection name="Zone_Gate1_Cluster_nxw01_Sector001_connection" ref="zones"><!--INACTIVE-->
+		  <offset>
+			<position x="-12700" y="500" z="-185000"/>
+		  </offset>
+		  <macro ref="Zone_Gate1_Cluster_nxw01_Sector001_macro" connection="sector" />
+		</connection>		
+		<connection name="Zone_Gate2_Cluster_nxw01_Sector001_connection" ref="zones"><!--SPACEWEED GROVE-->
+		  <offset>
+			<position x="12700" y="-500" z="185000"/>
+		  </offset>
+		  <macro ref="Zone_Gate2_Cluster_nxw01_Sector001_macro" connection="sector" />
+		</connection>	
+		<connection name="Zone001_Cluster_nxw01_Sector001_connection" ref="zones">
+		  <offset>
+			<position x="-12700" y="1000" z="-148000"/>	
+		  </offset>
+		  <macro ref="Zone001_Cluster_nxw01_Sector001_macro" connection="sector" />
+		</connection>		
+		<connection name="Zone002_Cluster_nxw01_Sector001_connection" ref="zones">
+		  <offset>
+			<position x="16250" y="-1500" z="-160000"/>
+		  </offset>
+		  <macro ref="Zone002_Cluster_nxw01_Sector001_macro" connection="sector" />
+		</connection>			
+		<connection name="Zone003_Cluster_nxw01_Sector001_connection" ref="zones">
+		  <offset>
+			<position x="-45500" y="-3750" z="-115000" />
+		  </offset>
+		  <macro ref="Zone003_Cluster_nxw01_Sector001_macro" connection="sector" />
+		</connection>		
+		<connection name="Zone004_Cluster_nxw01_Sector001_connection" ref="zones">
+		  <offset>
+			<position x="69500" y="2550" z="12250" />
+		  </offset>
+		  <macro ref="Zone004_Cluster_nxw01_Sector001_macro" connection="sector" />
+		</connection>
+		<connection name="ZoneSP_Cluster_nxw01_Sector001_connection" ref="zones">
+		  <offset>
+			<position x="-78500" y="3750" z="135250" />
+		  </offset>
+		  <macro ref="ZoneSP_Cluster_nxw01_Sector001_macro" connection="sector" />
+		</connection>	
+		<connection name="ZoneWF_Cluster_nxw01_Sector001_connection" ref="zones">
+		  <offset>
+			<position x="155500" y="2550" z="-15255" />
+		  </offset>
+		  <macro ref="ZoneWF_Cluster_nxw01_Sector001_macro" connection="sector" />
+		</connection>			
+	</connections>
+  </macro>   
 </macros>
