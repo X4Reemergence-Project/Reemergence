@@ -43,7 +43,7 @@
 		<production ware="dronecomponents" chance="100"/>
 	  </compatibilities>
 	</module>
-		<module id="prod_otas_energycells" group="prod_gen_energycells">
+	<module id="prod_otas_energycells" group="prod_gen_energycells">
 	  <category ware="energycells" tags="[production, module]" race="argon" faction="[otas]"/>
 	  <compatibilities>
 		<production ware="energycells" chance="100"/>
@@ -266,6 +266,43 @@
 	</module>
 	<module id="recycling_otas" group="recycling_gen">
 	  <category tags="[recycling, module]" race="otas" faction="[otas]" />
+	</module>
+
+	<!--Hatikvah-->
+	<module id="prod_hat_energycells" group="prod_gen_energycells">
+	  <category ware="energycells" tags="[production, module]" race="argon" faction="[hatikvah]"/>
+	  <compatibilities>
+		<production ware="energycells" chance="100"/>
+		<limits production="10"/>
+	  </compatibilities>
+	</module>
+	<module id="prod_hat_foodrations" group="prod_arg_foodrations">
+	  <category ware="foodrations" tags="[production, module]" race="argon" faction="[hatikvah]"/>
+	  <compatibilities>
+		<production ware="foodrations" chance="100"/>
+		<limits production="12"/>
+	  </compatibilities>
+	</module>		
+	<module id="prod_hat_meat" group="prod_arg_meat">
+	  <category ware="meat" tags="[production, module]" race="argon" faction="[hatikvah]"/>
+	  <compatibilities>
+		<production ware="meat" chance="100"/>
+		<limits production="10"/>
+	  </compatibilities>
+	</module>
+	<module id="prod_hat_medicalsupplies" group="prod_arg_medicalsupplies">
+	  <category ware="medicalsupplies" tags="[production, module]" race="argon" faction="[hatikvah]"/>
+	  <compatibilities>
+		<production ware="medicalsupplies" chance="100"/>
+		<limits production="12"/>
+	  </compatibilities>
+	</module>
+	<module id="prod_hat_wheat" group="prod_arg_wheat">
+	  <category ware="wheat" tags="[production, module]" race="argon" faction="[hatikvah]"/>
+	  <compatibilities>
+		<production ware="wheat" chance="100"/>
+		<limits production="10"/>
+	  </compatibilities>
 	</module>	
   </add>
 </diff>
