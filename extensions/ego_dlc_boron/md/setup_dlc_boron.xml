@@ -10,12 +10,12 @@
 	<find_sector macro="macro.Cluster_REM19_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ReservoirofTranquilitySector" />
 	<find_sector macro="macro.Cluster_REM23_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$UnholyDescentSector" />	
 	<find_sector macro="macro.Cluster_REM31_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$TheShallowsSector" />	
-	<find_sector macro="macro.Cluster_REM32_Sector002_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$FamilyDhiokIIISector" />	
+	<find_sector macro="macro.Cluster_REM32_Sector002_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$FamilyThanSector" />	
 	<find_sector macro="macro.Cluster_REM33_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ThynsAbyssSector" />
 	<find_sector macro="macro.Cluster_REM34_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ThynsExcavationSector" />		
-	<find_sector macro="macro.Cluster_REM35_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$HilasJoyIVSector" />	
+	<find_sector macro="macro.Cluster_REM35_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$BlueHorizonsSector" />	
 	<find_sector macro="macro.Cluster_REM36_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$GreatTrenchSector" />		
-	<find_sector macro="macro.Cluster_REM37_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$LuckyPlanetsSector" />	
+	<find_sector macro="macro.Cluster_REM37_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$QueensRetributionSector" />	
 	<find_sector macro="macro.Cluster_REM38_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$QueensSpaceSector" />
 	<find_sector macro="macro.Cluster_REM39_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$Matrix472DSector" />	
 	<find_sector macro="macro.Cluster_REM41_Sector002_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ShadowsofGiantsVIISector" />		
@@ -83,12 +83,12 @@
 		</do_for_each>
 		<remove_value name="$DarkWatersGates" />
 
-		<!-- Unholy Descent <-> Family Dhiok III -->
+		<!-- Unholy Descent <-> Family Than -->
 		<find_gate name="$UnholyDescentGates" multiple="true" space="$UnholyDescentSector" active="false" />
 		<do_for_each name="$g" in="$UnholyDescentGates">
-		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $FamilyDhiokIIISector)">
-		<set_value name="$FamilyDhiokIII_UnholyDescentGate" exact="$g.exit" />
-		<set_value name="$UnholyDescent_FamilyDhiokIIIGate" exact="$g" />
+		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $FamilyThanSector)">
+		<set_value name="$FamilyThan_UnholyDescentGate" exact="$g.exit" />
+		<set_value name="$UnholyDescent_FamilyThanGate" exact="$g" />
 		</do_if>
 		</do_for_each>
 		<remove_value name="$UnholyDescentGates" />
@@ -103,32 +103,32 @@
 		</do_for_each>
 		<remove_value name="$ThynsExcavationGates" />
 		
-		<!-- The Shallows <-> Queen's Space -->
+		<!-- The Shallows <-> Queen's Retribution -->
 		<find_gate name="$TheShallowsGates" multiple="true" space="$TheShallowsSector" active="false" />
 		<do_for_each name="$g" in="$TheShallowsGates">
-		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $QueensSpaceSector)">
-		<set_value name="$QueensSpace_TheShallowsGate" exact="$g.exit" />
-		<set_value name="$TheShallows_QueensSpaceGate" exact="$g" />
+		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $QueensRetributionSector)">
+		<set_value name="$QueensRetributionSpace_TheShallowsGate" exact="$g.exit" />
+		<set_value name="$TheShallows_QueensRetributionGate" exact="$g" />
 		</do_if>
 		</do_for_each>
 		<remove_value name="$TheShallowsGates" />
 		
-		<!-- Lucky Planets <-> Sacred Relic -->
-		<find_gate name="$LuckyPlanetsGates" multiple="true" space="$LuckyPlanetsSector" active="false" />
+		<!-- Queen's Harbour <-> Sacred Relic -->
+		<find_gate name="$LuckyPlanetsGates" multiple="true" space="$QueensHarbourSector" active="false" />
 		<do_for_each name="$g" in="$LuckyPlanetsGates">
 		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $SacredRelicSector)">
-		<set_value name="$SacredRelic_LuckyPlanetsGate" exact="$g.exit" />
-		<set_value name="$LuckyPlanets_SacredRelicGate" exact="$g" />
+		<set_value name="$SacredRelic_QueensHarbourGate" exact="$g.exit" />
+		<set_value name="$QueensHarbour_SacredRelicGate" exact="$g" />
 		</do_if>
 		</do_for_each>
 		<remove_value name="$LuckyPlanetsGates" />
 		
-		<!-- Hila's Joy IV <-> Great Trench -->
-		<find_gate name="$HilasJoyIVGates" multiple="true" space="$HilasJoyIVSector" active="false" />
+		<!-- Blue Horizons <-> Great Trench -->
+		<find_gate name="$HilasJoyIVGates" multiple="true" space="$BlueHorizonsSector" active="false" />
 		<do_for_each name="$g" in="$HilasJoyIVGates">
 		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $GreatTrenchSector)">
-		<set_value name="$GreatTrench_HilasJoyIVGate" exact="$g.exit" />
-		<set_value name="$HilasJoyIV_GreatTrenchGate" exact="$g" />
+		<set_value name="$GreatTrench_BlueHorizonsGate" exact="$g.exit" />
+		<set_value name="$BlueHorizons_GreatTrenchGate" exact="$g" />
 		</do_if>
 		</do_for_each>
 		<remove_value name="$HilasJoyIVGates" />	
