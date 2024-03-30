@@ -2863,31 +2863,5 @@
 		</macro>
 	  </connection>		
 	</connections>
-  </macro> 
-	<!--SECTOR REMXX - TEST CLUSTER-->
-  <macro name="Cluster_REMXX_macro" class="cluster">
-	<component ref="standardcluster" />
-	<connections>
-	  <connection ref="content">
-		<macro>
-		  <component connection="space" ref="Cluster_104" />
-		</macro>
-	  </connection>
-	  <connection name="Cluster_REMXX_Sector001_connection" ref="sectors">
-		<macro ref="Cluster_REMXX_Sector001_macro" connection="cluster" />
-	  </connection>
-	  <connection name="Cluster_REMXX_Sector002_connection" ref="sectors">
-		<offset>
-		  <position x="0" y="0" z="-175890496" />
-		</offset>
-		<macro ref="Cluster_REMXX_Sector002_macro" connection="cluster" />
-	  </connection>
-	  <connection name="Cluster_REMXX_Sector003_connection" ref="sectors">
-		<offset>
-		  <position x="8200000" y="-3250000" z="3450000" />	  
-		</offset>
-		<macro ref="Cluster_REMXX_Sector003_macro" connection="cluster" />
-	  </connection>			
-	</connections>	
-  </macro>	  
+  </macro>   
 </macros>
