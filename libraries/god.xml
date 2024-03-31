@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--NOTE: There is a weird interaction with DeadAir's God, thus DA_RE, which causes module errors to generate that have no imapct on the game. This is still be investigated. 01/22/24-->
+<!--NOTE: There is a weird interaction with DeadAir's God, thus DA_RE, which causes module errors to generate that have no imapct on the game. This is still be investigated. 03/26/24-->
 <diff>
 <!--Base Sectors-->
   <replace sel="/god/stations/station[@id='par_defence_cluster_10_sector001'][@type='factory']/location[@macro='zone003_cluster_10_sector001_macro']/@macro">zone001_cluster_10_sector001_macro</replace>	
@@ -15,10 +15,10 @@
   <replace sel="/god/stations/station[@id='wharf_holyorder'][@type='factory']/location[@macro='zone004_cluster_24_sector001_macro']/@macro">zone004_cluster_24_sector001_macro</replace>  
   <replace sel="/god/stations/station[@id='tradestation_holyorder'][@type='tradingstation']/location[@macro='zone001_cluster_24_sector001_macro']/@macro">zone002_cluster_24_sector001_macro</replace>  
   <replace sel="/god/stations/station[@id='hol_defence_cluster_24_sector001'][@type='factory']/location[@macro='zone001_cluster_24_sector001_macro']/@macro">zone003_cluster_24_sector001_macro</replace>  
-  <!--<replace sel="/god/stations/station[@id='equipmentdock_argon_02'][@type='factory']/location[@macro='zone002_cluster_29_sector002_macro']/@macro">zone001_cluster_29_sector001_macro</replace>--> 
+  <!--<replace sel="/god/stations/station[@id='equipmentdock_argon_02'][@type='factory']/location[@macro='zone002_cluster_29_sector002_macro']/@macro">zone001_cluster_29_sector001_macro</replace>-->   
   <replace sel="/god/stations/station[@id='arg_defence_cluster_29_sector002'][@type='factory']/location[@macro='zone001_cluster_29_sector002_macro']/@macro">zone002_cluster_29_sector001_macro</replace> 
   <replace sel="/god/stations/station[@id='hat_defence_cluster_29_sector001'][@type='factory']/location[@macro='zone001_cluster_29_sector001_macro']/@macro">zone001_cluster_29_sector002_macro</replace>
-  <replace sel="/god/stations/station[@id='tradestation_hatikvah_01'][@type='tradingstation']/location[@macro='zone001_cluster_29_sector001_macro']/@macro">zone002_cluster_29_sector002_macro</replace>  
+  <replace sel="/god/stations/station[@id='tradestation_hatikvah_01'][@type='tradingstation']/location[@macro='zone001_cluster_29_sector001_macro']/@macro">zone003_cluster_29_sector002_macro</replace>  
   <replace sel="/god/stations/station[@id='hol_defence_cluster_36_sector001'][@type='factory']/location[@macro='zone001_cluster_36_sector001_macro']/@macro">zone005_cluster_36_sector001_macro</replace>  
 <!--Split DLC Sectors-->
   <replace sel="/god/stations/station[@id='spl_defence_cluster_403_sector001'][@type='factory']/location[@macro='zone004_cluster_403_sector001_macro']/@macro">zone005_cluster_403_sector001_macro</replace>	
@@ -1497,18 +1497,6 @@
 		<select faction="otas" tags="[defence]"/>
 	  </station>
 	</station>
-	<!--station id="otas_trade_REM57" race="argon" owner="otas" type="tradingstation">
-	  <quotas>
-		<quota galaxy="1" />
-	  </quotas>
-	  <location class="zone" macro="zoneTD_cluster_REM57_sector001_macro" />
-	  <station>
-		<select faction="otas" tags="[tradestation]"/>
-		<loadout>
-		  <level exact="1.0"/>
-		</loadout>
-	  </station>
-	</station-->
 	<station id="equipmentdock_otas_cluster_REM57" race="argon" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="1" />
@@ -3174,7 +3162,7 @@
 		<quota galaxy="6" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.5" maxbound="false" />		
+		<security min="0.5" maxbound="false" />		
 	  </location>
 	  <module>
 		<select ware="advancedcomposites" race="argon"/>
@@ -3185,7 +3173,7 @@
 		<quota galaxy="16" sector="12"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.5" maxbound="false" />			
+		<security min="0.5" maxbound="false" />			
 	  </location>
 	  <module>
 		<select ware="advancedelectronics" race="argon"/>
@@ -3196,7 +3184,7 @@
 		<quota galaxy="4" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy max="0.5" maxbound="false" />		
+		<security max="0.5" maxbound="false" />		
 	  </location>
 	  <module>
 		<select ware="antimattercells" race="argon"/>
@@ -3207,7 +3195,7 @@
 		<quota galaxy="16" sector="8"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.5" max="0.75" />			
+		<security min="0.5" max="0.75" />			
 	  </location>
 	  <module>
 		<select ware="antimatterconverters" race="argon"/>
@@ -3218,7 +3206,7 @@
 		<quota galaxy="16" sector="8"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.25" max="0.9" />			
+		<security min="0.25" max="0.9" />			
 	  </location>
 	  <module>
 		<select ware="claytronics" race="argon"/>
@@ -3229,7 +3217,7 @@
 		<quota galaxy="12" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.75" maxbound="false" />			
+		<security min="0.75" maxbound="false" />			
 	  </location>
 	  <module>
 		<select ware="dronecomponents" race="argon"/>
@@ -3240,18 +3228,18 @@
 		<quota galaxy="40" sector="20"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<sunlight min="1.15" maxbound="false"/>			
+		<sunlight min="1.0" max="false" />			
 	  </location>
 	  <module>
 		<select ware="energycells" race="argon"/>
 	  </module>
-	</product>
+	</product>		
 	<product id="otas_engineparts" ware="engineparts" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="10" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.5" maxbound="0.9" />
+		<security min="0.5" maxbound="0.9" />
         <corerange min="0.8" max="1.6" />			
 	  </location>
 	  <module>
@@ -3263,7 +3251,7 @@
 		<quota galaxy="4" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.75" maxbound="false" />			
+		<security min="0.75" maxbound="false" />			
 	  </location>
 	  <module>
 		<select ware="fieldcoils" race="argon"/>
@@ -3274,7 +3262,7 @@
 		<quota galaxy="20" sector="10"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.25" maxbound="0.5" />		
+		<security min="0.25" maxbound="0.5" />		
 	  </location>
 	  <module>
 		<select ware="foodrations" race="argon"/>
@@ -3296,7 +3284,7 @@
 		<quota galaxy="70" sector="36" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.5" maxbound="false" />			
+		<security min="0.5" maxbound="false" />			
 	  </location>
 	  <module>
 		<select ware="hullparts" race="argon"/>
@@ -3307,7 +3295,7 @@
 		<quota galaxy="6" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-	    <economy min="0.25" maxbound="0.5" />		  
+	    <security min="0.25" maxbound="0.5" />		  
 	  </location>
 	  <module>
 		<select ware="meat" race="argon"/>
@@ -3318,7 +3306,7 @@
 		<quota galaxy="32" sector="24"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.25" maxbound="0.9" />		
+		<security min="0.25" maxbound="0.9" />		
 	  </location>
 	  <module>
 		<select ware="medicalsupplies" race="argon"/>
@@ -3329,7 +3317,7 @@
 		<quota galaxy="42" sector="24"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.25" max="0.75" />		
+		<security min="0.25" max="0.75" />		
 	  </location>
 	  <module>
 		<select ware="microchips" race="argon"/>
@@ -3340,7 +3328,7 @@
 		<quota galaxy="16" sector="8"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.6" max="0.75" />		
+		<security min="0.6" max="0.75" />		
 	  </location>
 	  <module>
 		<select ware="missilecomponents" race="argon"/>
@@ -3351,7 +3339,7 @@
 		<quota galaxy="18" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.75" max="0.9" />			
+		<security min="0.75" max="0.9" />			
 	  </location>
 	  <module>
 		<select ware="plasmaconductors" race="argon"/>
@@ -3362,7 +3350,7 @@
 		<quota galaxy="24" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.5" maxbound="false" />			
+		<security min="0.5" maxbound="false" />			
 	  </location>
 	  <module>
 		<select ware="quantumtubes" race="argon"/>
@@ -3384,7 +3372,7 @@
 		<quota galaxy="9" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.75" maxbound="false" />			
+		<security min="0.75" maxbound="false" />			
 	  </location>
 	  <module>
 		<select ware="scanningarrays" race="argon"/>
@@ -3395,7 +3383,7 @@
 		<quota galaxy="16" sector="10"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.75" maxbound="false" />			
+		<security min="0.75" maxbound="false" />			
 	  </location>
 	  <module>
 		<select ware="shieldcomponents" race="argon"/>
@@ -3417,7 +3405,7 @@
 		<quota galaxy="20" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.5" maxbound="false" />				
+		<security min="0.5" maxbound="false" />				
 	  </location>
 	  <module>
 		<select ware="smartchips" race="argon"/>
@@ -3437,7 +3425,7 @@
 		<quota galaxy="10" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.25" max="0.6" />			
+		<security min="0.25" max="0.6" />			
 	  </location>
 	  <module>
 		<select ware="spices" race="argon"/>
@@ -3468,7 +3456,7 @@
 		<quota galaxy="20" sector="10"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="1" maxbound="false"/>			
+		<security min="1" maxbound="false"/>			
 	  </location>
 	  <module>
 		<select ware="turretcomponents" race="argon"/>
@@ -3490,7 +3478,7 @@
 		<quota galaxy="12" sector="8"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="1" maxbound="false"/>				
+		<security min="1" maxbound="false"/>				
 	  </location>
 	  <module>
 		<select ware="weaponcomponents" race="argon"/>
@@ -3501,7 +3489,7 @@
 		<quota galaxy="7" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
-		<economy min="0.25" max="0.6"/>			
+		<security min="0.25" max="0.6"/>			
 	  </location>
 	  <module>
 		<select ware="wheat" race="argon"/>

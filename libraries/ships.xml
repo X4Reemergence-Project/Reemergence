@@ -260,8 +260,46 @@
     </pilot>
     <drop ref="masstraffic_civilian"/>
   </ship>
+ 
+  <!--ARGON-->
+  <ship id="arg_tm" group="arg_tm">
+	<category tags="[military, tm]" faction="[antigone, argon, hatikvah]" size="ship_m"/>
+	<pilot>
+	  <select faction="argon" tags="fighterpilot"/>
+	</pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="argon_military_crew"/>
+  </ship>  
+  
+  <!--PARANID-->
+  <ship id="par_tm" group="par_tm">
+	<category tags="[military, tm]" faction="[holyorder, paranid, alliance, trinity]" size="ship_m"/>
+	<pilot>
+	  <select faction="paranid" tags="fighterpilot"/>
+	</pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="paranid_military_crew"/>
+  </ship>   
+  
+  <!--TELADI-->
+  <ship id="tel_tm" group="tel_tm">
+	<category tags="[military, tm]" faction="[teladi, ministry, scaleplate]" size="ship_m"/>
+	<pilot>
+	  <select faction="teladi" tags="fighterpilot"/>
+	</pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="teladi_military_crew"/>
+  </ship>    
   
   <!--SPLIT-->
+  <ship id="spl_tm" group="spl_tm">
+	<category tags="[military, tm]" faction="[court, split, freesplit, fallensplit]" size="ship_m"/>
+	<pilot>
+	  <select faction="split" tags="fighterpilot"/>
+	</pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="split_military_crew"/>
+  </ship>    
   <ship id="split_tug_m" group="common_tug_m">
 	<category tags="[tug, mission]" faction="[court, split, freesplit]" size="ship_m"/>
 	<pilot>
@@ -286,7 +324,10 @@
     <drop ref="ship_small_military"/>
     <people ref="split_military_crew"/>
   </ship>   
-
+  
+  <!--VIGOR-->
+  <!--RIPTIDE-->
+  
   <!--TERRAN-->
   <ship id="ter_falchion" group="ter_falchion">
     <category tags="[military, falchion]" faction="[terran]" size="ship_s"/>
@@ -313,9 +354,17 @@
     </pilot>
     <drop ref="ship_large_military" />
     <people ref="boron_military_crew" />
-  </ship>  
-  
-  <!--New Xenon War Assets--> 
+  </ship>
+  <ship id="bor_tm" group="bor_tm">
+	<category tags="[military, tm]" faction="boron" size="ship_m"/>
+	<pilot>
+	  <select faction="boron" tags="fighterpilot"/>
+	</pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="boron_military_crew"/>
+  </ship>     
+
+  <!--XENON-->
   <ship id="xenon_reclaimer" group="xen_reclaimer" capturable="false">
 	<category tags="[reclaimer]" faction="[xenon]" size="ship_xl"/>
 	<pilot>
@@ -357,6 +406,6 @@
 	  <select faction="xenon" tags="fighterpilot"/>
 	</pilot>
 	<drop ref="ship_small_xenon"/>
-  </ship>
+  </ship>    
 </add>
 </diff>

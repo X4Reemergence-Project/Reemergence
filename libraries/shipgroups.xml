@@ -84,6 +84,25 @@
 	  <select macro="ship_otas_s_solano_macro" weight="100"/>			
 	</group>
   </add>	
+
+	<!--ARGON--> 
+  <add sel="//groups">		
+	<group name="arg_tm">	
+	  <select macro="ship_arg_m_tm_macro" weight="100" /> 
+	</group>
+  </add> 	
+	<!--PARANID-->
+  <add sel="//groups">		
+	<group name="par_tm">	
+	  <select macro="ship_par_m_tm_macro" weight="100" /> 
+	</group>
+  </add> 		
+	<!--TELADI-->
+  <add sel="//groups">		
+	<group name="tel_tm">	
+	  <select macro="ship_tel_m_tm_macro" weight="100" /> 
+	</group>
+  </add> 		
   
 	<!--SPLIT-->
   <add sel="/groups/group[@name='spl_panther_l']">
@@ -94,6 +113,21 @@
 	  <select macro="ship_spl_l_cheetah_macro" weight="100" /> 
 	</group>
   </add>
+  <add sel="//groups">		
+	<group name="cub_tm">	
+	  <select macro="ship_spl_m_tm_macro" weight="100" /> 
+	</group>
+  </add> 	
+  <add sel="//groups">		
+	<group name="frf_tm">	
+	  <select macro="ship_spl_m_tm_macro" weight="100" /> 
+	</group>
+  </add> 	
+  <add sel="//groups">		
+	<group name="spl_tm">	
+	  <select macro="ship_spl_m_tm_macro" weight="100" /> 
+	</group>
+  </add> 	  
   <add sel="//groups">		
 	<group name="cub_wolf">
       <select macro="ship_spl_s_wolf_macro" weight="100"/>   	  
@@ -128,6 +162,9 @@
 	<select macro="ship_spl_s_wolf_macro" weight="25" />  	
   </add>   
 
+	<!--VIGOR-->
+	<!--RIPTIDE-->  
+  
 	<!--TERRAN-->
   <add sel="//groups">		
 	<group name="ter_falchion">
@@ -160,15 +197,18 @@
 	<group name="bor_marlin">	
 	  <select macro="ship_bor_l_marlin_macro" weight="100" /> 
 	</group>
-  </add>    
+  </add> 
+  <add sel="//groups">		
+	<group name="bor_tm">	
+	  <select macro="ship_bor_m_tm_macro" weight="100" /> 
+	</group>
+  </add> 	  
  
 	<!--XENON-->
   <add sel="/groups/group[@name='xen_fighter_m']">
 	<select macro="ship_xen_m_fighter_y_macro" weight="10" />
 	<select macro="ship_xen_m_fighter_d_macro" weight="75" />
   </add>
-  
-	<!--New Xenon War Assets-->
   <add sel="//groups">		
 	<group name="xen_reclaimer">
 	  <select macro="ship_xen_xl_reclaimer_macro" weight="100" />
@@ -193,5 +233,5 @@
 	<group name="xen_d">
 	  <select macro="ship_xen_m_fighter_d_macro" weight="100" />
 	</group>
-  </add>  
+  </add>   
 </diff>

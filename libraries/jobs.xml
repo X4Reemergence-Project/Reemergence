@@ -5094,35 +5094,10 @@
       </ship>
     </job> 
   </add>
-	<!--BORON-->  
-  <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector']" pos="after">
-    <job id="boron_marlin_patrol" name="{20204,5201}">
-      <modifiers commandeerable="true" />
-      <orders>
-       <order order="Patrol" default="true">
-          <param name="range" value="class.sector" />
-        </order>
-      </orders>
-      <category faction="boron" tags="[factionlogic, military, frigate]" size="ship_l" />
-      <quota galaxy="6" maxgalaxy="12" cluster="2" />
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="self" comparison="exact" excludedtags="boronborder" matchextension="false"/>
-      <environment buildatshipyard="true" />
-	  <ship>
-	    <select faction="boron" tags="[military, large, marlin]" size="ship_l" />
-		  <loadout>
-		    <level min="0.7" max="1.0" />
-		  </loadout>
-	    <owner exact="boron" overridenpc="true" />
-	  </ship>
-	  <subordinates>
-		<subordinate job="boron_gunboat_escort_m"/>
-		<subordinate job="boron_gunboat_escort_m"/>
-		<subordinate job="boron_fighter_escort_s_corvette"/>	  
-	  </subordinates>	  
-    </job>  
-  </add>
-  <add sel="//jobs"> <!--HOLY ORDER-->
-	<!--Mirrors of the Godrealm's Split DLC jobs-->
+  
+ <!--ARGONs--> 
+ 
+  <add sel="//jobs"> <!--PARANIDs-->	
 	<job id="hop_carrier_patrol_xl_cluster_spl" name="{20204,6301}" comment="one">
       <modifiers commandeerable="true"/>
       <orders>
@@ -5162,7 +5137,7 @@
       <ship>
         <select faction="holyorder" tags="[military, corvette]" size="ship_m"/>
         <loadout>
-          <level min="0.4" max="1.0"/>
+          <level min="0.7" max="1.0"/>
         </loadout>
         <owner exact="holyorder" overridenpc="true"/>
       </ship>
@@ -5181,7 +5156,7 @@
       <ship>
         <select faction="holyorder" tags="[military, corvette]" size="ship_m"/>
         <loadout>
-          <level min="0.4" max="1.0"/>
+          <level min="0.7" max="1.0"/>
         </loadout>
         <owner exact="holyorder" overridenpc="true"/>
       </ship>
@@ -5200,17 +5175,111 @@
       <ship>
         <select faction="holyorder" tags="[fighter, heavy]" size="ship_s"/>
         <loadout>
-          <level min="0.4" max="1.0"/>
+          <level min="0.7" max="1.0"/>
         </loadout>
         <owner exact="holyorder" overridenpc="true"/>
       </ship>
       <subordinates>
         <subordinate job="holyorder_fighter_escort_s_patrol"/>
       </subordinates>
+    </job>
+    <job id="hop_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="holyorder" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="8" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="holyorder" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="holyorder" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="holyorder_fighter_escort_s_frigate" assignment="attack" group="1"/>
+        <subordinate job="holyorder_fighter_escort_s_frigate" assignment="attack" group="2"/>
+      </subordinates>	  
+    </job>	
+    <job id="par_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="paranid" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="8" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="paranid" relation="self" comparison="exact" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="paranid" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="paranid" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="paranid_fighter_escort_s_frigate" assignment="attack" group="1"/>
+        <subordinate job="paranid_fighter_escort_s_frigate" assignment="attack" group="2"/>
+      </subordinates>	  
+    </job>	  
+    <job id="tri_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion" startactive="false">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="trinity" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="8" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="trinity" relation="self" comparison="exact" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="trinity" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="trinity" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="trinity_fighter_escort_s_frigate" assignment="attack" group="1"/>
+        <subordinate job="trinity_fighter_escort_s_frigate" assignment="attack" group="2"/>
+      </subordinates>	  
+    </job>  
+  </add> 
+  
+  <add sel="//jobs"> <!--TELADIs-->
+    <job id="min_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="ministry" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="10" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="teladi" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="ministry" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="ministry" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="ministry_fighter_escort_s_frigate" assignment="attack" group="1"/>
+      </subordinates>	  
     </job>  
   </add>   
-	<!--SPLIT-->   
-  <add sel="//jobs">
+  
+  <add sel="//jobs"> <!--SPLITs-->
     <job id="faf_cheetah_plunder" name="{20204,4201}">
 	  <modifiers commandeerable="false"/>
       <orders>
@@ -5255,8 +5324,145 @@
 	  </ship>
     </job>
   </add>  
+  
+ <!--VIGOR-->
+ 
+ <!--RIPTIDE--> 
+ 
+ <!--TERRANs-->
+ 
+  <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector']" pos="after"> <!--BORON-->  
+    <job id="boron_marlin_patrol" name="{20204,5201}">
+      <modifiers commandeerable="true" />
+      <orders>
+       <order order="Patrol" default="true">
+          <param name="range" value="class.sector" />
+        </order>
+      </orders>
+      <category faction="boron" tags="[factionlogic, military, frigate]" size="ship_l" />
+      <quota galaxy="6" maxgalaxy="12" cluster="2" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="self" comparison="exact" matchextension="false"/>
+      <environment buildatshipyard="true" />
+	  <ship>
+	    <select faction="boron" tags="[military, large, marlin]" size="ship_l" />
+		  <loadout>
+		    <level min="0.7" max="1.0" />
+		  </loadout>
+	    <owner exact="boron" overridenpc="true" />
+	  </ship>
+	  <subordinates>
+		<subordinate job="boron_gunboat_escort_m"/>
+		<subordinate job="boron_gunboat_escort_m"/>
+		<subordinate job="boron_fighter_escort_s_corvette"/>	  
+	  </subordinates>	  
+    </job>
+    <job id="boron_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="boron" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="8" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="self" comparison="exact" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="boron" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="boron" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="boron_fighter_escort_s_corvette" assignment="attack" group="1"/>
+        <subordinate job="boron_fighter_escort_s_corvette" assignment="attack" group="2"/>
+        <subordinate job="boron_fighter_escort_s_corvette" assignment="attack" group="3"/>		
+      </subordinates>	  
+    </job> 	
+  </add>
+    
 	<!--Modified Jobs-->
-  <remove sel="//jobs/job[@id='fallensplit_panther_mixed_cluster']" />	<!--VRO: Removed since the Cheetah replaces it for Free Families and Fallen Split-->    
+  <!--ARGON-->
+  <replace sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/ship/select[@faction='argon']/@tags">[military, tm]</replace>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@assignment">attack</add>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@group">2</add>    
+  <replace sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/ship/select[@faction='argon']/@tags">[military, tm]</replace>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@assignment">attack</add>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@group">2</add>    
+  <!--ANTIGONE-->  
+  <replace sel="/jobs/job[@id='antigone_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/ship/select[@faction='antigone']/@tags">[military, tm]</replace> 
+  <replace sel="/jobs/job[@id='antigone_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/ship/select[@faction='antigone']/@tags">[military, tm]</replace> 
+  <replace sel="/jobs/job[@id='antigone_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace> 
+  <!--HOLY ORDER-->
+  <!--PARANID-->
+  <!--TRINITY-->
+  <!--TELADI-->
+  <!--MINISTRY-->
+  <!--SPLIT-->  
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector'][@name='{20204,2901}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/ship/select[@faction='split']/@tags">[military, tm]</replace>  
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_colonial'][@name='{20204,10050}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_colonial_mission'][@name='{20204,10050}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='zyarth_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace>   
+  <!--COURT-->  
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector'][@name='{20204,2901}']/ship/select[@faction='court']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector'][@name='{20204,2901}']/subordinates/subordinate[@job='court_frigate_escort_m']/@job">court_fighter_escort_s_frigate</replace> 
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/ship/select[@faction='court']/@tags">[military, tm]</replace> 
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='court_frigate_escort_m']/@job">court_fighter_escort_s_frigate</replace>  
+  <replace sel="/jobs/job[@id='court_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace>
+  <remove sel="/jobs/job[@id='court_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@variation"/>  
+  <!--FREE FAMILIES-->
+  <!--FALLEN SPLIT-->  
+  <remove sel="//jobs/job[@id='fallensplit_panther_mixed_cluster']" />	<!--VRO: Removed since the Cheetah replaces it for Free Families and Fallen Split-->   
+  <!--TERRAN-->
+  <!--PIONEERS-->
+  <!--VIGOR-->
+  <!--RIPTIDE-->
+  <!--BORON-->
+  <add sel="/jobs/job[@id='boron_bogas_trader_l'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_bogas_trader_m'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_bio_trader_l'][@name='{20204,1301}']/location[@faction='boron']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='boron_bio_trader_m'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_food_trader_s'][@name='{20204,1801}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_medical_trader_s'][@name='{20204,10011}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_energycell_trader_l'][@name='{20204,101}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_energycell_trader_m'][@name='{20204,201}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_energycell_trader_s'][@name='{20204,201}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_equipment_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_equipment_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_construction_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_construction_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='boron']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='boron_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_tech_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_tech_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_tech_trader_s'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_water_trader_l'][@name='{20204,1501}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_water_trader_m'][@name='{20204,1601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_stationtrader_l'][@name='{20204,701}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_stationtrader_m'][@name='{20204,801}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector'][@name='{20204,3201}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_destroyer_patrol_l_border_only'][@name='{20204,3301}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_destroyer_patrol_l_leader'][@name='{20204,3301}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_corvette_patrol_m_sector_exp'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_exp_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_border_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_stationtrader_m'][@name='{20204,801}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>   
+  
  
   
 <!--VIG Rework-->
