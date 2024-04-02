@@ -5098,7 +5098,7 @@
  <!--ARGONs--> 
  
   <add sel="//jobs"> <!--PARANIDs-->	
-	<job id="hop_carrier_patrol_xl_cluster_spl" name="{20204,6301}" comment="one">
+	<job id="hop_carrier_patrol_xl_cluster_spl" name="{20204,6301}" >
       <modifiers commandeerable="true"/>
       <orders>
         <order order="Patrol" default="true">
@@ -5107,7 +5107,7 @@
       </orders>
       <category faction="holyorder" tags="[factionlogic, military, carrier]" size="ship_xl"/>
       <quota galaxy="1" maxgalaxy="1"/>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" matchextension="true"  tags="splitdlc"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" tags="splitdlc"/>
       <environment buildatshipyard="true"/>
       <ship>
         <select faction="holyorder" tags="[military, carrier]" size="ship_xl"/>
@@ -5123,7 +5123,7 @@
         <subordinate job="holyorder_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
       </subordinates>
     </job>
-    <job id="hop_corvette_patrol_m_sector_spl" name="{20204,10044}" comment="each sector">
+    <job id="hop_corvette_patrol_m_sector_spl" name="{20204,10044}" >
       <modifiers commandeerable="true"/>
       <orders>
         <order order="Patrol" default="true">
@@ -5132,7 +5132,7 @@
       </orders>
       <category faction="holyorder" tags="[factionlogic, military, corvette]" size="ship_m"/>
       <quota galaxy="7" maxgalaxy="17" sector="2"/>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" matchextension="true"  tags="splitdlc"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" tags="splitdlc"/>
       <environment buildatshipyard="true"/>
       <ship>
         <select faction="holyorder" tags="[military, corvette]" size="ship_m"/>
@@ -5142,7 +5142,7 @@
         <owner exact="holyorder" overridenpc="true"/>
       </ship>
     </job>
-    <job id="hop_corvette_patrol_m_sector_spl_mission" name="{20204,10044}" startactive="false" comment="each sector">
+    <job id="hop_corvette_patrol_m_sector_spl_mission" name="{20204,10044}" startactive="false" >
       <modifiers commandeerable="true"/>
       <orders>
         <order order="Patrol" default="true">
@@ -5151,7 +5151,7 @@
       </orders>
       <category faction="holyorder" tags="[military, corvette]" size="ship_m"/>
       <quota galaxy="5" maxgalaxy="5" sector="1"/>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" matchextension="true"  tags="splitdlc"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" tags="splitdlc"/>
       <environment buildatshipyard="true" preferbuilding="true"/>
       <ship>
         <select faction="holyorder" tags="[military, corvette]" size="ship_m"/>
@@ -5170,7 +5170,7 @@
       </orders>
       <category faction="holyorder" tags="[military, fighter]" size="ship_s"/>
       <quota galaxy="18" maxgalaxy="29" zone="1"/>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" matchextension="true"  tags="splitdlc"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" tags="splitdlc"/>
       <environment buildatshipyard="true"/>
       <ship>
         <select faction="holyorder" tags="[fighter, heavy]" size="ship_s"/>
@@ -5183,7 +5183,7 @@
         <subordinate job="holyorder_fighter_escort_s_patrol"/>
       </subordinates>
     </job>
-    <job id="hop_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
+    <job id="hop_frigate_patrol_m_sector_exp" name="{20204,2901}" >
       <modifiers commandeerable="true"/>
       <orders>
         <order order="Patrol" default="true">
@@ -5206,7 +5206,7 @@
         <subordinate job="holyorder_fighter_escort_s_frigate" assignment="attack" group="2"/>
       </subordinates>	  
     </job>	
-    <job id="par_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
+    <job id="par_frigate_patrol_m_sector_exp" name="{20204,2901}" >
       <modifiers commandeerable="true"/>
       <orders>
         <order order="Patrol" default="true">
@@ -5229,7 +5229,7 @@
         <subordinate job="paranid_fighter_escort_s_frigate" assignment="attack" group="2"/>
       </subordinates>	  
     </job>	  
-    <job id="tri_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion" startactive="false">
+    <job id="tri_frigate_patrol_m_sector_exp" name="{20204,2901}" startactive="false">
       <modifiers commandeerable="true"/>
       <orders>
         <order order="Patrol" default="true">
