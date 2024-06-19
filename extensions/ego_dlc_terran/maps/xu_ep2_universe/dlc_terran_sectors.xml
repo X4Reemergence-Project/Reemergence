@@ -93,8 +93,9 @@
 		</offset>
 	</replace>
 	
-	
-	<!-- Sector 104 - Earth / Moon -->
+
+	<!-- Sector 103 - Unused -->	
+	<!-- Sector 104 - Earth / Moon-->
 	<replace sel="/macros/macro[@name='Cluster_104_Sector002_macro']/connections/connection[@name='Zone001_Cluster_104_Sector002_connection']/offset">
 		<offset>
           <position x="-114155" y="0" z="119655" />
@@ -119,9 +120,26 @@
 		<offset>
           <position x="18335" y="0" z="-85625" />
 		</offset>
-	</replace>	
+	</replace>
+	<add sel="//macro[@name='Cluster_104_Sector001_macro']/connections"><!--Earth <-> The Moon-->
+		<connection name="Zone_Gate1_Cluster_104_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-50000" y="0" z="-200000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_104_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>		
+	<add sel="//macro[@name='Cluster_104_Sector002_macro']/connections"><!--The Moon <-> Earth-->
+		<connection name="Zone_Gate1_Cluster_104_Sector002_connection" ref="zones">
+			<offset>
+				<position x="50000" y="0" z="200000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_104_Sector002_macro" connection="sector"/>
+		</connection>
+	</add>	
 
-	
+
+	<!-- Sector 105 - Unused -->	
 	<!-- Sector 106 - Mercury -->
 	<replace sel="/macros/macro[@name='Cluster_106_Sector001_macro']/connections/connection[@name='Zone001_Cluster_106_Sector001_connection']/offset">
 		<offset>
@@ -179,7 +197,38 @@
           <position x="-44815" y="0" z="-136465" />
 		</offset>
 	</replace>
-
+	<add sel="//macro[@name='Cluster_108_Sector001_macro']/connections"><!--Saturn 1 <-> Saturn 2-->
+		<connection name="Zone_Gate1_Cluster_108_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-85000" y="0" z="150000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_108_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>		
+	<add sel="//macro[@name='Cluster_108_Sector001_macro']/connections"><!--Saturn 1 <-> Titan-->
+		<connection name="Zone_Gate2_Cluster_108_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-50000" y="0" z="-200000"/>
+			</offset>
+			<macro ref="Zone_Gate2_Cluster_108_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>	
+	<add sel="//macro[@name='Cluster_108_Sector002_macro']/connections"><!--Titan <-> Saturn 1-->
+		<connection name="Zone_Gate1_Cluster_108_Sector002_connection" ref="zones">
+			<offset>
+				<position x="50000" y="0" z="200000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_108_Sector002_macro" connection="sector"/>
+		</connection>
+	</add>
+	<add sel="//macro[@name='Cluster_108_Sector003_macro']/connections"><!--Saturn 2 <-> Saturn 1-->
+		<connection name="Zone_Gate1_Cluster_108_Sector003_connection" ref="zones">
+			<offset>
+				<position x="8500" y="0" z="-1750"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_108_Sector003_macro" connection="sector"/>
+		</connection>
+	</add>	
 	
 	<!-- Sector 109 - Uranus -->
 	<replace sel="/macros/macro[@name='Cluster_109_Sector001_macro']/connections/connection[@name='Zone001_Cluster_109_Sector001_connection']/offset"><!--Neptune-->
@@ -196,7 +245,7 @@
 		<offset>
           <position x="-115810" y="0" z="-24860" />
 		</offset>
-	</replace>
+	</replace>		
 	
 	<!-- Sector 110 - Neptune -->
 	<replace sel="/macros/macro[@name='Cluster_110_Sector001_macro']/connections/connection[@name='Zone001_Cluster_110_Sector001_connection']/offset"><!--Uranus-->
@@ -290,7 +339,7 @@
 	</replace>		
 	<replace sel="/macros/macro[@name='Cluster_113_Sector001_macro']/connections/connection[@name='Zone005_Cluster_113_Sector001_connection']/offset"><!--Antigone Memorial-->
 		<offset>
-          <position x="142360" y="0" z="85215" />
+          <position x="142360" y="0" z="5215" />
 		</offset>
 	</replace>
 
@@ -367,7 +416,7 @@
          <position x="-75255" y="0" z="-33360" />		  
 		</offset>
 	</replace>
-	<replace sel="/macros/macro[@name='Cluster_116_Sector001_macro']/connections/connection[@name='Zone003_Cluster_116_Sector001_connection']/offset"><!--Planet 9-->
+	<replace sel="/macros/macro[@name='Cluster_116_Sector001_macro']/connections/connection[@name='Zone003_Cluster_116_Sector001_connection']/offset"><!--Oort Cloud Beta-->
 		<offset>
           <position x="3640" y="0" z="120530" />
 		</offset>

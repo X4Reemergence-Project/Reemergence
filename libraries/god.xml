@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--NOTE: There is a weird interaction with DeadAir's God, thus DA_RE, which causes module errors to generate that have no imapct on the game. This is still be investigated. 03/26/24-->
 <diff>
-<!--Base Sectors-->
-  <replace sel="/god/stations/station[@id='par_defence_cluster_10_sector001'][@type='factory']/location[@macro='zone003_cluster_10_sector001_macro']/@macro">zone001_cluster_10_sector001_macro</replace>	
-  <replace sel="/god/stations/station[@id='equipmentdock_holyorder'][@type='factory']/location[@macro='zone001_cluster_11_sector001_macro']/@macro">zone003_cluster_11_sector001_macro</replace>     
-  <replace sel="/god/stations/station[@id='hol_defence_cluster_12_sector001'][@type='factory']/location[@macro='zone001_cluster_12_sector001_macro']/@macro">zone003_cluster_12_sector001_macro</replace>
-  <replace sel="/god/stations/station[@id='ant_defence_cluster_13_sector001'][@type='factory']/location[@macro='zone001_cluster_13_sector001_macro']/@macro">zone002_cluster_13_sector001_macro</replace>		
-  <replace sel="/god/stations/station[@id='wharf_paranid'][@type='factory']/location[@macro='zone005_cluster_18_sector001_macro']/@macro">zone003_cluster_18_sector001_macro</replace>  
-  <replace sel="/god/stations/station[@id='equipmentdock_paranid'][@type='factory']/location[@macro='zone001_cluster_18_sector001_macro']/@macro">zone004_cluster_18_sector001_macro</replace>  
-  <replace sel="/god/stations/station[@id='tel_defence_cluster_20_sector001'][@type='factory']/location[@macro='zone003_cluster_20_sector001_macro']/@macro">zone004_cluster_20_sector001_macro</replace>
-  <replace sel="/god/stations/station[@id='par_defence_cluster_22_sector001'][@type='factory']/location[@macro='zone001_cluster_22_sector001_macro']/@macro">zone004_cluster_22_sector001_macro</replace>   
+<!--Base Sectors--> 		
+  <replace sel="/god/stations/station[@id='tel_defence_cluster_20_sector001'][@type='factory']/location[@macro='zone003_cluster_20_sector001_macro']/@macro">zone004_cluster_20_sector001_macro</replace> 
   <remove sel="/god/stations/station[@id='par_defence_cluster_23_sector001'][@type='factory']"/>	  
-  <replace sel="/god/stations/station[@id='shipyard_holyorder'][@type='factory']/location[@macro='zone001_cluster_24_sector001_macro']/@macro">zone005_cluster_24_sector001_macro</replace>
-  <replace sel="/god/stations/station[@id='wharf_holyorder'][@type='factory']/location[@macro='zone004_cluster_24_sector001_macro']/@macro">zone004_cluster_24_sector001_macro</replace>  
-  <replace sel="/god/stations/station[@id='tradestation_holyorder'][@type='tradingstation']/location[@macro='zone001_cluster_24_sector001_macro']/@macro">zone002_cluster_24_sector001_macro</replace>  
-  <replace sel="/god/stations/station[@id='hol_defence_cluster_24_sector001'][@type='factory']/location[@macro='zone001_cluster_24_sector001_macro']/@macro">zone003_cluster_24_sector001_macro</replace>  
-  <!--<replace sel="/god/stations/station[@id='equipmentdock_argon_02'][@type='factory']/location[@macro='zone002_cluster_29_sector002_macro']/@macro">zone001_cluster_29_sector001_macro</replace>-->   
+  <replace sel="/god/stations/station[@id='equipmentdock_argon_02'][@type='factory']/location[@macro='zone002_cluster_29_sector002_macro']/@macro">zone001_cluster_29_sector001_macro</replace>   
   <replace sel="/god/stations/station[@id='arg_defence_cluster_29_sector002'][@type='factory']/location[@macro='zone001_cluster_29_sector002_macro']/@macro">zone002_cluster_29_sector001_macro</replace> 
-  <replace sel="/god/stations/station[@id='hat_defence_cluster_29_sector001'][@type='factory']/location[@macro='zone001_cluster_29_sector001_macro']/@macro">zone001_cluster_29_sector002_macro</replace>
-  <replace sel="/god/stations/station[@id='tradestation_hatikvah_01'][@type='tradingstation']/location[@macro='zone001_cluster_29_sector001_macro']/@macro">zone003_cluster_29_sector002_macro</replace>  
-  <replace sel="/god/stations/station[@id='hol_defence_cluster_36_sector001'][@type='factory']/location[@macro='zone001_cluster_36_sector001_macro']/@macro">zone005_cluster_36_sector001_macro</replace>  
+  <replace sel="/god/stations/station[@id='hat_defence_cluster_29_sector001_01'][@type='factory']/location[@macro='zone002_cluster_29_sector001_macro']/@macro">zone001_cluster_29_sector002_macro</replace>
+  <replace sel="/god/stations/station[@id='hat_defence_cluster_29_sector001_02'][@type='factory']/location[@macro='zone003_cluster_29_sector001_macro']/@macro">zone003_cluster_29_sector002_macro</replace>  
+  <replace sel="/god/stations/station[@id='tradestation_hatikvah_01'][@type='tradingstation']/location[@macro='zone001_cluster_29_sector001_macro']/@macro">zone002_cluster_29_sector002_macro</replace>  
+  <replace sel="/god/stations/station[@id='hol_defence_cluster_36_sector001'][@type='factory']/location[@macro='zone002_cluster_36_sector001_macro']/@macro">zone005_cluster_36_sector001_macro</replace>  
 <!--Split DLC Sectors-->
   <replace sel="/god/stations/station[@id='spl_defence_cluster_403_sector001'][@type='factory']/location[@macro='zone004_cluster_403_sector001_macro']/@macro">zone005_cluster_403_sector001_macro</replace>	
   <replace sel="/god/stations/station[@id='frf_defence_cluster_412_sector001'][@type='factory']/location[@macro='zone001_cluster_412_sector001_macro']/@macro">zone004_cluster_412_sector001_macro</replace>	
@@ -27,23 +17,24 @@
   <replace sel="/god/stations/station[@id='par_defence_cluster_423_sector001'][@type='factory']/location[@macro='zone001_cluster_423_sector001_macro']/@macro">zone_gate1_cluster_423_sector002_macro</replace>	
   <replace sel="/god/stations/station[@id='par_defence_cluster_423_sector002'][@type='factory']/location[@macro='zone001_cluster_423_sector002_macro']/@macro">zone003_cluster_423_sector001_macro</replace>			
 <!--Terran DLC Sectors-->
+  <replace sel="/god/stations/station[@id='yaki_pirate_cluster_112_sector001'][@type='yakistation']/location[@macro='zone005_cluster_112_sector001_macro']/@macro">zone003_cluster_112_sector001_macro</replace>
+  <replace sel="/god/stations/station[@id='wharf_xenon_cluster_112'][@type='shipyard']/location[@macro='zone005_cluster_112_sector001_macro']/@macro">zone004_cluster_112_sector001_macro</replace>  
 <!--Pirate DLC Sectors-->
 <!--Boron DLC Sectors-->
   <replace sel="/god/stations/station[@id='boron_defence_603_001'][@type='factory']/location[@macro='zone004_cluster_603_sector001_macro']/@macro">zone002_cluster_603_sector001_macro</replace>	
   <remove sel="/god/stations/station[@id='boron_defence_603_001'][@type='factory']/position"/>	
-
   
 <!--X:Reemergence Sectors-->
   <add sel="/god/objects">
-	<!--PTNI HQ Ruins-->
-    <object id="derelict_station_PTNI">
+    <object id="Albion_Gate">
       <quotas>
         <quota galaxy="1" />
       </quotas>
-      <location class="sector" macro="cluster_REM44_sector001_macro" />
-      <position x="124000" y="2500" z="-30000" yaw="0" pitch="0" roll="0" />
-      <object macro="landmarks_gen_old_ringstation_macro" />
+      <location class="sector" macro="cluster_REM77_sector001_macro" />
+      <position x="11500" y="500" z="165000" pitch="0" roll="0" yaw="0"/>	  
+      <object macro="landmark_gate_albion_macro" />
     </object>
+	
 	<!--Anomalies-->
     <object id="matrix_01_01">
       <quotas>
@@ -151,40 +142,6 @@
       </location>
       <object macro="wormhole_v1_macro" />
     </object>
-	<!--
-    <object id="unknown_khaak_01">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="zone" macro="zone003_cluster_REM70_sector001_macro"/>
-      <position x="0" y="0" z="0" />
-      <object macro="wormhole_khaak_macro" />
-    </object>
-    <object id="unknown_khaak_02">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="zone" macro="zone005_cluster_REM70_sector001_macro"/>
-      <position x="0" y="0" z="0" />
-      <object macro="wormhole_v1_macro" />
-    </object>	
-    <object id="unknown_sector_01">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="zone" macro="zone007_cluster_REM71a_sector001_macro"/>
-      <position x="0" y="0" z="0" />
-      <object macro="wormhole_v1_macro" />
-    </object>
-    <object id="khaak_hive_01">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="zone" macro="zone006_cluster_REM72_sector001_macro"/>
-      <position x="0" y="0" z="0" />
-      <object macro="wormhole_hive_macro" />
-	</object>
-	-->
 	
 	<!--Kha'ak Claim Platforms-->
     <object id="khaak_core_depths_of_silence" owner="khaak">
@@ -313,7 +270,7 @@
 	  <quotas>
         <quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="Zone_Gate_Cluster_47_Sector001_macro" matchextension="false"/>  
+	  <location class="zone" macro="Zone_Gate1_Cluster_47_Sector001_macro" matchextension="false"/>  
 	  <station>
 		<select faction="paranid" tags="[defence]" />
 	  </station>
@@ -365,7 +322,7 @@
 <!--REM03 Hermes-->
 <!--REM04 Althes-->
 <!--REM05 Megnir-->
-	<station id="pio_defence_cluster_REM05_sector001" race="terran" owner="pioneers" type="factory">
+	<station id="pio_defence_cluster_REM05_sector001" race="terran" owner="pioneers" type="factory" >
 	  <quotas>
 		<quota galaxy="2" />
 	  </quotas>
@@ -1261,10 +1218,10 @@
 <!--REM41 Shadows of Giants Cluster-->
 <!--REM42 Bala Gi's Joy-->
 <!--REM43 Blue Profit-->
-<!--REM44 PTNI Headquarters-->
+<!--REM44 Matrix #483-->
 	<station id="xen_defence1_cluster_REM44_sector001" race="xenon" owner="xenon" type="defence">
 	  <quotas>
-		<quota galaxy="1" />
+		<quota zone="2" />
 	  </quotas>
 	  <location class="zone" macro="zoneG1_cluster_REM44_sector001_macro" />
 	  <position yaw="0" pitch="0" roll="0" />		  	  
@@ -1276,20 +1233,6 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="xen_defence2_cluster_REM44_sector001" race="xenon" owner="xenon" type="defence">
-	  <quotas>
-		<quota galaxy="1" />
-	  </quotas>
-	  <location class="zone" macro="zoneG2_cluster_REM44_sector001_macro" />
-	  <position yaw="0" pitch="0" roll="0" />		  	  
-	  <station>
-		<select faction="xenon" tags="[defence]" />
-		<loadout>
-		  <level exact="1.0" />
-		  <variation exact="0"/>
-		</loadout>
-	  </station>
-	</station>	
 	<station id="shipyard_xenon_cluster_REM44" race="xenon" owner="xenon" type="shipyard" respawnable="true">
 	  <quotas>
 		<quota galaxy="1" />
@@ -1388,9 +1331,9 @@
 		</loadout>
 	  </station>
 	</station>	
-<!--REM51 LooMankStrat's Legacy-->
+<!--REM51 Fierce Clarity-->
 <!--REM52 Danna's Chance-->	
-<!--REM53 Legend's Home Alpha-->
+<!--REM53 Legend's Home-->
 	<station id="otas_defenceG1_cluster_REM53_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="1" />
@@ -1434,26 +1377,16 @@
 		</loadout>
 	  </station>
 	</station-->
-	<station id="otas_trade_REM53" race="argon" owner="otas" type="tradingstation">
+<!--REM54 Merchant's Haven-->
+	<station id="ringstation_REM54" race="teladi" owner="teladi" type="tradingstation">
 	  <quotas>
-		<quota galaxy="1" />
+		<quota galaxy="1" sector="1"/>
 	  </quotas>
-	  <location class="zone" macro="zoneTD_cluster_REM53_sector001_macro" />
-	  <station>
-		<select faction="otas" tags="[tradestation]"/>
+	  <location class="zone" macro="zone001_cluster_REM54_sector001_macro" />
+	  <station ref="tradestation_tel_ring">
 		<loadout>
-		  <level exact="1.0"/>
+		  <level exact="0.75"/>
 		</loadout>
-	  </station>
-	</station>
-<!--REM54 Legend's Home Beta-->
-	<station id="otas_defence_cluster_REM54_sector001" race="argon" owner="otas" type="factory">
-	  <quotas>
-		<quota galaxy="2" zone="1" />
-	  </quotas>
-	  <location class="sector" macro="cluster_REM54_sector001_macro" />
-	  <station>
-		<select faction="otas" tags="[defence]"/>
 	  </station>
 	</station>	
 <!--REM55 Akeela's Beacon-->	
@@ -1466,6 +1399,18 @@
 		<select faction="otas" tags="[defence]"/>
 	  </station>
 	</station>
+	<station id="otas_trade_REM55" race="argon" owner="otas" type="tradingstation">
+	  <quotas>
+		<quota galaxy="1" />
+	  </quotas>
+	  <location class="zone" macro="zoneTD_cluster_REM55_sector001_macro" />
+	  <station>
+		<select faction="otas" tags="[tradestation]"/>
+		<loadout>
+		  <level exact="1.0"/>
+		</loadout>
+	  </station>
+	</station>	
 <!--REM56 Aladna Hill-->	
 	<station id="otas_defence_cluster_REM56_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
@@ -1475,7 +1420,7 @@
 	  <station>
 		<select faction="otas" tags="[defence]"/>
 	  </station>
-	</station>
+	</station>	
 <!--REM57 Light of Heart-->	
 	<station id="otas_defenceG2_cluster_REM57_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
@@ -1509,10 +1454,10 @@
 		</loadout>
 	  </station>
 	</station>			
-<!--REM58 Moo-Kye's Revenge-->	
+<!--REM58 Tempting Fumes-->	
 <!--REM59 Mines of Fortune-->	
 <!--REM60 Zyarth's Stand-->	
-<!--REM61 Zyarth's Fall-->
+<!--REM61 Patriarch's Conclusion-->
 	<station id="spl_scrap_REM61_sector001" race="split" owner="split" type="factory">
 	  <quotas>
 		<quota galaxy="1" sector="1"/>
@@ -2327,12 +2272,25 @@
 	  </station>
 	</station>	
 <!--REM74 Tebathimanckatt's Legacy-->
-<!--NXW01 Bad Debt-->		
-	<station id="xen_defence_bad_debt" race="xenon" owner="xenon" type="defence">
+<!--REM75 COMING SOON TO A GALAXY NEAR YOU-->
+<!--REM76 Untainted Eternity-->	
+<!--REM77 Belt of Aguilar-->	
+	<station id="argon_REM77_sector001" race="argon" owner="argon" type="tradingstation">
+	  <quotas>
+        <quota galaxy="1" zone="1" />
+	  </quotas>
+	  <location class="zone" macro="zone001_cluster_REM77_sector001_macro" matchextension="false" />
+	  <station>
+		<select faction="argon" tags="[tradestation]" />
+	  </station>
+	 </station>
+<!--REM78 Tkr's Deprivation-->		 
+<!--REM79 Matrix #695-->		
+	<station id="xen_defence_cluster_REM79" race="xenon" owner="xenon" type="defence">
 	  <quotas>
 		<quota galaxy="2" />
 	  </quotas>
-	  <location class="sector" macro="Cluster_nxw01_Sector001_macro" />					
+	  <location class="sector" macro="Cluster_REM79_Sector001_macro" />					
 	  <station>
 	  <select faction="xenon" tags="[defence]" />
 		<loadout>
@@ -2341,11 +2299,11 @@
 		</loadout>
 	  </station>
 	</station>		
-	<station id="xen_shipyard_bad_debt" race="xenon" owner="xenon" type="shipyard">
+	<station id="xen_shipyard_cluster_REM79_sector001" race="xenon" owner="xenon" type="shipyard">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="ZoneSP_Cluster_nxw01_Sector001_macro" />
+	  <location class="zone" macro="ZoneSP_Cluster_REM79_Sector001_macro" />
 	  <position yaw="0" pitch="0" roll="0" />				
 	  <station>
 	  <select faction="xenon" tags="[shipyard]" />
@@ -2355,11 +2313,11 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="xen_wharf_bad_debt" race="xenon" owner="xenon" type="shipyard">
+	<station id="xen_wharf_cluster_REM79_sector001" race="xenon" owner="xenon" type="shipyard">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="ZoneWF_Cluster_nxw01_Sector001_macro" />		
+	  <location class="zone" macro="ZoneWF_Cluster_REM79_Sector001_macro" />		
 	  <station>
 	  <select faction="xenon" tags="[wharf]" />
 		<loadout>
@@ -2368,11 +2326,11 @@
 		</loadout>
 	  </station>
 	</station>		
-	<station id="xen_asteroidbase_nxw01_01" owner="xenon" race="xenon">
+	<station id="xen_asteroidbase_1_cluster_REM79_sector001" owner="xenon" race="xenon">
 	  <quotas>
 		<quota galaxy="1"/>
 	  </quotas>
-	  <location class="sector" macro="Cluster_nxw01_Sector001_macro" />
+	  <location class="sector" macro="Cluster_REM79_Sector001_macro" />
 	  <position x="65000" y="6525" z="-135000" />
 	  <station macro="xenon_asteroid_01_base_01_macro">
 		<loadout>
@@ -2381,11 +2339,11 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="xen_asteroidbase_nxw01_02" owner="xenon" race="xenon">
+	<station id="xen_asteroidbase_2_cluster_REM79_sector001" owner="xenon" race="xenon">
 	  <quotas>
 		<quota galaxy="1"/>
 	  </quotas>
-	  <location class="sector" macro="Cluster_nxw01_Sector001_macro" />
+	  <location class="sector" macro="Cluster_REM79_Sector001_macro" />
 	  <position x="-47500" y="4850" z="98500" />
 	  <station macro="xenon_asteroid_01_base_01_macro">
 		<loadout>
@@ -2393,8 +2351,7 @@
 		  <variation exact="0.0"/>
 		</loadout>
 	  </station>
-	</station>	
-<!--REMXX Test-->			
+	</station>			
   </add>
   
   <add sel="/god/products">
@@ -3075,7 +3032,7 @@
 <!--REM41 Shadows of Giants Cluster-->
 <!--REM42 Bala Gi's Joy-->
 <!--REM43 Blue Profit-->
-<!--REM44 PTNI Headquarters-->
+<!--REM44 Matrix #483-->
 	<product id="xen_energycells_REM44" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
 		<quota galaxy="4" zone="2" />
@@ -3154,12 +3111,12 @@
         <select ware="engineparts" race="paranid"/>
       </module>
     </product>
-<!--REM51 LooMankStrat's Legacy-->
+<!--REM51 Fierce Clarity-->
 <!--REM52 Danna's Chance-->
 <!--REMs 53-57 - OTAS-->
 	<product id="otas_advancedcomposites" ware="advancedcomposites" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="6" />
+		<quota galaxy="2" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.5" maxbound="false" />		
@@ -3170,7 +3127,7 @@
 	</product>
 	<product id="otas_advancedelectronics" ware="advancedelectronics" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="16" sector="12"/>
+		<quota galaxy="2" sector="1"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.5" maxbound="false" />			
@@ -3181,7 +3138,7 @@
 	</product>
 	<product id="otas_antimattercells" ware="antimattercells" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="4" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security max="0.5" maxbound="false" />		
@@ -3192,7 +3149,7 @@
 	</product>
 	<product id="otas_antimatterconverters" ware="antimatterconverters" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="16" sector="8"/>
+		<quota galaxy="3" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.5" max="0.75" />			
@@ -3203,7 +3160,7 @@
 	</product>
 	<product id="otas_claytronics" ware="claytronics" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="16" sector="8"/>
+		<quota galaxy="4" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.25" max="0.9" />			
@@ -3214,7 +3171,7 @@
 	</product>
 	<product id="otas_dronecomponents" ware="dronecomponents" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="12" />
+		<quota galaxy="2" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.75" maxbound="false" />			
@@ -3225,7 +3182,7 @@
 	</product>
 	<product id="otas_energycells" ware="energycells" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="40" sector="20"/>
+		<quota galaxy="10" sector="20"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<sunlight min="1.0" max="false" />			
@@ -3236,7 +3193,7 @@
 	</product>		
 	<product id="otas_engineparts" ware="engineparts" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="10" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.5" maxbound="0.9" />
@@ -3248,7 +3205,7 @@
 	</product>
 	<product id="otas_fieldcoils" ware="fieldcoils" owner="otas" type="factory" >
 	  <quotas>
-		<quota galaxy="4" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.75" maxbound="false" />			
@@ -3259,7 +3216,7 @@
 	</product>
 	<product id="otas_foodrations" ware="foodrations" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="20" sector="10"/>
+		<quota galaxy="4" sector="10"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.25" maxbound="0.5" />		
@@ -3270,7 +3227,7 @@
 	</product>
 	<product id="otas_graphene" ware="graphene" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="28" />
+		<quota galaxy="6" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<region ware="methane" maxbound="false"/>		
@@ -3281,7 +3238,7 @@
 	</product>
 	<product id="otas_hullparts" ware="hullparts" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="70" sector="36" />
+		<quota galaxy="8" sector="4" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.5" maxbound="false" />			
@@ -3303,7 +3260,7 @@
 	</product>
 	<product id="otas_medicalsupplies" ware="medicalsupplies" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="32" sector="24"/>
+		<quota galaxy="4" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.25" maxbound="0.9" />		
@@ -3314,7 +3271,7 @@
 	</product>
 	<product id="otas_microchips" ware="microchips" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="42" sector="24"/>
+		<quota galaxy="8" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.25" max="0.75" />		
@@ -3325,7 +3282,7 @@
 	</product>
 	<product id="otas_missilecomponents" ware="missilecomponents" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="16" sector="8"/>
+		<quota galaxy="3" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.6" max="0.75" />		
@@ -3336,7 +3293,7 @@
 	</product>
 	<product id="otas_plasmaconductors" ware="plasmaconductors" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="18" />
+		<quota galaxy="4" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.75" max="0.9" />			
@@ -3347,7 +3304,7 @@
 	</product>
 	<product id="otas_quantumtubes" ware="quantumtubes" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="24" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.5" maxbound="false" />			
@@ -3358,7 +3315,7 @@
 	</product>
 	<product id="otas_refinedmetals" ware="refinedmetals" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="46" />
+		<quota galaxy="8" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<region ware="ore" maxbound="false"/>			
@@ -3369,7 +3326,7 @@
 	</product>
 	<product id="otas_scanningarrays" ware="scanningarrays" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="9" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.75" maxbound="false" />			
@@ -3380,7 +3337,7 @@
 	</product>
 	<product id="otas_shieldcomponents" ware="shieldcomponents" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="16" sector="10"/>
+		<quota galaxy="4" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.75" maxbound="false" />			
@@ -3391,7 +3348,7 @@
 	</product>
 	<product id="otas_siliconwafers" ware="siliconwafers" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="28" sector="8"/>
+		<quota galaxy="6" sector="3"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<region ware="silicon" maxbound="false" />	
@@ -3402,7 +3359,7 @@
 	</product>
 	<product id="otas_smartchips" ware="smartchips" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="20" />
+		<quota galaxy="5" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.5" maxbound="false" />				
@@ -3422,7 +3379,7 @@
 	</product>	
 	<product id="otas_spices" ware="spices" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="10" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.25" max="0.6" />			
@@ -3430,19 +3387,10 @@
 	  <module>
 		<select ware="spices" race="argon"/>
 	  </module>
-	</product>
-	<product id="otas_stimulants_REM54_sector001" ware="stimulants" owner="otas" type="factory">
-	  <quotas>
-		<quota galaxy="1" sector="1"/>
-	  </quotas>
-	  <location class="sector" macro="Cluster_REM54_sector001_macro" relation="self" matchextension="true"/>
-	  <module>
-		<select ware="stimulants" race="otas"/>
-	  </module>
-	</product>		
+	</product>	
 	<product id="otas_superfluidcoolant" ware="superfluidcoolant" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="10" />
+		<quota galaxy="4" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<region ware="helium" maxbound="false"/>	
@@ -3453,7 +3401,7 @@
 	</product>
 	<product id="otas_turretcomponents" ware="turretcomponents" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="20" sector="10"/>
+		<quota galaxy="8" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="1" maxbound="false"/>			
@@ -3464,7 +3412,7 @@
 	</product>
 	<product id="otas_water" ware="water" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="8" />
+		<quota galaxy="4" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<region ware="ice" maxbound="false"/>		
@@ -3475,7 +3423,7 @@
 	</product>
 	<product id="otas_weaponcomponents" ware="weaponcomponents" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="12" sector="8"/>
+		<quota galaxy="4" sector="2"/>
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="1" maxbound="false"/>				
@@ -3486,7 +3434,7 @@
 	</product>
 	<product id="otas_wheat" ware="wheat" owner="otas" type="factory">
 	  <quotas>
-		<quota galaxy="7" />
+		<quota galaxy="5" />
 	  </quotas>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="[otas]" relation="self" comparison="exact" matchextension="false">
 		<security min="0.25" max="0.6"/>			
@@ -3495,10 +3443,10 @@
 		<select ware="wheat" race="argon"/>
 	  </module>
 	</product>
-<!--REM58 Moo-Kye's Revenge-->	
+<!--REM58 Tempting Fumes-->	
 <!--REM59 Mines of Fortune-->	
 <!--REM60 Zyarth's Stand-->	
-<!--REM61 Zyarth's Fall-->	
+<!--REM61 Patriarch's Conclusion-->	
 <!--REM62 Elena's Fortune-->	
 <!--REM63 Nyana's Hideout-->
 <!--REM64 Interworlds-->	
@@ -3525,16 +3473,265 @@
 		<select ware="stimulants" race="otas"/>
 	  </module>
 	</product>		
-<!--REM74 Tebathimanckatt's Legacy-->	
-<!--NXW01 Bad Debt-->
-	<product id="nxw_xen_energycells_nxw01_01" ware="energycells" owner="xenon" type="factory">
+<!--REM74 Tebathimanckatt's Legacy-->
+<!--REM75 COMING TO A GALAXY NEAR YOU-->
+<!--REM76 Untainted Eternity-->	
+<!--REM77 Belt of Aguilar-->
+<!--REM78 Tkr's Deprivation-->		
+<!--REM79 Matrix #695-->
+	<product id="xen_energycells_cluster_REM79_sector001" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
 		<quota galaxy="3" />
 	  </quotas>
-	  <location class="sector" macro="Cluster_nxw01_Sector001_macro" />			
+	  <location class="sector" macro="Cluster_REM79_Sector001_macro" />			
 	  <module>
 		<select ware="energycells" race="xenon" />
 	  </module>
-	</product>	
+	</product>		
   </add>
+
+  <add sel="/god/products/product[@id='arg_advancedcomposites']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='arg_advancedelectronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_antimattercells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_antimatterconverters']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_claytronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_dronecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_engineparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_fieldcoils']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_graphene']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_hullparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_meat']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_microchips']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_missilecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_plasmaconductors']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='arg_quantumtubes']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='arg_refinedmetals']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_scanningarrays']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_shieldcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_siliconwafers']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_smartchips']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='ant_spacefuel']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='arg_spices']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='arg_superfluidcoolant']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_turretcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_water']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='arg_weaponcomponents']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='arg_foodrations']/location" type="@matchextension">false</add>    
+  <add sel="/god/products/product[@id='arg_wheat']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_advancedcomposites']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='ant_advancedelectronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_antimattercells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_antimatterconverters']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_claytronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_dronecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_engineparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_fieldcoils']/location" type="@matchextension">false</add>    
+  <add sel="/god/products/product[@id='ant_graphene']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_hullparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_meat']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_microchips']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_missilecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_plasmaconductors']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='ant_quantumtubes']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='ant_refinedmetals']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_scanningarrays']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_shieldcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_siliconwafers']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_smartchips']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='ant_spices']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='ant_superfluidcoolant']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_turretcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_water']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_weaponcomponents']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='ant_foodrations']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ant_wheat']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='hol_advancedcomposites']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='hol_advancedelectronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_antimattercells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_antimatterconverters']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_claytronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_dronecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_engineparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_fieldcoils']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_graphene']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_hullparts']/location" type="@matchextension">false</add>    
+  <add sel="/god/products/product[@id='hol_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_microchips']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_missilecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_plasmaconductors']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='hol_quantumtubes']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='hol_refinedmetals']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_scanningarrays']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_shieldcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_siliconwafers']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_smartchips']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='hol_spices']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='hol_superfluidcoolant']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_turretcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_water']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_weaponcomponents']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='hol_majasnails']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='hol_sojabeans']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_advancedcomposites']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='par_advancedelectronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_antimattercells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_antimatterconverters']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_claytronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_dronecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_engineparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_fieldcoils']/location" type="@matchextension">false</add>    
+  <add sel="/god/products/product[@id='par_graphene']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_hullparts']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='par_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_microchips']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_missilecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_plasmaconductors']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='par_quantumtubes']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='par_refinedmetals']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_scanningarrays']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_shieldcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_siliconwafers']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_smartchips']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='par_spices']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='par_superfluidcoolant']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_turretcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_water']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_weaponcomponents']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='par_majasnails']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='par_sojabeans']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_advancedcomposites']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='tel_advancedelectronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_antimattercells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_antimatterconverters']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_claytronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_dronecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_engineparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_fieldcoils']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='tel_graphene']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_hullparts']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='tel_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_microchips']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_missilecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_plasmaconductors']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='tel_quantumtubes']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_scanningarrays']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_shieldcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_siliconwafers']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_smartchips']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='tel_spices']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='tel_superfluidcoolant']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='tel_teladianium']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='tel_turretcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_water']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_weaponcomponents']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='tel_spaceweed']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='tel_sunriseflowers']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='tel_swampplant']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_advancedcomposites']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='spl_advancedelectronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_antimattercells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_antimatterconverters']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_claytronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_dronecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_engineparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_fieldcoils']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='spl_graphene']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_hullparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_meat']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_microchips']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_missilecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_plasmaconductors']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='spl_quantumtubes']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='spl_refinedmetals']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_scanningarrays']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_shieldcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_siliconwafers']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_smartchips']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='spl_spices']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='spl_superfluidcoolant']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_turretcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_water']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_weaponcomponents']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='spl_cheltmeat']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='spl_scruffinfruits']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_advancedcomposites']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='frf_advancedelectronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_antimattercells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_antimatterconverters']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_claytronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_dronecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_engineparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_fieldcoils']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='frf_graphene']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_hullparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_meat']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_microchips']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_missilecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_plasmaconductors']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='frf_quantumtubes']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='frf_refinedmetals']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_scanningarrays']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_shieldcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_siliconwafers']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_smartchips']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='frf_spices']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='frf_superfluidcoolant']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_turretcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_water']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_weaponcomponents']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='frf_cheltmeat']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='frf_scruffinfruits']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='ter_metallicmicrolattice']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ter_computronicsubstrate']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ter_siliconcarbide']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ter_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ter_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='ter_proteinpaste']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='ter_terranmre']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='pio_metallicmicrolattice']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='pio_computronicsubstrate']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='pio_siliconcarbide']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='pio_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='pio_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='pio_proteinpaste']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='pio_terranmre']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='bor_advancedcomposites']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='bor_advancedelectronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_antimattercells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_antimatterconverters']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_claytronics']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_dronecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_energycells']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_engineparts']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_fieldcoils']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='bor_graphene']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_hullparts']/location" type="@matchextension">false</add>   
+  <add sel="/god/products/product[@id='bor_medicalsupplies']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_microchips']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_missilecomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_plasmaconductors']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='bor_quantumtubes']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='bor_refinedmetals']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_scanningarrays']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_shieldcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_siliconwafers']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_smartchips']/location" type="@matchextension">false</add>
+  <add sel="/god/products/product[@id='bor_superfluidcoolant']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_turretcomponents']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_water']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_weaponcomponents']/location" type="@matchextension">false</add> 
+  <add sel="/god/products/product[@id='bor_bofu']/location" type="@matchextension">false</add>  
+  <add sel="/god/products/product[@id='bor_bogas']/location" type="@matchextension">false</add>  
+  
 </diff>	

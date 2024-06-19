@@ -11,7 +11,7 @@
 	<!-- Sector 100 - Asteroid Belt -->	
 	<replace sel="/macros/macro[@name='Zone002_Cluster_100_Sector001_macro']/connections/connection[@name='connection_ClusterGate100To101']/offset"><!--Mars-->
 		<offset>
-          <position x="13120" y="0" z="7500" />
+          <position x="12750" y="0" z="12750" />
           <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
 	</replace>
@@ -24,7 +24,7 @@
 	</replace>
 	<replace sel="/macros/macro[@name='Zone005_Cluster_100_Sector001_macro']/connections/connection[@name='connection_ClusterGate100To107']/offset"><!--Jupiter-->
 		<offset>
-          <position x="-16500" y="0" z="2500" />
+          <position x="-22750" y="0" z="0" />
           <quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068" />
 		</offset>
 	</replace>
@@ -34,14 +34,14 @@
 	<!-- Sector 101 - Mars -->	
 	<replace sel="/macros/macro[@name='Zone001_Cluster_101_Sector001_macro']/connections/connection[@name='connection_ClusterGate101To102']/offset"><!--Venus-->
 		<offset>
-          <position x="16250" y="1" z="-17000" />
+          <position x="0" y="0" z="-22750" />
           <quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
         </offset>
 	</replace>
     <replace sel="//macros/macro[@name='Zone001_Cluster_101_Sector001_macro']/connections/connection/macro/@ref">props_ter_accelerator_01_macro</replace>	
 	<replace sel="/macros/macro[@name='Zone005_Cluster_101_Sector001_macro']/connections/connection[@name='connection_ClusterGate101To100']/offset"><!--Asteroid Belt-->
 		<offset>
-          <position x="-13000" y="1" z="-14500" />
+          <position x="-12750" y="0" z="-12750" />
           <quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068" />
 		</offset>
 	</replace>
@@ -49,7 +49,7 @@
 	<add sel="/macros/macro[@name='Zone002_Cluster_101_Sector001_macro']/connections"><!--Ares-->
 		<connection name="connection_ClusterGate101ToREM02" ref="gates">
 			<offset>
-				<position x="-5750" y="1" z="5750" />
+				<position x="0" y="0" z="22750" />
 				<quaternion qx="0" qy="1" qz="0" qw="0" />
 			</offset>
 			<macro ref="props_ter_accelerator_01_macro" connection="space" />
@@ -60,21 +60,21 @@
 	<!-- Sector 102 - Venus -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_102_Sector001_macro']/connections/connection[@name='connection_ClusterGate102To106']/offset"><!--Mercury-->
 		<offset>
-          <position x="5250" y="1" z="-5250" />
+          <position x="22750" y="0" z="0" />
           <quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
 	</replace>
     <replace sel="//macros/macro[@name='Zone002_Cluster_102_Sector001_macro']/connections/connection/macro/@ref">props_ter_accelerator_01_macro</replace>	
 	<replace sel="/macros/macro[@name='Zone003_Cluster_102_Sector001_macro']/connections/connection[@name='connection_ClusterGate102To104']/offset"><!--The Moon-->
 		<offset>
-          <position x="-2750" y="1" z="7500" />
+          <position x="0" y="0" z="22750" />
           <quaternion qx="0" qy="0.9659258" qz="0" qw="0.258819" />
 		</offset>
 	</replace>
     <replace sel="//macros/macro[@name='Zone003_Cluster_102_Sector001_macro']/connections/connection/macro/@ref">props_ter_accelerator_01_macro</replace>	
 	<replace sel="/macros/macro[@name='Zone005_Cluster_102_Sector001_macro']/connections/connection[@name='connection_ClusterGate102To101']/offset"><!--Mars-->
 		<offset>
-          <position x="-6780" y="1" z="-7525" />
+          <position x="-12750" y="0" z="-12750" />
           <quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
 	</replace>
@@ -84,18 +84,44 @@
 	<!-- Sector 104 - Earth/Moon -->
 	<replace sel="/macros/macro[@name='Zone005_Cluster_104_Sector002_macro']/connections/connection[@name='connection_ClusterGate104To102']/offset"><!--Venus-->
 		<offset>
-          <position x="1" y="1" z="-5000" />
+          <position x="0" y="0" z="-22750" />
           <quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
 	</replace>
-    <replace sel="//macros/macro[@name='Zone005_Cluster_104_Sector002_macro']/connections/connection/macro/@ref">props_ter_accelerator_01_macro</replace>		
+    <replace sel="//macros/macro[@name='Zone005_Cluster_104_Sector002_macro']/connections/connection/macro/@ref">props_ter_accelerator_01_macro</replace>
+	<add sel="//macros"> 
+		<macro name="Zone_Gate1_Cluster_104_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate104s1To104s2" ref="gates"><!--Earth <-> The Moon-->
+					<offset>
+						<position x="0" y="0" z="-22750"/>
+						<quaternion qx="0" qy="0" qz="0" qw="1" />
+					</offset>
+					<macro ref="props_ter_accelerator_01_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+		<macro name="Zone_Gate1_Cluster_104_Sector002_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate104s2To104s1" ref="gates"><!--The Moon <-> Earth-->
+					<offset>
+						<position x="0" y="0" z="22750"/>
+						<quaternion qx="0" qy="1" qz="0" qw="0" />
+					</offset>
+					<macro ref="props_ter_accelerator_01_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>		
+	</add>		
 
 	
 	<!-- Sector 106 - Mercury -->
 	<add sel="/macros/macro[@name='Zone002_Cluster_106_Sector001_macro']/connections"><!--Hermes-->
 		<connection name="connection_ClusterGate106ToREM03" ref="gates">
 			<offset>
-				<position x="-5750" y="1" z="5750"/>
+				<position x="-12750" y="0" z="12750"/>
 				<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 			</offset>
 			<macro ref="props_ter_accelerator_01_macro" connection="space" />
@@ -103,7 +129,7 @@
 	</add>	
 	<replace sel="/macros/macro[@name='Zone003_Cluster_106_Sector001_macro']/connections/connection[@name='connection_ClusterGate106To102']/offset"><!--Venus-->
 		<offset>
-          <position x="2950" y="1" z="-7500" />
+          <position x="12750" y="1" z="-12750" />
           <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 		</offset>
 	</replace>
@@ -130,7 +156,7 @@
 	<!-- Sector 108 - Saturn 1/Titan/2 -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_108_Sector001_macro']/connections/connection[@name='connection_ClusterGate108To107']/offset"><!--Jupiter-->
 		<offset>
-          <position x="7750" y="1" z="7750" />
+          <position x="12750" y="0" z="12750" />
           <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
 	</replace>
@@ -139,25 +165,75 @@
 	<add sel="/macros/macro[@name='Zone003_Cluster_108_Sector002_macro']/connections"><!--Uranus-->
 		<connection name="connection_ClusterGate108To109" ref="gates">
 			<offset>
-				<position x="-15750" y="1" z="-8750"/>
+				<position x="-12750" y="0" z="-12750"/>
 				<quaternion qx="0" qy="0.3007058" qz="0" qw="0.953717"/>
 			</offset>
 			<macro ref="props_ter_accelerator_01_macro" connection="space" />
 		</connection>
+	</add>
+	<add sel="//macros"> 
+		<macro name="Zone_Gate1_Cluster_108_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate108s1To108s3" ref="gates"><!--Saturn 1 <-> Saturn 2-->
+					<offset>
+						<position x="-12750" y="0" z="12750"/>
+						<quaternion qx="0" qy="0.9396926" qz="0" qw="0.3420201" />
+					</offset>
+					<macro ref="props_ter_accelerator_01_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+		<macro name="Zone_Gate2_Cluster_108_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate108s1To108s2" ref="gates"><!--Saturn 1 <-> Titan-->
+					<offset>
+						<position x="-12750" y="0" z="-12750"/>
+						<quaternion qx="0" qy="0.258819" qz="0" qw="0.9659258" />
+					</offset>
+					<macro ref="props_ter_accelerator_01_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+		<macro name="Zone_Gate1_Cluster_108_Sector002_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate108s2To108s1" ref="gates"><!--Titan <-> Saturn 1-->
+					<offset>
+						<position x="12750" y="0" z="12750"/>
+						<quaternion qx="0" qy="0.953717" qz="0" qw="-0.3007058" />
+					</offset>
+					<macro ref="props_ter_accelerator_01_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+		<macro name="Zone_Gate1_Cluster_108_Sector003_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate108s3To108s1" ref="gates"><!--Saturn 2 <-> Saturn 1-->
+					<offset>
+						<position x="12750" y="0" z="-12750"/>
+						<quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
+					</offset>
+					<macro ref="props_ter_accelerator_01_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
 	</add>	
 	
 
 	<!-- Sector 109 - Uranus -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_109_Sector001_macro']/connections/connection[@name='connection_ClusterGate109To110']/offset"><!--Neptune-->
 		<offset>
-          <position x="-17750" y="1" z="5750" />
+          <position x="-12750" y="0" z="12750" />
           <quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
 	</replace>
     <replace sel="//macros/macro[@name='Zone001_Cluster_109_Sector001_macro']/connections/connection/macro/@ref">props_ter_accelerator_01_macro</replace>	
 	<replace sel="/macros/macro[@name='Zone002_Cluster_109_Sector001_macro']/connections/connection[@name='connection_ClusterGate109To108']/offset"><!--Titan-->
 		<offset>
-          <position x="5480" y="1" z="-17560" />
+          <position x="12750" y="0" z="-12750" />
           <quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
 	</replace>	
@@ -167,21 +243,21 @@
 	<!-- Sector 110 - Neptune -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_110_Sector001_macro']/connections/connection[@name='connection_ClusterGate110To109']/offset"><!--Uranus-->
 		<offset>
-          <position x="7750" y="1" z="-13650" />
+          <position x="12750" y="0" z="-12750" />
           <quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
 	</replace>
     <replace sel="//macros/macro[@name='Zone001_Cluster_110_Sector001_macro']/connections/connection/macro/@ref">props_ter_accelerator_01_macro</replace>	
 	<replace sel="/macros/macro[@name='Zone002_Cluster_110_Sector001_macro']/connections/connection[@name='connection_ClusterGate110To111']/offset"><!--Pluto-->
 		<offset>
-          <position x="7750" y="1" z="13250" />
+          <position x="12750" y="0" z="12750" />
           <quaternion qx="0" qy="0.9063078" qz="0" qw="-0.4226183" />
         </offset>
 	</replace>
     <replace sel="//macros/macro[@name='Zone002_Cluster_110_Sector001_macro']/connections/connection/macro/@ref">props_ter_accelerator_01_macro</replace>	
 	<replace sel="/macros/macro[@name='Zone005_Cluster_110_Sector001_macro']/connections/connection[@name='connection_ClusterGate110To115']/offset"><!--Brennan's Triumph-->
 		<offset>
-          <position x="-6580" y="0" z="-13750" />
+          <position x="-12750" y="0" z="-12750" />
           <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
         </offset>
 	</replace>
@@ -190,14 +266,14 @@
 	<!-- Sector 111 - Pluto -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_111_Sector001_macro']/connections/connection[@name='connection_ClusterGate111To110']/offset"><!--Neptune-->
 		<offset>
-          <position x="-3500" y="1" z="-6250" />
+          <position x="-12750" y="0" z="-12750" />
           <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 		</offset>
 	</replace>
 	<replace sel="//macros/macro[@name='Zone002_Cluster_111_Sector001_macro']/connections/connection/macro/@ref">props_ter_accelerator_01_macro</replace>
 	<replace sel="/macros/macro[@name='Zone004_Cluster_111_Sector001_macro']/connections/connection[@name='connection_ClusterGate111To116']/offset"><!--Oort Cloud-->
 		<offset>
-          <position x="6250" y="1" z="5500" />
+          <position x="12750" y="0" z="12750" />
           <quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
 	</replace>
@@ -207,13 +283,13 @@
 	<!-- Sector 112 - Savage Spur I/II -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_112_Sector001_macro']/connections/connection[@name='connection_ClusterGate112To033']/offset"><!--Matrix #79B-->
 		<offset>
-          <position x="8250" y="1" z="12625" />
+          <position x="-12750" y="0" z="12750" />
           <quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
 	</replace>
 	<replace sel="/macros/macro[@name='Zone002_Cluster_112_Sector002_macro']/connections/connection[@name='connection_ClusterGate112To048']/offset"><!--Getsu Fune-->
 		<offset>
-          <position x="3725" y="1" z="-15750" />
+          <position x="12750" y="0" z="-12750" />
           <quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
 	</replace>
@@ -222,14 +298,14 @@
 	<!-- Sector 113 - Segaris -->	
 	<replace sel="/macros/macro[@name='Zone002_Cluster_113_Sector001_macro']/connections/connection[@name='connection_ClusterGate113To114']/offset"><!--Gaian Prophecy-->
 		<offset>
-          <position x="-18000" y="1" z="21000" />
+          <position x="-18000" y="0" z="21000" />
           <quaternion qx="0" qy="0.9848078" qz="0" qw="-0.1736482" />
 		</offset>
 	</replace>
 	<add sel="/macros/macro[@name='Zone004_Cluster_113_Sector001_macro']/connections"><!--Megnir-->
 		<connection name="connection_ClusterGate113ToREM05" ref="gates">
 			<offset>
-				<position x="-15750" y="1" z="5750" />
+				<position x="-15750" y="0" z="5750" />
 				<quaternion qx="0" qy="0.6087614" qz="0" qw="0.7933533" />
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
@@ -237,8 +313,8 @@
 	</add>		
 	<replace sel="/macros/macro[@name='Zone005_Cluster_113_Sector001_macro']/connections/connection[@name='connection_ClusterGate113To028']/offset"><!--Antigone Memorial-->
 		<offset>
-          <position x="14000" y="1" z="-14000" />
-			<quaternion qx="0" qy="0.7372773" qz="0" qw="-0.6755902" />		  
+          <position x="22750" y="0" z="0" />
+			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />		  
 		</offset>
 	</replace>
 
@@ -246,13 +322,13 @@
 	<!-- Sector 114 - Gaian Prophecy -->	
 	<replace sel="/macros/macro[@name='Zone002_Cluster_114_Sector001_macro']/connections/connection[@name='connection_ClusterGate114To115']/offset"><!--Brennan's Triumph-->
 		<offset>
-          <position x="-7550" y="1" z="12750" />
+          <position x="-12750" y="0" z="12750" />
           <quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
 	</replace>
 	<replace sel="/macros/macro[@name='Zone005_Cluster_114_Sector001_macro']/connections/connection[@name='connection_ClusterGate114To113']/offset"><!--Segaris-->
 		<offset>
-          <position x="3270" y="1" z="-12550" />
+          <position x="" y="0" z="-22750" />
           <quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
 	</replace>
@@ -261,19 +337,19 @@
 	<!-- Sector 115 - Brennan's Triumph -->	
 	<replace sel="/macros/macro[@name='Zone002_Cluster_115_Sector001_macro']/connections/connection[@name='connection_ClusterGate115To110']/offset"><!--Neptune-->
 		<offset>
-          <position x="-6550" y="1" z="12150" />
+          <position x="-12750" y="1" z="12750" />
           <quaternion qx="0" qy="0.9961947" qz="0" qw="-0.0871557" />
 		</offset>
 	</replace>
 	<replace sel="/macros/macro[@name='Zone005_Cluster_115_Sector001_macro']/connections/connection[@name='connection_ClusterGate115To114']/offset"><!--Gaian Prophecy-->
 		<offset>
-          <position x="0" y="1" z="-25000" />
+          <position x="0" y="0" z="-22750" />
           <quaternion qx="0" qy="0.3420201" qz="0" qw="-0.9396926" />
 		</offset>
 	</replace>
-	<replace sel="/macros/macro[@name='Zone006_Cluster_115_Sector001_macro']/connections/connection[@name='connection_ClusterGate115To']/offset"><!--Null-->
+	<replace sel="/macros/macro[@name='Zone006_Cluster_115_Sector001_macro']/connections/connection[@name='connection_ClusterGate115To']/offset"><!--Inactive-->
 		<offset>
-          <position x="-13500" y="1" z="-2750" />
+          <position x="-12750" y="0" z="-12750" />
           <quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
 	</replace>	
@@ -282,7 +358,7 @@
 	<!-- Sector 116 - Oort Cloud -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_116_Sector001_macro']/connections/connection[@name='connection_ClusterGate116To111']/offset"><!--Pluto-->
 		<offset>
-          <position x="-24500" y="1" z="0" />
+          <position x="-22750" y="0" z="0" />
           <quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068" />
 		</offset>
 	</replace>
@@ -290,7 +366,7 @@
 	<add sel="/macros/macro[@name='Zone003_Cluster_116_Sector001_macro']/connections"><!--Planet 9-->
 		<connection name="connection_ClusterGate116ToREM00" ref="gates">
 			<offset>
-				<position x="750" y="1" z="9750" />
+				<position x="0" y="0" z="22750" />
 				<quaternion qx="0" qy="1" qz="0" qw="0" />
 			</offset>
 			<macro ref="props_ter_accelerator_01_macro" connection="space" />
@@ -304,12 +380,10 @@
   <add sel="/macros/macro[@name='Zone003_Cluster_113_Sector001_macro']/connections"><!--Segaris to Farnham's Legend VII-->
 	<connection name="connection_ClusterGate113ToMFL01" ref="gates">
 	  <offset>
-		<position x="-9750" y="1" z="-15750" />
+		<position x="0" y="0" z="-22750" />
 		<quaternion qx="0" qy="0" qz="0" qw="1" />
 	  </offset>
 	  <macro ref="props_gates_anc_gate_macro" connection="space" />
 	</connection>
   </add>
-  <!--Mod - Aldrin Shippack-->
-  <remove sel="/macros/macro[@name='Zone003_Cluster_113_Sector001_macro']/connections/connection[@name='connection_ClusterGate113ToALD01']" />  
 </diff>
