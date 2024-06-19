@@ -556,528 +556,508 @@
 
 <!--Aldrin Shippack-->
   <!-- Sector ALD01 - Aldrin -->
+  <!--
   <replace sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='Cluster_ALD01_connection']/offset">
 	<offset><position x="-135000000" y="0" z="129900000" /></offset>
   </replace>
-
+  -->
   <!-- Sector ALD02 - The Bastion -->
+  <!--
   <replace sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='Cluster_ALD02_connection']/offset">
 	<offset><position x="-150000000" y="0" z="138560000" /></offset>
   </replace>
-	
-	
-<!--New Xenon War-->
-  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
-	<!--Sector NXW1 - Bad Debt-->
-	<connection name="Cluster_nxw01_connection" ref="clusters">
-	  <offset><position x="30000000" y="0" z="34640000" /></offset>
-	  <macro ref="Cluster_nxw01_macro" connection="galaxy" />
-	</connection>
-		
-	<!--Sector NXW2 - Matrix #695-->
-	<!--
-	<connection name="Cluster_nxw02_connection" ref="clusters">
-	  <offset><position x="60000000" y="0" z="69280000" /></offset>
-	  <macro ref="Cluster_nxw02_macro" connection="galaxy" />
-	</connection>
-	-->
-	<!--Matrix#695A - Matrix#695B-->
-	<!--
-	<connection name="ClusterGateNXW02AToNXW02B" ref="destination" path="../Cluster_nxw02_connection/Cluster_nxw02_Sector001_connection/Zone_Gate2_Cluster_nxw02_Sector001_connection/connection_ClusterGateNXW02AToNXW02B">
-	  <macro connection="destination" path="../../../../../Cluster_nxw02_connection/Cluster_nxw02_Sector002_connection/Zone_Gate_Cluster_nxw02_Sector002_connection/connection_ClusterGateNXW02BToNXW02A"/>
-	</connection>
-	-->
-	<!--Matrix#695A - Pious Mists IV-->
-	<!--
-	<connection name="ClusterGateNXW02ATo037" ref="destination" path="../Cluster_nxw02_connection/Cluster_nxw02_Sector001_connection/Zone_Gate3_Cluster_nxw02_Sector001_connection/connection_ClusterGateNXW02To037">
-	  <macro connection="destination" path="../../../../../Cluster_37_connection/Cluster_37_Sector001_connection/Zone_Gate2_Cluster_37_Sector001_connection/connection_ClusterGate037ToNXW02"/>
-	</connection>	
-	-->
-  </add>
+  -->
 	
 	
 <!--X4:Reemergence Sectors-->
-	<add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
-		<!--Sector REM00 - Oort Cloud Beta-->
-		<connection name="Cluster_REM00_connection" ref="clusters">
-		<offset><position x="-60000000" y="0" z="207840000" /></offset>
-			<macro ref="Cluster_REM00_macro" connection="galaxy" />
-		</connection>
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">	
+	<!--Sector REM00 - Oort Cloud Beta-->
+	<connection name="Cluster_REM00_connection" ref="clusters">
+	  <offset><position x="-60000000" y="0" z="207840000" /></offset>
+	  <macro ref="Cluster_REM00_macro" connection="galaxy" />
+	</connection>
 		
-		<!--Sector REM01 - Matrix #01-->
-		<connection name="Cluster_REM01_connection" ref="clusters">
-		<offset><position x="-45000000" y="0" z="199180000" /></offset>
-			<macro ref="Cluster_REM01_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM01 - McCallum Relay-->
+	<connection name="Cluster_REM01_connection" ref="clusters">
+	  <offset><position x="-45000000" y="0" z="199180000" /></offset>
+	  <macro ref="Cluster_REM01_macro" connection="galaxy" />
+	</connection>
 		
-		<!--Sector REM02 - Mars Beta-->
-		<connection name="Cluster_REM02_connection" ref="clusters">
-		<offset><position x="0" y="0" z="207840000" /></offset>
-			<macro ref="Cluster_REM02_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM03 - Mercury Beta-->
-		<connection name="Cluster_REM03_connection" ref="clusters">
-		<offset><position x="30000000" y="0" z="207840000" /></offset>
-			<macro ref="Cluster_REM03_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM04 - Althes-->
-		<connection name="Cluster_REM04_connection" ref="clusters">
-		<offset><position x="-135000000" y="0" z="147220000" /></offset>
-			<macro ref="Cluster_REM04_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM05 - Megnir-->
-		<connection name="Cluster_REM05_connection" ref="clusters">
-		<offset><position x="-120000000" y="0" z="138560000" /></offset>
-			<macro ref="Cluster_REM05_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM06 - Matrix #48-->
-		<connection name="Cluster_REM06_connection" ref="clusters">
-		<offset><position x="-150000000" y="0" z="155880000" /></offset>
-			<macro ref="Cluster_REM06_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM07 - Matrix #79A-->
-		<connection name="Cluster_REM07_connection" ref="clusters">
-		<offset><position x="-60000000" y="0" z="138560000" /></offset>
-			<macro ref="Cluster_REM07_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM08 - Power Circle Cluster-->
-		<connection name="Cluster_REM08_connection" ref="clusters">
-		<offset><position x="-45000000" y="0" z="112580000" /></offset>
-			<macro ref="Cluster_REM08_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM09 - Teladi Gain-->
-		<connection name="Cluster_REM09_connection" ref="clusters">
-		<offset><position x="0" y="0" z="103920000" /></offset>
-			<macro ref="Cluster_REM09_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM10 - Herron's Nebula-->
-		<connection name="Cluster_REM10_connection" ref="clusters">
-		<offset><position x="-105000000" y="0" z="95260000" /></offset>
-			<macro ref="Cluster_REM10_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM11 - Montalaar-->
-		<connection name="Cluster_REM11_connection" ref="clusters">
-		<offset><position x="-60000000" y="0" z="51960000" /></offset>
-			<macro ref="Cluster_REM11_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM12 - Split Fire-->
-		<connection name="Cluster_REM12_connection" ref="clusters">
-		<offset><position x="-90000000" y="0" z="0" /></offset>
-			<macro ref="Cluster_REM12_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM13 - Dark Waters-->
-		<connection name="Cluster_REM13_connection" ref="clusters">
-		<offset><position x="-195000000" y="0" z="25980000" /></offset>
-			<macro ref="Cluster_REM13_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM14 - Mists of Elysium-->
-		<connection name="Cluster_REM14_connection" ref="clusters">
-		<offset><position x="-165000000" y="0" z="129900000" /></offset>
-			<macro ref="Cluster_REM14_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM15 - Depths of Silence-->
-		<connection name="Cluster_REM15_connection" ref="clusters">
-		<offset><position x="-195000000" y="0" z="43300000" /></offset>
-			<macro ref="Cluster_REM15_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM16 - Light Water-->
-		<connection name="Cluster_REM16_connection" ref="clusters">
-		<offset><position x="-165000000" y="0" z="112580000" /></offset>
-			<macro ref="Cluster_REM16_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM17 - Shining Currents-->
-		<connection name="Cluster_REM17_connection" ref="clusters">
-		<offset><position x="-180000000" y="0" z="34640000" /></offset>
-			<macro ref="Cluster_REM17_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM18 - Shore of Infinity-->
-		<connection name="Cluster_REM18_connection" ref="clusters">
-		<offset><position x="-195000000" y="0" z="129900000" /></offset>
-			<macro ref="Cluster_REM18_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM19 - Reservoir of Tranquillity-->
-		<connection name="Cluster_REM19_connection" ref="clusters">
-		<offset><position x="-180000000" y="0" z="121240000" /></offset>
-			<macro ref="Cluster_REM19_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM20 - Duke's Domain-->
-		<connection name="Cluster_REM20_connection" ref="clusters">
-		<offset><position x="60000000" y="0" z="121240000" /></offset>
-			<macro ref="Cluster_REM20_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM21 - Perpetual Sin Cluster-->
-		<connection name="Cluster_REM21_connection" ref="clusters">
-		<offset><position x="60000000" y="0" z="86600000" /></offset>
-			<macro ref="Cluster_REM21_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM22 - Pontifex' Seclusion-->
-		<connection name="Cluster_REM22_connection" ref="clusters">
-		<offset><position x="0" y="0" z="69280000" /></offset>
-			<macro ref="Cluster_REM22_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM23 - Unholy Descent-->
-		<connection name="Cluster_REM23_connection" ref="clusters">
-		<offset><position x="75000000" y="0" z="77940000" /></offset>
-			<macro ref="Cluster_REM23_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM24 - Cathedral of Xaar-->
-		<connection name="Cluster_REM24_connection" ref="clusters">
-		<offset><position x="105000000" y="0" z="60620000" /></offset>
-			<macro ref="Cluster_REM24_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM25 - Clarity's End-->
-		<connection name="Cluster_REM25_connection" ref="clusters">
-		<offset><position x="120000000" y="0" z="34640000" /></offset>
-			<macro ref="Cluster_REM25_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM26 - Desecrated Skies-->
-		<connection name="Cluster_REM26_connection" ref="clusters">
-		<offset><position x="135000000" y="0" z="8660000" /></offset>
-			<macro ref="Cluster_REM26_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM27 - Perdition's End-->
-		<connection name="Cluster_REM27_connection" ref="clusters">
-		<offset><position x="105000000" y="0" z="8660000" /></offset>
-			<macro ref="Cluster_REM27_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM28 - Ket's Reckoning-->
-		<connection name="Cluster_REM28_connection" ref="clusters">
-		<offset><position x="-60000000" y="0" z="17320000" /></offset>
-			<macro ref="Cluster_REM28_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM29 - Sanctum Verge-->
-		<connection name="Cluster_REM29_connection" ref="clusters">
-		<offset><position x="45000000" y="0" z="77940000" /></offset>
-			<macro ref="Cluster_REM29_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM30 - Xaar's Belt Cluster-->
-		<connection name="Cluster_REM30_connection" ref="clusters">
-		<offset><position x="120000000" y="0" z="17320000" /></offset>
-			<macro ref="Cluster_REM30_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM31 - The Shallows -->
-		<connection name="Cluster_REM31_connection" ref="clusters">
-		<offset><position x="135000000" y="0" z="95260000" /></offset>
-			<macro ref="Cluster_REM31_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM32 - Family Rhak Cluster-->
-		<connection name="Cluster_REM32_connection" ref="clusters">
-		<offset><position x="120000000" y="0" z="103920000" /></offset>
-			<macro ref="Cluster_REM32_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM33 - Thyn's Abyss-->
-		<connection name="Cluster_REM33_connection" ref="clusters">
-		<offset><position x="165000000" y="0" z="95260000" /></offset>
-			<macro ref="Cluster_REM33_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM34 - Thyn's Excavation-->
-		<connection name="Cluster_REM34_connection" ref="clusters">
-		<offset><position x="150000000" y="0" z="103920000" /></offset>
-			<macro ref="Cluster_REM34_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM35 - Hila's Joy Cluster-->
-		<connection name="Cluster_REM35_connection" ref="clusters">
-		<offset><position x="150000000" y="0" z="69280000" /></offset>
-			<macro ref="Cluster_REM35_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM36 - Great Trench-->
-		<connection name="Cluster_REM36_connection" ref="clusters">
-		<offset><position x="165000000" y="0" z="77940000" /></offset>
-			<macro ref="Cluster_REM36_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM37 - Lucky Planets-->
-		<connection name="Cluster_REM37_connection" ref="clusters">
-		<offset><position x="135000000" y="0" z="60620000" /></offset>
-			<macro ref="Cluster_REM37_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM38 - Queen's Space-->
-		<connection name="Cluster_REM38_connection" ref="clusters">
-		<offset><position x="135000000" y="0" z="77940000" /></offset>
-			<macro ref="Cluster_REM38_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM39 - Matrix #472D-->
-		<connection name="Cluster_REM39_connection" ref="clusters">
-		<offset><position x="150000000" y="0" z="86600000" /></offset>
-			<macro ref="Cluster_REM39_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM40 - Ocracoke's Storm Cluster-->
-		<connection name="Cluster_REM40_connection" ref="clusters">
-		<offset><position x="180000000" y="0" z="34640000" /></offset>
-			<macro ref="Cluster_REM40_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM41 - Shadows of Giants Cluster-->
-		<connection name="Cluster_REM41_connection" ref="clusters">
-		<offset><position x="180000000" y="0" z="0" /></offset>
-			<macro ref="Cluster_REM41_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM42 - Bala Gi's Joy-->
-		<connection name="Cluster_REM42_connection" ref="clusters">
-		<offset><position x="-30000000" y="0" z="0" /></offset>
-			<macro ref="Cluster_REM42_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM43 - Blue Profit-->
-		<connection name="Cluster_REM43_connection" ref="clusters">
-		<offset><position x="30000000" y="0" z="-17320000" /></offset>
-			<macro ref="Cluster_REM43_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM44 - PTNI Headquarters-->
-		<connection name="Cluster_REM44_connection" ref="clusters">
-		<offset><position x="45000000" y="0" z="-8660000" /></offset>
-			<macro ref="Cluster_REM44_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM45 - The Vault-->
-		<connection name="Cluster_REM45_connection" ref="clusters">
-		<offset><position x="30000000" y="0" z="0" /></offset>
-			<macro ref="Cluster_REM45_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM46 - Recovered Capital-->
-		<connection name="Cluster_REM46_connection" ref="clusters">
-		<offset><position x="-105000000" y="0" z="-43300000" /></offset>
-			<macro ref="Cluster_REM46_macro" connection="galaxy" />
-		</connection>
-
-		<!-- Sector REM47 - Spaceweed Grove-->
-		<connection name="Cluster_REM47_connection" ref="clusters">
-		<offset><position x="15000000" y="0" z="43300000" /></offset>
-			<macro ref="Cluster_REM47_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM48 - Wretched Skies Cluster-->
-		<connection name="Cluster_REM48_connection" ref="clusters">
-		<offset><position x="-120000000" y="0" z="-51960000" /></offset>
-			<macro ref="Cluster_REM48_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM49 - Duke's Vision I-->
-		<connection name="Cluster_REM49_connection" ref="clusters">
-		<offset><position x="-150000000" y="0" z="-69280000" /></offset>
-			<macro ref="Cluster_REM49_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM50 - Duke's Vision II-->
-		<connection name="Cluster_REM50_connection" ref="clusters">
-		<offset><position x="-165000000" y="0" z="-77940000" /></offset>
-			<macro ref="Cluster_REM50_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM51 - LooMankStrat's Legacy-->
-		<connection name="Cluster_REM51_connection" ref="clusters">
-		<offset><position x="-165000000" y="0" z="-60620000" /></offset>
-			<macro ref="Cluster_REM51_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM52 - Danna's Chance-->
-		<connection name="Cluster_REM52_connection" ref="clusters">
-		<offset><position x="-180000000" y="0" z="-34640000" /></offset>
-			<macro ref="Cluster_REM52_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM53 - Legend's Home Alpha-->
-		<connection name="Cluster_REM53_connection" ref="clusters">
-		<offset><position x="45000000" y="0" z="-77940000" /></offset>
-			<macro ref="Cluster_REM53_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM54 - Legend's Home Beta-->
-		<connection name="Cluster_REM54_connection" ref="clusters">
-		<offset><position x="45000000" y="0" z="-95260000" /></offset>
-			<macro ref="Cluster_REM54_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM55 - Akeela's Beacon-->
-		<connection name="Cluster_REM55_connection" ref="clusters">
-		<offset><position x="45000000" y="0" z="-60620000" /></offset>
-			<macro ref="Cluster_REM55_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM56 - Aladna Hill-->
-		<connection name="Cluster_REM56_connection" ref="clusters">
-		<offset><position x="30000000" y="0" z="-69280000" /></offset>
-			<macro ref="Cluster_REM56_macro" connection="galaxy" />
-		</connection>
-
-		<!--Sector REM57 - Light of Heart-->
-		<connection name="Cluster_REM57_connection" ref="clusters">
-		<offset><position x="30000000" y="0" z="-51960000" /></offset>
-			<macro ref="Cluster_REM57_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM02 - Mars Beta-->
+	<connection name="Cluster_REM02_connection" ref="clusters">
+	  <offset><position x="0" y="0" z="207840000" /></offset>
+	  <macro ref="Cluster_REM02_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM58 - Moo-Kye's Revenge-->
-		<connection name="Cluster_REM58_connection" ref="clusters">
-		<offset><position x="15000000" y="0" z="-43300000" /></offset>
-			<macro ref="Cluster_REM58_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM03 - Mercury Beta-->
+	<connection name="Cluster_REM03_connection" ref="clusters">
+	  <offset><position x="30000000" y="0" z="207840000" /></offset>
+	  <macro ref="Cluster_REM03_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM59 - Mines of Fortune-->
-		<connection name="Cluster_REM59_connection" ref="clusters">
-		<offset><position x="165000000" y="0" z="-43300000" /></offset>
-			<macro ref="Cluster_REM59_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM04 - Althes-->
+	<connection name="Cluster_REM04_connection" ref="clusters">
+	  <offset><position x="-135000000" y="0" z="147220000" /></offset>
+	  <macro ref="Cluster_REM04_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM60 - Zyarth's Stand-->
-		<connection name="Cluster_REM60_connection" ref="clusters">
-		<offset><position x="-90000000" y="0" z="-121240000" /></offset>
-			<macro ref="Cluster_REM60_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM05 - Megnir-->
+	<connection name="Cluster_REM05_connection" ref="clusters">
+	  <offset><position x="-120000000" y="0" z="138560000" /></offset>
+	  <macro ref="Cluster_REM05_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM61 - Zyarth's Fall-->
-		<connection name="Cluster_REM61_connection" ref="clusters">
-		<offset><position x="-75000000" y="0" z="-129900000" /></offset>
-			<macro ref="Cluster_REM61_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM06 - Matrix #48-->
+	<connection name="Cluster_REM06_connection" ref="clusters">
+	  <offset><position x="-150000000" y="0" z="155880000" /></offset>
+	  <macro ref="Cluster_REM06_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM62 - Elena's Fortune-->
-		<connection name="Cluster_REM62_connection" ref="clusters">
-		<offset><position x="-45000000" y="0" z="-147220000" /></offset>
-			<macro ref="Cluster_REM62_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM07 - Matrix #79A-->
+	<connection name="Cluster_REM07_connection" ref="clusters">
+	  <offset><position x="-60000000" y="0" z="138560000" /></offset>
+	  <macro ref="Cluster_REM07_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM63 - Nyana's Hideout-->
-		<connection name="Cluster_REM63_connection" ref="clusters">
-		<offset><position x="-30000000" y="0" z="-155880000" /></offset>
-			<macro ref="Cluster_REM63_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM08 - Power Circle Cluster-->
+	<connection name="Cluster_REM08_connection" ref="clusters">
+	  <offset><position x="-45000000" y="0" z="112580000" /></offset>
+	  <macro ref="Cluster_REM08_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM64 - Interworlds-->
-		<connection name="Cluster_REM64_connection" ref="clusters">
-		<offset><position x="0" y="0" z="-155880000" /></offset>
-			<macro ref="Cluster_REM64_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM09 - Teladi Gain-->
+	<connection name="Cluster_REM09_connection" ref="clusters">
+	  <offset><position x="0" y="0" z="103920000" /></offset>
+	  <macro ref="Cluster_REM09_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM65 - Wastelands-->
-		<connection name="Cluster_REM65_connection" ref="clusters">
-		<offset><position x="30000000" y="0" z="-121240000" /></offset>
-			<macro ref="Cluster_REM65_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM10 - Herron's Nebula-->
+	<connection name="Cluster_REM10_connection" ref="clusters">
+	  <offset><position x="-105000000" y="0" z="95260000" /></offset>
+	  <macro ref="Cluster_REM10_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM66 - Ghinn's Escape-->
-		<connection name="Cluster_REM66_connection" ref="clusters">
-		<offset><position x="120000000" y="0" z="-121240000" /></offset>
-			<macro ref="Cluster_REM66_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM11 - Montalaar-->
+	<connection name="Cluster_REM11_connection" ref="clusters">
+	  <offset><position x="-60000000" y="0" z="51960000" /></offset>
+	  <macro ref="Cluster_REM11_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM67 - Kha'ak Sector Alpha-->
-		<connection name="Cluster_REM67_connection" ref="clusters">
-		<offset><position x="75000000" y="0" z="95260000" /></offset>
-			<macro ref="Cluster_REM67_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM12 - Split Fire-->
+	<connection name="Cluster_REM12_connection" ref="clusters">
+	  <offset><position x="-90000000" y="0" z="0" /></offset>
+	  <macro ref="Cluster_REM12_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM68 - Kha'ak Sector Beta-->
-		<connection name="Cluster_REM68_connection" ref="clusters">
-		<offset><position x="-135000000" y="0" z="60620000" /></offset>
-			<macro ref="Cluster_REM68_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM13 - Dark Waters-->
+	<connection name="Cluster_REM13_connection" ref="clusters">
+	  <offset><position x="-195000000" y="0" z="25980000" /></offset>
+	  <macro ref="Cluster_REM13_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM69 - Kha'ak Sector Gamma-->
-		<connection name="Cluster_REM69_connection" ref="clusters">
-		<offset><position x="-15000000" y="0" z="-77940000" /></offset>
-			<macro ref="Cluster_REM69_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM14 - Mists of Elysium-->
+	<connection name="Cluster_REM14_connection" ref="clusters">
+	  <offset><position x="-165000000" y="0" z="129900000" /></offset>
+	  <macro ref="Cluster_REM14_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM70 - Unknown Kha'ak Sector-->
-		<connection name="Cluster_REM70_connection" ref="clusters">
-		<offset><position x="-195000000" y="0" z="164540000" /></offset>
-			<macro ref="Cluster_REM70_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM15 - Depths of Silence-->
+	<connection name="Cluster_REM15_connection" ref="clusters">
+	  <offset><position x="-195000000" y="0" z="43300000" /></offset>
+	  <macro ref="Cluster_REM15_macro" connection="galaxy" />
+	</connection>
 	
-		<!--Sector REM71a - Unknown Sector A-->
-		<connection name="Cluster_REM71a_connection" ref="clusters">
-		<offset><position x="-150000000" y="0" z="190520000" /></offset>		
-			<macro ref="Cluster_REM71a_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM71b - Unknown Sector B-->
-		<connection name="Cluster_REM71b_connection" ref="clusters">
-		<offset><position x="-150000000" y="0" z="190520000" /></offset>			
-			<macro ref="Cluster_REM71b_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM16 - Light Water-->
+	<connection name="Cluster_REM16_connection" ref="clusters">
+	  <offset><position x="-165000000" y="0" z="112580000" /></offset>
+	  <macro ref="Cluster_REM16_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM17 - Shining Currents-->
+	<connection name="Cluster_REM17_connection" ref="clusters">
+	  <offset><position x="-180000000" y="0" z="34640000" /></offset>
+	  <macro ref="Cluster_REM17_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM18 - Shore of Infinity-->
+	<connection name="Cluster_REM18_connection" ref="clusters">
+	  <offset><position x="-195000000" y="0" z="129900000" /></offset>
+	  <macro ref="Cluster_REM18_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM19 - Reservoir of Tranquillity-->
+	<connection name="Cluster_REM19_connection" ref="clusters">
+	  <offset><position x="-180000000" y="0" z="121240000" /></offset>
+	  <macro ref="Cluster_REM19_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM20 - Duke's Domain-->
+	<connection name="Cluster_REM20_connection" ref="clusters">
+	  <offset><position x="60000000" y="0" z="121240000" /></offset>
+	  <macro ref="Cluster_REM20_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM21 - Perpetual Sin Cluster-->
+	<connection name="Cluster_REM21_connection" ref="clusters">
+	  <offset><position x="60000000" y="0" z="86600000" /></offset>
+	  <macro ref="Cluster_REM21_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM22 - Pontifex' Seclusion-->
+	<connection name="Cluster_REM22_connection" ref="clusters">
+	  <offset><position x="0" y="0" z="69280000" /></offset>
+	  <macro ref="Cluster_REM22_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM23 - Unholy Descent-->
+	<connection name="Cluster_REM23_connection" ref="clusters">
+	  <offset><position x="75000000" y="0" z="77940000" /></offset>
+	  <macro ref="Cluster_REM23_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM24 - Cathedral of Xaar-->
+	<connection name="Cluster_REM24_connection" ref="clusters">
+	  <offset><position x="105000000" y="0" z="60620000" /></offset>
+	  <macro ref="Cluster_REM24_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM25 - Clarity's End-->
+	<connection name="Cluster_REM25_connection" ref="clusters">
+	  <offset><position x="120000000" y="0" z="34640000" /></offset>
+	  <macro ref="Cluster_REM25_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM26 - Desecrated Skies-->
+	<connection name="Cluster_REM26_connection" ref="clusters">
+	  <offset><position x="135000000" y="0" z="8660000" /></offset>
+	  <macro ref="Cluster_REM26_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM27 - Perdition's End-->
+	<connection name="Cluster_REM27_connection" ref="clusters">
+	  <offset><position x="105000000" y="0" z="8660000" /></offset>
+	  <macro ref="Cluster_REM27_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM28 - Ket's Reckoning-->
+	<connection name="Cluster_REM28_connection" ref="clusters">
+	  <offset><position x="-60000000" y="0" z="17320000" /></offset>
+	  <macro ref="Cluster_REM28_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM29 - Sanctum Verge-->
+	<connection name="Cluster_REM29_connection" ref="clusters">
+	  <offset><position x="45000000" y="0" z="77940000" /></offset>
+	  <macro ref="Cluster_REM29_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM30 - Xaar's Belt Cluster-->
+	<connection name="Cluster_REM30_connection" ref="clusters">
+	  <offset><position x="120000000" y="0" z="17320000" /></offset>
+	  <macro ref="Cluster_REM30_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM31 - The Shallows -->
+	<connection name="Cluster_REM31_connection" ref="clusters">
+	  <offset><position x="135000000" y="0" z="95260000" /></offset>
+	  <macro ref="Cluster_REM31_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM32 - Family Than Cluster-->
+	<connection name="Cluster_REM32_connection" ref="clusters">
+	  <offset><position x="120000000" y="0" z="103920000" /></offset>
+	  <macro ref="Cluster_REM32_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM33 - Thyn's Abyss-->
+	<connection name="Cluster_REM33_connection" ref="clusters">
+	  <offset><position x="165000000" y="0" z="95260000" /></offset>
+	  <macro ref="Cluster_REM33_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM34 - Thyn's Excavation-->
+	<connection name="Cluster_REM34_connection" ref="clusters">
+	  <offset><position x="150000000" y="0" z="103920000" /></offset>
+	  <macro ref="Cluster_REM34_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM35 - Blue Horizon Cluster-->
+	<connection name="Cluster_REM35_connection" ref="clusters">
+	  <offset><position x="150000000" y="0" z="69280000" /></offset>
+	  <macro ref="Cluster_REM35_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM36 - Great Trench-->
+	<connection name="Cluster_REM36_connection" ref="clusters">
+	  <offset><position x="165000000" y="0" z="77940000" /></offset>
+	  <macro ref="Cluster_REM36_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM37 - Queen's Harbour-->
+	<connection name="Cluster_REM37_connection" ref="clusters">
+	  <offset><position x="135000000" y="0" z="60620000" /></offset>
+	  <macro ref="Cluster_REM37_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM38 - Queen's Retribution-->
+	<connection name="Cluster_REM38_connection" ref="clusters">
+	  <offset><position x="135000000" y="0" z="77940000" /></offset>
+	  <macro ref="Cluster_REM38_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM39 - Matrix #472D-->
+	<connection name="Cluster_REM39_connection" ref="clusters">
+	  <offset><position x="150000000" y="0" z="86600000" /></offset>
+	  <macro ref="Cluster_REM39_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM40 - Ocracoke's Storm Cluster-->
+	<connection name="Cluster_REM40_connection" ref="clusters">
+	  <offset><position x="180000000" y="0" z="34640000" /></offset>
+	  <macro ref="Cluster_REM40_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM41 - Shadows of Giants Cluster-->
+	<connection name="Cluster_REM41_connection" ref="clusters">
+	  <offset><position x="180000000" y="0" z="0" /></offset>
+	  <macro ref="Cluster_REM41_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM42 - Bala Gi's Joy-->
+	<connection name="Cluster_REM42_connection" ref="clusters">
+	  <offset><position x="-30000000" y="0" z="0" /></offset>
+	  <macro ref="Cluster_REM42_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM43 - Blue Profit-->
+	<connection name="Cluster_REM43_connection" ref="clusters">
+	  <offset><position x="30000000" y="0" z="-17320000" /></offset>
+	  <macro ref="Cluster_REM43_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM44 - Matrix #695-->
+	<connection name="Cluster_REM44_connection" ref="clusters">
+	  <offset><position x="45000000" y="0" z="-8660000" /></offset>
+	  <macro ref="Cluster_REM44_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM45 - The Vault-->
+	<connection name="Cluster_REM45_connection" ref="clusters">
+	  <offset><position x="30000000" y="0" z="0" /></offset>
+	  <macro ref="Cluster_REM45_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM46 - Recovered Capital-->
+	<connection name="Cluster_REM46_connection" ref="clusters">
+	  <offset><position x="-105000000" y="0" z="-43300000" /></offset>
+	  <macro ref="Cluster_REM46_macro" connection="galaxy" />
+	</connection>
+	
+	<!-- Sector REM47 - Spaceweed Grove-->
+	<connection name="Cluster_REM47_connection" ref="clusters">
+	  <offset><position x="15000000" y="0" z="43300000" /></offset>
+	  <macro ref="Cluster_REM47_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM48 - Wretched Skies Cluster-->
+	<connection name="Cluster_REM48_connection" ref="clusters">
+	  <offset><position x="-120000000" y="0" z="-51960000" /></offset>
+	  <macro ref="Cluster_REM48_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM49 - Duke's Vision I-->
+	<connection name="Cluster_REM49_connection" ref="clusters">
+	  <offset><position x="-150000000" y="0" z="-69280000" /></offset>
+	  <macro ref="Cluster_REM49_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM50 - Duke's Vision II-->
+	<connection name="Cluster_REM50_connection" ref="clusters">
+	  <offset><position x="-165000000" y="0" z="-77940000" /></offset>
+	  <macro ref="Cluster_REM50_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM51 - LooMankStrat's Legacy-->
+	<connection name="Cluster_REM51_connection" ref="clusters">
+	  <offset><position x="-165000000" y="0" z="-60620000" /></offset>
+	  <macro ref="Cluster_REM51_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM52 - Danna's Chance-->
+	<connection name="Cluster_REM52_connection" ref="clusters">
+	  <offset><position x="-180000000" y="0" z="-34640000" /></offset>
+	  <macro ref="Cluster_REM52_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM53 - Legend's Home Alpha-->
+	<connection name="Cluster_REM53_connection" ref="clusters">
+	  <offset><position x="45000000" y="0" z="-77940000" /></offset>
+	  <macro ref="Cluster_REM53_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM54 - Legend's Home Beta-->
+	<connection name="Cluster_REM54_connection" ref="clusters">
+	  <offset><position x="45000000" y="0" z="-95260000" /></offset>
+	  <macro ref="Cluster_REM54_macro" connection="galaxy" />
+	</connection>	
+	
+	<!--Sector REM55 - Akeela's Beacon-->
+	<connection name="Cluster_REM55_connection" ref="clusters">
+	  <offset><position x="45000000" y="0" z="-60620000" /></offset>
+	  <macro ref="Cluster_REM55_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM56 - Aladna Hill-->
+	<connection name="Cluster_REM56_connection" ref="clusters">
+	  <offset><position x="30000000" y="0" z="-69280000" /></offset>
+	  <macro ref="Cluster_REM56_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM57 - Light of Heart-->
+	<connection name="Cluster_REM57_connection" ref="clusters">
+	  <offset><position x="30000000" y="0" z="-51960000" /></offset>
+	  <macro ref="Cluster_REM57_macro" connection="galaxy" />
+	</connection>
 
-		<!--Sector REM71c - Unknown Sector C-->
-		<connection name="Cluster_REM71c_connection" ref="clusters">
-		<offset><position x="-150000000" y="0" z="190520000" /></offset>	
-			<macro ref="Cluster_REM71c_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM58 - Moo-Kye's Revenge-->
+	<connection name="Cluster_REM58_connection" ref="clusters">
+	  <offset><position x="15000000" y="0" z="-43300000" /></offset>
+	  <macro ref="Cluster_REM58_macro" connection="galaxy" />
+	</connection>
 
-		<!--Sector REM71d - Unknown Sector D-->
-		<connection name="Cluster_REM71d_connection" ref="clusters">
-		<offset><position x="-150000000" y="0" z="190520000" /></offset>		
-			<macro ref="Cluster_REM71d_macro" connection="galaxy" />
-		</connection>
-		
-		<!--Sector REM71e - Unknown Sector E-->
-		<connection name="Cluster_REM71e_connection" ref="clusters">
-		<offset><position x="-150000000" y="0" z="190520000" /></offset>			
-			<macro ref="Cluster_REM71e_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM59 - Mines of Fortune-->
+	<connection name="Cluster_REM59_connection" ref="clusters">
+	  <offset><position x="165000000" y="0" z="-43300000" /></offset>
+	  <macro ref="Cluster_REM59_macro" connection="galaxy" />
+	</connection>
 
-		<!--Sector REM71f - Unknown Sector F-->
-		<connection name="Cluster_REM71f_connection" ref="clusters">
-		<offset><position x="-150000000" y="0" z="190520000" /></offset>	
-			<macro ref="Cluster_REM71f_macro" connection="galaxy" />
-		</connection>		
+	<!--Sector REM60 - Zyarth's Stand-->
+	<connection name="Cluster_REM60_connection" ref="clusters">
+	  <offset><position x="-90000000" y="0" z="-121240000" /></offset>
+	  <macro ref="Cluster_REM60_macro" connection="galaxy" />
+	</connection>
 
-		<!--Sector REM72 - Kha'ak Hive-->
-		<connection name="Cluster_REM72_connection" ref="clusters">
-			<offset><position x="165000000" y="0" z="-112580000" /></offset>
-			<macro ref="Cluster_REM72_macro" connection="galaxy" />
-		</connection>
+	<!--Sector REM61 - Patriarch's Conclusion-->
+	<connection name="Cluster_REM61_connection" ref="clusters">
+	  <offset><position x="-75000000" y="0" z="-129900000" /></offset>
+	  <macro ref="Cluster_REM61_macro" connection="galaxy" />
+	</connection>
 
-		<!--Sector REM73 - Shadow's End-->
-		<connection name="Cluster_REM73_connection" ref="clusters">
-			<offset><position x="60000000" y="0" z="-69280000" /></offset>
-			<macro ref="Cluster_REM73_macro" connection="galaxy" />
-		</connection>		
-		
-		<!--Sector REM73 - Tebathimanckatt's Legacy-->
-		<connection name="Cluster_REM74_connection" ref="clusters">
-			<offset><position x="60000000" y="0" z="69280000" /></offset>
-			<macro ref="Cluster_REM74_macro" connection="galaxy" />
-		</connection>			
-	</add>
+	<!--Sector REM62 - Elena's Fortune-->
+	<connection name="Cluster_REM62_connection" ref="clusters">
+	  <offset><position x="-45000000" y="0" z="-147220000" /></offset>
+	  <macro ref="Cluster_REM62_macro" connection="galaxy" />
+	</connection>
+
+	<!--Sector REM63 - Nyana's Hideout-->
+	<connection name="Cluster_REM63_connection" ref="clusters">
+	  <offset><position x="-30000000" y="0" z="-155880000" /></offset>
+	  <macro ref="Cluster_REM63_macro" connection="galaxy" />
+	</connection>
+
+	<!--Sector REM64 - Interworlds-->
+	<connection name="Cluster_REM64_connection" ref="clusters">
+	  <offset><position x="0" y="0" z="-155880000" /></offset>
+	  <macro ref="Cluster_REM64_macro" connection="galaxy" />
+	</connection>
+
+	<!--Sector REM65 - Wastelands-->
+	<connection name="Cluster_REM65_connection" ref="clusters">
+	  <offset><position x="30000000" y="0" z="-121240000" /></offset>
+	  <macro ref="Cluster_REM65_macro" connection="galaxy" />
+	</connection>
+
+	<!--Sector REM66 - Ghinn's Escape-->
+	<connection name="Cluster_REM66_connection" ref="clusters">
+	  <offset><position x="120000000" y="0" z="-121240000" /></offset>
+	  <macro ref="Cluster_REM66_macro" connection="galaxy" />
+	</connection>
+
+	<!--Sector REM67 - Kha'ak Sector Alpha-->
+	<connection name="Cluster_REM67_connection" ref="clusters">
+	  <offset><position x="75000000" y="0" z="95260000" /></offset>
+	  <macro ref="Cluster_REM67_macro" connection="galaxy" />
+	</connection>
+
+	<!--Sector REM68 - Kha'ak Sector Beta-->
+	<connection name="Cluster_REM68_connection" ref="clusters">
+	  <offset><position x="-135000000" y="0" z="60620000" /></offset>
+	  <macro ref="Cluster_REM68_macro" connection="galaxy" />
+	</connection>
+
+	<!--Sector REM69 - Kha'ak Sector Gamma-->
+	<connection name="Cluster_REM69_connection" ref="clusters">
+	  <offset><position x="-15000000" y="0" z="-77940000" /></offset>
+	  <macro ref="Cluster_REM69_macro" connection="galaxy" />
+	</connection>
+
+	<!--Sector REM70 - Unknown Kha'ak Sector-->
+	<connection name="Cluster_REM70_connection" ref="clusters">
+	  <offset><position x="-195000000" y="0" z="164540000" /></offset>
+	  <macro ref="Cluster_REM70_macro" connection="galaxy" />
+	</connection>
+
+	<!--Sector REM71a - Unknown Sector A-->
+	<connection name="Cluster_REM71a_connection" ref="clusters">
+	  <offset><position x="-150000000" y="0" z="190520000" /></offset>		
+	  <macro ref="Cluster_REM71a_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM71b - Unknown Sector B-->
+	<connection name="Cluster_REM71b_connection" ref="clusters">
+	  <offset><position x="-150000000" y="0" z="190520000" /></offset>			
+	  <macro ref="Cluster_REM71b_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM71c - Unknown Sector C-->
+	<connection name="Cluster_REM71c_connection" ref="clusters">
+	  <offset><position x="-150000000" y="0" z="190520000" /></offset>	
+	  <macro ref="Cluster_REM71c_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM71d - Unknown Sector D-->
+	<connection name="Cluster_REM71d_connection" ref="clusters">
+	  <offset><position x="-150000000" y="0" z="190520000" /></offset>		
+	  <macro ref="Cluster_REM71d_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM71e - Unknown Sector E-->
+	<connection name="Cluster_REM71e_connection" ref="clusters">
+	  <offset><position x="-150000000" y="0" z="190520000" /></offset>			
+	  <macro ref="Cluster_REM71e_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM71f - Unknown Sector F-->
+	<connection name="Cluster_REM71f_connection" ref="clusters">
+	  <offset><position x="-150000000" y="0" z="190520000" /></offset>	
+	  <macro ref="Cluster_REM71f_macro" connection="galaxy" />
+	</connection>		
+	
+	<!--Sector REM72 - Kha'ak Hive-->
+	<connection name="Cluster_REM72_connection" ref="clusters">
+	  <offset><position x="165000000" y="0" z="-112580000" /></offset>
+	  <macro ref="Cluster_REM72_macro" connection="galaxy" />
+	</connection>
+	
+	<!--Sector REM73 - Shadow's End-->
+	<connection name="Cluster_REM73_connection" ref="clusters">
+	  <offset><position x="60000000" y="0" z="-69280000" /></offset>
+	  <macro ref="Cluster_REM73_macro" connection="galaxy" />
+	</connection>		
+	
+	<!--Sector REM74 - Tebathimanckatt's Legacy-->
+	<connection name="Cluster_REM74_connection" ref="clusters">
+	  <offset><position x="60000000" y="0" z="69280000" /></offset>
+	  <macro ref="Cluster_REM74_macro" connection="galaxy" />
+	</connection>	
+	
+	<!--Sector NXW1 - Bad Debt-->
+	<connection name="Cluster_NXW01_connection" ref="clusters">
+	  <offset><position x="30000000" y="0" z="34640000" /></offset>
+	  <macro ref="Cluster_NXW01_macro" connection="galaxy" />
+	</connection>
+	
+  </add>
 
 	<!--Removed Gate Connections-->
 	<!-- Grand Exchange I - Nopileos' Fortune IV -->
@@ -1297,7 +1277,7 @@
 	<connection name="ClusterGateREM60To460" ref="destination" path="../Cluster_REM60_connection/Cluster_REM60_Sector001_connection/ZoneG1_Cluster_REM60_Sector001_connection/connection_ClusterGateREM60To406">
 		<macro connection="destination" path="../../../../../Cluster_406_connection/Cluster_406_Sector001_connection/Zone_Gate1_Cluster_406_Sector001_connection/connection_ClusterGate406ToREM60" />
 	</connection>	
-	<!-- Zyarth's Fall - Zyarth's Dominion X -->
+	<!-- Patriarch's Conclusion - Zyarth's Dominion X -->
 	<connection name="ClusterGateREM61To406" ref="destination" path="../Cluster_REM61_connection/Cluster_REM61_Sector001_connection/ZoneG1_Cluster_REM61_Sector001_connection/connection_ClusterGateREM61To406">
 		<macro connection="destination" path="../../../../../Cluster_406_connection/Cluster_406_Sector001_connection/Zone_Gate2_Cluster_406_Sector001_connection/connection_ClusterGate406ToREM61" />
 	</connection>
@@ -1324,14 +1304,14 @@
 	
 	
 <!--TERRAN-->	
-	<!-- Mars - Mars Beta -->
+	<!-- Mars - Ares -->
 	<connection name="ClusterGate101ToREM02" ref="destination" path="../Cluster_101_connection/Cluster_101_Sector001_connection/Zone002_Cluster_101_Sector001_connection/connection_ClusterGate101ToREM02">
 		<macro connection="destination" path="../../../../../Cluster_REM02_connection/Cluster_REM02_Sector001_connection/Zone004_Cluster_REM02_Sector001_connection/connection_ClusterGateREM02To101" />
-	</connection>	
-	<!-- Mercury - Mercury Beta -->
+	</connection>
+	<!-- Mercury - Hermes -->
 	<connection name="ClusterGate106ToREM03" ref="destination" path="../Cluster_106_connection/Cluster_106_Sector001_connection/Zone002_Cluster_106_Sector001_connection/connection_ClusterGate106ToREM03">
 		<macro connection="destination" path="../../../../../Cluster_REM03_connection/Cluster_REM03_Sector001_connection/Zone003_Cluster_REM03_Sector001_connection/connection_ClusterGateREM03To106" />
-	</connection>
+	</connection>	
 	<!-- Titan - Uranus -->
 	<connection name="ClusterGate108To109" ref="destination" path="../Cluster_108_connection/Cluster_108_Sector002_connection/Zone003_Cluster_108_Sector002_connection/connection_ClusterGate108To109">
 		<macro connection="destination" path="../../../../../Cluster_109_connection/Cluster_109_Sector001_connection/Zone002_Cluster_109_Sector001_connection/connection_ClusterGate109To108" />
@@ -1412,13 +1392,13 @@
 	<connection name="ClusterGateMFL01To041" ref="destination" path="../Cluster_Mod_FarnhamLegend_Rev_01_connection/Cluster_Mod_FarnhamLegend_Rev_01_Sector001_connection/Zone001_Cluster_Mod_FarnhamLegend_Rev_01_Sector001_connection/connection_ClusterGateMFL01To041">
 		<macro connection="destination" path="../../../../../Cluster_41_connection/Cluster_41_Sector001_connection/Zone_GateFL_Cluster_41_Sector001_connection/connection_ClusterGate041ToMFL01" />
 	</connection>
-	<!-- Farnham's Legend V - Segaris -->
-	<connection name="ClusterGateMFL01ToCluster113" ref="destination" path="../Cluster_Mod_FarnhamLegend_Rev_01_connection/Cluster_Mod_FarnhamLegend_Rev_01_Sector001_connection/Zone002_Cluster_Mod_FarnhamLegend_Rev_01_Sector001_connection/connection_ClusterGateMFL01To113">
-		<macro connection="destination" path="../../../../../Cluster_113_connection/Cluster_113_Sector001_connection/Zone003_Cluster_113_Sector001_connection/connection_ClusterGate113ToMFL01" />
-	</connection>
-	<!-- Atreus' Clouds - Farnham's Legend VII -->
+	<!-- Atreus' Clouds - Farnham's Legend V -->
 	<connection name="ClusterGate608ToMFL01" ref="destination" path="../Cluster_608_connection/Cluster_608_Sector001_connection/Zone003_Cluster_608_Sector001_connection/connection_ClusterGate608ToMFL01">
-		<macro connection="destination" path="../../../../../Cluster_Mod_FarnhamLegend_Rev_01_connection/Cluster_Mod_FarnhamLegend_Rev_01_Sector002_connection/Zone_Gate1_Cluster_Mod_FarnhamLegend_Rev_01_Sector002_connection/connection_ClusterGateMFL01To608" />
+		<macro connection="destination" path="../../../../../Cluster_Mod_FarnhamLegend_Rev_01_connection/Cluster_Mod_FarnhamLegend_Rev_01_Sector001_connection/Zone002_Cluster_Mod_FarnhamLegend_Rev_01_Sector001_connection/connection_ClusterGateMFL01To608" />
+	</connection>	
+	<!-- Farnham's Legend VII - Segaris -->
+	<connection name="ClusterGateMFL01ToCluster113" ref="destination" path="../Cluster_Mod_FarnhamLegend_Rev_01_connection/Cluster_Mod_FarnhamLegend_Rev_01_Sector002_connection/Zone_Gate1_Cluster_Mod_FarnhamLegend_Rev_01_Sector002_connection/connection_ClusterGateMFL01To113">
+		<macro connection="destination" path="../../../../../Cluster_113_connection/Cluster_113_Sector001_connection/Zone003_Cluster_113_Sector001_connection/connection_ClusterGate113ToMFL01" />
 	</connection>
 	
 	
@@ -1521,7 +1501,7 @@
 	<connection name="ClusterGateREM22To012" ref="destination" path="../Cluster_REM22_connection/Cluster_REM22_Sector001_connection/ZoneG1_Cluster_REM22_Sector001_connection/connection_ClusterGateREM22To012">
 		<macro connection="destination" path="../../../../../Cluster_12_connection/Cluster_12_Sector001_connection/Zone_Gate2_Cluster_12_Sector001_connection/connection_ClusterGate012ToREM22" />
 	</connection>	
-	<!-- Unholy Descent - Family Rhak I -->
+	<!-- Unholy Descent - Family Than I -->
 	<connection name="ClusterGateREM23ToREM32" ref="destination" path="../Cluster_REM23_connection/Cluster_REM23_Sector001_connection/ZoneG2_Cluster_REM23_Sector001_connection/connection_ClusterGateREM23ToREM32">
 		<macro connection="destination" path="../../../../../Cluster_REM32_connection/Cluster_REM32_Sector002_connection/ZoneG1_Cluster_REM32_Sector002_connection/connection_ClusterGateREM32ToREM23" />
 	</connection>
@@ -1557,11 +1537,11 @@
 	<connection name="ClusterGateREM29To011" ref="destination" path="../Cluster_REM29_connection/Cluster_REM29_Sector001_connection/ZoneG1_Cluster_REM29_Sector001_connection/connection_ClusterGateREM29To011">
 		<macro connection="destination" path="../../../../../Cluster_11_connection/Cluster_11_Sector001_connection/Zone_Gate2_Cluster_11_Sector001_connection/connection_ClusterGate011ToREM29" />
 	</connection>	
-	<!-- The Shallows - Family Rhak III -->
+	<!-- The Shallows - Family Than III -->
 	<connection name="ClusterGateREM31ToREM32" ref="destination" path="../Cluster_REM31_connection/Cluster_REM31_Sector001_connection/ZoneG1_Cluster_REM31_Sector001_connection/connection_ClusterGateREM31ToREM32">
 		<macro connection="destination" path="../../../../../Cluster_REM32_connection/Cluster_REM32_Sector001_connection/ZoneG1_Cluster_REM32_Sector001_connection/connection_ClusterGateREM32ToREM31" />
 	</connection>
-	<!-- The Shallows - Queen's Space -->
+	<!-- The Shallows - Queen's Retribution -->
 	<connection name="ClusterGateREM31ToREM38" ref="destination" path="../Cluster_REM31_connection/Cluster_REM31_Sector001_connection/ZoneG2_Cluster_REM31_Sector001_connection/connection_ClusterGateREM31ToREM38">
 		<macro connection="destination" path="../../../../../Cluster_REM38_connection/Cluster_REM38_Sector001_connection/ZoneG1_Cluster_REM38_Sector001_connection/connection_ClusterGateREM38ToREM31" />
 	</connection>
@@ -1577,15 +1557,15 @@
 	<connection name="ClusterGateREM33ToREM39" ref="destination" path="../Cluster_REM33_connection/Cluster_REM33_Sector001_connection/ZoneG2_Cluster_REM33_Sector001_connection/connection_ClusterGateREM33ToREM39">
 		<macro connection="destination" path="../../../../../Cluster_REM39_connection/Cluster_REM39_Sector001_connection/ZoneG1_Cluster_REM39_Sector001_connection/connection_ClusterGateREM39ToREM33" />
 	</connection>	
-	<!-- Hila's Joy IV - Queen's Space -->
+	<!-- Blue Horizon I - Queen's Retribution -->
 	<connection name="ClusterGateREM35ToREM38" ref="destination" path="../Cluster_REM35_connection/Cluster_REM35_Sector002_connection/ZoneG1_Cluster_REM35_Sector002_connection/connection_ClusterGateREM35ToREM38">
 		<macro connection="destination" path="../../../../../Cluster_REM38_connection/Cluster_REM38_Sector001_connection/ZoneG3_Cluster_REM38_Sector001_connection/connection_ClusterGateREM38ToREM35" />
 	</connection>
-	<!-- Hila's Joy IV - Lucky Planets -->
-	<connection name="ClusterGateREM35ToREM37" ref="destination" path="../Cluster_REM35_connection/Cluster_REM35_Sector002_connection/ZoneG2_Cluster_REM35_Sector002_connection/connection_ClusterGateREM35ToREM37">
+	<!-- Blue Horizon IV - Queen's Harbour -->
+	<connection name="ClusterGateREM35ToREM37" ref="destination" path="../Cluster_REM35_connection/Cluster_REM35_Sector001_connection/ZoneG2_Cluster_REM35_Sector001_connection/connection_ClusterGateREM35ToREM37">
 		<macro connection="destination" path="../../../../../Cluster_REM37_connection/Cluster_REM37_Sector001_connection/ZoneG2_Cluster_REM37_Sector001_connection/connection_ClusterGateREM37ToREM35" />
 	</connection>
-	<!-- Hila's Joy IX - Great Trench -->
+	<!-- Blue Horizon IV - Great Trench -->
 	<connection name="ClusterGateREM35ToREM36" ref="destination" path="../Cluster_REM35_connection/Cluster_REM35_Sector001_connection/ZoneG1_Cluster_REM35_Sector001_connection/connection_ClusterGateREM35ToREM36">
 		<macro connection="destination" path="../../../../../Cluster_REM36_connection/Cluster_REM36_Sector001_connection/ZoneG1_Cluster_REM36_Sector001_connection/connection_ClusterGateREM36ToREM35" />
 	</connection>
@@ -1597,11 +1577,11 @@
 	<connection name="ClusterGateREM36ToREM39" ref="destination" path="../Cluster_REM36_connection/Cluster_REM36_Sector001_connection/ZoneG3_Cluster_REM36_Sector001_connection/connection_ClusterGateREM36ToREM39">
 		<macro connection="destination" path="../../../../../Cluster_REM39_connection/Cluster_REM39_Sector001_connection/ZoneG2_Cluster_REM39_Sector001_connection/connection_ClusterGateREM39ToREM36" />
 	</connection>	
-	<!-- Lucky Planets - Queen's Space -->
+	<!-- Queen's Harbour - Queen's Retribution -->
 	<connection name="ClusterGateREM37ToREM38" ref="destination" path="../Cluster_REM37_connection/Cluster_REM37_Sector001_connection/ZoneG1_Cluster_REM37_Sector001_connection/connection_ClusterGateREM37ToREM38">
 		<macro connection="destination" path="../../../../../Cluster_REM38_connection/Cluster_REM38_Sector001_connection/ZoneG2_Cluster_REM38_Sector001_connection/connection_ClusterGateREM38ToREM37" />
 	</connection>	
-	<!-- Lucky Planets - Sacred Relic -->
+	<!-- Queen's Harbour - Sacred Relic -->
 	<connection name="ClusterGateREM37To023" ref="destination" path="../Cluster_REM37_connection/Cluster_REM37_Sector001_connection/ZoneG3_Cluster_REM37_Sector001_connection/connection_ClusterGateREM37To023">
 		<macro connection="destination" path="../../../../../Cluster_23_connection/Cluster_23_Sector001_connection/Zone_Gate_Cluster_23_Sector001_connection/connection_ClusterGate023ToREM37" />
 	</connection>
@@ -1709,11 +1689,11 @@
 	<connection name="ClusterGateREM59To050" ref="destination" path="../Cluster_REM59_connection/Cluster_REM59_Sector001_connection/ZoneG2_Cluster_REM59_Sector001_connection/connection_ClusterGateREM59To050">
 		<macro connection="destination" path="../../../../../Cluster_50_connection/Cluster_50_Sector001_connection/Zone_Gate1_Cluster_50_Sector001_connection/connection_ClusterGate050ToREM59" />
 	</connection>
-	<!-- Zyarth's Stand - Zyarth's Fall -->
+	<!-- Zyarth's Stand - Patriarch's Conclusion -->
 	<connection name="ClusterGateREM60ToREM61" ref="destination" path="../Cluster_REM60_connection/Cluster_REM60_Sector001_connection/ZoneG2_Cluster_REM60_Sector001_connection/connection_ClusterGateREM60ToREM61">
 		<macro connection="destination" path="../../../../../Cluster_REM61_connection/Cluster_REM61_Sector001_connection/ZoneG2_Cluster_REM61_Sector001_connection/connection_ClusterGateREM61ToREM60" />
 	</connection>
-	<!-- Zyarth's Fall - Elena's Fortune -->
+	<!-- Patriarch's Conclusion - Elena's Fortune -->
 	<connection name="ClusterGateREM61ToREM62" ref="destination" path="../Cluster_REM61_connection/Cluster_REM61_Sector001_connection/ZoneG3_Cluster_REM61_Sector001_connection/connection_ClusterGateREM61ToREM62">
 		<macro connection="destination" path="../../../../../Cluster_REM62_connection/Cluster_REM62_Sector001_connection/ZoneG1_Cluster_REM62_Sector001_connection/connection_ClusterGateREM62ToREM61" />
 	</connection>	

@@ -7,15 +7,15 @@ INTERIOR: <area sunlight="1" economy="0.6" security="0.6" />
 BORDER: <area sunlight="1" economy="0.4" security="0.4" />
 NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 -->
-	<add sel="/defaults">
+	<add sel="/defaults">	
 		<!-- Sol -->
 		<dataset macro="Cluster_REM00_macro">
 		  <properties>
 			<identification name="{20003,1160001}" description="{20003,1160002}" system="100"  image="enc_cluster116"/>
-			<area sunlight="0.02" economy="0.25" security="0.25" />
+			<area sunlight="0.02" economy="0.25" security="0.25" god="false"/>
 		  </properties>
 		 </dataset>
-		<!--Sector REM00 - Oort Cloud Beta-->
+		<!--Sector REM00 - Planet 9-->
 		<dataset macro="Cluster_REM00_Sector001_macro">
 		  <properties>
 			<identification name="{19530001,01}" description="{19530001,02}" />
@@ -28,11 +28,11 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		<!-- Sol -->
 		<dataset macro="Cluster_REM01_macro">
 		  <properties>
-			<identification name="{20003,1160001}" description="{20003,1160002}" system="100"  image="enc_cluster116"/>
-			<area sunlight="0.01" economy="0.15" security="0" tags="matrix01" />
+			<identification name="{19530001,03}" description="{19530001,04}" system="100"  image="enc_cluster116"/>
+			<area sunlight="0.01" economy="0.25" security="0.25" tags="mccallum" />
 		  </properties>
 		 </dataset>
-		<!--Sector REM01 - Matrix #01-->
+		<!--Sector REM01 - McCallum Relay-->
 		<dataset macro="Cluster_REM01_Sector001_macro">
 		  <properties>
 			<identification name="{19530001,03}" description="{19530001,04}" />
@@ -46,10 +46,10 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		<dataset macro="Cluster_REM02_macro">
 		  <properties>
 			<identification name="{20003,1010001}" description="{20003,1010002}" system="100"  image="enc_cluster101"/>
-			<area sunlight="0.44" economy="0.75" security="0.75" />
+			<area sunlight="0.44" economy="1" security="0.75" god="false"/>
 		  </properties>
 		 </dataset>
-		<!--Sector REM02 - Mars Beta-->
+		<!--Sector REM02 - Ares-->
 	    <dataset macro="Cluster_REM02_Sector001_macro">
 		  <properties>
 		    <identification name="{19530001,05}" description="{19530001,06}" />
@@ -67,10 +67,10 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		<dataset macro="Cluster_REM03_macro">
 		  <properties>
 			<identification name="{20003,1060001}" description="{20003,1060002}" system="100"  image="enc_cluster106"/>
-			<area sunlight="6.8" economy="0.75" security="0.5" />
+			<area sunlight="6.8" economy="1" security="0.5" god="false"/>
 		  </properties>
 		 </dataset>
-		<!--Sector REM03 - Mercury Beta-->
+		<!--Sector REM03 - Hermes-->
 	    <dataset macro="Cluster_REM03_Sector001_macro">
 		  <properties>
 		    <identification name="{19530001,07}" description="{19530001,08}" />
@@ -89,7 +89,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,7005}" description="{19530001,10}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_terran_soundtrack_brennans_triumph" />	</sounds>
-				<area sunlight="1.15" economy="0.25" security="0.25"/>
+				<area sunlight="1.15" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM04_Sector001_macro">	<properties>	<identification name="{20005,7005}" description="{19530001,10}" />	</properties>	</dataset>
@@ -99,7 +99,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,7006}" description="{19530001,12}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_terran_soundtrack_pioneers" />	</sounds>
-				<area sunlight="2.15" economy="0.75" security="0.5"/>
+				<area sunlight="2.15" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM05_Sector001_macro">	<properties>	<identification name="{20005,7006}" description="{19530001,12}" />	</properties>	</dataset>
@@ -109,7 +109,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{19530001,13}" description="{19530001,14}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_terran_soundtrack_yaki" />	</sounds>
-				<area sunlight="1.25" economy="0.25" security="0.25" tags="matrix48" />
+				<area sunlight="1.25" economy="1" security="0.25" tags="matrix48" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM06_Sector001_macro">	<properties>	<identification name="{19530001,13}" description="{19530001,14}" />	</properties>	</dataset>
@@ -119,7 +119,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{19530001,15}" description="{19530001,16}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
-				<area sunlight="1.05" economy="0.75" security="0.5" tags="matrix79a" />
+				<area sunlight="1.05" economy="1" security="0.5" tags="matrix79a" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM07_Sector001_macro">	<properties>	<identification name="{19530001,15}" description="{19530001,16}" />	</properties>	</dataset>
@@ -129,7 +129,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,1041}" description="{19530001,18}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_argon" />	</sounds>
-				<area sunlight="1.25" economy="0.5" security="0.25"/>
+				<area sunlight="1.25" economy="1" security="0.25"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM08_Sector001_macro">	<properties>	<identification name="{19530001,21}" description="{19530001,22}" />	</properties>	</dataset>
@@ -140,7 +140,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,6012}" description="{19530001,24}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_teladi" />	</sounds>
-				<area sunlight="1.15" economy="0.45" security="0.45"/>
+				<area sunlight="1.15" economy="1" security="0.45"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM09_Sector001_macro">	<properties>	<identification name="{20005,6012}" description="{19530001,24}" />	</properties>	</dataset>
@@ -150,7 +150,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,1032}" description="{19530001,26}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
-				<area sunlight="0.85" economy="0.75" security="0.75"/>
+				<area sunlight="0.85" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM10_Sector001_macro">	<properties>	<identification name="{20005,1032}" description="{19530001,26}" />	</properties>	</dataset>
@@ -170,7 +170,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,5029}" description="{19530001,30}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
-				<area sunlight="1.25" economy="0.75" security="0.25" tags="splitfire" />
+				<area sunlight="1.25" economy="1" security="0.25" tags="splitfire" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM12_Sector001_macro">	<properties>	<identification name="{20005,5029}" description="{19530001,30}" />	</properties>	</dataset>
@@ -180,7 +180,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,2004}" description="{19530001,32}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
-				<area sunlight="0.85" economy="0.5" security="0.5"/>
+				<area sunlight="0.85" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM13_Sector001_macro">	<properties>	<identification name="{20005,2004}" description="{19530001,32}" />	</properties>	</dataset>
@@ -190,7 +190,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,2015}" description="{19530001,34}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_boron_soundtrack_inner_bubble" />	</sounds>
-				<area sunlight="1.65" economy="0.5" security="0.5"/>
+				<area sunlight="1.65" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM14_Sector001_macro">	<properties>	<identification name="{20005,2015}" description="{19530001,34}" />	</properties>	</dataset>
@@ -200,7 +200,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,2005}" description="{19530001,36}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
-				<area sunlight="1.35" economy="0.75" security="0.75" tags="khaak" />
+				<area sunlight="1.35" economy="1" security="0.75" tags="khaak" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM15_Sector001_macro">	<properties>	<identification name="{20005,2005}" description="{19530001,36}" />	</properties>	</dataset>
@@ -210,7 +210,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,2010}" description="{19530001,38}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
-				<area sunlight="0.45" economy="0.75" security="1"/>
+				<area sunlight="0.45" economy="1" security="1"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM16_Sector001_macro">	<properties>	<identification name="{20005,2010}" description="{19530001,38}" />	</properties>	</dataset>
@@ -220,7 +220,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,2025}" description="{19530001,40}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_boron_soundtrack_outer_bubble" />	</sounds>
-				<area sunlight="1" economy="0.75" security="1"/>
+				<area sunlight="1" economy="1" security="1"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM17_Sector001_macro">	<properties>	<identification name="{20005,2025}" description="{19530001,40}" />	</properties>	</dataset>
@@ -230,7 +230,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,2026}" description="{19530001,42}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_boron_soundtrack_kingdom_end" />	</sounds>
-				<area sunlight="1.15" economy="0" security="0" tags="lostboron" />
+				<area sunlight="1.15" economy="1" security="0.25" tags="lostboron" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM18_Sector001_macro">	<properties>	<identification name="{20005,2026}" description="{19530001,42}" />	</properties>	</dataset>
@@ -240,7 +240,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,2020}" description="{19530001,44}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.65" economy="0.75" security="1"/>
+				<area sunlight="0.65" economy="1" security="1"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM19_Sector001_macro">	<properties>	<identification name="{20005,2020}" description="{19530001,44}" />	</properties>	</dataset>
@@ -250,7 +250,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3026}" description="{19530001,46}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_paranid" />	</sounds>
-				<area sunlight="0.85" economy="0.75" security="1"/>
+				<area sunlight="0.85" economy="1" security="1"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM20_Sector001_macro">	<properties>	<identification name="{20005,3026}" description="{19530001,46}" />	</properties>	</dataset>
@@ -260,7 +260,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3038}" description="{19530001,48}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
-				<area sunlight="1.05" economy="0.75" security="0.75"/>
+				<area sunlight="1.05" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM21_Sector001_macro">	<properties>	<identification name="{19530001,51}" description="{19530001,52}" />	</properties>	</dataset>
@@ -271,7 +271,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3041}" description="{19530001,56}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.15" economy="0.75" security="0.75"/>
+				<area sunlight="0.7" economy="1" security="1"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM22_Sector001_macro">	<properties>	<identification name="{20005,3041}" description="{19530001,56}" />	</properties>	</dataset>
@@ -281,7 +281,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3045}" description="{19530001,58}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
-				<area sunlight="1.35" economy="0.75" security="0.5"/>
+				<area sunlight="1.35" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM23_Sector001_macro">	<properties>	<identification name="{20005,3045}" description="{19530001,58}" />	</properties>	</dataset>
@@ -301,7 +301,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3023}" description="{19530001,62}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="1.15" economy="0.5" security="0.75"/>
+				<area sunlight="1.15" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM25_Sector001_macro">	<properties>	<identification name="{20005,3023}" description="{19530001,62}" />	</properties>	</dataset>
@@ -311,7 +311,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9023}" description="{19530001,64}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
-				<area sunlight="0.75" economy="0.75" security="0.75" tags="desecrated" />
+				<area sunlight="0.75" economy="1" security="0.75" tags="desecrated" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM26_Sector001_macro">	<properties>	<identification name="{20005,9023}" description="{19530001,64}" />	</properties>	</dataset>
@@ -321,7 +321,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3037}" description="{19530001,66}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
-				<area sunlight="0.75" economy="0.5" security="0.75"/>
+				<area sunlight="0.75" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM27_Sector001_macro">	<properties>	<identification name="{20005,3037}" description="{19530001,66}" />	</properties>	</dataset>
@@ -331,7 +331,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9039}" description="{19530001,68}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1" economy="0" security="0" factionlogic="false" tags="khaak" />
+				<area sunlight="1" economy="1" security="1" factionlogic="false" tags="khaak" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM28_Sector001_macro">	<properties>	<identification name="{20005,9039}" description="{19530001,68}" />	</properties>	</dataset>		
@@ -341,7 +341,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3018}" description="{19530001,54}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="1.05" economy="1" security="1"/>
+				<area sunlight="1.2" economy="1" security="1"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM29_Sector001_macro">	<properties>	<identification name="{20005,3018}" description="{19530001,54}" />	</properties>	</dataset>
@@ -351,7 +351,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3020}" description="{19530001,72}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.15" economy="0.75" security="0.75"/>
+				<area sunlight="1.15" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM30_Sector001_macro">	<properties>	<identification name="{19530001,73}" description="{19530001,74}" />	</properties>	</dataset>
@@ -363,7 +363,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9003}" description="{19530001,80}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_periphery" />	</sounds>
-				<area sunlight="0.85" economy="0.25" security="0.75" tags="splitcolony" />
+				<area sunlight="0.85" economy="1" security="1" tags="splitcolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM31_Sector001_macro">	<properties>	<identification name="{20005,9003}" description="{19530001,80}" />	</properties>	</dataset>
@@ -373,7 +373,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,5044}" description="{19530001,82}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_loyal_families" />	</sounds>
-				<area sunlight="1.15" economy="0.75" security="1" tags="splitcolony" />
+				<area sunlight="1.15" economy="1" security="1" tags="splitcolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM32_Sector001_macro">	<properties>	<identification name="{19530001,83}" description="{19530001,84}" />	</properties>	</dataset>
@@ -384,7 +384,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,5005}" description="{19530001,88}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_ravine" />	</sounds>
-				<area sunlight="1.25" economy="0.25" security="0.5" tags="splitcolony" />
+				<area sunlight="1.25" economy="1" security="0.5" tags="splitcolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM33_Sector001_macro">	<properties>	<identification name="{20005,5005}" description="{19530001,88}" />	</properties>	</dataset>
@@ -393,59 +393,59 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		<dataset macro="Cluster_REM34_macro">
 			<properties>
 				<identification name="{20005,5034}" description="{19530001,90}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_periphery" />	</sounds>
-				<area sunlight="0.6" economy="0.5" security="0.75" tags="splitcolony" />
+				<sounds>	<music ref="music_thyns_exvacation" />	</sounds>
+				<area sunlight="0.65" economy="1" security="1" tags="splitcolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM34_Sector001_macro">	<properties>	<identification name="{20005,5034}" description="{19530001,90}" />	</properties>	</dataset>
 		
-		<!--Sector REM35 - Hila's Joy Cluster-->
+		<!--Sector REM35 - Blue Horizon Cluster-->
 		<dataset macro="Cluster_REM35_macro">
 			<properties>
-				<identification name="{20005,2008}" description="{19530001,92}" image="enc_cluster01"/>
+				<identification name="{20005,9008}" description="{19530001,92}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
-				<area sunlight="1.25" economy="0.75" security="1" tags="boroncolony" />
+				<area sunlight="0.9" economy="1" security="1" tags="boroncolony" />
 			</properties>
 		</dataset>
-		<dataset macro="Cluster_REM35_Sector001_macro">	<properties>	<identification name="{19530001,93}" description="{19530001,94}" />	</properties>	</dataset>
-		<dataset macro="Cluster_REM35_Sector002_macro">	<properties>	<identification name="{19530001,95}" description="{19530001,96}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM35_Sector001_macro">	<properties>	<identification name="{19530001,95}" description="{19530001,96}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM35_Sector002_macro">	<properties>	<identification name="{19530001,93}" description="{19530001,94}" />	</properties>	</dataset>
 		
 		<!--Sector REM36 - Great Trench-->
 		<dataset macro="Cluster_REM36_macro">
 			<properties>
 				<identification name="{20005,2007}" description="{19530001,98}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1" economy="0.25" security="0.5" tags="boroncolony" />
+				<area sunlight="0.55" economy="1" security="0.5" tags="boroncolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM36_Sector001_macro">	<properties>	<identification name="{20005,2007}" description="{19530001,98}" />	</properties>	</dataset>
 		
-		<!--Sector REM37 - Lucky Planets-->
+		<!--Sector REM37 - Queen's Harbour-->
 		<dataset macro="Cluster_REM37_macro">
 			<properties>
-				<identification name="{20005,2011}" description="{19530001,100}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_boron_soundtrack_inner_bubble" />	</sounds>
-				<area sunlight="0.9" economy="0.25" security="0.75" tags="boroncolony" />
+				<identification name="{20005,2017}" description="{19530001,100}" image="enc_cluster01"/>
+				<sounds>	<music ref="music_queens_harbour" />	</sounds>
+				<area sunlight="1.2" economy="1" security="1" tags="boroncolony" />
 			</properties>
 		</dataset>
-		<dataset macro="Cluster_REM37_Sector001_macro">	<properties>	<identification name="{20005,2011}" description="{19530001,100}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM37_Sector001_macro">	<properties>	<identification name="{20005,2017}" description="{19530001,100}" />	</properties>	</dataset>
 		
-		<!--Sector REM38 - Queen's Space-->
+		<!--Sector REM38 - Queen's Retribution-->
 		<dataset macro="Cluster_REM38_macro">
 			<properties>
-				<identification name="{20005,2019}" description="{19530001,102}" image="enc_cluster01"/>
+				<identification name="{20005,2018}" description="{19530001,102}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_cluster_turquoise_sea" />	</sounds>
-				<area sunlight="0.65" economy="0.5" security="0.75" tags="boroncolony" />
+				<area sunlight="0.65" economy="1" security="1" tags="boroncolony" />
 			</properties>
 		</dataset>
-		<dataset macro="Cluster_REM38_Sector001_macro">	<properties>	<identification name="{20005,2019}" description="{19530001,102}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM38_Sector001_macro">	<properties>	<identification name="{20005,2018}" description="{19530001,102}" />	</properties>	</dataset>
 
 		<!--Sector REM39 - Matrix #472D-->
 		<dataset macro="Cluster_REM39_macro">
 			<properties>
 				<identification name="{19530001,103}" description="{19530001,104}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
-				<area sunlight="1.35" economy="0.75" security="0.75" tags="matrix472d" />
+				<area sunlight="1.35" economy="1" security="0.75" tags="matrix472d" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM39_Sector001_macro">	<properties>	<identification name="{19530001,103}" description="{19530001,104}" />	</properties>	</dataset>
@@ -455,7 +455,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9038}" description="{19530001,106}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_terran_soundtrack_yaki" />	</sounds>
-				<area sunlight="1.15" economy="0.75" security="1" factionlogic="false" tags="pirborder" />
+				<area sunlight="1.15" economy="1" security="1" factionlogic="false" tags="pirborder" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM40_Sector001_macro">	<properties>	<identification name="{19530001,107}" description="{19530001,108}" />	</properties>	</dataset>
@@ -466,7 +466,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,6025}" description="{19530001,111}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.75" economy="0.75" security="1" factionlogic="false" tags="pirborder" />
+				<area sunlight="0.75" economy="1" security="1" factionlogic="false" tags="pirborder" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM41_Sector001_macro">	<properties>	<identification name="{19530001,113}" description="{19530001,114}" />	</properties>	</dataset>
@@ -477,7 +477,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9020}" description="{19530001,118}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1" economy="0.75" security="0.5" tags="pirborder" />
+				<area sunlight="1" economy="1" security="0.5" tags="pirborder" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM42_Sector001_macro">	<properties>	<identification name="{20005,9020}" description="{19530001,118}" />	</properties>	</dataset>
@@ -487,16 +487,16 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,6030}" description="{19530001,120}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.05" economy="0.5" security="0.5"/>
+				<area sunlight="1.05" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM43_Sector001_macro">	<properties>	<identification name="{20005,6030}" description="{19530001,120}" />	</properties>	</dataset>
-		
+
 		<!--Sector REM44 - PTNI Headquarters-->
 		<dataset macro="Cluster_REM44_macro">
 			<properties>
 				<identification name="{20005,6050}" description="{19530001,122}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
+				<sounds>	<music ref="music_ptni" />	</sounds>
 				<area sunlight="1.05" economy="1" security="1" tags="ptnihq" />
 			</properties>
 		</dataset>
@@ -507,7 +507,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,6048}" description="{19530001,124}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="0.85" economy="0.75" security="0.75"/>
+				<area sunlight="0.85" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM45_Sector001_macro">	<properties>	<identification name="{20005,6048}" description="{19530001,124}" />	</properties>	</dataset>
@@ -517,7 +517,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,6017}" description="{19530001,126}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_teladi" />	</sounds>
-				<area sunlight="0.75" economy="0.5" security="0.5"/>
+				<area sunlight="0.75" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM46_Sector001_macro">	<properties>	<identification name="{20005,6017}" description="{19530001,126}" />	</properties>	</dataset>
@@ -527,7 +527,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9032}" description="{19530001,182}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_periphery" />	</sounds>
-				<area sunlight="0.5" economy="0.5" security="0.5" tags="pirborder" />
+				<area sunlight="0.5" economy="1" security="0.5" tags="pirborder" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM47_Sector001_macro">	<properties>	<identification name="{20005,9032}" description="{19530001,182}" />	</properties>	</dataset>
@@ -537,7 +537,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9002}" description="{19530001,128}" system="400" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_loyal_families" />	</sounds>
-				<area sunlight="0.9" economy="0.5" security="0.5"/>
+				<area sunlight="0.9" economy="1" security="0.25" tags="splitdlc" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM48_Sector001_macro">	<properties>	<identification name="{19530001,129}" description="{19530001,130}" />	</properties>	</dataset>
@@ -548,7 +548,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{19530001,133}" description="{19530001,134}" system="4900" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_paranid" />	</sounds>
-				<area sunlight="1" economy="0.25" security="0.2"/>
+				<area sunlight="1" economy="1" security="0.25" tags="splitdlc" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM49_Sector001_macro">	<properties>	<identification name="{19530001,133}" description="{19530001,134}" />	</properties>	</dataset>
@@ -558,7 +558,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{19530001,135}" description="{19530001,136}" system="4900" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
-				<area sunlight="1.15" economy="0.25" security="0.5"/>
+				<area sunlight="1.15" economy="1" security="0.25" tags="splitdlc" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM50_Sector001_macro">	<properties>	<identification name="{19530001,135}" description="{19530001,136}" />	</properties>	</dataset>		
@@ -568,7 +568,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9027}" description="{19530001,138}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="0.05" economy="0.5" security="0.5" tags="pirborder" />
+				<area sunlight="0.05" economy="1" security="0.5" tags="pirborder" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM51_Sector001_macro">	<properties>	<identification name="{20005,9027}" description="{19530001,138}" />	</properties>	</dataset>
@@ -578,7 +578,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9022}" description="{19530001,140}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.15" economy="0.75" security="0.5" factionlogic="false" tags="pircore" />
+				<area sunlight="0.15" economy="1" security="0.5" factionlogic="false" tags="pircore" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM52_Sector001_macro">	<properties>	<identification name="{20005,9022}" description="{19530001,140}" />	</properties>	</dataset>
@@ -587,7 +587,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		<dataset macro="Cluster_REM53_macro">
 		  <properties>
 		    <identification name="{20005,1034}" description="{19530001,142}" system="5300" image="enc_cluster01"/>
-		    <sounds>	<music ref="music_cluster_turquoise_sea" />	</sounds>
+		    <sounds>	<music ref="music_legends_home" />	</sounds>
 		    <area sunlight="0.95" economy="1" security="1" tags="otascore" />
 		    <system>
 			  <space environment="{1042,12011}(Clear Space)"/>
@@ -640,7 +640,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,1024}" description="{19530001,146}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_argon" />	</sounds>
-				<area sunlight="3.4" economy="0.5" security="0.5" tags="otascore" />
+				<area sunlight="3.4" economy="1" security="0.5" tags="otascore" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM55_Sector001_macro">	<properties>	<identification name="{20005,1024}" description="{19530001,146}" />	</properties>	</dataset>
@@ -650,7 +650,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,1025}" description="{19530001,148}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.95" economy="0.75" security="0.75" tags="otasborder" />
+				<area sunlight="1.05" economy="1" security="0.75" tags="otasborder" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM56_Sector001_macro">	<properties>	<identification name="{20005,1025}" description="{19530001,148}" />	</properties>	</dataset>
@@ -660,7 +660,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,1035}" description="{19530001,150}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
-				<area sunlight="1.15" economy="0.5" security="1" tags="otasborder" />
+				<area sunlight="1.15" economy="1" security="0.5" tags="otasborder" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM57_Sector001_macro">	<properties>	<identification name="{20005,1035}" description="{19530001,150}" />	</properties>	</dataset>
@@ -670,7 +670,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9029}" description="{19530001,152}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="1" economy="0.25" security="0.25" tags="pirborder" />
+				<area sunlight="1" economy="1" security="0.25" tags="pirborder" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM58_Sector001_macro">	<properties>	<identification name="{20005,9029}" description="{19530001,152}" />	</properties>	</dataset>
@@ -680,7 +680,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,6042}" description="{19530001,154}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
-				<area sunlight="1.15" economy="0.75" security="0.75"/>
+				<area sunlight="1.15" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM59_Sector001_macro">	<properties>	<identification name="{20005,6042}" description="{19530001,154}" />	</properties>	</dataset>
@@ -695,22 +695,22 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		</dataset>
 		<dataset macro="Cluster_REM60_Sector001_macro">	<properties>	<identification name="{20005,5037}" description="{19530001,156}" />	</properties>	</dataset>
 		
-		<!--Sector REM61 - Zyarth's Fall-->
+		<!--Sector REM61 - Patriarch's Conclusion-->
 		<dataset macro="Cluster_REM61_macro">
 			<properties>
-				<identification name="{20005,5058}" description="{19530001,158}" image="enc_cluster01"/>
+				<identification name="{20005,5039}" description="{19530001,158}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_pirate_soundtrack_windfall" />	</sounds>
-				<area sunlight="3.15" economy="0.5" security="0.75"/>
+				<area sunlight="3.15" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
-		<dataset macro="Cluster_REM61_Sector001_macro">	<properties>	<identification name="{20005,5058}" description="{19530001,158}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM61_Sector001_macro">	<properties>	<identification name="{20005,5039}" description="{19530001,158}" />	</properties>	</dataset>
 		
 		<!--Sector REM62 - Elena's Fortune-->
 		<dataset macro="Cluster_REM62_macro">
 			<properties>
 				<identification name="{20005,1030}" description="{19530001,160}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1" economy="0.75" security="0.75"/>
+				<area sunlight="1" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM62_Sector001_macro">	<properties>	<identification name="{20005,1030}" description="{19530001,160}" />	</properties>	</dataset>
@@ -730,7 +730,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,1033}" description="{19530001,164}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_cluster_turquoise_sea" />	</sounds>
-				<area sunlight="1.3" economy="0.75" security="0.75"/>
+				<area sunlight="1.3" economy="1" security="0.75"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM64_Sector001_macro">	<properties>	<identification name="{20005,1033}" description="{19530001,164}" />	</properties>	</dataset>
@@ -740,7 +740,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,1048}" description="{19530001,166}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
-				<area sunlight="1.15" economy="0.25" security="0.5"/>
+				<area sunlight="1.15" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM65_Sector001_macro">	<properties>	<identification name="{20005,1048}" description="{19530001,166}" />	</properties>	</dataset>
@@ -750,7 +750,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,5021}" description="{19530001,168}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_pirate_soundtrack_windfall" />	</sounds>
-				<area sunlight="1.35" economy="0.75" security="1"/>
+				<area sunlight="1.35" economy="1" security="1"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM66_Sector001_macro">	<properties>	<identification name="{20005,5021}" description="{19530001,168}" />	</properties>	</dataset>
@@ -790,7 +790,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{19530001,175}" description="{19530001,176}" system="7200" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="2.05" economy="0" security="0" factionlogic="false" tags="khaak_unknown" />
+				<area sunlight="2.05" economy="1" security="0" factionlogic="false" tags="khaak_unknown" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM70_Sector001_macro">	<properties>	<identification name="{19530001,175}" description="{19530001,176}" />	</properties>	</dataset>
@@ -860,7 +860,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{19530001,179}" description="{19530001,180}" system="7200" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="22.5" economy="0" security="0" factionlogic="false" tags="khaak_hive" />
+				<area sunlight="22.5" economy="1" security="0" factionlogic="false" tags="khaak_hive" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM72_Sector001_macro">	<properties>	<identification name="{19530001,179}" description="{19530001,180}" />	</properties>	</dataset>
@@ -870,7 +870,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9006}" description="{19530001,184}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.65" economy="0.75" security="0.25" tags="otascore" />
+				<area sunlight="0.65" economy="1" security="0.75" tags="otascore" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM73_Sector001_macro">	<properties>	<identification name="{19530001,183}" description="{19530001,184}" />	</properties>	</dataset>
@@ -880,49 +880,104 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3014}" description="{19530001,186}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
-				<area sunlight="0.15" economy="0.5" security="0.5"/>
+				<area sunlight="0.15" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM74_Sector001_macro">	<properties>	<identification name="{19530001,185}" description="{19530001,186}" />	</properties>	</dataset>
 		
 		
-		<!--New Xenon War Assets-->
-		<!-- Bad Debt -->
-		<dataset macro="Cluster_nxw01_macro">
-			<properties>
-				<identification name="{20005,6029}" description="{19530005,11}" image="enc_cluster03"/>
-				<sounds>
-					<music ref="music_dlc_split_soundtrack_periphery" />
-				</sounds>
-				<area sunlight="1" economy="0.5" security="0.25" tags="baddebt" />
-				<system>
-					<space environment="{1042,12011}(Clear Space)"/>
-					<suns>
-						<sun class="{1042,13091}(Yellow Giant)"/>
-					</suns>
-					<planets>
-						<planet name="{20003,30001} {20403,109}(i)" class="{1042,14081}(Gas Giant)" geology="{1042,10011}(None)" atmosphere="{1042,10011}(None)" population="{1042,10011}(None)" settlements="{1042,10011}(None)" part="planet001">
-							<moons>
-								<moon name="{20005,6054} {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
-							</moons>
-						</planet>
-					</planets>
-				</system>
-			</properties>
+		<!--Sector NXW01 - Bad Debt-->
+		<dataset macro="Cluster_NXW01_macro">
+		  <properties>
+			<identification name="{20005,6029}" description="{19530005,11}" image="enc_cluster03"/>
+			<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>			
+			<area sunlight="1" economy="1" security="0.25" tags="baddebt" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13091}(Yellow Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{20003,30001} {20403,109}(i)" class="{1042,14081}(Gas Giant)" geology="{1042,10011}(None)" atmosphere="{1042,10011}(None)" population="{1042,10011}(None)" settlements="{1042,10011}(None)" part="planet001">
+				  <moons>
+					<moon name="{20005,6054} {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+				  </moons>
+				</planet>
+			  </planets>
+			</system>
+		  </properties>
 		</dataset>
-		<!-- Bad Debt -->
-		<dataset macro="Cluster_nxw01_Sector001_macro">
+		<dataset macro="Cluster_NXW01_Sector001_macro">
 			<properties>
 				<identification name="{20005,6029}" description="{19530005,11}" />
 			</properties>	
 		</dataset>
 	</add>
-		<!--NOTE: Throwing errors: No path-->
-	<add sel="//dataset[@macro='Cluster_17_Sector001_macro']/properties/area" type="@tags">matrix9</add>
-	<add sel="//dataset[@macro='Cluster_21_Sector001_macro']/properties/area" type="@tags">spg</add>
-	<add sel="//dataset[@macro='Cluster_26_Sector001_macro']/properties/area" type="@tags">atiyas</add>
-	<add sel="//dataset[@macro='Cluster_33_Sector001_macro']/properties/area" type="@tags">matrix79b</add>
-	<add sel="//dataset[@macro='Cluster_112_Sector001_macro']/properties/area" type="@tags">savage</add>
-	<add sel="//dataset[@macro='Cluster_415_Sector001_macro']/properties/area" type="@tags">matrix598</add>
-	<add sel="//dataset[@macro='Cluster_424_Sector001_macro']/properties/area" type="@tags">emperor</add>
+	
+
+	<!--Music-->
+  <add sel="/defaults/dataset[@macro='Cluster_23_Sector001_macro']/properties">
+	<sounds>
+	  <music ref="music_alliance" />
+	</sounds>
+  </add>	
+  <add sel="/defaults/dataset[@macro='Cluster_29_Sector002_macro']/properties">
+	<sounds>
+	  <music ref="music_hatikvah" />
+	</sounds>
+  </add>	
+
+  
+	<!--Remove Boron Sector's DLC jobs lock-->
+	<!-- This is currently disabled as VRO completes this step
+  <remove sel="//dataset[@macro='Cluster_601_macro']/properties/area/@extensionexclusivejobs"/>
+  <remove sel="//dataset[@macro='Cluster_602_macro']/properties/area/@extensionexclusivejobs"/>
+  <remove sel="//dataset[@macro='Cluster_603_macro']/properties/area/@extensionexclusivejobs"/>
+  <remove sel="//dataset[@macro='Cluster_604_macro']/properties/area/@extensionexclusivejobs"/>
+  <remove sel="//dataset[@macro='Cluster_605_macro']/properties/area/@extensionexclusivejobs"/>
+  <remove sel="//dataset[@macro='Cluster_606_macro']/properties/area/@extensionexclusivejobs"/>
+  <remove sel="//dataset[@macro='Cluster_607_macro']/properties/area/@extensionexclusivejobs"/>
+  <remove sel="//dataset[@macro='Cluster_608_macro']/properties/area/@extensionexclusivejobs"/>
+  <remove sel="//dataset[@macro='Cluster_609_macro']/properties/area/@extensionexclusivejobs"/>  
+	-->
+
+  
+	<!--NOTE: Syntax lifed from DA-->
+  <add sel="/defaults/dataset[@macro='Cluster_17_Sector001_macro']/properties[count(./area)=0]" silent="true">
+	<area tags="matrix9"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_17_Sector001_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">matrix9</add>
+  <add sel="/defaults/dataset[@macro='Cluster_21_Sector001_macro']/properties[count(./area)=0]" silent="true">
+	<area tags="spg"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_21_Sector001_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">spg</add>
+  <add sel="/defaults/dataset[@macro='Cluster_26_Sector001_macro']/properties[count(./area)=0]" silent="true">
+	<area tags="atiyas"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_26_Sector001_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">atiyas</add>
+  <add sel="/defaults/dataset[@macro='Cluster_33_Sector001_macro']/properties[count(./area)=0]" silent="true">
+	<area tags="matrix79b"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_33_Sector001_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">matrix79b</add>
+  <add sel="/defaults/dataset[@macro='Cluster_112_Sector001_macro']/properties[count(./area)=0]" silent="true">
+	<area tags="savage"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_112_Sector001_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">savage</add>  
+  <add sel="/defaults/dataset[@macro='Cluster_415_Sector001_macro']/properties[count(./area)=0]" silent="true">
+	<area tags="matrix598"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_415_Sector001_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">matrix598</add>
+  <add sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties[count(./area)=0]" silent="true">
+	<area tags="emperor"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">emperor</add>
+  <!--Farnham's Legend Revision-->
+  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_01_macro']/properties[count(./area)=0]" silent="true">
+	<area extensionexclusivejobs="true"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_01_macro']/properties[count(./area)=1]/area" type="@extensionexclusivejobs" silent="true">true</add>
+  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_02_macro']/properties[count(./area)=0]" silent="true">
+	<area extensionexclusivejobs="true"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_02_macro']/properties[count(./area)=1]/area" type="@extensionexclusivejobs" silent="true">true</add>  
 </diff>

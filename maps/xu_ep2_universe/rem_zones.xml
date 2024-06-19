@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <macros>
-	<!--REM00 - OORT CLOUD BETA-->
+	<!--REM00 - PLANET 9-->
 		<macro name="ZoneG1_Cluster_REM00_Sector001_macro" class="zone"><!--OORT CLOUD-->
 			<component ref="standardzone" />
 			<connections>
@@ -13,7 +13,7 @@
 				</connection>
 			</connections>
 		</macro>		
-		<macro name="ZoneG2_Cluster_REM00_Sector001_macro" class="zone"><!--MATRIX #01-->
+		<macro name="ZoneG2_Cluster_REM00_Sector001_macro" class="zone"><!--McCALLUM RELAY-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM00ToREM01" ref="gates">
@@ -42,8 +42,8 @@
 		</macro>		
 
 		
-	<!--REM01 - MATRIX #01-->	
-		<macro name="ZoneG1_Cluster_REM01_Sector001_macro" class="zone"><!--OORT CLOUD BETA-->
+	<!--REM01 - McCALLUM RELAY-->	
+		<macro name="ZoneG1_Cluster_REM01_Sector001_macro" class="zone"><!--PLANET 9-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM01ToREM00" ref="gates">
@@ -78,7 +78,7 @@
 		</macro>		
 
 		
-	<!--REM02 - MARS BETA-->
+	<!--REM02 - ARES-->
 		<macro name="Zone001_Cluster_REM02_Sector001_macro" class="zone"><!--NORTH-->
 			<component ref="standardzone" />
 		</macro>
@@ -111,7 +111,7 @@
 		</macro>		
 
 		
-	<!--REM03 - MERCURY BETA-->
+	<!--REM03 - HERMES-->
 		<macro name="Zone001_Cluster_REM03_Sector001_macro" class="zone"><!--NORTH-->
 			<component ref="standardzone" />
 		</macro>
@@ -1230,7 +1230,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<macro name="ZoneG2_Cluster_REM22_Sector001_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM22_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM22To" ref="gates">
@@ -1242,7 +1242,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<macro name="ZoneG3_Cluster_REM22_Sector001_macro" class="zone">
+		<macro name="ZoneG3_Cluster_REM22_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM22To" ref="gates">
@@ -1254,7 +1254,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<macro name="ZoneG4_Cluster_REM22_Sector001_macro" class="zone">
+		<macro name="ZoneG4_Cluster_REM22_Sector001_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM22To" ref="gates">
@@ -1763,7 +1763,7 @@
 
 		
 	<!--REM31 - THE SHALLOWS-->
-		<macro name="ZoneG1_Cluster_REM31_Sector001_macro" class="zone"><!--FAMILY Than I-->
+		<macro name="ZoneG1_Cluster_REM31_Sector001_macro" class="zone"><!--FAMILY THAN I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM31ToREM32" ref="gates">
@@ -1775,7 +1775,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<macro name="ZoneG2_Cluster_REM31_Sector001_macro" class="zone"><!--QUEEN'S SPACE-->
+		<macro name="ZoneG2_Cluster_REM31_Sector001_macro" class="zone"><!--QUEEN'S RETRIBUTION-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM31ToREM38" ref="gates">
@@ -1820,7 +1820,7 @@
 		</macro>
 
 		
-	<!--REM32 - FAMILY Than I-->
+	<!--REM32 - FAMILY THAN I-->
 		<macro name="ZoneG1_Cluster_REM32_Sector001_macro" class="zone"><!--THE SHALLOWS-->
 			<component ref="standardzone" />
 			<connections>
@@ -1856,7 +1856,7 @@
 		</macro>	
 		
 		
-	<!--REM32 - FAMILY Than III-->
+	<!--REM32 - FAMILY THAN III-->
 		<macro name="ZoneG1_Cluster_REM32_Sector002_macro" class="zone"><!--UNHOLY DESCENT-->
 			<component ref="standardzone" />
 			<connections>
@@ -1889,7 +1889,7 @@
 			<component ref="standardzone" />
 		</macro>
 
-	<!--REM32 - FAMILY Than SUPERHIGHWAYS-->
+	<!--REM32 - FAMILY THAN SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM32_Sector001SHCon6_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -2012,7 +2012,7 @@
 		</macro>
 
 		
-	<!--REM35 - HILA'S JOY IX-->
+	<!--REM35 - BLUE HORIZON IV -->
 		<macro name="ZoneG1_Cluster_REM35_Sector001_macro" class="zone"><!--GREAT TRENCH-->
 			<component ref="standardzone" />
 			<connections>
@@ -2027,6 +2027,18 @@
             			<state active="false" />
 					</properties>									
 					</macro>						
+				</connection>
+			</connections>
+		</macro>
+		<macro name="ZoneG2_Cluster_REM35_Sector001_macro" class="zone"><!--QUEEN'S HARBOUR-->
+			<component ref="standardzone" />
+			<connections>
+				<connection name="connection_ClusterGateREM35ToREM37" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795"/>					
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
 		</macro>		
@@ -2044,10 +2056,10 @@
 		</macro>
 		<macro name="Zone005_Cluster_REM35_Sector001_macro" class="zone"> <!--WEST-->
 			<component ref="standardzone" />
-		</macro>		
+		</macro>	
 		
-	<!--REM35 - HILA'S JOY IV-->
-		<macro name="ZoneG1_Cluster_REM35_Sector002_macro" class="zone"><!--QUEEN'S SPACE-->
+	<!--REM35 - BLUE HORIZON I-->
+		<macro name="ZoneG1_Cluster_REM35_Sector002_macro" class="zone"><!--QUEEN'S RETRIBUTION-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM35ToREM38" ref="gates">
@@ -2058,19 +2070,7 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space" />
 				</connection>
 			</connections>
-		</macro>	
-		<macro name="ZoneG2_Cluster_REM35_Sector002_macro" class="zone"><!--LUCKY PLANETS-->
-			<component ref="standardzone" />
-			<connections>
-				<connection name="connection_ClusterGateREM35ToREM37" ref="gates">
-					<offset>
-						<position x="1" y="1" z="1"/>
-						<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795"/>					
-					</offset>
-					<macro ref="props_gates_anc_gate_macro" connection="space" />
-				</connection>
-			</connections>
-		</macro>		
+		</macro>			
 		<macro name="Zone001_Cluster_REM35_Sector002_macro" class="zone"> <!--CENTER-->
 			<component ref="standardzone" />
 		</macro>
@@ -2085,15 +2085,9 @@
 		</macro>
 		<macro name="Zone005_Cluster_REM35_Sector002_macro" class="zone"> <!--WEST-->
 			<component ref="standardzone" />
-		</macro>	
-		<macro name="ZoneSP_Cluster_REM35_Sector002_macro" class="zone"> <!--SHIPYARD-->
-			<component ref="standardzone" />
-		</macro>
-		<macro name="ZoneWF_Cluster_REM35_Sector002_macro" class="zone"> <!--WHARF-->
-			<component ref="standardzone" />
 		</macro>		
 		
-	<!--REM35 - HILA'S JOY SUPERHIGHWAYS-->
+	<!--REM35 - BLUE HORIZON SUPERHIGHWAYS-->
 		<macro name="tzoneCluster_REM35_Sector001SHCon6_GateZone_macro" class="zone">
 			<component ref="standardzone" />
 			<connections>
@@ -2121,7 +2115,7 @@
 
 		
 	<!--REM36 - GREAT TRENCH-->
-		<macro name="ZoneG1_Cluster_REM36_Sector001_macro" class="zone"><!--HILA'S JOY IX-->
+		<macro name="ZoneG1_Cluster_REM36_Sector001_macro" class="zone"><!--BLUE HORIZON IV-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM36ToREM35" ref="gates">
@@ -2182,8 +2176,8 @@
 		</macro>
 
 		
-	<!--REM37 - LUCKY PLANETS-->
-		<macro name="ZoneG1_Cluster_REM37_Sector001_macro" class="zone"><!--QUEEN'S SPACE-->
+	<!--REM37 - QUEEN'S HARBOUR-->
+		<macro name="ZoneG1_Cluster_REM37_Sector001_macro" class="zone"><!--QUEEN'S RETRIBUTION-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM37ToREM38" ref="gates">
@@ -2195,7 +2189,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<macro name="ZoneG2_Cluster_REM37_Sector001_macro" class="zone"><!--HILA'S JOY IV-->
+		<macro name="ZoneG2_Cluster_REM37_Sector001_macro" class="zone"><!--BLUE HORIZON I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM37ToREM35" ref="gates">
@@ -2238,9 +2232,15 @@
 		<macro name="Zone005_Cluster_REM37_Sector001_macro" class="zone"> <!--WEST-->
 			<component ref="standardzone" />
 		</macro>
+		<macro name="ZoneSP_Cluster_REM37_Sector001_macro" class="zone"> <!--SHIPYARD-->
+			<component ref="standardzone" />
+		</macro>
+		<macro name="ZoneWF_Cluster_REM37_Sector001_macro" class="zone"> <!--WHARF-->
+			<component ref="standardzone" />
+		</macro>
 
 		
-	<!--REM38 - QUEEN'S SPACE-->
+	<!--REM38 - QUEEN'S RETRIBUTION-->
 		<macro name="ZoneG1_Cluster_REM38_Sector001_macro" class="zone"><!--THE SHALLOWS-->
 			<component ref="standardzone" />
 			<connections>
@@ -2257,7 +2257,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<macro name="ZoneG2_Cluster_REM38_Sector001_macro" class="zone"><!--LUCKY PLANETS-->
+		<macro name="ZoneG2_Cluster_REM38_Sector001_macro" class="zone"><!--QUEEN'S HARBOUR-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM38ToREM37" ref="gates">
@@ -2269,7 +2269,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<macro name="ZoneG3_Cluster_REM38_Sector001_macro" class="zone"><!--HILA'S JOY IV-->
+		<macro name="ZoneG3_Cluster_REM38_Sector001_macro" class="zone"><!--BLUE HORIZON I-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM38ToREM35" ref="gates">
@@ -2396,7 +2396,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<macro name="ZoneG2_Cluster_REM40_Sector002_macro" class="zone">
+		<macro name="ZoneG2_Cluster_REM40_Sector002_macro" class="zone"><!--INACTIVE-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM40To" ref="gates">
@@ -3508,7 +3508,7 @@
 				</connection>
 			</connections>
 		</macro>
-		<macro name="ZoneG2_Cluster_REM60_Sector001_macro" class="zone"><!--ZYARTH'S FALL-->
+		<macro name="ZoneG2_Cluster_REM60_Sector001_macro" class="zone"><!--PATRIARCH'S CONCLUSION-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM60ToREM61" ref="gates">
@@ -3537,7 +3537,7 @@
 		</macro>
 		
 
-	<!--REM61 - ZYARTH'S FALL-->
+	<!--REM61 - PATRIARCH'S CONCLUSION-->
 		<macro name="ZoneG1_Cluster_REM61_Sector001_macro" class="zone"><!--ZYARTH'S DOMINION X-->
 			<component ref="standardzone" />
 			<connections>
@@ -3592,7 +3592,7 @@
 		
 
 	<!--REM62 - ELENA'S FORTUNE-->
-		<macro name="ZoneG1_Cluster_REM62_Sector001_macro" class="zone"><!--ZYARTH'S FALL-->
+		<macro name="ZoneG1_Cluster_REM62_Sector001_macro" class="zone"><!--PATRIARCH'S CONCLUSION-->
 			<component ref="standardzone" />
 			<connections>
 				<connection name="connection_ClusterGateREM62ToREM61" ref="gates">
@@ -4176,5 +4176,55 @@
   </macro>
   <macro name="Zone005_Cluster_REM74_Sector001_macro" class="zone"> <!--WEST-->
 	<component ref="standardzone" />
-  </macro>			
+  </macro>	
+
+	<!--NXW01 - BAD DEBT-->
+  <macro name="Zone_Gate1_Cluster_nxw01_Sector001_macro" class="zone"><!--INACTIVE-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateNXW01To" ref="gates">
+		<offset>
+		  <position x="0" y="0" z="-11750"/>
+		  <quaternion qx="0" qy="0" qz="0" qw="1"/>						
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>
+  <macro name="Zone_Gate2_Cluster_nxw01_Sector001_macro" class="zone"><!--SPACEWEED GROVE-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateNXW01ToREM47" ref="gates">
+		<offset>
+		  <position x="0" y="0" z="11750"/>
+		  <quaternion qx="0" qy="1" qz="0" qw="0"/>					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>		
+  <macro name="Zone001_Cluster_nxw01_Sector001_macro" class="zone">
+	<component ref="standardzone" />
+	<connections />
+  </macro>	
+  <macro name="Zone002_Cluster_nxw01_Sector001_macro" class="zone">
+	<component ref="standardzone" />
+	<connections />
+  </macro>
+  <macro name="Zone003_Cluster_nxw01_Sector001_macro" class="zone">
+	<component ref="standardzone" />
+	<connections />
+  </macro>	
+  <macro name="Zone004_Cluster_nxw01_Sector001_macro" class="zone">
+	<component ref="standardzone" />
+	<connections />
+  </macro>
+  <macro name="ZoneSP_Cluster_nxw01_Sector001_macro" class="zone"> <!--SHIPYARD-->
+	<component ref="standardzone" />
+	<connections />
+  </macro>
+  <macro name="ZoneWF_Cluster_nxw01_Sector001_macro" class="zone"> <!--WHARF-->
+	<component ref="standardzone" />
+	<connections />
+  </macro>   
 </macros>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--Thank you to UniTrader for providing this fix-->
+<diff>
+  <replace sel="/mdscript/cues/cue/cues/cue[@name='DrainLoop']/cues/cue/delay/@min">[45min/$Clusters.count - 10s , 15min].max</replace>
+  <replace sel="/mdscript/cues/cue/cues/cue[@name='DrainLoop']/cues/cue/delay/@max">[45min/$Clusters.count - 10s , 15min].max</replace>  
+</diff>

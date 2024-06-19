@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<components>
+	<component name="Cluster_REM01" class="celestialbody">
+		<source geometry="extensions\reemergence\assets\environments\cluster\Cluster_rem01_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="216" g="243" b="255" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_oort" trigger="1" intensity="0.2" specularintensity="0.1">
+						<lightanimations/>
+						<offset>
+							<position x="1.78755E+08" y="4.066152E+07" z="1.330967E+08"/>
+						</offset>
+					</omni>
+					<ambient name="XU Ambient001" r="27" g="31" b="34" range="1E+11" intensity="0.2">
+						<lightanimations/>
+						<offset>
+							<position x="5.922367E+07" y="0" z="7.721783E+07"/>
+						</offset>
+					</ambient>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="celestialbody">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="part_c03_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.p1_env_bg_vertexcolor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.52497E+08" y="4.525E+08" z="4.52497E+08"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part  ">
+				<offset>
+					<position x="1.226121E+07" y="0" z="8100438"/>
+					<quaternion qx="-0" qy="-6.975656E-02" qz="-0" qw="-0.9975641"/>
+				</offset>
+				<parts>
+					<part name="Background">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.backgroundstars"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.255449E+08" y="4.25545E+08" z="4.25545E+08"/>
+							<center x="76.17188" y="31.25" z="-0.9765625"/>
+						</size>
+						<pivot>
+							<offset>
+								<position x="0" y="-50000" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part  ">
+				<offset>
+					<quaternion qx="-0" qy="-0.8236316" qz="-0" qw="-0.5671251"/>
+				</offset>
+				<parts>
+					<part name="Background_milkyway">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1terranenv.milkyway_bright"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.069424E+08" y="4.069425E+08" z="4.069425E+08"/>
+							<center x="0" y="31.25" z="-62.5"/>
+						</size>
+						<pivot>
+							<offset>
+								<position x="0" y="-50000" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+		</connections>
+	</component>
+</components>

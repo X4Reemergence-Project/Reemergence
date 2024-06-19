@@ -1065,7 +1065,7 @@
 			<subordinate job="otas_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
 		</subordinates>
 	</job>
-	<job id="otas_destroyer_patrol_l_core" name="{20204,3301}">
+	<job id="otas_destroyer_patrol_l_core" name="{20204,5201}">
 		<modifiers commandeerable="true"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -1090,7 +1090,7 @@
 			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
 		</subordinates>
 	</job>	
-	<job id="otas_destroyer_patrol_l_border" name="{20204,3301}">
+	<job id="otas_destroyer_patrol_l_border" name="{20204,5201}">
 		<modifiers commandeerable="true"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -1116,7 +1116,7 @@
 			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
 		</subordinates>
 	</job>	
-	<job id="otas_destroyer_patrol_l_sector" name="{20204,3301}">
+	<job id="otas_destroyer_patrol_l_sector" name="{20204,5201}">
 		<modifiers commandeerable="true"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -1141,7 +1141,7 @@
 			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
 		</subordinates>
 	</job>	
-	<job id="otas_destroyer_patrol_l_sector_build" name="{20204,3301}">
+	<job id="otas_destroyer_patrol_l_sector_build" name="{20204,5201}">
 		<modifiers commandeerable="true"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -1166,7 +1166,7 @@
 			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
 		</subordinates>
 	</job>
-	<job id="otas_destroyer_patrol_l_comp" name="{20204,3301}">
+	<job id="otas_destroyer_patrol_l_comp" name="{20204,5201}">
 		<modifiers commandeerable="true"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -1191,7 +1191,7 @@
 			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
 		</subordinates>
 	</job>
-	<job id="otas_destroyer_patrol_l_comp_mission" name="{20204,3301}">
+	<job id="otas_destroyer_patrol_l_comp_mission" name="{20204,5201}">
 		<modifiers commandeerable="true"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -1423,7 +1423,7 @@
 		</ship>
 	</job>
 	<!-- OTAS Escorts -->
-	<job id="otas_destroyer_escort_l" name="{20204,3301}" startactive="false">
+	<job id="otas_destroyer_escort_l" name="{20204,5201}" startactive="false">
 		<orders>
 			<order order="Escort" default="true">
 				<param name="formation" value="formationshape.invvshape"/>
@@ -2003,7 +2003,8 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<!--New Xenon War Jobs-->
+  </add>
+  <add sel="//jobs"> <!--Xenon SA-->
 	<!--Wave 1 - Strike Craft-->
 	<job id="xenon_strike_craft_emperor_pride" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
@@ -2173,7 +2174,7 @@
 			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_strike_craft_matrix01" name="{19530003,1}" startactive="false">
+	<job id="xenon_strike_craft_mccallum_relay" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2183,7 +2184,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, frigate]" size="ship_m"/>
 		<quota galaxy="2" maxgalaxy="3" />
-		<location class="sector" macro="Cluster_rem01_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix01"/>
+		<location class="sector" macro="Cluster_rem01_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="mccallum"/>
 		<environment buildatshipyard="true"/>
 		<ship>
 			<select faction="xenon" tags="[military, bomber]" size="ship_m"/>
@@ -2278,7 +2279,7 @@
 			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_strike_craft_ptni_headquarters" name="{19530003,1}" startactive="false">
+	<job id="xenon_strike_craft_matrix695" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2288,7 +2289,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, frigate]" size="ship_m"/>
 		<quota galaxy="2" maxgalaxy="3" />
-		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="ptnihq"/>
+		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix695"/>
 		<environment buildatshipyard="true"/>
 		<ship>
 			<select faction="xenon" tags="[military, bomber]" size="ship_m"/>
@@ -2476,7 +2477,7 @@
 			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_destroyers_matrix01" name="{19530003,1}" startactive="false">
+	<job id="xenon_destroyers_mccallum_relay" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2486,7 +2487,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, defender]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="2" />
-		<location class="sector" macro="Cluster_rem01_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix01"/>
+		<location class="sector" macro="Cluster_rem01_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="mccallum"/>
 		<environment buildatshipyard="true"/>
 		<ship>
 			<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
@@ -2564,7 +2565,7 @@
 			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_destroyers_ptni_headquarters" name="{19530003,1}" startactive="false">
+	<job id="xenon_destroyers_matrix695" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2574,7 +2575,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, defender]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="2" />
-		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="ptnihq"/>
+		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix695"/>
 		<environment buildatshipyard="true"/>
 		<ship>
 			<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
@@ -2779,7 +2780,7 @@
 			<subordinate job="xenon_frigate_m_escort_sa" assignment="defence" group="2" rebuild="true" />				
 		</subordinates>
 	</job>
-	<job id="xenon_battleship_matrix01" name="{19530003,1}" startactive="false">
+	<job id="xenon_battleship_mccallum_relay" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2791,7 +2792,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, battleship]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="1" />
-		<location class="sector" macro="Cluster_rem07_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix01"/>
+		<location class="sector" macro="Cluster_rem07_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="mccallum"/>
 		<environment buildatshipyard="true"/>
         <time start="0" interval="7200"/>			
 		<ship>
@@ -2875,7 +2876,7 @@
 			<subordinate job="xenon_frigate_m_escort_sa" assignment="defence" group="2" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_battleship_ptni_headquarters" name="{19530003,1}" startactive="false">
+	<job id="xenon_battleship_matrix695" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2887,7 +2888,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, battleship]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="1" />
-		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="ptnihq"/>
+		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix695"/>
 		<environment buildatshipyard="true"/>
         <time start="0" interval="7200"/>			
 		<ship>
@@ -3124,7 +3125,7 @@
 			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />				
 		</subordinates>
 	</job>	
-	<job id="xenon_reclaimer_matrix01" name="Matrix#01 {19530003,2}" startactive="false">
+	<job id="xenon_reclaimer_mccallum_relay" name="Matrix#01 {19530003,2}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -3264,7 +3265,7 @@
 			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />						
 		</subordinates>
 	</job>	
-	<job id="xenon_reclaimer_ptni_headquarters" name="PTNI Headquarters {19530003,2}" startactive="false">
+	<job id="xenon_reclaimer_ptni_headquarters" name="PTNI Headquaters {19530003,2}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -3755,180 +3756,9 @@
 			<owner exact="xenon" overridenpc="true"/>
 		</ship>
 	</job>	
-		<!--New Xenon War-->		
-<!--Bad Debt-->
-		<job id="xenon_battleship_patrol_xl_defence_bad_debt_new_xenon_war" name="{20204,3301}" >
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>					
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, carrier]" size="ship_xl"/>
-			<quota galaxy="1" sector="1"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<time start="3600" interval="3600"/>
-			<ship>
-				<select faction="xenon" tags="[military, carrier]" size="ship_xl"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_destroyer_escort"/>
-				<subordinate job="xenon_frigate_m_escort"/>				
-			</subordinates>
-		</job>
-		<job id="xenon_destroyer_patrol_xl_bad_debt_new_xenon_war" name="{20204,3301}">
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>				  
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
-			<quota galaxy="2"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_frigate_m_escort"/>
-				<subordinate job="xenon_frigate_s_escort"/>				
-			</subordinates>
-		</job>
-		<job id="xenon_patrol_m_bad_debt_new_xenon_war" name="{20204,5201}" >
-			<modifiers commandeerable="true"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>					
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, frigate]" size="ship_m"/>
-			<quota galaxy="3"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[military, medium]" size="ship_m"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_frigate_m_escort"/>
-			</subordinates>
-		</job>
-		<job id="xenon_patrol_s_bad_debt_new_xenon_war" name="{20204,5201}" >
-			<modifiers commandeerable="true"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>					
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
-			<quota galaxy="4"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_frigate_s_escort"/>
-			</subordinates>
-		</job>
-		<job id="xenon_deepspace_single_fighter_bad_debt_new_xenon_war" name="{20204,3401}">
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>					
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
-			<quota galaxy="1"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="false" gate="true"/>
-			<encounters id="xenon_s_lone"/>
-			<ship>
-				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-		</job>
-		<job id="xenon_deepspace_group_fighter_bad_debt_new_xenon_war" name="{20204,3401}">
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>	
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
-			<quota galaxy="1"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="false" gate="true"/>
-			<encounters id="xenon_s_group"/>
-			<ship>
-				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_frigate_s_escort"/>
-			</subordinates>
-		</job>
-<!--Civie-->
-		<job id="xenon_miner_bad_debt_new_xenon_war" name="{20204,5601}">
-			<modifiers commandeerable="true"/>
-			<orders>
-				<order order="MiningRoutine" default="true">
-					<param name="minbuy" value="0"/>
-					<param name="maxbuy" value="2"/>
-					<param name="minsell" value="0"/>
-					<param name="maxsell" value="2"/>
-				</order>
-			</orders>
-			<basket basket="minerals_xenon"/>
-			<category faction="xenon" tags="[miner]" size="ship_m"/>
-			<quota galaxy="3"/>
-			<location class="cluster" macro="Cluster_nxw01_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
-				<owner exact="xenon" overridenpc="true"/>
-				<cargo>
-					<wares>
-						<fillpercent min="0" max="100" profile="inversebell"/>
-					</wares>
-				</cargo>
-			</ship>
-		</job>
-		<job id="xenon_energy_bad_debt_new_xenon_war" name="{20204,201}">
-			<modifiers commandeerable="true"/>
-			<orders>
-				<order order="TradeRoutine" default="true">
-					<param name="minbuy" value="0"/>
-					<param name="maxbuy" value="2"/>
-					<param name="minsell" value="0"/>
-					<param name="maxsell" value="2"/>
-				</order>
-			</orders>
-			<basket basket="energycells"/>
-			<category faction="xenon" tags="[freighter, trader]" size="ship_m"/>
-			<quota galaxy="2"/>
-			<location class="cluster" macro="Cluster_nxw01_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<!-- use miner ship for energy transport -->
-				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-		</job>	
 		<!--X:Reemergence-->		
-<!--Matrix #01-->
-		<job id="xenon_battleship_patrol_xl_defence_matrix01" name="{20204,5201}" >
+<!--McCallum Relay-->
+		<job id="xenon_battleship_patrol_xl_defence_mccallum_relay" name="{20204,5201}" >
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -3950,7 +3780,7 @@
 				<subordinate job="xenon_frigate_m_escort"/>				
 			</subordinates>
 		</job>
-		<job id="xenon_destroyer_patrol_xl_matrix01" name="{20204,3301}">
+		<job id="xenon_destroyer_patrol_xl_mccallum_relay" name="{20204,3301}">
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -3971,7 +3801,7 @@
 				<subordinate job="xenon_frigate_s_escort"/>				
 			</subordinates>
 		</job>
-		<job id="xenon_patrol_m_matrix01" name="{20204,5201}" >
+		<job id="xenon_patrol_m_mccallum_relay" name="{20204,5201}" >
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -3991,7 +3821,7 @@
 				<subordinate job="xenon_frigate_m_escort"/>
 			</subordinates>
 		</job>
-		<job id="xenon_patrol_s_matrix01" name="{20204,5201}" >
+		<job id="xenon_patrol_s_mccallum_relay" name="{20204,5201}" >
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4011,7 +3841,7 @@
 				<subordinate job="xenon_frigate_s_escort"/>
 			</subordinates>
 		</job>
-		<job id="xenon_deepspace_single_fighter_matrix01" name="{20204,3401}">
+		<job id="xenon_deepspace_single_fighter_mccallum_relay" name="{20204,3401}">
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4029,7 +3859,7 @@
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
 		</job>
-		<job id="xenon_deepspace_group_fighter_matrix01" name="{20204,3401}">
+		<job id="xenon_deepspace_group_fighter_mccallum_relay" name="{20204,3401}">
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4050,7 +3880,7 @@
 				<subordinate job="xenon_frigate_s_escort"/>
 			</subordinates>
 		</job>
-		<job id="xenon_miner_matrix01" name="{20204,5601}">
+		<job id="xenon_miner_mccallum_relay" name="{20204,5601}">
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="MiningRoutine" default="true">
@@ -4075,7 +3905,7 @@
 				</cargo>
 			</ship>
 		</job>
-		<job id="xenon_energy_matrix01" name="{20204,201}">
+		<job id="xenon_energy_mccallum_relay" name="{20204,201}">
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="TradeRoutine" default="true">
@@ -4091,7 +3921,6 @@
 			<location class="cluster" macro="Cluster_rem01_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
 			<environment buildatshipyard="true" preferbuilding="true"/>
 			<ship>
-				<!-- use miner ship for energy transport -->
 				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
@@ -4260,7 +4089,6 @@
 			<location class="cluster" macro="Cluster_rem06_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
 			<environment buildatshipyard="true" preferbuilding="true"/>
 			<ship>
-				<!-- use miner ship for energy transport -->
 				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
@@ -4429,7 +4257,6 @@
 			<location class="cluster" macro="Cluster_rem12_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
 			<environment buildatshipyard="true" preferbuilding="true"/>
 			<ship>
-				<!-- use miner ship for energy transport -->
 				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
@@ -4598,7 +4425,6 @@
 			<location class="cluster" macro="Cluster_rem26_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
 			<environment buildatshipyard="true" preferbuilding="true"/>
 			<ship>
-				<!-- use miner ship for energy transport -->
 				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
@@ -4724,13 +4550,12 @@
 			<location class="cluster" macro="Cluster_rem39_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
 			<environment buildatshipyard="true" preferbuilding="true"/>
 			<ship>
-				<!-- use miner ship for energy transport -->
 				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
 		</job>		
-<!--PTNI Headquarters-->
-		<job id="xenon_battleship_patrol_xl_defence_ptni_headquarters" name="{20204,5201}" >
+<!--Matrix #695-->
+		<job id="xenon_battleship_patrol_xl_defence_matrix695" name="{20204,5201}" >
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4752,7 +4577,7 @@
 				<subordinate job="xenon_frigate_m_escort"/>				
 			</subordinates>
 		</job>
-		<job id="xenon_destroyer_patrol_xl_ptni_headquarters" name="{20204,3301}">
+		<job id="xenon_destroyer_patrol_xl_matrix695" name="{20204,3301}">
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4773,7 +4598,7 @@
 				<subordinate job="xenon_frigate_s_escort"/>				
 			</subordinates>
 		</job>
-		<job id="xenon_patrol_m_ptni_headquarters" name="{20204,5201}" >
+		<job id="xenon_patrol_m_matrix695" name="{20204,5201}" >
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4793,7 +4618,7 @@
 				<subordinate job="xenon_frigate_m_escort"/>
 			</subordinates>
 		</job>
-		<job id="xenon_patrol_s_ptni_headquarters" name="{20204,5201}" >
+		<job id="xenon_patrol_s_matrix695" name="{20204,5201}" >
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4813,7 +4638,7 @@
 				<subordinate job="xenon_frigate_s_escort"/>
 			</subordinates>
 		</job>
-		<job id="xenon_deepspace_single_fighter_ptni_headquarters" name="{20204,3401}">
+		<job id="xenon_deepspace_single_fighter_matrix695" name="{20204,3401}">
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4831,7 +4656,7 @@
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
 		</job>
-		<job id="xenon_deepspace_group_fighter_ptni_headquarters" name="{20204,3401}">
+		<job id="xenon_deepspace_group_fighter_matrix695" name="{20204,3401}">
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4852,7 +4677,7 @@
 				<subordinate job="xenon_frigate_s_escort"/>
 			</subordinates>
 		</job>
-		<job id="xenon_miner_ptni_headquarters" name="{20204,5601}">
+		<job id="xenon_miner_matrix695" name="{20204,5601}">
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="MiningRoutine" default="true">
@@ -4877,7 +4702,7 @@
 				</cargo>
 			</ship>
 		</job>
-		<job id="xenon_energy_ptni_headquarters" name="{20204,201}">
+		<job id="xenon_energy_matrix695" name="{20204,201}">
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="TradeRoutine" default="true">
@@ -4893,11 +4718,180 @@
 			<location class="cluster" macro="Cluster_rem44_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
 			<environment buildatshipyard="true" preferbuilding="true"/>
 			<ship>
-				<!-- use miner ship for energy transport -->
 				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
 		</job>
+<!--Bad Debt-->
+		<job id="xenon_battleship_patrol_xl_defence_bad_debt" name="{20204,3301}" >
+			<modifiers commandeerable="false"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>					
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, carrier]" size="ship_xl"/>
+			<quota galaxy="1" sector="1"/>
+			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<time start="3600" interval="3600"/>
+			<ship>
+				<select faction="xenon" tags="[military, carrier]" size="ship_xl"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_destroyer_escort"/>
+				<subordinate job="xenon_frigate_m_escort"/>				
+			</subordinates>
+		</job>
+		<job id="xenon_destroyer_patrol_xl_bad_debt" name="{20204,3301}">
+			<modifiers commandeerable="false"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>				  
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
+			<quota galaxy="2"/>
+			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_frigate_m_escort"/>
+				<subordinate job="xenon_frigate_s_escort"/>				
+			</subordinates>
+		</job>
+		<job id="xenon_patrol_m_bad_debt" name="{20204,5201}" >
+			<modifiers commandeerable="true"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>					
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, frigate]" size="ship_m"/>
+			<quota galaxy="3"/>
+			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[military, medium]" size="ship_m"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_frigate_m_escort"/>
+			</subordinates>
+		</job>
+		<job id="xenon_patrol_s_bad_debt" name="{20204,5201}" >
+			<modifiers commandeerable="true"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>					
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
+			<quota galaxy="4"/>
+			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_frigate_s_escort"/>
+			</subordinates>
+		</job>
+		<job id="xenon_deepspace_single_fighter_bad_debt" name="{20204,3401}">
+			<modifiers commandeerable="false"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>					
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
+			<quota galaxy="1"/>
+			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="false" gate="true"/>
+			<encounters id="xenon_s_lone"/>
+			<ship>
+				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+		</job>
+		<job id="xenon_deepspace_group_fighter_bad_debt" name="{20204,3401}">
+			<modifiers commandeerable="false"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>	
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
+			<quota galaxy="1"/>
+			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="false" gate="true"/>
+			<encounters id="xenon_s_group"/>
+			<ship>
+				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_frigate_s_escort"/>
+			</subordinates>
+		</job>
+		<job id="xenon_miner_bad_debt" name="{20204,5601}">
+			<modifiers commandeerable="true"/>
+			<orders>
+				<order order="MiningRoutine" default="true">
+					<param name="minbuy" value="0"/>
+					<param name="maxbuy" value="2"/>
+					<param name="minsell" value="0"/>
+					<param name="maxsell" value="2"/>
+				</order>
+			</orders>
+			<basket basket="minerals_xenon"/>
+			<category faction="xenon" tags="[miner]" size="ship_m"/>
+			<quota galaxy="3"/>
+			<location class="cluster" macro="Cluster_nxw01_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
+				<owner exact="xenon" overridenpc="true"/>
+				<cargo>
+					<wares>
+						<fillpercent min="0" max="100" profile="inversebell"/>
+					</wares>
+				</cargo>
+			</ship>
+		</job>
+		<job id="xenon_energy_bad_debt" name="{20204,201}">
+			<modifiers commandeerable="true"/>
+			<orders>
+				<order order="TradeRoutine" default="true">
+					<param name="minbuy" value="0"/>
+					<param name="maxbuy" value="2"/>
+					<param name="minsell" value="0"/>
+					<param name="maxsell" value="2"/>
+				</order>
+			</orders>
+			<basket basket="energycells"/>
+			<category faction="xenon" tags="[freighter, trader]" size="ship_m"/>
+			<quota galaxy="2"/>
+			<location class="cluster" macro="Cluster_nxw01_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+		</job>
+  </add>
+  <add sel="//jobs"> <!--Misc.-->    
 	<!--Zyarth Scrappers-->
 	<job id="zyarth_scavenger_free_tug_m" name="{20204,5401}" >
       <modifiers commandeerable="true"/>
@@ -4918,8 +4912,9 @@
 		</loadout>
         <owner exact="split" overridenpc="true"/>
       </ship>
-   </job>
-   <!--Riptide Rakers-->
+     </job>
+   
+	<!--Riptide Rakers-->
    <job id="scavenger_split_compactor_l" name="{20204,10023}">
      <modifiers commandeerable="true"/>
      <orders>
@@ -4960,117 +4955,514 @@
        <owner exact="scavenger" overridenpc="true"/>
      </ship>
    </job>
-	<!--Kha'ak-->
-	<job id="khaak_awoken_sector_fighter_s_group" name="{20204,3401}">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
-		<quota galaxy="20" maxgalaxy="25"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
-		<environment buildatshipyard="false" gate="true"/>
-		<ship>
-			<select faction="khaak" tags="[fighter]" size="ship_m"/>
-			<owner exact="khaak" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="khaak_fighter_escort_s" assignment="attack"/>	
-		</subordinates>
-	</job>
-	<job id="khaak_awoken_sector_fighter_s_single" name="{20204,5401}">
-	<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
-		<quota galaxy="40" maxgalaxy="45"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
-		<environment buildatshipyard="false" gate="true"/>
-		<ship>
-			<select faction="khaak" tags="[fighter]" size="ship_m"/>
-			<owner exact="khaak" overridenpc="true"/>
-		</ship>
-    </job>	
   </add>
-  <!--BORON-->
-<add sel="/jobs/job[@id='boron_carrier_patrol_l_sector']" pos="after">  
-  <job id="boron_marlin_patrol" name="{20204,5201}">
-    <modifiers commandeerable="true" />
-    <orders>
-      <order order="Patrol" default="true">
-        <param name="range" value="class.sector" />
-      </order>
-    </orders>
-    <category faction="boron" tags="[factionlogic, military, frigate]" size="ship_l" />
-    <quota galaxy="6" maxgalaxy="12" cluster="2" />
-    <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="self" comparison="exact" excludedtags="boronborder" matchextension="false"/>
-    <environment buildatshipyard="true" />
-    <ship>
-      <select faction="boron" tags="[military, large, marlin]" size="ship_l" />
+  
+	<!--Kha'ak-->   
+  <add sel="//jobs">    
+	<job id="khaak_awoken_fighter_m_cluster" name="{20204,3401}">
+	  <modifiers commandeerable="false"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+	  <quota galaxy="10" maxgalaxy="15"/>
+	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[fighter]" size="ship_m"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_escort_s" assignment="attack" rebuild="false"/>	
+	  </subordinates>
+	</job>
+	<job id="khaak_awoken_fighter_m_single" name="{20204,5401}">
+	  <modifiers commandeerable="false"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+	  <quota galaxy="20" maxgalaxy="25"/>
+	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[fighter]" size="ship_m"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+    </job>	
+    <job id="khaak_invader_fighter_alpha" name="{20204,4201}">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+      <quota galaxy="3" maxgalaxy="5"/>
+      <time interval="600"/>
+      <location class="sector" macro="Cluster_REM67_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
+      </subordinates>
+    </job>
+    <job id="khaak_invader_fighter_beta" name="{20204,4201}">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+      <quota galaxy="3" maxgalaxy="5"/>
+      <time interval="600"/>
+      <location class="sector" macro="Cluster_REM68_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
+      </subordinates>
+    </job>
+    <job id="khaak_invader_fighter_gamma" name="{20204,4201}">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+      <quota galaxy="3" maxgalaxy="5"/>
+      <time interval="600"/>
+      <location class="sector" macro="Cluster_REM69_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
+      </subordinates>
+    </job>
+    <job id="khaak_fighter_m_escort" name="{20204,4201}" startactive="false">
+      <orders>
+        <order order="Escort" default="true">
+          <param name="formation" value="formationshape.halfcircle"/>
+          <param name="formationparam" value="32.5"/>
+          <param name="rollformation" value="true"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[military, fighter]" size="ship_s"/>
+      <quota wing="4" variation="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <modifiers subordinate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_escort_s2" assignment="attack" rebuild="false"/>
+      </subordinates>
+    </job>
+    <job id="khaak_fighter_escort_s2" name="{20204,4201}" startactive="false">
+      <orders>
+        <order order="Escort" default="true">
+          <param name="formation" value="formationshape.halfcircle"/>
+          <param name="formationparam" value="32.5"/>
+          <param name="rollformation" value="true"/>
+        </order>
+      </orders>
+      <category faction="khaak" tags="[military, fighter]" size="ship_s"/>
+      <quota wing="5" variation="2"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <modifiers subordinate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter, escort]" size="ship_s"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+    </job> 
+  </add>
+  
+ <!--ARGONs--> 
+ 
+  <add sel="//jobs"> <!--PARANIDs-->	
+	<job id="hop_carrier_patrol_xl_cluster_spl" name="{20204,6301}" >
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.zone"/>
+        </order>
+      </orders>
+      <category faction="holyorder" tags="[factionlogic, military, carrier]" size="ship_xl"/>
+      <quota galaxy="1" maxgalaxy="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" tags="splitdlc"/>
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="holyorder" tags="[military, carrier]" size="ship_xl"/>
         <loadout>
-          <level min="0.7" max="1.0" />
+          <level exact="0.7"/>
         </loadout>
-        <owner exact="boron" overridenpc="true" />
-    </ship>
-	<subordinates>
-	  <subordinate job="boron_gunboat_escort_m"/>
-	  <subordinate job="boron_gunboat_escort_m"/>
-	  <subordinate job="boron_fighter_escort_s_corvette"/>	  
-	</subordinates>	  
-  </job>  
-</add>  
-  <!--SPLIT-->
-<add sel="//jobs">  
-  <job id="faf_cheetah_plunder" name="{20204,4201}">
-	<modifiers commandeerable="false"/>
-    <orders>
-      <order order="Patrol" default="true">
-        <param name="range" value="class.sector" />
-      </order>
-    </orders>
-	<category faction="fallensplit" tags="[plunderer, cheetah]" />
-	<quota galaxy="2" sector="1"/>
-    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[court, freesplit]" relation="self" comparison="exact" matchextension="false"/>
-	<environment buildatshipyard="true"/>
-	<basket basket="pirate_container"/>
-	<ship>
-	  <select faction="fallensplit" tags="[military, large, cheetah]" />
-	  <loadout>
-		<level min="0.7" max="1.0"/>
-	  </loadout>
-	  <owner exact="fallensplit" overridenpc="true"/>
-	</ship>
-	<subordinates>
-	  <subordinate job="faf_escort_mixed"/>
-	</subordinates>
-  </job>
-  <job id="faf_escort_mixed" name="{20204,3401}" startactive="false">
-	<orders>
-	  <order order="Escort" default="true"/>
-        <param name="formation" value="formationshape.pointguard"/>
-        <param name="overrideformationskill" value="true"/>	  
-	</orders>
-	<category faction="fallensplit" tags="[military, fighter]" size="ship_s"/>
-	<quota wing="5" variation="1"/>
-	<location class="galaxy" macro="xu_ep2_universe_macro"/>
-    <environment buildatshipyard="true"/>
-    <modifiers subordinate="true"/>
-	<ship>
-	  <select faction="fallensplit" tags="[military, fighter, heavy]" size="ship_s"/>
-	  <loadout>
-		<level min="0.9" max="1.0"/>
-	  </loadout>
-	  <owner exact="fallensplit" overridenpc="true"/>
-	</ship>
-  </job>
-</add>  
+        <owner exact="holyorder" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="holyorder_destroyer_escort_l" assignment="attack" group="1"/>
+        <subordinate job="paranid_fighter_escort_s_carrier" assignment="defence" group="2"/> <!--intentionally left Paranid, Holy Order has no matching job-->
+        <subordinate job="holyorder_frigate_escort_m" assignment="defence" group="3"/>
+        <subordinate job="holyorder_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
+      </subordinates>
+    </job>
+    <job id="hop_corvette_patrol_m_sector_spl" name="{20204,10044}" >
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="holyorder" tags="[factionlogic, military, corvette]" size="ship_m"/>
+      <quota galaxy="7" maxgalaxy="17" sector="2"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" tags="splitdlc"/>
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="holyorder" tags="[military, corvette]" size="ship_m"/>
+        <loadout>
+          <level min="0.7" max="1.0"/>
+        </loadout>
+        <owner exact="holyorder" overridenpc="true"/>
+      </ship>
+    </job>
+    <job id="hop_corvette_patrol_m_sector_spl_mission" name="{20204,10044}" startactive="false" >
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.zone"/>
+        </order>
+      </orders>
+      <category faction="holyorder" tags="[military, corvette]" size="ship_m"/>
+      <quota galaxy="5" maxgalaxy="5" sector="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" tags="splitdlc"/>
+      <environment buildatshipyard="true" preferbuilding="true"/>
+      <ship>
+        <select faction="holyorder" tags="[military, corvette]" size="ship_m"/>
+        <loadout>
+          <level min="0.7" max="1.0"/>
+        </loadout>
+        <owner exact="holyorder" overridenpc="true"/>
+      </ship>
+    </job>
+    <job id="hop_fighter_patrol_s_zone_spl" name="{20204,2901}">
+      <modifiers commandeerable="false"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="holyorder" tags="[military, fighter]" size="ship_s"/>
+      <quota galaxy="18" maxgalaxy="29" zone="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" tags="splitdlc"/>
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="holyorder" tags="[fighter, heavy]" size="ship_s"/>
+        <loadout>
+          <level min="0.7" max="1.0"/>
+        </loadout>
+        <owner exact="holyorder" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="holyorder_fighter_escort_s_patrol"/>
+      </subordinates>
+    </job>
+    <job id="hop_frigate_patrol_m_sector_exp" name="{20204,2901}" >
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="holyorder" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="8" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="exact" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="holyorder" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="holyorder" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="holyorder_fighter_escort_s_frigate" assignment="attack" group="1"/>
+        <subordinate job="holyorder_fighter_escort_s_frigate" assignment="attack" group="2"/>
+      </subordinates>	  
+    </job>	
+    <job id="par_frigate_patrol_m_sector_exp" name="{20204,2901}" >
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="paranid" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="8" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="paranid" relation="self" comparison="exact" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="paranid" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="paranid" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="paranid_fighter_escort_s_frigate" assignment="attack" group="1"/>
+        <subordinate job="paranid_fighter_escort_s_frigate" assignment="attack" group="2"/>
+      </subordinates>	  
+    </job>	  
+    <job id="tri_frigate_patrol_m_sector_exp" name="{20204,2901}" startactive="false">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="trinity" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="8" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="trinity" relation="self" comparison="exact" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="trinity" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="trinity" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="trinity_fighter_escort_s_frigate" assignment="attack" group="1"/>
+        <subordinate job="trinity_fighter_escort_s_frigate" assignment="attack" group="2"/>
+      </subordinates>	  
+    </job>  
+  </add> 
+  
+  <add sel="//jobs"> <!--TELADIs-->
+    <job id="min_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="ministry" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="10" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="teladi" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="ministry" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="ministry" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="ministry_fighter_escort_s_frigate" assignment="attack" group="1"/>
+      </subordinates>	  
+    </job>  
+  </add>   
+  
+  <add sel="//jobs"> <!--SPLITs-->
+    <job id="faf_cheetah_plunder" name="{20204,4201}">
+	  <modifiers commandeerable="false"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector" />
+        </order>
+      </orders>
+	  <category faction="fallensplit" tags="[plunderer, cheetah]" />
+	  <quota galaxy="5" sector="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="[court, freesplit]" relation="self" comparison="exact" matchextension="false"/>
+	  <environment buildatshipyard="true"/>
+	  <basket basket="pirate_container"/>
+	  <ship>
+	    <select faction="fallensplit" tags="[military, large, cheetah]" />
+	    <loadout>
+		  <level min="0.7" max="1.0"/>
+	    </loadout>
+	    <owner exact="fallensplit" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+	    <subordinate job="faf_escort_mixed"/>
+	  </subordinates>
+   </job>
+    <job id="faf_escort_mixed" name="{20204,3401}" startactive="false">
+	  <orders>
+	    <order order="Escort" default="true">
+          <param name="formation" value="formationshape.pointguard"/>
+          <param name="overrideformationskill" value="true"/>	
+        </order>		  
+	  </orders>
+	  <category faction="fallensplit" tags="[military, fighter]" size="ship_s"/>
+	  <quota wing="5" variation="1"/>
+	  <location class="galaxy" macro="xu_ep2_universe_macro"/>
+      <environment buildatshipyard="true"/>
+      <modifiers subordinate="true"/>
+	  <ship>
+	    <select faction="fallensplit" tags="[military, fighter, heavy]" size="ship_s"/>
+	    <loadout>
+		  <level min="0.9" max="1.0"/>
+	    </loadout>
+	    <owner exact="fallensplit" overridenpc="true"/>
+	  </ship>
+    </job>
+  </add>  
+  
+ <!--VIGOR-->
+ 
+ <!--RIPTIDE--> 
+ 
+ <!--TERRANs-->
+ 
+  <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector']" pos="after"> <!--BORON-->  
+    <job id="boron_marlin_patrol" name="{20204,5201}">
+      <modifiers commandeerable="true" />
+      <orders>
+       <order order="Patrol" default="true">
+          <param name="range" value="class.sector" />
+        </order>
+      </orders>
+      <category faction="boron" tags="[factionlogic, military, frigate]" size="ship_l" />
+      <quota galaxy="6" maxgalaxy="12" cluster="2" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="self" comparison="exact" matchextension="false"/>
+      <environment buildatshipyard="true" />
+	  <ship>
+	    <select faction="boron" tags="[military, large, marlin]" size="ship_l" />
+		  <loadout>
+		    <level min="0.7" max="1.0" />
+		  </loadout>
+	    <owner exact="boron" overridenpc="true" />
+	  </ship>
+	  <subordinates>
+		<subordinate job="boron_gunboat_escort_m"/>
+		<subordinate job="boron_gunboat_escort_m"/>
+		<subordinate job="boron_fighter_escort_s_corvette"/>	  
+	  </subordinates>	  
+    </job>
+    <job id="boron_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="Patrol" default="true">
+          <param name="range" value="class.sector"/>
+        </order>
+      </orders>
+      <category faction="boron" tags="[factionlogic, military, medium]" size="ship_m"/>
+      <quota galaxy="8" />
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="self" comparison="exact" matchextension="false" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="boron" tags="[military, tm]" size="ship_m"/>
+        <loadout>
+          <level min="0.8" max="1.0"/>
+        </loadout>
+        <owner exact="boron" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="boron_fighter_escort_s_corvette" assignment="attack" group="1"/>
+        <subordinate job="boron_fighter_escort_s_corvette" assignment="attack" group="2"/>
+        <subordinate job="boron_fighter_escort_s_corvette" assignment="attack" group="3"/>		
+      </subordinates>	  
+    </job> 	
+  </add>
+    
 	<!--Modified Jobs-->
-  <remove sel="//jobs/job[@id='fallensplit_panther_mixed_cluster']" />	<!--VRO: Removed since the Cheetah replaces it for Free Families and Fallen Split-->    
+  <!--ARGON-->
+  <replace sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/ship/select[@faction='argon']/@tags">[military, tm]</replace>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@assignment">attack</add>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@group">2</add>    
+  <replace sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/ship/select[@faction='argon']/@tags">[military, tm]</replace>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@assignment">attack</add>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@group">2</add>    
+  <!--ANTIGONE-->  
+  <replace sel="/jobs/job[@id='antigone_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/ship/select[@faction='antigone']/@tags">[military, tm]</replace> 
+  <replace sel="/jobs/job[@id='antigone_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/ship/select[@faction='antigone']/@tags">[military, tm]</replace> 
+  <replace sel="/jobs/job[@id='antigone_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace> 
+  <!--HOLY ORDER-->
+  <!--PARANID-->
+  <!--TRINITY-->
+  <!--TELADI-->
+  <!--MINISTRY-->
+  <!--SPLIT-->  
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector'][@name='{20204,2901}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/ship/select[@faction='split']/@tags">[military, tm]</replace>  
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_colonial'][@name='{20204,10050}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_colonial_mission'][@name='{20204,10050}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='zyarth_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace>   
+  <!--COURT-->  
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector'][@name='{20204,2901}']/ship/select[@faction='court']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector'][@name='{20204,2901}']/subordinates/subordinate[@job='court_frigate_escort_m']/@job">court_fighter_escort_s_frigate</replace> 
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/ship/select[@faction='court']/@tags">[military, tm]</replace> 
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='court_frigate_escort_m']/@job">court_fighter_escort_s_frigate</replace>  
+  <replace sel="/jobs/job[@id='court_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace>
+  <remove sel="/jobs/job[@id='court_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@variation"/>  
+  <!--FREE FAMILIES-->
+  <!--FALLEN SPLIT-->  
+  <remove sel="//jobs/job[@id='fallensplit_panther_mixed_cluster']" />	<!--VRO: Removed since the Cheetah replaces it for Free Families and Fallen Split-->   
+  <!--TERRAN-->
+  <!--PIONEERS-->
+  <!--VIGOR-->
+  <!--RIPTIDE-->
+  <!--BORON-->
+  <add sel="/jobs/job[@id='boron_bogas_trader_l'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_bogas_trader_m'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_bio_trader_l'][@name='{20204,1301}']/location[@faction='boron']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='boron_bio_trader_m'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_food_trader_s'][@name='{20204,1801}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_medical_trader_s'][@name='{20204,10011}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_energycell_trader_l'][@name='{20204,101}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_energycell_trader_m'][@name='{20204,201}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_energycell_trader_s'][@name='{20204,201}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_equipment_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_equipment_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_construction_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_construction_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='boron']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='boron_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_tech_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_tech_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_tech_trader_s'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_water_trader_l'][@name='{20204,1501}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_water_trader_m'][@name='{20204,1601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_stationtrader_l'][@name='{20204,701}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_stationtrader_m'][@name='{20204,801}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector'][@name='{20204,3201}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_destroyer_patrol_l_border_only'][@name='{20204,3301}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_destroyer_patrol_l_leader'][@name='{20204,3301}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_corvette_patrol_m_sector_exp'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_exp_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_border_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_stationtrader_m'][@name='{20204,801}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>   
+  
  
   
 <!--VIG Rework-->
