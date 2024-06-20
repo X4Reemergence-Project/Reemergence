@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: nick (192.168.3.120) at 27.11.2018_14-42-41-->
+<macros>
+  <macro name="ship_arg_m_centaur_macro" class="ship_m">
+    <component ref="ship_arg_m_centaur" />
+    <properties>
+      <identification name="{19530007,750}" basename="{19530007,750}" description="{19530007,850}" icon="ship_m_fight_01" />
+      <software>
+        <software ware="software_dockmk2" compatible="1" />
+        <software ware="software_flightassistmk1" default="1" />
+        <software ware="software_scannerlongrangemk1" default="1" />
+        <software ware="software_scannerlongrangemk2" compatible="1" />
+        <software ware="software_scannerobjectmk1" default="1" />
+        <software ware="software_scannerobjectmk2" compatible="1" />
+        <software ware="software_targetmk1" default="1" />
+        <software ware="software_trademk1" compatible="1" />
+      </software>
+      <explosiondamage value="2000" />
+      <storage missile="28" />
+      <hull max="41000" />
+      <secrecy level="2" />
+      <purpose primary="fight" />
+      <people capacity="7" />
+      <sounds>
+        <shipdetail ref="shipdetail_ship_m_03" />
+      </sounds>
+      <physics mass="19.432">
+        <inertia pitch="7" yaw="7" roll="7" />
+        <drag forward="5" reverse="15.659" horizontal="11.71" vertical="11.71" pitch="15.776" yaw="15.776" roll="15.776" />
+      </physics>
+      <thruster tags="medium" />
+      <ship type="corvette" />
+      <sound_occlusion inside="0.4" />
+    </properties>
+    <connections>
+      <connection ref="con_cockpit">
+        <macro ref="cockpit_gen_virtual_01_macro" connection="ship" />
+      </connection>
+      <connection ref="con_dock_xs">
+        <macro ref="dock_gen_xs_ship_01_macro" connection="Connection_component" />
+      </connection>
+      <connection ref="con_shipstorage_xs_01">
+        <macro ref="shipstorage_gen_xs_01_macro" connection="object" />
+      </connection>
+      <connection ref="con_storage01">
+        <macro ref="storage_par_m_corvette_01_a_macro" connection="ShipConnection" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

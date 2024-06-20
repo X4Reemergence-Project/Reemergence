@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: Michael (192.168.3.51) at 17.06.2021_17-03-32-->
+<macros>
+  <macro name="ship_ter_xl_kagawa_macro" class="ship_xl">
+    <component ref="ship_ter_xl_kagawa" />
+    <properties>
+  		<identification name="{19530007,742}" basename="{19530007,742}" description="{19530007,842}" icon="ship_xl_trade_01" />
+      <software>
+        <software ware="software_dockmk2" compatible="1" />
+        <software ware="software_flightassistmk1" default="1" />
+        <software ware="software_scannerlongrangemk1" default="1" />
+        <software ware="software_scannerlongrangemk2" compatible="1" />
+        <software ware="software_scannerobjectmk1" default="1" />
+        <software ware="software_scannerobjectmk2" compatible="1" />
+        <software ware="software_targetmk1" default="1" />
+        <software ware="software_trademk1" compatible="1" />
+      </software>
+      <explosiondamage value="1000" shield="5000" />
+      <storage missile="800" unit="30" />
+      <hull max="460000" />
+      <secrecy level="2" />
+      <purpose primary="trade" />
+      <people capacity="138" />
+      <sounds>
+        <shipdetail ref="shipdetail_ship_l_01" />
+      </sounds>
+	  
+      <physics mass="1000">
+        <inertia pitch="1000" yaw="1000" roll="1000" />
+        <drag forward="200" reverse="800" horizontal="500" vertical="500" pitch="800" yaw="800" roll="800" />
+
+      </physics>
+      <thruster tags="extralarge" />
+      <ship type="freighter" />
+    </properties>
+    <connections>
+      <connection ref="con_cockpit">
+        <macro ref="bridge_ter_xl_01_macro" connection="con_cockpit" />
+      </connection>
+	  <connection ref="con_dockarea_arg_m_ship_01">
+        <macro ref="dockarea_arg_m_ship_01_macro" connection="Connection01" />
+      </connection>
+      <connection ref="con_dock_xs">
+        <macro ref="dock_gen_xs_ship_flat_macro" connection="Connection_component" />
+      </connection>
+      <connection ref="con_dockarea_arg_s_3pad">
+        <macro ref="dockarea_arg_s_3pad_macro" connection="Connection01" />
+      </connection>
+       <connection ref="con_shipstorage_s">
+        <macro ref="shipstorage_gen_s_cap6_macro" connection="object" />
+      </connection>
+       <connection ref="con_shipstorage_m">
+        <macro ref="shipstorage_gen_m_cap2_macro" connection="object" />
+      </connection>	  
+      <connection ref="con_shipstorage_xs">
+        <macro ref="shipstorage_gen_xs_01_macro" connection="object" />
+      </connection>
+      <connection ref="con_storage_01">
+        <macro ref="storage_ter_xl_resupplier_01_a_macro" connection="ShipConnection" />
+      </connection>
+      <connection ref="con_storage_02">
+        <macro ref="storage_ter_xl_resupplier_01_a_macro" connection="ShipConnection" />
+      </connection> 	  
+    </connections>
+  </macro>
+</macros>

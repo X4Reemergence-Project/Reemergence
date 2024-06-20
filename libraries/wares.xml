@@ -199,6 +199,45 @@
 	  <owner faction="argon" />
 	  <owner faction="antigone" />  
     </ware>
+    <ware id="ship_ter_xl_kagawa" name="{19530007,742}" description="{19530007,842}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="21208075" average="24950676" max="28693277" />
+	  <production time="492" amount="1" method="default" name="{20206,101}">
+		<primary>
+          <ware ware="computronicsubstrate" amount="590" />
+          <ware ware="energycells" amount="2716" />
+          <ware ware="metallicmicrolattice" amount="1238" />
+		</primary>
+	  </production>
+	  <component ref="ship_ter_xl_kagawa_macro" amount="1" />
+	  <restriction licence="capitalship" />
+	  <owner faction="pioneers" /> 
+    </ware>	
+    <ware id="ship_arg_m_centaur" name="{19530007,750}" description="{19530007,850}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="590148" average="694286" max="798428" />
+	  <production time="22" amount="1" method="default" name="{20206,101}">
+		<primary>
+          <ware ware="energycells" amount="124" />
+          <ware ware="hullparts" amount="655" />
+		</primary>
+	  </production>
+	  <component ref="ship_arg_m_centaur_macro" amount="1" />
+	  <restriction licence="militaryship" />
+	  <owner faction="argon" /> 
+	  <owner faction="antigone" /> 	  
+    </ware>
+    <ware id="ship_tel_l_cassowary" name="{19530007,723}" description="{19530007,823}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="3685698" average="4095000" max="4428010" />
+      <production time="81" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="990" />
+          <ware ware="hullparts" amount="2925" />
+        </primary>
+      </production>
+      <component ref="ship_tel_l_cassowary_macro" amount="1" />
+      <restriction licence="capitalship" />
+      <owner faction="teladi" /> 
+      <owner faction="ministry" /> 	  
+    </ware>
 	</add>			
 	<!--WEAPONS-->
 	<remove sel="/wares/ware[@id='weapon_missile_lint_kitsune_ware']"/>
@@ -471,7 +510,40 @@
       <use threshold="0" />
       <restriction licence="generaluseequipment" />	
     </ware>	
-	</add>	
+    <ware id="ishield_ter_xl_kagawa" name="{19530007,942}" description="{19530007,942}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_ter_xl_kagawa_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>	
+    <ware id="ishield_arg_m_centaur" name="{19530007,950}" description="{19530007,950}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_arg_m_centaur_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>	
+    <ware id="ishield_tel_l_cassowary" name="{19530007,923}" description="{19530007,923}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_tel_l_cassowary_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>	
+	</add>		
 <!--New Xenon War Assets-->
 	<add sel="//wares">
 	<!--SHIPS-->
