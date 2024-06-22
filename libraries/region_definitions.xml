@@ -2785,25 +2785,28 @@
       <volumetricfog multiplier="0.20" medium="fog_purplethin" texture="assets/textures/environments/volumefog\vf_smoothclouds_01" lodrule="nebulafar" size="16000" sizevariation="0.73" densityfactor="2.0" rotation="360" rotationvariation="0.5" noisescale="50000" seed="42" minnoisevalue="0.75" maxnoisevalue="1.0" distancefactor="0.0" />
 	  </fields>
   </region>    
-  <region name="rem76_field3" density="0.15" rotation="0" noisescale="420" seed="42" minnoisevalue="0.15" maxnoisevalue="1">
+  <region name="rem76_field3" density="0.15" rotation="0" noisescale="10000" seed="32" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="cylinder">
-      <size r="400000" linear="400000" />
+      <size r="750000" linear="125000" />
     </boundary>
     <falloff>
       <lateral>
-        <step position="0.0" value="0.50" />
-        <step position="0.9" value="0.3" />
-        <step position="0.5" value="1.0" />
-        <step position="0.7" value="0.90" />
-        <step position="0.5" value="1.0" />
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
       </lateral>
       <radial>
         <step position="0.0" value="1.0" />
-        <step position="0.99" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
         <step position="1.0" value="0.0" />
       </radial>
     </falloff>
     <fields>
+      <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.075" uniformred="10" uniformgreen="14" uniformblue="20" uniformdensity="0.15" backgroundfog="false" resources="methane" />
+	
       <asteroid groupref="asteroid_nividium_l" densityfactor="0.25" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.8" maxnoisevalue="1"/>	  
       <asteroid groupref="asteroid_ore_nores_l" lodrule="asteroidxl" densityfactor="0.5" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_ore_nores_m" densityfactor="0.3" rotation="360" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
@@ -2815,7 +2818,8 @@
       <asteroid groupref="asteroid_silicon_nores_xs" densityfactor="0.75" rotation="360" rotationvariation="32" noisescale="1500" seed="8888" minnoisevalue="0.65" maxnoisevalue="1"/>	  
 	  </fields>
     <resources>
-      <resource ware="nividium" yield="medium" />	
+      <resource ware="nividium" yield="medium" />
+      <resource ware="methane" yield="medhigh" />	  
     </resources>
   </region> 
 <!--REM77 Belt of Aguilar--> 

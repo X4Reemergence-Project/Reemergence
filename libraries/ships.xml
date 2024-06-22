@@ -262,6 +262,38 @@
   </ship>
  
   <!--ARGON-->
+  <ship id="ant_buster" group="ant_buster">
+    <category tags="[military, buster]" faction="[antigone]" size="ship_s"/>
+    <pilot>
+      <select faction="antigone" tags="fighterpilot"/>
+    </pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="argon_military_crew"/>
+  </ship>
+  <ship id="arg_buster" group="arg_buster">
+    <category tags="[military, buster]" faction="[argon, hatikvah]" size="ship_s"/>
+    <pilot>
+      <select faction="argon" tags="fighterpilot"/>
+    </pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="argon_military_crew"/>
+  </ship>
+  <ship id="ant_centaur" group="ant_centaur">
+	<category tags="[military, centaur]" faction="[antigone]" size="ship_m"/>
+	<pilot>
+	  <select faction="argon" tags="fighterpilot"/>
+	</pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="argon_military_crew"/>
+  </ship>
+  <ship id="arg_centaur" group="arg_centaur">
+	<category tags="[military, centaur]" faction="[argon, hatikvah]" size="ship_m"/>
+	<pilot>
+	  <select faction="argon" tags="fighterpilot"/>
+	</pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="argon_military_crew"/>
+  </ship>
   <ship id="arg_tm" group="arg_tm">
 	<category tags="[military, tm]" faction="[antigone, argon, hatikvah]" size="ship_m"/>
 	<pilot>
@@ -289,7 +321,15 @@
 	</pilot>
     <drop ref="ship_small_military"/>
     <people ref="teladi_military_crew"/>
-  </ship>    
+  </ship>   
+  <ship id="tel_cassowary" group="tel_cassowary">
+	<category tags="[military, frigate, mission]" faction="[teladi, ministry, scaleplate]" size="ship_l"/>
+	<pilot>
+	  <select faction="teladi" tags="fighterpilot"/>
+	</pilot>
+    <drop ref="ship_large_military"/>
+    <people ref="teladi_military_crew"/>
+  </ship>  
   
   <!--SPLIT-->
   <ship id="spl_tm" group="spl_tm">
