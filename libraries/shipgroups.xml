@@ -94,6 +94,11 @@
       <select macro="ship_arg_s_buster_macro" weight="100"/>   	  
 	</group>
   </add>
+  <add sel="//groups">		
+	<group name="ant_centaur">
+      <select macro="ship_arg_m_centaur_macro" weight="100"/>   	  
+	</group>
+  </add> 
   <add sel="/groups/group[@name='ant_fighter_heavy_s']"> 
 	<select macro="ship_arg_s_buster_macro" weight="10" />  	
   </add>    
@@ -104,12 +109,17 @@
 	<group name="arg_tm">	
 	  <select macro="ship_arg_m_tm_macro" weight="100" /> <!--also used by ANT-->
 	</group>
-  </add>	
+  </add>  
   <add sel="//groups">		
 	<group name="arg_buster">
       <select macro="ship_arg_s_buster_macro" weight="100"/>   	  
 	</group>
-  </add>		
+  </add>
+  <add sel="//groups">		
+	<group name="arg_centaur">
+      <select macro="ship_arg_m_centaur_macro" weight="100"/>   	  
+	</group>
+  </add>   
   <add sel="/groups/group[@name='arg_fighter_heavy_s']"> 
 	<select macro="ship_arg_s_buster_macro" weight="10" />  	
   </add>  
@@ -135,7 +145,12 @@
 	<group name="tel_tm">	
 	  <select macro="ship_tel_m_tm_macro" weight="100" /> 
 	</group>
-  </add> 
+  </add>
+  <add sel="//groups">		
+	<group name="tel_cassowary">	
+	  <select macro="ship_tel_l_cassowary_macro" weight="100" /> 
+	</group>
+  </add>   
   
   <replace sel="/groups/group[@name='tel_shrike_l']/select[@macro='ship_tel_l_shrike_a_macro']/@macro">ship_tel_l_cassowary_macro</replace>  <!--VRO Shrike for RE Cassowary-->  
  
