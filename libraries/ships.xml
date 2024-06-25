@@ -384,7 +384,15 @@
     </pilot>
     <drop ref="ship_small_military"/>
     <people ref="pioneers_military_crew"/>
-  </ship>    
+  </ship>
+  <ship id="pio_kagawa" group="pio_kagawa">
+    <category tags="[kagawa]" faction="[pioneers]" size="ship_xl"/>
+    <pilot>
+      <select faction="pioneers" tags="traderpilot"/>
+    </pilot>
+    <drop ref="ship_large_civilian"/>
+    <people ref="pioneers_elite_freighter_crew"/>
+  </ship>  
   
   <!--BORON-->
   <ship id="bor_marlin" group="bor_marlin">
@@ -405,6 +413,8 @@
   </ship>     
 
   <!--XENON-->
+  <replace sel="/ships/ship/[@id='xenon_xl_u'][@group='xen_xl_u'][@capturable='false']/category[@tags='[military, xenu]']/@tags">[xenu]</replace> <!--VRO's U-->   
+
   <ship id="xenon_reclaimer" group="xen_reclaimer" capturable="false">
 	<category tags="[reclaimer]" faction="[xenon]" size="ship_xl"/>
 	<pilot>

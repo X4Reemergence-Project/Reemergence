@@ -5333,6 +5333,29 @@
  <!--RIPTIDE--> 
  
  <!--TERRAN-->
+    <job id="pio_kagawa_trader" name="{20204,9001}">
+	  <modifiers commandeerable="true"/>
+	  <orders>
+		<order order="TradeRoutine" default="true">
+		  <param name="minbuy" value="0"/>
+		  <param name="maxbuy" value="5"/>
+		  <param name="minsell" value="0"/>
+		  <param name="maxsell" value="5"/>			
+		</order>
+	  </orders>
+	  <basket basket="all_container_terran"/>
+	  <category faction="pioneers" tags="[factionlogic, freighter, trader]" size="ship_xl"/>
+	  <quota galaxy="2" sector="1"/>
+	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="pioneers" relation="self" comparison="exact" matchextension="false"/>
+      <environment buildatshipyard="true" preferbuilding="true"/>
+	  <ship>
+		<select faction="pioneers" tags="[kagawa]" size="ship_xl"/>
+        <loadout>
+          <level min="0.6" max="1.0"/>
+        </loadout>
+		<owner exact="pioneers" overridenpc="true"/>
+	  </ship>
+	</job> 
 
  <!--BORON--> 
   <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector']" pos="after">  
