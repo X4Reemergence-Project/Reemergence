@@ -158,9 +158,8 @@
   <!-- ################ -->
   <!--    SPLIT 	-->
   <!-- ################ -->
-  <add sel="/groups/group[@name='spl_panther_l']">
-	<select macro="ship_spl_l_cheetah_macro" weight="40" /> 	
-  </add> 
+  <replace sel="/groups/group[@name='spl_panther_l']/select[@macro='ship_spl_l_panther_a_macro']/@macro">ship_spl_l_cheetah_macro</replace>  <!--VRO Panther for RE Cheetah -->   
+  
   <add sel="//groups">		
 	<group name="frf_cheetah">	
 	  <select macro="ship_spl_l_cheetah_macro" weight="100" /> 
