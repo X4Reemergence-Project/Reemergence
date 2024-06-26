@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--NOTE: There is a weird interaction with DeadAir's God, thus DA_RE, which causes module errors to generate that have no imapct on the game. This is still be investigated. 03/26/24-->
+<!--NOTE: There is a weird interaction with DA's Mods, which causes module errors to generate that have no imapct on the game. This is still be investigated. 06/26/24-->
 <diff>
 <!--Base Sectors--> 		
   <replace sel="/god/stations/station[@id='tel_defence_cluster_20_sector001'][@type='factory']/location[@macro='zone003_cluster_20_sector001_macro']/@macro">zone004_cluster_20_sector001_macro</replace> 
@@ -23,6 +23,8 @@
 <!--Boron DLC Sectors-->
   <replace sel="/god/stations/station[@id='boron_defence_603_001'][@type='factory']/location[@macro='zone004_cluster_603_sector001_macro']/@macro">zone002_cluster_603_sector001_macro</replace>	
   <remove sel="/god/stations/station[@id='boron_defence_603_001'][@type='factory']/position"/>	
+  
+  <replace sel="/god/objects/object[@id='hereticsend_anomaly_01']/location[@macro='zone001_cluster_31_sector001_macro']/@macro">zone004_cluster_31_sector001_macro</replace>  
   
 <!--X:Reemergence Sectors-->
   <add sel="/god/objects">
