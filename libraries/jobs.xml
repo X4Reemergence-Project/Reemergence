@@ -4958,7 +4958,28 @@
   </add>
   
   <!--Kha'ak-->   
-  <add sel="//jobs">    
+  <add sel="//jobs">
+	<job id="khaak_awoken_ravager_l" name="Hive Guard">
+	  <modifiers commandeerable="false"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
+	  <quota galaxy="10" maxgalaxy="12" cluster="2"/>
+      <time interval="1200"/>		  
+	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[military, destroyer]" size="ship_l"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>	
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>			
+	  </subordinates>
+	</job>  
 	<job id="khaak_awoken_fighter_m_cluster" name="{20204,3401}">
 	  <modifiers commandeerable="false"/>
 	  <orders>
@@ -4993,7 +5014,28 @@
 		<select faction="khaak" tags="[fighter]" size="ship_m"/>
 		<owner exact="khaak" overridenpc="true"/>
 	  </ship>
-    </job>	
+    </job>
+	<job id="khaak_invader_ravager_alpha" name="Hunter">
+	  <modifiers commandeerable="true"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
+	  <quota galaxy="2" maxgalaxy="3" />
+      <time interval="1800"/>	  
+      <location class="sector" macro="Cluster_REM67_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[military, destroyer]" size="ship_l"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>	
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>			
+	  </subordinates>
+	</job>  	
     <job id="khaak_invader_fighter_alpha" name="{20204,4201}">
       <modifiers commandeerable="true"/>
       <orders>
@@ -5014,6 +5056,27 @@
         <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
       </subordinates>
     </job>
+	<job id="khaak_invader_ravager_beta" name="Hunter">
+	  <modifiers commandeerable="true"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
+	  <quota galaxy="2" maxgalaxy="3" />
+      <time interval="1800"/>	  
+      <location class="sector" macro="Cluster_REM68_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[military, destroyer]" size="ship_l"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>	
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>			
+	  </subordinates>
+	</job>  	
     <job id="khaak_invader_fighter_beta" name="{20204,4201}">
       <modifiers commandeerable="true"/>
       <orders>
@@ -5034,6 +5097,27 @@
         <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
       </subordinates>
     </job>
+	<job id="khaak_invader_ravager_gamma" name="Hunter">
+	  <modifiers commandeerable="true"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
+	  <quota galaxy="2" maxgalaxy="3" />
+      <time interval="1800"/>	  
+      <location class="sector" macro="Cluster_REM69_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[military, destroyer]" size="ship_l"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>	
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>			
+	  </subordinates>
+	</job> 	
     <job id="khaak_invader_fighter_gamma" name="{20204,4201}">
       <modifiers commandeerable="true"/>
       <orders>
@@ -5054,6 +5138,27 @@
         <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
       </subordinates>
     </job>
+	<!--Escorts-->
+    <job id="khaak_fighter_ravager_escort" name="{20204,4201}" startactive="false">
+	  <orders>
+		<order order="Escort" default="true">
+		  <param name="formation" value="formationshape.dartvertical"/>
+		  <param name="overrideformationskill" value="true"/>
+		</order>
+	  </orders>
+      <category faction="khaak" tags="[military, fighter]" size="ship_m"/>
+      <quota wing="4" variation="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <modifiers subordinate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_escort_s2" assignment="attack" rebuild="false"/>		
+      </subordinates>
+    </job>	
     <job id="khaak_fighter_m_escort" name="{20204,4201}" startactive="false">
       <orders>
         <order order="Escort" default="true">
@@ -5062,7 +5167,7 @@
           <param name="rollformation" value="true"/>
         </order>
       </orders>
-      <category faction="khaak" tags="[military, fighter]" size="ship_s"/>
+      <category faction="khaak" tags="[military, fighter]" size="ship_m"/>
       <quota wing="4" variation="1"/>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
       <environment buildatshipyard="false" gate="true"/>
