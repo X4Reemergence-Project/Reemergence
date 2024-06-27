@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--NOTE: There is a weird interaction with DA's Mods, which causes module errors to generate that have no imapct on the game. This is still be investigated. 06/26/24-->
 <diff>
-<!--Base Sectors--> 		
+<!--Base Sectors--> 
+  <replace sel="/god/stations/station[@id='arg_defence_cluster_07_sector001'][@type='factory']/location[@macro='zone003_cluster_07_sector001_macro']/@macro">Zone_Gate1_Cluster_07_Sector001_macro</replace>		
   <replace sel="/god/stations/station[@id='tel_defence_cluster_20_sector001'][@type='factory']/location[@macro='zone003_cluster_20_sector001_macro']/@macro">zone004_cluster_20_sector001_macro</replace> 
   <remove sel="/god/stations/station[@id='par_defence_cluster_23_sector001'][@type='factory']"/>	  
   <replace sel="/god/stations/station[@id='equipmentdock_argon_02'][@type='factory']/location[@macro='zone002_cluster_29_sector002_macro']/@macro">zone001_cluster_29_sector001_macro</replace>   
@@ -207,6 +208,16 @@
 	
   <add sel="//god/stations">
 	<!--New Stations-->
+<!--The Reach (Cluster 07)-->	
+	<station id="arg_extra_defence_cluster_07_sector001" race="argon" owner="argon" type="factory">
+	  <quotas>
+        <quota galaxy="1" />
+	  </quotas>
+	  <location class="zone" macro="Zone_Gate1_Cluster_07_Sector001_macro" matchextension="false"/>  
+	  <station>
+		<select faction="argon" tags="[defence]" />
+	  </station>
+	 </station>	
 <!--Pontifex's Claim (Cluster 11)-->	
 	<station id="hol_extra_defence_cluster_11_sector001" race="paranid" owner="holyorder" type="factory">
 	  <quotas>
