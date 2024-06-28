@@ -2,7 +2,8 @@
 <!--NOTE: There is a weird interaction with DA's Mods, which causes module errors to generate that have no imapct on the game. This is still be investigated. 06/26/24-->
 <diff>
 <!--Base Sectors--> 
-  <replace sel="/god/stations/station[@id='arg_defence_cluster_07_sector001'][@type='factory']/location[@macro='zone003_cluster_07_sector001_macro']/@macro">Zone_Gate1_Cluster_07_Sector001_macro</replace>		
+  <replace sel="/god/stations/station[@id='arg_defence_cluster_07_sector001'][@type='factory']/location[@macro='zone003_cluster_07_sector001_macro']/@macro">Zone_Gate1_Cluster_07_Sector001_macro</replace>
+  <replace sel="/god/stations/station[@id='shipyard_argon_01'][@type='factory']/location[@macro='zone002_cluster_14_sector001_macro']/@macro">Zone_Gate1_Cluster_14_Sector001_macro</replace>  
   <replace sel="/god/stations/station[@id='tel_defence_cluster_20_sector001'][@type='factory']/location[@macro='zone003_cluster_20_sector001_macro']/@macro">zone004_cluster_20_sector001_macro</replace> 
   <remove sel="/god/stations/station[@id='par_defence_cluster_23_sector001'][@type='factory']"/>	  
   <replace sel="/god/stations/station[@id='equipmentdock_argon_02'][@type='factory']/location[@macro='zone002_cluster_29_sector002_macro']/@macro">zone001_cluster_29_sector001_macro</replace>   
@@ -287,7 +288,22 @@
 	  <station>
 		<select faction="paranid" tags="[defence]" />
 	  </station>
-	 </station>	 	 
+	 </station>
+<!--Wretched Skies IV - Family Valka (Cluster 400)-->
+	<station id="zya_tradestation_cluster_400_sector001" race="split" owner="split" type="tradingstation">
+	  <quotas>
+		<quota galaxy="1" zone="1" />
+	  </quotas>
+	  <location class="sector" macro="cluster_400_sector001_macro" />
+      <position x="-37500" y="0" z="0" yaw="0" pitch="0" roll="0" />	  
+	  <station>
+		<select faction="split" tags="[tradestation]" />
+		<loadout>
+		  <level exact="0.75" />
+		</loadout>
+	  </station>
+	</station>	
+	 
 <!--REM00 Planet 9-->	
 <!--REM01 McCallum Relay-->
 	<station id="xen_defence_cluster_REM01_sector001" race="xenon" owner="xenon" type="defence">
@@ -1054,7 +1070,7 @@
 	</station>	
 	<station id="zya_tradestation_cluster_REM31_001" race="split" owner="split" type="tradingstation">
 	  <quotas>
-		<quota galaxy="1" zone="2" />
+		<quota galaxy="1" zone="1" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM31_sector001_macro" />
 	  <station>
