@@ -214,7 +214,8 @@
 	  <quotas>
         <quota galaxy="1" />
 	  </quotas>
-	  <location class="zone" macro="Zone_Gate1_Cluster_07_Sector001_macro" matchextension="false"/>  
+	  <location class="zone" macro="Zone_Gate1_Cluster_07_Sector001_macro" matchextension="false"/> 
+      <position x="0" y="0" z="-37500" yaw="0" pitch="0" roll="0" />	  	  
 	  <station>
 		<select faction="argon" tags="[defence]" />
 	  </station>
@@ -292,9 +293,9 @@
 <!--Wretched Skies IV - Family Valka (Cluster 400)-->
 	<station id="zya_tradestation_cluster_400_sector001" race="split" owner="split" type="tradingstation">
 	  <quotas>
-		<quota galaxy="1" zone="1" />
+		<quota galaxy="1" />
 	  </quotas>
-	  <location class="sector" macro="cluster_400_sector001_macro" />
+	  <location class="sector" macro="cluster_400_sector001_macro" matchextension="false"/>  
       <position x="-37500" y="0" z="0" yaw="0" pitch="0" roll="0" />	  
 	  <station>
 		<select faction="split" tags="[tradestation]" />
@@ -302,6 +303,20 @@
 		  <level exact="0.75" />
 		</loadout>
 	  </station>
+	</station>
+<!--Family Kritt (Cluster 402)-->
+	<station id="zya_extra_defence_cluster_402_sector001" race="split" owner="split" type="factory">
+	  <quotas>
+		<quota galaxy="1" zone="1" />
+	  </quotas>
+	  <location class="zone" macro="zone002_cluster_402_sector001_macro" matchextension="false"/>  
+      <position x="0" y="0" z="-27500" yaw="0" pitch="0" roll="0" />	  
+	  <station>
+		<select faction="split" tags="[defence]" />
+		<loadout>
+		  <level exact="0.75" />
+		</loadout>
+	  </station>	  
 	</station>	
 	 
 <!--REM00 Planet 9-->	
@@ -1073,6 +1088,7 @@
 		<quota galaxy="1" zone="1" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM31_sector001_macro" />
+      <position x="37500" y="0" z="62500" yaw="0" pitch="0" roll="0" />	  
 	  <station>
 		<select faction="split" tags="[tradestation]" />
 		<loadout>
@@ -1099,7 +1115,7 @@
 		<quota galaxy="1" zone="1" />
 	  </quotas>
 	  <location class="zone" macro="zoneSP_cluster_REM32_sector001_macro" />
-	  <position x="-107418.086" z="-33812.773" yaw="0" pitch="0" roll="0"/>
+	  <position x="-77418.086" z="-13812.773" yaw="0" pitch="0" roll="0"/>
 	  <station>
 		<select faction="split" tags="[wharf]" />
 		<loadout>

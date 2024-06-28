@@ -4912,7 +4912,7 @@
 		</loadout>
         <owner exact="split" overridenpc="true"/>
       </ship>
-     </job>
+	</job>
    
   <!--Riptide Rakers-->
    <job id="scavenger_split_compactor_l" name="{20204,10023}">
@@ -5388,7 +5388,7 @@
 
  <!--SPLIT-->  
   <add sel="//jobs">
-    <job id="faf_cheetah_plunder" name="{20204,4201}">
+	<job id="faf_cheetah_plunder" name="{20204,4201}">
 	  <modifiers commandeerable="false"/>
       <orders>
         <order order="Patrol" default="true">
@@ -5410,8 +5410,8 @@
 	  <subordinates>
 	    <subordinate job="faf_escort_mixed"/>
 	  </subordinates>
-   </job>
-    <job id="faf_escort_mixed" name="{20204,3401}" startactive="false">
+	</job>
+	<job id="faf_escort_mixed" name="{20204,3401}" startactive="false">
 	  <orders>
 	    <order order="Escort" default="true">
           <param name="formation" value="formationshape.pointguard"/>
@@ -5438,6 +5438,7 @@
  <!--RIPTIDE--> 
  
  <!--TERRAN-->
+  <add sel="//jobs"> 
     <job id="pio_kagawa_trader" name="{20204,9001}">
 	  <modifiers commandeerable="true"/>
 	  <orders>
@@ -5461,7 +5462,8 @@
 		<owner exact="pioneers" overridenpc="true"/>
 	  </ship>
 	</job> 
-
+  </add>
+  
  <!--BORON--> 
   <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector']" pos="after">  
     <job id="boron_marlin_patrol" name="{20204,5201}">
