@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_ter_computronicsubstrate_3_macro" class="production">
+    <component ref="prod_ter_computronicsubstrate" />
+    <properties>
+      <identification name="{20104,15101} x3" shortname="{20104,15103} x3" makerrace="terran" description="{20104,15102}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="2000" shield="10000" />
+      <hull max="400000" />
+      <production wares="computronicsubstrate computronicsubstrate computronicsubstrate">
+        <queue>
+          <item ware="computronicsubstrate" />	  
+        </queue>
+      </production>
+      <workforce max="4500" />
+    </properties>
+  </macro>
+</macros>

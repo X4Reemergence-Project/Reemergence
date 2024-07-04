@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_ter_proteinpaste_3_macro" class="production">
+    <component ref="prod_ter_proteinpaste" />
+    <properties>
+      <identification name="{20104,15601} x3" shortname="{20104,15603} x3" makerrace="terran" description="{20104,15602}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="2000" shield="10000" />
+      <hull max="260000" />
+      <secrecy level="2" />
+      <production wares="proteinpaste proteinpaste proteinpaste">
+        <queue>
+          <item ware="proteinpaste" />	  
+        </queue>
+      </production>	
+      <workforce max="540" />
+    </properties>
+  </macro>
+</macros>

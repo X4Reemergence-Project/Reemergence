@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="research_test">
+<cues>
+<!--Research-->
+  <cue name="unlock_food3" instantiate="false">
+	<conditions>
+	  <event_player_research_unlocked ware="ware.research_food3"/>
+	</conditions>
+	<delay exact="5s"/>	
+	<actions>
+	  <add_blueprints wares="ware.module_arg_prod_foodrations_x3"/>
+	  <add_encyclopedia_entry type="researchables" item="'research_food5'"/>
+	</actions>	
+  </cue>
+  <cue name="unlock_food5" instantiate="false">
+	<conditions>
+	  <event_player_research_unlocked ware="ware.research_food5"/>
+	</conditions>
+	<delay exact="5s"/>	
+	<actions>
+	  <add_blueprints wares="ware.module_arg_prod_foodrations_x5"/>
+	  <remove_encyclopedia_entry type="researchables" item="'research_food5'"/>
+	  <remove_encyclopedia_entry type="researchables" item="'research_food3'"/>	  
+	</actions>	
+  </cue>  
+</cues>
+</mdscript>

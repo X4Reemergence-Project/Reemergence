@@ -1,1697 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <add sel="//jobs">
-	<job id="otas_bio_trader_l" name="{20204,1301}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="bio_argon"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="6" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_bio_trader_m" name="{20204,1401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>				
-			</order>
-		</orders>
-		<basket basket="bio_argon"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="12" cluster="6" sector="4"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_bio_trader_m_build" name="{20204,1401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>				
-			</order>
-		</orders>
-		<basket basket="bio_argon"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="9" sector="3"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_food_trader_s" name="{20204,1801}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="foodrations"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="12" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_food_trader_s_build" name="{20204,1801}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="foodrations"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="5" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_medical_trader_s" name="{20204,10011}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="medicalsupplies"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="6" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_medical_trader_s_build" name="{20204,10011}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="medicalsupplies"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="4" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_energycell_trader_l" name="{20204,101}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="energycells"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="12" sector="3"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_energycell_trader_m" name="{20204,201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="energycells"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="14" sector="4"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_energycell_trader_m_build" name="{20204,201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="energycells"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="10" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_energycell_trader_s" name="{20204,201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="energycells"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="10" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_equipment_trader_l" name="{20204,301}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="equipment"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="4" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_equipment_trader_m" name="{20204,401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="equipment"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="6" cluster="3" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_equipment_trader_s" name="{20204,401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="equipment"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="5" cluster="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_construction_trader_l" name="{20204,401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>				
-			</order>
-		</orders>
-		<basket basket="construction_stations"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="6" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_construction_trader_m" name="{20204,401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="construction_stations"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="12" sector="3"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_construction_trader_s" name="{20204,401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="construction_stations"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="5" cluster="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_ship_construction_trader_l" name="{20204,401}">
-		<modifiers rebuild="true" commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="construction_ships"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="4" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_ship_construction_trader_m" name="{20204,401}">
-		<modifiers rebuild="true" commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="construction_ships"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="6" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_ship_construction_trader_s" name="{20204,401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="construction_ships"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="5" cluster="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_refinedgas_trader_l" name="{20204,501}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="refined_gas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="5" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_refinedgas_trader_m" name="{20204,601}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="refined_gas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="6" cluster="2" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_refinedgas_trader_s" name="{20204,601}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="refined_gas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="4" cluster="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_refinedmineral_trader_l" name="{20204,501}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="refined_mineral_normal_otas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="5" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_refinedmineral_trader_m" name="{20204,601}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="refined_mineral_normal_otas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="6" cluster="2" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_refinedmineral_trader_m_build" name="{20204,601}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="refined_mineral_normal_otas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="5" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_refinedmineral_trader_s" name="{20204,601}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Middleman" default="true">
-				<param name="range" value="5"/>
-			</order>
-		</orders>
-		<basket basket="refined_mineral_normal_otas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="4" cluster="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_tech_trader_l" name="{20204,301}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>				
-			</order>
-		</orders>
-		<basket basket="tech"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="5" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_tech_trader_m" name="{20204,401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="tech"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="10" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_tech_trader_s" name="{20204,401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="tech"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_s"/>
-		<quota galaxy="8" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_water_trader_l" name="{20204,1501}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="water"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="3" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_water_trader_m" name="{20204,1601}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="water"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="10" cluster="4" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<!-- Station Trader Jobs, by request only -->
-	<job id="otas_stationtrader_m" name="{20204,801}">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="maxbuy" value="5"/>
-			</order>
-		</orders>
-		<basket basket="all_container"/>
-		<category faction="otas" tags="[stationtrader]" size="ship_m"/>
-		<quota galaxy="0" maxgalaxy="24"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_m"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_stationtrader_l" name="{20204,701}">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="maxbuy" value="5"/>
-			</order>
-		</orders>
-		<basket basket="all_container"/>
-		<category faction="otas" tags="[stationtrader]" size="ship_l"/>
-		<quota galaxy="0" maxgalaxy="12"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<!-- Mining Jobs -->
-	<job id="otas_free_miner_l_liquid" name="{20204,5701}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="gases"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_l"/>
-		<quota galaxy="12"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="gases" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, liquid]" size="ship_l"/>
-			<loadout>
-				<level min="0.8" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_free_miner_m_liquid" name="{20204,5701}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="gases"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_m"/>
-		<quota galaxy="8"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="gases" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, liquid]" size="ship_m"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_free_miner_l_mineral" name="{20204,5601}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="minerals"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_l"/>
-		<quota galaxy="12"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="minerals" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, solid]" size="ship_l"/>
-			<loadout>
-				<level min="0.8" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_free_miner_m_mineral" name="{20204,5901}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="silicon"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_m"/>
-		<quota galaxy="8"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="silicon" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, solid]" size="ship_m"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_free_miner_m_mineral_ore" name="{20204,5801}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="ore"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_m"/>
-		<quota galaxy="8"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="ore" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, solid]" size="ship_m"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_free_miner_s_mineral" name="{20204,5601}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="minerals"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_s"/>
-		<quota galaxy="6"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="minerals" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, solid]" size="ship_s"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_free_miner_l_ice" name="{20204,2001}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="ice"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_l"/>
-		<quota galaxy="5"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="ice" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, solid]" size="ship_l"/>
-			<loadout>
-				<level min="0.8" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_free_miner_m_ice" name="{20204,2001}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="ice"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_m"/>
-		<quota galaxy="8"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="ice" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, solid]" size="ship_m"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>	
-
-	  <!-- OTAS Combat Jobs -->  
-	<job id="otas_battleship_patrol_xl_border" name="{20221,5031}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, battleship]" size="ship_xl"/>
-		<quota galaxy="3" maxgalaxy="4" cluster="2" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otasborder"/>
-		<environment buildatshipyard="true" />
-		<ship>
-			<select faction="otas" tags="[military, battleship]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="2"/>			
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
-		</subordinates>
-	</job>
-	<job id="otas_battleship_patrol_xl_core" name="{20221,5031}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, battleship]" size="ship_xl"/>
-		<quota galaxy="1" maxgalaxy="2" cluster="1" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otascore"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, battleship]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-		</subordinates>
-	</job>	
-	<job id="otas_carrier_patrol_xl_border" name="{20204,3201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, carrier]" size="ship_xl"/>
-		<quota galaxy="3" maxgalaxy="4" cluster="2" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otasborder"/>
-		<environment buildatshipyard="true" />
-		<ship>
-			<select faction="otas" tags="[military, carrier]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>			
-			<subordinate job="otas_fighter_escort_s_carrier" assignment="attack" group="2"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
-			<subordinate job="otas_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
-		</subordinates>
-	</job>
-	<job id="otas_carrier_patrol_xl_core" name="{20204,3201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, carrier]" size="ship_xl"/>
-		<quota galaxy="2" maxgalaxy="3" cluster="2" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otascore"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, carrier]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>			
-			<subordinate job="otas_fighter_escort_s_carrier" assignment="attack" group="2"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
-			<subordinate job="otas_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
-		</subordinates>
-	</job>
-	<job id="otas_carrier_patrol_xl_sector" name="{20204,3201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, carrier]" size="ship_xl"/>
-		<quota galaxy="2" maxgalaxy="3" cluster="2" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" />
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, carrier]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>			
-			<subordinate job="otas_fighter_escort_s_carrier" assignment="attack" group="2"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
-			<subordinate job="otas_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
-		</subordinates>
-	</job>
-	<job id="otas_destroyer_patrol_l_core" name="{20204,5201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, destroyer]" size="ship_l"/>
-		<quota galaxy="2" sector="3"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otascore"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[military, destroyer]" size="ship_l"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
-		</subordinates>
-	</job>	
-	<job id="otas_destroyer_patrol_l_border" name="{20204,5201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, destroyer]" size="ship_l"/>
-		<quota galaxy="6" sector="3"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otasborder"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[military, destroyer]" size="ship_l"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>			
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
-		</subordinates>
-	</job>	
-	<job id="otas_destroyer_patrol_l_sector" name="{20204,5201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, destroyer]" size="ship_l"/>
-		<quota galaxy="6" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[military, destroyer]" size="ship_l"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
-		</subordinates>
-	</job>	
-	<job id="otas_destroyer_patrol_l_sector_build" name="{20204,5201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, destroyer]" size="ship_l"/>
-		<quota galaxy="20" sector="5"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, destroyer]" size="ship_l"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
-		</subordinates>
-	</job>
-	<job id="otas_destroyer_patrol_l_comp" name="{20204,5201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, destroyer]" size="ship_l"/>
-		<quota galaxy="2" maxgalaxy="11" cluster="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, destroyer]" size="ship_l"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
-		</subordinates>
-	</job>
-	<job id="otas_destroyer_patrol_l_comp_mission" name="{20204,5201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[military, destroyer]" size="ship_l"/>
-		<quota galaxy="1" maxgalaxy="1" cluster="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" />
-		<ship>
-			<select faction="otas" tags="[military, destroyer]" size="ship_l"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
-		</subordinates>
-	</job>
-	<job id="otas_military_patrol_m_sector_exp" name="{20204,2901}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, medium]" size="ship_m"/>
-		<quota galaxy="7" maxgalaxy="9" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[military, medium]" size="ship_m"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="1"/>
-			<subordinate job="otas_escort_m_solo" assignment="attack" group="2"/>
-		</subordinates>
-	</job>
-	<job id="otas_military_patrol_m_sector_exp_build" name="{20204,2901}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, medium]" size="ship_m"/>
-		<quota galaxy="21" sector="3"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, medium]" size="ship_m"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="1"/>
-			<subordinate job="otas_escort_m_solo" assignment="attack" group="2"/>
-		</subordinates>
-	</job>
-	<job id="otas_military_patrol_m_sector_exp_mission" name="{20204,2901}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[military, medium]" size="ship_m"/>
-		<quota galaxy="10" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[military, medium]" size="ship_m"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="1"/>
-		</subordinates>
-	</job>
-	<job id="otas_frigate_patrol_m_sector" name="{20204,5001}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, frigate]" size="ship_m"/>
-		<quota galaxy="7" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[military, frigate]" size="ship_m"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<units>
-				<unit category="unitcategory.defence" min="8" max="12"/>
-			</units>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_escort_m_solo" assignment="attack" group="1"/>
-		</subordinates>
-	</job>	
-	<job id="otas_frigate_patrol_m_sector_build" name="{20204,5001}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, frigate]" size="ship_m"/>
-		<quota galaxy="14" sector="3"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, frigate]" size="ship_m"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<units>
-				<unit category="unitcategory.defence" min="8" max="12"/>
-			</units>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_escort_m_solo" assignment="attack" group="1"/>
-		</subordinates>
-	</job>
-	<job id="otas_frigate_patrol_m_sector_mission" name="{20204,5001}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[military, frigate]" size="ship_m"/>
-		<quota galaxy="5" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[military, frigate]" size="ship_m"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<units>
-				<unit category="unitcategory.defence" min="8" max="12"/>
-			</units>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="1"/>
-		</subordinates>
-	</job>
-	<job id="otas_fighter_patrol_s_zone" name="{20204,2901}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, fighter]" size="ship_s"/>
-		<quota galaxy="14" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[fighter, heavy]" size="ship_s"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_fighter_escort_s_patrol" assignment="attack" group="1"/>
-		</subordinates>
-	</job>
-	<job id="otas_scout_patrol_s" name="{20204,2801}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Recon" default="true"/>
-		</orders>
-		<category faction="otas" tags="[factionlogic, scout]" size="ship_s"/>
-		<quota galaxy="10" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="lt" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[scout]" size="ship_s"/>
-			<loadout>
-				<level min="0.2" max="0.8"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_police_patrol_s" name="{20204,6101}">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Police" default="true"/>
-		</orders>
-		<category faction="otas" tags="[police]" size="ship_s"/>
-		<quota galaxy="10" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" policefaction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[fighter]" size="ship_s"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<!-- OTAS Escorts -->
-	<job id="otas_destroyer_escort_l" name="{20204,5201}" startactive="false">
-		<orders>
-			<order order="Escort" default="true">
-				<param name="formation" value="formationshape.invvshape"/>
-				<param name="overrideformationskill" value="true"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[military, destroyer]" size="ship_l"/>
-		<quota wing="3"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[military, escort]" size="ship_l"/>
-			  <loadout>
-				<level min="0.8" max="1.0"/>
-			  </loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_frigate_escort_m" name="{20204,2901}" startactive="false">
-		<orders>
-			<order order="Escort" default="true">
-				<param name="formation" value="formationshape.dartvertical"/>
-				<param name="overrideformationskill" value="true"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[military]" size="ship_m"/>
-		<quota wing="5"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[military, medium]" size="ship_m"/>
-			  <loadout>
-				<level min="0.8" max="1.0"/>
-			  </loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_escort_m_solo" name="{20204,2901}" startactive="false">
-		<orders>
-			<order order="Escort" default="true">
-				<param name="formation" value="formationshape.dartvertical"/>
-				<param name="overrideformationskill" value="true"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[military]" size="ship_m"/>
-		<quota wing="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[military, medium]" size="ship_m"/>
-			  <loadout>
-				<level min="0.8" max="1.0"/>
-			  </loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_fighter_escort_s_carrier" name="{20204,2901}" startactive="false">
-		<orders>
-			<order order="Escort" default="true">
-				<param name="formation" value="formationshape.pointguard"/>
-				<param name="overrideformationskill" value="true"/>
-			</order>
-		</orders>
-		<quota wing="12"/>
-		<category faction="otas" tags="[military, fighter]" size="ship_s"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[military, fighter]" size="ship_s"/>
-			  <loadout>
-				<level min="0.7" max="1.0"/>
-			  </loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_fighter_escort_s_frigate" name="{20204,2901}" startactive="false">
-		<orders>
-			<order order="Escort" default="true">
-				<param name="formation" value="formationshape.pointguard"/>
-				<param name="overrideformationskill" value="true"/>
-			</order>
-		</orders>
-		<quota wing="2"/>
-		<category faction="otas" tags="[military, fighter]" size="ship_s"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[military, fighter]" size="ship_s"/>
-			  <loadout>
-				<level min="0.7" max="1.0"/>
-			  </loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_fighter_escort_s_patrol" name="{20204,2901}" startactive="false">
-		<orders>
-			<order order="Escort" default="true">
-				<param name="formation" value="formationshape.pointguard"/>
-				<param name="overrideformationskill" value="true"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[military, fighter]" size="ship_s"/>
-		<quota wing="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[military, fighter]" size="ship_s"/>
-			  <loadout>
-				<level min="0.7" max="1.0"/>
-			  </loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_resupplier_escort_xl" name="{20204,5501}" startactive="false">
-		<orders>
-			<order order="SupplyFleet" default="true">
-				<param name="formation" value="formationshape.pointguard"/>
-				<param name="overrideformationskill" value="true"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[resupplier]" size="ship_xl"/>
-		<quota wing="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[resupplier]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_trader_escort_s_da" assignment="trade" group="1"/>
-		</subordinates>
-	</job>
-	<job id="otas_miningfleet_m_solid_small" name="{20204,5601}" startactive="false">
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[freighter, miner, deepspace]" size="ship_m"/>
-		<quota wing="2" variation="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<basket basket="minerals"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, solid]" size="ship_m"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_fighter_escort_s_miningfleet"/>
-		</subordinates>
-	</job>
-	<job id="otas_miningfleet_m_liquid_small" name="{20204,5701}" startactive="false">
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[freighter, miner, deepspace]" size="ship_m"/>
-		<quota wing="2" variation="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<basket basket="gases"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, liquid]" size="ship_m"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_fighter_escort_s_miningfleet"/>
-		</subordinates>
-	</job>
-	<job id="otas_miningfleet_ml_solid_large" name="{20204,5601}" startactive="false">
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[freighter, miner, deepspace]"/>
-		<quota wing="3" variation="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<basket basket="minerals"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, solid, mixed]"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_fighter_escort_s_miningfleet"/>
-		</subordinates>
-	</job>
-	<job id="otas_miningfleet_ml_liquid_large" name="{20204,5701}" startactive="false">
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[freighter, miner, deepspace]"/>
-		<quota wing="3" variation="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<basket basket="gases"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, liquid, mixed]"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_fighter_escort_s_miningfleet"/>
-		</subordinates>
-	</job>
-	<job id="otas_fighter_escort_s_miningfleet" name="{20204,2901}" startactive="false">
-		<orders>
-			<order order="Escort" default="true">
-				<param name="formation" value="formationshape.pointguard"/>
-				<param name="overrideformationskill" value="true"/>
-			</order>
-		</orders>
-		<quota wing="1" variation="1"/>
-		<category faction="otas" tags="[military, fighter, deepspace]" size="ship_s"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[military, fighter, selection]" size="ship_s"/>
-			<loadout>
-				<level exact ="1.0"/>
-				<variation exact ="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
+  <add sel="//jobs"> <!--OTAS-->
 	<!--OTAS Misc-->
 	<job id="otas_construction_vessel_xl" name="{20204,5101}">
 		<modifiers commandeerable="true"/>
@@ -1734,22 +43,6 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<job id="otas_resupplier_xl" name="{20204,5501}" disabled="true">
-		<orders>
-			<order order="SupplyFleet" default="true"/>
-		</orders>
-		<quota galaxy="1" maxgalaxy="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="neutral" comparison="ge" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[resupplier]"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<!-- Mass Traffic -->
 	<job id="masstraffic_otas_police">
 		<task task="masstraffic.police"/>
@@ -1767,243 +60,7 @@
 			<owner exact="faction.criminal" overridenpc="true"/>
 		</masstraffic>
 	</job>
-	<!-- Expeditions -->
-	<job id="otas_expedition_da" name="{20204,6301}" startactive="false">
-		<modifiers commandeerable="true" rebuild="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[daexpedition]" size="ship_xl"/>
-		<quota galaxy="2" maxgalaxy="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="true"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_fighter_escort_s_carrier" assignment="attack" group="2"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
-		</subordinates>
-	</job>
-	<job id="otas_common_trader_l_da" name="{20204,7001}">
-		<modifiers rebuild="true" commandeerable="false"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="3"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="3"/>
-			</order>
-		</orders>
-		<basket basket="legal_common_otas"/>
-		<category faction="otas" tags="[freighter, trader]" size="ship_l"/>
-		<quota galaxy="14" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="true"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_DACriticalTagotas_xl_job" name="{4816309,301}" startactive="false">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[DACriticalTagotas,factionlogic]" size="ship_xl"/>
-		<quota galaxy="2" maxgalaxy="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="true" tags="DACriticalTagotas"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_fighter_escort_s_carrier" assignment="attack" group="2"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
-		</subordinates>
-	</job>
-	<job id="otas_DACoreTagotas_l_job" name="{4816309,302}" startactive="false">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[DACoreTagotas,factionlogic]" size="ship_l"/>
-		<quota galaxy="20" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="true" tags="DACoreTagotas"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, destroyer]" size="ship_l"/>
-			<loadout>
-				<level min="0.8" max="1.0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
-		</subordinates>
-	</job>
-	<job id="otas_DABorderTagotas_l_job" name="{4816309,303}" startactive="false">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[DABorderTagotas,factionlogic]" size="ship_l"/>
-		<quota galaxy="20" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="true" tags="DABorderTagotas"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, destroyer]" size="ship_l"/>
-			<loadout>
-				<level min="0.8" max="1.0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-			<subordinate job="otas_fighter_escort_s_frigate" assignment="attack" group="3"/>
-		</subordinates>
-	</job>
-	<job id="otas_DAContestedTagotas_xl_job" name="{4816309,304}" startactive="false">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[DAContestedTagotas,factionlogic]" size="ship_xl"/>
-		<quota galaxy="2" maxgalaxy="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="true" tags="DAContestedTagotas"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_fighter_escort_s_carrier" assignment="attack" group="2"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
-		</subordinates>
-	</job>
-	<job id="otas_aux_miner_l_liquid_da" name="{20204,5701}">
-		<modifiers rebuild="false" commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="gases"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_l"/>
-		<quota galaxy="0" maxgalaxy="20"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="gases" matchextension="true"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, liquid]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_aux_miner_l_mineral_da" name="{20204,5601}">
-		<modifiers rebuild="false" commandeerable="true"/>
-		<orders>
-			<order order="MiningRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>
-			</order>
-		</orders>
-		<basket basket="minerals"/>
-		<category faction="otas" tags="[factionlogic, freighter, miner]" size="ship_l"/>
-		<quota galaxy="0" maxgalaxy="20"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" regionbasket="minerals" matchextension="true"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[miner, solid]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_aux_trader_l_da" name="{20204,7001}">
-		<modifiers rebuild="false" commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="3"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="3"/>
-			</order>
-		</orders>
-		<basket basket="legal_common_otas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="0" maxgalaxy="20"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="true"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_trader_escort_s_da" name="{20204,5501}" startactive="false">
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="maxbuy" value="3"/>
-			</order>
-		</orders>
-		<basket basket="all_container"/>
-		<category faction="otas" tags="[freighter, trader]" size="ship_s"/>
-		<quota wing="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro"/>
-		<environment buildatshipyard="true"/>
-		<modifiers subordinate="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_s"/>
-			<loadout>
-				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-  </add>
+  </add>	
   <add sel="//jobs"> <!--Xenon SA-->
 	<!--Wave 1 - Strike Craft-->
 	<job id="xenon_strike_craft_emperor_pride" name="{19530003,1}" startactive="false">
@@ -2153,7 +210,7 @@
 			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_strike_craft_bad_debt" name="{19530003,1}" startactive="false">
+	<job id="xenon_strike_craft_matrix483" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2163,7 +220,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, frigate]" size="ship_m"/>
 		<quota galaxy="2" maxgalaxy="3" />
-		<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="baddebt"/>
+		<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix483"/>
 		<environment buildatshipyard="true"/>
 		<ship>
 			<select faction="xenon" tags="[military, bomber]" size="ship_m"/>
@@ -2455,7 +512,7 @@
 			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_destroyers_bad_debt" name="{19530003,1}" startactive="false">
+	<job id="xenon_destroyers_matrix695" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2465,7 +522,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, defender]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="2" />
-		<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="baddebt"/>
+		<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix695"/>
 		<environment buildatshipyard="true"/>
 		<ship>
 			<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
@@ -2565,7 +622,7 @@
 			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_destroyers_matrix695" name="{19530003,1}" startactive="false">
+	<job id="xenon_destroyers_matrix483" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2575,7 +632,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, defender]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="2" />
-		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix695"/>
+		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix483"/>
 		<environment buildatshipyard="true"/>
 		<ship>
 			<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
@@ -2756,7 +813,7 @@
 			<subordinate job="xenon_frigate_m_escort_sa" assignment="defence" group="2" rebuild="true" />				
 		</subordinates>
 	</job>
-	<job id="xenon_battleship_bad_debt" name="{19530003,1}" startactive="false">
+	<job id="xenon_battleship_matrix695" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2768,7 +825,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, battleship]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="1" />
-		<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="baddebt"/>
+		<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix695"/>
 		<environment buildatshipyard="true"/>
         <time start="0" interval="7200"/>			
 		<ship>
@@ -2876,7 +933,7 @@
 			<subordinate job="xenon_frigate_m_escort_sa" assignment="defence" group="2" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_battleship_matrix695" name="{19530003,1}" startactive="false">
+	<job id="xenon_battleship_matrix483" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2888,7 +945,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, battleship]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="1" />
-		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix695"/>
+		<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix483"/>
 		<environment buildatshipyard="true"/>
         <time start="0" interval="7200"/>			
 		<ship>
@@ -3097,7 +1154,7 @@
 			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />					
 		</subordinates>
 	</job>
-	<job id="xenon_reclaimer_bad_debt" name="Bad Debt {19530003,2}" startactive="false">
+	<job id="xenon_reclaimer_matrix695" name="Matrix #695 {19530003,2}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -3109,7 +1166,7 @@
 		</orders>
 		<category faction="xenon" tags="[military, battleship]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="1" />
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="not" />
+			<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="not" />
 		<environment buildatshipyard="false"/>
 		<ship>
 			<select faction="xenon" tags="[reclaimer]" size="ship_xl"/>
@@ -3265,7 +1322,7 @@
 			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />						
 		</subordinates>
 	</job>	
-	<job id="xenon_reclaimer_ptni_headquarters" name="PTNI Headquaters {19530003,2}" startactive="false">
+	<job id="xenon_reclaimer_matrix483" name="Matrix #483 {19530003,2}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -4554,8 +2611,8 @@
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
 		</job>		
-<!--Matrix #695-->
-		<job id="xenon_battleship_patrol_xl_defence_matrix695" name="{20204,5201}" >
+<!--Matrix #483-->
+		<job id="xenon_battleship_patrol_xl_defence_matrix483" name="{20204,5201}" >
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4577,7 +2634,7 @@
 				<subordinate job="xenon_frigate_m_escort"/>				
 			</subordinates>
 		</job>
-		<job id="xenon_destroyer_patrol_xl_matrix695" name="{20204,3301}">
+		<job id="xenon_destroyer_patrol_xl_matrix483" name="{20204,3301}">
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4598,7 +2655,7 @@
 				<subordinate job="xenon_frigate_s_escort"/>				
 			</subordinates>
 		</job>
-		<job id="xenon_patrol_m_matrix695" name="{20204,5201}" >
+		<job id="xenon_patrol_m_matrix483" name="{20204,5201}" >
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4618,7 +2675,7 @@
 				<subordinate job="xenon_frigate_m_escort"/>
 			</subordinates>
 		</job>
-		<job id="xenon_patrol_s_matrix695" name="{20204,5201}" >
+		<job id="xenon_patrol_s_matrix483" name="{20204,5201}" >
 			<modifiers commandeerable="true"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4638,7 +2695,7 @@
 				<subordinate job="xenon_frigate_s_escort"/>
 			</subordinates>
 		</job>
-		<job id="xenon_deepspace_single_fighter_matrix695" name="{20204,3401}">
+		<job id="xenon_deepspace_single_fighter_matrix483" name="{20204,3401}">
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4656,7 +2713,7 @@
 				<owner exact="xenon" overridenpc="true"/>
 			</ship>
 		</job>
-		<job id="xenon_deepspace_group_fighter_matrix695" name="{20204,3401}">
+		<job id="xenon_deepspace_group_fighter_matrix483" name="{20204,3401}">
 			<modifiers commandeerable="false"/>
 			<orders>
 				<order order="Patrol" default="true">
@@ -4668,6 +2725,174 @@
 			<quota galaxy="1"/>
 			<location class="sector" macro="Cluster_rem44_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
 			<environment buildatshipyard="true"/>
+			<encounters id="xenon_s_group"/>
+			<ship>
+				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_frigate_s_escort"/>
+			</subordinates>
+		</job>
+		<job id="xenon_miner_matrix483" name="{20204,5601}">
+			<modifiers commandeerable="true"/>
+			<orders>
+				<order order="MiningRoutine" default="true">
+					<param name="minbuy" value="0"/>
+					<param name="maxbuy" value="2"/>
+					<param name="minsell" value="0"/>
+					<param name="maxsell" value="2"/>
+				</order>
+			</orders>
+			<basket basket="minerals_xenon"/>
+			<category faction="xenon" tags="[miner]" size="ship_m"/>
+			<quota galaxy="3"/>
+			<location class="cluster" macro="Cluster_rem44_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
+				<owner exact="xenon" overridenpc="true"/>
+				<cargo>
+					<wares>
+						<fillpercent min="0" max="100" profile="inversebell"/>
+					</wares>
+				</cargo>
+			</ship>
+		</job>
+		<job id="xenon_energy_matrix483" name="{20204,201}">
+			<modifiers commandeerable="true"/>
+			<orders>
+				<order order="TradeRoutine" default="true">
+					<param name="minbuy" value="0"/>
+					<param name="maxbuy" value="2"/>
+					<param name="minsell" value="0"/>
+					<param name="maxsell" value="2"/>
+				</order>
+			</orders>
+			<basket basket="energycells"/>
+			<category faction="xenon" tags="[freighter, trader]" size="ship_m"/>
+			<quota galaxy="2"/>
+			<location class="cluster" macro="Cluster_rem44_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+		</job>
+<!--Matrix #695-->
+		<job id="xenon_battleship_patrol_xl_defence_matrix695" name="{20204,3301}" >
+			<modifiers commandeerable="false"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>					
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, carrier]" size="ship_xl"/>
+			<quota galaxy="1" sector="1"/>
+			<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<time start="3600" interval="3600"/>
+			<ship>
+				<select faction="xenon" tags="[military, carrier]" size="ship_xl"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_destroyer_escort"/>
+				<subordinate job="xenon_frigate_m_escort"/>				
+			</subordinates>
+		</job>
+		<job id="xenon_destroyer_patrol_xl_matrix695" name="{20204,3301}">
+			<modifiers commandeerable="false"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>				  
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
+			<quota galaxy="2"/>
+			<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_frigate_m_escort"/>
+				<subordinate job="xenon_frigate_s_escort"/>				
+			</subordinates>
+		</job>
+		<job id="xenon_patrol_m_matrix695" name="{20204,5201}" >
+			<modifiers commandeerable="true"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>					
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, frigate]" size="ship_m"/>
+			<quota galaxy="3"/>
+			<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[military, medium]" size="ship_m"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_frigate_m_escort"/>
+			</subordinates>
+		</job>
+		<job id="xenon_patrol_s_matrix695" name="{20204,5201}" >
+			<modifiers commandeerable="true"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>					
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
+			<quota galaxy="4"/>
+			<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="true" preferbuilding="true"/>
+			<ship>
+				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+			<subordinates>
+				<subordinate job="xenon_frigate_s_escort"/>
+			</subordinates>
+		</job>
+		<job id="xenon_deepspace_single_fighter_matrix695" name="{20204,3401}">
+			<modifiers commandeerable="false"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>					
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
+			<quota galaxy="1"/>
+			<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="false" gate="true"/>
+			<encounters id="xenon_s_lone"/>
+			<ship>
+				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
+				<owner exact="xenon" overridenpc="true"/>
+			</ship>
+		</job>
+		<job id="xenon_deepspace_group_fighter_matrix695" name="{20204,3401}">
+			<modifiers commandeerable="false"/>
+			<orders>
+				<order order="Patrol" default="true">
+				  <param name="range" value="class.zone"/>
+				  <param name="stayinspace" value="true"/>	
+				</order>
+			</orders>
+			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
+			<quota galaxy="1"/>
+			<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<environment buildatshipyard="false" gate="true"/>
 			<encounters id="xenon_s_group"/>
 			<ship>
 				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
@@ -4690,7 +2915,7 @@
 			<basket basket="minerals_xenon"/>
 			<category faction="xenon" tags="[miner]" size="ship_m"/>
 			<quota galaxy="3"/>
-			<location class="cluster" macro="Cluster_rem44_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<location class="cluster" macro="Cluster_REM79_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
 			<environment buildatshipyard="true" preferbuilding="true"/>
 			<ship>
 				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
@@ -4715,175 +2940,7 @@
 			<basket basket="energycells"/>
 			<category faction="xenon" tags="[freighter, trader]" size="ship_m"/>
 			<quota galaxy="2"/>
-			<location class="cluster" macro="Cluster_rem44_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-		</job>
-<!--Bad Debt-->
-		<job id="xenon_battleship_patrol_xl_defence_bad_debt" name="{20204,3301}" >
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>					
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, carrier]" size="ship_xl"/>
-			<quota galaxy="1" sector="1"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<time start="3600" interval="3600"/>
-			<ship>
-				<select faction="xenon" tags="[military, carrier]" size="ship_xl"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_destroyer_escort"/>
-				<subordinate job="xenon_frigate_m_escort"/>				
-			</subordinates>
-		</job>
-		<job id="xenon_destroyer_patrol_xl_bad_debt" name="{20204,3301}">
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>				  
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
-			<quota galaxy="2"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_frigate_m_escort"/>
-				<subordinate job="xenon_frigate_s_escort"/>				
-			</subordinates>
-		</job>
-		<job id="xenon_patrol_m_bad_debt" name="{20204,5201}" >
-			<modifiers commandeerable="true"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>					
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, frigate]" size="ship_m"/>
-			<quota galaxy="3"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[military, medium]" size="ship_m"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_frigate_m_escort"/>
-			</subordinates>
-		</job>
-		<job id="xenon_patrol_s_bad_debt" name="{20204,5201}" >
-			<modifiers commandeerable="true"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>					
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
-			<quota galaxy="4"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_frigate_s_escort"/>
-			</subordinates>
-		</job>
-		<job id="xenon_deepspace_single_fighter_bad_debt" name="{20204,3401}">
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>					
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
-			<quota galaxy="1"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="false" gate="true"/>
-			<encounters id="xenon_s_lone"/>
-			<ship>
-				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-		</job>
-		<job id="xenon_deepspace_group_fighter_bad_debt" name="{20204,3401}">
-			<modifiers commandeerable="false"/>
-			<orders>
-				<order order="Patrol" default="true">
-				  <param name="range" value="class.zone"/>
-				  <param name="stayinspace" value="true"/>	
-				</order>
-			</orders>
-			<category faction="xenon" tags="[military, fighter]" size="ship_s"/>
-			<quota galaxy="1"/>
-			<location class="sector" macro="Cluster_nxw01_Sector001_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="false" gate="true"/>
-			<encounters id="xenon_s_group"/>
-			<ship>
-				<select faction="xenon" tags="[fighter, heavy]" size="ship_s"/>
-				<owner exact="xenon" overridenpc="true"/>
-			</ship>
-			<subordinates>
-				<subordinate job="xenon_frigate_s_escort"/>
-			</subordinates>
-		</job>
-		<job id="xenon_miner_bad_debt" name="{20204,5601}">
-			<modifiers commandeerable="true"/>
-			<orders>
-				<order order="MiningRoutine" default="true">
-					<param name="minbuy" value="0"/>
-					<param name="maxbuy" value="2"/>
-					<param name="minsell" value="0"/>
-					<param name="maxsell" value="2"/>
-				</order>
-			</orders>
-			<basket basket="minerals_xenon"/>
-			<category faction="xenon" tags="[miner]" size="ship_m"/>
-			<quota galaxy="3"/>
-			<location class="cluster" macro="Cluster_nxw01_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
-			<environment buildatshipyard="true" preferbuilding="true"/>
-			<ship>
-				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
-				<owner exact="xenon" overridenpc="true"/>
-				<cargo>
-					<wares>
-						<fillpercent min="0" max="100" profile="inversebell"/>
-					</wares>
-				</cargo>
-			</ship>
-		</job>
-		<job id="xenon_energy_bad_debt" name="{20204,201}">
-			<modifiers commandeerable="true"/>
-			<orders>
-				<order order="TradeRoutine" default="true">
-					<param name="minbuy" value="0"/>
-					<param name="maxbuy" value="2"/>
-					<param name="minsell" value="0"/>
-					<param name="maxsell" value="2"/>
-				</order>
-			</orders>
-			<basket basket="energycells"/>
-			<category faction="xenon" tags="[freighter, trader]" size="ship_m"/>
-			<quota galaxy="2"/>
-			<location class="cluster" macro="Cluster_nxw01_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
+			<location class="cluster" macro="Cluster_REM79_macro" faction="xenon" relation="self" comparison="exact" matchextension="true"/>
 			<environment buildatshipyard="true" preferbuilding="true"/>
 			<ship>
 				<select faction="xenon" tags="[miner, solid]" size="ship_m"/>
@@ -4912,9 +2969,9 @@
 		</loadout>
         <owner exact="split" overridenpc="true"/>
       </ship>
-     </job>
+	</job>
    
-	<!--Riptide Rakers-->
+  <!--Riptide Rakers-->
    <job id="scavenger_split_compactor_l" name="{20204,10023}">
      <modifiers commandeerable="true"/>
      <orders>
@@ -4957,8 +3014,29 @@
    </job>
   </add>
   
-	<!--Kha'ak-->   
-  <add sel="//jobs">    
+  <!--Kha'ak-->   
+  <add sel="//jobs">
+	<job id="khaak_awoken_ravager_l" name="Hive Guard">
+	  <modifiers commandeerable="false"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
+	  <quota galaxy="10" maxgalaxy="12" cluster="2"/>
+      <time interval="1200"/>		  
+	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[military, destroyer]" size="ship_l"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>	
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>			
+	  </subordinates>
+	</job>  
 	<job id="khaak_awoken_fighter_m_cluster" name="{20204,3401}">
 	  <modifiers commandeerable="false"/>
 	  <orders>
@@ -4993,7 +3071,28 @@
 		<select faction="khaak" tags="[fighter]" size="ship_m"/>
 		<owner exact="khaak" overridenpc="true"/>
 	  </ship>
-    </job>	
+    </job>
+	<job id="khaak_invader_ravager_alpha" name="Hunter">
+	  <modifiers commandeerable="true"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
+	  <quota galaxy="2" maxgalaxy="3" />
+      <time interval="1800"/>	  
+      <location class="sector" macro="Cluster_REM67_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[military, destroyer]" size="ship_l"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>	
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>			
+	  </subordinates>
+	</job>  	
     <job id="khaak_invader_fighter_alpha" name="{20204,4201}">
       <modifiers commandeerable="true"/>
       <orders>
@@ -5014,6 +3113,27 @@
         <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
       </subordinates>
     </job>
+	<job id="khaak_invader_ravager_beta" name="Hunter">
+	  <modifiers commandeerable="true"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
+	  <quota galaxy="2" maxgalaxy="3" />
+      <time interval="1800"/>	  
+      <location class="sector" macro="Cluster_REM68_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[military, destroyer]" size="ship_l"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>	
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>			
+	  </subordinates>
+	</job>  	
     <job id="khaak_invader_fighter_beta" name="{20204,4201}">
       <modifiers commandeerable="true"/>
       <orders>
@@ -5034,6 +3154,27 @@
         <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
       </subordinates>
     </job>
+	<job id="khaak_invader_ravager_gamma" name="Hunter">
+	  <modifiers commandeerable="true"/>
+	  <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+	  </orders>
+	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
+	  <quota galaxy="2" maxgalaxy="3" />
+      <time interval="1800"/>	  
+      <location class="sector" macro="Cluster_REM69_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+	  <environment buildatshipyard="false" gate="true"/>
+	  <ship>
+		<select faction="khaak" tags="[military, destroyer]" size="ship_l"/>
+		<owner exact="khaak" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>	
+		<subordinate job="khaak_fighter_ravager_escort" assignment="attack" rebuild="false"/>			
+	  </subordinates>
+	</job> 	
     <job id="khaak_invader_fighter_gamma" name="{20204,4201}">
       <modifiers commandeerable="true"/>
       <orders>
@@ -5054,6 +3195,27 @@
         <subordinate job="khaak_fighter_m_escort" assignment="attack" rebuild="false"/>
       </subordinates>
     </job>
+	<!--Escorts-->
+    <job id="khaak_fighter_ravager_escort" name="{20204,4201}" startactive="false">
+	  <orders>
+		<order order="Escort" default="true">
+		  <param name="formation" value="formationshape.dartvertical"/>
+		  <param name="overrideformationskill" value="true"/>
+		</order>
+	  </orders>
+      <category faction="khaak" tags="[military, fighter]" size="ship_m"/>
+      <quota wing="4" variation="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
+      <environment buildatshipyard="false" gate="true"/>
+      <modifiers subordinate="true"/>
+      <ship>
+        <select faction="khaak" tags="[fighter]" size="ship_m"/>
+        <owner exact="khaak" overridenpc="true"/>
+      </ship>
+      <subordinates>
+        <subordinate job="khaak_fighter_escort_s2" assignment="attack" rebuild="false"/>		
+      </subordinates>
+    </job>	
     <job id="khaak_fighter_m_escort" name="{20204,4201}" startactive="false">
       <orders>
         <order order="Escort" default="true">
@@ -5062,7 +3224,7 @@
           <param name="rollformation" value="true"/>
         </order>
       </orders>
-      <category faction="khaak" tags="[military, fighter]" size="ship_s"/>
+      <category faction="khaak" tags="[military, fighter]" size="ship_m"/>
       <quota wing="4" variation="1"/>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
       <environment buildatshipyard="false" gate="true"/>
@@ -5095,9 +3257,10 @@
     </job> 
   </add>
   
- <!--ARGONs--> 
- 
-  <add sel="//jobs"> <!--PARANIDs-->	
+ <!--ARGON--> 
+
+ <!--PARANID--> 
+  <add sel="//jobs">	
 	<job id="hop_carrier_patrol_xl_cluster_spl" name="{20204,6301}" >
       <modifiers commandeerable="true"/>
       <orders>
@@ -5253,8 +3416,9 @@
       </subordinates>	  
     </job>  
   </add> 
-  
-  <add sel="//jobs"> <!--TELADIs-->
+
+ <!--TELADI-->  
+  <add sel="//jobs">
     <job id="min_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
       <modifiers commandeerable="true"/>
       <orders>
@@ -5278,9 +3442,10 @@
       </subordinates>	  
     </job>  
   </add>   
-  
-  <add sel="//jobs"> <!--SPLITs-->
-    <job id="faf_cheetah_plunder" name="{20204,4201}">
+
+ <!--SPLIT-->  
+  <add sel="//jobs">
+	<job id="faf_cheetah_plunder" name="{20204,4201}">
 	  <modifiers commandeerable="false"/>
       <orders>
         <order order="Patrol" default="true">
@@ -5302,8 +3467,8 @@
 	  <subordinates>
 	    <subordinate job="faf_escort_mixed"/>
 	  </subordinates>
-   </job>
-    <job id="faf_escort_mixed" name="{20204,3401}" startactive="false">
+	</job>
+	<job id="faf_escort_mixed" name="{20204,3401}" startactive="false">
 	  <orders>
 	    <order order="Escort" default="true">
           <param name="formation" value="formationshape.pointguard"/>
@@ -5329,9 +3494,35 @@
  
  <!--RIPTIDE--> 
  
- <!--TERRANs-->
- 
-  <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector']" pos="after"> <!--BORON-->  
+ <!--TERRAN-->
+  <add sel="//jobs"> 
+    <job id="pio_kagawa_trader" name="{20204,9001}">
+	  <modifiers commandeerable="true"/>
+	  <orders>
+		<order order="TradeRoutine" default="true">
+		  <param name="minbuy" value="0"/>
+		  <param name="maxbuy" value="5"/>
+		  <param name="minsell" value="0"/>
+		  <param name="maxsell" value="5"/>			
+		</order>
+	  </orders>
+	  <basket basket="all_container_terran"/>
+	  <category faction="pioneers" tags="[factionlogic, freighter, trader]" size="ship_xl"/>
+	  <quota galaxy="2" sector="1"/>
+	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="pioneers" relation="self" comparison="exact" matchextension="false"/>
+      <environment buildatshipyard="true" preferbuilding="true"/>
+	  <ship>
+		<select faction="pioneers" tags="[kagawa]" size="ship_xl"/>
+        <loadout>
+          <level min="0.6" max="1.0"/>
+        </loadout>
+		<owner exact="pioneers" overridenpc="true"/>
+	  </ship>
+	</job> 
+  </add>
+  
+ <!--BORON--> 
+  <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector']" pos="after">  
     <job id="boron_marlin_patrol" name="{20204,5201}">
       <modifiers commandeerable="true" />
       <orders>
@@ -5381,89 +3572,10 @@
       </subordinates>	  
     </job> 	
   </add>
-    
-	<!--Modified Jobs-->
-  <!--ARGON-->
-  <replace sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/ship/select[@faction='argon']/@tags">[military, tm]</replace>
-  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@assignment">attack</add>
-  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@group">2</add>    
-  <replace sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/ship/select[@faction='argon']/@tags">[military, tm]</replace>
-  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@assignment">attack</add>
-  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@group">2</add>    
-  <!--ANTIGONE-->  
-  <replace sel="/jobs/job[@id='antigone_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/ship/select[@faction='antigone']/@tags">[military, tm]</replace> 
-  <replace sel="/jobs/job[@id='antigone_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/ship/select[@faction='antigone']/@tags">[military, tm]</replace> 
-  <replace sel="/jobs/job[@id='antigone_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace> 
-  <!--HOLY ORDER-->
-  <!--PARANID-->
-  <!--TRINITY-->
-  <!--TELADI-->
-  <!--MINISTRY-->
-  <!--SPLIT-->  
-  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector'][@name='{20204,2901}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
-  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/ship/select[@faction='split']/@tags">[military, tm]</replace>  
-  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_colonial'][@name='{20204,10050}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
-  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_colonial_mission'][@name='{20204,10050}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
-  <replace sel="/jobs/job[@id='zyarth_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace>   
-  <!--COURT-->  
-  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector'][@name='{20204,2901}']/ship/select[@faction='court']/@tags">[military, tm]</replace>
-  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector'][@name='{20204,2901}']/subordinates/subordinate[@job='court_frigate_escort_m']/@job">court_fighter_escort_s_frigate</replace> 
-  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/ship/select[@faction='court']/@tags">[military, tm]</replace> 
-  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='court_frigate_escort_m']/@job">court_fighter_escort_s_frigate</replace>  
-  <replace sel="/jobs/job[@id='court_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace>
-  <remove sel="/jobs/job[@id='court_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@variation"/>  
-  <!--FREE FAMILIES-->
-  <!--FALLEN SPLIT-->  
-  <remove sel="//jobs/job[@id='fallensplit_panther_mixed_cluster']" />	<!--VRO: Removed since the Cheetah replaces it for Free Families and Fallen Split-->   
-  <!--TERRAN-->
-  <!--PIONEERS-->
-  <!--VIGOR-->
-  <!--RIPTIDE-->
-  <!--BORON-->
-  <add sel="/jobs/job[@id='boron_bogas_trader_l'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_bogas_trader_m'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_bio_trader_l'][@name='{20204,1301}']/location[@faction='boron']" type="@matchextension">false</add>
-  <add sel="/jobs/job[@id='boron_bio_trader_m'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add>   
-  <add sel="/jobs/job[@id='boron_food_trader_s'][@name='{20204,1801}']/location[@faction='boron']" type="@matchextension">false</add>   
-  <add sel="/jobs/job[@id='boron_medical_trader_s'][@name='{20204,10011}']/location[@faction='boron']" type="@matchextension">false</add>    
-  <add sel="/jobs/job[@id='boron_energycell_trader_l'][@name='{20204,101}']/location[@faction='boron']" type="@matchextension">false</add>    
-  <add sel="/jobs/job[@id='boron_energycell_trader_m'][@name='{20204,201}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_energycell_trader_s'][@name='{20204,201}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_equipment_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_equipment_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_construction_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_construction_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>    
-  <add sel="/jobs/job[@id='boron_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='boron']" type="@matchextension">false</add>
-  <add sel="/jobs/job[@id='boron_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='boron']" type="@matchextension">false</add>   
-  <add sel="/jobs/job[@id='boron_tech_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_tech_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_tech_trader_s'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_water_trader_l'][@name='{20204,1501}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_water_trader_m'][@name='{20204,1601}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_stationtrader_l'][@name='{20204,701}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_stationtrader_m'][@name='{20204,801}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='boron']" type="@matchextension">false</add>   
-  <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector'][@name='{20204,3201}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_destroyer_patrol_l_border_only'][@name='{20204,3301}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_destroyer_patrol_l_leader'][@name='{20204,3301}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_corvette_patrol_m_sector_exp'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_exp_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_border_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add>   
-  <add sel="/jobs/job[@id='boron_stationtrader_m'][@name='{20204,801}']/location[@faction='boron']" type="@matchextension">false</add> 
-  <add sel="/jobs/job[@id='boron_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>   
-  
- 
+
+  <!--VRO-->
+  <remove sel="//jobs/job[@id='xenon_patrol_xl_u']" />
+  <remove sel="//jobs/job[@id='xenon_fighter_escort_s_xenu']" />  
   
 <!--VIG Rework-->
 <!--
@@ -6043,5 +4155,404 @@
       <owner exact="loanshark" overridenpc="true"/>
     </ship>
   </job>
-</add>   
+</add>
+
+	<!--Modified Jobs-->
+  <!--ARGON-->
+  <add sel="/jobs/job[@id='argon_bio_trader_l'][@name='{20204,1301}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_bio_trader_m'][@name='{20204,1401}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_food_trader_s'][@name='{20204,1801}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_medical_trader_s'][@name='{20204,10011}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_energycell_trader_l'][@name='{20204,101}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_energycell_trader_m'][@name='{20204,201}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_energycell_trader_s'][@name='{20204,201}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_equipment_trader_l'][@name='{20204,301}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_equipment_trader_m'][@name='{20204,401}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_construction_trader_l'][@name='{20204,301}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_construction_trader_m'][@name='{20204,401}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_tech_trader_l'][@name='{20204,301}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_tech_trader_m'][@name='{20204,401}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_tech_trader_s'][@name='{20204,401}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_water_trader_l'][@name='{20204,1501}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_water_trader_m'][@name='{20204,1601}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_stationtrader_m'][@name='{20204,801}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_stationtrader_l'][@name='{20204,701}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='argon']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='argon_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='argon']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='argon_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='argon']" type="@matchextension">false</add> 
+  
+  
+  <replace sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/ship/select[@faction='argon']/@tags">[military, tm]</replace>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@assignment">attack</add>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@group">2</add>    
+  <replace sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/ship/select[@faction='argon']/@tags">[military, tm]</replace>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@assignment">attack</add>
+  <add sel="/jobs/job[@id='argon_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='argon_fighter_escort_s_frigate']" type="@group">2</add>    
+  <!--ANTIGONE-->  
+  <add sel="/jobs/job[@id='antigone_bio_trader_l'][@name='{20204,1301}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_bio_trader_m'][@name='{20204,1401}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_food_trader_s'][@name='{20204,1801}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_medical_trader_s'][@name='{20204,10011}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_energycell_trader_l'][@name='{20204,101}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_energycell_trader_m'][@name='{20204,201}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_energycell_trader_s'][@name='{20204,201}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_equipment_trader_l'][@name='{20204,301}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_equipment_trader_m'][@name='{20204,401}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_construction_trader_l'][@name='{20204,301}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_construction_trader_m'][@name='{20204,401}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_tech_trader_l'][@name='{20204,301}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_tech_trader_m'][@name='{20204,401}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_stationtrader_m'][@name='{20204,801}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_stationtrader_l'][@name='{20204,701}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='antigone']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='antigone_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='antigone']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='antigone_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='antigone']" type="@matchextension">false</add>   
+  
+  <replace sel="/jobs/job[@id='antigone_frigate_patrol_m_sector_exp'][@name='{20204,2901}']/ship/select[@faction='antigone']/@tags">[military, tm]</replace> 
+  <replace sel="/jobs/job[@id='antigone_frigate_patrol_m_sector_exp_mission'][@name='{20204,2901}']/ship/select[@faction='antigone']/@tags">[military, tm]</replace> 
+  <replace sel="/jobs/job[@id='antigone_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace> 
+  <!--HOLY ORDER-->
+  <add sel="/jobs/job[@id='holyorder_bio_trader_l'][@name='{20204,1301}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_bio_trader_m'][@name='{20204,1401}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_food_trader_s'][@name='{20204,1801}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_medical_trader_s'][@name='{20204,10011}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_energycell_trader_l'][@name='{20204,101}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_energycell_trader_m'][@name='{20204,201}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_energycell_trader_s'][@name='{20204,201}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_equipment_trader_l'][@name='{20204,301}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_equipment_trader_m'][@name='{20204,401}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_construction_trader_l'][@name='{20204,301}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_construction_trader_m'][@name='{20204,401}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_tech_trader_l'][@name='{20204,301}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_tech_trader_m'][@name='{20204,401}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_tech_trader_s'][@name='{20204,401}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_water_trader_l'][@name='{20204,1501}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_water_trader_m'][@name='{20204,1601}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_stationtrader_m'][@name='{20204,801}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_stationtrader_l'][@name='{20204,701}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='holyorder']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='holyorder_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='holyorder']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='holyorder_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='holyorder']" type="@matchextension">false</add>   
+  <!--PARANID-->
+  <add sel="/jobs/job[@id='paranid_bio_trader_l'][@name='{20204,1301}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_bio_trader_m'][@name='{20204,1401}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_food_trader_s'][@name='{20204,1801}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_medical_trader_s'][@name='{20204,10011}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_energycell_trader_l'][@name='{20204,101}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_energycell_trader_m'][@name='{20204,201}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_energycell_trader_s'][@name='{20204,201}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_equipment_trader_l'][@name='{20204,301}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_equipment_trader_m'][@name='{20204,401}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_construction_trader_l'][@name='{20204,301}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_construction_trader_m'][@name='{20204,401}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_tech_trader_l'][@name='{20204,301}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_tech_trader_m'][@name='{20204,401}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_tech_trader_s'][@name='{20204,401}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_water_trader_l'][@name='{20204,1501}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_water_trader_m'][@name='{20204,1601}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_stationtrader_m'][@name='{20204,801}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_stationtrader_l'][@name='{20204,701}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='paranid']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='paranid_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='paranid']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='paranid_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='paranid']" type="@matchextension">false</add>   
+  <!--TRINITY-->
+  <add sel="/jobs/job[@id='trinity_bio_trader_l'][@name='{20204,1301}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_bio_trader_m'][@name='{20204,1401}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_food_trader_s'][@name='{20204,1801}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_medical_trader_s'][@name='{20204,10011}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_energycell_trader_l'][@name='{20204,101}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_energycell_trader_m'][@name='{20204,201}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_energycell_trader_s'][@name='{20204,201}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_equipment_trader_l'][@name='{20204,301}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_equipment_trader_m'][@name='{20204,401}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_construction_trader_l'][@name='{20204,301}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_construction_trader_m'][@name='{20204,401}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_tech_trader_l'][@name='{20204,301}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_tech_trader_m'][@name='{20204,401}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_tech_trader_s'][@name='{20204,401}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_water_trader_l'][@name='{20204,1501}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_water_trader_m'][@name='{20204,1601}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_stationtrader_m'][@name='{20204,801}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_stationtrader_l'][@name='{20204,701}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='trinity']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='trinity_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='trinity']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='trinity_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='trinity']" type="@matchextension">false</add>   
+  <!--TELADI-->
+  <add sel="/jobs/job[@id='teladi_bio_trader_l'][@name='{20204,1301}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_bio_trader_m'][@name='{20204,1401}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_food_trader_s'][@name='{20204,1801}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_medical_trader_s'][@name='{20204,10011}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_energycell_trader_l'][@name='{20204,101}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_energycell_trader_m'][@name='{20204,201}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_energycell_trader_s'][@name='{20204,201}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_equipment_trader_l'][@name='{20204,301}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_equipment_trader_m'][@name='{20204,401}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_construction_trader_l'][@name='{20204,301}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_construction_trader_m'][@name='{20204,401}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_tech_trader_l'][@name='{20204,301}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_tech_trader_m'][@name='{20204,401}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_tech_trader_s'][@name='{20204,401}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_water_trader_l'][@name='{20204,1501}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_water_trader_m'][@name='{20204,1601}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_stationtrader_m'][@name='{20204,801}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_stationtrader_l'][@name='{20204,701}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='teladi']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='teladi_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='teladi']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='teladi_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='teladi']" type="@matchextension">false</add>   
+  <!--MINISTRY-->
+  <!--SPLIT-->  
+  <add sel="/jobs/job[@id='zyarth_food_trader_l'][@name='{20204,1301}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_food_trader_m'][@name='{20204,1401}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_food_trader_s'][@name='{20204,1801}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_medical_trader_s'][@name='{20204,10011}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_energycell_trader_l'][@name='{20204,101}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_energycell_trader_m'][@name='{20204,201}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_energycell_trader_s'][@name='{20204,201}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_equipment_trader_l'][@name='{20204,301}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_equipment_trader_m'][@name='{20204,401}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_construction_trader_l'][@name='{20204,301}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_construction_trader_m'][@name='{20204,401}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_tech_trader_l'][@name='{20204,301}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_tech_trader_m'][@name='{20204,401}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_tech_trader_s'][@name='{20204,401}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_water_trader_l'][@name='{20204,1501}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_water_trader_m'][@name='{20204,1601}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_stationtrader_m'][@name='{20204,801}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_stationtrader_l'][@name='{20204,701}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='split']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='zyarth_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='split']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='zyarth_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='split']" type="@matchextension">false</add>   
+  
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector'][@name='{20204,2901}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/ship/select[@faction='split']/@tags">[military, tm]</replace>  
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_colonial'][@name='{20204,10050}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='zyarth_frigate_patrol_m_sector_colonial_mission'][@name='{20204,10050}']/ship/select[@faction='split']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='zyarth_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace>   
+  <!--COURT-->  
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector'][@name='{20204,2901}']/ship/select[@faction='court']/@tags">[military, tm]</replace>
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector'][@name='{20204,2901}']/subordinates/subordinate[@job='court_frigate_escort_m']/@job">court_fighter_escort_s_frigate</replace> 
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/ship/select[@faction='court']/@tags">[military, tm]</replace> 
+  <replace sel="/jobs/job[@id='court_frigate_patrol_m_sector_mission'][@name='{20204,2901}']/subordinates/subordinate[@job='court_frigate_escort_m']/@job">court_fighter_escort_s_frigate</replace>  
+  <replace sel="/jobs/job[@id='court_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@wing">4</replace>
+  <remove sel="/jobs/job[@id='court_fighter_escort_s_frigate'][@name='{20204,2901}']/quota/@variation"/>  
+  <!--FREE FAMILIES-->
+  <add sel="/jobs/job[@id='freesplit_food_trader_l'][@name='{20204,1301}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_food_trader_m'][@name='{20204,1401}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_food_trader_s'][@name='{20204,1801}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_medical_trader_s'][@name='{20204,10011}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_energycell_trader_l'][@name='{20204,101}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_energycell_trader_m'][@name='{20204,201}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_energycell_trader_s'][@name='{20204,201}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_equipment_trader_l'][@name='{20204,301}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_equipment_trader_m'][@name='{20204,401}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_construction_trader_l'][@name='{20204,301}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_construction_trader_m'][@name='{20204,401}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_tech_trader_l'][@name='{20204,301}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_tech_trader_m'][@name='{20204,401}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_tech_trader_s'][@name='{20204,401}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_water_trader_l'][@name='{20204,1501}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_water_trader_m'][@name='{20204,1601}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_stationtrader_m'][@name='{20204,801}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_stationtrader_l'][@name='{20204,701}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='freesplit']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='freesplit_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='freesplit']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='freesplit_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='freesplit']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='freesplit_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='freesplit']" type="@matchextension">false</add>   
+  <!--FALLEN SPLIT-->  
+  <remove sel="//jobs/job[@id='fallensplit_panther_mixed_cluster']" />	<!--VRO: Removed since the Cheetah replaces it for Free Families and Fallen Split-->   
+  <!--TERRAN-->
+  <add sel="/jobs/job[@id='terran_food_trader_l'][@name='{20204,1301}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_food_trader_m'][@name='{20204,1401}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_food_trader_s'][@name='{20204,1801}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_medical_trader_s'][@name='{20204,10011}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_energycell_trader_l'][@name='{20204,101}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_energycell_trader_m'][@name='{20204,201}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_energycell_trader_s'][@name='{20204,201}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_equipment_trader_l'][@name='{20204,301}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_equipment_trader_m'][@name='{20204,401}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_construction_trader_l'][@name='{20204,301}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_construction_trader_m'][@name='{20204,401}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_tech_trader_l'][@name='{20204,301}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_tech_trader_m'][@name='{20204,401}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_tech_trader_s'][@name='{20204,401}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_stationtrader_m'][@name='{20204,801}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_stationtrader_l'][@name='{20204,701}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='terran']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='terran_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='terran']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='terran_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='terran']" type="@matchextension">false</add>   
+  <!--PIONEERS-->
+  <add sel="/jobs/job[@id='pioneers_food_trader_l'][@name='{20204,1301}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_food_trader_m'][@name='{20204,1401}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_food_trader_s'][@name='{20204,1801}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_medical_trader_s'][@name='{20204,10011}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_energycell_trader_l'][@name='{20204,101}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_energycell_trader_m'][@name='{20204,201}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_energycell_trader_s'][@name='{20204,201}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_equipment_trader_l'][@name='{20204,301}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_equipment_trader_m'][@name='{20204,401}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_construction_trader_l'][@name='{20204,301}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_construction_trader_m'][@name='{20204,401}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_tech_trader_l'][@name='{20204,301}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_tech_trader_m'][@name='{20204,401}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_tech_trader_s'][@name='{20204,401}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_stationtrader_m'][@name='{20204,801}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_stationtrader_l'][@name='{20204,701}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='pioneers']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='pioneers_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='pioneers']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='pioneers_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='pioneers']" type="@matchextension">false</add>   
+  <!--VIGOR-->
+  <!--RIPTIDE-->
+  <!--BORON-->
+  <add sel="/jobs/job[@id='boron_bogas_trader_l'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_bogas_trader_m'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_bio_trader_l'][@name='{20204,1301}']/location[@faction='boron']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='boron_bio_trader_m'][@name='{20204,1401}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_food_trader_s'][@name='{20204,1801}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_medical_trader_s'][@name='{20204,10011}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_energycell_trader_l'][@name='{20204,101}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_energycell_trader_m'][@name='{20204,201}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_energycell_trader_s'][@name='{20204,201}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_equipment_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_equipment_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_construction_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_construction_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_ship_construction_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_ship_construction_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_refinedgas_trader_l'][@name='{20204,501}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_refinedgas_trader_m'][@name='{20204,601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_refinedmineral_trader_l'][@name='{20204,501}']/location[@faction='boron']" type="@matchextension">false</add>
+  <add sel="/jobs/job[@id='boron_refinedmineral_trader_m'][@name='{20204,601}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_tech_trader_l'][@name='{20204,301}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_tech_trader_m'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_tech_trader_s'][@name='{20204,401}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_water_trader_l'][@name='{20204,1501}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_water_trader_m'][@name='{20204,1601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_stationtrader_l'][@name='{20204,701}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_stationtrader_m'][@name='{20204,801}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_l_liquid'][@name='{20204,5701}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_free_miner_m_liquid'][@name='{20204,5701}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_l_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_m_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_s_mineral'][@name='{20204,5601}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_l_ice'][@name='{20204,2001}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_free_miner_m_ice'][@name='{20204,2001}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_carrier_patrol_l_sector'][@name='{20204,3201}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_destroyer_patrol_l_border_only'][@name='{20204,3301}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_destroyer_patrol_l_leader'][@name='{20204,3301}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_corvette_patrol_m_sector_exp'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_exp_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add> 
+  <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_border_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add>   
+  <add sel="/jobs/job[@id='boron_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>  
+  <add sel="/jobs/job[@id='boron_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>    
 </diff>

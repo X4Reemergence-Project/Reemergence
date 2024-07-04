@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_ter_medicalsupplies_3_macro" class="production">
+    <component ref="prod_ter_medicalsupplies" />
+    <properties>
+      <identification name="{20104,15301} x3" shortname="{20104,15303} x3" makerrace="terran" description="{20104,15302}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="2000" shield="10000" />
+      <hull max="240000" />
+      <production wares="medicalsupplies medicalsupplies medicalsupplies">
+        <queue>
+          <item ware="medicalsupplies" method="terran" />	  
+        </queue>
+      </production>	  
+      <workforce max="270" />
+    </properties>
+  </macro>
+</macros>

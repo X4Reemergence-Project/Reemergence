@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="toa_khaak">
+<cues>
+<!--Find KHA <-> VIG Gates-->
+  <cue name="Find_Gates" instantiate="false">
+	<conditions>
+	  <check_any>
+		<event_universe_generated/>
+		<event_cue_signalled cue="md.Setup.Start"/>
+		<!--event_cue_signalled cue="md.X4Ep1_Mentor_Subscriptions.Add_Player_Office_Trophy"/-->	
+	  </check_any>
+	</conditions>	
+	<delay min="1min" />
+	<actions>
+	  <find_sector macro="macro.cluster_REM28_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$KHASector" />
+	  <find_sector macro="macro.cluster_502_Sector001_macro" space="player.galaxy" extension="'ego_dlc_pirate'" required="true" name="$VIGSector" />
+	  
+	  <!-- KHA Sector <-> VIG Sector -->
+	  <find_gate name="$KHAGate" multiple="true" space="$KHASector" active="false" />
+	  <do_for_each name="$g" in="$KHAGate">
+	  <do_if value=" ($g.exit.exists) and ($g.exit.sector == $VIGSector)">
+	  <set_value name="$VIG_KHAGate" exact="$g.exit" />
+	  <set_value name="$KHA_VIGGate" exact="$g" />
+	  </do_if>
+	  </do_for_each>
+	  <remove_value name="$KHAGate" />	  
+	  <set_object_active object="$KHA_VIGGate" />		  
+	</actions>	
+  </cue>
+  
+<!--
+  <cue name="ToA_Khaak_Unlock" instantiate="false">
+	<conditions>			
+	  <event_cue_completed cue="BuildYacht"/>				
+	</conditions>
+	<actions>
+			
+	</actions>
+  </cue>
+-->  
+</cues>
+</mdscript>

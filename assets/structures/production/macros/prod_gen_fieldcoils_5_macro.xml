@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_gen_fieldcoils_5_macro" class="production">
+    <component ref="prod_gen_fieldcoils" />
+    <properties>
+      <identification name="{20104,11101} x5" shortname="{20104,11103} x5" description="{20104,11102}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="1000" shield="5000" />
+      <hull max="149000" />
+      <secrecy level="2" />
+      <production wares="fieldcoils fieldcoils fieldcoils fieldcoils fieldcoils">
+        <queue>
+          <item ware="fieldcoils" />		  
+        </queue>
+      </production>	
+      <workforce max="4050" />
+    </properties>
+  </macro>
+</macros>

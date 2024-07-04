@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_gen_refinedmetals_5_macro" class="production">
+    <component ref="prod_gen_refinedmetals" />
+    <properties>
+      <identification name="{20104,12301} x5" shortname="{20104,12303} x5" description="{20104,12302}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="1000" shield="5000" />
+      <hull max="210000" />
+      <secrecy level="2" />
+      <production wares="refinedmetals refinedmetals refinedmetals refinedmetals refinedmetals">
+        <queue>
+          <item ware="refinedmetals" />	  
+        </queue>
+      </production>	
+      <workforce max="1125" />
+    </properties>
+  </macro>
+</macros>

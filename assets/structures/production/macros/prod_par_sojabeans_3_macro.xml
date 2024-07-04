@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_par_sojabeans_3_macro" class="production">
+    <component ref="prod_par_sojabeans" />
+    <properties>
+      <identification name="{20104,14001} x3" shortname="{20104,14003} x3" makerrace="paranid" description="{20104,14002}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="1000" shield="5000" />
+      <hull max="259000" />
+      <secrecy level="2" />
+      <production wares="sojabeans sojabeans sojabeans">
+        <queue>
+          <item ware="sojabeans" method="paranid" />		  
+        </queue>
+      </production>
+      <workforce max="525" />
+    </properties>
+  </macro>
+</macros>

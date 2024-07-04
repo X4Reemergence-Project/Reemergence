@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_gen_quantumtubes_5_macro" class="production">
+    <component ref="prod_gen_quantumtubes" />
+    <properties>
+      <identification name="{20104,12201} x5" shortname="{20104,12203} x5" description="{20104,12202}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="1000" shield="5000" />
+      <hull max="148000" />
+      <secrecy level="2" />
+      <production wares="quantumtubes quantumtubes quantumtubes quantumtubes quantumtubes">
+        <queue>
+          <item ware="quantumtubes" />		  
+        </queue>
+      </production>	
+      <workforce max="1125" />
+    </properties>
+  </macro>
+</macros>

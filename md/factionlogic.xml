@@ -2,12 +2,24 @@
 <diff>
   <add sel="//cue[@name='FactionLogicManagers']/cues">
   
-	<cue name="SetupOTAS" version="2">
+	<cue name="SetupCorps" version="2">
 	  <actions>
 		<set_value name="md.$FactionData.{faction.otas}" exact="table[]" />
+		<set_value name="md.$FactionData.{faction.jonferco}" exact="table[]" />
+		<set_value name="md.$FactionData.{faction.strongarms}" exact="table[]" />
+		<set_value name="md.$FactionData.{faction.nmmc}" exact="table[]" />
+		<set_value name="md.$FactionData.{faction.atreus}" exact="table[]" />
+		<set_value name="md.$FactionData.{faction.atf}" exact="table[]" />	
+		<set_value name="md.$FactionData.{faction.xaar}" exact="table[]" />			
 	  </actions>
 	  <patch sinceversion="2">
-		<set_value name="OTASFactionLogic.$PreferredHQSpaceMacro" exact="macro.Cluster_REM53_Sector001_macro" />
+		<set_value name="OTASFactionLogic.$PreferredHQSpaceMacro" exact="macro.Cluster_REM53_Sector001_macro" /><!--Legend's Home-->
+		<set_value name="JonfercoFactionLogic.$PreferredHQSpaceMacro" exact="macro.Cluster_REM77_Sector001_macro" /><!--Belt of Aguilar-->
+		<set_value name="StrongArmsFactionLogic.$PreferredHQSpaceMacro" exact="macro.Cluster_03_Sector001_macro" /><!--Thyn's Excavation-->
+		<set_value name="NMMCFactionLogic.$PreferredHQSpaceMacro" exact="macro.Cluster_REM54_Sector001_macro" /><!--Memory of Profit IX-->
+		<set_value name="AtreusFactionLogic.$PreferredHQSpaceMacro" exact="macro.Cluster_REM37_Sector001_macro" /><!--Queen's Harbour-->
+		<set_value name="ATFFactionLogic.$PreferredHQSpaceMacro" exact="macro.Cluster_REM75_Sector001_macro" />	<!--Titania-->	
+		<set_value name="XaarFactionLogic.$PreferredHQSpaceMacro" exact="macro.Cluster_422_Sector001_macro" /> <!--Wretched Skies X-->			
 	  </patch>
 	</cue>	
 
@@ -18,15 +30,117 @@
 		  <param name="BaseAggressionLevel" value="moodlevel.high"/>
 		  <param name="BaseAvariceLevel" value="moodlevel.normal"/>
 		  <param name="BaseLawfulness" value="0.6"/>
-		  <param name="PreferredHQSpaceMacro" value="macro.Cluster_REM53_Sector001_macro" comment="Legend's Home Alpha"/>
+		  <param name="PreferredHQSpaceMacro" value="macro.Cluster_REM53_Sector001_macro" comment="Legend's Home"/>
 		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation']"/>
-		  <param name="SatelliteNetworkGoal" value="20"/>
-		  <param name="LasertowerNetworkGoal" value="5"/>
+		  <param name="SatelliteNetworkGoal" value="2"/>
+		  <param name="LasertowerNetworkGoal" value="2"/>
+          <param name="MinefieldGoalPerSector" value="3" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>		  
+		  <param name="DebugChance" value="0"/>
+		  <param name="DebugChance2" value="0"/>
+		</cue>
+	  </cues>
+	</cue>
+	<cue name="JonfercoFactionLogic">
+	  <cues>
+		<cue name="JonfercoFactionLogic_Manager" ref="Manager">
+		  <param name="Faction" value="faction.jonferco"/>
+		  <param name="BaseAggressionLevel" value="moodlevel.low"/>
+		  <param name="BaseAvariceLevel" value="moodlevel.high"/>
+		  <param name="BaseLawfulness" value="0.6"/>
+		  <param name="PreferredHQSpaceMacro" value="macro.Cluster_REM77_Sector001_macro" comment="Belt of Aguilar"/>
+		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation', 'defensestation', 'any']"/>
+		  <param name="SatelliteNetworkGoal" value="2"/>
+		  <param name="LasertowerNetworkGoal" value="2"/>
           <param name="MinefieldGoalPerSector" value="1" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>		  
 		  <param name="DebugChance" value="0"/>
 		  <param name="DebugChance2" value="0"/>
 		</cue>
 	  </cues>
 	</cue>
+	<cue name="StrongArmsFactionLogic">
+	  <cues>
+		<cue name="StrongArmsFactionLogic_Manager" ref="Manager">
+		  <param name="Faction" value="faction.strongarms"/>
+		  <param name="BaseAggressionLevel" value="moodlevel.high"/>
+		  <param name="BaseAvariceLevel" value="moodlevel.normal"/>
+		  <param name="BaseLawfulness" value="0.2"/>
+		  <param name="PreferredHQSpaceMacro" value="macro.Cluster_REM34_Sector001_macro" comment="Thyn's Excavation"/>
+		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation', 'defensestation', 'any']"/>
+		  <param name="SatelliteNetworkGoal" value="2"/>
+		  <param name="LasertowerNetworkGoal" value="3"/>
+          <param name="MinefieldGoalPerSector" value="5" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>		  
+		  <param name="DebugChance" value="0"/>
+		  <param name="DebugChance2" value="0"/>
+		</cue>
+	  </cues>
+	</cue>
+	<cue name="NMMCFactionLogic">
+	  <cues>
+		<cue name="NMMCFactionLogic_Manager" ref="Manager">
+		  <param name="Faction" value="faction.nmmc"/>
+		  <param name="BaseAggressionLevel" value="moodlevel.low"/>
+		  <param name="BaseAvariceLevel" value="moodlevel.high"/>
+		  <param name="BaseLawfulness" value="0.4"/>
+		  <param name="PreferredHQSpaceMacro" value="macro.Cluster_03_Sector001_macro" comment="Memory of Profit IX"/>
+		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation', 'defensestation', 'any']"/>
+		  <param name="SatelliteNetworkGoal" value="3"/>
+		  <param name="LasertowerNetworkGoal" value="2"/>
+          <param name="MinefieldGoalPerSector" value="3" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>		  
+		  <param name="DebugChance" value="0"/>
+		  <param name="DebugChance2" value="0"/>
+		</cue>
+	  </cues>
+	</cue>
+	<cue name="AtreusFactionLogic">
+	  <cues>
+		<cue name="AtreusFactionLogic_Manager" ref="Manager">
+		  <param name="Faction" value="faction.atreus"/>
+		  <param name="BaseAggressionLevel" value="moodlevel.normal"/>
+		  <param name="BaseAvariceLevel" value="moodlevel.normal"/>
+		  <param name="BaseLawfulness" value="0.8"/>
+		  <param name="PreferredHQSpaceMacro" value="macro.Cluster_REM37_Sector001_macro" comment="Queen's Harbour"/>
+		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation', 'defensestation', 'any']"/>
+		  <param name="SatelliteNetworkGoal" value="2"/>
+		  <param name="LasertowerNetworkGoal" value="4"/>
+          <param name="MinefieldGoalPerSector" value="3" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>		  
+		  <param name="DebugChance" value="0"/>
+		  <param name="DebugChance2" value="0"/>
+		</cue>
+	  </cues>
+	</cue>
+	<cue name="ATFFactionLogic">
+	  <cues>
+		<cue name="ATFFactionLogic_Manager" ref="Manager">
+		  <param name="Faction" value="faction.atf"/>
+		  <param name="BaseAggressionLevel" value="moodlevel.high"/>
+		  <param name="BaseAvariceLevel" value="moodlevel.normal"/>
+		  <param name="BaseLawfulness" value="1.0"/>
+		  <param name="PreferredHQSpaceMacro" value="macro.Cluster_REM75_Sector001_macro" comment="Titania"/>
+		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation', 'defensestation', 'any']"/>
+		  <param name="SatelliteNetworkGoal" value="3"/>
+		  <param name="LasertowerNetworkGoal" value="3"/>
+          <param name="MinefieldGoalPerSector" value="4" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>		  
+		  <param name="DebugChance" value="0"/>
+		  <param name="DebugChance2" value="0"/>
+		</cue>
+	  </cues>
+	</cue>
+	<cue name="XaarFactionLogic">
+	  <cues>
+		<cue name="XaarFactionLogic_Manager" ref="Manager">
+		  <param name="Faction" value="faction.xaar"/>
+		  <param name="BaseAggressionLevel" value="moodlevel.high"/>
+		  <param name="BaseAvariceLevel" value="moodlevel.normal"/>
+		  <param name="BaseLawfulness" value="1.0"/>
+		  <param name="PreferredHQSpaceMacro" value="macro.Cluster_442_Sector001_macro" comment="Wretched Skies X"/>
+		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation', 'defensestation', 'any']"/>
+		  <param name="SatelliteNetworkGoal" value="3"/>
+		  <param name="LasertowerNetworkGoal" value="3"/>
+          <param name="MinefieldGoalPerSector" value="4" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>		  
+		  <param name="DebugChance" value="0"/>
+		  <param name="DebugChance2" value="0"/>
+		</cue>
+	  </cues>
+	</cue>	
   </add>	
 </diff>

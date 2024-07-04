@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_bor_plankton_3_macro" class="production">
+    <component ref="prod_bor_plankton" />
+    <properties>
+      <identification name="{20104,16101} x3" shortname="{20104,16103} x3" makerrace="boron" description="{20104,16102}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="1000" shield="5000" />
+      <hull max="135000" />
+      <secrecy level="2" />
+      <production wares="plankton plankton plankton">
+        <queue>
+          <item ware="plankton" />	  
+        </queue>
+      </production>	
+      <workforce max="120" />
+    </properties>
+  </macro>
+</macros>

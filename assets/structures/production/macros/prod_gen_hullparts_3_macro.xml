@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_gen_hullparts_3_macro" class="production">
+    <component ref="prod_gen_hullparts" />
+    <properties>
+      <identification name="{20104,11301} x3" shortname="{20104,11303} x3" description="{20104,11302}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="1000" shield="5000" />
+      <hull max="146000" />
+      <secrecy level="2" />
+      <production wares="hullparts hullparts hullparts">
+        <queue>
+          <item ware="hullparts" />	  
+        </queue>
+      </production>	
+      <workforce max="810" />
+    </properties>
+  </macro>
+</macros>

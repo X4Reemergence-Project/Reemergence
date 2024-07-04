@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="otas_setup" xsi:noNamespaceSchemaLocation="md.xsd">
+  <cues>
+	  <!--Will run once, either on gamestart or when a game is loaded where this mod was not active before-->
+	<cue name="Setup" namespace="this" version="3">
+	  <conditions>
+		<check_any>
+		  <event_universe_generated/>
+		  <event_cue_signalled cue="md.Setup.Start"/>
+		</check_any>
+	  </conditions>
+	  <actions>		
+		<do_if value="global.$smugglercoverfactions?">
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.otas}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.otas"/>
+		  </do_if>
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.jonferco}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.jonferco"/>
+		  </do_if>
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.strongarms}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.strongarms"/>
+		  </do_if>
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.nmmc}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.nmmc"/>
+		  </do_if>
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.atreus}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.atreus"/>
+		  </do_if>
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.atf}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.atf"/>
+		  </do_if>	
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.xaar}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.xaar"/>
+		  </do_if>		  
+		</do_if>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem53_sector001_macro"/>
+		<debug_text text="'Khaak Manager Ran'"/>	  
+	  </actions>
+	</cue>
+	
+	  <!--Run Start_Actions on a new game-->
+	<cue name="Start" namespace="this" version="2">
+	  <actions>
+		<include_actions ref="Start_Actions"/>
+		<cancel_cue cue="Game_Loaded"/>
+		<debug_text text="'Start Ran'"/>				
+	  </actions>
+	</cue>
+	
+	  <!--Run Start_Actions when loading a savegame with the mod enabled for the first time-->
+	<cue name="Game_Loaded" namespace="this">
+		<conditions>
+		  <event_game_loaded/>
+		</conditions>
+	  <actions>
+		<include_actions ref="Start_Actions"/>
+		<cancel_cue cue="Start"/>
+		<debug_text text="'Save Loaded Ran'"/>				
+	  </actions>
+	</cue>
+	
+	<library name="Start_Actions">
+	  <actions>
+		<do_if value="not md.$EquipmentTable?">
+		  <set_value name="md.$EquipmentTable" exact="table[]"/>
+		</do_if>
+		<get_ware_definition result="md.$EquipmentTable.{faction.otas}" faction="faction.otas" flags="equipment"/>
+		<get_ware_definition result="md.$EquipmentTable.{faction.jonferco}" faction="faction.jonferco" flags="equipment"/>
+		<get_ware_definition result="md.$EquipmentTable.{faction.strongarms}" faction="faction.strongarms" flags="equipment"/>
+		<get_ware_definition result="md.$EquipmentTable.{faction.nmmc}" faction="faction.nmmc" flags="equipment"/>
+		<get_ware_definition result="md.$EquipmentTable.{faction.atreus}" faction="faction.atreus" flags="equipment"/>
+		<get_ware_definition result="md.$EquipmentTable.{faction.atf}" faction="faction.atf" flags="equipment"/>	
+		<get_ware_definition result="md.$EquipmentTable.{faction.xaar}" faction="faction.xaar" flags="equipment"/>		
+		<do_if value="not md.$FactionData?">
+		  <set_value name="md.$FactionData" exact="table[]"/>
+		</do_if>	
+		<do_if value="not md.$FactionData.{faction.otas}?">
+		  <set_value name="md.$FactionData.{faction.otas}" exact="table[]"/>
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.jonferco}?">
+		  <set_value name="md.$FactionData.{faction.jonferco}" exact="table[]"/>
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.strongarms}?">
+		  <set_value name="md.$FactionData.{faction.strongarms}" exact="table[]"/>
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.nmmc}?">
+		  <set_value name="md.$FactionData.{faction.nmmc}" exact="table[]"/>
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.atreus}?">
+		  <set_value name="md.$FactionData.{faction.atreus}" exact="table[]"/>		  
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.atf}?">
+		  <set_value name="md.$FactionData.{faction.atf}" exact="table[]"/>
+		</do_if>	
+		<do_if value="not md.$FactionData.{faction.xaar}?">
+		  <set_value name="md.$FactionData.{faction.xaar}" exact="table[]"/>
+		</do_if>			
+		<debug_text text="'Start Actions Ran'"/>				
+		</actions>
+	</library>
+	<cue name="Update_HQ_Plot_Data">
+	  <conditions>
+		<event_cue_completed cue="md.X4Ep1_Mentor_Subscriptions.Start"/>
+	  </conditions>
+	  <actions>
+		<append_list_elements name="md.X4Ep1_Mentor_Subscriptions.Start.$SignalLeakStationFactions" other="[faction.otas, faction.jonferco, faction.strongarms, faction.nmmc, faction.atreus, faction.atf, faction.xaar]"/>
+	  </actions>
+	</cue>	
+  </cues>
+</mdscript>	

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="email_test">
+<cues>
+<!--E-Mail-->
+  <cue name="AoL_test" instantiate="false">
+	<conditions>			
+	  <event_cue_signalled cue="md.Setup.Start" />				
+	</conditions>
+	<delay min="1min" max="2min"/>
+	<actions>
+	  <write_incoming_message title="{19530011,1}" highpriority="false"
+							 source="{19530011,2}"
+							   text="{19530011,3} + {19530011,4}"/>				
+	  <debug_text text="'Inbox, spam'" />				
+	</actions>
+  </cue>
+
+  <cue name="AoL_test_b" instantiate="false">
+	<conditions>			
+	  <event_cue_signalled cue="md.Setup.Start" />				
+	</conditions>
+	<delay min="3min" max="5min"/>
+	<actions>
+	  <write_incoming_message title="{19530011,1}" highpriority="true"
+							 source="{19530011,2}"
+							   text="{19530011,3} + {19530011,4}"/>				
+	  <debug_text text="'Inbox, spam'" />				
+	</actions>
+  </cue>  
+</cues>
+</mdscript>

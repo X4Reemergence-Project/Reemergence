@@ -1,1721 +1,2117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff>
-<!--
-	<add sel="/wares/ware[@id='']">
-		<owner faction=""/>
-	</add>
--->	
-	<!--SHIPS-->
-	<add sel="/wares/ware[@id='ship_arg_xs_police_01_a']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='ship_gen_m_tugboat_01_a']">
-		<owner faction="otas"/>
-		<owner faction="freesplit"/>
-		<owner faction="split"/>
-	</add>	
-	<!--STATION MODULES-->	
-	<replace sel="/wares/ware[@id='struct_otas_cross_01']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='module_otas_prod_stimulants']/owner[@faction='argon']/@faction">otas</replace>		
-	<!--TURRETS-->
-	<replace sel="/wares/ware[@id='missile_otas_l_anemoi']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='turret_otas_l_palc']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='turret_otas_xl_firestorm']/owner[@faction='argon']/@faction">otas</replace>
-	<replace sel="/wares/ware[@id='turret_otas_l_missilefrigate']/owner[@faction='argon']/@faction">otas</replace>	
-	<!--WEAPONS-->
-	<replace sel="/wares/ware[@id='weapon_otas_l_destroyer']/owner[@faction='argon']/@faction">otas</replace>		
-	<replace sel="/wares/ware[@id='weapon_otas_s_gatling']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='weapon_otas_s_notus_launcher']/owner[@faction='argon']/@faction">otas</replace>		
-	<replace sel="/wares/ware[@id='weapon_otas_s_notus_bomb']/owner[@faction='argon']/@faction">otas</replace>				
-	<!-- SHIPS -->  
-	<replace sel="/wares/ware[@id='ship_otas_xl_tempest']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_l_aquilo']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_l_astraeus']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_l_boreas']/owner[@faction='argon']/@faction">otas</replace>		
-	<!--replace sel="/wares/ware[@id='ship_otas_l_mistral']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_l_zephyrus']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_m_skiron']/owner[@faction='argon']/@faction">otas</replace>		
-	<replace sel="/wares/ware[@id='ship_otas_m_sirokos']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_s_auster']/owner[@faction='argon']/@faction">otas</replace-->		
-	<replace sel="/wares/ware[@id='ship_otas_s_eurus']/owner[@faction='argon']/@faction">otas</replace>		
-	<replace sel="/wares/ware[@id='ship_otas_s_notus']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_s_solano']/owner[@faction='argon']/@faction">otas</replace>	
-	<!--replace sel="/wares/ware[@id='ship_otas_s_venti']/owner[@faction='argon']/@faction">otas</replace>		
-	<replace sel="/wares/ware[@id='ship_otas_xl_vesuvius']/owner[@faction='argon']/@faction">otas</replace>		
-	<replace sel="/wares/ware[@id='ship_otas_xl_genthus']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='ship_otas_xl_andaman']/owner[@faction='argon']/@faction">otas</replace-->
-	<remove sel="//wares/ware[@id='ship_spl_l_panther_a']/owner[@faction='freesplit']"/>
-	<remove sel="//wares/ware[@id='ship_spl_l_panther_a']/owner[@faction='fallensplit']"/>
-	<remove sel="/wares/ware[@id='ship_ter_l_carrier_01']"/>	<!--Remove VRO Chiba-->		
-<!--RE Wares-->
-	 <add sel="//wares">
-	<!--SHIPS-->
-    <ware id="ship_spl_l_cheetah" name="{19530007,700}" description="{19530007,800}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
-      <price min="6195057" average="6858890" max="7522724" />
-      <production time="90" amount="1" method="default" name="{20206,101}">
+  <add sel="/wares/production">
+	<method id="fusioncore" name="Fusion Power"/>
+	<method id="mamcore" name="M/AM Power"/>
+  </add>
+  <add sel="/wares/ware[@id='energycells']">
+    <production time="120" amount="1750" method="fusioncore" name="Fusion Core">
+	  <primary>
+		<ware ware="graphene" amount="30"/>
+		<ware ware="hydrogen" amount="255"/>
+		<ware ware="superfluidcoolant" amount="37"/>		  
+	  </primary>        
+	  <effects>
+        <effect type="work" product="1.15" />
+      </effects>
+    </production>
+    <production time="120" amount="1750" method="mamcore" name="M/AM Core">
+	  <primary>
+		<ware ware="hydrogen" amount="450"/>		  
+	  </primary>        
+	  <effects>
+        <effect type="work" product="1.15" />
+      </effects>
+    </production>
+  </add>  
+	<!--RE ENTRIES-->
+<add sel="//wares">
+	<!--RESEARCH-->  
+  <ware id="research_food3" name="Argon Food Rations x3" description="THIS IS A TEST" transport="research" volume="1" tags="nocustomgamestart research" sortorder="801">
+    <price min="1" average="1" max="1" />
+    <research time="10">
+      <primary>
+        <ware ware="energycells" amount="1" />
+      </primary>		  
+    </research>
+  </ware>
+  <ware id="research_food5" name="Argon Food Rations x5" description="THIS IS A TEST1" transport="research" volume="1" tags="nocustomgamestart research" sortorder="801">
+    <price min="1" average="1" max="1" />
+    <research time="10">
+      <primary>
+        <ware ware="energycells" amount="1" />
+      </primary>
+      <research>	  
+        <ware ware="research_food3" />
+      </research>	  
+    </research>
+  </ware> 
+	<!--POWER CORES-->	
+  <ware id="module_gen_prod_fusioncore" name="Fusion Power Core" description="Fusion Core" transport="container" volume="1" tags="module">
+    <price min="5655276" average="6653264" max="9934304" />
+    <production time="1225" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1040" />
+        <ware ware="energycells" amount="2080" />
+        <ware ware="hullparts" amount="3804" />
+        <ware ware="plasmaconductors" amount="230" />		
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_fusioncore_macro" />
+    <restriction licence="station_gen_advanced" />
+    <owner faction="alliance" />	
+    <owner faction="antigone" />
+    <owner faction="argon" />
+    <owner faction="boron" />
+    <owner faction="court" />	
+    <owner faction="freesplit" />	
+    <owner faction="holyorder" />
+    <owner faction="ministry" />	
+    <owner faction="paranid" />
+    <owner faction="split" />	
+    <owner faction="teladi" />
+    <owner faction="trinity" />	
+  </ware>
+  <ware id="module_gen_prod_mamcore" name="M/AM Power Core" description="M/AM Core" transport="container" volume="1" tags="module">
+    <price min="6148290" average="7070535" max="8131110" />
+    <production time="1225" amount="1" method="default" name="{20206,901}">
+      <primary>
+		<ware ware="computronicsubstrate" amount="360" />
+		<ware ware="energycells" amount="1500" />
+		<ware ware="metallicmicrolattice" amount="1375" />	
+		<ware ware="siliconcarbide" amount="300" />			  
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_mamcore_macro" />
+	<restriction licence="station_gen_advanced" />
+	<owner faction="pioneers" />
+	<owner faction="terran" />	
+  </ware> 
+	<!--MULTIPLIER MODULES-->
+		<!--ARGON-->
+  <ware id="module_arg_prod_foodrations_x3" name="{20104,13401} x3" description="{20104,13402}" transport="container" volume="1" tags="module">
+    <price min="4277655" average="5032536" max="5032536" />
+    <production time="2271" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="786" />
+        <ware ware="energycells" amount="1575" />
+        <ware ware="hullparts" amount="2883" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_food3" />
+      </research>
+    </research>
+    <component ref="prod_arg_foodrations_3_macro" />
+  </ware>
+  <ware id="module_arg_prod_foodrations_x5" name="{20104,13401} x5" description="{20104,13402}" transport="container" volume="1" tags="module">
+    <price min="7129425" average="8387560" max="9645695" />
+    <production time="3785" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="1310" />
+        <ware ware="energycells" amount="2625" />
+        <ware ware="hullparts" amount="4805" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_arg_foodrations_5_macro" />
+  </ware>  
+  <ware id="module_arg_prod_meat_x3" name="{20104,13501} x3" description="{20104,13502}" transport="container" volume="1" tags="module">
+    <price min="4049544" average="4764168" max="5478792" />
+    <production time="2250" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="744" />
+        <ware ware="energycells" amount="1491" />
+        <ware ware="hullparts" amount="2730" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_arg_meat_3_macro" />
+  </ware>
+  <ware id="module_arg_prod_meat_x5" name="{20104,13501} x5" description="{20104,13502}" transport="container" volume="1" tags="module">
+    <price min="6749240" average="7940280" max="9131320" />
+    <production time="3750" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="1240" />
+        <ware ware="energycells" amount="2485" />
+        <ware ware="hullparts" amount="4550" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_arg_meat_5_macro" />
+  </ware>  
+  <ware id="module_arg_prod_medicalsupplies_x3" name="{20104,11601} x3" description="{20104,11602}" transport="container" volume="1" tags="module">
+    <price min="1223505" average="1439418" max="1655331" />
+    <production time="2217" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="675" />
+        <ware ware="energycells" amount="1350" />
+        <ware ware="hullparts" amount="2469" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_arg_medicalsupplies_3_macro" />>
+  </ware>
+  <ware id="module_arg_prod_medicalsupplies_x5" name="{20104,11601} x5" description="{20104,11602}" transport="container" volume="1" tags="module">
+    <price min="6117525" average="7197090" max="8276655" />
+    <production time="3695" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="1125" />
+        <ware ware="energycells" amount="2250" />
+        <ware ware="hullparts" amount="4115" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_arg_medicalsupplies_5_macro" />
+  </ware>  
+  <ware id="module_arg_prod_spacefuel_x3" name="{20104,13601} x3" description="{20104,13602}" transport="container" volume="1" tags="module">
+    <price min="5205513" average="6124134" max="7042755" />
+    <production time="2343" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="957" />
+        <ware ware="energycells" amount="1914" />
+        <ware ware="hullparts" amount="3504" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_arg_spacefuel_3_macro" />
+  </ware>
+  <ware id="module_arg_prod_spacefuel_x5" name="{20104,13601} x5" description="{20104,13602}" transport="container" volume="1" tags="module">
+    <price min="8675855" average="10206890" max="11737925" />
+    <production time="3905" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="1595" />
+        <ware ware="energycells" amount="3190" />
+        <ware ware="hullparts" amount="5840" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_arg_spacefuel_5_macro" />
+  </ware>
+  <ware id="module_arg_prod_wheat_x3" name="{20104,13701} x3" description="{20104,13702}" transport="container" volume="1" tags="module">
+    <price min="4830474" average="5682912" max="6535350" />
+    <production time="2316" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="888" />
+        <ware ware="energycells" amount="1776" />
+        <ware ware="hullparts" amount="3252" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_arg_wheat_3_macro" />
+  </ware>
+  <ware id="module_arg_prod_wheat_x5" name="{20104,13701} x5" description="{20104,13702}" transport="container" volume="1" tags="module">
+    <price min="8050790" average="9471520" max="10892250" />
+    <production time="3860" amount="1" method="default" name="{20206,201}">
+      <primary>
+        <ware ware="claytronics" amount="1480" />
+        <ware ware="energycells" amount="2960" />
+        <ware ware="hullparts" amount="5420" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_arg_wheat_5_macro" />
+  </ware>
+	<!--GENERAL-->
+  <ware id="module_gen_prod_advancedcomposites_x3" name="{20104,10001} x3" description="{20104,10002}" transport="container" volume="1" tags="module">
+    <price min="10574718" average="12440844" max="14306970" />
+    <production time="2607" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1944" />
+        <ware ware="energycells" amount="3888" />
+        <ware ware="hullparts" amount="7119" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_advancedcomposites_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_advancedcomposites_x5" name="{20104,10001} x5" description="{20104,10002}" transport="container" volume="1" tags="module">
+    <price min="17624530" average="20734740" max="23844950" />
+    <production time="4345" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="3240" />
+        <ware ware="energycells" amount="6480" />
+        <ware ware="hullparts" amount="11865" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_advancedcomposites_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_advancedelectronics_x3" name="{20104,10201} x3" description="{20104,10202}" transport="container" volume="1" tags="module">
+    <price min="7868301" average="9256824" max="10645347" />
+    <production time="2496" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1446" />
+        <ware ware="energycells" amount="2895" />
+        <ware ware="hullparts" amount="5301" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_advancedelectronics_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_advancedelectronics_x5" name="{20104,10201} x5" description="{20104,10202}" transport="container" volume="1" tags="module">
+    <price min="13113835" average="15428040" max="17742245" />
+    <production time="4160" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="2410" />
+        <ware ware="energycells" amount="4825" />
+        <ware ware="hullparts" amount="8835" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_advancedelectronics_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_antimattercells_x3" name="{20104,10301} x3" description="{20104,10302}" transport="container" volume="1" tags="module">
+    <price min="1126431" average="1325214" max="1523997" />
+    <production time="1779" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="207" />
+        <ware ware="energycells" amount="414" />
+        <ware ware="hullparts" amount="759" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_antimattercells_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_antimattercells_x5" name="{20104,10301} x5" description="{20104,10302}" transport="container" volume="1" tags="module">
+    <price min="1877385" average="2208690" max="2539995" />
+    <production time="2965" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="345" />
+        <ware ware="energycells" amount="690" />
+        <ware ware="hullparts" amount="1265" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_antimattercells_5_macro" />
+  </ware>  
+  <ware id="module_gen_prod_antimatterconverters_x3" name="{20104,10401} x3" description="{20104,10402}" transport="container" volume="1" tags="module">
+    <price min="29044644" average="34170168" max="39295692" />
+    <production time="2979" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="5340" />
+        <ware ware="energycells" amount="10680" />
+        <ware ware="hullparts" amount="19548" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_antimatterconverters_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_antimatterconverters_x5" name="{20104,10401} x5" description="{20104,10402}" transport="container" volume="1" tags="module">
+    <price min="48407740" average="56950280" max="65492820" />
+    <production time="4965" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="8900" />
+        <ware ware="energycells" amount="17800" />
+        <ware ware="hullparts" amount="32580" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_antimatterconverters_5_macro" />
+  </ware>  
+  <ware id="module_gen_prod_claytronics_x3" name="{20104,10501} x3" description="{20104,10502}" transport="container" volume="1" tags="module">
+    <price min="46042596" average="54167760" max="62292924" />
+    <production time="3147" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="8466" />
+        <ware ware="energycells" amount="16926" />
+        <ware ware="hullparts" amount="30981" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_claytronics_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_claytronics_x5" name="{20104,10501} x5" description="{20104,10502}" transport="container" volume="1" tags="module">
+    <price min="76737660" average="90279600" max="103821540" />
+    <production time="5245" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="14110" />
+        <ware ware="energycells" amount="28210" />
+        <ware ware="hullparts" amount="51635" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_claytronics_5_macro" />
+  </ware>  
+  <ware id="module_gen_prod_dronecomponents_x3" name="{20104,10701} x3" description="{20104,10702}" transport="container" volume="1" tags="module">
+    <price min="19986804" average="23513886" max="27040968" />
+    <production time="2841" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="3675" />
+        <ware ware="energycells" amount="7347" />
+        <ware ware="hullparts" amount="13449" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_dronecomponents_3_macro" />
+  </ware>  
+  <ware id="module_gen_prod_dronecomponents_x5" name="{20104,10701} x5" description="{20104,10702}" transport="container" volume="1" tags="module">
+    <price min="33311340" average="39189810" max="45068280" />
+    <production time="4735" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="6125" />
+        <ware ware="energycells" amount="12245" />
+        <ware ware="hullparts" amount="22415" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_dronecomponents_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_engineparts_x3" name="{20104,10901} x3" description="{20104,10902}" transport="container" volume="1" tags="module">
+    <price min="6350067" average="7470666" max="8591265" />
+    <production time="2418" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1167" />
+        <ware ware="energycells" amount="2337" />
+        <ware ware="hullparts" amount="4278" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_engineparts_3_macro" />
+  </ware>  
+  <ware id="module_gen_prod_engineparts_x5" name="{20104,10901} x5" description="{20104,10902}" transport="container" volume="1" tags="module">
+    <price min="10583445" average="12451110" max="14318775" />
+    <production time="4030" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1945" />
+        <ware ware="energycells" amount="3895" />
+        <ware ware="hullparts" amount="7130" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_engineparts_5_macro" />
+  </ware>  
+  <ware id="module_gen_prod_fieldcoils_x3" name="{20104,11101} x3" description="{20104,11102}" transport="container" volume="1" tags="module">
+    <price min="28310013" average="33305898" max="38301783" />
+    <production time="2967" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="5205" />
+        <ware ware="energycells" amount="10410" />
+        <ware ware="hullparts" amount="19053" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_fieldcoils_3_macro" />
+  </ware>  
+  <ware id="module_gen_prod_fieldcoils_x5" name="{20104,11101} x5" description="{20104,11102}" transport="container" volume="1" tags="module">
+    <price min="47183355" average="55509830" max="63836305" />
+    <production time="4945" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="8675" />
+        <ware ware="energycells" amount="17350" />
+        <ware ware="hullparts" amount="31755" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_fieldcoils_5_macro" />
+  </ware>    
+  <ware id="module_gen_prod_graphene_x3" name="{20104,11201} x3" description="{20104,11202}" transport="container" volume="1" tags="module">
+    <price min="458898" average="539880" max="620862" />
+    <production time="1446" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="84" />
+        <ware ware="energycells" amount="171" />
+        <ware ware="hullparts" amount="312" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_graphene_3_macro" />
+  </ware>  
+  <ware id="module_gen_prod_graphene_x5" name="{20104,11201} x5" description="{20104,11202}" transport="container" volume="1" tags="module">
+    <price min="764830" average="899800" max="1034770" />
+    <production time="2410" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="140" />
+        <ware ware="energycells" amount="285" />
+        <ware ware="hullparts" amount="520" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_graphene_5_macro" />
+  </ware>  
+  <ware id="module_gen_prod_hullparts_x3" name="{20104,11301} x3" description="{20104,11302}" transport="container" volume="1" tags="module">
+    <price min="10020582" average="11788920" max="13557258" />
+    <production time="2586" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1842" />
+        <ware ware="energycells" amount="3687" />
+        <ware ware="hullparts" amount="6747" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_hullparts_3_macro" />
+  </ware>  
+  <ware id="module_gen_prod_hullparts_x5" name="{20104,11301} x5" description="{20104,11302}" transport="container" volume="1" tags="module">
+    <price min="16700970" average="19648200" max="22595430" />
+    <production time="4310" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="3070" />
+        <ware ware="energycells" amount="6145" />
+        <ware ware="hullparts" amount="11245" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_hullparts_5_macro" />
+  </ware>  
+  <ware id="module_gen_prod_microchips_x3" name="{20104,11901} x3" description="{20104,11902}" transport="container" volume="1" tags="module">
+    <price min="12367407" average="14549892" max="16732377" />
+    <production time="2664" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="2274" />
+        <ware ware="energycells" amount="4548" />
+        <ware ware="hullparts" amount="8322" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_microchips_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_microchips_x5" name="{20104,11901} x5" description="{20104,11902}" transport="container" volume="1" tags="module">
+    <price min="20612345" average="24249820" max="27887295" />
+    <production time="4440" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="3790" />
+        <ware ware="energycells" amount="7580" />
+        <ware ware="hullparts" amount="13870" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_microchips_5_macro" />
+  </ware>  
+  <ware id="module_gen_prod_missilecomponents_x3" name="{20104,12001} x3" description="{20104,12002}" transport="container" volume="1" tags="module">
+    <price min="574929" average="676386" max="777843" />
+    <production time="1530" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="105" />
+        <ware ware="energycells" amount="213" />
+        <ware ware="hullparts" amount="393" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_missilecomponents_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_missilecomponents_x5" name="{20104,12001} x5" description="{20104,12002}" transport="container" volume="1" tags="module">
+    <price min="958215" average="1127310" max="1296405" />
+    <production time="2550" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="175" />
+        <ware ware="energycells" amount="355" />
+        <ware ware="hullparts" amount="655" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_missilecomponents_5_macro" />
+  </ware>  
+  <ware id="module_gen_prod_plasmaconductors_x3" name="{20104,12101} x3" description="{20104,12102}" transport="container" volume="1" tags="module">
+    <price min="7718703" average="9080826" max="10442949" />
+    <production time="2490" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1419" />
+        <ware ware="energycells" amount="2838" />
+        <ware ware="hullparts" amount="5196" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_plasmaconductors_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_plasmaconductors_x5" name="{20104,12101} x5" description="{20104,12102}" transport="container" volume="1" tags="module">
+    <price min="12864505" average="15134710" max="17404915" />
+    <production time="4150" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="2365" />
+        <ware ware="energycells" amount="4730" />
+        <ware ware="hullparts" amount="8660" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_plasmaconductors_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_quantumtubes_x3" name="{20104,12201} x3" description="{20104,12202}" transport="container" volume="1" tags="module">
+    <price min="6204456" average="7299360" max="8394264" />
+    <production time="2409" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1140" />
+        <ware ware="energycells" amount="2283" />
+        <ware ware="hullparts" amount="4182" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_quantumtubes_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_quantumtubes_x5" name="{20104,12201} x5" description="{20104,12202}" transport="container" volume="1" tags="module">
+    <price min="10340760" average="12165600" max="13990440" />
+    <production time="4015" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1900" />
+        <ware ware="energycells" amount="3805" />
+        <ware ware="hullparts" amount="6970" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_quantumtubes_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_refinedmetals_x3" name="{20104,12301} x3" description="{20104,12302}" transport="container" volume="1" tags="module">
+    <price min="591693" average="696108" max="800523" />
+    <production time="1542" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="108" />
+        <ware ware="energycells" amount="219" />
+        <ware ware="hullparts" amount="405" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_refinedmetals_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_refinedmetals_x5" name="{20104,12301} x5" description="{20104,12302}" transport="container" volume="1" tags="module">
+    <price min="986155" average="1160180" max="1334205" />
+    <production time="2570" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="180" />
+        <ware ware="energycells" amount="365" />
+        <ware ware="hullparts" amount="675" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_refinedmetals_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_scanningarrays_x3" name="{20104,12401} x3" description="{20104,12402}" transport="container" volume="1" tags="module">
+    <price min="10266774" average="12078558" max="13890342" />
+    <production time="2595" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1887" />
+        <ware ware="energycells" amount="3777" />
+        <ware ware="hullparts" amount="6915" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_scanningarrays_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_scanningarrays_x5" name="{20104,12401} x5" description="{20104,12402}" transport="container" volume="1" tags="module">
+    <price min="17111290" average="20130930" max="23150570" />
+    <production time="4325" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="3145" />
+        <ware ware="energycells" amount="6295" />
+        <ware ware="hullparts" amount="11525" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_scanningarrays_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_shieldcomponents_x3" name="{20104,12601} x3" description="{20104,12602}" transport="container" volume="1" tags="module">
+    <price min="7051167" average="8295492" max="9539817" />
+    <production time="2457" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1296" />
+        <ware ware="energycells" amount="2595" />
+        <ware ware="hullparts" amount="4749" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_shieldcomponents_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_shieldcomponents_x5" name="{20104,12601} x5" description="{20104,12602}" transport="container" volume="1" tags="module">
+    <price min="11751945" average="13825820" max="15899695" />
+    <production time="4095" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="2160" />
+        <ware ware="energycells" amount="4325" />
+        <ware ware="hullparts" amount="7915" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_shieldcomponents_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_siliconwafers_x3" name="{20104,12701} x3" description="{20104,12702}" transport="container" volume="1" tags="module">
+    <price min="1210290" average="1423872" max="1637454" />
+    <production time="1806" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="222" />
+        <ware ware="energycells" amount="447" />
+        <ware ware="hullparts" amount="819" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_siliconwafers_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_siliconwafers_x5" name="{20104,12701} x5" description="{20104,12702}" transport="container" volume="1" tags="module">
+    <price min="2017150" average="2373120" max="2729090" />
+    <production time="3010" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="370" />
+        <ware ware="energycells" amount="745" />
+        <ware ware="hullparts" amount="1365" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_siliconwafers_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_smartchips_x3" name="{20104,12801} x3" description="{20104,12802}" transport="container" volume="1" tags="module">
+    <price min="2059635" average="2423100" max="2786565" />
+    <production time="2001" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="378" />
+        <ware ware="energycells" amount="759" />
+        <ware ware="hullparts" amount="1392" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_smartchips_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_smartchips_x5" name="{20104,12801} x5" description="{20104,12802}" transport="container" volume="1" tags="module">
+    <price min="3432725" average="4038500" max="4644275" />
+    <production time="3335" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="630" />
+        <ware ware="energycells" amount="1265" />
+        <ware ware="hullparts" amount="2320" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_smartchips_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_spices_x3" name="{20104,12901} x3" description="{20104,12902}" transport="container" volume="1" tags="module">
+    <price min="2269629" average="2670150" max="3070674" />
+    <production time="2037" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="417" />
+        <ware ware="energycells" amount="834" />
+        <ware ware="hullparts" amount="1530" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_spices_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_spices_x5" name="{20104,12901} x5" description="{20104,12902}" transport="container" volume="1" tags="module">
+    <price min="3782715" average="4450250" max="5117790" />
+    <production time="3395" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="695" />
+        <ware ware="energycells" amount="1390" />
+        <ware ware="hullparts" amount="2550" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_spices_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_superfluidcoolant_x3" name="{20104,13001} x3" description="{20104,13002}" transport="container" volume="1" tags="module">
+    <price min="411240" average="483810" max="556383" />
+    <production time="1407" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="75" />
+        <ware ware="energycells" amount="153" />
+        <ware ware="hullparts" amount="282" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_superfluidcoolant_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_superfluidcoolant_x5" name="{20104,13001} x5" description="{20104,13002}" transport="container" volume="1" tags="module">
+    <price min="685400" average="806350" max="927305" />
+    <production time="2345" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="125" />
+        <ware ware="energycells" amount="255" />
+        <ware ware="hullparts" amount="470" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_superfluidcoolant_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_turretcomponents_x3" name="{20104,13101} x3" description="{20104,13102}" transport="container" volume="1" tags="module">
+    <price min="7753587" average="9121866" max="10490145" />
+    <production time="2490" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1425" />
+        <ware ware="energycells" amount="2853" />
+        <ware ware="hullparts" amount="5223" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_turretcomponents_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_turretcomponents_x5" name="{20104,13101} x5" description="{20104,13102}" transport="container" volume="1" tags="module">
+    <price min="12922645" average="15203110" max="17483575" />
+    <production time="4150" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="2375" />
+        <ware ware="energycells" amount="4755" />
+        <ware ware="hullparts" amount="8705" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_turretcomponents_5_macro" />
+  </ware>
+  <ware id="module_gen_prod_water_x3" name="{20104,13201} x3" description="{20104,13202}" transport="container" volume="1" tags="module">
+    <price min="587703" average="691416" max="795129" />
+    <production time="1539" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="108" />
+        <ware ware="energycells" amount="216" />
+        <ware ware="hullparts" amount="396" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_water_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_water_x5" name="{20104,13201} x5" description="{20104,13202}" transport="container" volume="1" tags="module">
+    <price min="979505" average="1152360" max="1325215" />
+    <production time="2565" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="180" />
+        <ware ware="energycells" amount="360" />
+        <ware ware="hullparts" amount="660" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_water_5_macro" />
+  </ware>  
+  <ware id="module_gen_prod_weaponcomponents_x3" name="{20104,13301} x3" description="{20104,13302}" transport="container" volume="1" tags="module">
+    <price min="6464781" average="7605624" max="8746467" />
+    <production time="2424" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1188" />
+        <ware ware="energycells" amount="2379" />
+        <ware ware="hullparts" amount="4356" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_weaponcomponents_3_macro" />
+  </ware>
+  <ware id="module_gen_prod_weaponcomponents_x5" name="{20104,13301} x5" description="{20104,13302}" transport="container" volume="1" tags="module">
+    <price min="10774635" average="12676040" max="14577445" />
+    <production time="4040" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="claytronics" amount="1980" />
+        <ware ware="energycells" amount="3965" />
+        <ware ware="hullparts" amount="7260" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_gen_weaponcomponents_5_macro" />
+  </ware>  
+	<!--PARANID-->
+  <ware id="module_par_prod_majadust_x3" name="{20104,13801} x3" description="{20104,13802}" transport="container" volume="1" tags="module">
+    <price min="6087069" average="7161258" max="8235447" />
+    <production time="2400" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="1119" />
+        <ware ware="energycells" amount="2238" />
+        <ware ware="hullparts" amount="4098" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_majadust_3_macro" />
+  </ware>  
+  <ware id="module_par_prod_majadust_x5" name="{20104,13801} x5" description="{20104,13802}" transport="container" volume="1" tags="module">
+    <price min="10145115" average="11935430" max="13725745" />
+    <production time="4000" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="1865" />
+        <ware ware="energycells" amount="3730" />
+        <ware ware="hullparts" amount="6830" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_majadust_5_macro" />
+  </ware> 
+  <ware id="module_par_prod_majasnails_x3" name="{20104,13901} x3" description="{20104,13902}" transport="container" volume="1" tags="module">
+    <price min="4049544" average="4764168" max="5478792" />
+    <production time="2250" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="744" />
+        <ware ware="energycells" amount="1491" />
+        <ware ware="hullparts" amount="2730" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_majasnails_3_macro" />
+  </ware>
+  <ware id="module_par_prod_majasnails_x5" name="{20104,13901} x5" description="{20104,13902}" transport="container" volume="1" tags="module">
+    <price min="6749240" average="7940280" max="9131320" />
+    <production time="3750" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="1240" />
+        <ware ware="energycells" amount="2485" />
+        <ware ware="hullparts" amount="4550" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_majasnails_5_macro" />
+  </ware>
+  <ware id="module_par_prod_medicalsupplies_x3" name="{20104,11701} x3" description="{20104,11702}" transport="container" volume="1" tags="module">
+    <price min="3687240" average="4337928" max="4988616" />
+    <production time="2217" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="678" />
+        <ware ware="energycells" amount="1353" />
+        <ware ware="hullparts" amount="2481" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_medicalsupplies_3_macro" />
+  </ware>
+  <ware id="module_par_prod_medicalsupplies_x5" name="{20104,11701} x5" description="{20104,11702}" transport="container" volume="1" tags="module">
+    <price min="6145400" average="7229880" max="8314360" />
+    <production time="3695" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="1130" />
+        <ware ware="energycells" amount="2255" />
+        <ware ware="hullparts" amount="4135" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_medicalsupplies_5_macro" />
+  </ware>
+  <ware id="module_par_prod_sojabeans_x3" name="{20104,14001} x3" description="{20104,14002}" transport="container" volume="1" tags="module">
+    <price min="4830474" average="5682912" max="6535350" />
+    <production time="2316" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="888" />
+        <ware ware="energycells" amount="1776" />
+        <ware ware="hullparts" amount="3252" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_sojabeans_3_macro" />
+  </ware>
+  <ware id="module_par_prod_sojabeans_x5" name="{20104,14001} x5" description="{20104,14002}" transport="container" volume="1" tags="module">
+    <price min="8050790" average="9471520" max="10892250" />
+    <production time="3860" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="1480" />
+        <ware ware="energycells" amount="2960" />
+        <ware ware="hullparts" amount="5420" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_sojabeans_5_macro" />
+  </ware>
+  <ware id="module_par_prod_sojahusk_x3" name="{20104,14101} x3" description="{20104,14102}" transport="container" volume="1" tags="module">
+    <price min="5159211" average="6069660" max="6980109" />
+    <production time="2340" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="948" />
+        <ware ware="energycells" amount="1899" />
+        <ware ware="hullparts" amount="3477" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_sojahusk_3_macro" />
+  </ware>
+  <ware id="module_par_prod_sojahusk_x5" name="{20104,14101} x5" description="{20104,14102}" transport="container" volume="1" tags="module">
+    <price min="8598685" average="10116100" max="11633515" />
+    <production time="3900" amount="1" method="default" name="{20206,301}">
+      <primary>
+        <ware ware="claytronics" amount="1580" />
+        <ware ware="energycells" amount="3165" />
+        <ware ware="hullparts" amount="5795" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_par_sojahusk_5_macro" />
+  </ware>  
+	<!--TELADI-->
+  <ware id="module_tel_prod_advancedcomposites_x3" name="{20104,10101} x3" description="{20104,10102}" transport="container" volume="1" tags="module">
+    <price min="10248042" average="12056520" max="13864998" />
+    <production time="2589" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1884" />
+        <ware ware="energycells" amount="3723" />
+        <ware ware="hullparts" amount="6900" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_advancedcomposites_3_macro" />
+  </ware>
+  <ware id="module_tel_prod_advancedcomposites_x5" name="{20104,10101} x5" description="{20104,10102}" transport="container" volume="1" tags="module">
+    <price min="17080070" average="20094200" max="23108330" />
+    <production time="4315" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="3140" />
+        <ware ware="energycells" amount="6205" />
+        <ware ware="hullparts" amount="11500" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_advancedcomposites_5_macro" />
+  </ware>
+  <ware id="module_tel_prod_engineparts_x3" name="{20104,11001} x3" description="{20104,11002}" transport="container" volume="1" tags="module">
+    <price min="6429489" average="7564104" max="8698719" />
+    <production time="2418" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1182" />
+        <ware ware="energycells" amount="2334" />
+        <ware ware="hullparts" amount="4329" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_engineparts_3_macro" />
+  </ware>
+  <ware id="module_tel_prod_engineparts_x5" name="{20104,11001} x5" description="{20104,11002}" transport="container" volume="1" tags="module">
+    <price min="10715815" average="12606840" max="14497865" />
+    <production time="4030" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1970" />
+        <ware ware="energycells" amount="3890" />
+        <ware ware="hullparts" amount="7215" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_engineparts_5_macro" />
+  </ware>
+  <ware id="module_tel_prod_hullparts_x3" name="{20104,11401} x3" description="{20104,11402}" transport="container" volume="1" tags="module">
+    <price min="10019928" average="11788152" max="13556376" />
+    <production time="2583" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1842" />
+        <ware ware="energycells" amount="3639" />
+        <ware ware="hullparts" amount="6747" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_hullparts_3_macro" />>
+  </ware>
+  <ware id="module_tel_prod_hullparts_x5" name="{20104,11401} x5" description="{20104,11402}" transport="container" volume="1" tags="module">
+    <price min="16699880" average="19646920" max="22593960" />
+    <production time="4305" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="3070" />
+        <ware ware="energycells" amount="6065" />
+        <ware ware="hullparts" amount="11245" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_hullparts_5_macro" />
+  </ware>  
+  <ware id="module_tel_prod_medicalsupplies_x3" name="{20104,11801} x3" description="{20104,11802}" transport="container" volume="1" tags="module">
+    <price min="3657699" average="4303176" max="4948653" />
+    <production time="2214" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="672" />
+        <ware ware="energycells" amount="1344" />
+        <ware ware="hullparts" amount="2466" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_medicalsupplies_3_macro" />
+  </ware>
+  <ware id="module_tel_prod_medicalsupplies_x5" name="{20104,11801} x5" description="{20104,11802}" transport="container" volume="1" tags="module">
+    <price min="6096165" average="7171960" max="8247755" />
+    <production time="3690" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1120" />
+        <ware ware="energycells" amount="2240" />
+        <ware ware="hullparts" amount="4110" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_medicalsupplies_5_macro" />
+  </ware>
+  <ware id="module_tel_prod_nostropoil_x3" name="{20104,14201} x3" description="{20104,14202}" transport="container" volume="1" tags="module">
+    <price min="4722381" average="5555742" max="6389103" />
+    <production time="2307" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="867" />
+        <ware ware="energycells" amount="1737" />
+        <ware ware="hullparts" amount="3189" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_nostropoil_3_macro" />
+  </ware>
+  <ware id="module_tel_prod_nostropoil_x5" name="{20104,14201} x5" description="{20104,14202}" transport="container" volume="1" tags="module">
+    <price min="7870635" average="9259570" max="10648505" />
+    <production time="3845" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1445" />
+        <ware ware="energycells" amount="2895" />
+        <ware ware="hullparts" amount="5315" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_nostropoil_5_macro" />
+  </ware>
+  <ware id="module_tel_prod_scanningarrays_x3" name="{20104,12501} x3" description="{20104,12502}" transport="container" volume="1" tags="module">
+    <price min="10394967" average="12229374" max="14063781" />
+    <production time="2595" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1911" />
+        <ware ware="energycells" amount="3777" />
+        <ware ware="hullparts" amount="6999" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_scanningarrays_3_macro" />
+  </ware>  
+  <ware id="module_tel_prod_scanningarrays_x5" name="{20104,12501} x5" description="{20104,12502}" transport="container" volume="1" tags="module">
+    <price min="17324945" average="20382290" max="23439635" />
+    <production time="4325" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="3185" />
+        <ware ware="energycells" amount="6295" />
+        <ware ware="hullparts" amount="11665" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_scanningarrays_5_macro" />
+  </ware>  
+  <ware id="module_tel_prod_spaceweed_x3" name="{20104,14301} x3" description="{20104,14302}" transport="container" volume="1" tags="module">
+    <price min="10425120" average="12264846" max="14104572" />
+    <production time="2601" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1917" />
+        <ware ware="energycells" amount="3831" />
+        <ware ware="hullparts" amount="7014" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_spaceweed_3_macro" />
+  </ware>  
+  <ware id="module_tel_prod_spaceweed_x5" name="{20104,14301} x5" description="{20104,14302}" transport="container" volume="1" tags="module">
+    <price min="17375200" average="20441410" max="23507620" />
+    <production time="4335" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="3195" />
+        <ware ware="energycells" amount="6385" />
+        <ware ware="hullparts" amount="11690" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_spaceweed_5_macro" />
+  </ware>  
+  <ware id="module_tel_prod_sunriseflowers_x3" name="{20104,14401} x3" description="{20104,14402}" transport="container" volume="1" tags="module">
+    <price min="4834422" average="5687556" max="6540690" />
+    <production time="2316" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="888" />
+        <ware ware="energycells" amount="1776" />
+        <ware ware="hullparts" amount="3261" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_sunriseflowers_3_macro" />
+  </ware>
+  <ware id="module_tel_prod_sunriseflowers_x5" name="{20104,14401} x5" description="{20104,14402}" transport="container" volume="1" tags="module">
+    <price min="8057370" average="9479260" max="10901150" />
+    <production time="3860" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1480" />
+        <ware ware="energycells" amount="2960" />
+        <ware ware="hullparts" amount="5435" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_sunriseflowers_5_macro" />
+  </ware>  
+  <ware id="module_tel_prod_swampplant_x3" name="{20104,14501} x3" description="{20104,14502}" transport="container" volume="1" tags="module">
+    <price min="10425120" average="12264846" max="14104572" />
+    <production time="2601" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="1917" />
+        <ware ware="energycells" amount="3831" />
+        <ware ware="hullparts" amount="7014" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_swampplant_3_macro" />
+  </ware>
+  <ware id="module_tel_prod_swampplant_x5" name="{20104,14501} x5" description="{20104,14502}" transport="container" volume="1" tags="module">
+    <price min="17375200" average="20441410" max="23507620" />
+    <production time="4335" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="3195" />
+        <ware ware="energycells" amount="6385" />
+        <ware ware="hullparts" amount="11690" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_swampplant_5_macro" />
+  </ware>  
+  <ware id="module_tel_prod_teladianium_x3" name="{20104,14601} x3" description="{20104,14602}" transport="container" volume="1" tags="module">
+    <price min="818490" average="962928" max="1107366" />
+    <production time="1662" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="150" />
+        <ware ware="energycells" amount="303" />
+        <ware ware="hullparts" amount="555" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_teladianium_3_macro" />
+  </ware>
+  <ware id="module_tel_prod_teladianium_x5" name="{20104,14601} x5" description="{20104,14602}" transport="container" volume="1" tags="module">
+    <price min="1364150" average="1604880" max="1845610" />
+    <production time="2770" amount="1" method="default" name="{20206,401}">
+      <primary>
+        <ware ware="claytronics" amount="250" />
+        <ware ware="energycells" amount="505" />
+        <ware ware="hullparts" amount="925" />
+      </primary>
+    </production>
+    <research time="10">
+      <research>
+        <ware ware="research_module_production" />
+      </research>
+    </research>
+    <component ref="prod_tel_teladianium_5_macro" />
+  </ware>  
+	<!--SPLIT-->
+    <ware id="module_spl_prod_cheltmeat_x3" name="{20104,14901} x3" description="{20104,14902}" transport="container" volume="1" tags="module">
+      <price min="2094564" average="2464194" max="2833824" />
+      <production time="1509" amount="1" method="default" name="{20206,701}">
         <primary>
-          <ware ware="energycells" amount="1000" />
-          <ware ware="hullparts" amount="4850" />
+          <ware ware="claytronics" amount="846" />
+          <ware ware="energycells" amount="768" />
+          <ware ware="hullparts" amount="3474" />
         </primary>
       </production>
-      <component ref="ship_spl_l_cheetah_macro" amount="1" />
-      <restriction licence="militaryship" />
-      <owner faction="freesplit" />
-      <owner faction="court" />
-      <owner faction="fallensplit" />
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_spl_cheltmeat_3_macro" />
     </ware>
-    <ware id="ship_spl_s_wolf" name="{19530007,710}" description="{19530007,810}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
-      <price min="260648" average="291350" max="362053" />
-	  <production time="12" amount="1" method="default" name="{20206,101}">
-		<primary>
-		  <ware ware="energycells" amount="120" />
-		  <ware ware="hullparts" amount="280" />
-		</primary>
-	  </production>
-	  <component ref="ship_spl_s_wolf_macro" amount="1" />
-	  <restriction licence="militaryship" />
-	  <owner faction="court" />
-	  <owner faction="freesplit" />
-	  <owner faction="fallensplit" />
-	  <owner faction="split" />	  
+    <ware id="module_spl_prod_cheltmeat_x5" name="{20104,14901} x5" description="{20104,14902}" transport="container" volume="1" tags="module">
+      <price min="3490940" average="4106990" max="4723040" />
+      <production time="2515" amount="1" method="default" name="{20206,701}">
+        <primary>
+          <ware ware="claytronics" amount="1410" />
+          <ware ware="energycells" amount="1280" />
+          <ware ware="hullparts" amount="5790" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_spl_cheltmeat_5_macro" />
     </ware>
-    <ware id="ship_ter_l_chiba_e" name="{19530007,701}" description="{19530007,801}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
-      <price min="6058790" average="7833870" max="8608951" />
-      <production time="140" amount="1" method="default" name="{20206,901}">
+    <ware id="module_spl_prod_medicalsupplies_x3" name="{20104,15001} x3" description="{20104,15002}" transport="container" volume="1" tags="module">
+      <price min="3670515" average="4318254" max="4965993" />
+      <production time="2217" amount="1" method="default" name="{20206,701}">
+        <primary>
+          <ware ware="claytronics" amount="744" />
+          <ware ware="energycells" amount="1353" />
+          <ware ware="hullparts" amount="2730" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_spl_medicalsupplies_3_macro" />
+    </ware>
+    <ware id="module_spl_prod_medicalsupplies_x5" name="{20104,15001} x5" description="{20104,15002}" transport="container" volume="1" tags="module">
+      <price min="6117525" average="7197090" max="8276655" />
+      <production time="3695" amount="1" method="default" name="{20206,701}">
+        <primary>
+          <ware ware="claytronics" amount="1240" />
+          <ware ware="energycells" amount="2255" />
+          <ware ware="hullparts" amount="4550" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_spl_medicalsupplies_5_macro" />
+    </ware>	
+    <ware id="module_spl_prod_scruffinfruits_x3" name="{20104,14801} x3" description="{20104,14802}" transport="container" volume="1" tags="module">
+      <price min="2488986" average="2928219" max="3367452" />
+      <production time="1794" amount="1" method="default" name="{20206,701}">
+        <primary>
+          <ware ware="claytronics" amount="1005" />
+          <ware ware="energycells" amount="915" />
+          <ware ware="hullparts" amount="4131" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_spl_scruffinfruit_3_macro" />
+    </ware>
+    <ware id="module_spl_prod_scruffinfruits_x5" name="{20104,14801} x5" description="{20104,14802}" transport="container" volume="1" tags="module">
+      <price min="4148310" average="4880365" max="5612420" />
+      <production time="2990" amount="1" method="default" name="{20206,701}">
+        <primary>
+          <ware ware="claytronics" amount="1675" />
+          <ware ware="energycells" amount="1525" />
+          <ware ware="hullparts" amount="6885" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_spl_scruffinfruit_5_macro" />
+    </ware>
+	<!--TERRAN-->
+    <ware id="module_ter_prod_computronicsubstrate_x3" name="{20104,15101} x3" description="{20104,15102}" transport="container" volume="1" tags="module">
+      <price min="12660222" average="14894379" max="17128536" />
+      <production time="2400" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="714" />
+          <ware ware="energycells" amount="2064" />
+          <ware ware="siliconcarbide" amount="465" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_computronicsubstrate_3_macro" />
+    </ware>
+    <ware id="module_ter_prod_computronicsubstrate_x5" name="{20104,15101} x5" description="{20104,15102}" transport="container" volume="1" tags="module">
+      <price min="21100370" average="24823965" max="28547560" />
+      <production time="4000" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="1190" />
+          <ware ware="energycells" amount="3440" />
+          <ware ware="siliconcarbide" amount="775" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_computronicsubstrate_5_macro" />
+    </ware>	
+    <ware id="module_ter_prod_medicalsupplies_x3" name="{20104,15301} x3" description="{20104,15302}" transport="container" volume="1" tags="module">
+      <price min="903798" average="1063293" max="1222788" />
+      <production time="1008" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="51" />
+          <ware ware="energycells" amount="150" />
+          <ware ware="siliconcarbide" amount="33" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_medicalsupplies_3_macro" />
+    </ware>
+    <ware id="module_ter_prod_medicalsupplies_x5" name="{20104,15301} x5" description="{20104,15302}" transport="container" volume="1" tags="module">
+      <price min="1506330" average="1772155" max="2037980" />
+      <production time="1680" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="85" />
+          <ware ware="energycells" amount="250" />
+          <ware ware="siliconcarbide" amount="33" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_medicalsupplies_5_macro" />
+    </ware>	
+    <ware id="module_ter_prod_metallicmicrolattice_x3" name="{20104,15401} x3" description="{20104,15402}" transport="container" volume="1" tags="module">
+      <price min="319977" average="376443" max="432909" />
+      <production time="456" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="18" />
+          <ware ware="energycells" amount="54" />
+          <ware ware="siliconcarbide" amount="12" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_metallicmicrolattice_3_macro" />
+    </ware>
+    <ware id="module_ter_prod_metallicmicrolattice_x5" name="{20104,15401} x5" description="{20104,15402}" transport="container" volume="1" tags="module">
+      <price min="533295" average="627405" max="721515" />
+      <production time="760" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="30" />
+          <ware ware="energycells" amount="90" />
+          <ware ware="siliconcarbide" amount="20" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_metallicmicrolattice_5_macro" />
+    </ware>	
+    <ware id="module_ter_prod_proteinpaste_x3" name="{20104,15601} x3" description="{20104,15602}" transport="container" volume="1" tags="module">
+      <price min="3878763" average="4563252" max="5247741" />
+      <production time="1776" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="219" />
+          <ware ware="energycells" amount="633" />
+          <ware ware="siliconcarbide" amount="141" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_proteinpaste_3_macro" />
+    </ware>
+    <ware id="module_ter_prod_proteinpaste_x5" name="{20104,15601} x5" description="{20104,15602}" transport="container" volume="1" tags="module">
+      <price min="6464605" average="7605420" max="8746235" />
+      <production time="2960" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="365" />
+          <ware ware="energycells" amount="1055" />
+          <ware ware="siliconcarbide" amount="235" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_proteinpaste_5_macro" />
+    </ware>
+    <ware id="module_ter_prod_siliconcarbide_x3" name="{20104,15701} x3" description="{20104,15702}" transport="container" volume="1" tags="module">
+      <price min="2127486" average="2502924" max="2878362" />
+      <production time="1458" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="120" />
+          <ware ware="energycells" amount="351" />
+          <ware ware="siliconcarbide" amount="78" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_siliconcarbide_3_macro" />
+    </ware>
+    <ware id="module_ter_prod_siliconcarbide_x5" name="{20104,15701} x5" description="{20104,15702}" transport="container" volume="1" tags="module">
+      <price min="3545810" average="4171540" max="4797270" />
+      <production time="2430" amount="1" method="default" name="{20206,901}">
         <primary>
           <ware ware="computronicsubstrate" amount="200" />
-          <ware ware="energycells" amount="900" />
-          <ware ware="metallicmicrolattice" amount="250" />
+          <ware ware="energycells" amount="585" />
+          <ware ware="siliconcarbide" amount="130" />
         </primary>
       </production>
-      <component ref="ship_ter_l_chiba_e_macro" amount="1" />
-      <restriction licence="militaryship" />
-      <owner faction="pioneers" />
-      <owner faction="terran" />
-    </ware>
-    <ware id="ship_ter_s_falchion" name="{19530007,711}" description="{19530007,811}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
-      <price min="291338" average="342750" max="394163" />
-      <production time="11" amount="1" method="default" name="{20206,901}">
-        <primary>
-          <ware ware="computronicsubstrate" amount="8" />
-          <ware ware="energycells" amount="60" />
-          <ware ware="metallicmicrolattice" amount="27" />
-        </primary>
-      </production>
-      <component ref="ship_ter_s_falchion_macro" />
-      <restriction licence="militaryship" />
-      <owner faction="pioneers" />
-      <owner faction="terran" />
-    </ware>
-    <ware id="ship_bor_l_marlin" name="{19530007,720}" description="{19530007,820}" group="ships_boron" transport="ship" size="ship" volume="1" tags="ship">
-      <price min="3653390" average="4401675" max="5149960" />
-      <production time="90" amount="1" method="default" name="{20206,101}">
-        <primary>
-          <ware ware="energycells" amount="1500" />
-          <ware ware="hullparts" amount="3900" />
-          <ware ware="water" amount="760" />
-        </primary>
-      </production>
-      <component ref="ship_bor_l_marlin_macro" amount="1" />
-      <restriction licence="militaryship" />
-      <owner faction="boron" />
-    </ware>
-    <ware id="ship_arg_m_tm" name="{19530007,733}" description="{19530007,833}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
-		<price min="354000" average="416470" max="478940" />
-		<production time="20" amount="1" method="default" name="{20206,101}">
-			<primary>
-				<ware ware="energycells" amount="108" />
-				<ware ware="hullparts" amount="191" />
-			</primary>
-		</production>
-      <component ref="ship_arg_m_tm_macro" amount="1" />
-      <restriction licence="generaluseship" />
-      <owner faction="argon" />
-	  <owner faction="antigone" />
-    </ware>
-    <ware id="ship_tel_m_tm" name="{19530007,734}" description="{19530007,834}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
-		<price min="419716" average="493784" max="567851" />
-		<production time="31" amount="1" method="default" name="{20206,101}">
-			<primary>
-				<ware ware="energycells" amount="161" />
-				<ware ware="hullparts" amount="283" />
-			</primary>
-		</production>
-      <component ref="ship_tel_m_tm_macro" amount="1" />
-      <restriction licence="generaluseship" />
-      <owner faction="teladi" />
-	  <owner faction="ministry" />
-    </ware>
-    <ware id="ship_par_m_tm" name="{20101,120901}" description="{19530007,832}" group="ships_paranid" transport="ship" size="ship" volume="1" tags="ship">
-		<price min="389386" average="458100" max="526816" />
-		<production time="31" amount="1" method="default" name="{20206,101}">
-			<primary>
-				<ware ware="energycells" amount="120" />
-				<ware ware="hullparts" amount="210" />
-			</primary>
-		</production>
-      <component ref="ship_par_m_tm_macro" amount="1" />
-      <restriction licence="generaluseship" />
-      <owner faction="paranid" />
-	  <owner faction="holyorder" />
-    </ware>
-    <ware id="ship_bor_m_tm" name="{20101,51501}" description="{19530007,835}" group="ships_boron" transport="ship" size="ship" volume="1" tags="ship">
-		<price min="302277" average="355620" max="408963" />
-		<production time="31" amount="1" method="default" name="{20206,101}">
-			<primary>
-				<ware ware="energycells" amount="92" />
-				<ware ware="hullparts" amount="210" />
-				<ware ware="water" amount="108" />
-			</primary>
-		</production>
-      <component ref="ship_bor_m_tm_macro" amount="1" />
-      <restriction licence="generaluseship" />
-      <owner faction="boron" />
-    </ware>
-    <ware id="ship_spl_m_tm" name="{19530007,730}" description="{19530007,830}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
-		<price min="317679" average="373740" max="429801" />
-		<production time="31" amount="1" method="default" name="{20206,101}">
-			<primary>
-				<ware ware="energycells" amount="126" />
-				<ware ware="hullparts" amount="300" />
-			</primary>
-		</production>
-      <component ref="ship_spl_m_tm_macro" amount="1" />
-      <restriction licence="generaluseship" />
-      <owner faction="split" />
-	  <owner faction="fallensplit" />
-	  <owner faction="freesplit" />
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_siliconcarbide_5_macro" />
     </ware>	
-    <ware id="ship_arg_s_buster" name="{19530007,713}" description="{19530007,813}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
-      <price min="143870" average="169259" max="194647" />
-	  <production time="11" amount="1" method="default" name="{20206,101}">
-		<primary>
-		  <ware ware="energycells" amount="66" />
-		  <ware ware="hullparts" amount="154" />
-		</primary>
-	  </production>
-	  <component ref="ship_arg_s_buster_macro" amount="1" />
-	  <restriction licence="militaryship" />
-	  <owner faction="argon" />
-	  <owner faction="antigone" />  
-    </ware>
-	</add>			
-	<!--WEAPONS-->
-	<remove sel="/wares/ware[@id='weapon_missile_lint_kitsune_ware']"/>
-	<replace sel="//wares/ware[@id='ship_gen_s_fightingdrone_01_a']">
-      <ware id="ship_gen_s_fightingdrone_01_a" name="{19530007,1100}" description="{19530007,11001}" group="drones" transport="equipment" volume="1" tags="drone equipment">
-		<price min="8128" average="9562" max="11000" />
-		<production time="1" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="dronecomponents" amount="1" />
-			<ware ware="energycells" amount="35" />
-			<ware ware="smartchips" amount="20" />
-		  </primary>
-		</production>
-		<production time="1" amount="1" method="terran" name="{20206,901}">
-		  <primary>
-			<ware ware="energycells" amount="500" />
-			<ware ware="metallicmicrolattice" amount="29" />
-			<ware ware="siliconcarbide" amount="3" />
-		  </primary>
-		</production>	  
-		<component ref="ship_gen_s_fightingdrone_01_a_macro" />
-		<container ref="sm_gen_pickup_equipment_01_macro" />
-		<restriction licence="generaluseequipment" />	  
-		<use threshold="0" />
-		<owner faction="antigone" />
-		<owner faction="argon" />
-		<owner faction="hatikvah" />	  
-		<owner faction="ministry" />
-		<owner faction="teladi" />
-		<owner faction="scaleplate" />	  
-		<owner faction="alliance" />			
-		<owner faction="loanshark" />	
-		<owner faction="scavenger" />		  
-		<owner faction="otas" />		  			  
-      </ware>
-	</replace>
-	<add sel="//wares">
-    <ware id="weapon_gen_s_plasmabomb" name="{19530007,200}" description="{19530007,300}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
-      <price min="150867" average="167630" max="184393" />
-      <production time="8" amount="1" method="default" name="{20206,101}">
+    <ware id="module_ter_prod_stimulants_x3" name="{20104,15801} x3" description="{20104,15802}" transport="container" volume="1" tags="module">
+      <price min="7454103" average="8769531" max="10084959" />
+      <production time="2121" amount="1" method="default" name="{20206,901}">
         <primary>
-		  <ware ware="advancedelectronics" amount="15" />
-		  <ware ware="energycells" amount="61" />
-		  <ware ware="weaponcomponents" amount="30" />
+          <ware ware="computronicsubstrate" amount="420" />
+          <ware ware="energycells" amount="1221" />
+          <ware ware="siliconcarbide" amount="276" />
         </primary>
       </production>
-      <production time="8" amount="1" method="terran" name="{20206,901}">
-        <primary>
-		  <ware ware="computronicsubstrate" amount="2" />
-		  <ware ware="energycells" amount="50" />
-		  <ware ware="metallicmicrolattice" amount="30" />
-		  <ware ware="siliconcarbide" amount="3" />
-        </primary>
-      </production>		
-      <component ref="weapon_gen_s_plasmabomb_macro" amount="1" />
-      <restriction licence="militaryequipment" />
-      <use threshold="0" />
-      <owner faction="antigone" />
-      <owner faction="argon" />
-      <owner faction="ministry" />
-      <owner faction="teladi" />
-      <owner faction="alliance" />		
-      <owner faction="holyorder" />
-      <owner faction="paranid" />		
-      <owner faction="trinity" />
-      <owner faction="court" />
-      <owner faction="freesplit" />
-      <owner faction="split" />
-      <owner faction="pioneers" />
-      <owner faction="terran" />	  	
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_stimulants_3_macro" />
     </ware>	
-    <ware id="weapon_bor_l_erppc" name="{19530007,201}" description="{19530007,301}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
-      <price min="1200201" average="1311335" max="1422468" />
-      <production time="10" amount="1" method="default" name="{20206,101}">
+    <ware id="module_ter_prod_stimulants_x5" name="{20104,15801} x5" description="{20104,15802}" transport="container" volume="1" tags="module">
+      <price min="12423505" average="14615885" max="16808265" />
+      <production time="3535" amount="1" method="default" name="{20206,901}">
         <primary>
-          <ware ware="advancedelectronics" amount="60" />
-          <ware ware="energycells" amount="200" />
-          <ware ware="weaponcomponents" amount="91" />
+          <ware ware="computronicsubstrate" amount="700" />
+          <ware ware="energycells" amount="2035" />
+          <ware ware="siliconcarbide" amount="460" />
         </primary>
-      </production>	
-      <component ref="weapon_bor_l_erppc_macro" amount="1" />
-      <restriction licence="capitalequipment" />
-      <use threshold="0" />
-      <owner faction="boron" />  	
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_stimulants_5_macro" />
     </ware>	
-	<ware id="weapon_rangefinder_22km" name="{19530007,202}" description="{19530007,302}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
-	  <price min="1" average="1" max="1" />
-	  <production time="1" amount="1" method="default" name="{20206,101}">
-		<primary>
-		  <ware ware="energycells" amount="1" />
-		</primary>
-	  </production>
-	  <component ref="weapon_rangefinder_22km_macro" amount="1" />
-	  <restriction licence="capitalequipment" />
-	  <use threshold="0" />	  
-	</ware>
-	<ware id="weapon_rangefinder_30km" name="{19530007,203}" description="{19530007,303}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
-	  <price min="1" average="1" max="1" />
-	  <production time="1" amount="1" method="default" name="{20206,101}">
-		<primary>
-		  <ware ware="energycells" amount="1" />
-		</primary>
-	  </production>
-	  <component ref="weapon_rangefinder_30km_macro" amount="1" />
-	  <restriction licence="capitalequipment" />
-	  <use threshold="0" />	  
-	</ware>
-	<ware id="turret_ter_l_missilefrigate" name="{19530007,204}" description="{19530007,304}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
-	  <price min="150000" average="200000" max="250000" />
-	  <production time="10" amount="1" method="default" name="{20206,101}">
-		<primary>
-		  <ware ware="computronicsubstrate" amount="123" />
-		  <ware ware="energycells" amount="200" />
-		  <ware ware="metallicmicrolattice" amount="500" />
-		  <ware ware="siliconcarbide" amount="100" />
-		</primary>
-	  </production>
-	  <component ref="turret_ter_l_missilefrigate_macro" amount="1" />
-	  <restriction licence="capitalequipment" />
-	  <use threshold="0" />
-	  <owner faction="terran" />
-	  <owner faction="pioneers" />			
-	</ware>	
-	<!--DRONES-->	
-  <ware id="ship_xen_s_fightingdrone_01" name="{19530007,1101}" description="{19530007,11011}" group="drones" transport="equipment" volume="1" tags="noplayerblueprint drone equipment">
-    <price min="11611" average="13660" max="15709" />
-    <production time="10" amount="1" method="xenon" name="{20206,601}" tags="noplayerbuild">
-      <primary>
-        <ware ware="energycells" amount="15" />
-        <ware ware="ore" amount="10" />
-        <ware ware="silicon" amount="10" />
-      </primary>
-    </production>
-    <component ref="ship_xen_s_fightingdrone_01_macro" />
-    <container ref="sm_gen_pickup_equipment_01_macro" />
-    <restriction licence="generaluseequipment" />	
-    <use threshold="0" />
-    <owner faction="xenon" />	
-  </ware>
-  <ware id="ship_ter_s_fightingdrone_01" name="{19530007,1102}" description="{19530007,11021}" group="drones" transport="equipment" volume="1" tags="drone equipment">
-    <price min="11611" average="13660" max="15709" />
-    <production time="1" amount="1" method="default" name="{20206,101}">
-      <primary>
-        <ware ware="energycells" amount="500" />
-        <ware ware="metallicmicrolattice" amount="29" />
-        <ware ware="siliconcarbide" amount="3" />
-      </primary>
-    </production>
-    <component ref="ship_ter_s_fightingdrone_01_macro" />
-    <container ref="sm_gen_pickup_equipment_01_macro" />
-    <restriction licence="militaryequipment" />	
-    <use threshold="0" />
-    <owner faction="terran" /> 
-    <owner faction="pioneers" /> 
-    <owner faction="yaki" /> 	
-  </ware>
-  <ware id="ship_bor_s_fightingdrone_01" name="{19530007,1103}" description="{19530007,11031}" group="drones" transport="equipment" volume="1" tags="drone equipment">
-    <price min="11611" average="13660" max="15709" />
-    <production time="1" amount="1" method="default" name="{20206,101}">
-      <primary>
-        <ware ware="dronecomponents" amount="1" />
-        <ware ware="energycells" amount="50" />
-        <ware ware="smartchips" amount="30" />
-      </primary>
-    </production>
-    <component ref="ship_bor_s_fightingdrone_01_macro" />
-    <container ref="sm_gen_pickup_equipment_01_macro" />
-    <restriction licence="militaryequipment" />	
-    <use threshold="0" />
-    <owner faction="boron" /> 	
-  </ware> 
-  <ware id="ship_spl_s_fightingdrone_01" name="{19530007,1104}" description="{19530007,11041}" group="drones" transport="equipment" volume="1" tags="drone equipment">
-    <price min="11611" average="13660" max="15709" />
-    <production time="1" amount="1" method="default" name="{20206,101}">
-      <primary>
-        <ware ware="dronecomponents" amount="1" />
-        <ware ware="energycells" amount="50" />
-        <ware ware="smartchips" amount="30" />
-      </primary>
-    </production>
-    <component ref="ship_spl_s_fightingdrone_01_macro" />
-    <container ref="sm_gen_pickup_equipment_01_macro" />
-    <restriction licence="militaryequipment" />	
-    <use threshold="0" />
-    <owner faction="court" />
-    <owner faction="freesplit" />
-    <owner faction="split" />
-  </ware>  
-  <ware id="ship_par_s_fightingdrone_01" name="{19530007,1105}" description="{19530007,11051}" group="drones" transport="equipment" volume="1" tags="drone equipment">
-    <price min="11611" average="13660" max="15709" />
-    <production time="1" amount="1" method="default" name="{20206,101}">
-      <primary>
-        <ware ware="dronecomponents" amount="1" />
-        <ware ware="energycells" amount="50" />
-        <ware ware="smartchips" amount="30" />
-      </primary>
-    </production>
-    <component ref="ship_par_s_fightingdrone_01_macro" />
-    <container ref="sm_gen_pickup_equipment_01_macro" />
-    <restriction licence="militaryequipment" />	
-    <use threshold="0" />
-    <owner faction="holyorder" />
-    <owner faction="paranid" />		
-    <owner faction="trinity" />	
-  </ware>    
-	<!--iSHIELDS-->
-    <ware id="ishield_spl_l_cheetah" name="{19530007,900}" description="{19530007,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-      <price min="12" average="16" max="21" />
-      <production time="1" amount="1" method="default" name="{20206,101}">
+    <ware id="module_ter_prod_terranmre_x3" name="{20104,15501} x3" description="{20104,15502}" transport="container" volume="1" tags="module">
+      <price min="1599795" average="1882113" max="2164431" />
+      <production time="1308" amount="1" method="default" name="{20206,901}">
         <primary>
-          <ware ware="energycells" amount="1" />
+          <ware ware="computronicsubstrate" amount="90" />
+          <ware ware="energycells" amount="267" />
+          <ware ware="siliconcarbide" amount="60" />
         </primary>
       </production>
-      <component ref="ishield_spl_l_cheetah_macro" amount="1" />
-      <use threshold="0" />
-      <restriction licence="generaluseequipment" />	
-    </ware>
-    <ware id="ishield_spl_s_wolf" name="{19530007,910}" description="{19530007,910}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-      <price min="12" average="16" max="21" />
-      <production time="1" amount="1" method="default" name="{20206,101}">
-        <primary>
-          <ware ware="energycells" amount="1" />
-        </primary>
-      </production>
-      <component ref="ishield_spl_s_wolf_macro" amount="1" />
-      <use threshold="0" />
-      <restriction licence="generaluseequipment" />	
-    </ware>
-    <ware id="ishield_ter_l_chiba_e" name="{19530007,901}" description="{19530007,901}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-      <price min="12" average="16" max="21" />
-      <production time="1" amount="1" method="default" name="{20206,101}">
-        <primary>
-          <ware ware="energycells" amount="1" />
-        </primary>
-      </production>
-      <component ref="ishield_ter_l_chiba_e_macro" amount="1" />
-      <use threshold="0" />
-      <restriction licence="generaluseequipment" />	
-    </ware>
-    <ware id="ishield_ter_s_falchion" name="{19530007,911}" description="{19530007,911}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-      <price min="12" average="16" max="21" />
-      <production time="1" amount="1" method="default" name="{20206,101}">
-        <primary>
-          <ware ware="energycells" amount="1" />
-        </primary>
-      </production>
-      <component ref="ishield_ter_s_falchion_macro" amount="1" />
-      <use threshold="0" />
-      <restriction licence="generaluseequipment" />	
-    </ware>
-    <ware id="ishield_bor_l_marlin" name="{19530007,920}" description="{19530007,920}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-      <price min="12" average="16" max="21" />
-      <production time="1" amount="1" method="default" name="{20206,101}">
-        <primary>
-          <ware ware="energycells" amount="1" />
-        </primary>
-      </production>
-      <component ref="ishield_bor_l_marlin_macro" amount="1" />
-      <use threshold="0" />
-      <restriction licence="generaluseequipment" />	
-    </ware>
-    <ware id="ishield_arg_s_buster" name="{19530007,913}" description="{19530007,913}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-      <price min="12" average="16" max="21" />
-      <production time="1" amount="1" method="default" name="{20206,101}">
-        <primary>
-          <ware ware="energycells" amount="1" />
-        </primary>
-      </production>
-      <component ref="ishield_arg_s_buster_macro" amount="1" />
-      <use threshold="0" />
-      <restriction licence="generaluseequipment" />	
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_mre_3_macro" />
     </ware>	
-	</add>	
-<!--New Xenon War Assets-->
-	<add sel="//wares">
-	<!--SHIPS-->
-	  <ware id="ship_xen_xl_reclaimer" name="{19530004,6}" description="{19530004,7}" group="ships_xenon" transport="ship" volume="1" tags="noplayerblueprint ship">	
-		<price min="4300932" average="5059920" max="5818908" />
-		<production time="1550" amount="1" method="default" name="{20206,601}">
-		  <primary>
-			<ware ware="energycells" amount="8075" />
-			<ware ware="ore" amount="7250" />
-			<ware ware="silicon" amount="6250" />
-		  </primary>
-		</production>
-		<component ref="ship_xen_xl_reclaimer_macro" />
-		<restriction licence="capitalship" />
-		<owner faction="xenon" />
-	  </ware>		
-	  <ware id="ship_xen_m_fighter_y" name="{20403,25}" description="{19530004,1}" group="ships_xenon" transport="ship" volume="1" tags="noplayerblueprint ship">	
-		<price min="86827" average="98620" max="110413" />
-		<production time="25" amount="1" method="default" name="{20206,601}">
-		  <primary>
-			<ware ware="energycells" amount="124" />
-			<ware ware="ore" amount="99" />
-			<ware ware="silicon" amount="99" />
-		  </primary>
-		</production>
-		<component ref="ship_xen_m_fighter_y_macro" />
-		<restriction licence="militaryship" />
-		<owner faction="xenon" />
-	  </ware>	
-	  <ware id="ship_xen_m_fighter_d" name="{20403,4}" description="{19530004,4}" group="ships_xenon" transport="ship" volume="1" tags="noplayerblueprint ship">	
-		<price min="96827" average="108620" max="120413" />
-		<production time="31" amount="1" method="default" name="{20206,601}">
-		  <primary>
-			<ware ware="energycells" amount="139" />
-			<ware ware="ore" amount="109" />
-			<ware ware="silicon" amount="109" />
-		  </primary>
-		</production>
-		<component ref="ship_xen_m_fighter_d_macro" />
-		<restriction licence="militaryship" />
-		<owner faction="xenon" />
-	  </ware>	
-	<!--WEAPONS-->
-	  <ware id="weapon_xen_m_plasmabomb" name="{19530006,1}" description="{19530006,2}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
-		<price min="1578" average="1664" max="1750" />
-		<production time="6" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="65" />
-			<ware ware="ore" amount="11" />
-		  </primary>
-		</production>
-		<component ref="weapon_xen_m_plasmabomb_macro" amount="1" />
-		<restriction licence="generaluseequipment" />
-		<use threshold="0" />
-		<owner faction="xenon" />
-	  </ware>		  	  
-	<!--iSHIELDS-->	
-	  <ware id="ishield_xen_xl_reclaimer" name="{19530004,8}" description="{19530004,8}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-		<price min="1" average="1" max="1" />
-		<production time="1" amount="1" method="default" name="{20206,601}">
-		  <primary>
-			<ware ware="energycells" amount="1" />
-		  </primary>
-		</production>	  
-		<component ref="ishield_xen_xl_reclaimer_macro" amount="1" />
-		<use threshold="0" />
-		<restriction licence="generaluseequipment" />
-	  </ware>		
-	  <ware id="ishield_xen_m_fighter_y" name="{19530004,2}" description="{19530004,2}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-		<price min="1" average="1" max="1" />
-		<production time="1" amount="1" method="default" name="{20206,601}">
-		  <primary>
-			<ware ware="energycells" amount="1" />
-		  </primary>
-		</production>	  
-		<component ref="ishield_xen_m_fighter_y_macro" amount="1" />
-		<use threshold="0" />
-		<restriction licence="generaluseequipment" />
-	  </ware>	
-	  <ware id="ishield_xen_m_fighter_d" name="{19530004,5}" description="{19530004,5}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-		<price min="1" average="1" max="1" />
-		<production time="1" amount="1" method="default" name="{20206,601}">
-		  <primary>
-			<ware ware="energycells" amount="1" />
-		  </primary>
-		</production>	  
-		<component ref="ishield_xen_m_fighter_d_macro" amount="1" />
-		<use threshold="0" />
-		<restriction licence="generaluseequipment" />
-	  </ware>	
-	</add>	
-	<!--SHIPS-->  
-	<add sel="//wares">
-		<ware id="ship_otas_l_mistral_temp" name="{19530002,711}" description="{19530002,811}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="4614858" average="5422456" max="6230058" />
-		  <production time="350" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="1913" />
-			  <ware ware="hullparts" amount="5049" />
-			</primary>
-		  </production>
-		  <component ref="ship_otas_l_mistral_temp_macro" amount="1"/>
-		  <restriction licence="generaluseship"/>
-		  <owner faction="otas"/>
-		</ware>
-		<ware id="ship_otas_l_zephyrus_temp" name="{19530002,709}" description="{19530002,809}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="5075000" average="5963125" max="6851250" />
-		  <production time="430" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="9870" />
-			  <ware ware="hullparts" amount="12470" />
-			</primary>
-		  </production>
-		  <component ref="ship_otas_l_zephyrus_temp_macro" amount="1"/>
-		  <restriction licence="capitalship"/>
-		  <owner faction="otas"/>
-		</ware>
-		<ware id="ship_otas_m_skiron_temp" name="{19530002,703}" description="{19530002,803}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="839862" average="1049827" max="1259792" />
-		  <production time="32" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="156" />
-			  <ware ware="hullparts" amount="821" />
-			</primary>
-		  </production>
-		  <component ref="ship_otas_m_skiron_temp_macro" amount="1"/>
-		  <restriction licence="militaryship"/>
-		  <owner faction="otas"/>
-		</ware>
-		<ware id="ship_otas_m_sirokos_temp" name="{19530002,704}" description="{19530002,804}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="1074160" average="1342700" max="1611240" />
-		  <production time="41" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="226"/>
-			  <ware ware="hullparts" amount="1192"/>
-			</primary>
-		  </production>
-		  <component ref="ship_otas_m_sirokos_temp_macro" amount="1"/>
-		  <restriction licence="militaryship"/>
-		  <owner faction="otas"/>
-		</ware>
-		<ware id="ship_otas_s_auster_temp" name="{19530002,701}" description="{19530002,801}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="222104" average="333156" max="277630" />
-		  <production time="17" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="95"/>
-			  <ware ware="hullparts" amount="209"/>
-			</primary>
-		  </production>
-		  <component ref="ship_otas_s_auster_temp_macro" amount="1"/>
-		  <restriction licence="militaryship"/>
-		  <owner faction="otas"/>
-		</ware>
-		<ware id="ship_otas_s_venti_temp" name="{19530002,708}" description="{19530002,808}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="196532" average="245665" max="294798" />
-		  <production time="14" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="72"/>
-			  <ware ware="hullparts" amount="167"/>
-			</primary>
-		  </production>
-		  <component ref="ship_otas_s_venti_temp_macro" amount="1"/>
-		  <restriction licence="militaryship"/>
-		  <owner faction="otas"/>
-		</ware>
-		<ware id="ship_otas_xl_vesuvius_temp" name="{20101,200401}" description="{19530002,813}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="9306200" average="10948470" max="12590741" />
-		  <production time="527" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="2913" />
-			  <ware ware="hullparts" amount="10254" />
-			</primary>
-		  </production>
-		  <component ref="ship_otas_xl_vesuvius_temp_macro" amount="1"/>
-		  <restriction licence="generaluseship"/>
-		  <owner faction="otas"/>
-		</ware>
-		<ware id="ship_otas_xl_genthus_temp" name="{20101,81401}" description="{19530002,814}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="7310438" average="8600515" max="9890592" />
-		  <production time="527" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="2288" />
-			  <ware ware="hullparts" amount="8055" />
-			</primary>
-		  </production>
-		  <component ref="ship_otas_xl_genthus_temp_macro" amount="1"/>
-		  <restriction licence="militaryship"/>
-		  <owner faction="otas"/>
-		</ware>
-		<ware id="ship_otas_xl_andaman_temp" name="{20101,81901}" description="{19530002,815}" group="ships_argon" transport="ship" volume="1" tags="ship">
-		  <price min="16038308" average="18650950" max="21263593" />
-		  <production time="583" amount="1" method="default" name="{20206,101}">
-			<primary>
-			  <ware ware="energycells" amount="3905" />
-			  <ware ware="hullparts" amount="14535" />
-			</primary>
-		  </production>
-		  <component ref="ship_otas_xl_andaman_temp_macro" amount="1"/>
-		  <restriction licence="capitalship"/>
-		  <owner faction="otas"/>
-		</ware>		
-	</add> 
-	<!--STALWARTS-->
-	<add sel="//wares">	
-	  <ware id="ship_otas_l_magnetar_mineral_stalwart" name="{19530002,716}" description="{20101,11113}" transport="ship" volume="1" tags="ship">
-		<price min="1348181" average="1586095" max="1824009" />
-		<production time="101" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="559" />
-			<ware ware="hullparts" amount="1475" />
-		  </primary>
-		</production>
-		<component ref="ship_otas_l_magnetar_mineral_stalwart_macro" />
-		<restriction licence="generaluseship" />
-		<owner faction="otas" />
-	  </ware>	
-	  <ware id="ship_otas_l_magnetar_gas_stalwart" name="{19530002,717}" description="{20101,11114}" transport="ship" volume="1" tags="ship">
-		<price min="1111460" average="1307600" max="1503740" />
-		<production time="83" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="461" />
-			<ware ware="hullparts" amount="1216" />
-		  </primary>
-		</production>
-		<component ref="ship_otas_l_magnetar_gas_stalwart_macro" />
-		<restriction licence="generaluseship" />
-		<owner faction="otas" />
-	  </ware>
-	  <ware id="ship_otas_m_drill_stalwart" name="{19530002,718}" description="{20101,10813}" transport="ship" volume="1" tags="ship">
-		<price min="132528" average="155915" max="179302" />
-		<production time="15" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="81" />
-			<ware ware="hullparts" amount="143" />
-		  </primary>
-		</production>
-		<component ref="ship_otas_m_drill_stalwart_macro" />
-		<restriction licence="generaluseship" />
-		<owner faction="otas" />
-	  </ware>
-	  <ware id="ship_otas_m_sunder_stalwart" name="{19530002,719}" description="{20101,10913}" transport="ship" volume="1" tags="ship">
-		<price min="137173" average="161380" max="185587" />
-		<production time="15" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="84" />
-			<ware ware="hullparts" amount="148" />
-		  </primary>
-		</production>
-		<component ref="ship_otas_m_sunder_stalwart_macro" />
-		<restriction licence="generaluseship" />
-		<owner faction="otas" />
-	  </ware>
-	  <ware id="ship_otas_m_mercury_stalwart" name="{19530002,720}" description="{20101,10713}" transport="ship" volume="1" tags="ship">
-		<price min="177000" average="208235" max="239470" />
-		<production time="20" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="108" />
-			<ware ware="hullparts" amount="191" />
-		  </primary>
-		</production>
-		<component ref="ship_otas_m_mercury_stalwart_macro" />
-		<restriction licence="generaluseship" />
-		<owner faction="otas" />
-	  </ware>	  
-	  <ware id="ship_otas_m_ides_stalwart" name="{19530002,721}" description="{20101,11713}" transport="ship" volume="1" tags="ship">
-		<price min="177000" average="208235" max="239470" />
-		<production time="20" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="108" />
-			<ware ware="hullparts" amount="191" />
-		  </primary>
-		</production>
-		<component ref="ship_otas_m_ides_stalwart_macro" />
-		<restriction licence="generaluseship" />
-		<owner faction="otas" />
-	  </ware>
-	  <ware id="ship_otas_s_courier_miner_stalwart" name="{19530002,722}" description="{20101,11614}" transport="ship" volume="1" tags="ship">
-		<price min="70775" average="83265" max="95755" />
-		<production time="6" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="35" />
-			<ware ware="hullparts" amount="77" />
-		  </primary>
-		</production>
-		<component ref="ship_otas_s_courier_miner_stalwart_macro" />
-		<restriction licence="generaluseship" />
-		<owner faction="otas" />
-	  </ware>
-	  <ware id="ship_otas_s_courier_stalwart" name="{19530002,723}" description="{20101,11613}" transport="ship" volume="1" tags="ship">
-		<price min="158083" average="185980" max="213877" />
-		<production time="14" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="78" />
-			<ware ware="hullparts" amount="172" />
-		  </primary>
-		</production>
-		<component ref="ship_otas_s_courier_stalwart_macro" />
-		<restriction licence="generaluseship" />
-		<owner faction="otas" />
-	  </ware>
-	  <ware id="ship_otas_s_callisto_stalwart" name="{19530002,724}" description="{20101,12913}" transport="ship" volume="1" tags="ship">
-		<price min="83687" average="98455" max="113223" />
-		<production time="8" amount="1" method="default" name="{20206,101}">
-		  <primary>
-			<ware ware="energycells" amount="42" />
-			<ware ware="hullparts" amount="91" />
-		  </primary>
-		</production>
-		<component ref="ship_otas_s_callisto_stalwart_macro" />
-		<restriction licence="generaluseship" />
-		<owner faction="otas" />
-	  </ware>
-	</add>		
-	<!--ENGINES-->
-	<add sel="//wares">		
-		<!--L-->
-		<ware id="engine_otas_l_allround_01_mk1" name="{19530002,600}" description="{19530002,6001}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="321518" average="357242" max="392966" />
-			<production time="20" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="147" />
-				<ware ware="energycells" amount="25" />
-				<ware ware="engineparts" amount="67" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_l_allround_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="engine_otas_l_travel_01_mk1" name="{19530002,601}" description="{19530002,6011}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="337593" average="375104" max="412614" />
-			<production time="20" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="148" />
-				<ware ware="energycells" amount="37" />
-				<ware ware="engineparts" amount="76" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_l_travel_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<!--M-->
-		<ware id="engine_otas_m_allround_01_mk1" name="{19530002,602}" description="{19530002,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="11767" average="13074" max="14382" />
-			<production time="15" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="3" />
-				<ware ware="energycells" amount="15" />
-				<ware ware="engineparts" amount="5" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_m_allround_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="engine_otas_m_allround_01_mk2" name="{19530002,603}" description="{19530002,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="58166" average="64629" max="71092" />
-			<production time="15" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="18" />
-				<ware ware="energycells" amount="30" />
-				<ware ware="engineparts" amount="22" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_m_allround_01_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.4"/>
-			<owner faction="otas"/>
-		</ware>		
-		<ware id="engine_otas_m_allround_01_mk3" name="{19530002,604}" description="{19530002,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="287722" average="319691" max="351660" />
-			<production time="15" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="90" />
-				<ware ware="energycells" amount="60" />
-				<ware ware="engineparts" amount="110" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_m_allround_01_mk3_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.7"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="engine_otas_m_combat_01_mk1" name="{19530002,605}" description="{19530002,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="14357" average="15952" max="17547" />
-			<production time="15" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="3" />
-				<ware ware="energycells" amount="15" />
-				<ware ware="engineparts" amount="7" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_m_combat_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="engine_otas_m_combat_01_mk2" name="{19530002,606}" description="{19530002,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="69711" average="77457" max="85202" />
-			<production time="15" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="22" />
-				<ware ware="energycells" amount="30" />
-				<ware ware="engineparts" amount="26" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_m_combat_01_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.4"/>
-			<owner faction="otas"/>
-		</ware>		
-		<ware id="engine_otas_m_combat_01_mk3" name="{19530002,607}" description="{19530002,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="345444" average="383827" max="422209" />
-			<production time="15" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="110" />
-				<ware ware="energycells" amount="60" />
-				<ware ware="engineparts" amount="130" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_m_combat_01_mk3_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.7"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="engine_otas_m_travel_01_mk1" name="{19530002,608}" description="{19530002,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="13062" average="14513" max="15964" />
-			<production time="15" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="3" />
-				<ware ware="energycells" amount="15" />
-				<ware ware="engineparts" amount="6" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_m_travel_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="engine_otas_m_travel_01_mk2" name="{19530002,609}" description="{19530002,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="65234" average="72482" max="79730" />
-			<production time="15" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="20" />
-				<ware ware="energycells" amount="30" />
-				<ware ware="engineparts" amount="25" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_m_travel_01_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.4"/>
-			<owner faction="otas"/>
-		</ware>		
-		<ware id="engine_otas_m_travel_01_mk3" name="{19530002,610}" description="{19530002,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="331013" average="367793" max="404572" />
-			<production time="15" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="105" />
-				<ware ware="energycells" amount="60" />
-				<ware ware="engineparts" amount="125" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_m_travel_01_mk3_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.7"/>
-			<owner faction="otas"/>
-		</ware>		
-		<!--S-->
-		<ware id="engine_otas_s_allround_01_mk1" name="{19530002,611}" description="{19530002,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="5526" average="6140" max="6754" />
-			<production time="10" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="energycells" amount="10" />
-				<ware ware="engineparts" amount="4" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_s_allround_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>	
-		<ware id="engine_otas_s_allround_01_mk2" name="{19530002,612}" description="{19530002,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="26370" average="29300" max="32230" />
-			<production time="10" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="8" />
-				<ware ware="energycells" amount="20" />
-				<ware ware="engineparts" amount="10" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_s_allround_01_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.4"/>
-			<owner faction="otas"/>
-		</ware>	
-		<ware id="engine_otas_s_allround_01_mk3" name="{19530002,613}" description="{19530002,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="123301" average="137001" max="150701" />
-			<production time="10" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="40" />
-				<ware ware="energycells" amount="40" />
-				<ware ware="engineparts" amount="45" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_s_allround_01_mk3_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.7"/>
-			<owner faction="otas"/>
-		</ware>	
-		<ware id="engine_otas_s_combat_01_mk1" name="{19530002,614}" description="{19530002,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="8116" average="9017" max="9919" />
-			<production time="10" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="energycells" amount="10" />
-				<ware ware="engineparts" amount="6" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_s_combat_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>	
-		<ware id="engine_otas_s_combat_01_mk2" name="{19530002,615}" description="{19530002,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="40504" average="45005" max="49505" />
-			<production time="10" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="12" />
-				<ware ware="energycells" amount="20" />
-				<ware ware="engineparts" amount="16" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_s_combat_01_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.4"/>
-			<owner faction="otas"/>
-		</ware>	
-		<ware id="engine_otas_s_combat_01_mk3" name="{19530002,616}" description="{19530002,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="181023" average="201137" max="221250" />
-			<production time="10" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="60" />
-				<ware ware="energycells" amount="40" />
-				<ware ware="engineparts" amount="65" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_s_combat_01_mk3_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.7"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="engine_otas_s_travel_01_mk1" name="{19530002,617}" description="{19530002,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="6821" average="7579" max="8336" />
-			<production time="10" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="energycells" amount="10" />
-				<ware ware="engineparts" amount="5" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_s_travel_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>	
-		<ware id="engine_otas_s_travel_01_mk2" name="{19530002,618}" description="{19530002,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="34732" average="38591" max="42450" />
-			<production time="10" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="10" />
-				<ware ware="energycells" amount="20" />
-				<ware ware="engineparts" amount="14" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_s_travel_01_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.4"/>
-			<owner faction="otas"/>
-		</ware>	
-		<ware id="engine_otas_s_travel_01_mk3" name="{19530002,619}" description="{19530002,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="166592" average="185103" max="203613" />
-			<production time="10" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="55" />
-				<ware ware="energycells" amount="40" />
-				<ware ware="engineparts" amount="60" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_s_travel_01_mk3_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.7"/>
-			<owner faction="otas"/>
-		</ware>			
-		<!--XL-->
-		<ware id="engine_otas_xl_allround_01_mk1" name="{19530002,620}" description="{19530002,6201}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="424061" average="471179" max="518297" />
-			<production time="30" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="193" />
-				<ware ware="energycells" amount="50" />
-				<ware ware="engineparts" amount="89" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_xl_allround_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="engine_otas_xl_travel_01_mk1" name="{19530002,621}" description="{19530002,6211}" group="engines" transport="equipment" volume="1" tags="engine equipment">
-			<price min="445263" average="494737" max="544210" />
-			<production time="30" amount="1" method="default" name="{20206,101}">
-			  <primary>
-				<ware ware="antimatterconverters" amount="195" />
-				<ware ware="energycells" amount="50" />
-				<ware ware="engineparts" amount="101" />
-			  </primary>
-			</production>
-			<component ref="engine_otas_xl_travel_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-	</add>	
-	<!--SHIELDS-->
-	<add sel="//wares">
-		<ware id="shield_otas_l_standard_01_mk1" name="{19530002,500}" description="{19530002,500}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="42166" average="46851" max="51536"/>
-			<production time="20" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="50"/>
-					<ware ware="fieldcoils" amount="13"/>
-					<ware ware="shieldcomponents" amount="10"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_l_standard_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="shield_otas_l_standard_01_mk2" name="{19530002,501}" description="{20106,3042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="205644" average="228494" max="251343"/>
-			<production time="20" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="100"/>
-					<ware ware="fieldcoils" amount="65"/>
-					<ware ware="shieldcomponents" amount="50"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_l_standard_01_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.25"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="shield_otas_m_standard_01_mk1" name="{19530002,502}" description="{20106,2002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="12838" average="14264" max="15691"/>
-			<production time="10" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="20"/>
-					<ware ware="fieldcoils" amount="3"/>
-					<ware ware="shieldcomponents" amount="5"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_m_standard_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="shield_otas_m_standard_01_mk2" name="{19530002,503}" description="{20106,2042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="62115" average="69017" max="75918"/>
-			<production time="10" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="40"/>
-					<ware ware="fieldcoils" amount="15"/>
-					<ware ware="shieldcomponents" amount="25"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_m_standard_01_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.25"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="shield_otas_m_standard_02_mk1" name="{19530002,502}" description="{20106,2002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="12838" average="14264" max="15691"/>
-			<production time="10" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="20"/>
-					<ware ware="fieldcoils" amount="3"/>
-					<ware ware="shieldcomponents" amount="5"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_m_standard_02_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="shield_otas_m_standard_02_mk2" name="{19530002,503}" description="{20106,2042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="61597" average="68441" max="75285"/>
-			<production time="10" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="40"/>
-					<ware ware="fieldcoils" amount="15"/>
-					<ware ware="shieldcomponents" amount="25"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_m_standard_02_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.25"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="shield_otas_s_standard_01_mk1" name="{19530002,504}" description="{20106,1002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="1218" average="1354" max="1489"/>
-			<production time="10" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="5"/>
-					<ware ware="shieldcomponents" amount="1"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_s_standard_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="shield_otas_s_standard_01_mk2" name="{19530002,505}" description="{20106,1042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="10186" average="11318" max="12449"/>
-			<production time="10" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="10"/>
-					<ware ware="fieldcoils" amount="2"/>
-					<ware ware="shieldcomponents" amount="5"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_s_standard_01_mk2_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.25"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="shield_otas_s_standard_01_mk3" name="{19530002,506}" description="{20106,1082}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="49892" average="55436" max="60979"/>
-			<production time="10" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="20"/>
-					<ware ware="fieldcoils" amount="10"/>
-					<ware ware="shieldcomponents" amount="25"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_s_standard_01_mk3_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0.55"/>
-			<owner faction="otas"/>
-		</ware>
-		<ware id="shield_otas_xl_standard_01_mk1" name="{19530002,507}" description="{20106,4002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
-			<price min="225671" average="250745" max="275820"/>
-			<production time="20" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="150"/>
-					<ware ware="fieldcoils" amount="82"/>
-					<ware ware="shieldcomponents" amount="30"/>
-				</primary>
-			</production>
-			<component ref="shield_otas_xl_standard_01_mk1_macro"/>
-			<restriction licence="generaluseequipment"/>
-			<use threshold="0"/>
-			<owner faction="otas"/>
-		</ware>
-	</add>	
-	<!--Illegal-->	
-	<!--STATION MODULES-->
-	<add sel="/wares/ware[@id='module_arg_conn_base_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_conn_base_02']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_conn_base_03']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_conn_cross_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_conn_vertical_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_conn_vertical_02']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_def_claim_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_def_disc_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_def_tube_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_dock_m_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_dock_m_01_hightech']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_dock_m_01_lowtech']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_dock_m_02']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_dock_m_02_hightech']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_dock_m_02_lowtech']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_dock_tradestation_02']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_hab_l_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_hab_m_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_hab_s_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_pier_l_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_pier_l_02']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_pier_l_03']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_pier_tradestation_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_prod_foodrations_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_prod_meat_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_prod_medicalsupplies_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_prod_wheat_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_container_l_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_container_m_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_container_s_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_liquid_l_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_liquid_m_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_liquid_s_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_solid_l_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_solid_m_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_solid_s_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_arg_stor_tradestation_l_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_build_dockarea_m_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_build_l_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_build_m_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_build_s_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_build_xl_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_equip_dockarea_m_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_equip_l_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_equip_xl_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_proc_scrapworks']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='module_gen_prod_advancedcomposites_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_advancedelectronics_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_antimattercells_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_antimatterconverters_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_claytronics_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_dronecomponents_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_energycells_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_engineparts_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_fieldcoils_01']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='module_gen_prod_graphene_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_hullparts_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_microchips_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_missilecomponents_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_plasmaconductors_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_quantumtubes_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_refinedmetals_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_scanningarrays_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_scrap_recycler']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='module_gen_prod_shieldcomponents_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_siliconwafers_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_smartchips_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_spices_01']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='module_gen_prod_superfluidcoolant_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_turretcomponents_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_water_01']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='module_gen_prod_weaponcomponents_01']">
-		<owner faction="otas"/>
-	</add>
-	<!--TURRETS-->
-	<add sel="/wares/ware[@id='turret_arg_l_beam_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='turret_arg_l_dumbfire_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_l_guided_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_l_laser_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_l_mining_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_l_plasma_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_beam_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_beam_02_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_dumbfire_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_dumbfire_02_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_flak_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_flak_02_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_gatling_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_gatling_02_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_guided_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_guided_02_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_laser_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_laser_02_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='turret_arg_m_mining_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='turret_arg_m_mining_02_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_plasma_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_plasma_02_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_shotgun_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='turret_arg_m_shotgun_02_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='turret_arg_m_shotgun_01_mk1']">
-		<owner faction="otas"/>
-	</add>			
-	<!--WEAPONS-->
-	<add sel="/wares/ware[@id='turret_gen_m_scrapbeam_01_mk1']">
-		<owner faction="otas"/>
-		<owner faction="freesplit"/>		
-		<owner faction="split"/>	
-		<owner faction="ministry"/>		
-	</add>	
-	<add sel="/wares/ware[@id='weapon_arg_l_destroyer_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_arg_m_ion_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_arg_m_ion_01_mk2']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_arg_s_ion_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_arg_s_ion_01_mk2']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_m_beam_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_m_beam_01_mk2']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_m_dumbfire_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_m_dumbfire_01_mk2']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_m_gatling_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_m_gatling_01_mk2']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_m_guided_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_m_guided_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_laser_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_laser_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_mining_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_mining_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_plasma_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_plasma_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_shotgun_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_shotgun_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_torpedo_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_torpedo_01_mk2']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_s_beam_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_beam_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_burst_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_burst_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_cannon_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_cannon_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_dumbfire_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_dumbfire_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_gatling_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_gatling_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_guided_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_guided_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_laser_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_s_laser_01_mk2']">
-		<owner faction="otas"/>
-	</add>		
-	<add sel="/wares/ware[@id='weapon_gen_s_mining_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_mining_01_mk2']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_s_plasma_01_mk1']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_s_plasma_01_mk2']">
-		<owner faction="otas"/>
-	</add>	
-	<add sel="/wares/ware[@id='weapon_gen_s_shotgun_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_shotgun_01_mk2']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_torpedo_01_mk1']">
-		<owner faction="otas"/>
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_s_torpedo_01_mk2']">
-		<owner faction="otas"/>
-	</add>	
-	<!--VRO-->
-	<add sel="/wares/ware[@id='turret_arg_m_ma_01']">
-		<owner faction="otas"/>
-	</add>		
-	<add sel="/wares/ware[@id='turret_arg_m_ma_02']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='turret_arg_l_ppc']">
-		<owner faction="otas"/>	
-	</add>		
-	<add sel="/wares/ware[@id='weapon_gen_m_ma']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='weapon_gen_m_plasmabomb']">
-		<owner faction="otas"/>	
-	</add>	
-	<add sel="/wares/ware[@id='weapon_arg_l_ppc']">
-		<owner faction="otas"/>	
-	</add>			
-	<add sel="/wares/ware[@id='missile_blizzard']">
-		<owner faction="otas"/>	
-	</add>	
-	<add sel="/wares/ware[@id='missile_tornado']">
-		<owner faction="otas"/>	
-	</add>	
-	<add sel="/wares/ware[@id='missile_cyclone']">
-		<owner faction="otas"/>	
-	</add>			
-	<add sel="/wares/ware[@id='missile_hurricane']">
-		<owner faction="otas"/>	
-	</add>		
-	<add sel="/wares/ware[@id='missile_tempest']">
-		<owner faction="otas"/>	
-	</add>	
-	<add sel="/wares/ware[@id='missile_typhoon']">
-		<owner faction="otas"/>	
-	</add>	
-	<add sel="/wares/ware[@id='missile_firestorm']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='missile_rgw']">
-		<owner faction="otas"/>	
-	</add>		
+    <ware id="module_ter_prod_terranmre_x5" name="{20104,15501} x5" description="{20104,15502}" transport="container" volume="1" tags="module">
+      <price min="2666325" average="3136855" max="3607385" />
+      <production time="2180" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="150" />
+          <ware ware="energycells" amount="445" />
+          <ware ware="siliconcarbide" amount="100" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_ter_mre_5_macro" />
+    </ware>	
+	<!--BORON-->
+    <ware id="module_bor_prod_bofu_x3" name="{20104,16201} x3" description="{20104,16202}" transport="container" volume="1" tags="module">
+      <price min="4705422" average="5535789" max="6366159" />
+      <production time="1101" amount="1" method="default" name="{20206,801}">
+        <primary>
+          <ware ware="claytronics" amount="489" />
+          <ware ware="energycells" amount="15570" />
+          <ware ware="hullparts" amount="3576" />
+          <ware ware="water" amount="9399" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_bor_bofu_3_macro" />
+    </ware>
+    <ware id="module_bor_prod_bofu_x5" name="{20104,16201} x5" description="{20104,16202}" transport="container" volume="1" tags="module">
+      <price min="7842370" average="9226315" max="10610265" />
+      <production time="1835" amount="1" method="default" name="{20206,801}">
+        <primary>
+          <ware ware="claytronics" amount="815" />
+          <ware ware="energycells" amount="25950" />
+          <ware ware="hullparts" amount="5960" />
+          <ware ware="water" amount="15665" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_bor_bofu_5_macro" />
+    </ware>	
+    <ware id="module_bor_prod_bogas_x3" name="{20104,16001} x3" description="{20104,16002}" transport="container" volume="1" tags="module">
+      <price min="4454496" average="5240586" max="6026673" />
+      <production time="1233" amount="1" method="default" name="{20206,801}">
+        <primary>
+          <ware ware="claytronics" amount="462" />
+          <ware ware="energycells" amount="14739" />
+          <ware ware="hullparts" amount="3384" />
+          <ware ware="water" amount="8898" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_bor_bogas_3_macro" />
+    </ware>
+    <ware id="module_bor_prod_bogas_x5" name="{20104,16001} x5" description="{20104,16002}" transport="container" volume="1" tags="module">
+      <price min="7424160" average="8734310" max="10044455" />
+      <production time="2055" amount="1" method="default" name="{20206,801}">
+        <primary>
+          <ware ware="claytronics" amount="770" />
+          <ware ware="energycells" amount="24565" />
+          <ware ware="hullparts" amount="5640" />
+          <ware ware="water" amount="14830" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_bor_bogas_5_macro" />
+    </ware>	
+    <ware id="module_bor_prod_medicalsupplies_x3" name="{20104,15901} x3" description="{20104,15902}" transport="container" volume="1" tags="module">
+      <price min="4037568" average="4750080" max="5462592" />
+      <production time="1359" amount="1" method="default" name="{20206,801}">
+        <primary>
+          <ware ware="claytronics" amount="420" />
+          <ware ware="energycells" amount="13359" />
+          <ware ware="hullparts" amount="3069" />
+          <ware ware="water" amount="8067" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_bor_medicalsupplies_3_macro" />
+    </ware>
+    <ware id="module_bor_prod_medicalsupplies_x5" name="{20104,15901} x5" description="{20104,15902}" transport="container" volume="1" tags="module">
+      <price min="6729280" average="7916800" max="9104320" />
+      <production time="2265" amount="1" method="default" name="{20206,801}">
+        <primary>
+          <ware ware="claytronics" amount="700" />
+          <ware ware="energycells" amount="22265" />
+          <ware ware="hullparts" amount="5115" />
+          <ware ware="water" amount="13445" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_bor_medicalsupplies_5_macro" />
+    </ware>	
+    <ware id="module_bor_prod_plankton_x3" name="{20104,16101} x3" description="{20104,16102}" transport="container" volume="1" tags="module">
+      <price min="2763522" average="3251202" max="3738885" />
+      <production time="834" amount="1" method="default" name="{20206,801}">
+        <primary>
+          <ware ware="claytronics" amount="288" />
+          <ware ware="energycells" amount="9144" />
+          <ware ware="hullparts" amount="2100" />
+          <ware ware="water" amount="5520" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_bor_plankton_3_macro" />
+    </ware>
+    <ware id="module_bor_prod_plankton_x5" name="{20104,16101} x5" description="{20104,16102}" transport="container" volume="1" tags="module">
+      <price min="4605870" average="5418670" max="6231475" />
+      <production time="1390" amount="1" method="default" name="{20206,801}">
+        <primary>
+          <ware ware="claytronics" amount="480" />
+          <ware ware="energycells" amount="15240" />
+          <ware ware="hullparts" amount="3500" />
+          <ware ware="water" amount="9200" />
+        </primary>
+      </production>
+      <research time="10">
+        <research>
+          <ware ware="research_module_production" />
+        </research>
+      </research>
+      <component ref="prod_bor_plankton_5_macro" />
+    </ware> 
+</add>	  
+
+	<!--Khaak-->
+<!--Ravager-->
+  <replace sel="/wares/ware[@id='ship_kha_l_destroyer_01_a']/@tags">ship</replace>
+<!--Queen's Guard-->
+  <replace sel="/wares/ware[@id='ship_kha_m_fighter_01_a']/@tags">ship</replace>
+<!--Hive Guard-->
+  <replace sel="/wares/ware[@id='ship_kha_m_fighter_02_a']/@tags">ship</replace>
+<!--Protector-->
+  <replace sel="/wares/ware[@id='ship_kha_s_fighter_01_a']/@tags">ship</replace>
+<!--Forager-->
+  <replace sel="/wares/ware[@id='ship_kha_s_fighter_02_a']/@tags">ship</replace>
+<!--Obliterator-->
+  <replace sel="/wares/ware[@id='ship_kha_xl_battleship_01_a']/@tags">ship</replace>  
+<!--Turrets-->
+  <replace sel="/wares/ware[@id='turret_kha_l_beam_01_mk1']/@tags">equipment turret</replace>
+  <replace sel="/wares/ware[@id='turret_kha_m_beam_01_mk1']/@tags">equipment turret</replace>  
+<!--Weapons-->  
+  <replace sel="/wares/ware[@id='weapon_kha_l_beam_01_mk1']/@tags">equipment weapon</replace>
+  <replace sel="/wares/ware[@id='weapon_kha_m_laser_01_mk1']/@tags">equipment weapon</replace>
+  <replace sel="/wares/ware[@id='weapon_kha_s_laser_01_mk1']/@tags">equipment weapon</replace>
+  <replace sel="/wares/ware[@id='weapon_kha_xl_battleship_01_mk1']/@tags">equipment weapon</replace>  
+<!--Engines-->  
+  <replace sel="/wares/ware[@id='engine_kha_l_destroyer_01_allround_01_mk1']/@tags">engine equipment</replace>
+  <replace sel="/wares/ware[@id='engine_kha_m_combat_01_mk1']/@tags">engine equipment</replace>
+  <replace sel="/wares/ware[@id='engine_kha_m_combat_02_mk1']/@tags">engine equipment</replace>
+  <replace sel="/wares/ware[@id='engine_kha_s_combat_01_mk1']/@tags">engine equipment</replace>  
+  <replace sel="/wares/ware[@id='engine_kha_xl_battleship_01_allround_01_mk1']/@tags">engine equipment</replace>    
+<!--Shields-->
+  <replace sel="/wares/ware[@id='shield_kha_l_standard_01_mk1']/@tags">shield equipment</replace>
+  <replace sel="/wares/ware[@id='shield_kha_m_standard_01_mk1']/@tags">shield equipment</replace>
+  <replace sel="/wares/ware[@id='shield_kha_m_standard_02_mk1']/@tags">shield equipment</replace>
+  <replace sel="/wares/ware[@id='shield_kha_m_standard_03_mk1']/@tags">shield equipment</replace>  
+  <replace sel="/wares/ware[@id='shield_kha_s_standard_01_mk1']/@tags">shield equipment</replace>
+  <replace sel="/wares/ware[@id='shield_kha_xl_standard_01_mk1']/@tags">shield equipment</replace>  
+  
+	<!--Xenon-->
+  <replace sel="/wares/ware[@id='ship_xen_m_fighter_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_m_fighter_01_a']/production/@tags"/>
+  <replace sel="/wares/ware[@id='ship_xen_m_miner_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_m_miner_01_a']/production/@tags"/>
+  <replace sel="/wares/ware[@id='ship_xen_s_fighter_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_s_fighter_01_a']/production/@tags"/>
+  <replace sel="/wares/ware[@id='ship_xen_s_fighter_02_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_s_fighter_02_a']/production/@tags"/>
+  <replace sel="/wares/ware[@id='ship_xen_s_scout_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_s_scout_01_a']/production/@tags"/>
+  <replace sel="/wares/ware[@id='ship_xen_xl_carrier_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_xl_carrier_01_a']/production/@tags"/>
+  <replace sel="/wares/ware[@id='ship_xen_xl_destroyer_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_xl_destroyer_01_a']/production/@tags"/>
+
+
+<!--F-->
+  <replace sel="/wares/ware[@id='ship_xen_s_heavyfighter_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_s_heavyfighter_01_a']/production/@tags"/>
+<!--B--> 
+  <replace sel="/wares/ware[@id='ship_xen_m_corvette_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_m_corvette_01_a']/production/@tags"/>
+<!--H-->  
+  <replace sel="/wares/ware[@id='ship_xen_l_terraformer_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_l_terraformer_01_a']/production/@tags"/>  
+<!--PE--> 
+  <replace sel="/wares/ware[@id='ship_xen_m_corvette_02_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_m_corvette_02_a']/production/@tags"/>  
+<!--SE--> 
+  <replace sel="/wares/ware[@id='ship_xen_m_miner_solid_01_a']/@tags">ship</replace>
+  <remove sel="/wares/ware[@id='ship_xen_m_miner_solid_01_a']/production/@tags"/>   
+<!--Engines-->  
+  <replace sel="/wares/ware[@id='engine_xen_l_allround_01_mk1']/@tags">engine equipment</replace>
+  <remove sel="/wares/ware[@id='engine_xen_l_allround_01_mk1']/production/@tags"/>
+  <replace sel="/wares/ware[@id='engine_xen_l_allround_02_mk1']/@tags">engine equipment</replace>
+  <remove sel="/wares/ware[@id='engine_xen_l_allround_02_mk1']/production[@name='{20206,601}']/@tags"/>
+  <replace sel="/wares/ware[@id='engine_xen_m_combat_01_mk1']/@tags">engine equipment</replace>
+  <remove sel="/wares/ware[@id='engine_xen_m_combat_01_mk1']/production/@tags"/>
+  <replace sel="/wares/ware[@id='engine_xen_m_travel_01_mk1']/@tags">engine equipment</replace>
+  <remove sel="/wares/ware[@id='engine_xen_m_travel_01_mk1']/production/@tags"/>
+  <replace sel="/wares/ware[@id='engine_xen_m_virtual_01_mk1']/@tags">engine equipment</replace>
+  <remove sel="/wares/ware[@id='engine_xen_m_virtual_01_mk1']/production[@name='{20206,601}']/@tags"/>
+  <replace sel="/wares/ware[@id='engine_xen_s_combat_01_mk1']/@tags">engine equipment</replace>
+  <remove sel="/wares/ware[@id='engine_xen_s_combat_01_mk1']/production/@tags"/>
+  <replace sel="/wares/ware[@id='engine_xen_s_virtual_01_mk1']/@tags">engine equipment</replace>
+  <remove sel="/wares/ware[@id='engine_xen_s_virtual_01_mk1']/production[@name='{20206,601}']/@tags"/>
+  <replace sel="/wares/ware[@id='engine_xen_xl_allround_01_mk1']/@tags">engine equipment</replace>
+  <remove sel="/wares/ware[@id='engine_xen_xl_allround_01_mk1']/production/@tags"/>
+<!--Shield--> 
+  <replace sel="/wares/ware[@id='shield_xen_l_standard_01_mk2']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_l_standard_01_mk2']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='shield_xen_l_standard_02_mk1']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_l_standard_02_mk1']/production/@tags"/>  
+  <replace sel="/wares/ware[@id='shield_xen_l_standard_02_mk2']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_l_standard_02_mk2']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='shield_xen_m_standard_01_mk1']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_m_standard_01_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='shield_xen_m_standard_01_mk2']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_m_standard_01_mk2']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='shield_xen_m_standard_02_mk1']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_m_standard_02_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='shield_xen_m_standard_02_mk2']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_m_standard_02_mk2']/production/@tags"/>
+  <replace sel="/wares/ware[@id='shield_xen_m_standard_04_mk1']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_m_standard_04_mk1']/production/@tags"/>
+  <replace sel="/wares/ware[@id='shield_xen_m_virtual_01_mk1']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_m_virtual_01_mk1']/production/@tags"/>
+  <replace sel="/wares/ware[@id='shield_xen_s_standard_01_mk1']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_s_standard_01_mk1']/production/@tags"/>
+  <replace sel="/wares/ware[@id='shield_xen_s_standard_01_mk2']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_s_standard_01_mk2']/production/@tags"/>
+  <replace sel="/wares/ware[@id='shield_xen_s_virtual_01_mk1']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_s_virtual_01_mk1']/production/@tags"/>
+  <replace sel="/wares/ware[@id='shield_xen_xl_standard_01_mk1']/@tags">equipment shield</replace>
+  <remove sel="/wares/ware[@id='shield_xen_xl_standard_01_mk1']/production/@tags"/> 
+<!--Turret-->  
+  <replace sel="/wares/ware[@id='turret_xen_l_laser_01_mk1']/@tags">equipment turret</replace>
+  <remove sel="/wares/ware[@id='turret_xen_l_laser_01_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='turret_xen_l_plasma_01_mk1']/@tags">equipment turret</replace>
+  <remove sel="/wares/ware[@id='turret_xen_l_plasma_01_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='turret_xen_m_beam_02_mk1']/@tags">equipment turret</replace>
+  <remove sel="/wares/ware[@id='turret_xen_m_beam_02_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='turret_xen_m_gatling_01_mk1']/@tags">equipment turret</replace>
+  <remove sel="/wares/ware[@id='turret_xen_m_gatling_01_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='turret_xen_m_gatling_02_mk1']/@tags">equipment turret</replace>
+  <remove sel="/wares/ware[@id='turret_xen_m_gatling_02_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='turret_xen_m_laser_01_mk1']/@tags">equipment turret</replace>
+  <remove sel="/wares/ware[@id='turret_xen_m_laser_01_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='turret_xen_m_laser_02_mk1']/@tags">equipment turret</replace>
+  <remove sel="/wares/ware[@id='turret_xen_m_laser_02_mk1']/production/@tags"/>
+<!--Weapon-->  
+  <remove sel="/wares/ware[@id='weapon_xen_m_beam_01_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='weapon_xen_m_laser_01_mk1']/@tags">equipment weapon</replace>  
+  <remove sel="/wares/ware[@id='weapon_xen_m_laser_01_mk1']/production/@tags"/> 
+  <remove sel="/wares/ware[@id='weapon_xen_m_laser_02_mk1']/production/@tags"/> 
+  <remove sel="/wares/ware[@id='weapon_xen_m_mining_01_mk1']/production/@tags"/> 
+  <remove sel="/wares/ware[@id='weapon_xen_m_mining_02_mk1']/production/@tags"/> 
+  <remove sel="/wares/ware[@id='weapon_xen_s_gatling_01_mk1']/production/@tags"/> 
+  <replace sel="/wares/ware[@id='weapon_xen_s_laser_01_mk1']/@tags">equipment weapon</replace>  
+  <remove sel="/wares/ware[@id='weapon_xen_s_laser_01_mk1']/production/@tags"/> 
+
+<!--Astrid-->
+  <replace sel="/wares/ware[@id='engine_gen_m_yacht_01_mk1']/@tags">engine equipment</replace>
+  <replace sel="/wares/ware[@id='shield_gen_m_yacht_01_mk1']/@tags">shield equipment</replace>
+  <replace sel="/wares/ware[@id='ship_gen_m_yacht_01_a']/@tags">ship</replace>
+  <replace sel="/wares/ware[@id='turret_gen_m_yacht_01_mk1']/@tags">turret equipment</replace>  
+  <replace sel="/wares/ware[@id='weapon_gen_m_yacht_01_mk1']/@tags">weapon equipment</replace>   
 </diff>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_tel_hullparts_5_macro" class="production">
+    <component ref="prod_gen_hullparts" />
+    <properties>
+      <identification name="{20104,11401} x5" shortname="{20104,11403} x5" makerrace="teladi" description="{20104,11402}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="1000" shield="5000" />
+      <hull max="146000" />
+      <secrecy level="2" />
+      <production wares="hullparts hullparts hullparts hullparts hullparts">
+        <queue>
+          <item ware="hullparts" method="teladi" />			  
+        </queue>
+      </production>	
+      <workforce max="1350" />
+    </properties>
+  </macro>
+</macros>

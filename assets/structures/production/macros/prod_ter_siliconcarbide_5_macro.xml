@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_ter_siliconcarbide_5_macro" class="production">
+    <component ref="prod_ter_siliconcarbide" />
+    <properties>
+      <identification name="{20104,15701} x5" shortname="{20104,15703} x5" makerrace="terran" description="{20104,15702}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="2000" shield="10000" />
+      <hull max="350000" />
+      <production wares="siliconcarbide siliconcarbide siliconcarbide siliconcarbide siliconcarbide">
+        <queue>
+          <item ware="siliconcarbide" />	  
+        </queue>
+      </production>	
+      <workforce max="3750" />
+    </properties>
+  </macro>
+</macros>

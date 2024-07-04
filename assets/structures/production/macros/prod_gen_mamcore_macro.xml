@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_gen_mamcore_macro" class="production">
+    <component ref="prod_ter_stimulants" />
+    <properties>
+      <identification name="M/AM Power Core" shortname="M/AM Power Core" makerrace="terran" description="M/AM Power Core" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="2000" shield="10000" />
+      <hull max="300000" />
+      <secrecy level="5" />
+      <production wares="energycells">
+        <queue ware="energycells" method="mamcore"/>
+      </production>
+      <workforce max="750" />
+    </properties>
+  </macro>
+</macros>

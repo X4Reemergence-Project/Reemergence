@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_gen_fusioncore_macro" class="production">
+    <component ref="prod_gen_dronecomponents" />
+    <properties>
+      <identification name="Fusion Power Core" shortname="Fusion Power Core" description="Fusion Core" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+        </sets>
+      </build>
+      <explosiondamage value="1000" shield="5000" />
+      <hull max="190000" />
+      <secrecy level="5" />
+      <production wares="energycells">
+        <queue ware="energycells" method="fusioncore"/>
+      </production>
+      <workforce max="500" />
+    </properties>
+  </macro>
+</macros>
