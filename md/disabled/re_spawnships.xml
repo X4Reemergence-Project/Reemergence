@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<mdscript name="RE_Spawnships" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+  <cues>
+	<cue name="Root">
+	  <cues>
+		<cue name="SpawnClaimableAsgard">
+		  <conditions>
+			<check_any>
+			  <event_cue_signalled cue="md.Setup.GameStart" />
+			  <event_player_created/>
+			</check_any>
+		  </conditions>
+		  <delay exact="10s"/>
+		  <actions>
+			<find_sector name="$UnknownSector" macro="macro.Cluster_REM71f_Sector001_macro"/>
+			<do_if value="$UnknownSector.exists">
+			  <create_ship name="$claimableasgard" sector="$UnknownSector" macro="macro.ship_atf_xl_battleship_01_a_macro">
+				<owner exact="faction.terran" overridenpc="true"/>	
+				<position x="20km" y="0km" z="20km"/>
+				<rotation yaw="-10deg" pitch="10deg" roll="10deg"/>	
+				<loadout>
+				  <!--level exact="1.0"/-->
+				</loadout>					
+				<pilot>
+				  <select faction="faction.terran" tags="tag.fighterpilot"/>
+				</pilot>		
+				<people>
+				  <fillpercent min="70" max="95" />
+				  <person role="service" weight="80">
+					<select faction="faction.terran" tags="tag.crew"/>
+				  </person>
+				  <person role="marine" weight="50">
+					<select faction="faction.terran" tags="tag.marine"/>
+				  </person>
+				</people>
+			  </create_ship>
+			</do_if>
+			<find_ship name="$claimableasgard" owner="faction.terran" space="$UnknownSector" macro="macro.ship_atf_xl_battleship_01_a_macro" multiple="false"/>			
+			<set_object_radar_visible object="$claimableasgard" visible="true"/>
+		  </actions>
+		</cue>				
+	  </cues>
+	</cue>
+  </cues>
+</mdscript>				

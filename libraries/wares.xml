@@ -24,6 +24,40 @@
       </effects>
     </production>
   </add>  
+
+	<!--SHIPS-->
+  <add sel="/wares/ware[@id='ship_arg_xs_police_01_a']">
+	<owner faction="otas"/>	
+	<owner faction="jonferco"/>	
+	<owner faction="atreus"/>	<!--Boron use Argon police-->	
+  </add>
+  <add sel="/wares/ware[@id='ship_par_xs_police_01_a']">
+	<owner faction="xaar"/>			
+  </add>	
+  <add sel="/wares/ware[@id='ship_tel_xs_police_01_a']">
+	<owner faction="nmmc"/>			
+  </add>
+  <add sel="/wares/ware[@id='ship_tel_xs_police_02_a']">
+	<owner faction="nmmc"/>			
+  </add>
+  <add sel="/wares/ware[@id='ship_tel_xs_police_03_a']">
+	<owner faction="nmmc"/>			
+  </add>	
+  <add sel="/wares/ware[@id='ship_ter_xs_police_01_a']">	
+	<owner faction="atf"/>			
+  </add>	
+  <add sel="/wares/ware[@id='ship_gen_m_tugboat_01_a']">
+	<owner faction="otas"/>
+	<owner faction="jonferco"/>			
+	<owner faction="nmmc"/>		
+	<owner faction="freesplit"/>		
+	<owner faction="split"/>		
+  </add>
+  <remove sel="/wares/ware[@id='ship_spl_l_panther_a']"/>	<!--Remove VRO Panther-->		
+  <remove sel="/wares/ware[@id='ship_ter_l_carrier_01']"/>	<!--Remove VRO Chiba-->		
+  <remove sel="/wares/ware[@id='ship_tel_l_shrike_a']"/>	<!--Remove VRO Shrike-->
+  <remove sel="/wares/ware[@id='ship_xen_xl_u']"/>			<!--Remove VRO U-->	
+  <remove sel="/wares/ware[@id='engine_xen_xl_u']"/>		<!--Remove VRO U Engine-->	  
 	<!--RE ENTRIES-->
 <add sel="//wares">
 	<!--RESEARCH-->  
@@ -46,7 +80,9 @@
       </research>	  
     </research>
   </ware> 
-	<!--POWER CORES-->	
+</add>  
+	<!--MODULES-->
+<add sel="//wares">	
   <ware id="module_gen_prod_fusioncore" name="Fusion Power Core" description="Fusion Core" transport="container" volume="1" tags="module">
     <price min="5655276" average="6653264" max="9934304" />
     <production time="1225" amount="1" method="default" name="{20206,101}">
@@ -76,6 +112,12 @@
     <owner faction="split" />	
     <owner faction="teladi" />
     <owner faction="trinity" />	
+    <owner faction="otas" />
+    <owner faction="jonferco" />
+    <owner faction="strongarms" />
+    <owner faction="nmmc" />
+    <owner faction="atreus" />
+    <owner faction="xaar" />		
   </ware>
   <ware id="module_gen_prod_mamcore" name="M/AM Power Core" description="M/AM Core" transport="container" volume="1" tags="module">
     <price min="6148290" average="7070535" max="8131110" />
@@ -95,10 +137,940 @@
     <component ref="prod_gen_mamcore_macro" />
 	<restriction licence="station_gen_advanced" />
 	<owner faction="pioneers" />
-	<owner faction="terran" />	
+	<owner faction="terran" />
+    <owner faction="atf" />		
+  </ware>
+  <ware id="struct_otas_cross_01" name="{19530002,400}" description="{19530002,400}" transport="container" volume="1" tags="module">
+	<price min="95300" average="106824" max="118348" />
+	<production time="47" amount="1" method="default" name="{20206,101}">
+	  <primary>
+		<ware ware="claytronics" amount="12" />
+		<ware ware="energycells" amount="24" />
+		<ware ware="hullparts" amount="44" />
+	  </primary>
+	</production>
+	<component ref="struct_otas_cross_01_macro" amount="1" />
+	<restriction licence="station_gen_basic" />
+	<owner faction="otas" />
+  </ware>
+  <ware id="module_otas_prod_stimulants" name="{19530002,402}" description="{20104,15802}" transport="container" volume="1" tags="module">
+	<price min="1735171" average="2041378" max="2347585" />
+	<production time="787" amount="1" method="default" name="{20206,901}">
+	  <primary>
+		<ware ware="claytronics" amount="319" />
+		<ware ware="energycells" amount="638" />
+		<ware ware="hullparts" amount="1168" />
+	  </primary>
+	</production>
+	<component ref="prod_otas_stimulants_macro" />
+	<restriction licence="station_gen_basic" />
+	<owner faction="otas" />
+  </ware>
+</add>  
+	<!--SHIPS-->
+<add sel="//wares">		
+    <ware id="ship_spl_l_cheetah" name="{19530007,700}" description="{19530007,800}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="6195057" average="6858890" max="7522724" />
+      <production time="90" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1000" />
+          <ware ware="hullparts" amount="4850" />
+        </primary>
+      </production>
+      <component ref="ship_spl_l_cheetah_macro" amount="1" />
+      <restriction licence="militaryship" />
+      <owner faction="freesplit" />
+      <owner faction="court" />
+      <owner faction="fallensplit" />
+	  <owner faction="strongarms" />	  
+    </ware>
+    <ware id="ship_spl_s_wolf" name="{19530007,710}" description="{19530007,810}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="260648" average="291350" max="362053" />
+	  <production time="12" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="120" />
+		  <ware ware="hullparts" amount="280" />
+		</primary>
+	  </production>
+	  <component ref="ship_spl_s_wolf_macro" amount="1" />
+	  <restriction licence="militaryship" />
+	  <owner faction="court" />
+	  <owner faction="freesplit" />
+	  <owner faction="fallensplit" />
+	  <owner faction="split" />	
+	  <owner faction="strongarms" />		  
+    </ware>
+    <ware id="ship_ter_l_chiba_e" name="{19530007,701}" description="{19530007,801}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="6058790" average="7833870" max="8608951" />
+      <production time="140" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="200" />
+          <ware ware="energycells" amount="900" />
+          <ware ware="metallicmicrolattice" amount="250" />
+        </primary>
+      </production>
+      <component ref="ship_ter_l_chiba_e_macro" amount="1" />
+      <restriction licence="militaryship" />
+      <owner faction="pioneers" />
+      <owner faction="terran" />
+      <owner faction="atf" />	  
+    </ware>
+    <ware id="ship_ter_s_falchion" name="{19530007,711}" description="{19530007,811}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="291338" average="342750" max="394163" />
+      <production time="11" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="8" />
+          <ware ware="energycells" amount="60" />
+          <ware ware="metallicmicrolattice" amount="27" />
+        </primary>
+      </production>
+      <component ref="ship_ter_s_falchion_macro" />
+      <restriction licence="militaryship" />
+      <owner faction="pioneers" />
+      <owner faction="terran" />
+      <owner faction="atf" />	 	  
+    </ware>
+    <ware id="ship_bor_l_marlin" name="{19530007,720}" description="{19530007,820}" group="ships_boron" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="3653390" average="4401675" max="5149960" />
+      <production time="90" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1500" />
+          <ware ware="hullparts" amount="3900" />
+          <ware ware="water" amount="760" />
+        </primary>
+      </production>
+      <component ref="ship_bor_l_marlin_macro" amount="1" />
+      <restriction licence="militaryship" />
+      <owner faction="boron" />
+      <owner faction="atreus" />	  
+    </ware>
+    <ware id="ship_arg_m_tm" name="{19530007,733}" description="{19530007,833}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="354000" average="416470" max="478940" />
+		<production time="20" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="108" />
+				<ware ware="hullparts" amount="191" />
+			</primary>
+		</production>
+      <component ref="ship_arg_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="argon" />
+	  <owner faction="antigone" />
+	  <owner faction="jonferco"/>		  
+    </ware>
+    <ware id="ship_tel_m_tm" name="{19530007,734}" description="{19530007,834}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="419716" average="493784" max="567851" />
+		<production time="31" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="161" />
+				<ware ware="hullparts" amount="283" />
+			</primary>
+		</production>
+      <component ref="ship_tel_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="teladi" />
+	  <owner faction="ministry" />
+	  <owner faction="scaleplate"/>		  
+	  <owner faction="nmmc"/>	  
+    </ware>
+    <ware id="ship_par_m_tm" name="{20101,120901}" description="{19530007,832}" group="ships_paranid" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="389386" average="458100" max="526816" />
+		<production time="31" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="120" />
+				<ware ware="hullparts" amount="210" />
+			</primary>
+		</production>
+      <component ref="ship_par_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="paranid" />
+	  <owner faction="holyorder" />
+	  <owner faction="trinity" />	
+	  <owner faction="buccaneers" />		  
+	  <owner faction="xaar"/>	  
+    </ware>	
+    <ware id="ship_bor_m_tm" name="{20101,51501}" description="{19530007,835}" group="ships_boron" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="302277" average="355620" max="408963" />
+		<production time="31" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="92" />
+				<ware ware="hullparts" amount="210" />
+				<ware ware="water" amount="108" />
+			</primary>
+		</production>
+      <component ref="ship_bor_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="boron" />
+      <owner faction="atreus" />	  
+    </ware>
+    <ware id="ship_spl_m_tm" name="{19530007,730}" description="{19530007,830}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
+		<price min="317679" average="373740" max="429801" />
+		<production time="31" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="126" />
+				<ware ware="hullparts" amount="300" />
+			</primary>
+		</production>
+      <component ref="ship_spl_m_tm_macro" amount="1" />
+      <restriction licence="generaluseship" />
+      <owner faction="split" />
+	  <owner faction="fallensplit" />
+	  <owner faction="freesplit" />
+	  <owner faction="strongarms" />	  
+    </ware>
+    <ware id="ship_arg_s_buster" name="{19530007,713}" description="{19530007,813}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="143870" average="169259" max="194647" />
+	  <production time="11" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="66" />
+		  <ware ware="hullparts" amount="154" />
+		</primary>
+	  </production>
+	  <component ref="ship_arg_s_buster_macro" amount="1" />
+	  <restriction licence="militaryship" />
+	  <owner faction="argon" />
+	  <owner faction="antigone" />
+	  <owner faction="jonferco"/>	  
+    </ware>	
+    <ware id="ship_ter_xl_kagawa" name="{19530007,742}" description="{19530007,842}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="21208075" average="24950676" max="28693277" />
+	  <production time="492" amount="1" method="default" name="{20206,101}">
+		<primary>
+          <ware ware="computronicsubstrate" amount="590" />
+          <ware ware="energycells" amount="2716" />
+          <ware ware="metallicmicrolattice" amount="1238" />
+		</primary>
+	  </production>
+	  <component ref="ship_ter_xl_kagawa_macro" amount="1" />
+	  <restriction licence="capitalship" />
+	  <owner faction="pioneers" /> 
+    </ware>	
+    <ware id="ship_arg_m_centaur" name="{19530007,750}" description="{19530007,850}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="590148" average="694286" max="798428" />
+	  <production time="22" amount="1" method="default" name="{20206,101}">
+		<primary>
+          <ware ware="energycells" amount="124" />
+          <ware ware="hullparts" amount="655" />
+		</primary>
+	  </production>
+	  <component ref="ship_arg_m_centaur_macro" amount="1" />
+	  <restriction licence="militaryship" />
+	  <owner faction="argon" /> 
+	  <owner faction="antigone" /> 	 
+	  <owner faction="jonferco" /> 	 	  
+    </ware>
+    <ware id="ship_tel_l_cassowary" name="{19530007,723}" description="{19530007,823}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="3685698" average="4095000" max="4428010" />
+      <production time="81" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="990" />
+          <ware ware="hullparts" amount="2925" />
+        </primary>
+      </production>
+      <component ref="ship_tel_l_cassowary_macro" amount="1" />
+      <restriction licence="capitalship" />
+      <owner faction="teladi" /> 
+      <owner faction="ministry" /> 
+      <owner faction="nmmc" /> 	  
+	</ware>
+	<ware id="ship_xen_xl_reclaimer" name="{19530004,6}" description="{19530004,7}" group="ships_xenon" transport="ship" volume="1" tags="noplayerblueprint ship">	
+	  <price min="4300932" average="5059920" max="5818908" />
+	  <production time="1550" amount="1" method="default" name="{20206,601}">
+		<primary>
+		  <ware ware="energycells" amount="8075" />
+		  <ware ware="ore" amount="7250" />
+		  <ware ware="silicon" amount="6250" />
+		</primary>
+	  </production>
+	  <component ref="ship_xen_xl_reclaimer_macro" />
+	  <restriction licence="capitalship" />
+	  <owner faction="xenon" />
+	</ware>		
+	<ware id="ship_xen_m_fighter_y" name="{20403,25}" description="{19530004,1}" group="ships_xenon" transport="ship" volume="1" tags="noplayerblueprint ship">	
+	  <price min="86827" average="98620" max="110413" />
+	  <production time="25" amount="1" method="default" name="{20206,601}">
+		<primary>
+		  <ware ware="energycells" amount="124" />
+		  <ware ware="ore" amount="99" />
+		  <ware ware="silicon" amount="99" />
+		</primary>
+	  </production>
+	  <component ref="ship_xen_m_fighter_y_macro" />
+	  <restriction licence="militaryship" />
+	  <owner faction="xenon" />
+	</ware>	
+	<ware id="ship_xen_m_fighter_d" name="{20403,4}" description="{19530004,4}" group="ships_xenon" transport="ship" volume="1" tags="noplayerblueprint ship">	
+	  <price min="96827" average="108620" max="120413" />
+	  <production time="31" amount="1" method="default" name="{20206,601}">
+		<primary>
+		  <ware ware="energycells" amount="139" />
+		  <ware ware="ore" amount="109" />
+		  <ware ware="silicon" amount="109" />
+		</primary>
+	  </production>
+	  <component ref="ship_xen_m_fighter_d_macro" />
+	  <restriction licence="militaryship" />
+	  <owner faction="xenon" />
+	</ware>
+	<ware id="ship_otas_xl_tempest" name="{19530002,712}" description="{19530002,812}" group="ships_otas" transport="ship" volume="1" tags="ship">
+	  <price min="60000000" average="70000000" max="80000000" />
+	  <production time="500" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="67055" />
+		  <ware ware="hullparts" amount="23250" />
+		</primary>
+	  </production>
+	  <component ref="ship_otas_xl_tempest_macro" amount="1"/>
+	  <restriction licence="capitalship"/>
+	  <owner faction="otas" />	 		
+	</ware>		
+	<ware id="ship_otas_l_aquilo" name="{19530002,702}" description="{19530002,802}" group="ships_otas" transport="ship" volume="1" tags="ship">
+	  <price min="10198750" average="11983531" max="13768312" />
+	  <production time="260" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="2280" />
+		  <ware ware="hullparts" amount="10630" />
+		</primary>
+	  </production>
+	  <component ref="ship_otas_l_aquilo_macro" amount="1"/>
+	  <restriction licence="capitalship"/>
+	  <owner faction="otas"/>
+	</ware>
+	<ware id="ship_otas_l_astraeus" name="{19530002,710}" description="{19530002,810}" group="ships_otas" transport="ship" volume="1" tags="ship">
+	  <price min="5495057" average="5858890" max="6522724" />
+	  <production time="100" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="1000" />
+		  <ware ware="hullparts" amount="4050" />
+		</primary>
+	  </production>
+	  <component ref="ship_otas_l_astraeus_macro" amount="1"/>
+	  <restriction licence="militaryship"/>
+	  <owner faction="otas"/>
+	</ware>			
+	<ware id="ship_otas_l_boreas" name="{19530002,700}" description="{19530002,800}" group="ships_otas" transport="ship" volume="1" tags="ship">
+	  <price min="20995585" average="23775081" max="29554577" />
+	  <production time="200" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="3559" />
+		  <ware ware="hullparts" amount="7566" />
+		</primary>
+	  </production>
+	  <component ref="ship_otas_l_boreas_macro" amount="1"/>
+	  <restriction licence="capitalship"/>
+      <owner faction="otas"/>
+	</ware>	
+	<ware id="ship_otas_s_eurus" name="{19530002,706}" description="{19530002,706}" group="ships_otas" transport="ship" volume="1" tags="ship">
+	  <price min="134176" average="167720" max="201264" />
+	  <production time="14" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="69"/>
+		  <ware ware="hullparts" amount="157"/>
+		</primary>
+		</production>
+	  <component ref="ship_otas_s_eurus_macro" amount="1"/>
+	  <restriction licence="generaluseship"/>
+	  <owner faction="otas" />	 	  
+	</ware>	
+	<ware id="ship_otas_s_notus" name="{19530002,707}" description="{19530002,807}" group="ships_otas" transport="ship" volume="1" tags="ship">
+	  <price min="185464" average="231830" max="278196" />
+	  <production time="12" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="70"/>
+		  <ware ware="hullparts" amount="164"/>
+		</primary>
+	  </production>
+	  <component ref="ship_otas_s_notus_macro" amount="1"/>
+	  <restriction licence="militaryship"/>
+	  <owner faction="otas"/>
+	</ware>
+	<ware id="ship_otas_s_solano" name="{19530002,705}" description="{19530002,805}" group="ships_otas" transport="ship" volume="1" tags="ship">
+	  <price min="87682.6" average="103156" max="118629.4" />
+	  <production time="8" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="52"/>
+		  <ware ware="hullparts" amount="107"/>
+		</primary>
+	  </production>
+	  <component ref="ship_otas_s_solano_macro" amount="1"/>
+	  <restriction licence="generaluseship"/>
+	  <owner faction="otas"/>
+	</ware>		
+</add> 
+	<!--WEAPONS-->
+	<remove sel="/wares/ware[@id='weapon_missile_lint_kitsune_ware']"/>
+	<replace sel="//wares/ware[@id='ship_gen_s_fightingdrone_01_a']">
+      <ware id="ship_gen_s_fightingdrone_01_a" name="{19530007,1100}" description="{19530007,11001}" group="drones" transport="equipment" volume="1" tags="drone equipment">
+		<price min="8128" average="9562" max="11000" />
+		<production time="1" amount="1" method="default" name="{20206,101}">
+		  <primary>
+			<ware ware="dronecomponents" amount="1" />
+			<ware ware="energycells" amount="35" />
+			<ware ware="smartchips" amount="20" />
+		  </primary>
+		</production>
+		<production time="1" amount="1" method="terran" name="{20206,901}">
+		  <primary>
+			<ware ware="energycells" amount="500" />
+			<ware ware="metallicmicrolattice" amount="29" />
+			<ware ware="siliconcarbide" amount="3" />
+		  </primary>
+		</production>	  
+		<component ref="ship_gen_s_fightingdrone_01_a_macro" />
+		<container ref="sm_gen_pickup_equipment_01_macro" />
+		<restriction licence="generaluseequipment" />	  
+		<use threshold="0" />
+		<owner faction="antigone" />
+		<owner faction="argon" />
+		<owner faction="hatikvah" />	  
+		<owner faction="ministry" />
+		<owner faction="teladi" />
+		<owner faction="scaleplate" />	  
+		<owner faction="alliance" />			
+		<owner faction="loanshark" />	
+		<owner faction="scavenger" />		  
+		<owner faction="otas" />		  
+		<owner faction="jonferco" />	
+		<owner faction="nmmc" />	  			  
+      </ware>
+	</replace>
+<add sel="//wares">
+    <ware id="weapon_gen_s_plasmabomb" name="{19530007,200}" description="{19530007,300}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+      <price min="150867" average="167630" max="184393" />
+      <production time="8" amount="1" method="default" name="{20206,101}">
+        <primary>
+		  <ware ware="advancedelectronics" amount="15" />
+		  <ware ware="energycells" amount="61" />
+		  <ware ware="weaponcomponents" amount="30" />
+        </primary>
+      </production>
+      <production time="8" amount="1" method="terran" name="{20206,901}">
+        <primary>
+		  <ware ware="computronicsubstrate" amount="2" />
+		  <ware ware="energycells" amount="50" />
+		  <ware ware="metallicmicrolattice" amount="30" />
+		  <ware ware="siliconcarbide" amount="3" />
+        </primary>
+      </production>		
+      <component ref="weapon_gen_s_plasmabomb_macro" amount="1" />
+      <restriction licence="militaryequipment" />
+      <use threshold="0" />
+      <owner faction="antigone" />
+      <owner faction="argon" />
+      <owner faction="ministry" />
+      <owner faction="teladi" />
+      <owner faction="alliance" />		
+      <owner faction="holyorder" />
+      <owner faction="paranid" />		
+      <owner faction="trinity" />
+      <owner faction="court" />
+      <owner faction="freesplit" />
+      <owner faction="split" />
+      <owner faction="pioneers" />
+      <owner faction="terran" />
+	  <owner faction="otas" />	
+	  <owner faction="jonferco" />	
+	  <owner faction="strongarms" />	
+	  <owner faction="nmmc" />
+	  <owner faction="atreus" />	
+	  <owner faction="atf" />
+	  <owner faction="xaar" />	  
+    </ware>	
+    <ware id="weapon_bor_l_erppc" name="{19530007,201}" description="{19530007,301}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+      <price min="1200201" average="1311335" max="1422468" />
+      <production time="10" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="advancedelectronics" amount="60" />
+          <ware ware="energycells" amount="200" />
+          <ware ware="weaponcomponents" amount="91" />
+        </primary>
+      </production>	
+      <component ref="weapon_bor_l_erppc_macro" amount="1" />
+      <restriction licence="capitalequipment" />
+      <use threshold="0" />
+      <owner faction="boron" />
+      <owner faction="atreus" />	  
+    </ware>	
+	<ware id="weapon_rangefinder_22km" name="{19530007,202}" description="{19530007,302}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	  <price min="1" average="1" max="1" />
+	  <production time="1" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="1" />
+		</primary>
+	  </production>
+	  <component ref="weapon_rangefinder_22km_macro" amount="1" />
+	  <restriction licence="capitalequipment" />
+	  <use threshold="0" />	  
+	</ware>
+	<ware id="weapon_rangefinder_30km" name="{19530007,203}" description="{19530007,303}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	  <price min="1" average="1" max="1" />
+	  <production time="1" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="1" />
+		</primary>
+	  </production>
+	  <component ref="weapon_rangefinder_30km_macro" amount="1" />
+	  <restriction licence="capitalequipment" />
+	  <use threshold="0" />	  
+	</ware>
+	<ware id="turret_ter_l_missilefrigate" name="{19530007,204}" description="{19530007,304}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+	  <price min="150000" average="200000" max="250000" />
+	  <production time="10" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="computronicsubstrate" amount="123" />
+		  <ware ware="energycells" amount="200" />
+		  <ware ware="metallicmicrolattice" amount="500" />
+		  <ware ware="siliconcarbide" amount="100" />
+		</primary>
+	  </production>
+	  <component ref="turret_ter_l_missilefrigate_macro" amount="1" />
+	  <restriction licence="capitalequipment" />
+	  <use threshold="0" />
+	  <owner faction="terran" />
+	  <owner faction="pioneers" />
+	  <owner faction="yaki" />	  
+	  <owner faction="atf" />		  
+	</ware>
+	<ware id="turret_otas_l_missilefrigate" name="{19530002,200}" description="{19530002,300}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+	  <price min="150000" average="200000" max="250000" />
+	  <production time="10" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="advancedelectronics" amount="19" />
+		  <ware ware="energycells" amount="42" />
+		  <ware ware="weaponcomponents" amount="52" />
+		</primary>
+	  </production>
+	  <component ref="turret_otas_l_missilefrigate_macro" amount="1" />
+	  <restriction licence="capitalequipment" />
+	  <use threshold="0" />
+	  <owner faction="otas" />		  
+	</ware>
+	<ware id="turret_otas_l_palc" name="{19530002,202}" description="{19530002,302}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+	  <price min="134930" average="143170" max="151410"/>
+		<production time="10" amount="1" method="default" name="{20206,101}">
+		  <primary>
+			<ware ware="advancedelectronics" amount="23"/>
+			<ware ware="energycells" amount="57"/>
+			<ware ware="turretcomponents" amount="36"/>
+		</primary>
+	  </production>
+	  <component ref="turret_otas_l_palc_macro" amount="1"/>
+	  <restriction licence="militaryequipment"/>
+	  <use threshold="0"/>
+	  <owner faction="otas"/>
+	</ware>
+	<ware id="turret_otas_xl_firestorm" name="{19530002,203}" description="{19530002,303}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+	  <price min="2023950" average="2147550" max="2271150" />
+	  <production time="140" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="advancedelectronics" amount="95" />
+		  <ware ware="energycells" amount="275" />
+		  <ware ware="turretcomponents" amount="215" />
+		</primary>
+	  </production>
+	  <component ref="turret_otas_xl_firestorm_macro" amount="1" />
+	  <restriction licence="capitalequipment" />
+	  <use threshold="0"/>		  
+	  <owner faction="otas" />	  
+	</ware>		
+	<ware id="missile_otas_l_anemoi" name="{19530002,201}" description="{19530002,301}" group="missiles" transport="equipment" volume="1" tags="equipment missile">
+	  <price min="71122" average="80821" max="90520" />
+	  <production time="3" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="225"/>
+		  <ware ware="missilecomponents" amount="110"/>
+		  <ware ware="smartchips" amount="45"/>
+		</primary>
+	  </production>
+	  <component ref="missile_otas_l_anemoi_macro" amount="1"/>
+	  <container ref="sm_gen_pickup_equipment_01_macro"/>
+	  <restriction licence="generaluseequipment"/>
+	  <use threshold="0"/>
+	  <owner faction="otas"/>
+	</ware>	
+	<ware id="weapon_otas_l_destroyer" name="{19530002,205}" description="{19530002,305}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	  <price min="95460" average="108382" max="121304" />
+	  <production time="10" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="advancedelectronics" amount="6" />
+		  <ware ware="energycells" amount="21" />
+		  <ware ware="weaponcomponents" amount="13" />
+		</primary>
+	  </production>
+	  <component ref="weapon_otas_l_destroyer_macro" />
+	  <restriction licence="militaryequipment" />
+	  <use threshold="0" />
+	  <owner faction="otas"/>	  
+	</ware>
+	<ware id="weapon_otas_s_gatling" name="{19530002,204}" description="{19530002,304}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	  <price min="95460" average="108382" max="121304" />
+	  <production time="10" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="advancedelectronics" amount="6" />
+		  <ware ware="energycells" amount="21" />
+		  <ware ware="weaponcomponents" amount="13" />
+		</primary>
+	  </production>
+	  <component ref="weapon_otas_s_gatling_macro" />
+	  <restriction licence="militaryequipment" />
+	  <use threshold="0" />
+	  <owner faction="otas"/>	  
+	</ware>			
+	<ware id="weapon_otas_s_notus_launcher" name="{19530002,206}" description="{19530002,306}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	  <price min="145460" average="158382" max="171304" />
+	  <production time="10" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="advancedelectronics" amount="23" />
+		  <ware ware="energycells" amount="53" />
+		  <ware ware="weaponcomponents" amount="48" />
+		</primary>
+	  </production>
+	  <component ref="weapon_otas_s_notus_launcher_macro" amount="1" />
+	  <restriction licence="militaryequipment" />
+	  <use threshold="0" />
+	  <owner faction="otas" />
+	  <owner faction="court" />
+	  <owner faction="freesplit" />
+	  <owner faction="split" />		  
+	</ware>		
+	<ware id="weapon_otas_s_notus_bomb" name="{19530002,207}" description="{19530002,307}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	  <price min="155460" average="168382" max="181304" />
+	  <production time="10" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="advancedelectronics" amount="19" />
+		  <ware ware="energycells" amount="42" />
+		  <ware ware="weaponcomponents" amount="52" />
+		</primary>
+	  </production>
+	  <component ref="weapon_otas_s_notus_bomb_macro" amount="1" />
+	  <restriction licence="militaryequipment" />
+	  <use threshold="0" />
+	  <owner faction="otas" />
+	  <owner faction="court" />
+	  <owner faction="freesplit" />
+	  <owner faction="split" />			  
+	</ware>	
+	<ware id="weapon_rangefinder_28km" name="{19530002,208}" description="{19530002,308}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	  <price min="1" average="1" max="1" />
+	  <production time="1" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="1" />
+		</primary>
+	  </production>
+	  <component ref="weapon_rangefinder_28km_macro" amount="1" />
+	  <restriction licence="capitalequipment" />
+	  <use threshold="0" />	  
+	</ware>	
+  <ware id="weapon_xen_m_plasmabomb" name="{19530006,1}" description="{19530006,2}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+	<price min="1578" average="1664" max="1750" />
+	<production time="6" amount="1" method="default" name="{20206,101}">
+	  <primary>
+		<ware ware="energycells" amount="65" />
+		<ware ware="ore" amount="11" />
+	  </primary>
+	</production>
+	<component ref="weapon_xen_m_plasmabomb_macro" amount="1" />
+	<restriction licence="generaluseequipment" />
+	<use threshold="0" />
+	<owner faction="xenon" />
+  </ware>	
+</add>
+	<!--DRONES-->
+<add sel="//wares">	
+  <ware id="ship_xen_s_fightingdrone_01" name="{19530007,1101}" description="{19530007,11011}" group="drones" transport="equipment" volume="1" tags="noplayerblueprint drone equipment">
+    <price min="11611" average="13660" max="15709" />
+    <production time="10" amount="1" method="xenon" name="{20206,601}" tags="noplayerbuild">
+      <primary>
+        <ware ware="energycells" amount="15" />
+        <ware ware="ore" amount="10" />
+        <ware ware="silicon" amount="10" />
+      </primary>
+    </production>
+    <component ref="ship_xen_s_fightingdrone_01_macro" />
+    <container ref="sm_gen_pickup_equipment_01_macro" />
+    <restriction licence="generaluseequipment" />	
+    <use threshold="0" />
+    <owner faction="xenon" />	
+  </ware>
+  <ware id="ship_ter_s_fightingdrone_01" name="{19530007,1102}" description="{19530007,11021}" group="drones" transport="equipment" volume="1" tags="drone equipment">
+    <price min="11611" average="13660" max="15709" />
+    <production time="1" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="energycells" amount="500" />
+        <ware ware="metallicmicrolattice" amount="29" />
+        <ware ware="siliconcarbide" amount="3" />
+      </primary>
+    </production>
+    <component ref="ship_ter_s_fightingdrone_01_macro" />
+    <container ref="sm_gen_pickup_equipment_01_macro" />
+    <restriction licence="militaryequipment" />	
+    <use threshold="0" />
+    <owner faction="terran" /> 
+    <owner faction="pioneers" /> 
+    <owner faction="yaki" /> 	
+    <owner faction="atf" /> 		
+  </ware>
+  <ware id="ship_bor_s_fightingdrone_01" name="{19530007,1103}" description="{19530007,11031}" group="drones" transport="equipment" volume="1" tags="drone equipment">
+    <price min="11611" average="13660" max="15709" />
+    <production time="1" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="dronecomponents" amount="1" />
+        <ware ware="energycells" amount="50" />
+        <ware ware="smartchips" amount="30" />
+      </primary>
+    </production>
+    <component ref="ship_bor_s_fightingdrone_01_macro" />
+    <container ref="sm_gen_pickup_equipment_01_macro" />
+    <restriction licence="militaryequipment" />	
+    <use threshold="0" />
+    <owner faction="boron" /> 	
+    <owner faction="atreus" /> 		
   </ware> 
-	<!--MULTIPLIER MODULES-->
+  <ware id="ship_spl_s_fightingdrone_01" name="{19530007,1104}" description="{19530007,11041}" group="drones" transport="equipment" volume="1" tags="drone equipment">
+    <price min="11611" average="13660" max="15709" />
+    <production time="1" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="dronecomponents" amount="1" />
+        <ware ware="energycells" amount="50" />
+        <ware ware="smartchips" amount="30" />
+      </primary>
+    </production>
+    <component ref="ship_spl_s_fightingdrone_01_macro" />
+    <container ref="sm_gen_pickup_equipment_01_macro" />
+    <restriction licence="militaryequipment" />	
+    <use threshold="0" />
+    <owner faction="court" />
+    <owner faction="freesplit" />
+    <owner faction="split" />
+    <owner faction="strongarms" /> 		
+  </ware>  
+  <ware id="ship_par_s_fightingdrone_01" name="{19530007,1105}" description="{19530007,11051}" group="drones" transport="equipment" volume="1" tags="drone equipment">
+    <price min="11611" average="13660" max="15709" />
+    <production time="1" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="dronecomponents" amount="1" />
+        <ware ware="energycells" amount="50" />
+        <ware ware="smartchips" amount="30" />
+      </primary>
+    </production>
+    <component ref="ship_par_s_fightingdrone_01_macro" />
+    <container ref="sm_gen_pickup_equipment_01_macro" />
+    <restriction licence="militaryequipment" />	
+    <use threshold="0" />
+    <owner faction="holyorder" />
+    <owner faction="paranid" />		
+    <owner faction="trinity" />
+    <owner faction="xaar" /> 		
+  </ware>
+</add>
+	<!--iSHIELDS-->
+<add sel="//wares">	
+    <ware id="ishield_spl_l_cheetah" name="{19530007,900}" description="{19530007,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_spl_l_cheetah_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+    <ware id="ishield_spl_s_wolf" name="{19530007,910}" description="{19530007,910}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_spl_s_wolf_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+    <ware id="ishield_ter_l_chiba_e" name="{19530007,901}" description="{19530007,901}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_ter_l_chiba_e_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+    <ware id="ishield_ter_s_falchion" name="{19530007,911}" description="{19530007,911}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_ter_s_falchion_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+    <ware id="ishield_bor_l_marlin" name="{19530007,920}" description="{19530007,920}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_bor_l_marlin_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+    <ware id="ishield_arg_s_buster" name="{19530007,913}" description="{19530007,913}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_arg_s_buster_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>	
+    <ware id="ishield_ter_xl_kagawa" name="{19530007,942}" description="{19530007,942}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_ter_xl_kagawa_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>	
+    <ware id="ishield_arg_m_centaur" name="{19530007,950}" description="{19530007,950}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_arg_m_centaur_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>	
+    <ware id="ishield_tel_l_cassowary" name="{19530007,923}" description="{19530007,923}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_tel_l_cassowary_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+	  <ware id="ishield_xen_xl_reclaimer" name="{19530004,8}" description="{19530004,8}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<price min="1" average="1" max="1" />
+		<production time="1" amount="1" method="default" name="{20206,601}">
+		  <primary>
+			<ware ware="energycells" amount="1" />
+		  </primary>
+		</production>	  
+		<component ref="ishield_xen_xl_reclaimer_macro" amount="1" />
+		<use threshold="0" />
+		<restriction licence="generaluseequipment" />
+	  </ware>		
+	  <ware id="ishield_xen_m_fighter_y" name="{19530004,2}" description="{19530004,2}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<price min="1" average="1" max="1" />
+		<production time="1" amount="1" method="default" name="{20206,601}">
+		  <primary>
+			<ware ware="energycells" amount="1" />
+		  </primary>
+		</production>	  
+		<component ref="ishield_xen_m_fighter_y_macro" amount="1" />
+		<use threshold="0" />
+		<restriction licence="generaluseequipment" />
+	  </ware>	
+	  <ware id="ishield_xen_m_fighter_d" name="{19530004,5}" description="{19530004,5}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<price min="1" average="1" max="1" />
+		<production time="1" amount="1" method="default" name="{20206,601}">
+		  <primary>
+			<ware ware="energycells" amount="1" />
+		  </primary>
+		</production>	  
+		<component ref="ishield_xen_m_fighter_d_macro" amount="1" />
+		<use threshold="0" />
+		<restriction licence="generaluseequipment" />
+	</ware>	
+	<ware id="ishield_otas_xl_tempest" name="{19530002,900}" description="{19530002,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+	  <price min="12" average="16" max="21"/>
+	  <component ref="ishield_otas_xl_tempest_macro" amount="1"/>
+	  <production time="1" amount="1" method="default" name="{20206,101}">
+		<primary>
+		  <ware ware="energycells" amount="1"/>
+		</primary>
+	  </production>
+	  <use threshold="0"/>
+	</ware>	
+	<ware id="ishield_otas_l_aquilo" name="{19530002,901}" description="{19530002,901}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<price min="12" average="16" max="21"/>
+		<component ref="ishield_otas_l_aquilo_macro" amount="1"/>
+		<production time="1" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="1"/>
+			</primary>
+		</production>
+		<use threshold="0"/>
+	</ware>
+	<ware id="ishield_otas_l_astraeus" name="{19530002,902}" description="{19530002,902}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<price min="12" average="16" max="21"/>
+		<component ref="ishield_otas_l_astraeus_macro" amount="1"/>
+		<production time="1" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="1"/>
+			</primary>
+		</production>
+		<use threshold="0"/>
+	</ware>
+	<ware id="ishield_otas_l_boreas" name="{19530002,903}" description="{19530002,903}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<price min="12" average="16" max="21"/>
+		<component ref="ishield_otas_l_boreas_macro" amount="1"/>
+		<production time="1" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="1"/>
+			</primary>
+		</production>
+		<use threshold="0"/>
+	</ware>
+	<ware id="ishield_otas_s_eurus" name="{19530002,909}" description="{19530002,909}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<price min="12" average="16" max="21"/>
+		<component ref="ishield_otas_s_eurus_macro" amount="1"/>
+		<production time="1" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="1"/>
+			</primary>
+		</production>
+		<use threshold="0"/>
+	</ware>
+	<ware id="ishield_otas_s_notus" name="{19530002,910}" description="{19530002,910}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<price min="12" average="16" max="21"/>
+		<component ref="ishield_otas_s_notus_macro" amount="1"/>
+		<production time="1" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="1"/>
+			</primary>
+		</production>
+		<use threshold="0"/>
+	</ware>	
+	<ware id="ishield_otas_s_solano" name="{19530002,911}" description="{19530002,911}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+		<price min="12" average="16" max="21"/>
+		<component ref="ishield_otas_s_solano_macro" amount="1"/>
+		<production time="1" amount="1" method="default" name="{20206,101}">
+			<primary>
+				<ware ware="energycells" amount="1"/>
+			</primary>
+		</production>
+		<use threshold="0"/>
+	</ware>
+</add>
+<!--MULTIPLIER MODULES-->
 		<!--ARGON-->
+<add sel="//wares">			
   <ware id="module_arg_prod_foodrations_x3" name="{20104,13401} x3" description="{20104,13402}" transport="container" volume="1" tags="module">
     <price min="4277655" average="5032536" max="5032536" />
     <production time="2271" amount="1" method="default" name="{20206,201}">
@@ -1971,6 +2943,3454 @@
     </ware> 
 </add>	  
 
+<!--VANILLA/VRO ASSET OWNERSHIP CHANGES. Note: This is a massive list, abandon all hope those who dare enter-->
+	<!--Illegal-->
+	<add sel="/wares/ware[@id='inv_agidevice_01']">
+	  <illegal factions="otas jonferco strongarms nmmc atreus atf xaar "/>				  
+	</add>
+	<add sel="/wares/ware[@id='inv_agidevice_02']">
+	  <illegal factions="otas jonferco strongarms nmmc atreus atf xaar "/>		
+	</add>
+	<add sel="/wares/ware[@id='inv_agidevice_03']">
+	  <illegal factions="otas jonferco strongarms nmmc atreus atf xaar "/>	
+	</add>
+	<add sel="/wares/ware[@id='inv_decryptionmodule']">
+	  <illegal factions="otas jonferco strongarms nmmc atreus atf xaar "/>	
+	</add>
+	<add sel="/wares/ware[@id='inv_hallucinogenics']">
+	  <illegal factions="strongarms nmmc atreus "/>		
+	</add>
+	<add sel="/wares/ware[@id='inv_harddrug_01']">
+	  <illegal factions="strongarms nmmc atreus "/>		
+	</add>
+	<add sel="/wares/ware[@id='inv_securitybypasssystem']">
+	  <illegal factions="otas jonferco strongarms nmmc atreus atf xaar "/>	
+	</add>
+	<add sel="/wares/ware[@id='inv_securitydecryptionsystem']">
+	  <illegal factions="otas jonferco strongarms nmmc atreus atf xaar "/>		
+	</add>
+	<add sel="/wares/ware[@id='inv_securityslicer']">
+	  <illegal factions="otas jonferco strongarms nmmc atreus atf xaar "/>	
+	</add>
+	<add sel="/wares/ware[@id='inv_spaceflycaviar']">
+	  <illegal factions="otas jonferco nmmc atreus atf xaar "/>	
+	</add>
+	<add sel="/wares/ware[@id='inv_spaceflyeggs']">
+	  <illegal factions="otas jonferco nmmc atreus atf xaar "/>			
+	</add>
+	<add sel="/wares/ware[@id='inv_unstablecrystal']">
+	  <illegal factions="otas jonferco strongarms nmmc atreus atf xaar "/>		
+	</add>
+	<add sel="/wares/ware[@id='spacefuel']">
+	  <illegal factions="jonferco strongarms atreus atf"/>
+	</add>
+	<add sel="/wares/ware[@id='spaceweed']">
+	  <illegal factions="jonferco strongarms atreus atf"/>
+	</add>
+	<add sel="/wares/ware[@id='stimulants']">		
+      <illegal factions="atf" />
+	</add>
+  <!--SHIPS-->
+	<!--ARGON-->
+	<add sel="/wares/ware[@id='ship_arg_l_destroyer_01_b']">
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_l_destroyer_02_a']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_l_miner_liquid_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_l_miner_solid_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_l_trans_container_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_l_trans_container_02_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_l_trans_container_03_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_l_trans_container_04_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_l_trans_container_05_b']">
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_m_bomber_01_b']">
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_m_frigate_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_m_miner_liquid_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_m_miner_solid_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_m_trans_container_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_m_trans_container_02_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_s_fighter_01_b']">
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_m_bomber_01_b']">
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_m_frigate_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_l_miner_solid_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_m_miner_liquid_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_m_miner_solid_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_m_trans_container_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_m_trans_container_02_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_s_fighter_01_b']">
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_s_fighter_02_b']">
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_s_fighter_03_a']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_s_heavyfighter_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_s_miner_solid_01_a']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_s_scout_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_s_trans_container_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_s_trans_container_02_b']">
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_xl_builder_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_xl_carrier_01_b']">
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_xl_carrier_02_a']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_xl_resupplier_01_b']">
+		<owner faction="jonferco"/>
+	</add>	
+	<!--PARANID-->
+	<add sel="/wares/ware[@id='ship_par_l_destroyer_02_a']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_par_l_miner_liquid_02_a']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_l_miner_solid_02_a']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_l_trans_container_02_a']">
+		<owner faction="alliance"/>
+	</add>		
+	<add sel="/wares/ware[@id='ship_par_l_trans_container_03_a']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_m_corvette_01_b']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_m_frigate_01_b']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_m_miner_liquid_01_b']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_m_miner_solid_01_b']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_par_m_trans_container_01_b']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_par_m_trans_container_02_b']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_s_fighter_01_b']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_s_fighter_02_b']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_s_heavyfighter_01_a']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_s_miner_solid_01_a']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_s_scout_01_b']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_par_s_trans_container_01_b']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_par_xl_builder_01_b']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_xl_carrier_02_a']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_par_xl_resupplier_02_a']">
+		<owner faction="alliance"/>	
+		<owner faction="xaar"/>
+	</add>	
+	<!--TELADI-->
+	<add sel="/wares/ware[@id='ship_tel_l_destroyer_01_b']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_l_destroyer_02_a']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_l_miner_liquid_01_b']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_l_miner_liquid_02_a']">
+		<owner faction="nmmc"/>
+	</add>		
+	<add sel="/wares/ware[@id='ship_tel_l_miner_solid_01_b']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_l_miner_solid_02_a']">
+		<owner faction="nmmc"/>
+	</add>		
+	<add sel="/wares/ware[@id='ship_tel_l_trans_container_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_l_trans_container_02_b']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_l_trans_container_03_a']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_m_bomber_01_b']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_m_frigate_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_m_miner_liquid_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_m_miner_solid_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_m_trans_container_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_m_trans_container_02_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_s_fighter_01_b']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_m_bomber_01_b']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_m_frigate_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_l_miner_solid_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_m_miner_liquid_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_m_miner_solid_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_m_trans_container_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_m_trans_container_02_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_s_fighter_01_b']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_s_fighter_02_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_s_miner_solid_01_a']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_s_scout_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_s_scout_02_b']">
+		<owner faction="nmmc"/>
+	</add>		
+	<add sel="/wares/ware[@id='ship_tel_s_trans_container_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_s_trans_container_02_a']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_xl_builder_01_b']">
+		<owner faction="nmmc"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_tel_xl_carrier_01_b']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_xl_resupplier_01_b']">
+		<owner faction="nmmc"/>
+	</add>		
+	<!--SPLIT-->
+	<add sel="/wares/ware[@id='ship_spl_l_destroyer_01_a']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_spl_l_miner_liquid_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_l_miner_solid_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_l_trans_container_01_a']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_spl_m_corvette_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_m_frigate_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_m_miner_liquid_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_m_miner_solid_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_m_trans_container_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_s_fighter_01_a']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_spl_s_fighter_02_a']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_spl_s_fighter_02_b']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_spl_s_heavyfighter_01_a']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_spl_s_miner_solid_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_s_scout_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_s_trans_container_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_xl_builder_01_a']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_xl_carrier_01_a']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_spl_xl_resupplier_01_a']">
+		<owner faction="strongarms"/>
+	</add>		
+	<!--TERRAN-->
+	<remove sel="//wares/ware[@id='ship_atf_l_destroyer_01_a']/owner[@faction='terran']"/>
+	<remove sel="//wares/ware[@id='ship_atf_xl_battleship_01_a']/owner[@faction='terran']"/>	
+	<add sel="/wares/ware[@id='ship_atf_l_destroyer_01_a']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_atf_xl_battleship_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_l_destroyer_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_l_miner_liquid_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_l_miner_solid_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_l_trans_container_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_m_corvette_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_m_frigate_01_a']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_ter_m_gunboat_01_a']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_ter_m_miner_liquid_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_m_miner_solid_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_m_trans_container_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_s_fighter_01_a']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_ter_s_fighter_02_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_s_fighter_03_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_s_heavyfighter_01_a']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_ter_s_miner_solid_01_a']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_ter_s_scout_01_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_s_scout_02_a']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_ter_s_trans_container_01_a']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_ter_xl_builder_01_a']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_ter_xl_carrier_01_a']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_ter_xl_resupplier_01_a']">
+		<owner faction="atf"/>
+	</add>		
+	<!--BORON-->
+	<add sel="/wares/ware[@id='ship_bor_l_carrier_01_a']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='ship_bor_l_destroyer_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_l_miner_liquid_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_l_miner_solid_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_l_trans_container_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_m_corvette_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_m_corvette_02_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_m_gunboat_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_m_miner_liquid_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_m_miner_solid_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_m_trans_container_01_a']">
+		<owner faction="atreus"/>
+	</add>		
+	<add sel="/wares/ware[@id='ship_bor_s_fighter_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_s_heavyfighter_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_s_miner_solid_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_s_scout_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_s_scout_02_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_s_trans_container_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_xl_builder_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_xl_carrier_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='ship_bor_xl_resupplier_01_a']">
+		<owner faction="atreus"/>
+	</add>	
+	
+	
+  <!--STATION MODULES-->	
+	<!--ARGON-->
+	<add sel="/wares/ware[@id='module_arg_conn_base_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_conn_base_02']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_conn_base_03']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_conn_cross_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_conn_vertical_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_conn_vertical_02']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_def_claim_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_def_disc_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_def_tube_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<!--Note: Commonwealth factions share Argon docks-->
+	<add sel="/wares/ware[@id='module_arg_dock_m_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>		
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_arg_dock_m_01_hightech']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="xaar"/>				
+	</add>
+	<add sel="/wares/ware[@id='module_arg_dock_m_01_lowtech']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>		
+		<owner faction="xaar"/>				
+	</add>
+	<add sel="/wares/ware[@id='module_arg_dock_m_02']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>
+		<owner faction="xaar"/>				
+	</add>
+	<add sel="/wares/ware[@id='module_arg_dock_m_02_hightech']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="xaar"/>				
+	</add>
+	<add sel="/wares/ware[@id='module_arg_dock_m_02_lowtech']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="xaar"/>				
+	</add>
+	<!--End of Note-->
+	<add sel="/wares/ware[@id='module_arg_dock_tradestation_02']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_hab_l_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_hab_m_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_hab_s_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_pier_l_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_pier_l_02']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_pier_l_03']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_pier_tradestation_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_prod_foodrations_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_prod_meat_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_prod_medicalsupplies_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_prod_spacefuel_01']"> <!--Note: Yay drugs!-->
+		<owner faction="jonferco"/>
+		<owner faction="hatikvah"/>	
+		<owner faction="nmmc"/>		
+	</add>	
+	<add sel="/wares/ware[@id='module_arg_prod_wheat_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_container_l_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_container_m_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_container_s_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_liquid_l_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_liquid_m_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_liquid_s_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_solid_l_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_solid_m_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_solid_s_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='module_arg_stor_tradestation_l_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<!--PARANID-->
+	<add sel="/wares/ware[@id='module_par_conn_base_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>				
+	</add>
+	<add sel="/wares/ware[@id='module_par_conn_base_02']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_conn_base_03']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_conn_cross_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_conn_vertical_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_conn_vertical_02']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_def_claim_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_def_disc_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_def_tube_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_hab_l_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_hab_m_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_hab_s_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_pier_l_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_pier_l_02']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_pier_l_03']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_prod_majadust_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_prod_majasnails_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_prod_medicalsupplies_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_prod_sojabeans_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_prod_sojahusk_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>		
+	<add sel="/wares/ware[@id='module_par_stor_container_l_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_stor_container_m_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_stor_container_s_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_stor_liquid_l_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_stor_liquid_m_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_stor_liquid_s_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_par_stor_solid_l_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_stor_solid_m_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>
+	<add sel="/wares/ware[@id='module_par_stor_solid_s_01']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>			
+	</add>		
+	<!--TELADI-->
+	<add sel="/wares/ware[@id='module_tel_conn_base_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_conn_base_02']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_conn_base_03']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_conn_cross_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_conn_vertical_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_conn_vertical_02']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_def_claim_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_def_disc_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_def_tube_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_hab_l_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_hab_m_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_hab_s_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_pier_l_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_pier_l_02']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_pier_l_03']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_prod_advancedcomposites_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_prod_engineparts_01']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_tel_prod_hullparts_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_prod_medicalsupplies_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_prod_nostropoil_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_prod_scanningarrays_01']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_tel_prod_spaceweed_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_prod_sunriseflowers_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_prod_swampplant_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_prod_teladianium_01']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_tel_stor_container_l_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_stor_container_m_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_stor_container_s_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_stor_liquid_l_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_stor_liquid_m_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_stor_liquid_s_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_stor_solid_l_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_stor_solid_m_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_tel_stor_solid_s_01']">
+		<owner faction="nmmc"/>	
+	</add>
+	<!--SPLIT-->
+	<add sel="/wares/ware[@id='module_spl_conn_base_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_conn_base_02']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_conn_base_03']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_conn_cross_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_conn_vertical_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_conn_vertical_02']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_def_claim_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_def_disc_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_def_tube_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_hab_l_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_hab_m_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_hab_s_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_pier_l_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_pier_l_02']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_pier_l_03']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_prod_cheltmeat_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_prod_medicalsupplies_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_prod_scruffinfruits_01']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_spl_stor_container_l_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_stor_container_m_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_stor_container_s_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_stor_liquid_l_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_stor_liquid_m_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_stor_liquid_s_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_stor_solid_l_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_stor_solid_m_01']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_spl_stor_solid_s_01']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<!--TERRAN-->
+	<add sel="/wares/ware[@id='module_ter_build_dockarea_m_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_build_l_01']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_ter_build_xl_01']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_ter_conn_base_01']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_ter_conn_base_02']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_ter_conn_base_03']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_ter_conn_cross_01']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_ter_conn_vertical_01']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_ter_conn_vertical_02']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_def_claim_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_def_disc_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_def_tube_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_dock_m_01_hightech']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_equip_dockarea_m_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_equip_l_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_equip_xl_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_hab_l_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_hab_m_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_hab_s_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_pier_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_pier_02']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_pier_03']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_pier_04']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_pier_tradestation_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_prod_computronicsubstrate_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_prod_energycells_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_prod_medicalsupplies_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_prod_metallicmicrolattice_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_prod_proteinpaste_01']">
+		<owner faction="atf"/>	
+	</add>
+	<!-- Note: Keep as PIO only
+	<add sel="/wares/ware[@id='module_ter_prod_scrap_recycler']">
+		<owner faction="atf"/>	
+	</add>
+	-->
+	<add sel="/wares/ware[@id='module_ter_prod_siliconcarbide_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_prod_stimulants_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_prod_terranmre_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_stor_container_l_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_stor_container_m_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_stor_container_s_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_stor_liquid_l_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_stor_liquid_m_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_stor_liquid_s_01']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_ter_stor_solid_l_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_stor_solid_m_01']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_ter_stor_solid_s_01']">
+		<owner faction="atf"/>	
+	</add>		
+	<!--BORON-->
+	<add sel="/wares/ware[@id='module_bor_build_dockarea_m_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_build_l_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_build_xl_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_conn_base_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_conn_base_02']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_conn_base_03']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_conn_base_04']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_conn_base_05']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_conn_cross_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_conn_cross_02']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_conn_vertical_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_conn_vertical_02']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_def_claim_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_def_disc_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_def_tube_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_dock_m_01_standard']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_equip_dockarea_m_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_equip_l_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_equip_xl_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_hab_l_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_hab_m_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_hab_s_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_pier_l_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_pier_l_02']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_pier_l_03']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_pier_l_04']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_pier_tradestation_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_prod_bofu_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_prod_bogas_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_prod_medicalsupplies_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_prod_plankton_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_stor_container_l_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_stor_container_m_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_stor_container_s_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_stor_liquid_l_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_stor_liquid_m_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_stor_liquid_s_01']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_bor_stor_solid_l_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_stor_solid_m_01']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='module_bor_stor_solid_s_01']">
+		<owner faction="atreus"/>	
+	</add>		
+	<!--UNIVERSAL-->
+	<add sel="/wares/ware[@id='module_gen_build_dockarea_m_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_build_l_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_build_m_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_build_s_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_build_xl_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_equip_dockarea_m_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_equip_l_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_equip_xl_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_proc_scrapworks']">
+		<owner faction="jonferco"/>		
+		<owner faction="nmmc"/>
+		<owner faction="xaar"/>			
+	</add>	
+	<add sel="/wares/ware[@id='module_gen_prod_advancedcomposites_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_advancedelectronics_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_antimattercells_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_antimatterconverters_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_claytronics_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_dronecomponents_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_energycells_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_engineparts_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_fieldcoils_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>	
+	<add sel="/wares/ware[@id='module_gen_prod_graphene_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_hullparts_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_microchips_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_missilecomponents_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_plasmaconductors_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_quantumtubes_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_refinedmetals_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_scanningarrays_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_scrap_recycler']">
+		<owner faction="jonferco"/>		
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='module_gen_prod_shieldcomponents_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_siliconwafers_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_smartchips_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_spices_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="xaar"/>			
+	</add>	
+	<add sel="/wares/ware[@id='module_gen_prod_superfluidcoolant_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_turretcomponents_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_water_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='module_gen_prod_weaponcomponents_01']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+  <!--TURRETS/WEAPONS-->
+	<!--ARGON-->
+	<add sel="/wares/ware[@id='turret_arg_l_beam_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_arg_l_dumbfire_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_l_guided_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_l_laser_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_l_mining_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_l_plasma_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_beam_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_beam_02_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_dumbfire_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_dumbfire_02_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="atreus"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_flak_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_flak_02_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_gatling_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_gatling_02_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="atreus"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_guided_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_guided_02_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="atreus"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_laser_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_laser_02_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="atreus"/>			
+	</add>
+	<add sel="/wares/ware[@id='turret_arg_m_mining_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_arg_m_mining_02_mk1']">
+	<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="atreus"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_plasma_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_plasma_02_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_shotgun_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_shotgun_02_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+		<owner faction="atreus"/>			
+	</add>		
+	<add sel="/wares/ware[@id='weapon_arg_l_destroyer_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='weapon_arg_m_ion_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='weapon_arg_m_ion_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='weapon_arg_s_ion_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='weapon_arg_s_ion_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>
+	</add>
+	<!--PARANID-->
+	<add sel="/wares/ware[@id='turret_par_l_beam_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_par_l_dumbfire_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_l_guided_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_l_laser_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_l_mining_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_l_plasma_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_beam_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_beam_02_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_dumbfire_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_dumbfire_02_mk1']">
+		<owner faction="xaar"/>				
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_gatling_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_gatling_02_mk1']">
+		<owner faction="xaar"/>				
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_guided_01_mk1']">
+		<owner faction="alliance"/>		
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_guided_02_mk1']">
+		<owner faction="xaar"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_laser_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_laser_02_mk1']">
+		<owner faction="xaar"/>				
+	</add>
+	<add sel="/wares/ware[@id='turret_par_m_mining_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_par_m_mining_02_mk1']">
+		<owner faction="xaar"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_plasma_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_plasma_02_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_shotgun_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_par_m_shotgun_02_mk1']">
+		<owner faction="xaar"/>			
+	</add>		
+	<add sel="/wares/ware[@id='weapon_par_l_destroyer_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_par_m_railgun_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_par_m_railgun_01_mk2']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_par_s_railgun_01_mk1']">
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_par_s_railgun_01_mk2']">
+		<owner faction="xaar"/>	
+	</add>
+	<!--TELADI-->
+	<add sel="/wares/ware[@id='turret_tel_l_beam_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_tel_l_dumbfire_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_l_guided_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_l_laser_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_l_mining_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_l_plasma_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_beam_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_beam_02_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_dumbfire_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_dumbfire_02_mk1']">
+		<owner faction="nmmc"/>				
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_gatling_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_gatling_02_mk1']">
+		<owner faction="nmmc"/>				
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_guided_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_guided_02_mk1']">
+		<owner faction="nmmc"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_laser_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_laser_02_mk1']">
+		<owner faction="nmmc"/>				
+	</add>
+	<add sel="/wares/ware[@id='turret_tel_m_mining_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_tel_m_mining_02_mk1']">
+		<owner faction="nmmc"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_plasma_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_plasma_02_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_shotgun_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_shotgun_02_mk1']">
+		<owner faction="nmmc"/>			
+	</add>		
+	<add sel="/wares/ware[@id='weapon_tel_l_destroyer_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_tel_m_charge_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_tel_m_charge_01_mk2']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_tel_s_charge_01_mk1']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_tel_s_charge_01_mk2']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<!--SPLIT-->
+	<add sel="/wares/ware[@id='turret_spl_l_beam_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_spl_l_dumbfire_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_l_guided_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_l_laser_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_l_mining_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_l_plasma_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_beam_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_beam_02_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_dumbfire_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_dumbfire_02_mk1']">
+		<owner faction="strongarms"/>				
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_flak_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_spl_m_flak_02_mk1']">
+		<owner faction="strongarms"/>			
+	</add>		
+	<add sel="/wares/ware[@id='turret_spl_m_gatling_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_gatling_02_mk1']">
+		<owner faction="strongarms"/>				
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_guided_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_guided_02_mk1']">
+		<owner faction="strongarms"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_laser_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_laser_02_mk1']">
+		<owner faction="strongarms"/>				
+	</add>
+	<add sel="/wares/ware[@id='turret_spl_m_mining_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_spl_m_mining_02_mk1']">
+		<owner faction="strongarms"/>			
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_plasma_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_plasma_02_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_shotgun_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_m_shotgun_02_mk1']">
+		<owner faction="strongarms"/>			
+	</add>		
+	<add sel="/wares/ware[@id='weapon_spl_l_destroyer_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_spl_m_gatling_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_spl_m_gatling_01_mk2']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_spl_m_railgun_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<!-- VRO Removed
+	<add sel="/wares/ware[@id='weapon_spl_m_railgun_01_mk2']">
+		<owner faction="strongarms"/>	
+	</add>
+	-->
+	<add sel="/wares/ware[@id='weapon_spl_m_shotgun_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<!-- VRO Removed
+	<add sel="/wares/ware[@id='weapon_spl_m_shotgun_01_mk2']">
+		<owner faction="strongarms"/>	
+	</add>	
+	-->
+	<add sel="/wares/ware[@id='weapon_spl_m_sticky_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>
+	<!-- VRO Removed	
+	<add sel="/wares/ware[@id='weapon_spl_m_sticky_01_mk2']">
+		<owner faction="strongarms"/>	
+	</add>
+	-->	
+	<add sel="/wares/ware[@id='weapon_spl_s_gatling_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_spl_s_gatling_01_mk2']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_spl_s_railgun_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<!-- VRO Removed		
+	<add sel="/wares/ware[@id='weapon_spl_s_railgun_01_mk2']">
+		<owner faction="strongarms"/>	
+	</add>
+	-->	
+	<add sel="/wares/ware[@id='weapon_spl_s_shotgun_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<!-- VRO Removed		
+	<add sel="/wares/ware[@id='weapon_spl_s_shotgun_01_mk2']">
+		<owner faction="strongarms"/>	
+	</add>	
+	-->	
+	<add sel="/wares/ware[@id='weapon_spl_s_sticky_01_mk1']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_spl_s_sticky_01_mk2']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<!--TERRAN-->
+	<add sel="/wares/ware[@id='turret_ter_l_beam_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_l_dumbfire_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_l_gatling_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_l_guided_01_mk1']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_ter_l_laser_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_l_mining_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_m_beam_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_m_beam_02_mk1']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_ter_m_dumbfire_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_m_dumbfire_02_mk1']">
+		<owner faction="atf"/>	
+	</add>		
+	<add sel="/wares/ware[@id='turret_ter_m_gatling_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_m_gatling_02_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_m_guided_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_m_guided_02_mk1']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_ter_m_laser_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_m_laser_02_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_m_mining_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_ter_m_mining_02_mk1']">
+		<owner faction="atf"/>	
+	</add>		
+	<add sel="/wares/ware[@id='weapon_atf_xl_battleship_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_ter_l_destroyer_01_mk1']">
+		<owner faction="atf"/>	
+	</add>
+	<!-- VRO Removed
+	<add sel="/wares/ware[@id='weapon_ter_m_beam_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	-->
+	<add sel="/wares/ware[@id='weapon_ter_m_beam_01_mk2']">
+		<owner faction="atf"/>	
+	</add>	
+	<!-- VRO Removed	
+	<add sel="/wares/ware[@id='weapon_ter_m_gatling_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	-->
+	<add sel="/wares/ware[@id='weapon_ter_m_gatling_01_mk2']">
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_ter_m_laser_01_mk1']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_ter_m_laser_01_mk2']">
+		<owner faction="atf"/>	
+	</add>	
+	<!-- VRO Removed	
+	<add sel="/wares/ware[@id='weapon_ter_s_beam_01_mk1']">
+		<owner faction="atf"/>	
+	</add>	
+	-->
+	<add sel="/wares/ware[@id='weapon_ter_s_beam_01_mk2']">
+		<owner faction="atf"/>	
+	</add>	
+	<!-- VRO Removed	
+	<add sel="/wares/ware[@id='weapon_ter_s_gatling_01_mk1']">
+		<owner faction="atf"/>	
+	</add>
+	-->
+	<add sel="/wares/ware[@id='weapon_ter_s_gatling_01_mk2']">
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_ter_s_laser_01_mk1']">
+		<owner faction="atf"/>	
+	</add>		
+	<add sel="/wares/ware[@id='weapon_ter_s_laser_01_mk2']">
+		<owner faction="atf"/>	
+	</add>	
+	<!--BORON-->
+	<add sel="/wares/ware[@id='turret_bor_l_disruptor_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_l_flak_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_l_laser_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_l_mining_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_bor_m_arc_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_m_arc_02_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_m_dumbfire_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_m_guided_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_bor_m_laser_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_m_laser_02_mk1']">
+		<owner faction="atreus"/>	
+	</add>		
+	<add sel="/wares/ware[@id='turret_bor_m_mining_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_m_mining_02_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_m_railgun_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_bor_m_railgun_02_mk1']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_bor_l_beam_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_m_dumbfire_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_m_flak_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_m_guided_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>		
+	<add sel="/wares/ware[@id='weapon_bor_m_laser_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_m_mining_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_bor_m_railgun_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_m_torpedo_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_s_arc_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>		
+	<add sel="/wares/ware[@id='weapon_bor_s_dumbfire_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_s_gatling_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_bor_s_guided_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_s_laser_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>		
+	<add sel="/wares/ware[@id='weapon_bor_s_mining_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_s_torpedo_01_mk1']">
+		<owner faction="atreus"/>	
+	</add>		
+	<!--UNIVERSAL-->
+	<add sel="/wares/ware[@id='weapon_gen_m_beam_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>		
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_beam_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_dumbfire_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>		
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_dumbfire_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>			
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_gatling_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>		
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_gatling_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_guided_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>			
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_guided_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>			
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_laser_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_laser_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_mining_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>		
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_mining_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="atf"/>		
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_plasma_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_plasma_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_shotgun_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_shotgun_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_torpedo_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_torpedo_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_gen_m_scrapbeam_01_mk1']">
+		<owner faction="freesplit"/>		
+		<owner faction="split"/>
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>			
+	</add>		
+	<add sel="/wares/ware[@id='weapon_gen_s_beam_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>		
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_beam_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_burst_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_burst_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_cannon_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_cannon_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>		
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_dumbfire_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>			
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_dumbfire_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>			
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_gatling_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_gatling_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_guided_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>			
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_guided_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>			
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_laser_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_s_laser_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>		
+	<add sel="/wares/ware[@id='weapon_gen_s_mining_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>			
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_mining_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+		<owner faction="atf"/>			
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_s_plasma_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_s_plasma_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_s_shotgun_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>		
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_shotgun_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_torpedo_01_mk1']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_s_torpedo_01_mk2']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+		<owner faction="xaar"/>	
+	</add>	
+  <!--ENGINES-->
+	<!--ARGON-->
+	<add sel="/wares/ware[@id='engine_arg_l_allround_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_l_allround_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_l_travel_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_l_travel_01_mk1']/owner[@faction='alliance']"/>
+	<add sel="/wares/ware[@id='engine_arg_m_allround_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_m_allround_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_m_allround_01_mk2']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_m_allround_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_m_allround_01_mk3']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_m_allround_01_mk3']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='engine_arg_m_combat_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_m_combat_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_m_combat_01_mk2']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_m_combat_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_m_combat_01_mk3']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_m_combat_01_mk3']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='engine_arg_m_travel_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_m_travel_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_m_travel_01_mk2']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_m_travel_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_m_travel_01_mk3']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_m_travel_01_mk3']/owner[@faction='alliance']"/>
+	<add sel="/wares/ware[@id='engine_arg_s_allround_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_s_allround_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_s_allround_01_mk2']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_s_allround_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_s_allround_01_mk3']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_s_allround_01_mk3']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='engine_arg_s_combat_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_s_combat_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_s_combat_01_mk2']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_s_combat_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_s_combat_01_mk3']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_s_combat_01_mk3']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='engine_arg_s_travel_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_s_travel_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_s_travel_01_mk2']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_s_travel_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_s_travel_01_mk3']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_s_travel_01_mk3']/owner[@faction='alliance']"/>
+	<add sel="/wares/ware[@id='engine_arg_xl_allround_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_xl_allround_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_arg_xl_travel_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_arg_xl_travel_01_mk1']/owner[@faction='alliance']"/>	
+	<!--PARANID-->
+	<add sel="/wares/ware[@id='engine_par_l_allround_01_mk1']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_l_travel_01_mk1']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_m_allround_01_mk1']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_m_allround_01_mk2']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_m_allround_01_mk3']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_par_m_combat_01_mk1']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_m_combat_01_mk2']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_par_m_combat_01_mk3']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_par_m_travel_01_mk1']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_m_travel_01_mk2']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_m_travel_01_mk3']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_s_allround_01_mk1']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_s_allround_01_mk2']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_s_allround_01_mk3']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_s_combat_01_mk1']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_s_combat_01_mk2']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_s_combat_01_mk3']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_s_combat_01_mk4']">
+		<owner faction="xaar"/>
+	</add>		
+	<add sel="/wares/ware[@id='engine_par_s_travel_01_mk1']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_s_travel_01_mk2']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_s_travel_01_mk3']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_par_xl_allround_01_mk1']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_par_xl_travel_01_mk1']">
+		<owner faction="xaar"/>
+	</add>	
+	<!--TELADI-->
+	<add sel="/wares/ware[@id='engine_tel_l_allround_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_l_allround_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_l_travel_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_l_travel_01_mk1']/owner[@faction='alliance']"/>
+	<add sel="/wares/ware[@id='engine_tel_m_allround_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_m_allround_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_m_allround_01_mk2']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_m_allround_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_m_allround_01_mk3']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_m_allround_01_mk3']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='engine_tel_m_combat_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_m_combat_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_m_combat_01_mk2']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_m_combat_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_m_combat_01_mk3']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_m_combat_01_mk3']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='engine_tel_m_travel_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_m_travel_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_m_travel_01_mk2']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_m_travel_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_m_travel_01_mk3']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_m_travel_01_mk3']/owner[@faction='alliance']"/>
+	<add sel="/wares/ware[@id='engine_tel_s_allround_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_s_allround_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_s_allround_01_mk2']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_s_allround_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_s_allround_01_mk3']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_s_allround_01_mk3']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='engine_tel_s_combat_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_s_combat_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_s_combat_01_mk2']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_s_combat_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_s_combat_01_mk3']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_s_combat_01_mk3']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='engine_tel_s_travel_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_s_travel_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_s_travel_01_mk2']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_s_travel_01_mk2']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_s_travel_01_mk3']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_s_travel_01_mk3']/owner[@faction='alliance']"/>
+	<add sel="/wares/ware[@id='engine_tel_xl_allround_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_xl_allround_01_mk1']/owner[@faction='alliance']"/>	
+	<add sel="/wares/ware[@id='engine_tel_xl_travel_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='engine_tel_xl_travel_01_mk1']/owner[@faction='alliance']"/>		
+	<!--SPLIT-->
+	<add sel="/wares/ware[@id='engine_spl_l_allround_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_l_travel_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_m_allround_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_m_allround_01_mk2']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_m_allround_01_mk3']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_spl_m_combat_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_m_combat_01_mk2']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_spl_m_combat_01_mk3']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_m_combat_01_mk4']">
+		<owner faction="strongarms"/>
+	</add>		
+	<add sel="/wares/ware[@id='engine_spl_m_travel_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_m_travel_01_mk2']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_m_travel_01_mk3']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_s_allround_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_s_allround_01_mk2']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_s_allround_01_mk3']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_s_combat_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_s_combat_01_mk2']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_s_combat_01_mk3']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']">
+		<owner faction="strongarms"/>
+	</add>		
+	<add sel="/wares/ware[@id='engine_spl_s_travel_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_s_travel_01_mk2']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_s_travel_01_mk3']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_spl_xl_allround_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_spl_xl_travel_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>		
+	<!--TERRAN-->
+	<add sel="/wares/ware[@id='engine_ter_l_allround_01_mk1']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_l_travel_01_mk1']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_m_allround_01_mk1']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_m_allround_01_mk2']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_m_allround_01_mk3']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_ter_m_combat_01_mk1']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_m_combat_01_mk2']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_ter_m_combat_01_mk3']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_m_travel_01_mk1']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_m_travel_01_mk2']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_m_travel_01_mk3']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_s_allround_01_mk1']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_s_allround_01_mk2']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_s_allround_01_mk3']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_s_combat_01_mk1']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_s_combat_01_mk2']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_s_combat_01_mk3']">
+		<owner faction="atf"/>
+	</add>		
+	<add sel="/wares/ware[@id='engine_ter_s_travel_01_mk1']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_s_travel_01_mk2']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_s_travel_01_mk3']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_ter_xl_allround_01_mk1']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_ter_xl_travel_01_mk1']">
+		<owner faction="atf"/>
+	</add>	
+	<!--BORON-->	
+	<add sel="/wares/ware[@id='engine_bor_l_travel_01_mk1']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_bor_m_allround_01_mk1']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_bor_m_allround_01_mk2']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_bor_m_allround_01_mk3']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='engine_bor_s_allround_01_mk1']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_bor_s_allround_01_mk2']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_bor_s_allround_01_mk3']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='engine_bor_xl_travel_01_mk1']">
+		<owner faction="atreus"/>
+	</add>	
+	
+  <!--SHIELDS-->
+	<!--ARGON-->
+	<add sel="/wares/ware[@id='shield_arg_l_standard_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_arg_l_standard_01_mk1']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_arg_l_standard_01_mk2']">
+		<owner faction="jonferco"/>
+	</add>	
+	<remove sel="//wares/ware[@id='shield_arg_l_standard_01_mk2']/owner[@faction='alliance']"/>			
+	<add sel="/wares/ware[@id='shield_arg_m_standard_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_arg_m_standard_01_mk1']/owner[@faction='alliance']"/>			
+	<add sel="/wares/ware[@id='shield_arg_m_standard_01_mk2']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_arg_m_standard_01_mk2']/owner[@faction='alliance']"/>			
+	<add sel="/wares/ware[@id='shield_arg_m_standard_02_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_arg_m_standard_02_mk1']/owner[@faction='alliance']"/>			
+	<add sel="/wares/ware[@id='shield_arg_m_standard_02_mk2']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_arg_m_standard_02_mk2']/owner[@faction='alliance']"/>			
+	<add sel="/wares/ware[@id='shield_arg_s_standard_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_arg_s_standard_01_mk1']/owner[@faction='alliance']"/>			
+	<add sel="/wares/ware[@id='shield_arg_s_standard_01_mk2']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_arg_s_standard_01_mk2']/owner[@faction='alliance']"/>			
+	<add sel="/wares/ware[@id='shield_arg_s_standard_01_mk3']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_arg_s_standard_01_mk3']/owner[@faction='alliance']"/>			
+	<add sel="/wares/ware[@id='shield_arg_xl_standard_01_mk1']">
+		<owner faction="jonferco"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_arg_xl_standard_01_mk1']/owner[@faction='alliance']"/>			
+	<!--PARANID-->
+	<add sel="/wares/ware[@id='shield_par_l_standard_01_mk1']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_par_l_standard_01_mk2']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_par_m_standard_01_mk1']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_par_m_standard_01_mk2']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_par_m_standard_02_mk1']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_par_m_standard_02_mk2']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_par_s_standard_01_mk1']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_par_s_standard_01_mk2']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_par_s_standard_01_mk3']">
+		<owner faction="xaar"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_par_xl_standard_01_mk1']">
+		<owner faction="xaar"/>
+	</add>			
+	<!--TELADI-->
+	<add sel="/wares/ware[@id='shield_tel_l_standard_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_tel_l_standard_01_mk1']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_tel_l_standard_01_mk2']">
+		<owner faction="nmmc"/>
+	</add>	
+	<remove sel="//wares/ware[@id='shield_tel_l_standard_01_mk2']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_tel_m_standard_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_tel_m_standard_01_mk1']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_tel_m_standard_01_mk2']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_tel_m_standard_01_mk2']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_tel_m_standard_02_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_tel_m_standard_02_mk1']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_tel_m_standard_02_mk2']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_tel_m_standard_02_mk2']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_tel_s_standard_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_tel_s_standard_01_mk1']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_tel_s_standard_01_mk2']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_tel_s_standard_01_mk2']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_tel_s_standard_01_mk3']">
+		<owner faction="nmmc"/>
+	</add>
+	<remove sel="//wares/ware[@id='shield_tel_s_standard_01_mk3']/owner[@faction='alliance']"/>		
+	<add sel="/wares/ware[@id='shield_tel_xl_standard_01_mk1']">
+		<owner faction="nmmc"/>
+	</add>	
+	<remove sel="//wares/ware[@id='shield_tel_xl_standard_01_mk1']/owner[@faction='alliance']"/>		
+	<!--SPLIT-->
+	<add sel="/wares/ware[@id='shield_spl_l_standard_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_spl_l_standard_01_mk2']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_spl_m_standard_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_spl_m_standard_01_mk2']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_spl_m_standard_02_mk1']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_spl_m_standard_02_mk2']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_spl_s_standard_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_spl_s_standard_01_mk2']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_spl_s_standard_01_mk3']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_spl_xl_standard_01_mk1']">
+		<owner faction="strongarms"/>
+	</add>		
+	<!--TERRAN-->
+	<add sel="/wares/ware[@id='shield_ter_l_standard_01_mk1']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_ter_l_standard_01_mk2']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_ter_l_standard_01_mk3']">
+		<owner faction="atf"/>
+	</add>		
+	<add sel="/wares/ware[@id='shield_ter_m_standard_01_mk1']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_ter_m_standard_01_mk2']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_ter_m_standard_01_mk3']">
+		<owner faction="atf"/>
+	</add>		
+	<add sel="/wares/ware[@id='shield_ter_m_standard_02_mk1']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_ter_m_standard_02_mk2']">
+		<owner faction="atf"/>
+	</add>
+	<add sel="/wares/ware[@id='shield_ter_m_standard_02_mk3']">
+		<owner faction="atf"/>
+	</add>		
+	<add sel="/wares/ware[@id='shield_ter_s_standard_01_mk1']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_ter_s_standard_01_mk2']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_ter_s_standard_01_mk3']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_ter_xl_standard_01_mk1']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_ter_xl_standard_01_mk2']">
+		<owner faction="atf"/>
+	</add>		
+	<!--BORON-->
+	<add sel="/wares/ware[@id='shield_bor_l_standard_01_mk1']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_bor_l_standard_01_mk2']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_bor_l_standard_01_mk3']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_bor_m_standard_01_mk1']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_bor_m_standard_01_mk2']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_bor_m_standard_01_mk3']">
+		<owner faction="atreus"/>
+	</add>		
+	<add sel="/wares/ware[@id='shield_bor_m_standard_02_mk1']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_bor_m_standard_02_mk2']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='shield_bor_m_standard_02_mk3']">
+		<owner faction="atreus"/>
+	</add>		
+	<add sel="/wares/ware[@id='shield_bor_s_standard_01_mk1']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_bor_s_standard_01_mk2']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_bor_s_standard_01_mk3']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='shield_bor_xl_standard_01_mk1']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='shield_bor_xl_standard_01_mk2']">
+		<owner faction="atreus"/>
+	</add>		
+	
+	<!--VRO: Organized top to bottom instead-->
+	<add sel="/wares/ware[@id='ship_bor_xl_battleship_01']">
+		<owner faction="atreus"/>
+	</add>		
+	<add sel="/wares/ware[@id='turret_bor_l_projector']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_m_proton']">
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='weapon_bor_s_proton_macro']"><!--VRO has _maro_ in the name-->
+		<owner faction="atreus"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_spl_l_madr']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_spl_l_shell']">
+		<owner faction="strongarms"/>
+	</add>	
+	<add sel="/wares/ware[@id='weapon_ter_l_graviton']">
+		<owner faction="atf"/>
+	</add>		
+	<add sel="/wares/ware[@id='turret_ter_l_rotorypulse']">
+		<owner faction="atf"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_arg_m_ma_01']">
+		<owner faction="otas"/>
+		<owner faction="jonferco"/>
+	</add>		
+	<add sel="/wares/ware[@id='turret_arg_m_ma_02']">
+		<owner faction="otas"/>
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_tel_m_ma_01']">
+		<owner faction="nmmc"/>	
+	</add>		
+	<add sel="/wares/ware[@id='turret_tel_m_ma_02']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_m_flechette_01']">
+		<owner faction="nmmc"/>	
+	</add>		
+	<add sel="/wares/ware[@id='turret_tel_m_flechette_02']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_arg_l_parray']">
+		<owner faction="otas"/>
+		<owner faction="jonferco"/>
+	</add>		
+	<add sel="/wares/ware[@id='weapon_tel_l_parray']">
+		<owner faction="nmmc"/>	
+	</add>		
+	<add sel="/wares/ware[@id='weapon_tel_l_posbeam']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='ship_par_xl_battleship_02']">
+		<owner faction="alliance"/>	
+		<owner faction="xxar"/>			
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_xl_corona']">
+		<owner faction="jonferco"/>	
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_xl_battleship_lc4_01_ware']">
+		<owner faction="jonferco"/>	
+	</add>
+	<add sel="/wares/ware[@id='ship_arg_l_cyclops']">
+		<owner faction="jonferco"/>	
+	</add>	
+	<add sel="/wares/ware[@id='ship_arg_l_cyclops_2']">
+		<owner faction="jonferco"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_axe_autocannon']">
+		<owner faction="jonferco"/>	
+	</add>		
+	<add sel="/wares/ware[@id='ship_tel_xl_battleship_lc4_01_ware']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='ship_tel_l_shrike_a']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_xl_gharial']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='ship_spl_l_panther_a']">
+		<owner faction="nmmc"/>	
+	</add>		
+	<add sel="/wares/ware[@id='ship_spl_l_viper']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='turret_arg_l_flak']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_l_flak']">
+		<owner faction="nmmc"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_spl_l_flak']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_arg_l_ppc']">
+		<owner faction="jonferco"/>
+	</add>			
+	<add sel="/wares/ware[@id='weapon_arg_l_ppc']">
+		<owner faction="otas"/>
+		<owner faction="jonferco"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_par_l_tri']">
+		<owner faction="alliance"/>
+		<owner faction="xaar"/>		
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_l_gauss']">
+		<owner faction="nmmc"/>
+	</add>		
+	<add sel="/wares/ware[@id='turret_sca_l_rotor']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_spl_multilauncher']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_arg_l_cruise']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='turret_tel_l_cruise']">
+		<owner faction="jonferco"/>
+	</add>		
+	<add sel="/wares/ware[@id='weapon_gen_s_hept']">
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>
+		<owner faction="nmmc"/>		
+	</add>		
+	<add sel="/wares/ware[@id='weapon_gen_s_ebc']">
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>
+		<owner faction="nmmc"/>				
+	</add>		
+	<add sel="/wares/ware[@id='weapon_gen_s_pbe']">
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>
+		<owner faction="nmmc"/>				
+	</add>		
+	<add sel="/wares/ware[@id='weapon_gen_m_cig']">
+		<owner faction="jonferco"/>
+		<owner faction="nmmc"/>				
+	</add>		
+	<add sel="/wares/ware[@id='weapon_gen_m_cig_centaur']">
+		<owner faction="jonferco"/>			
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_laser_centaur']">
+		<owner faction="jonferco"/>			
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_isr']">
+		<owner faction="jonferco"/>
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_isr_centaur']">
+		<owner faction="jonferco"/>
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_cig_centaur']">
+		<owner faction="jonferco"/>			
+	</add>	
+	<add sel="/wares/ware[@id='weapon_gen_m_ma']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>		
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_ma_centaur']">
+		<owner faction="jonferco"/>			
+	</add>		
+	<add sel="/wares/ware[@id='weapon_gen_m_plasmabomb']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>			
+	</add>	
+	<!--MISSILES-->
+	<add sel="/wares/ware[@id='missile_rapier']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>			
+	</add>	
+	<add sel="/wares/ware[@id='missile_firefly']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>			
+	</add>
+	<add sel="/wares/ware[@id='missile_firelance']">
+		<owner faction="nmmc"/>			
+	</add>
+	<add sel="/wares/ware[@id='missile_beluga']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>			
+	</add>	
+	<add sel="/wares/ware[@id='missile_blizzard']">
+		<owner faction="otas"/>			
+	</add>
+	<add sel="/wares/ware[@id='missile_dragonfly']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>			
+	</add>
+	<add sel="/wares/ware[@id='missile_aurora']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>			
+	</add>		
+	<add sel="/wares/ware[@id='missile_tornado']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>			
+	</add>	
+	<add sel="/wares/ware[@id='missile_flycatcher']">
+		<owner faction="jonferco"/>			
+	</add>
+	<add sel="/wares/ware[@id='missile_mosquito']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>			
+	</add>
+	<add sel="/wares/ware[@id='missile_wasp']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>				
+	</add>
+	<add sel="/wares/ware[@id='missile_wildfire']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>				
+	</add>	
+	<add sel="/wares/ware[@id='missile_cyclone']">
+		<owner faction="otas"/>	
+	</add>
+	<add sel="/wares/ware[@id='missile_silkworm']">
+		<owner faction="jonferco"/>	
+	</add>		
+	<add sel="/wares/ware[@id='missile_hurricane']">
+		<owner faction="otas"/>
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>				
+	</add>
+	<add sel="/wares/ware[@id='missile_windstalker']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>				
+	</add>	
+	<add sel="/wares/ware[@id='missile_tempest']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>			
+	</add>	
+	<add sel="/wares/ware[@id='missile_thunderbolt']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='missile_hornet']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='missile_hammerhead']">
+		<owner faction="nmmc"/>	
+	</add>
+	<add sel="/wares/ware[@id='missile_rgw']">
+		<owner faction="otas"/>		
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='missile_banshee']">
+		<owner faction="jonferco"/>	
+	</add>		
+	<add sel="/wares/ware[@id='missile_typhoon']">
+		<owner faction="otas"/>	
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>			
+	</add>
+	<add sel="/wares/ware[@id='missile_phantom']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='missile_ibis']">
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='missile_tomahawk']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>	
+	</add>		
+	<add sel="/wares/ware[@id='missile_firestorm']">
+		<owner faction="otas"/>
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>			
+	</add>
+	<add sel="/wares/ware[@id='missile_flail']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>	
+	</add>
+	<add sel="/wares/ware[@id='missile_shadow']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='missile_wraith']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+	</add>	
+	<add sel="/wares/ware[@id='missile_disruptor']">
+		<owner faction="jonferco"/>	
+		<owner faction="strongarms"/>	
+		<owner faction="nmmc"/>	
+		<owner faction="atreus"/>	
+		<owner faction="atf"/>	
+	</add>	
+	<add sel="/wares/ware[@id='missile_scatter']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='missile_starburst']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='missile_interceptor']">
+		<owner faction="strongarms"/>	
+	</add>	
+	<add sel="/wares/ware[@id='missile_serpentnest']">
+		<owner faction="strongarms"/>	
+	</add>		
+	<add sel="/wares/ware[@id='missile_poltergeist']">
+		<owner faction="atf"/>	
+	</add>		
+
 	<!--Khaak-->
 <!--Ravager-->
   <replace sel="/wares/ware[@id='ship_kha_l_destroyer_01_a']/@tags">ship</replace>
@@ -2007,6 +6427,7 @@
   <replace sel="/wares/ware[@id='shield_kha_xl_standard_01_mk1']/@tags">shield equipment</replace>  
   
 	<!--Xenon-->
+<!--Base Game-->	
   <replace sel="/wares/ware[@id='ship_xen_m_fighter_01_a']/@tags">ship</replace>
   <remove sel="/wares/ware[@id='ship_xen_m_fighter_01_a']/production/@tags"/>
   <replace sel="/wares/ware[@id='ship_xen_m_miner_01_a']/@tags">ship</replace>
@@ -2021,8 +6442,6 @@
   <remove sel="/wares/ware[@id='ship_xen_xl_carrier_01_a']/production/@tags"/>
   <replace sel="/wares/ware[@id='ship_xen_xl_destroyer_01_a']/@tags">ship</replace>
   <remove sel="/wares/ware[@id='ship_xen_xl_destroyer_01_a']/production/@tags"/>
-
-
 <!--F-->
   <replace sel="/wares/ware[@id='ship_xen_s_heavyfighter_01_a']/@tags">ship</replace>
   <remove sel="/wares/ware[@id='ship_xen_s_heavyfighter_01_a']/production/@tags"/>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<mdscript name="Setup_anomalies" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+  <cues>
+	<cue name="Setup">
+      <conditions>
+        <event_universe_generated/>
+        <check_value value="player.galaxy.macro == macro.xu_ep2_universe_macro" comment="only in main-galaxy"/>
+      </conditions>
+      <cues>	  
+        <cue name="Anomalies" version="1">	  
+          <actions>
+            <find_sector name="$UknownKhaak" macro="macro.cluster_rem70_sector001_macro" required="true"/>
+            <find_sector name="$KhaakHive" macro="macro.cluster_rem72_sector001_macro" required="true"/>
+            <find_object name="$AnomaliesKtoH" class="class.anomaly" space="$UknownKhaak" multiple="false" godobjectentry="'unknown_khaak_01'" required="true" />
+            <find_object name="$AnomaliesHtoK" class="class.anomaly" space="$KhaakHive" multiple="false" godobjectentry="'khaak_hive_01'" required="true" />
+            <add_anomaly_destination anomaly="$AnomaliesKtoH" destination="$AnomaliesHtoK" />			
+            <add_anomaly_destination anomaly="$AnomaliesHtoK" destination="$AnomaliesKtoH" />
+          </actions>  	
+		</cue>
+	  </cues>
+	</cue>		
+  </cues>
+</mdscript>	
+-->

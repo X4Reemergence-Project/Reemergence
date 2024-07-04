@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+  <add sel="/effects">
+    <!--FIRESTORM ARTILLERY - XL TURRET-->
+    <effect name="muzzle_otas_turret_xl_firestorm" alignment="object">
+      <elements>
+        <!-- Muzzle Geometry -->
+        <element id="1" ref="muzzle_otas_turret_xl_firestorm_macro" forkeffect="none" duration="1.25" minscale="2.0" maxscale="2.0" forklod="megaeffect"></element>
+        <!-- Sound -->
+        <element id="2" ref="effect_dummy_macro" forkeffect="none" duration="2" forklod="mediumeffect">
+          <sound ref="firestorm_turret_shoot"></sound>
+        </element>
+      </elements>
+    </effect>
+    <effect name="impact_otas_turret_xl_firestorm" alignment="normal">
+      <elements>
+        <element id="1" ref="impact_otas_turret_xl_firestorm_macro" forkeffect="none" duration="2.0" minscale="3.0" maxscale="3.0" fadein="0.0" fadeout="0.0" forklod="largeeffect"></element>
+        <element id="2" ref="dummyemitter_macro" forkeffect="explosion_props_wps_mine_01_explosion_01" alignment="normal" duration="1" fadeout="3.75" minscale="3.0" maxscale="3.0" forklod="megaeffect"></element>
+        <!--element id="3" ref="dummyemitter_macro" forkeffect="explosion_generic_01_explosion01" alignment="normal" duration="10.25" minscale="3.0" maxscale="3.0" fadein="0.0" fadeout="0.5" forklod="largeeffect"></element-->
+        <!-- Geometry Light -->
+        <element id="3" ref="impact_light_orange_macro" forkeffect="none" duration="0.25" minscale="3" maxscale="3" fadeout="0.25" forklod="megaeffect"></element>
+        <element id="4" ref="effect_dummy_macro" forkeffect="none" duration="2.5" forklod="none">
+          <areadamage range="600" falloff="1" duration="1" />
+        </element>
+        <!-- Sound -->
+        <element id="5" ref="effect_dummy_macro" forkeffect="none" duration="3.0" forklod="largeeffect">
+          <sound ref="firestorm_turret_impact"></sound>
+        </element>
+      </elements>
+    </effect>
+    <!--PHASED ARRAY LASER CANNON - TURRET-->
+    <effect name="muzzle_otas_turret_l_palc" alignment="object">
+      <elements>
+        <!-- Muzzle Smoke-->
+        <element id="1" ref="dummyemitter_up_macro" forkeffect="beam_muzzle_smoke_01" alignment="object" duration="0.5" minscale="1.2" maxscale="1.2" fadeout="1.0" forklod="largeeffect"></element>
+        <!-- Geometry -->
+        <element id="2" ref="muzzle_otas_turret_l_palc_macro" forkeffect="none" duration="0.7" minscale="1.0" maxscale="1.0" forklod="largeeffect"></element>
+        <!-- Geometry Light -->
+        <element id="3" ref="impact_light_blue_macro" forkeffect="none" duration="0.7" minscale="1.0" maxscale="1.0" fadeout="1.0" forklod="largeeffect"></element>
+        <!-- Sound -->
+        <element id="4" ref="effect_dummy_macro" forkeffect="none" duration="4.0" forklod="none">
+          <sound ref="palc_turret_shoot"></sound>
+        </element>
+      </elements>
+    </effect>
+    <effect name="impact_otas_turret_l_palc" alignment="normal">
+      <elements>
+        <!-- Impact Geometry -->
+        <element id="1" ref="impact_gen_m_laser_01_mk1_macro" forkeffect="none" duration="2.0" minscale="20.0" maxscale="20.0" fadein="0.0" fadeout="0.15" forklod="mediumeffect"></element>
+        <!-- Impact Smoke Particles-->
+        <element id="2" ref="dummyemitter_macro" forkeffect="laser_impact_smoke_01" alignment="normal" duration="0.25" minscale="1" maxscale="2" fadeout="0.15" forklod="mediumeffect"></element>
+        <!-- Impact Fire Particles-->
+        <element id="3" ref="dummyemitter_macro" forkeffect="laser_impact_fire_01" alignment="normal" duration="0.5" minscale="2" maxscale="3" fadein="0.0" fadeout="0.25" forklod="mediumeffect"></element>
+        <!-- Geometry Light -->
+        <element id="4" ref="impact_otas_turret_l_palc_macro" forkeffect="none" duration="1.0" minscale="1.0" maxscale="1.0" fadeout="1.0" forklod="largeeffect"></element>
+        <!-- Sound -->
+        <element id="5" ref="effect_dummy_macro" forkeffect="none" duration="2.0" forklod="none">
+          <sound ref="palc_turret_impact"></sound>
+        </element>
+      </elements>
+    </effect>
+    <!-- M/AM MASS DRIVER-->
+    <effect name="muzzle_otas_l_destroyer" alignment="object">
+      <elements>
+        <!-- Muzzle Smoke-->
+        <element id="1" ref="dummyemitter_up_macro" forkeffect="gatling_muzzle_smoke_01" alignment="object" duration="2.0" minscale="9.0" maxscale="9.0" forklod="largeeffect"></element>
+        <!-- Geometry -->
+        <element id="2" ref="muzzle_gen_s_gatling_01_mk1_macro" forkeffect="none" duration="0.1" minscale="9.0" maxscale="9.0" forklod="largeeffect"></element>
+        <!-- Geometry Light -->
+        <element id="3" ref="impact_light_orange_macro" forkeffect="none" duration="0.15" minscale="9.0" maxscale="9.0" fadeout="0.2" forklod="largeeffect"></element>
+        <!-- Sound -->
+        <element id="4" ref="effect_dummy_macro" forkeffect="none" duration="1.5" forklod="none">
+          <sound ref="md_l_shoot"></sound>
+        </element>
+      </elements>
+    </effect>
+    <effect name="impact_otas_l_destroyer" alignment="normal">
+      <elements>
+        <!-- Muzzle Smoke-->
+        <element id="1" ref="dummyemitter_up_macro" forkeffect="gatling_muzzle_smoke_01" alignment="object" duration="1.0" minscale="12" maxscale="12" fadeout="0.1" forklod="largeeffect"></element>
+        <!-- Geometry -->
+        <element id="2" ref="impact_gen_s_gatling_01_mk1_macro" forkeffect="none" duration="0.3" minscale="10" maxscale="10" fadeout="0.1" forklod="largeeffect"></element>
+        <!-- Geometry Light -->
+        <element id="3" ref="impact_light_orange_macro" forkeffect="none" duration="0.5" minscale="10" maxscale="10" fadeout="0.2" forklod="largeeffect"></element>
+        <!-- Sound -->
+        <element id="4" ref="effect_dummy_macro" forkeffect="none" duration="2.0" forklod="none">
+          <sound ref="large_hull_impact"></sound>
+        </element>
+        <element id="5" ref="effect_dummy_macro" forkeffect="none" delay="0" duration="0.25" forklod="none">
+          <force range="120" falloff="0.0">
+            <rumble>
+              <camera>
+                <component frequency="1.5" attackduration="0.1" sustainduration="0" releaseduration="0.1">
+                  <amplitude randomize="false">
+                    <position x="0.003" y="0.003" z="0.003" />
+                  </amplitude>
+                </component>
+              </camera>
+              <controller>
+                <low amplitude="0.025" attackduration="0.1" sustainduration="0.0" releaseduration="0.1" />
+              </controller>
+            </rumble>
+          </force>
+        </element>
+      </elements>
+    </effect>	
+  </add>
+</diff>  

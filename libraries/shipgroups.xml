@@ -1,52 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff>
   <add sel="//groups">
-	<group name="otas_builder_xl">
-	  <select macro="ship_otas_xl_vesuvius_temp_macro" weight="100"/>
-	</group>
-	<group name="otas_resupplier_xl">
-	  <select macro="ship_otas_xl_genthus_temp_macro" weight="100"/>
-	</group>
-	<group name="otas_trader_container_l">
-	  <select macro="ship_otas_l_mistral_temp_macro" weight="100"/>			
-	</group>
-	<group name="otas_trader_container_m">
-	  <select macro="ship_otas_m_mercury_stalwart_macro" weight="100"/>
-	  <select macro="ship_otas_m_ides_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_trader_container_s">
-	  <select macro="ship_otas_s_courier_stalwart_macro" weight="100"/>
-	  <select macro="ship_otas_s_callisto_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_solid_l">
-	  <select macro="ship_otas_l_magnetar_mineral_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_liquid_l">
-	  <select macro="ship_otas_l_magnetar_gas_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_solid_m">
-	  <select macro="ship_otas_m_drill_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_liquid_m">
-	  <select macro="ship_otas_m_sunder_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_solid_s">
-	  <select macro="ship_otas_s_courier_miner_stalwart_macro"/>
-	</group>
-	<group name="otas_miner_solid_mixed">
-	  <select macro="ship_otas_l_magnetar_mineral_stalwart_macro" weight="100"/>
-	  <select macro="ship_otas_m_drill_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_liquid_mixed">
-	  <select macro="ship_otas_l_magnetar_gas_stalwart_macro" weight="100"/>
-	  <select macro="ship_otas_m_sunder_stalwart_macro" weight="100"/>
-	</group>
 	<group name="otas_battleship_xl">
 	  <select macro="ship_otas_xl_tempest_macro" weight="100"/>
 	</group>	
-	<group name="otas_carrier_xl">
-	  <select macro="ship_otas_xl_andaman_temp_macro" weight="100"/>
-	</group>
 	<group name="otas_destroyer_l">
 	  <select macro="ship_otas_l_aquilo_macro" weight="20"/>
 	  <select macro="ship_otas_l_boreas_macro" weight="100"/>				
@@ -54,27 +11,16 @@
 	<group name="otas_escort_l">
 	  <select macro="ship_otas_l_astraeus_macro" weight="100"/>
 	  <select macro="ship_otas_l_aquilo_macro" weight="20"/>	  
-	  <select macro="ship_otas_l_zephyrus_temp_macro" weight="15"/>
-	</group>
-	<group name="otas_frigate_m">
-	  <select macro="ship_otas_m_sirokos_temp_macro" weight="100"/>
-	  <select macro="ship_otas_m_skiron_temp_macro" weight="60"/>					
-	</group>
-	<group name="otas_gunboat_m">
-	  <select macro="ship_otas_m_skiron_temp_macro" weight="100"/>
 	</group>
 	<group name="otas_tugboat_m">
 	  <select macro="ship_gen_m_tugboat_01_a_macro" weight="100"/>
 	</group>		
 	<group name="otas_fighter_s">
 	  <select macro="ship_otas_s_eurus_macro" weight="100"/>			
-	  <select macro="ship_otas_s_notus_macro" weight="25"/>
-	  <select macro="ship_otas_s_venti_temp_macro" weight="40"/>			
+	  <select macro="ship_otas_s_notus_macro" weight="25"/>			
 	</group>
-	<group name="otas_fighter_heavy_s">
-	  <select macro="ship_otas_s_auster_temp_macro" weight="20"/>	
-	  <select macro="ship_otas_s_notus_macro" weight="80"/>	
-	  <select macro="ship_otas_s_venti_temp_macro" weight="100"/>				
+	<group name="otas_fighter_heavy_s">	
+	  <select macro="ship_otas_s_notus_macro" weight="80"/>					
 	</group>
 	<group name="otas_fighter_light_s">
 	  <select macro="ship_otas_s_eurus_macro" weight="100"/>			
@@ -243,7 +189,8 @@
       <select macro="ship_ter_xl_kagawa_macro" weight="100"/>   	  
 	</group>
   </add>
-  
+
+  <remove sel="//groups/group[@name='teratf_destroyer_l']/select[@macro='ship_atf_l_destroyer_01_a_macro']" />    
   <replace sel="/groups/group[@name='ter_lightcarrier_l']/select[@macro='ship_ter_l_carrier_01_macro']/@macro">ship_ter_l_chiba_e_macro</replace>  <!--VRO Chiba for RE Chiba E-->  
   <remove sel="//groups/group/select[@macro='ship_xen_xl_u_macro']" /> <!--VRO U-->
   
