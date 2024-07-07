@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<components>
+	<component name="shield_xen_s_standard_01_mk3" class="shieldgenerator">
+		<source geometry="assets\props\SurfaceElements\shield_xen_s_standard_01_mk2_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights/>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="Connection02" tags="part animation nocollision detail_xl forceoutline  ">
+				<offset>
+					<position x="-2.328306E-10" y="0.4635485" z="1.22891"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="1" end="100"/>
+				</animations>
+				<parts>
+					<part name="detail_xl_anim_01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.3290309" y="4.267819E-02" z="0.3290309"/>
+							<center x="2.328306E-10" y="-4.267484E-02" z="0"/>
+						</size>
+						<size_raw>
+							<max x="0.3271708" y="8.535305E-02" z="0.3290309"/>
+							<center x="-2.083834E-07" y="-4.267484E-02" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part animation nocollision detail_xl forceoutline  ">
+				<offset>
+					<position x="-2.328306E-10" y="0.4635485" z="-1.227586"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="1" end="100"/>
+				</animations>
+				<parts>
+					<part name="detail_xl_anim_02">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.3290309" y="4.267819E-02" z="0.3290309"/>
+							<center x="2.328306E-10" y="-4.267484E-02" z="0"/>
+						</size>
+						<size_raw>
+							<max x="0.3271708" y="8.535305E-02" z="0.3290309"/>
+							<center x="-2.083834E-07" y="-4.267484E-02" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part platformcollision forceoutline  ">
+				<offset>
+					<position x="0" y="0.2854708" z="2.861023E-05"/>
+				</offset>
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+									<material id="3" ref="generic.generic_p1_hulltexture"/>
+									<material id="4" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+							<lod index="1">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+									<material id="3" ref="generic.generic_p1_hulltexture"/>
+									<material id="4" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+							<lod index="2">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+									<material id="3" ref="generic.generic_p1_hulltexture"/>
+									<material id="4" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+							<lod index="3">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.9358274" y="0.2854716" z="1.977793"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<pivot>
+							<offset>
+								<position x="0" y="0" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection01" tags="small shield component unhittable standard">
+				<offset/>
+			</connection>
+		</connections>
+	</component>
+</components>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<components>
+	<component name="dockarea_tel_l_cassowary" class="dockarea">
+		<source geometry="assets\structures\dock\\dockarea_arg_s_01_data"/>
+		<layers>
+			<layer>
+				<waypoints>
+					<waypoint name="entry_waypoint01" tags="entrypath start " x="0" y="10" z="-500" qx="0" qy="0" qz="0" qw="0">
+						<links>
+							<link ref="entry_waypoint02"/>
+						</links>
+					</waypoint>
+					<waypoint name="entry_waypoint02" tags="entrypath end "  x="0" y="10" z="-250" qx="0" qy="0" qz="0" qw="0">
+					</waypoint>			
+				</waypoints>			
+				<lights/>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0" optional="0"/>
+			<connection name="position" tags="position" value="1" optional="1"/>
+			<connection name="space" tags="dockarea">
+				<offset/>
+			</connection>
+			<connection name="Connection01" hidden="true" tags="part nocollision  ">
+				<offset/>
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hullpattern"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.8157368" y="0.6352959" z="0.9177036"/>
+							<center x="0" y="-0.6352959" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionFor_dockingbay_arg_s_01_macro" tag="dockingbay" >
+				<offset/>
+			</connection>
+		</connections>
+	</component>
+</components>

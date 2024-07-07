@@ -1646,5 +1646,294 @@
       </skills>
       <owner exact="atf"/>
     </character>
+	
+	
+  <!-- Xaar -->
+  <!-- Xaar Faction Representative -->    
+  <character id="factionrepresentative_xaar" group="paranid.factionrepresentative">
+    <category tags="[factionrepresentative]" faction="xaar" race="paranid"/>
+    <skills>
+      <skill type="management" exact="15"/>
+      <skill type="morale" max="15"/>
+      <skill type="boarding" min="6" max="15"/>
+      <skill type="engineering" min="8" max="15"/>
+      <skill type="piloting" min="8" max="15"/>
+    </skills>
+    <page exact="10501"/>
+    <owner exact="xaar"/>
+  </character>  
+  <character id="trader_xaar_random" group="paranid.trader">
+    <category tags="[crew, pilot, aipilot, traderpilot, masstraffic]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="piloting" min="6" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" min="4" max="6"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="fighter_xaar_random" group="paranid.pilot">
+    <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="piloting" min="5" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" min="1" max="6"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="manager_xaar_random" group="paranid.manager">
+    <category tags="[crew, officer, manager]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="management" min="9" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="piloting" max="3"/>
+      <skill type="engineering" max="1"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <!-- regular -->
+  <character id="service_xaar_random" group="paranid.service">
+    <category tags="[crew, service, regular, recruitable]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="engineering" min="2" max="4"/>
+      <skill type="morale" min="2" max="4"/>
+      <skill type="piloting" max="2"/>
+      <skill type="management" min="1" max="2"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="marine_xaar_random" group="paranid.marine">
+    <category tags="[crew, marine, regular, recruitable]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="boarding" min="2" max="4"/>
+      <skill type="morale" min="2" max="4"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="piloting" max="2"/>
+      <skill type="management" min="1" max="2"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="fighter_xaar_regular_random" group="paranid.pilot">
+    <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular, recruitable]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="piloting" min="5" max="6"/>
+      <skill type="morale" max="5"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" min="2" max="3"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="manager_xaar_regular_random" group="paranid.manager">
+    <category tags="[crew, officer, manager, regular, recruitable]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="management" min="7" max="8"/>
+      <skill type="morale" min="6" max="8"/>
+      <skill type="piloting" max="3"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <!-- passenger -->
+  <character id="passenger_xaar_random" group="paranid.passenger">
+    <category tags="[crew, passenger]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="boarding" exact="0"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" max="6"/>
+      <skill type="morale" max="12"/>
+      <skill type="piloting" max="3"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="prisoner_xaar_random" group="paranid.prisoner">
+    <category tags="[crew, prisoner]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="boarding" max="1"/>
+      <skill type="engineering" max="2"/>
+      <skill type="management" max="6"/>
+      <skill type="morale" min="1" max="2"/>
+      <skill type="piloting" max="3"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <!-- Rookies -->
+  <character id="service_xaar_random_rookie" group="paranid.service">
+    <category tags="[crew, service, rookie, recruitable]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="engineering" min="1" max="2"/>
+      <skill type="morale" min="1" max="4"/>
+      <skill type="piloting" max="1"/>
+      <skill type="management" max="1"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="marine_xaar_random_rookie" group="paranid.marine">
+    <category tags="[crew, marine, rookie, recruitable]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="boarding" min="1" max="2"/>
+      <skill type="morale" min="1" max="3"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="piloting" max="1"/>
+      <skill type="management" max="1"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="fighter_xaar_random_rookie" group="paranid.pilot">
+    <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, rookie, recruitable]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="piloting" exact="3"/>
+      <skill type="morale" min="2" max="3"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" min="1" max="2"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <!-- Veteran -->
+  <character id="service_xaar_random_veteran" group="paranid.service">
+    <category tags="[crew, service, veteran, recruitable]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="engineering" min="6" max="9"/>
+      <skill type="morale" min="6" max="9"/>
+      <skill type="piloting" min="1" max="4"/>
+      <skill type="management" min="1" max="3"/>
+      <skill type="boarding" max="2"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="marine_xaar_random_veteran" group="paranid.marine">
+    <category tags="[crew, marine, veteran, recruitable]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="boarding" min="6" max="9"/>
+      <skill type="morale" min="6" max="9"/>
+      <skill type="engineering" max="2"/>
+      <skill type="piloting" min="1" max="4"/>
+      <skill type="management" min="1" max="3"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <!-- Elite -->
+  <character id="service_xaar_random_elite" group="paranid.service">
+    <category tags="[crew, service, elite]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="engineering" min="10" max="12"/>
+      <skill type="morale" min="10" max="12"/>
+      <skill type="piloting" min="3" max="5"/>
+      <skill type="management" min="2" max="4"/>
+      <skill type="boarding" min="1" max="3"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="marine_xaar_random_elite" group="paranid.marine">
+    <category tags="[crew, marine, elite]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="boarding" min="10" max="12"/>
+      <skill type="morale" min="10" max="12"/>
+      <skill type="engineering" min="1" max="3"/>
+      <skill type="piloting" min="2" max="5"/>
+      <skill type="management" min="2" max="4"/>
+    </skills>
+    <owner list="[xaar]"/>
+  </character>
+  <character id="platform_trader_xaar_random" group="paranid.trader">
+    <category tags="[trader, licencetrader]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="management" min="9" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="piloting" max="3"/>
+      <skill type="engineering" max="1"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+    <stock ref="'default_trader'" />
+  </character>
+  <character id="ship_trader_xaar_random" group="paranid.shiptrader">
+    <category tags="[trader, shiptrader]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="management" min="9" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="piloting" max="3"/>
+      <skill type="engineering" max="1"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>
+    <stock ref="'default_trader'" />
+  </character>
+  <character id="shadyguy_xaar_random" group="paranid.shadyguy">
+    <category tags="[shadyguy]" faction="[xaar, faction.player]" race="paranid" />
+    <skills>
+      <skill type="piloting" min="5" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" min="1" max="6"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]" />
+    <stock ref="'default_shadyguy'" />
+  </character>
+  <!-- Casually clothed platform NPCs -->
+  <character id="xaar_casual" group="paranid.civilian">
+    <category tags="[casual]" faction="[xaar, faction.player]" race="paranid"/>
+    <skills>
+      <skill type="morale" max="1"/>
+      <skill type="piloting" max="1"/>
+      <skill type="engineering" max="1"/>
+      <skill type="management" min="1" max="3"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[xaar]"/>	
+  </character>
+  <character id="xaar_civilian" group="paranid.trader">
+    <category faction="civilian" tags="[crew, officer, trader, commander, fighterpilot, manager, marine, masstraffic, watchdog, pilot, traderpilot]" race="paranid" comment="fullyqualified"/>
+    <skills>
+      <skill type="piloting" min="4" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" min="4" max="6"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner exact="civilian"/>
+  </character>
+  <character id="xaar_smuggler" group="paranid.trader">
+    <category faction="smuggler" tags="[crew, officer, trader, commander, fighterpilot, manager, marine, masstraffic, watchdog, pilot, traderpilot]" race="paranid" comment="fullyqualified"/>
+    <skills>
+      <skill type="piloting" min="5" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" min="1" max="6"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner exact="smuggler"/>
+  </character>
+  <character id="xaar_criminal" group="paranid.trader">
+    <category faction="criminal" tags="[crew, officer, trader, commander, fighterpilot, manager, marine, masstraffic, watchdog, pilot, traderpilot]" race="paranid" comment="fullyqualified"/>
+    <skills>
+      <skill type="piloting" min="4" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" min="2" max="6"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner exact="criminal"/>
+  </character>
+  <character id="xaar_ownerless" group="paranid.pilot">
+    <category faction="ownerless" tags="[crew, officer, trader, commander, fighterpilot, manager, marine, masstraffic, watchdog, pilot, traderpilot]" race="paranid" comment="fullyqualified"/>
+    <skills>
+      <skill type="piloting" min="4" max="12"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" min="2" max="6"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner exact="ownerless"/>
+  </character> 	
   </add>
 </diff>

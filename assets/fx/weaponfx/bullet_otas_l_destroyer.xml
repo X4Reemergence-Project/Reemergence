@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<components>
+	<component name="bullet_otas_l_destroyer" class="bullet">
+		<source geometry="extensions\reemergence\assets\fx\weaponfx\bullet_otas_l_destroyer_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<box name="XU BoxLight24" shadow="0" r="254" g="93" b="128" lighteffect="1" trigger="1" intensity="3" specularintensity="1">
+						<size x="400" y="200" z="200"/>
+						<lightanimations/>
+						<offset>
+							<position x="0" y="0" z="-77.97893"/>
+							<quaternion qx="-0" qy="0.7071068" qz="-0" qw="-0.7071067"/>
+						</offset>
+					</box>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="bullet">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part animation  ">
+				<offset>
+					<position x="0" y="1.700214E-02" z="-0.4778519"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="1" end="100"/>
+				</animations>
+				<parts>
+					<part name="part_bullet">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.bullets_fx_master_noscaling"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="76.03442" y="76.03442" z="252.0375"/>
+							<center x="-4.322052E-02" y="1.359174E-02" z="-249.45"/>
+						</size>
+						<size_raw>
+							<max x="75.41951" y="75.41951" z="252.0375"/>
+							<center x="3.059387E-02" y="-3.343585E-02" z="-249.45"/>
+						</size_raw>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="Connection02" tags="part iklink animation textureanimation  " parent="part_bullet">
+				<animations>
+					<animation name="loop" start="1" end="50"/>
+				</animations>
+				<parts>
+					<part name="part_shockwave">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.bullets_fx_master_multilayer_noscaling"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="30.42732" y="30.45144" z="106.2282"/>
+							<center x="5.901337E-03" y="-1.695663E-03" z="-103.684"/>
+						</size>
+						<size_raw>
+							<max x="30.03038" y="30.02271" z="209.9122"/>
+							<center x="2.110863E-02" y="2.878854E-02" z="-103.684"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="50" value="-2"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="50" value="4"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part nocollision  ">
+				<offset>
+					<position x="0" y="0" z="0.7850051"/>
+				</offset>
+				<parts>
+					<part name="fx_distortion">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_bullet_distortion_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="99.3425" y="99.3425" z="0.0385116"/>
+							<center x="0" y="0" z="-1.938105E-02"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part animation nocollision  ">
+				<offset>
+					<position x="0" y="0" z="2.131994"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="400"/>
+				</animations>
+				<parts>
+					<part name="part_bullet_trail">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.bullets_fx_master"/>
+									<material id="2" ref="effects.bullets_fx_master_complex"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.379146" y="2.379149" z="4571.511"/>
+							<center x="-1.430511E-06" y="-3.576279E-07" z="-4566.201"/>
+						</size>
+						<size_raw>
+							<max x="2.379147" y="2.379149" z="3.527807"/>
+							<center x="-1.430511E-06" y="-4.768372E-07" z="-3.52371"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part animation textureanimation ">
+				<offset>
+					<position x="0" y="0" z="2.131989"/>
+					<quaternion qx="1.966984E-08" qy="4.180953E-09" qz="-0.2079117" qw="-0.9781476"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="1" end="111"/>
+				</animations>
+				<parts>
+					<part name="anim_bullet_trail_detail">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.beam_fx_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="15.54505" y="15.54411" z="4476.497"/>
+							<center x="-2.326965E-04" y="-1.333237E-03" z="-4476.484"/>
+						</size>
+						<size_raw>
+							<max x="13.0156" y="12.79941" z="0.5000014"/>
+							<center x="2.329553" y="-1.495585" z="-0.5"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="u_tile" controller="linear_float">
+									<key frame="0" value="0.1"/>
+									<key frame="111" value="5"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_tile" controller="linear_float">
+									<key frame="0" value="0.1"/>
+									<key frame="111" value="5"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_tile" controller="linear_float">
+									<key frame="0" value="0.1"/>
+									<key frame="111" value="5"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection_Laser01" tags="laser">
+				<offset>
+					<position x="0" y="0" z="-84"/>
+				</offset>
+			</connection>
+		</connections>
+	</component>
+</components>

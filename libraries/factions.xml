@@ -20,7 +20,22 @@ UI value mapping (analogously for negative values):
 -->
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <replace sel="/factions/faction[@id='khaak']/@tags">claimspace aggressive noresupply notradeoffer privateloadout privateship</replace>  
+  <replace sel="/factions/faction[@id='yaki']/@tags">economic privateloadout privateship plunder</replace>    
 
+  <add sel="/factions/faction[@id='hatikvah']/relations">
+    <relation faction="holyorder" relation="-0.032" />
+    <relation faction="split" relation="-0.032" />	
+  </add>  
+  <add sel="/factions/faction[@id='holyorder']/relations">
+    <relation faction="hatikvah" relation="-0.032" />
+    <relation faction="teladi" relation="-0.0032" />	
+  </add>
+  <add sel="/factions/faction[@id='split']/relations">
+    <relation faction="hatikvah" relation="-0.032" />
+  </add>
+  <add sel="/factions/faction[@id='teladi']/relations">
+    <relation faction="holyorder" relation="-0.0032" />
+  </add>   
   
   
   <add sel="//factions">
@@ -751,37 +766,37 @@ UI value mapping (analogously for negative values):
   
   <!--Xaar-->
 	<!--Hostiles-->
-  <add sel="//factions/faction[@id='buccaneers']/relations"><relation faction="otas" relation="-0.032" /></add>  
-  <add sel="//factions/faction[@id='criminal']/relations"><relation faction="otas" relation="-0.5" /></add>  
-  <add sel="//factions/faction[@id='holyorderfanatic']/relations"><relation faction="otas" relation="-1" /></add> 
-  <add sel="//factions/faction[@id='khaak']/relations"><relation faction="otas" relation="-1" /></add> 
-  <add sel="//factions/faction[@id='scaleplate']/relations"><relation faction="otas" relation="-0.32" /></add>  
-  <add sel="//factions/faction[@id='smuggler']/relations"><relation faction="otas" relation="-0.06" /></add>   
-  <add sel="//factions/faction[@id='yaki']/relations"><relation faction="otas" relation="-0.32" /></add>  
-  <add sel="//factions/faction[@id='xenon']/relations"><relation faction="otas" relation="-1" /></add>  
+  <add sel="//factions/faction[@id='buccaneers']/relations"><relation faction="Xaar" relation="-0.032" /></add>  
+  <add sel="//factions/faction[@id='criminal']/relations"><relation faction="Xaar" relation="-0.5" /></add>  
+  <add sel="//factions/faction[@id='holyorderfanatic']/relations"><relation faction="Xaar" relation="-1" /></add> 
+  <add sel="//factions/faction[@id='khaak']/relations"><relation faction="Xaar" relation="-1" /></add> 
+  <add sel="//factions/faction[@id='scaleplate']/relations"><relation faction="Xaar" relation="-0.32" /></add>  
+  <add sel="//factions/faction[@id='smuggler']/relations"><relation faction="Xaar" relation="-0.06" /></add>   
+  <add sel="//factions/faction[@id='yaki']/relations"><relation faction="Xaar" relation="-0.32" /></add>  
+  <add sel="//factions/faction[@id='xenon']/relations"><relation faction="Xaar" relation="-1" /></add>  
 	<!--Base-->
-  <add sel="//factions/faction[@id='alliance']/relations"><relation faction="otas" relation="0.1" /></add> 
-  <add sel="//factions/faction[@id='antigone']/relations"><relation faction="otas" relation="-0.032" /></add>   
-  <add sel="//factions/faction[@id='argon']/relations"><relation faction="otas" relation="-0.032" /></add>
-  <add sel="//factions/faction[@id='hatikvah']/relations"><relation faction="otas" relation="-0.032" /></add> 
-  <add sel="//factions/faction[@id='holyorder']/relations"><relation faction="otas" relation="-0.1" /></add> 
-  <add sel="//factions/faction[@id='ministry']/relations"><relation faction="otas" relation="0.01" /></add> 
-  <add sel="//factions/faction[@id='paranid']/relations"><relation faction="otas" relation="-0.1" /></add>
-  <add sel="//factions/faction[@id='teladi']/relations"><relation faction="otas" relation="0.01" /></add>
-  <add sel="//factions/faction[@id='trinity']/relations"><relation faction="otas" relation="-0.1" /></add>  
+  <add sel="//factions/faction[@id='alliance']/relations"><relation faction="Xaar" relation="0.1" /></add> 
+  <add sel="//factions/faction[@id='antigone']/relations"><relation faction="Xaar" relation="-0.032" /></add>   
+  <add sel="//factions/faction[@id='argon']/relations"><relation faction="Xaar" relation="-0.032" /></add>
+  <add sel="//factions/faction[@id='hatikvah']/relations"><relation faction="Xaar" relation="-0.032" /></add> 
+  <add sel="//factions/faction[@id='holyorder']/relations"><relation faction="Xaar" relation="-0.1" /></add> 
+  <add sel="//factions/faction[@id='ministry']/relations"><relation faction="Xaar" relation="0.01" /></add> 
+  <add sel="//factions/faction[@id='paranid']/relations"><relation faction="Xaar" relation="-0.1" /></add>
+  <add sel="//factions/faction[@id='teladi']/relations"><relation faction="Xaar" relation="0.01" /></add>
+  <add sel="//factions/faction[@id='trinity']/relations"><relation faction="Xaar" relation="-0.1" /></add>  
 	<!--Split-->
-  <add sel="//factions/faction[@id='court']/relations"><relation faction="otas" relation="0.01" /></add> 	
-  <add sel="//factions/faction[@id='fallensplit']/relations"><relation faction="otas" relation="-0.032" /></add>
-  <add sel="//factions/faction[@id='freesplit']/relations"><relation faction="otas" relation="0.01" /></add>  
-  <add sel="//factions/faction[@id='split']/relations"><relation faction="otas" relation="0.1" /></add>    
+  <add sel="//factions/faction[@id='court']/relations"><relation faction="Xaar" relation="0.01" /></add> 	
+  <add sel="//factions/faction[@id='fallensplit']/relations"><relation faction="Xaar" relation="-0.032" /></add>
+  <add sel="//factions/faction[@id='freesplit']/relations"><relation faction="Xaar" relation="0.01" /></add>  
+  <add sel="//factions/faction[@id='split']/relations"><relation faction="Xaar" relation="0.1" /></add>    
 	<!--Terran-->
-  <add sel="//factions/faction[@id='pioneers']/relations"><relation faction="otas" relation="-0.032" /></add> 	
-  <add sel="//factions/faction[@id='terran']/relations"><relation faction="otas" relation="-0.1" /></add>  	
+  <add sel="//factions/faction[@id='pioneers']/relations"><relation faction="Xaar" relation="-0.032" /></add> 	
+  <add sel="//factions/faction[@id='terran']/relations"><relation faction="Xaar" relation="-0.1" /></add>  	
 	<!--Pirate-->
-  <add sel="//factions/faction[@id='loanshark']/relations"><relation faction="otas" relation="-0.032" /></add>
-  <add sel="//factions/faction[@id='scavenger']/relations"><relation faction="otas" relation="-0.032" /></add>  
+  <add sel="//factions/faction[@id='loanshark']/relations"><relation faction="Xaar" relation="-0.032" /></add>
+  <add sel="//factions/faction[@id='scavenger']/relations"><relation faction="Xaar" relation="-0.032" /></add>  
 	<!--Boron-->	
-  <add sel="//factions/faction[@id='boron']/relations"><relation faction="otas" relation="-0.1" /></add>  
+  <add sel="//factions/faction[@id='boron']/relations"><relation faction="Xaar" relation="-0.1" /></add>  
 
   
   <!--Faction Licences-->

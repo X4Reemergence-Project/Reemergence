@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<races xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="races.xsd">
+<diff>
+<add sel="/races">
   <race id="otas" name="{19530002,100}" description="{19530002,102}" shortname="{19530002,100}" names="20301" tags="workforce">
     <character height="1.86">
       <speed slowwalk="0.88" walk="1.91" run="4.1" acceleration="4" />
       <eventmonitor adjusty="0.1" adjustz="-0.25" facecutscenekey="ShowNPCFaceArgon" />
+      <spacesuit ref="ship_arg_xs_spacesuit_01_a_macro" />	  
     </character>
     <icon active="race_otas" inactive="race_otas" />
     <trail brightness="1" contrast="1" saturation="0.1" hue="130" />
   </race>
-</races>
+  
+  <race id="yaki" name="{20203,2801}" description="{20203,2802}" shortname="{20203,2803}" spacename="{20203,2805}" homespacename="{20203,2806}" names="20301" tags="workforce">
+    <character height="1.78">
+      <speed slowwalk="0.8" walk="1.15" run="2.6" acceleration="4" />
+      <eventmonitor adjusty="0.1" adjustz="-0.25" facecutscenekey="ShowNPCFaceArgon" />
+      <spacesuit ref="ship_arg_xs_spacesuit_01_a_macro" />
+    </character>
+    <icon active="race_yaki" inactive="race_yaki" />
+    <relations>
+      <relation race="argon" relation="1" />
+      <relation race="terran" relation="-1" />
+    </relations>
+    <trail brightness="1" contrast="1" saturation="0.6" hue="140" />
+  </race>  
+
+  <race id="scaleplate" name="{20203,1001}" description="{20203,1002}" shortname="{20203,1003}" spacename="{20203,1005}" homespacename="{20203,1006}" names="20303" tags="workforce">
+    <character height="1.55">
+      <speed slowwalk="0.65" walk="1.65" run="4" acceleration="4" />
+      <eventmonitor adjusty="-0.1" adjustz="0.07" facecutscenekey="ShowNPCFaceTeladi" />
+      <spacesuit ref="ship_tel_xs_spacesuit_01_a_macro" />
+    </character>
+    <icon active="race_scaleplate" inactive="race_scaleplate" />
+    <trail brightness="1" contrast="1" saturation="0.2" hue="225" />
+  </race>
+  
+</add>
+</diff>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: Lino (192.168.3.143) at 05.12.2019_14-44-16-->
+<macros>
+  <macro name="bullet_yak_turret_m_burstray_macro" class="bullet">
+    <component ref="bullet_gen_s_burst_01_mk1" />
+    <properties>
+      <ammunition value="3" reload="3" />  
+      <bullet speed="90000" lifetime="0.3" range="4500" amount="1" barrelamount="2" icon="weapon_burst_mk1" maxhits="1" ricochet="0" scale="1" attach="1" />
+      <reload rate ="3" />
+      <damage value="150" hull="60" noshield="40" repair="0">
+        <multiplier surfaceelement="1.5" />
+      </damage>
+      <effects>
+        <impact ref="impact_gen_s_burst_01_mk1" />
+        <launch ref="muzzle_gen_s_burst_01_mk1" />
+      </effects>
+      <weapon system="turret_shortrange" />
+    </properties>
+  </macro>
+</macros>

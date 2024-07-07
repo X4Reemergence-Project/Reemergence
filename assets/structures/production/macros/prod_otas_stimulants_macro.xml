@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_otas_stimulants_macro" class="production">
+    <component ref="prod_otas_stimulants" />
+    <properties>
+      <identification name="{19530002,402}" shortname="{20104,15803}" makerrace="otas" description="{20104,15802}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+          <set ref="piratebase" />		  
+        </sets>
+      </build>
+      <explosiondamage value="2000" shield="10000" />
+      <hull max="300000" />
+      <production wares="stimulants">
+        <queue ware="stimulants" />
+      </production>
+      <workforce max="300" />
+    </properties>
+  </macro>
+</macros>

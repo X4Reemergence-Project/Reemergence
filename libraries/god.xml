@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--NOTE: There is a weird interaction with DA's Mods, which causes module errors to generate that have no imapct on the game. This is still be investigated. 06/26/24-->
 <diff>
-<!--Base Sectors--> 
+<!--Base Sectors-->
+  <remove sel="/god/stations/station[@id='tel_defence_cluster_03_sector001'][@type='factory']"/>		 
   <replace sel="/god/stations/station[@id='arg_defence_cluster_07_sector001'][@type='factory']/location[@macro='zone003_cluster_07_sector001_macro']/@macro">Zone_Gate1_Cluster_07_Sector001_macro</replace>
-  <replace sel="/god/stations/station[@id='shipyard_argon_01'][@type='factory']/location[@macro='zone002_cluster_14_sector001_macro']/@macro">Zone_Gate1_Cluster_14_Sector001_macro</replace>  
+  <replace sel="/god/stations/station[@id='shipyard_argon_01'][@type='factory']/location[@macro='zone002_cluster_14_sector001_macro']/@macro">Zone_Gate1_Cluster_14_Sector001_macro</replace>
+  <replace sel="/god/stations/station[@id='ringstation_02'][@type='tradingstation']/location[@macro='zone002_cluster_15_sector001_macro']/@macro">zone003_Cluster_15_Sector001_macro</replace>     
   <replace sel="/god/stations/station[@id='tel_defence_cluster_20_sector001'][@type='factory']/location[@macro='zone003_cluster_20_sector001_macro']/@macro">zone004_cluster_20_sector001_macro</replace> 
   <remove sel="/god/stations/station[@id='par_defence_cluster_23_sector001'][@type='factory']"/>	  
   <replace sel="/god/stations/station[@id='equipmentdock_argon_02'][@type='factory']/location[@macro='zone002_cluster_29_sector002_macro']/@macro">zone001_cluster_29_sector001_macro</replace>   
@@ -286,7 +287,18 @@
 	  <station>
 		<select faction="holyorder" tags="[defence]" />
 	  </station>
-	 </station>	
+	 </station>
+<!--Argon Prime (Cluster 14)-->	
+	<station id="arg_defence_cluster_14_sector001" race="argon" owner="argon" type="factory">
+	  <quotas>
+        <quota galaxy="1" />
+	  </quotas>
+	  <location class="zone" macro="zone002_cluster_14_sector001_macro" matchextension="false"/> 
+      <position x="0" y="0" z="-17500" yaw="0" pitch="0" roll="0" />	  	  
+	  <station>
+		<select faction="argon" tags="[defence]" />
+	  </station>
+	 </station>		 
 <!--Pious Mists II (Cluster 22)-->	
 	<station id="par_extra_defence_cluster_22_sector001" race="paranid" owner="paranid" type="factory">
 	  <quotas>
@@ -326,7 +338,33 @@
 	  <station>
 		<select faction="paranid" tags="[defence]" />
 	  </station>
-	 </station>	 	 
+	 </station>
+<!--Memory of Profit X (Cluster 39)-->
+	 <station id="sca_piratebase_cluster_39_sector001" race="teladi" owner="scaleplate" type="piratebase">
+	  <quotas>
+		<quota galaxy="1" />
+	  </quotas>
+	  <location class="sector" macro="cluster_39_sector001_macro" matchextension="false">	  
+		<corerange min="1.2" max="1.4"/>
+	  </location>
+	  <station>
+		<select faction="scaleplate" tags="[piratebase]" />
+	  </station>
+	</station>	
+<!--Hewa's Twin IV (Cluster 42)-->
+	<station id="sca_defence_cluster_42_sector002" race="teladi" owner="scaleplate" type="factory">
+	  <quotas>
+		<quota galaxy="1" />
+	  </quotas>
+	  <location class="sector" macro="cluster_42_sector002_macro" matchextension="false"/>	  
+	  <position  x="-95500" y="0" z="-17500" yaw="0" roll="0" pitch="0"/>		  
+	  <station>
+		<select faction="teladi" tags="[defence]" />
+        <loadout>
+          <level exact="1.0" />
+        </loadout>		
+	  </station>
+	</station>		
 <!--Trinity Sanctum VII (Cluster 47)-->	
 	<station id="par_extra_defence_cluster_47_sector001" race="paranid" owner="paranid" type="factory">
 	  <quotas>
@@ -360,6 +398,70 @@
       <position x="0" y="0" z="-27500" yaw="0" pitch="0" roll="0" />	  
 	  <station>
 		<select faction="split" tags="[defence]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>	  
+	</station>
+<!--Wretches Skies X (Cluster 422)-->
+	<station id="xaar_defence_cluster_422_sector001" race="paranid" owner="xaar" type="factory">
+	  <quotas>
+		<quota galaxy="1" zone="1" />
+	  </quotas>
+	  <location class="zone" macro="zone001_cluster_422_sector001_macro" matchextension="false"/>  	  
+	  <station>
+		<select faction="paranid" tags="[defence]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>	  
+	</station>	
+	<station id="xaar_equipmentdock_cluster_422_sector001" race="paranid" owner="xaar" type="factory">
+	  <quotas>
+		<quota galaxy="1" zone="1" />
+	  </quotas>
+	  <location class="sector" macro="cluster_422_sector001_macro" matchextension="false"/>
+	  <position x="18470" y="0" z="-15780" yaw="0" pitch="0" roll="0" />
+	  <station>
+		<select faction="paranid" tags="[equipmentdock]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>	  
+	</station>		
+<!--Litany of Fury (Cluster 423)-->
+	<station id="xaar_defence_cluster_423_sector001" race="paranid" owner="xaar" type="factory">
+	  <quotas>
+		<quota galaxy="1" zone="1" />
+	  </quotas>
+	  <location class="zone" macro="zone001_cluster_423_sector001_macro" matchextension="false"/>  	  
+	  <station>
+		<select faction="paranid" tags="[defence]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>	  
+	</station>
+    <station id="xaar_tradestation_cluster_423_sector001" race="paranid" owner="xaar" type="tradingstation">
+	  <quotas>
+		<quota galaxy="1" />
+	  </quotas>
+	  <location class="sector" macro="cluster_423_sector001_macro" matchextension="false"/>  
+      <position x="37500" y="0" z="-62500" yaw="0" pitch="0" roll="0" />	  
+	  <station>
+		<select faction="paranid" tags="[tradestation]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>
+	</station>
+	<station id="xaar_defence_cluster_423_sector002" race="paranid" owner="xaar" type="factory">
+	  <quotas>
+		<quota galaxy="2" zone="2" />
+	  </quotas>
+	  <location class="zone" macro="Zone_Gate1_Cluster_423_Sector002_macro" matchextension="false"/>  	  
+	  <station>
+		<select faction="paranid" tags="[defence]" />
 		<loadout>
 		  <level exact="1.0" />
 		</loadout>
@@ -1120,7 +1222,7 @@
 	</station>
 <!--REM30 Xaar's Belt Cluster-->
 <!--REM31 The Shallows-->
-	<station id="str_defence_cluster_REM31_001" race="split" owner="split" type="factory">
+	<station id="str_defence_cluster_REM31_001" race="split" owner="strongarms" type="factory">
 	  <quotas>
 		<quota galaxy="2" zone="2" />
 	  </quotas>
@@ -1130,7 +1232,7 @@
 		<loadout useplanloadout="true"/>
 	  </station>
 	</station>	
-	<station id="str_tradestation_cluster_REM31_001" race="split" owner="split" type="tradingstation">
+	<station id="str_tradestation_cluster_REM31_001" race="split" owner="strongarms" type="tradingstation">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
 	  </quotas>
@@ -1143,7 +1245,7 @@
 	  </station>
 	</station>	
 <!--REM32 Family Than Cluster-->
-	<station id="str_shipyard_cluster_REM32_001" race="split" owner="split" type="factory">
+	<station id="str_shipyard_cluster_REM32_001" race="split" owner="strongarms" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
 	  </quotas>
@@ -1156,7 +1258,7 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="str_wharf_cluster_REM32_001" race="split" owner="split" type="factory">
+	<station id="str_wharf_cluster_REM32_001" race="split" owner="strongarms" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
 	  </quotas>
@@ -1169,7 +1271,7 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="str_defence_cluster_REM32_002" race="split" owner="split" type="factory">
+	<station id="str_defence_cluster_REM32_002" race="split" owner="strongarms" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="2" />
 	  </quotas>
@@ -1182,7 +1284,7 @@
 	</station>	
 <!--REM33 Thyn's Abyss-->
 <!--REM34 Thyn's Excavation-->
-	<station id="str_hq_cluster_REM34" race="split" owner="split" type="tradingstation">
+	<station id="str_hq_cluster_REM34" race="split" owner="strongarms" type="tradingstation">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
@@ -1194,7 +1296,7 @@
 	  </station>
 	</station>	
 <!--REM35 Blue Horizon Cluster-->
-	<station id="bor_defence_cluster_REM35_001" race="boron" owner="boron" type="factory">
+	<station id="asc_defence_cluster_REM35_001" race="boron" owner="atreus" type="factory">
 	  <quotas>
 		<quota galaxy="1" sector="1" />
 	  </quotas>
@@ -1207,14 +1309,14 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="bor_trade_REM35_001" race="boron" owner="boron" type="tradingstation">
+	<station id="asc_trade_REM35_001" race="boron" owner="atreus" type="tradingstation">
 	  <quotas>
 		<quota galaxy="1" sector="1" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM35_sector002_macro" />
 	  <position  x="-45000" y="0" z="50500" yaw="0" roll="0" pitch="0"/>
 	  <station>
-		<select faction="boron" tags="[tradestation]" />
+		<select faction="atreus" tags="[tradestation_quay]" />
 		<loadout>
 		  <level exact="0.75" />
 		</loadout>
@@ -1222,20 +1324,20 @@
 	</station>	
 <!--REM36 Great Trench-->
 <!--REM37 Queen's Harbour-->
-	<station id="atr_hq_cluster_REM37" race="boron" owner="boron" type="tradingstation">
+	<station id="asc_hq_cluster_REM37" race="boron" owner="atreus" type="tradingstation">
 	  <quotas>
 		<quota galaxy="1" sector="1" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM37_sector001_macro" />
 	  <position  x="-49500" y="0" z="58300" yaw="0" roll="0" pitch="0"/>
 	  <station>
-		<select faction="boron" tags="[tradestation]" />
+		<select faction="atreus" tags="[tradestation_mooring]" />
 		<loadout>
 		  <level exact="1.0" />
 		</loadout>
 	  </station>
 	</station>
-	<station id="bor_shipyard_cluster_REM37_001" race="boron" owner="boron" type="factory">
+	<station id="asc_shipyard_cluster_REM37_001" race="boron" owner="atreus" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
 	  </quotas>
@@ -1248,7 +1350,7 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="bor_wharf_cluster_REM37_001" race="boron" owner="boron" type="factory">
+	<station id="asc_wharf_cluster_REM37_001" race="boron" owner="atreus" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
 	  </quotas>
@@ -1262,7 +1364,7 @@
 	  </station>
 	</station>
 <!--REM38 Queen's Retribution-->
-	<station id="bor_defence_cluster_REM38_001" race="boron" owner="boron" type="factory">
+	<station id="asc_defence_cluster_REM38_001" race="boron" owner="atreus" type="factory">
 	  <quotas>
 		<quota galaxy="1" sector="1" />
 	  </quotas>
@@ -1323,9 +1425,9 @@
 <!--REM42 Bala Gi's Joy-->
 <!--REM43 Blue Profit-->
 <!--REM44 Matrix #483-->
-	<station id="xen_defence1_cluster_REM44_sector001" race="xenon" owner="xenon" type="defence">
+	<station id="xen_defence_cluster_REM44_sector001" race="xenon" owner="xenon" type="defence">
 	  <quotas>
-		<quota galaxy="3" zone="2" />
+		<quota galaxy="3" zone="1" />
 	  </quotas>
 	  <location class="cluster" macro="cluster_REM44_sector001_macro" />
 	  <position yaw="0" pitch="0" roll="0" />		  	  
@@ -1369,64 +1471,133 @@
 <!--REM46 Recovered Capital-->
 	<station id="tel_defence_cluster_REM46_sector001" race="teladi" owner="teladi" type="factory">
 	  <quotas>
-		<quota galaxy="2" />
+		<quota galaxy="2" zone="1" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM46_sector001_macro" />
 	  <station>
 		<select faction="teladi" tags="[defence]" />
 	  </station>
 	</station>
-	<station id="ringstation_REM46" race="teladi" owner="teladi" type="tradingstation">
-	  <quotas>
-		<quota galaxy="1" />
-	  </quotas>
-	  <location class="zone" macro="zone001_cluster_REM46_sector001_macro" />
-	  <position x="18470" y="-25" z="-15780" yaw="0" pitch="0" roll="0" />
-	  <station ref="tradestation_tel_ring">
-		<loadout>
-		  <level exact="0.75"/>
-		</loadout>
-	  </station>
-	</station>			
+    <station id="tel_processing_REM46" race="teladi" owner="teladi" type="factory">
+      <quotas>
+        <quota galaxy="1" sector="1"/>
+      </quotas>
+      <location class="sector" macro="cluster_REM46_sector001_macro" solitary="true"/>
+	  <position x="-48470" y="0" z="-15780" yaw="-40" pitch="0" roll="0" />
+      <station constructionplan="tel_scrap_processor">
+        <loadout>
+          <level exact="1.0" />
+        </loadout>
+      </station>
+    </station>			
 <!--REM47 Spaceweed Grove-->
 <!--REM48 Wretched Skies Cluster-->
-<!--REM49 Duke's Vision I-->
+	<station id="xaar_defence_cluster_REM48_sector001" race="paranid" owner="xaar" type="factory">
+	  <quotas>
+		<quota galaxy="1" zone="1" />
+	  </quotas>
+	  <location class="sector" macro="cluster_REM48_sector001_macro" />  	  
+	  <station>
+		<select faction="paranid" tags="[defence]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>	  
+	</station>
+	<station id="xaar_defence_cluster_REM48_sector002" race="paranid" owner="xaar" type="factory">
+	  <quotas>
+		<quota galaxy="2" zone="1" />
+	  </quotas>
+	  <location class="sector" macro="cluster_REM48_sector002_macro" />  	  
+	  <station>
+		<select faction="paranid" tags="[defence]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>	  
+	</station>	
+<!--REM49 Duke's Vision -->
 	<station id="xaar_defence_cluster_REM49_sector001" race="paranid" owner="xaar" type="factory">
 	  <quotas>
 		<quota galaxy="2" zone="1" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM49_sector001_macro" />
 	  <station>
-		<select faction="holyorder" tags="[defence]" />
-	  </station>
+		<select faction="paranid" tags="[defence]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>	
 	</station>
-<!--REM50 Duke's Vision II-->
+<!--REM50 Emperor's Wisdom-->
 	<station id="xaar_defence_cluster_REM50_sector001" race="paranid" owner="xaar" type="factory">
 	  <quotas>
 		<quota galaxy="2" zone="1" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM50_sector001_macro" />
 	  <station>
-		<select faction="holyorder" tags="[defence]" />
-	  </station>
+		<select faction="paranid" tags="[defence]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>	
 	</station>
+	<station id="xaar_shipyard_cluster_REM50_sector001" race="paranid" owner="xaar" type="factory">
+	  <quotas>
+		<quota galaxy="1" zone="1" />
+	  </quotas>
+	  <location class="zone" macro="zoneSP_cluster_REM50_sector001_macro" />
+	  <position x="-75000" y="0" z="-7500" yaw="0" pitch="0" roll="0"/>
+	  <station>
+		<select faction="paranid" tags="[shipyard]" />
+		<loadout>
+		  <level exact="1.0" />
+		</loadout>
+	  </station>
+	</station>		
 	<station id="xaar_wharf_cluster_REM50_sector001" race="paranid" owner="xaar" type="factory">
 	  <quotas>
 		<quota galaxy="1" zone="1" />
 	  </quotas>
 	  <location class="zone" macro="zoneWF_cluster_REM50_sector001_macro" />
-	  <position x="54300" z="-81500" yaw="0" pitch="0" roll="0"/>
+	  <position x="54300" y="0" z="-81500" yaw="0" pitch="0" roll="0"/>
 	  <station>
-		<select faction="holyorder" tags="[wharf]" />
+		<select faction="paranid" tags="[wharf]" />
 		<loadout>
 		  <level exact="1.0" />
 		</loadout>
 	  </station>
 	</station>	
 <!--REM51 Fierce Clarity-->
-<!--REM52 Danna's Chance-->	
+<!--REM52 Danna's Chance-->
+	 <station id="sca_piratedock_cluster_REM52_sector001" race="teladi" owner="scaleplate" type="piratebase">
+	  <quotas>
+		<quota galaxy="1" sector="1" />
+	  </quotas>
+	  <location class="sector" macro="cluster_REM52_sector001_macro" />	  
+	  <position  x="-41500" y="0" z="78000" yaw="0" roll="0" pitch="0"/>
+	  <station>
+		<select faction="scaleplate" tags="[piratedock]" />
+        <loadout>
+          <level exact="1.0" />
+        </loadout>		
+	  </station>
+	</station>		
+	<station id="sca_defence_cluster_REM52_sector001" race="teladi" owner="scaleplate" type="factory">
+	  <quotas>
+		<quota galaxy="1" />
+	  </quotas>
+	  <location class="sector" macro="cluster_REM52_sector001_macro" />	  
+	  <position  x="55500" y="0" z="-97500" yaw="0" roll="0" pitch="0"/>		  
+	  <station>
+		<select faction="teladi" tags="[defence]" />
+        <loadout>
+          <level exact="1.0" />
+        </loadout>		
+	  </station>
+	</station>	
 <!--REM53 Legend's Home-->
-	<station id="otas_defenceG1_cluster_REM53_sector001" race="argon" owner="argon" type="factory">
+	<station id="otas_defenceG1_cluster_REM53_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
@@ -1436,7 +1607,7 @@
 		<select faction="argon" tags="[defence]"/>
 	  </station>
 	</station>
-	<station id="otas_defence001_cluster_REM53_sector001" race="argon" owner="argon" type="factory">
+	<station id="otas_defence001_cluster_REM53_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
@@ -1445,7 +1616,7 @@
 		<select faction="argon" tags="[defence]"/>
 	  </station>
 	</station>		
-	<station id="shipyard_otas_cluster_REM53" race="argon" owner="argon" type="factory">
+	<station id="shipyard_otas_cluster_REM53" race="argon" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
@@ -1457,7 +1628,7 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="wharf_otas_cluster_REM53" race="argon" owner="argon" type="factory">
+	<station id="wharf_otas_cluster_REM53" race="argon" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
@@ -1482,7 +1653,7 @@
 	  </station>
 	</station>		
 <!--REM55 Akeela's Beacon-->	
-	<station id="otas_defence_cluster_REM55_sector001" race="argon" owner="argon" type="factory">
+	<station id="otas_defence_cluster_REM55_sector001" race="argon" owner="otas" type="factory">
 	  <quotas>
 		<quota galaxy="2" zone="1" />
 	  </quotas>
@@ -1491,7 +1662,7 @@
 		<select faction="argon" tags="[defence]"/>
 	  </station>
 	</station>
-	<station id="otas_trade_REM55" race="argon" owner="argon" type="tradingstation">
+	<station id="otas_trade_REM55" race="argon" owner="otas" type="tradingstation">
 	  <quotas>
 		<quota galaxy="1" />
 	  </quotas>
@@ -1504,7 +1675,7 @@
 	  </station>
 	</station>	
 <!--REM56 Aladna Hill-->	
-	<station id="arg_defence_cluster_56_sector001" race="argon" owner="argon" type="factory">
+	<station id="arg_defence_cluster_REM56_sector001" race="argon" owner="argon" type="factory">
 	  <quotas>
 		<quota galaxy="2" />
 	  </quotas>
@@ -1514,7 +1685,7 @@
 	  </station>
 	 </station>	
 <!--REM57 Light of Heart-->	
-	<station id="arg_defence_cluster_57_sector001" race="argon" owner="argon" type="factory">
+	<station id="arg_defence_cluster_REM57_sector001" race="argon" owner="argon" type="factory">
 	  <quotas>
 		<quota galaxy="2" />
 	  </quotas>
@@ -2333,7 +2504,6 @@
 <!--REM73 Shadow's End-->	
 <!--REM74 Tebathimanckatt's Legacy-->
 <!--REM75 Titania-->
-	<!--
 	<station id="atf_hq_cluster_REM75_sector001" race="terran" owner="atf" type="tradingstation">
 	  <quotas>
 		<quota galaxy="1" sector="1" zone="1" />
@@ -2346,7 +2516,7 @@
 		</loadout>
 	  </station>
 	</station>
-	<station id="atf_hq_REM75_sector001" race="terran" owner="terran" type="factory">
+	<station id="atf_hq_REM75_sector001" race="terran" owner="atf" type="factory">
 	  <quotas>
 		<quota galaxy="1" sector="1" zone="1" />
 	  </quotas>
@@ -2358,10 +2528,9 @@
 		</loadout>
 	  </station>
 	</station>
-	-->
 <!--REM76 Untainted Eternity-->	
 <!--REM77 Belt of Aguilar-->	
-	<station id="jsdd_hq_REM77_sector001" race="argon" owner="argon" type="tradingstation">
+	<station id="jsdd_hq_REM77_sector001" race="argon" owner="jonferco" type="tradingstation">
 	  <quotas>
         <quota galaxy="1" zone="1" />
 	  </quotas>
@@ -2441,11 +2610,362 @@
 <!--REMXX Test-->			
   </add>
 	
-  <add sel="/god/products">
+  <add sel="/god/products">	
+<!--ARGON-->
+    <product id="arg_energycells_re" ware="energycells" owner="argon" type="factory">
+      <quotas>
+        <quota galaxy="3" sector="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="argon" relation="exact" matchextension="true">
+        <sunlight min="1.0" />
+      </location>
+      <module>
+        <select ware="energycells" race="argon"/>
+      </module>
+    </product>
+    <product id="arg_foodrations_re" ware="foodrations" owner="argon" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="argon" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="foodrations" race="argon"/>
+      </module>
+    </product>
+    <product id="arg_graphene_re" ware="graphene" owner="argon" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="argon" relation="exact" matchextension="true">
+        <region ware="methane" max="5000" />
+      </location>
+      <module>
+        <select ware="graphene" race="argon"/>
+      </module>
+    </product>	
+    <product id="arg_meat_re" ware="meat" owner="argon" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="argon" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="meat" race="argon"/>
+      </module>
+    </product>
+    <product id="arg_medicalsupplies_re" ware="medicalsupplies" owner="argon" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="argon" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="medicalsupplies" race="argon"/>
+      </module>
+    </product>
+    <product id="arg_spices_re" ware="spices" owner="argon" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="argon" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="spices" race="argon"/>
+      </module>
+    </product>
+    <product id="arg_refinedmetals_re" ware="refinedmetals" owner="argon" type="factory">
+      <quotas>
+        <quota galaxy="3" sector="2"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="argon" relation="exact" matchextension="true">
+        <region ware="ore" />
+      </location>
+      <module>
+        <select ware="refinedmetals" race="argon"/>
+      </module>
+    </product>	
+    <product id="arg_wheat_re" ware="wheat" owner="argon" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="argon" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="wheat" race="argon"/>
+      </module>
+    </product>
+
+  
+<!--ATREUS-->
+    <product id="asc_advancedcomposites" ware="advancedcomposites" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="advancedcomposites" race="boron" faction="boron"/>
+      </module>
+    </product>
+    <product id="asc_advancedelectronics" ware="advancedelectronics" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="advancedelectronics" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_antimattercells" ware="antimattercells" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true">
+        <region ware="hydrogen" max="5000" />
+      </location>
+      <module>
+        <select ware="antimattercells" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_antimatterconverters" ware="antimatterconverters" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="antimatterconverters" race="boron"/>
+      </module>
+    </product>	
+    <product id="asc_claytronics" ware="claytronics" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="claytronics" race="boron" />
+      </module>
+    </product>
+    <product id="asc_dronecomponents" ware="dronecomponents" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="dronecomponents" race="boron"/>
+      </module>
+    </product>	
+    <product id="asc_energycells" ware="energycells" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="3" sector="6"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true">
+        <sunlight min="1" />
+      </location>
+      <module>
+        <select ware="energycells" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_engineparts" ware="engineparts" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="engineparts" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_fieldcoils" ware="fieldcoils" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="fieldcoils" race="boron"/>
+      </module>
+    </product>	
+    <product id="asc_bofu" ware="bofu" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="bofu" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_graphene" ware="graphene" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true">
+        <region ware="methane" max="5000" />
+      </location>
+      <module>
+        <select ware="graphene" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_hullparts" ware="hullparts" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="4" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="hullparts" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_bogas" ware="bogas" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="2"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="bogas" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_medicalsupplies" ware="medicalsupplies" owner="atreus" type="factory">
+      <quotas>
+         <quota galaxy="2"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="medicalsupplies" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_microchips" ware="microchips" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="microchips" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_missilecomponents" ware="missilecomponents" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="missilecomponents" race="boron"/>
+      </module>
+    </product>	
+    <product id="asc_plasmaconductors" ware="plasmaconductors" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="plasmaconductors" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_quantumtubes" ware="quantumtubes" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="quantumtubes" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_refinedmetals" ware="refinedmetals" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true">
+        <region ware="ore" max="5000" />
+      </location>
+      <module>
+        <select ware="refinedmetals" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_scanningarrays" ware="scanningarrays" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="scanningarrays" race="boron"/>
+      </module>
+    </product>	
+    <product id="asc_shieldcomponents" ware="shieldcomponents" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="shieldcomponents" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_siliconwafers" ware="siliconwafers" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true">
+        <region ware="silicon" max="5000"/>
+      </location>
+      <module>
+        <select ware="siliconwafers" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_smartchips" ware="smartchips" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="smartchips" race="boron"/>
+      </module>
+    </product>	
+    <product id="asc_superfluidcoolant" ware="superfluidcoolant" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true">
+        <region ware="helium" max="5000" />
+      </location>
+      <module>
+        <select ware="superfluidcoolant" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_turretcomponents" ware="turretcomponents" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="turretcomponents" race="boron"/>
+      </module>
+    </product>	
+    <product id="asc_water" ware="water" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true">
+        <region ware="ice" max="5000" />
+      </location>
+      <module>
+        <select ware="water" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_weaponcomponents" ware="weaponcomponents" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="weaponcomponents" race="boron"/>
+      </module>
+    </product>
+    <product id="asc_plankton" ware="plankton" owner="atreus" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="atreus" relation="exact" matchextension="true"/>
+      <module>
+        <select ware="plankton" race="boron"/>
+      </module>
+    </product>
+
+	
+<!--HATIKVAH-->  
 <!--Hatikvah's Choice (Cluster 29)-->
     <product id="hat_energycells_re" ware="energycells" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="2" />
+        <quota galaxy="4" />
       </quotas>
       <location class="sector" macro="cluster_29_sector002_macro" faction="[argon, hatikvah]" solitary="true" matchextension="false">
 		<corerange min="0.1" max="0.6" />
@@ -2456,7 +2976,7 @@
     </product>
     <product id="hat_foodrations_re" ware="foodrations" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="2" />
+        <quota galaxy="4" />
       </quotas>
       <location class="sector" macro="cluster_29_sector002_macro" faction="[argon, hatikvah]" solitary="true" matchextension="false">
 		<corerange min="0.1" max="0.6" />
@@ -2467,7 +2987,7 @@
     </product>
     <product id="hat_meat_re" ware="meat" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="2" />
+        <quota galaxy="4" />
       </quotas>
       <location class="sector" macro="cluster_29_sector001_macro" faction="[argon, hatikvah]" solitary="true" matchextension="false">
 		<corerange min="0.1" max="0.6" />
@@ -2478,7 +2998,7 @@
     </product>
     <product id="hat_medicalsupplies_re" ware="medicalsupplies" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="2" />
+        <quota galaxy="4" />
       </quotas>
       <location class="sector" macro="cluster_29_sector002_macro" faction="[argon, hatikvah]" solitary="true" matchextension="false">
 		<corerange min="0.1" max="0.6" />
@@ -2489,7 +3009,7 @@
     </product>
     <product id="hat_wheat_re" ware="wheat" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="2" />
+        <quota galaxy="4" />
       </quotas>
       <location class="sector" macro="cluster_29_sector001_macro" faction="[argon, hatikvah]" solitary="true" matchextension="false">
 		<corerange min="0.1" max="0.6" />
@@ -2501,7 +3021,7 @@
 <!--Second Contact VII (Cluster 40)-->
     <product id="hat_spices_antigone_re" ware="spices" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="2"/>
+        <quota galaxy="4"/>
       </quotas>
       <location class="sector" macro="cluster_40_sector001_macro" faction="[antigone]" solitary="true" matchextension="false"/>	  
       <module>
@@ -2510,7 +3030,7 @@
     </product>
     <product id="hat_wheat_antigone_re" ware="wheat" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="2"/>
+        <quota galaxy="4"/>
       </quotas>
       <location class="sector" macro="cluster_40_sector001_macro" faction="[antigone]" solitary="true" matchextension="false"/>		
       <module>
@@ -2519,7 +3039,7 @@
     </product>
     <product id="hat_medicalsupplies_antigone_re" ware="medicalsupplies" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="3" />
+        <quota galaxy="4" />
       </quotas>
       <location class="sector" macro="cluster_40_sector001_macro" faction="[antigone]" solitary="true" matchextension="false"/>		
       <module>
@@ -2529,7 +3049,7 @@
 <!--Second Contact XI (Cluster 41)-->
     <product id="hat_meat_antigone_re" ware="meat" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="2"/>
+        <quota galaxy="4"/>
       </quotas>
       <location class="sector" macro="cluster_41_sector001_macro" faction="[antigone]" solitary="true" matchextension="false"/>		
       <module>
@@ -2538,7 +3058,7 @@
     </product>
     <product id="hat_foodrations_antigone_re" ware="foodrations" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="2"/>
+        <quota galaxy="4"/>
       </quotas>
       <location class="sector" macro="cluster_41_sector001_macro" faction="[antigone]" solitary="true" matchextension="false"/>		
       <module>
@@ -2554,25 +3074,863 @@
         <select ware="spacefuel" race="argon"/>
       </module>
     </product>	
-<!--REM00 Planet 9-->	
+
+
+<!--HOLY ORDER-->	
+    <product id="hol_antimatterconverters_re" ware="antimatterconverters" owner="holyorder" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="ge" matchextension="true"/>	
+      <module>
+        <select ware="antimatterconverters" race="paranid"/>
+      </module>
+    </product>
+    <product id="hol_energycells_re" ware="energycells" owner="holyorder" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="ge" matchextension="true">	
+        <sunlight min="0.75" />
+      </location>
+      <module>
+        <select ware="energycells" race="paranid"/>
+      </module>
+    </product>
+    <product id="hol_engineparts_re" ware="engineparts" owner="holyorder" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="ge" matchextension="true"/>	
+      <module>
+        <select ware="engineparts" race="paranid"/>
+      </module>
+    </product>
+    <product id="hol_refinedmetals_re" ware="refinedmetals" owner="holyorder" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="ge" matchextension="true">
+        <region ware="ore" max="100000" />
+      </location>
+      <module>
+        <select ware="refinedmetals" race="paranid"/>
+      </module>
+    </product>	
+    <product id="hol_shieldcomponents_re" ware="shieldcomponents" owner="holyorder" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="ge" matchextension="true"/>	
+      <module>
+        <select ware="shieldcomponents" race="paranid"/>
+      </module>
+    </product>
+    <product id="hol_siliconwafers_re" ware="siliconwafers" owner="holyorder" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="ge" matchextension="true">
+        <region ware="silicon" max="100000"/>
+      </location>
+      <module>
+        <select ware="siliconwafers" race="paranid"/>
+      </module>
+    </product>
+    <product id="hol_superfluidcoolant_re" ware="superfluidcoolant" owner="holyorder" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="ge" matchextension="true">
+        <region ware="helium" max="100000" />
+      </location>
+      <module>
+        <select ware="superfluidcoolant" race="paranid"/>
+      </module>
+    </product>	
+    <product id="hol_turretcomponents_re" ware="turretcomponents" owner="holyorder" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="ge" matchextension="true"/>	
+      <module>
+        <select ware="turretcomponents" race="paranid"/>
+      </module>
+    </product>
+    <product id="hol_weaponcomponents_re" ware="weaponcomponents" owner="holyorder" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="holyorder" relation="self" comparison="ge" matchextension="true"/>	  
+      <module>
+        <select ware="weaponcomponents" race="paranid"/>
+      </module>
+    </product>
+	
+
+<!--OTAS-->
+<!--REM73 Shadow's End-->
+	<product id="otas_stimulants" ware="stimulants" owner="otas" type="factory">
+	  <quotas>
+		<quota galaxy="5" />
+	  </quotas>
+	  <location class="sector" macro="Cluster_REM73_sector001_macro" faction="[ownerless]" />
+	  <module>
+		<select ware="stimulants" race="otas"/>
+	  </module>
+	</product>	
+	
+	
+<!--PARANID-->
+	
+	
+
+<!--SCALEPLATE-->	
+<!--REM40 Ocracoke's Storm Cluster-->
+    <product id="sca_spacefuel_REM40" ware="spacefuel" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM40_Sector001_macro" faction="[ownerless]" matchextension="true" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="spacefuel" race="argon"/>
+      </module>
+    </product>
+    <product id="sca_spaceweed_REM40" ware="spaceweed" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM40_Sector002_macro" faction="[ownerless]" matchextension="true" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="spaceweed" race="teladi"/>
+      </module>
+    </product>
+<!--REM42 Bala Gi's Joy-->
+    <product id="sca_majadust_REM42" ware="majadust" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM42_Sector001_macro" faction="[ownerless]" matchextension="true" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="majadust" race="paranid"/>
+      </module>
+    </product>
+    <product id="sca_spacefuel_REM42" ware="spacefuel" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM42_Sector001_macro" faction="[ownerless]" matchextension="true" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="spacefuel" race="argon"/>
+      </module>
+    </product>
+<!--REM51 Fierce Clarity-->
+    <product id="sca1_majadust_REM51" ware="majadust" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM51_Sector001_macro" faction="[ownerless]" >	
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="majadust" race="paranid"/>
+      </module>
+    </product>
+    <product id="sca_spacefuel_REM51" ware="spacefuel" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM51_Sector001_macro" faction="[ownerless]" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="spacefuel" race="argon"/>
+      </module>
+    </product>	
+<!--REM52 Danna's Chance-->
+    <product id="sca_majasnails_REM52" ware="majasnails" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM52_Sector001_macro" faction="[ownerless]" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="majasnails" race="teladi"/>
+      </module>
+    </product>	
+    <product id="sca_spaceweed_REM52" ware="spaceweed" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM52_Sector001_macro" faction="[ownerless]" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="spaceweed" race="teladi"/>
+      </module>
+    </product>
+<!--REM58 Tempting Fumes-->
+    <product id="sca_majasnails_REM58" ware="majasnails" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM58_Sector001_macro" faction="[ownerless]" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="majasnails" race="teladi"/>
+      </module>
+    </product>	
+    <product id="sca_spaceweed_REM58" ware="spaceweed" owner="scaleplate" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM58_Sector001_macro" faction="[ownerless]" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	  
+      <module>
+        <select ware="spaceweed" race="teladi"/>
+      </module>
+    </product>		
+	
+	
+<!--STRONG ARMS-->
+    <product id="str_advancedcomposites" ware="advancedcomposites" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="advancedcomposites" race="split" />
+      </module>
+    </product>
+    <product id="str_advancedelectronics" ware="advancedelectronics" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="advancedelectronics" race="split"/>
+      </module>
+    </product>
+    <product id="str_antimattercells" ware="antimattercells" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true">
+        <region ware="hydrogen" max="100000" />
+      </location>
+      <module>
+        <select ware="antimattercells" race="split"/>
+      </module>
+    </product>
+    <product id="str_antimatterconverters" ware="antimatterconverters" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="antimatterconverters" race="split"/>
+      </module>
+    </product>
+    <product id="str_cheltmeat" ware="cheltmeat" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="cheltmeat" race="split"/>
+      </module>
+    </product>
+    <product id="str_claytronics" ware="claytronics" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="claytronics" race="split" />
+      </module>
+    </product>
+    <product id="str_dronecomponents" ware="dronecomponents" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="dronecomponents" race="split"/>
+      </module>
+    </product>	
+    <product id="str_energycells" ware="energycells" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="3" sector="6"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true">
+        <sunlight min="1.0" />
+      </location>
+      <module>
+        <select ware="energycells" race="split"/>
+      </module>
+    </product>
+    <product id="str_engineparts" ware="engineparts" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="engineparts" race="split"/>
+      </module>
+    </product>
+    <product id="str_fieldcoils" ware="fieldcoils" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="fieldcoils" race="split"/>
+      </module>
+    </product>	
+    <product id="str_graphene" ware="graphene" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true">
+        <region ware="methane" max="100000" />
+      </location>
+      <module>
+        <select ware="graphene" race="split"/>
+      </module>
+    </product>
+    <product id="str_hullparts" ware="hullparts" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="4" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="hullparts" race="split"/>
+      </module>
+    </product>
+    <product id="str_medicalsupplies" ware="medicalsupplies" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="medicalsupplies" race="split"/>
+      </module>
+    </product>
+    <product id="str_microchips" ware="microchips" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="microchips" race="split"/>
+      </module>
+    </product>
+    <product id="str_missilecomponents" ware="missilecomponents" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="missilecomponents" race="split"/>
+      </module>
+    </product>
+    <product id="str_plasmaconductors" ware="plasmaconductors" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="plasmaconductors" race="split"/>
+      </module>
+    </product>
+    <product id="str_quantumtubes" ware="quantumtubes" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="quantumtubes" race="split"/>
+      </module>
+    </product>
+    <product id="str_refinedmetals" ware="refinedmetals" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true">
+        <region ware="ore" max="100000" />
+      </location>
+      <module>
+        <select ware="refinedmetals" race="split"/>
+      </module>
+    </product>
+    <product id="str_scanningarrays" ware="scanningarrays" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="scanningarrays" race="split"/>
+      </module>
+    </product>
+    <product id="str_scruffinfruits" ware="scruffinfruits" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="scruffinfruits" race="split"/>
+      </module>
+    </product>
+    <product id="str_shieldcomponents" ware="shieldcomponents" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="shieldcomponents" race="split"/>
+      </module>
+    </product>	
+    <product id="str_siliconwafers" ware="siliconwafers" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true">
+        <region ware="silicon" max="100000"/>
+      </location>
+      <module>
+        <select ware="siliconwafers" race="split"/>
+      </module>
+    </product>
+    <product id="str_smartchips" ware="smartchips" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="smartchips" race="split"/>
+      </module>
+    </product>	
+    <product id="str_spices" ware="spices" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="spices" race="split"/>
+      </module>
+    </product>
+    <product id="str_superfluidcoolant" ware="superfluidcoolant" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true">
+        <region ware="helium" max="100000" />
+      </location>
+      <module>
+        <select ware="superfluidcoolant" race="split"/>
+      </module>
+    </product>
+    <product id="str_turretcomponents" ware="turretcomponents" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="turretcomponents" race="split"/>
+      </module>
+    </product>	
+    <product id="str_water" ware="water" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true">
+        <region ware="ice" max="100000" />
+      </location>
+      <module>
+        <select ware="water" race="split"/>
+      </module>
+    </product>
+    <product id="str_weaponcomponents" ware="weaponcomponents" owner="strongarms" type="factory">
+      <quotas>
+        <quota galaxy="1" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="strongarms" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="weaponcomponents" race="split"/>
+      </module>
+    </product>	
+
+
+<!--TELADI-->
+<!--REM09 Teladi Gain-->
+    <product id="tel_spaceweed_re" ware="spaceweed" owner="teladi" type="factory">
+      <quotas>
+        <quota galaxy="7" />
+      </quotas>
+	  <location class="sector" macro="cluster_REM09_Sector001_macro" faction="teladi" >
+		<corerange min="0.2" max="0.6"/>
+	  </location>	
+      <module>
+        <select ware="spaceweed" race="teladi"/>
+      </module>
+    </product>
+    <product id="tel_advancedelectronics_re" ware="advancedelectronics" owner="teladi" type="factory">
+      <quotas>
+        <quota galaxy="2" sector="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="teladi" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="advancedelectronics" race="teladi"/>
+      </module>
+    </product>
+    <product id="tel_antimattercells_re" ware="antimattercells" owner="teladi" type="factory">
+      <quotas>
+        <quota galaxy="2" sector="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="teladi" relation="self" comparison="ge" matchextension="true">
+        <region ware="hydrogen" max="100000" />
+      </location>
+      <module>
+        <select ware="antimattercells" race="paranid"/>
+      </module>
+    </product>
+    <product id="tel_energycells_re" ware="energycells" owner="teladi" type="factory">
+      <quotas>
+        <quota galaxy="6" sector="3"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="teladi" relation="self" comparison="ge" matchextension="true">
+        <sunlight min="1.0" />
+      </location>
+      <module>
+        <select ware="energycells" race="paranid"/>
+      </module>
+    </product>	
+    <product id="tel_superfluidcoolant_re" ware="superfluidcoolant" owner="teladi" type="factory">
+      <quotas>
+        <quota galaxy="2" sector="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="teladi" relation="self" comparison="ge" matchextension="true">
+        <region ware="helium" max="100000" />
+      </location>
+      <module>
+        <select ware="superfluidcoolant" race="teladi"/>
+      </module>
+    </product>	
+    <product id="tel_weaponcomponents_re" ware="weaponcomponents" owner="teladi" type="factory">
+      <quotas>
+        <quota galaxy="3" sector="1"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="teladi" relation="self" comparison="ge" matchextension="true"/>
+      <module>
+        <select ware="weaponcomponents" race="teladi"/>
+      </module>
+    </product>	
+	
+	
+<!--XAAR'S FAITHFUL-->
+    <product id="xaar_advancedcomposites" ware="advancedcomposites" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="3"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="advancedcomposites" race="paranid" />
+      </module>
+    </product>
+    <product id="xaar_advancedelectronics" ware="advancedelectronics" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="4" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="advancedelectronics" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_antimattercells" ware="antimattercells" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="4"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false">
+        <region ware="hydrogen" max="100000" />
+      </location>
+      <module>
+        <select ware="antimattercells" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_antimatterconverters" ware="antimatterconverters" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="3"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="antimatterconverters" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_claytronics" ware="claytronics" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="9" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="claytronics" race="paranid" />
+      </module>
+    </product>
+    <product id="xaar_dronecomponents" ware="dronecomponents" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="dronecomponents" race="paranid"/>
+      </module>
+    </product>	
+    <product id="xaar_energycells" ware="energycells" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="12" sector="6"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false">
+        <sunlight min="1.0" />
+      </location>
+      <module>
+        <select ware="energycells" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_engineparts" ware="engineparts" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="5"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="engineparts" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_fieldcoils" ware="fieldcoils" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="fieldcoils" race="paranid"/>
+      </module>
+    </product>	
+    <product id="xaar_graphene" ware="graphene" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="6" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false">
+        <region ware="methane" max="100000" />
+      </location>
+      <module>
+        <select ware="graphene" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_hullparts" ware="hullparts" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="22" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="hullparts" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_majasnails" ware="majasnails" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="5" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="majasnails" race="paranid"/>
+      </module>
+    </product>	
+    <product id="xaar_medicalsupplies" ware="medicalsupplies" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="19" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="medicalsupplies" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_microchips" ware="microchips" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="9" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="microchips" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_missilecomponents" ware="missilecomponents" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="2"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="missilecomponents" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_plasmaconductors" ware="plasmaconductors" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="4"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="plasmaconductors" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_quantumtubes" ware="quantumtubes" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="5"/>
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="quantumtubes" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_refinedmetals" ware="refinedmetals" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="8" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false">
+        <region ware="ore" max="100000" />
+      </location>
+      <module>
+        <select ware="refinedmetals" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_scanningarrays" ware="scanningarrays" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="scanningarrays" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_shieldcomponents" ware="shieldcomponents" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="shieldcomponents" race="paranid"/>
+      </module>
+    </product>	
+    <product id="xaar_siliconwafers" ware="siliconwafers" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="6" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false">
+        <region ware="silicon" max="100000"/>
+      </location>
+      <module>
+        <select ware="siliconwafers" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_smartchips" ware="smartchips" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="9" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="smartchips" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_sojabeans" ware="sojabeans" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="4" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="sojabeans" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_sojahusk" ware="sojahusk" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="9" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="sojahusk" race="paranid"/>
+      </module>
+    </product>	
+    <product id="xaar_spices" ware="spices" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="4" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="spices" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_superfluidcoolant" ware="superfluidcoolant" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false">
+        <region ware="helium" max="100000" />
+      </location>
+      <module>
+        <select ware="superfluidcoolant" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_turretcomponents" ware="turretcomponents" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="2" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="turretcomponents" race="paranid"/>
+      </module>
+    </product>	
+    <product id="xaar_water" ware="water" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="4" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false">
+        <region ware="ice" max="100000" />
+      </location>
+      <module>
+        <select ware="water" race="paranid"/>
+      </module>
+    </product>
+    <product id="xaar_weaponcomponents" ware="weaponcomponents" owner="xaar" type="factory">
+      <quotas>
+        <quota galaxy="3" />
+      </quotas>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="xaar" relation="self" comparison="ge" matchextension="false"/>
+      <module>
+        <select ware="weaponcomponents" race="paranid"/>
+      </module>
+    </product>	
+
+	
+<!--XENON-->	
 <!--REM01 McCullan Relay-->
 	<product id="xen_energycells_REM01" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
-		<quota galaxy="5" zone="2" />
+		<quota galaxy="6" zone="2" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM01_Sector001_macro" />			
 	  <module>
 		<select ware="energycells" race="xenon" />
 	  </module>
 	</product>	
-<!--REM02 Ares-->
-<!--REM03 Hermes-->
-<!--REM04 Althes-->
-<!--REM05 Megnir-->
 <!--REM06 Matrix #48-->
 	<product id="xen_energycells_REM06" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
-		<quota galaxy="3" zone="2" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM06_Sector001_macro" />			
 	  <module>
@@ -2582,655 +3940,53 @@
 <!--REM07 Matrix #79A-->
 	<product id="xen_energycells_REM07" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
-		<quota galaxy="3" zone="2" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM07_Sector001_macro" />			
 	  <module>
 		<select ware="energycells" race="xenon" />
 	  </module>
 	</product>		
-<!--REM08 Power Circle Cluster-->
-<!--REM09 Teladi Gain-->
-<!--REM10 Herron's Nebula-->
-<!--REM11 Montalaar-->
 <!--REM12 Split Fire-->
 	<product id="xen_energycells_REM12" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
-		<quota galaxy="3" zone="2" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM12_Sector001_macro" />			
 	  <module>
 		<select ware="energycells" race="xenon" />
 	  </module>
-	</product>		
-<!--REM13 Dark Waters-->
-<!--REM14 Mists of Elysium-->
-<!--REM15 Depths of Silence-->
-<!--REM16 Light Water-->
-<!--REM17 Shining Currents-->
-<!--REM18 Shore of Infinity-->	
-<!--REM19 Reservoir of Tranquillity-->
-<!--REM20 Duke's Domain-->
-<!--REM21 Perpetual Sin Cluster-->
-<!--REM22 Pontifex' Seclusion-->
-<!--REM23 Unholy Descent-->
-<!--REM24 Cathedral of Xaar-->
-<!--REM25 Clarity's End-->
+	</product>	
 <!--REM26 Desecrated Skies-->
 	<product id="xen_energycells_REM26" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
-		<quota galaxy="4" zone="2" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM26_Sector001_macro" />			
 	  <module>
 		<select ware="energycells" race="xenon" />
 	  </module>
-	</product>		
-<!--REM27 Perdition's End-->
-<!--REM28 Ket's Reckoning-->
-<!--REM29 Sanctum Verge-->
-<!--REM30 Xaar's Belt Cluster-->
-<!--REMs 31-38 - Boron/Split Group-->
-	<!--Boron-->
-	<!-- Disabled due to DA:RE pending further testing
-    <product id="bor_advancedcomposites_REMS" ware="advancedcomposites" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="advancedcomposites" race="boron" faction="argon"/>
-      </module>
-    </product>
-    <product id="bor_advancedelectronics_REMS" ware="advancedelectronics" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="advancedelectronics" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_antimattercells_REMS" ware="antimattercells" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <region ware="hydrogen" max="5000" />
-      </location>
-      <module>
-        <select ware="antimattercells" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_claytronics_REMS" ware="claytronics" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="claytronics" race="boron" />
-      </module>
-    </product>
-    <product id="bor_energycells_REMS" ware="energycells" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="3" sector="2" />
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy max="0.5" maxbound="false" />
-        <sunlight min="1" />
-      </location>
-      <module>
-        <select ware="energycells" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_engineparts_REMS" ware="engineparts" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="engineparts" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_bofu_REMS" ware="bofu" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="bofu" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_graphene_REMS" ware="graphene" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <region ware="methane" max="5000" />
-      </location>
-      <module>
-        <select ware="graphene" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_hullparts_REMS" ware="hullparts" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1" />
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="hullparts" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_bogas_REMS" ware="bogas" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="bogas" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_medicalsupplies_REMS" ware="medicalsupplies" owner="boron" type="factory">
-      <quotas>
-         <quota galaxy="2"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="medicalsupplies" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_microchips_REMS" ware="microchips" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="microchips" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_plasmaconductors_REMS" ware="plasmaconductors" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy max="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="plasmaconductors" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_quantumtubes_REMS" ware="quantumtubes" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="quantumtubes" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_refinedmetals_REMS" ware="refinedmetals" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="3" sector="2" />
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <region ware="ore" max="5000" />
-        <economy max="0.25" maxbound="false" />
-      </location>
-      <module>
-        <select ware="refinedmetals" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_shieldcomponents_REMS" ware="shieldcomponents" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="shieldcomponents" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_siliconwafers_REMS" ware="siliconwafers" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="2" />
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <region ware="silicon" max="5000"/>
-        <economy max="0.25" maxbound="false" />
-      </location>
-      <module>
-        <select ware="siliconwafers" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_superfluidcoolant_REMS" ware="superfluidcoolant" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <region ware="helium" max="5000" />
-      </location>
-      <module>
-        <select ware="superfluidcoolant" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_water_REMS" ware="water" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <region ware="ice" max="5000" />
-      </location>
-      <module>
-        <select ware="water" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_weaponcomponents_REMS" ware="weaponcomponents" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy min="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="weaponcomponents" race="boron"/>
-      </module>
-    </product>
-    <product id="bor_plankton_REMS" ware="plankton" owner="boron" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="boron" relation="exact" matchextension="true">
-        <economy max="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="plankton" race="boron"/>
-      </module>
-    </product>
-	-->
-	<!--Free Families-->
-	<!-- Disabled due to DA:RE pending further testing
-    <product id="frf_advancedcomposites_REMS" ware="advancedcomposites" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="advancedcomposites" race="argon" />
-      </module>
-    </product>
-    <product id="frf_antimattercells_REMS" ware="antimattercells" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <region ware="hydrogen" max="100000" />
-      </location>
-      <module>
-        <select ware="antimattercells" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_antimatterconverters_REMS" ware="antimatterconverters" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="antimatterconverters" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_cheltmeat_REMS" ware="cheltmeat" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.25" />
-      </location>
-      <module>
-        <select ware="cheltmeat" race="split"/>
-      </module>
-    </product>
-    <product id="frf_claytronics_REMS" ware="claytronics" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="claytronics" race="argon" />
-      </module>
-    </product>
-    <product id="frf_energycells_REMS" ware="energycells" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="3" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.25" maxbound="false" />
-        <sunlight min="0.5" />
-      </location>
-      <module>
-        <select ware="energycells" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_engineparts_REMS" ware="engineparts" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="engineparts" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_graphene_REMS" ware="graphene" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <region ware="methane" max="100000" />
-      </location>
-      <module>
-        <select ware="graphene" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_hullparts_REMS" ware="hullparts" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="3" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="hullparts" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_medicalsupplies_REMS" ware="medicalsupplies" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="3" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="medicalsupplies" race="split"/>
-      </module>
-    </product>
-    <product id="frf_microchips_REMS" ware="microchips" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="microchips" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_missilecomponents_REMS" ware="missilecomponents" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.75" maxbound="false" />
-      </location>
-      <module>
-        <select ware="missilecomponents" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_plasmaconductors_REMS" ware="plasmaconductors" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="plasmaconductors" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_quantumtubes_REMS" ware="quantumtubes" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="quantumtubes" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_refinedmetals_REMS" ware="refinedmetals" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="3" sector="2" />
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <region ware="ore" max="100000" />
-        <economy max="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="refinedmetals" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_scanningarrays_REMS" ware="scanningarrays" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="scanningarrays" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_scruffinfruits_REMS" ware="scruffinfruits" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.25" />
-      </location>
-      <module>
-        <select ware="scruffinfruits" race="split"/>
-      </module>
-    </product>
-    <product id="frf_siliconwafers_REMS" ware="siliconwafers" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="4" sector="2" />
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <region ware="silicon" max="100000"/>
-        <economy max="0.5" maxbound="false" />
-      </location>
-      <module>
-        <select ware="siliconwafers" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_spices_REMS" ware="spices" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <economy max="0.25" />
-      </location>
-      <module>
-        <select ware="spices" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_superfluidcoolant_REMS" ware="superfluidcoolant" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <region ware="helium" max="100000" />
-      </location>
-      <module>
-        <select ware="superfluidcoolant" race="argon"/>
-      </module>
-    </product>
-    <product id="frf_water_REMS" ware="water" owner="freesplit" type="factory">
-      <quotas>
-        <quota galaxy="2" sector="1"/>
-      </quotas>
-      <location class="galaxy" macro="xu_ep2_universe_macro" faction="freesplit" relation="self" comparison="ge" matchextension="true">
-        <region ware="ice" max="100000" />
-      </location>
-      <module>
-        <select ware="water" race="argon"/>
-      </module>
-    </product>
-	-->
+	</product>
 <!--REM39 Matrix #472D-->
 	<product id="xen_energycells_REM39" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
-		<quota galaxy="4" zone="2" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM39_Sector001_macro" />			
 	  <module>
 		<select ware="energycells" race="xenon" />
 	  </module>
-	</product>		
-<!--REM40 Ocracoke's Storm Cluster-->
-<!--REM41 Shadows of Giants Cluster-->
-<!--REM42 Bala Gi's Joy-->
-<!--REM43 Blue Profit-->
+	</product>	
 <!--REM44 Matrix #483-->
 	<product id="xen_energycells_REM44" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
-		<quota galaxy="4" zone="2" />
+		<quota galaxy="3" />
 	  </quotas>
 	  <location class="sector" macro="cluster_REM44_Sector001_macro" />			
 	  <module>
 		<select ware="energycells" race="xenon" />
 	  </module>
-	</product>		
-<!--REM45 The Vault-->
-<!--REM46 Recovered Capital-->
-<!--REM47 Spaceweed Grove-->
-<!--REM48 Wretched Skies Cluster-->
-<!--REM49 Duke's Vision I-->
-    <product id="xaar_shieldcomponents_REM49" ware="shieldcomponents" owner="xaar" type="factory">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="sector" macro="cluster_REM49_Sector001_macro" faction="xaar" relation="self"/>
-      <module>
-        <select ware="shieldcomponents" race="paranid"/>
-      </module>
-    </product>
-    <product id="xaar_turretcomponents_REM49" ware="turretcomponents" owner="xaar" type="factory">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="sector" macro="cluster_REM49_Sector001_macro" faction="xaar" relation="self"/>
-      <module>
-        <select ware="turretcomponents" race="paranid"/>
-      </module>
-    </product>
-    <product id="xaar_weaponcomponents_REM49" ware="weaponcomponents" owner="xaar" type="factory">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="sector" macro="cluster_REM49_Sector001_macro" faction="xaar" relation="self"/>
-      <module>
-        <select ware="weaponcomponents" race="paranid"/>
-      </module>
-    </product>
-<!--REM50 Duke's Vision II-->
-    <product id="xaar_hullparts_REM50" ware="hullparts" owner="xaar" type="factory">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="sector" macro="cluster_REM50_Sector001_macro" faction="xaar" relation="self"/>
-      <module>
-        <select ware="hullparts" race="paranid"/>
-      </module>
-    </product>
-    <product id="xaar_antimatterconverters_REM50" ware="antimatterconverters" owner="xaar" type="factory">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="sector" macro="cluster_REM50_Sector001_macro" faction="xaar" relation="self"/>
-      <module>
-        <select ware="antimatterconverters" race="paranid"/>
-      </module>
-    </product>
-    <product id="xaar_energycells_REM50" ware="energycells" owner="xaar" type="factory">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="sector" macro="cluster_REM50_Sector001_macro" faction="xaar" relation="self"/>
-      <module>
-        <select ware="energycells" race="paranid"/>
-      </module>
-    </product>
-    <product id="xaar_engineparts_REM50" ware="engineparts" owner="xaar" type="factory">
-      <quotas>
-        <quota galaxy="1" />
-      </quotas>
-      <location class="sector" macro="cluster_REM50_Sector001_macro" faction="xaar" relation="self"/>
-      <module>
-        <select ware="engineparts" race="paranid"/>
-      </module>
-    </product>
-<!--REM51 Fierce Clarity-->
-<!--REM52 Danna's Chance-->
-<!--REM53 Legend's Home-->
-<!--REM54 PTNI Headquarters-->
-<!--REM55 Akeela's Beacon-->
-<!--REM56 Aladna Hill-->
-<!--REM57 Heart of Light-->	
-<!--REM58 Tempting Fumes-->	
-<!--REM59 Mines of Fortune-->	
-<!--REM60 Zyarth's Stand-->	
-<!--REM61 Patriarch's Conclusion-->	
-<!--REM62 Elena's Fortune-->	
-<!--REM63 Nyana's Hideout-->
-<!--REM64 Interworlds-->	
-<!--REM65 Wastelands-->	
-<!--REM66 Ghinn's Escape-->	
-<!--REM67 Kha'ak Sector Alpha-->
-<!--REM68 Kha'ak Sector Beta-->	
-<!--REM69 Kha'ak Sector Gamma-->	
-<!--REM70 Unknown Kha'ak Sector-->	
-<!--REM71a Unknown Sector (A)-->	
-<!--REM71b Unknown Sector (B)-->	
-<!--REM71c Unknown Sector (C)-->	
-<!--REM71d Unknown Sector (D)-->	
-<!--REM71e Unknown Sector (E)-->	
-<!--REM71f Unknown Sector (F)-->	
-<!--REM72 Kha'ak Hive-->	
-<!--REM73 Shadow's End-->		
-<!--REM74 Tebathimanckatt's Legacy-->
-<!--REM75 Titania-->
-<!--REM76 Untainted Eternity-->	
-<!--REM77 Belt of Aguilar-->
-<!--REM78 Tkr's Deprivation-->	
+	</product>
 <!--REM79 Matrix #695-->
 	<product id="xen_energycells_cluster_REM79_sector001" ware="energycells" owner="xenon" type="factory">
 	  <quotas>
@@ -3240,6 +3996,6 @@
 	  <module>
 		<select ware="energycells" race="xenon" />
 	  </module>
-	</product>	
+	</product>					
   </add>
 </diff>	

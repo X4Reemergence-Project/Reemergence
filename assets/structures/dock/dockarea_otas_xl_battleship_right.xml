@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<components>
+	<component name="dockarea_otas_xl_battleship_right" class="dockarea">
+		<source geometry="extensions\reemergence\assets\structures\dock\dockarea_otas_xl_battleship_right_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights/>
+			</layer>
+		</layers>
+		<connections>
+			
+<!-- M ships docking sideways -->
+
+			<connection name="con_dockingbay_flat_m_01_macro_dock" group="dockingbay_m" tags="todock ">
+				<offset>
+					<position x="-100" y="75" z="-92.5"/>
+					<rotation pitch="0" yaw="180" roll="0"/>					
+				</offset>
+			</connection>
+			<connection name="con_dockingbay_flat_m_01_macro_launch" group="dockingbay_m" tags="launchpos ">
+				<offset>
+					<position x="-100" y="75" z="-92.5"/>
+					<rotation pitch="0" yaw="180" roll="0"/>
+				</offset>
+			</connection>			
+			
+<!-- S ships docking vertical -->
+
+			<connection name="con_dockingbay_arg_s_01_macro" group="dockingbay_s1" tags="todock ">
+				<offset>
+					<position x="10" y="100" z="-132.5"/>
+					<rotation pitch="0" yaw="180" roll="0"/>					
+				</offset>
+			</connection>	
+			<connection name="con_dockingbay_arg_s_01_macro1" group="dockingbay_s2" tags="todock ">
+				<offset>
+					<position x="-37.5" y="75" z="-132.5"/>
+					<rotation pitch="0" yaw="180" roll="0"/>					
+				</offset>
+			</connection>	
+			
+<!-- landing pads -->
+			
+			<connection name="ConnectionFor_dockingbay_arg_s_01_macro" tags="dockingbay" group="dockingbay_s1" >
+				<offset>
+					<position x="10" y="0" z="-112.5"/>
+					<rotation pitch="0" yaw="-90" roll="0"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionFor_dockingbay_arg_s_01_macro1" tags="dockingbay" group="dockingbay_s2" >
+				<offset>
+					<position x="-35" y="0" z="-112.5"/>
+					<rotation pitch="0" yaw="90" roll="0"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionFor_dockingbay_flat_m_01_macro" tags="dockingbay" group="dockingbay_m" >
+				<offset>
+					<position x="0" y="0" z="0"/>
+					<rotation pitch="0" yaw="180" roll="0"/>
+				</offset>
+			</connection>
+
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="dockarea">
+				<offset/>
+			</connection>
+
+<!-- generic stuff -->			
+			
+			<connection name="Connection01" tags="collisiononly part platformcollision  ">
+				<offset/>
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hullpattern"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.8157368" y="0.6352959" z="0.9177036"/>
+							<center x="0" y="-0.2802219" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+
+
+		</connections>
+	</component>
+</components>

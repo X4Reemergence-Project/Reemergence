@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<components>
+	<component name="impact_otas_turret_xl_firestorm" class="bullet">
+		<source geometry="extensions\reemergence\assets\fx\weaponfx\impact_otas_turret_xl_firestorm_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="254" g="93" b="128" range="1500" shadowrange="1500" lighteffect="1" trigger="1" intensity="3" specularintensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="0" y="0" z="-47.36106"/>
+						</offset>
+					</omni>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="effectobject">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part animation  ">
+				<offset>
+					<position x="3.891807E-02" y="2.566837E-04" z="-0.4472656"/>
+				</offset>
+				<animations>
+					<animation name="playonce" start="0" end="60"/>
+				</animations>
+				<parts>
+					<part name="part_impact">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.bullets_fx_master_noscaling"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="333.9728" y="332.7273" z="330.8892"/>
+							<center x="8.345743E-02" y="0.289996" z="-0.7525024"/>
+						</size>
+						<size_raw>
+							<max x="62.28257" y="62.28487" z="62.28945"/>
+							<center x="1.184602E-02" y="-1.524844E-02" z="-6.072998E-03"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part animation textureanimation  ">
+				<offset>
+					<quaternion qx="-0" qy="-1" qz="-0" qw="7.54979E-08"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="60"/>
+				</animations>
+				<parts>
+					<part name="part_shockwave">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.bullets_fx_master_multilayer_noscaling"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="30.05149" y="30.0515" z="106.2282"/>
+							<center x="-2.109909E-02" y="2.878952E-02" z="78.85786"/>
+						</size>
+						<size_raw>
+							<max x="30.05149" y="30.0515" z="106.2282"/>
+							<center x="-2.109814E-02" y="2.878857E-02" z="78.85786"/>
+						</size_raw>
+						<pivot>
+							<offset>
+								<position x="0" y="0" z="20.21594"/>
+							</offset>
+						</pivot>
+						<uv_animations>
+							<uv_animation mapchannel="3">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="60" value="-2"/>
+								</uv_property>
+							</uv_animation>
+							<uv_animation mapchannel="2">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="-0"/>
+									<key frame="60" value="4"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+		</connections>
+	</component>
+</components>

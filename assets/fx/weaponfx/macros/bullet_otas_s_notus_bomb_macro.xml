@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="bullet_otas_s_notus_bomb_macro" class="bullet">
+    <component ref="bullet_gen_s_cannon_01_mk2" />
+    <properties>
+		<ammunition value="15" reload="4" />
+	  <bullet speed="700" lifetime="5" range="3500" barrelamount="1" maxhits="1" ricochet="0" restitution="1" scale="0" angle="1.0" attach="0" icon="weapon_shotgun_mk2" />		
+      <heat value="100" />
+      <reload rate="15" />
+      <areadamage value="180" falloff="1" lifetime="1" />
+      <!-- <damage value="180" repair="0" >
+      <multiplier surfaceelement="2" />
+      </damage>  -->
+      <effects>
+        <impact ref="explosion_flak" />
+        <launch ref="muzzle_gen_s_flak_01_mk1" />
+      </effects>
+      <weapon system="weapon_standard" />
+    </properties>
+  </macro>
+</macros>

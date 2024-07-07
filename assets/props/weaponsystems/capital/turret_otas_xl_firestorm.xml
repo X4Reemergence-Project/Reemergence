@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exported on 2024-03-02 06:02:44 from Blender-->
+<components>
+	<component name="turret_otas_xl_firestorm" class="turret">
+		<source geometry="extensions\reemergence\assets\props\weaponsystems\capital\turret_otas_xl_firestorm_data"/>
+    <layers>
+      <layer />
+    </layers>
+    <connections>
+      <connection name="position" tags="position" value="1" />
+      <connection name="con_turret_laser_xl" tags="turret extralarge standard component combat ">
+        <offset>
+          <position x="0" y="0" z="0" />
+        </offset>
+      </connection>
+      <connection name="ConnectionForsocket" tags="animation forceoutline part ">
+        <parts>
+          <part name="socket" wreck="socket_wreck">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="generic.generic_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="1">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="generic.generic_p1_fx" />
+                </materials>
+              </lod>
+              <lod index="2">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                </materials>
+              </lod>
+              <lod index="3">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="54.00004" y="10.45631" z="54.00003" />
+              <center x="9.536743e-07" y="10.45631" z="0.06914902" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionFordetail_m_socket" tags="detail_m nocollision part nooutline " parent="socket">
+        <parts>
+          <part name="detail_m_socket">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_alphatexture" />
+                  <material id="2" ref="generic.generic_p1_hulltexture" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="33.42291" y="5.304539" z="8.20692" />
+              <center x="9.536743e-07" y="14.90454" z="37.86401" />
+            </size>
+          </part>
+        </parts>
+      </connection>	  
+      <connection name="ConnectionForazimuth" tags="animation forceoutline iklink part " parent="socket">
+        <offset>
+          <position x="0" y="-2.510269" z="0" />
+        </offset>
+        <restrictions>
+          <restriction type="rotation_y" />
+        </restrictions>
+        <parts>
+          <part name="azimuth">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_fx" />
+                  <material id="2" ref="generic.generic_p1_hulltexture" />
+                  <material id="3" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+              <lod index="1">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_fx" />
+                  <material id="2" ref="generic.generic_p1_hulltexture" />
+                  <material id="3" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+              <lod index="2">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+              <lod index="3">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="48.07736" y="14.40273" z="59.65733" />
+              <center x="9.536743e-07" y="35.82561" z="3.723043" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionFordetail_l_azimuth" tags="detail_l nocollision part nooutline " parent="azimuth">
+        <parts>
+          <part name="detail_l_azimuth">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="30.96161" y="10.18266" z="21.21959" />
+              <center x="4.768372e-07" y="36.0839" z="43.65668" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionFordetail_m_azimuth" tags="detail_m nocollision part nooutline " parent="azimuth">
+        <parts>
+          <part name="detail_m_azimuth">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hulltexture" />
+                  <material id="2" ref="p1effects.p1_gradient_colour" />
+                  <material id="3" ref="generic.generic_p1_alphatexture" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="49.49245" y="14.76807" z="56.17705" />
+              <center x="0" y="37.49756" z="5.120205" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionForelevation" tags="animation forceoutline iklink part " parent="azimuth">
+        <offset>
+          <position x="0" y="34.01514" z="12.5647" />
+        </offset>
+        <restrictions>
+          <restriction type="rotation_x">
+            <limits>
+              <min value="-5" />
+              <max value="65" />
+            </limits>
+          </restriction>
+        </restrictions>
+        <parts>
+          <part name="elevation">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                  <material id="2" ref="generic.generic_p1_hulltexture" />
+                </materials>
+              </lod>
+              <lod index="1">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                  <material id="2" ref="generic.generic_p1_hulltexture" />
+                </materials>
+              </lod>
+              <lod index="2">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+              <lod index="3">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="22.64214" y="10.5456" z="43.11622" />
+              <center x="4.768372e-07" y="2.136305" z="44.13888" />
+            </size>
+          </part>
+        </parts>
+      </connection>
+      <connection name="ConnectionForbarrel" tags="animation forceoutline iklink nocollision part " parent="elevation">
+        <animations>
+          <animation name="gun_firing" start="2" end="17" />
+        </animations>        
+		<parts>
+          <part name="barrel">
+            <lods>
+              <lod index="0">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+              <lod index="1">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+              <lod index="2">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+              <lod index="3">
+                <materials>
+                  <material id="1" ref="generic.generic_p1_hullpattern" />
+                </materials>
+              </lod>
+            </lods>
+            <size>
+              <max x="21.03227" y="8.516238" z="45.07934" />
+              <center x="-4.768372e-07" y="2.098083e-05" z="67.76231" />
+            </size>
+          </part>
+        </parts>
+      </connection>  
+      <connection name="con_laser_01" tags="laser " parent="barrel">
+        <offset>
+          <position x="16.88162" y="6.758343" z="106.527" />
+        </offset>
+      </connection>
+      <connection name="con_laser_02" tags="laser " parent="barrel">
+        <offset>
+          <position x="-16.88162" y="6.758343" z="106.5271" />
+        </offset>
+      </connection>
+      <connection name="con_laser_03" tags="laser " parent="barrel">
+        <offset>
+          <position x="16.88162" y="-1.965609" z="106.5271" />
+        </offset>
+      </connection>
+      <connection name="con_laser_04" tags="laser " parent="barrel">
+        <offset>
+          <position x="-16.88162" y="-1.965609" z="106.5271" />
+        </offset>
+      </connection>
+    </connections>
+  </component>
+</components>

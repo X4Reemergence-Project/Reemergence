@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: nick (192.168.3.63) on 2023-03-01 16:51:31-->
+<macros>
+  <macro name="ship_pirate_xl_galleon_macro" class="ship_xl">
+    <component ref="ship_pirate_xl_galleon" />
+    <properties>
+      <identification name="{19530201,700}" basename="{19530201,700}" description="{19530201,800}" icon="ship_xl_carrier_01" />
+      <software>
+        <software ware="software_dockmk2" compatible="1" />
+        <software ware="software_flightassistmk1" default="1" />
+        <software ware="software_scannerlongrangemk1" default="1" />
+        <software ware="software_scannerlongrangemk2" compatible="1" />
+        <software ware="software_scannerobjectmk1" default="1" />
+        <software ware="software_scannerobjectmk2" compatible="1" />
+        <software ware="software_targetmk1" compatible="1" />
+        <software ware="software_trademk1" default="1" />
+      </software>
+      <explosiondamage value="1200" shield="6000" />
+      <storage missile="400" unit="35" />
+      <hull max="580000" />
+      <secrecy level="1" />
+      <purpose primary="fight" />
+      <people capacity="203" />
+      <physics mass="393.1788">
+        <inertia pitch="271.7036" yaw="271.7036" roll="217.3628" />
+        <drag forward="91.2744" reverse="365.098" horizontal="186.9588" vertical="186.9588" pitch="358.6356" yaw="358.6356" roll="358.6356" />
+      </physics>
+      <thruster tags="extralarge" />
+      <ship type="carrier" />
+    </properties>
+    <connections>
+      <connection ref="con_cockpit">
+        <macro ref="bridge_pir_xl_01_macro" connection="con_cockpit" />
+      </connection>
+      <connection ref="con_dock_xs">
+        <macro ref="dock_gen_xs_ship_01_macro" connection="Connection_component" />
+      </connection>
+      <connection ref="con_shipstorage_m_01">
+        <macro ref="shipstorage_gen_m_eight_macro" connection="object" />
+      </connection>
+      <connection ref="con_shipstorage_s_01">
+        <macro ref="shipstorage_gen_s_sixtyfour_macro" connection="object" />
+      </connection>
+      <connection ref="con_shipstorage_xs_01">
+        <macro ref="shipstorage_gen_xs_01_macro" connection="object" />
+      </connection>
+      <connection ref="con_storage01">
+        <macro ref="storage_pirate_xl_galleon_macro" connection="ShipConnection" />
+      </connection>
+      <connection ref="con_test_argon_dockarea_m_04">
+        <macro ref="dockarea_arg_xl_builder_01_macro" connection="Connection01" />
+      </connection>		
+      <connection ref="con_buildmodule">
+        <macro ref="buildmodule_gen_carrier_macro" connection="object" />
+      </connection>
+      <connection ref="con_dockarea_pirate_s_galleon_01">
+        <macro ref="dockarea_pirate_s_galleon_macro" connection="Connection01" />
+      </connection>	
+      <connection ref="con_dockarea_pirate_s_galleon_02">
+        <macro ref="dockarea_pirate_s_galleon_macro" connection="Connection01" />
+      </connection>	
+    </connections>
+  </macro>
+</macros>

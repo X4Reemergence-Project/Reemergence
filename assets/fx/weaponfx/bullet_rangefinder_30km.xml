@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<components>
+	<component name="bullet_rangefinder_30km" class="bullet">
+		<source geometry="assets\fx\weaponFx\bullet_spacesuit_repairlaser_01_mk1_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="110" g="92" b="143" range="17.6" shadowrange="17.6" lighteffect="1" trigger="1" intensity="0.5" specularintensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="-2.762699E-02" y="5.310202E-02" z="1.839346"/>
+						</offset>
+					</omni>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="bullet">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="anim_beam_core">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.beam_khaak_pulse"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.124802E-02" y="3.801439E-02" z="0.5"/>
+							<center x="3.500171E-04" y="0" z="0.5"/>
+						</size>
+					</part>
+				</parts>
+				<waypoints/>
+			</connection>
+			<connection name="Connection02" tags="part nocollision iklink  " parent="anim_beam_core">
+				<parts>
+					<part name="anim_beam_glow">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.beam_khaak"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.881884" y="0.881884" z="0.5"/>
+							<center x="-1.267085E-14" y="1.286418E-08" z="0.5"/>
+						</size>
+						<size_raw>
+							<max x="0.881884" y="0.881884" z="0"/>
+							<center x="-1.267085E-14" y="1.286418E-08" z="0.5"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="connection_laser01" tags="laser">
+				<offset/>
+			</connection>
+		</connections>
+	</component>
+</components>

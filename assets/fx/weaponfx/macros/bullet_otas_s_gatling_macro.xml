@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="bullet_otas_s_gatling_macro" class="bullet">
+    <component ref="bullet_gen_s_laser_01_mk1" />
+    <properties>
+      <ammunition value="6000" reload="1" />
+      <bullet speed="4000" lifetime="1.00" amount="3" barrelamount="1" icon="weapon_gatling_mk1" timediff="0.017" angle="0.3" maxhits="2" ricochet="0.01" restitution="0.3" scale="0" attach="0" />
+      <heat value="65" />
+      <reload rate="20" />
+      <damage value="13" repair="0" />
+      <effects>
+        <impact ref="impact_gen_s_laser_01_mk1" inside="impact_gen_s_laser_01_mk1_inside" />
+        <bigobjectimpact ref="impact_gen_s_laser_01_mk1_bigobject" inside="impact_gen_s_laser_01_mk1_bigobject_inside" />
+        <launch ref="muzzle_arg_s_ion_01_mk1" />
+      </effects>
+      <weapon system="weapon_standard" />
+    </properties>
+  </macro>
+</macros>

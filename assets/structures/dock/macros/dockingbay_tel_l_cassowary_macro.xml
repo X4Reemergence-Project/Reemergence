@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: Lino (192.168.3.146) at 19.03.2019_14-11-38-->
+<macros>
+  <macro name="dockingbay_tel_l_cassowary_macro" class="dockingbay">
+    <component ref="dockingbay_tel_l_cassowary" />
+    <properties>
+      <identification name="{20104,72601}" shortname="{20104,72603}" description="{20104,72602}" />
+      <translationspeed max="5" />
+      <translationacceleration max="2" />
+      <effects>
+        <cargotube attach="dock_s_cargotube_attach" detach="dock_s_cargotube_detach" />
+        <landing ref="ship_blowout_size_s">
+          <curve>
+            <point position="0" value="0" />
+            <point position="1" value="1" />
+            <point position="40" value="0" />
+          </curve>
+        </landing>
+      </effects>
+      <undock rotate="1" />
+      <dock external="1" />
+      <docksize tags="dock_s" />
+    </properties>
+  </macro>
+</macros>

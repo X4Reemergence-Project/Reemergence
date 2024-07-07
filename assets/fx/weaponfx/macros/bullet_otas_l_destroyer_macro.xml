@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="bullet_otas_l_destroyer_macro" class="bullet">
+    <component ref="bullet_otas_l_destroyer" />
+    <properties>
+      <ammunition value="1" reload="0" />
+      <bullet speed="8750" lifetime="2" amount="1" barrelamount="1" icon="weapon_railgun_mk2" timediff="0.001" angle="0.1" maxhits="1" ricochet="0" scale="0" attach="0" chargetime="6.625" heatwhilecharging="0" requirefullcharge="1" firewhenfullcharge="1"/>
+      <heat value="250" />
+      <reload time="6.725" />
+      <damage value="29750" hull="15250"  repair="0">
+      <multiplier surfaceelement="1.25" />
+      </damage>
+      <effects>
+        <impact ref="impact_otas_l_destroyer" inside="impact_pir_xl_laser_01_mk1_inside" />
+        <bigobjectimpact ref="impact_pir_xl_laser_01_mk1_bigobject" inside="impact_pir_xl_laser_01_mk1_bigobject_inside" />
+        <launch ref="muzzle_pir_xl_laser_01_mk1" />	  
+      </effects>
+      <sounds>
+        <firing ref="weapon_bor_l_beam_01_mk1_charge" />
+      </sounds>
+      <weapon system="weapon_standard" />
+    </properties>
+  </macro>
+</macros>

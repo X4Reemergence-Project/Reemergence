@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: Michael (192.168.3.51) at 17.06.2021_17-04-23-->
+<macros>
+  <macro name="ship_pirate_l_brigantine_macro" class="ship_l">
+    <component ref="ship_pirate_l_brigantine" />
+    <properties>
+      <identification name="{19530201,702}" basename="{19530201,702}" description="{19530201,802}" icon="ship_l_cruiser_re" />
+      <software>
+        <software ware="software_dockmk2" compatible="1" />
+        <software ware="software_flightassistmk1" default="1" />
+        <software ware="software_scannerlongrangemk2" default="1" />
+        <software ware="software_scannerobjectmk1" default="1" />
+        <software ware="software_scannerobjectmk2" compatible="1" />
+        <software ware="software_targetmk1" compatible="1" />
+        <software ware="software_trademk1" compatible="1" />
+      </software>
+      <explosiondamage value="1500" shield="7500" />
+      <storage missile="400" unit="25" />
+      <hull max="262000" />
+      <secrecy level="2" />
+      <purpose primary="fight" />
+      <people capacity="134" />
+      <physics mass="730.078">
+        <inertia pitch="714.086" yaw="714.086" roll="571.268" />
+        <drag forward="290.771" reverse="1243.086" horizontal="303.459" vertical="303.459" pitch="760.016" yaw="760.016" roll="760.016" />
+      </physics>
+      <thruster tags="extralarge" />
+      <ship type="scavenger" />
+    </properties>
+    <connections>
+      <connection ref="con_cockpit">
+        <macro ref="bridge_pir_l_01_macro" connection="con_cockpit" />
+      </connection>
+      <connection ref="con_dockarea_tel_xl_carrier_01_a">
+        <macro ref="dockarea_tel_xl_carrier_01_macro" connection="Connection01" />
+      </connection>
+      <connection ref="con_dockarea_tel_xl_carrier_01_b">
+        <macro ref="dockarea_tel_xl_carrier_01_macro" connection="Connection01" />
+      </connection>
+      <connection ref="con_dockarea_tel_xl_carrier_01_c">
+        <macro ref="dockarea_tel_xl_carrier_01_macro" connection="Connection01" />
+      </connection>
+      <connection ref="con_dock_xs">
+        <macro ref="dock_gen_xs_ship_01_macro" connection="Connection_component" />
+      </connection>
+      <connection ref="con_launchtube_arg_s_01_a">
+        <macro ref="launchtube_arg_s_01_macro" connection="Connection02" />
+      </connection>
+      <connection ref="con_launchtube_arg_s_01_b">
+        <macro ref="launchtube_arg_s_01_macro" connection="Connection02" />
+      </connection>
+      <connection ref="con_launchtube_arg_s_01_c">
+        <macro ref="launchtube_arg_s_01_macro" connection="Connection02" />
+      </connection>
+      <connection ref="con_launchtube_arg_s_01_d">
+        <macro ref="launchtube_arg_s_01_macro" connection="Connection02" />
+      </connection>
+      <connection ref="con_launchtube_arg_s_01_e">
+        <macro ref="launchtube_arg_s_01_macro" connection="Connection02" />
+      </connection>
+      <connection ref="con_launchtube_arg_s_01_f">
+        <macro ref="launchtube_arg_s_01_macro" connection="Connection02" />
+      </connection>
+    <connection ref="con_shipstorage01">
+        <macro ref="shipstorage_gen_m_cap1_macro" connection="object" />
+      </connection>
+      <connection ref="con_shipstorage02">
+        <macro ref="shipstorage_gen_s_cap6_macro" connection="object" />
+      </connection>
+      <connection ref="con_shipstorage03">
+        <macro ref="shipstorage_gen_xs_01_macro" connection="object" />
+      </connection>
+      <connection ref="con_storage01">
+        <macro ref="storage_tel_xl_carrier_01_a_macro" connection="ShipConnection" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

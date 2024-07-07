@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="bullet_gen_s_plasmabomb_macro" class="bullet">
+    <component ref="bullet_gen_s_plasmabomb" />
+    <properties>
+	  <bullet speed="600" lifetime="6" range="3600" barrelamount="1" maxhits="1" ricochet="0" restitution="1" scale="0" angle="1.0" attach="0" icon="weapon_plasma_mk2" />		
+      <heat value="500" />
+      <reload rate="0.2" />
+      <areadamage value="2500" time="10" lifetime="10" />
+<!--      <damage value="3000" >
+      </damage> -->
+      <effects>
+        <impact ref="impact_bor_l_flak_01_mk1" inside="impact_bor_l_flak_01_mk1_inside" />
+        <bigobjectimpact ref="impact_bor_l_flak_01_mk1_bigobject" inside="impact_bor_l_flak_01_mk1_bigobject_inside" />
+        <launch ref="muzzle_gen_s_plasmabomb" />
+      </effects>
+      <weapon system="weapon_standard" />
+    </properties>
+  </macro>
+</macros>

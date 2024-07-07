@@ -112,11 +112,19 @@
           <position x="-123260" y="0" z="-78015" />	
 		</offset>
 	</replace>
-	<replace sel="/macros/macro[@name='Cluster_405_Sector001_macro']/connections/connection[@name='Zone005_Cluster_405_Sector001_connection']/offset"><!--Open Market-->
+	<replace sel="/macros/macro[@name='Cluster_405_Sector001_macro']/connections/connection[@name='Zone005_Cluster_405_Sector001_connection']/offset"><!--Family Nhuut-->
 		<offset>	
-          <position x="153405" y="0" z="-10085" />	
+          <position x="-48000" y="0" z="123750"/>	
 		</offset>
 	</replace>
+	<add sel="//macro[@name='Cluster_405_Sector001_macro']/connections"><!--Wastelands-->
+		<connection name="Zone_Gate1_Cluster_405_Sector001_connection" ref="zones">
+			<offset>
+				<position x="153405" y="0" z="-10085"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_405_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>		
 
 	<!-- Sector 406 - Zyarth's Dominion X -->
 	<replace sel="/macros/macro[@name='Cluster_406_Sector001_macro']/connections/connection[@name='Zone002_Cluster_406_Sector001_connection']/offset"><!--Zyarth's Dominion I-->
@@ -301,7 +309,7 @@
 	</add>		
 	<replace sel="/macros/macro[@name='Cluster_416_Sector002_macro']/connections/connection[@name='Zone005_Cluster_416_Sector002_connection']/offset"><!--Eleventh Hour-->
 		<offset>	
-          <position x="5410" y="0" z="126085" />	
+          <position x="5410" y="0" z="96085" />	
 		</offset>
 	</replace>
 	<add sel="//macro[@name='Cluster_416_Sector002_macro']/connections"><!--Elena's Fortune-->
@@ -346,17 +354,25 @@
 	</replace>
 	<replace sel="/macros/macro[@name='Cluster_418_Sector001_macro']/connections/connection[@name='Zone004_Cluster_418_Sector001_connection']/offset"><!--Open Market-->
 		<offset>	
-          <position x="186075" y="0" z="-36465" />	
+          <position x="186075" y="0" z="86465" />	
 		</offset>
 	</replace>
+	<add sel="//macro[@name='Cluster_418_Sector001_macro']/connections"><!--Zyarth's Dominion IV-->
+		<connection name="Zone_Gate1_Cluster_418_Sector001_connection" ref="zones">
+			<offset>
+				<position x="44000" y="0" z="-127500"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_418_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>	
 
 	<!-- Sector 419 - Open Market -->
 	<replace sel="/macros/macro[@name='Cluster_419_Sector001_macro']/connections/connection[@name='Zone001_Cluster_419_Sector001_connection']/offset"><!--Family Nhuut-->
 		<offset>	
-          <position x="-21915" y="0" z="138945" />			  
+          <position x="-26915" y="0" z="108945" />			  
 		</offset>
 	</replace>	
-	<replace sel="/macros/macro[@name='Cluster_419_Sector001_macro']/connections/connection[@name='Zone002_Cluster_419_Sector001_connection']/offset"><!--Zyarth's Dominion IV-->
+	<replace sel="/macros/macro[@name='Cluster_419_Sector001_macro']/connections/connection[@name='Zone002_Cluster_419_Sector001_connection']/offset">
 		<offset>	
           <position x="-132790" y="0" z="-94290" />	
 		</offset>
@@ -370,22 +386,22 @@
 	<!-- Sector 420 - Two Grand -->
 	<replace sel="/macros/macro[@name='Cluster_420_Sector001_macro']/connections/connection[@name='Zone001_Cluster_420_Sector001_connection']/offset"><!--Open Market-->
 		<offset>	
-          <position x="-114153.03125" y="0" z="116118.703125" />
+          <position x="-114155" y="0" z="116125" />
 		</offset>
 	</replace>
 	<replace sel="/macros/macro[@name='Cluster_420_Sector001_macro']/connections/connection[@name='Zone002_Cluster_420_Sector001_connection']/offset"><!--Guiding Star V-->
 		<offset>	
-          <position x="-86050" y="0" z="-129545" />
+          <position x="-16050" y="0" z="-129545" />
 		</offset>
 	</replace>
-	<replace sel="/macros/macro[@name='Cluster_420_Sector001_macro']/connections/connection[@name='Zone004_Cluster_420_Sector001_connection']/offset"><!--Fires of Defeat-->
+	<replace sel="/macros/macro[@name='Cluster_420_Sector001_macro']/connections/connection[@name='Zone004_Cluster_420_Sector001_connection']/offset">
 		<offset>	
-          <position x="214000" y="0" z="-35615" />	
+          <position x="114000" y="0" z="-35615" />	
 		</offset>
 	</replace>
-	<replace sel="/macros/macro[@name='Cluster_420_Sector001_macro']/connections/connection[@name='Zone005_Cluster_420_Sector001_connection']/offset"><!--Profit Center Alpha-->
+	<replace sel="/macros/macro[@name='Cluster_420_Sector001_macro']/connections/connection[@name='Zone005_Cluster_420_Sector001_connection']/offset"><!--Aladna Hill-->
 		<offset>	
-          <position x="100675" y="0" z="126135" />			  
+          <position x="80675" y="0" z="126135" />			  
 		</offset>
 	</replace>
 	
@@ -422,7 +438,7 @@
           <position x="128030" y="0" z="93830" />	
 		</offset>
 	</replace>
-	<add sel="//macro[@name='Cluster_422_Sector001_macro']/connections"><!--Wretched Skies II-->
+	<add sel="//macro[@name='Cluster_422_Sector001_macro']/connections"><!--Wretched Skies XII-->
 		<connection name="Zone_Gate_Cluster_422_Sector001_connection" ref="zones">
 			<offset>
 				<position x="0" y="0" z="-97250"/>
@@ -437,7 +453,7 @@
           <position x="-101155" y="0" z="56120" />	
 		</offset>
 	</replace>
-	<replace sel="/macros/macro[@name='Cluster_423_Sector001_macro']/connections/connection[@name='Zone004_Cluster_423_Sector001_connection']/offset"><!--LooMankStrat's Legacy-->
+	<replace sel="/macros/macro[@name='Cluster_423_Sector001_macro']/connections/connection[@name='Zone004_Cluster_423_Sector001_connection']/offset"><!--Fierce Clarity-->
 		<offset>	
           <position x="131725" y="0" z="-121125" />	
 		</offset>

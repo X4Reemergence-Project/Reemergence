@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="bullet_otas_turret_l_palc_macro" class="bullet">
+    <component ref="bullet_otas_turret_l_palc" />
+    <properties>
+	<ammunition value="6" reload="6" />	
+      <bullet speed="99000" lifetime="0.5" range="13150" amount="1" barrelamount="1" icon="weapon_beam_mk2"  timediff="0.1" maxhits="1" ricochet="0" scale="1" attach="1" >
+        <damagecurves>
+          <distance>
+            <point position="0" value="1" />
+            <point position="0.7" value="1" />
+            <point position="1" value="0.3" />
+          </distance>
+        </damagecurves>
+      </bullet>	  
+      <reload rate="6" /> 
+      <damage value="975" noshield="225" repair="0" />	  
+      <effects>
+        <impact ref="impact_otas_turret_l_palc" />
+        <launch ref="muzzle_otas_turret_l_palc" /> 
+      </effects>  
+      <weapon system="turret_mediumrange" />
+    </properties>
+  </macro>
+</macros>

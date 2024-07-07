@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="bullet_pirate_turret_l_ibl_macro" class="bullet">
+    <component ref="bullet_pirate_turret_l_ibl" />
+    <properties>
+      <bullet speed="3000" lifetime="5" icon="weapon_sticky_mk2" barrelamount="1" timediff="0.015" angle="0.3" maxhits="1" ricochet="0" piratele="0" attach="0" sticktime="5" />
+      <reload rate="0.25" />
+      <areadamage value="2500" />
+      <damage value="2500" hull="2500" />
+      <effects>
+        <impact ref="explosion_flak" />
+        <launch ref="muzzle_pirate_turret_ibl" />
+      </effects>	  
+      <weapon system="turret_longrange" />
+    </properties>
+  </macro>
+</macros>

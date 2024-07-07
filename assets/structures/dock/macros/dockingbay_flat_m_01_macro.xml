@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: Matthias (192.168.3.69) at 19.06.2020_13-29-37-->
+<macros>
+  <macro name="dockingbay_flat_m_01_macro" class="dockingbay">
+    <component ref="dockingbay_flat_m_01" />
+    <properties>
+      <identification name="{20104,72901}" shortname="{20104,72903}" description="{20104,72902}" />
+      <translationspeed max="10" />
+      <translationacceleration max="3" />
+      <effects>
+        <cargotube attach="dock_m_cargotube_attach" detach="dock_m_cargotube_detach" />
+        <landing ref="ship_blowout_size_m">
+          <curve>
+            <point position="0" value="0" />
+            <point position="1" value="1" />
+            <point position="40" value="0" />
+          </curve>
+        </landing>
+      </effects>
+      <dock external="1" />
+      <docksize tags="dock_m" />
+    </properties>
+  </macro>
+</macros>

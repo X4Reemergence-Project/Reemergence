@@ -324,6 +324,100 @@
 	  <select faction="xenon" tags="fighterpilot"/>
 	</pilot>
 	<drop ref="ship_small_xenon"/>
-  </ship>    
+  </ship> 
+
+  <!--FALLEN FAMILIES-->
+  <ship id="faf_fleet_re" group="faf_fleet_re">
+    <category tags="[military, fleet, faf]" faction="[fallensplit]" />
+    <owner exact="fallensplit" overridenpc="true"/>
+    <pilot>
+      <select faction="split" tags="fighterpilot"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_large_military"/>
+    <people ref="split_elite_military_crew"/>
+  </ship> 
+  <ship id="faf_military_l_re" group="faf_military_l_re">
+    <category tags="[military, large, faf]" faction="[fallensplit]" size="ship_l"/>
+    <owner exact="fallensplit" overridenpc="true"/>
+    <pilot>
+      <select faction="split" tags="fighterpilot"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_large_military"/>
+    <people ref="split_veteran_military_crew"/>
+  </ship> 
+  <ship id="faf_military_m_re" group="faf_military_m_re">
+    <category tags="[military, medium, faf]" faction="[fallensplit]" size="ship_m"/>
+    <owner exact="fallensplit" overridenpc="true"/>
+    <pilot>
+      <select faction="split" tags="fighterpilot"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_small_military"/>
+    <people ref="split_veteran_military_crew"/>
+  </ship> 
+  <ship id="faf_military_s_re" group="faf_military_s_re">
+    <category tags="[military, small, faf]" faction="[fallensplit]" size="ship_s"/>
+    <owner exact="fallensplit" overridenpc="true"/>
+    <pilot>
+      <select faction="split" tags="fighterpilot"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_small_military"/>
+    <people ref="split_military_crew"/>
+  </ship>   
+  
+  <!--SCALEPLATE-->
+  <ship id="sca_extralarge_re" group="sca_extralarge_re">
+    <category tags="[military, extralarge, sca]" faction="[scaleplate]" size="ship_xl"/>
+    <owner exact="scaleplate" overridenpc="true"/>
+    <pilot>
+      <select faction="scaleplate" tags="commander"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_large_military"/>
+    <people ref="scaleplate_pirate_crew"/>
+  </ship>  
+  <ship id="sca_large_re" group="sca_large_re">
+    <category tags="[military, large, sca]" faction="[scaleplate]" size="ship_l"/>
+    <owner exact="scaleplate" overridenpc="true"/>
+    <pilot>
+      <select faction="scaleplate" tags="commander"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_large_military"/>
+    <people ref="scaleplate_pirate_crew"/>
+  </ship>
+  <ship id="sca_medium_re" group="sca_medium_re">
+    <category tags="[military, medium, sca]" faction="[scaleplate]" size="ship_m"/>
+    <owner exact="scaleplate" overridenpc="true"/>
+    <pilot>
+      <select faction="scaleplate" tags="fighterpilot"/>
+    </pilot>
+    <basket basket="pirate_container"/>	
+    <drop ref="ship_small_pirate"/>
+    <people ref="scaleplate_pirate_crew"/>
+  </ship>  
+  <ship id="sca_small_re" group="sca_small_re">
+    <category tags="[military, small, sca]" faction="[scaleplate]" size="ship_s"/>
+    <pilot>
+      <select faction="scaleplate" tags="fighterpilot"/>
+    </pilot>
+    <basket basket="pirate_container"/>	
+    <drop ref="ship_small_pirate"/>
+    <people ref="scaleplate_pirate_crew"/>
+  </ship>  
+  
+  <!--YAKI-->
+  <ship id="yaki_military_l_re" group="yaki_military_l_re">
+    <category tags="[military, small, yaki]" faction="[yaki]" size="ship_l"/>
+    <pilot>
+      <select faction="yaki" tags="fighterpilot"/>
+    </pilot>
+    <basket basket="pirate_container"/>	
+    <drop ref="ship_large_military"/>
+    <people ref="yaki_elite_military_crew"/>
+  </ship>   
 </add>
 </diff>
