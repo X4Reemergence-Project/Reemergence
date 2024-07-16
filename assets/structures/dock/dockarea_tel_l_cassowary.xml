@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <components>
 	<component name="dockarea_tel_l_cassowary" class="dockarea">
-		<source geometry="assets\structures\dock\\dockarea_arg_s_01_data"/>
+		<source geometry="assets\structures\dock\\dockarea_arg_s_ship_01_data"/>
 		<layers>
 			<layer>
 				<waypoints>
@@ -22,7 +22,7 @@
 			<connection name="space" tags="dockarea">
 				<offset/>
 			</connection>
-			<connection name="Connection01" hidden="true" tags="part nocollision  ">
+			<connection name="Connection01" tags="part noshadowcaster dockarea component platformcollision  ">
 				<offset/>
 				<parts>
 					<part name="part_main" wreck="part_main_wreck">
