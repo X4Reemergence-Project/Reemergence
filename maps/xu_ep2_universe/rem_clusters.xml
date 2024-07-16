@@ -568,6 +568,17 @@
 						<region ref="rem16_field1" />
 					</properties>
 					</macro>
+				</connection>	
+				<connection name="REM16_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM16_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem16_field2" />
+					</properties>
+					</macro>
 				</connection>				
 			</connections>
 		</macro>
@@ -1923,7 +1934,7 @@
 					<macro name="REM48_Sector001_Region001_macro">
 					<component connection="cluster" ref="standardregion" />
 					<properties>
-						<region ref="rem48_field" />
+						<region ref="rem48_field1" />
 					</properties>
 					</macro>
 				</connection>				
@@ -1932,6 +1943,17 @@
 						<position x="26673982" y="0" z="-55409964" />
 					</offset>
 					<macro ref="Cluster_REM48_Sector002_macro" connection="cluster" />
+				</connection>
+				<connection name="REM48_Sector002_Region001_connection" ref="regions">
+					<offset>
+						<position x="26673982" y="0" z="-55409964" />
+					</offset>
+					<macro name="REM48_Sector002_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem48_field2" />
+					</properties>
+					</macro>
 				</connection>
 				<connection name="SuperHighway001_Cluster_REM48_connection" ref="sechighways">
 					<offset>
@@ -1965,7 +1987,7 @@
 				</connection>					
 			</connections>
 		</macro>	
-	<!--SECTOR REM49 - DUKE'S VISION I-->
+	<!--SECTOR REM49 - DUKE'S VISION -->
 		<macro name="Cluster_REM49_macro" class="cluster">
 			<component ref="standardcluster" />
 			<connections>
@@ -1984,13 +2006,24 @@
 					<macro name="REM49_Sector001_Region001_macro">
 					<component connection="cluster" ref="standardregion" />
 					<properties>
-						<region ref="rem49_field" />
+						<region ref="rem49_field1" />
+					</properties>
+					</macro>
+				</connection>
+				<connection name="REM49_Sector001_Region002_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM49_Sector001_Region002_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem49_field2" />
 					</properties>
 					</macro>
 				</connection>				
 			</connections>
 		</macro>	
-	<!--SECTOR REM50 - DUKE'S VISION II-->
+	<!--SECTOR REM50 - EMPEROR'S WISDOM-->
 		<macro name="Cluster_REM50_macro" class="cluster">
 			<component ref="standardcluster" />
 			<connections>
@@ -2001,9 +2034,20 @@
 				</connection>
 				<connection name="Cluster_REM50_Sector001_connection" ref="sectors">
 					<macro ref="Cluster_REM50_Sector001_macro" connection="cluster" />
-				</connection>					
+				</connection>
+				<connection name="REM50_Sector001_Region001_connection" ref="regions">
+					<offset>
+						<position x="0" y="0" z="0" />
+					</offset>
+					<macro name="REM50_Sector001_Region001_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="rem50_field" />
+					</properties>
+					</macro>
+				</connection>				
 			</connections>
-		</macro>		
+		</macro>			
 	<!--SECTOR REM51 - FIERCE CLARITY-->
 		<macro name="Cluster_REM51_macro" class="cluster">
 			<component ref="standardcluster" />

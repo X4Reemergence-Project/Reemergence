@@ -22,35 +22,45 @@
 		</do_elseif>
 	 </add>		
 	<!--Boron Stations-->
-	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='@$DesiredShipyardPatchMarker']" pos="after">
+	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='[faction.argon, faction.antigone, faction.hatikvah, faction.paranid, faction.holyorder].indexof.{$Faction}']" pos="after">
 		<do_elseif value="$Faction == faction.boron">
-			<set_value name="$DesiredShipyards" exact="1"/>
+			<set_value name="$DesiredShipyards" exact="2"/>
 		</do_elseif>
 	 </add>
-	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='@$DesiredWharfPatchMarker']" pos="after">
+	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='[faction.argon, faction.antigone, faction.hatikvah, faction.paranid, faction.holyorder].indexof.{$Faction}']" pos="after">
 		<do_elseif value="$Faction == faction.boron">
-			<set_value name="$DesiredWharfs" exact="1"/>
+			<set_value name="$DesiredWharfs" exact="3"/>
 		</do_elseif>
 	 </add>	
 	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='[faction.argon, faction.antigone, faction.hatikvah, faction.paranid, faction.holyorder].indexof.{$Faction}']" pos="after">
 		<do_elseif value="$Faction == faction.boron">
-			<set_value name="$DesiredTradeStation" exact="1"/>
+			<set_value name="$DesiredEquipmentDocks" exact="2"/>
+		</do_elseif>
+	 </add>	  	 
+	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='[faction.argon, faction.antigone, faction.hatikvah, faction.paranid, faction.holyorder].indexof.{$Faction}']" pos="after">
+		<do_elseif value="$Faction == faction.boron">
+			<set_value name="$DesiredTradeStation" exact="7"/>
 		</do_elseif>
 	 </add>		 
 	<!--Split Stations-->
 	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='@$DesiredShipyardPatchMarker']" pos="after">
 		<do_elseif value="$Faction == faction.split">
-			<set_value name="$DesiredShipyards" exact="1"/>
+			<set_value name="$DesiredShipyards" exact="2"/>
 		</do_elseif>
 	 </add>
 	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='@$DesiredWharfPatchMarker']" pos="after">
 		<do_elseif value="$Faction == faction.split">
-			<set_value name="$DesiredWharfs" exact="1"/>
+			<set_value name="$DesiredWharfs" exact="3"/>
 		</do_elseif>
-	 </add>	
+	 </add>
 	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='[faction.argon, faction.antigone, faction.hatikvah, faction.paranid, faction.holyorder].indexof.{$Faction}']" pos="after">
 		<do_elseif value="$Faction == faction.split">
-			<set_value name="$DesiredTradeStation" exact="1"/>
+			<set_value name="$DesiredEquipmentDocks" exact="3"/>
+		</do_elseif>
+	 </add>	 	 
+	 <add sel="/mdscript/cues/library[@name='Manage_Stations']/cues/cue[@name='Process']/cues/cue[@name='Analyse_Stations']/actions/do_elseif[@value='[faction.argon, faction.antigone, faction.hatikvah, faction.paranid, faction.holyorder].indexof.{$Faction}']" pos="after">
+		<do_elseif value="$Faction == faction.split">
+			<set_value name="$DesiredTradeStation" exact="3"/>
 		</do_elseif>
 	 </add>		
 	<!--Xenon Stations-->

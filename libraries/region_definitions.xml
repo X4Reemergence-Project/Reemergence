@@ -488,24 +488,35 @@
   </region>
 <!--REM11 Tempting Fumes-->
   <region name="rem11_field" density="0.25" rotation="0" noisescale="15000" seed="44" minnoisevalue="0.15" maxnoisevalue="1">
-    <boundary class="box">
-      <size x="600000" y="25000" z="600000" />
+    <boundary class="cylinder">
+      <size r="1250000" linear="50000" />
     </boundary>
     <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
+        <step position="1.0" value="0.0" />
+      </radial>
     </falloff>
     <fields>
       <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1"/>
       <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.005" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.0" backgroundfog="false" resources="methane" fogdistance="15000"/>	  
-      <asteroid groupref="asteroid_ore_xxl" lodrule="asteroidxl" densityfactor="0.08" rotation="360" rotationvariation="4" noisescale="5000" seed="42" minnoisevalue="0.7" maxnoisevalue="0.8"/>
-      <asteroid groupref="asteroid_ore_xl" lodrule="asteroidxl" densityfactor="0.09" rotation="360" rotationvariation="4" noisescale="5000" seed="42" minnoisevalue="0.75" maxnoisevalue="0.8"/>
-      <asteroid groupref="asteroid_silicon_l" densityfactor="0.2" rotation="360" rotationvariation="4" noisescale="5000" seed="42" minnoisevalue="0.6" maxnoisevalue="1"/>	  
-      <asteroid groupref="asteroid_silicon_xl" lodrule="asteroidxl" densityfactor="0.06" rotation="360" rotationvariation="4" noisescale="5000" seed="42" minnoisevalue="0.75" maxnoisevalue="0.8"/>
-      <asteroid groupref="asteroid_ore_l" densityfactor="0.3" rotation="360" rotationvariation="4" noisescale="5000" seed="42" minnoisevalue="0.4" maxnoisevalue="0.8"/>
+      <asteroid groupref="asteroid_ice_l" densityfactor="1.3" rotation="0" rotationvariation="8" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ice_m" densityfactor="4.8" rotation="0" rotationvariation="16" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ice_s" densityfactor="6.4" rotation="0" rotationvariation="32" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ice_xs" densityfactor="0.95" rotation="0" rotationvariation="64" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="ore" yield="medlow" />
-      <resource ware="silicon" yield="medlow" />
-      <resource ware="methane" yield="low" />	  
+      <resource ware="ice" yield="low" />
+      <resource ware="methane" yield="medium" />	  
     </resources>
   </region>   
 <!--REM12 Split Fire-->
@@ -646,6 +657,34 @@
       <resource ware="helium" yield="low" />
     </resources>
   </region>
+  <region name="rem16_field2" density="0.75" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="cylinder">
+      <size r="3500000" linear="60000" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.50" />
+        <step position="0.4" value="0.50" />
+        <step position="0.5" value="1.0" />
+        <step position="0.6" value="0.50" />
+        <step position="1.0" value="0.50" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.9" value="0.30" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <asteroid groupref="asteroid_ice_l" densityfactor="1.3" rotation="0" rotationvariation="1" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ice_m" densityfactor="4.8" rotation="0" rotationvariation="2" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ice_s" densityfactor="6.4" rotation="0" rotationvariation="4" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ice_xs" densityfactor="0.05" rotation="0" rotationvariation="8" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>
+    </fields>
+    <resources>
+      <resource ware="ice" yield="verylow" />
+    </resources>
+  </region>    
 <!--REM17 Shining Currents-->
   <region name="rem17_field" density="0.10" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="sphere">
@@ -1755,19 +1794,6 @@
     </fields>
   </region>   
 <!--REM46 Recovered Capital-->
-  <region name="rem46_field" density="0.05" rotation="0" noisescale="10000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
-    <boundary class="sphere">
-      <size r="750000" />
-    </boundary>
-    <falloff>
-    </falloff>
-    <fields>
-      <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.075" uniformred="10" uniformgreen="14" uniformblue="20" uniformdensity="0.3" backgroundfog="false" resources="methane" />
-    </fields>
-    <resources>
-      <resource ware="methane" yield="medium" />
-    </resources>
-  </region>
 <!--REM47 Spaceweed Grove--> 
   <region name="rem47_field" density="0.2" rotation="0" noisescale="50000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="cylinder">
@@ -1803,24 +1829,98 @@
       <resource ware="rawscrap" yield="medium" />
     </resources>
   </region>   
-<!--REM48 Wretched Skies II/VII-->
-  <region name="rem48_field" density="0.15" rotation="0" noisescale="10000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
+<!--REM48 Wretched Skies XII/XV-->
+  <region name="rem48_field1" density="0.05" rotation="0" noisescale="10000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="sphere">
       <size r="750000" />
     </boundary>
     <falloff>
     </falloff>
     <fields>
+      <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.075" uniformred="10" uniformgreen="14" uniformblue="20" uniformdensity="0.3" backgroundfog="false" resources="methane" />
+    </fields>
+    <resources>
+      <resource ware="methane" yield="medium" />
+    </resources>
+  </region>
+  <region name="rem48_field2" density="0.1" rotation="0" noisescale="50000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="cylinder">
+      <size r="1250000" linear="50000" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1"/>
+      <!--Lockboxes end-->  	  
+
+      <debris groupref="debris_paranid_xl" densityfactor="0.005" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1"/>
+      <debris groupref="debris_paranid_l" densityfactor="0.15" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1"/>	  
+      <debris groupref="debris_split_xl" densityfactor="0.005" rotation="360" rotationvariation="1" noisescale="10000" seed="42" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
+      <debris groupref="debris_split_s" densityfactor="4.5" rotation="360" rotationvariation="10" noisescale="10000" seed="42" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
+      <debris groupref="debris_s" densityfactor="0.75" rotation="360" rotationvariation="10" noisescale="10000" seed="666" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
+    </fields>
+    <resources>	 	
+      <resource ware="rawscrap" yield="medium" />
+    </resources>
+  </region>  
+<!--REM49 Duke's Vision -->  
+  <region name="rem49_field1" density="0.1" rotation="0" noisescale="15000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="cylinder">
+      <size r="1250000" linear="50000" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
       <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.075" uniformred="10" uniformgreen="14" uniformblue="20" uniformdensity="0.3" backgroundfog="false" resources="hydrogen" />
       <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.075" uniformred="10" uniformgreen="14" uniformblue="20" uniformdensity="0.3" backgroundfog="false" resources="helium" />	  
     </fields>
-    <resources>
+    <resources>	 
       <resource ware="helium" yield="low" />
-      <resource ware="hydrogen" yield="low" />	  
+      <resource ware="hydrogen" yield="low" />	
     </resources>
-  </region> 
-<!--REM49 Duke's Vision I-->  
-  <region name="rem49_field" density="0.75" rotation="0" noisescale="15000" seed="42" minnoisevalue="0.15" maxnoisevalue="1">
+  </region>
+  <region name="rem49_field2" density="0.05" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="sphere">
+      <size r="750000" />
+    </boundary>
+    <falloff>
+    </falloff>
+    <fields>
+      <asteroid groupref="asteroid_ore_nores_l" densityfactor="0.25" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ore_nores_m" densityfactor="0.5" rotation="360" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ore_nores_s" densityfactor="0.5" rotation="360" rotationvariation="16" noisescale="1500" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ore_nores_xs" densityfactor="0.5" rotation="360" rotationvariation="32" noisescale="1500" seed="8888" minnoisevalue="0.65" maxnoisevalue="1"/>
+    </fields>
+  </region>  
+<!--REM50 Emperor's Wisdom-->
+  <region name="rem50_field" density="0.75" rotation="0" noisescale="15000" seed="42" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="cylinder">
       <size r="500000" linear="40000" />
     </boundary>
@@ -1852,8 +1952,7 @@
       <resource ware="ore" yield="verylow" />
       <resource ware="silicon" yield="verylow" />
     </resources>
-  </region> 
-<!--REM50 Duke's Vision II-->  
+  </region>   
 <!--REM51 Fierce Clarity-->
   <region name="rem51_field" density="0.60" rotation="0" noisescale="50000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="cylinder">
@@ -2047,24 +2146,11 @@
     </resources>
   </region> 	  
 <!--REM56 Aladna Hill-->
-  <region name="rem56_field" density="0.4" rotation="0" noisescale="15000" seed="44" minnoisevalue="0.15" maxnoisevalue="1">
-    <boundary class="cylinder">
-      <size r="500000" linear="40000" />
+  <region name="rem56_field" density="0.15" rotation="0" noisescale="15000" seed="44" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="sphere">
+      <size r="750000" />
     </boundary>
     <falloff>
-      <lateral>
-        <step position="0.0" value="0.0" />
-        <step position="0.4" value="1.0" />
-        <step position="0.45" value="0.0" />
-        <step position="0.55" value="0.0" />
-        <step position="0.6" value="1.0" />
-        <step position="1.0" value="0.0" />
-      </lateral>
-      <radial>
-        <step position="0.0" value="1.0" />
-        <step position="0.9" value="0.70" />
-        <step position="1.0" value="0.0" />
-      </radial>
     </falloff>
     <fields>
       <nebula ref="fogpattern_v2_macro" localred="200" localgreen="189" localblue="149" localdensity="0.005" uniformred="20" uniformgreen="14" uniformblue="18" uniformdensity="0.43" backgroundfog="false" resources="hydrogen" />
@@ -2072,20 +2158,17 @@
 
       <asteroid groupref="asteroid_ore_xxl" lodrule="asteroidxl" densityfactor="0.03" rotation="360" rotationvariation="4" noisescale="20000" seed="1309" minnoisevalue="0.8" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_ore_xl" lodrule="asteroidxl" densityfactor="0.04" rotation="360" rotationvariation="4" noisescale="20000" seed="1309" minnoisevalue="0.7" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_xl" lodrule="asteroidxl" densityfactor="0.04" rotation="360" rotationvariation="4" noisescale="20000" seed="1309" minnoisevalue="0.7" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_ore_l" densityfactor="0.3" rotation="360" rotationvariation="4" noisescale="25000" seed="30041982" minnoisevalue="0.6" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_l" densityfactor="0.4" rotation="360" rotationvariation="4" noisescale="25000" seed="30041982" minnoisevalue="0.6" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="ore" yield="medium" />
-      <resource ware="silicon" yield="medium" />
+      <resource ware="ore" yield="medlow" />
       <resource ware="hydrogen" yield="medium" />
     </resources>
   </region>
 <!--REM57 Light of Heart-->
   <region name="rem57_field" density="0.10" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="sphere">
-      <size r="2750000" />
+      <size r="750000" />
     </boundary>
     <falloff>
     </falloff>
@@ -2105,20 +2188,18 @@
 <!--REM58 Montalaar-->
   <region name="rem58_field" density="0.05" rotation="0" noisescale="15000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="cylinder">
-      <size r="500000" linear="50000" />
+      <size r="750000" linear="8000" />
     </boundary>
     <falloff>
       <lateral>
-        <step position="0.0" value="0.0" />
-        <step position="0.1" value="1.0" />
-        <step position="0.9" value="1.0" />
-        <step position="1.0" value="0.0" />
+        <step position="0.0" value="1.0" />
+        <step position="1.0" value="1.0" />
       </lateral>
       <radial>
         <step position="0.0" value="1.0" />
         <step position="0.3" value="1.0" />
         <step position="0.5" value="0.9" />
-        <step position="0.9" value="0.4" />
+        <step position="0.9" value="0.8" />
         <step position="1.0" value="0.0" />
       </radial>
     </falloff>
@@ -2229,15 +2310,13 @@
       </radial>
     </falloff>
     <fields>
-      <asteroid groupref="asteroid_ore_xxl" lodrule="asteroidxl" densityfactor="0.005" rotation="360" rotationvariation="4" noisescale="20000" seed="1309" minnoisevalue="0.8" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_ore_xl" lodrule="asteroidxl" densityfactor="0.01" rotation="360" rotationvariation="4" noisescale="20000" seed="1309" minnoisevalue="0.7" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_xl" lodrule="asteroidxl" densityfactor="0.05" rotation="360" rotationvariation="4" noisescale="20000" seed="1309" minnoisevalue="0.7" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_ore_l" densityfactor="0.1" rotation="360" rotationvariation="4" noisescale="25000" seed="30041982" minnoisevalue="0.8" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_l" densityfactor="0.1" rotation="360" rotationvariation="4" noisescale="25000" seed="30041982" minnoisevalue="0.8" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ore_nores_xl" lodrule="asteroidxl" densityfactor="0.01" rotation="360" rotationvariation="4" noisescale="20000" seed="1309" minnoisevalue="0.7" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_silicon_l" densityfactor="0.002" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1"/>	
+      <asteroid groupref="asteroid_ore_nores_l" densityfactor="0.1" rotation="360" rotationvariation="4" noisescale="25000" seed="30041982" minnoisevalue="0.8" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_silicon_m" densityfactor="0.1" rotation="360" rotationvariation="4" noisescale="25000" seed="30041982" minnoisevalue="0.8" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="ore" yield="low" />
-      <resource ware="silicon" yield="verylow" /> 
+      <resource ware="silicon" yield="low" /> 
     </resources>
   </region>    
 <!--REM61 Patriarch's Conclusion-->
@@ -2265,9 +2344,7 @@
       <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1"/>
       <!--Lockboxes end-->  
       <asteroid groupref="asteroid_ore_l" densityfactor="0.2" rotation="360" rotationvariation="4" noisescale="15000" seed="42" minnoisevalue="0.85" maxnoisevalue="1" distancefactor="2.0"/>
-      <asteroid groupref="asteroid_silicon_l" densityfactor="0.12" rotation="360" rotationvariation="4" noisescale="15000" seed="42" minnoisevalue="0.85" maxnoisevalue="1" distancefactor="2.0"/>
-      <asteroid groupref="asteroid_ore_nores_xl" lodrule="asteroidxl" densityfactor="0.025" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1" distancefactor="2.0"/>	
-      <asteroid groupref="asteroid_silicon_nores_xl" lodrule="asteroidxl" densityfactor="0.015" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1" distancefactor="2.0"/>	  
+      <asteroid groupref="asteroid_ore_nores_xl" lodrule="asteroidxl" densityfactor="0.025" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1" distancefactor="2.0"/>		  
 	  
       <debris groupref="debris_split_xl" densityfactor="0.01" rotation="360" rotationvariation="1" noisescale="10000" seed="42" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
       <debris groupref="debris_split_s" densityfactor="4.5" rotation="360" rotationvariation="10" noisescale="10000" seed="42" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
@@ -2276,8 +2353,7 @@
       <debris groupref="debris_s" densityfactor="0.75" rotation="360" rotationvariation="10" noisescale="10000" seed="666" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
     </fields>
     <resources>	 
-      <resource ware="ore" yield="lowest" />
-      <resource ware="silicon" yield="lowest" />	
+      <resource ware="ore" yield="lowest" />	
       <resource ware="rawscrap" yield="medium" />
     </resources>
   </region>    
@@ -2306,13 +2382,10 @@
       <asteroid groupref="asteroid_nividium_l" densityfactor="1.25" rotation="360" rotationvariation="4" noisescale="15000" seed="7130977" minnoisevalue="0.925" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_ore_xl" lodrule="asteroidxl" densityfactor="1" rotation="360" rotationvariation="4" noisescale="15000" seed="7130977" minnoisevalue="0.9" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_ore_l" densityfactor="0.9" rotation="360" rotationvariation="4" noisescale="15000" seed="7130977" minnoisevalue="0.85" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_l" densityfactor="1.1" rotation="360" rotationvariation="4" noisescale="15000" seed="7130977" minnoisevalue="0.85" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_ore_m" densityfactor="0.3" rotation="360" rotationvariation="8" noisescale="15000" seed="7130977" minnoisevalue="0.75" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_m" densityfactor="0.5" rotation="360" rotationvariation="8" noisescale="15000" seed="7130977" minnoisevalue="0.75" maxnoisevalue="1"/>
     </fields>
     <resources>
       <resource ware="ore" yield="low" />
-      <resource ware="silicon" yield="low" />
       <resource ware="nividium" yield="medium" />
       <resource ware="hydrogen" yield="low" />	  
     </resources>
@@ -2374,11 +2447,9 @@
       <asteroid groupref="asteroid_ore_nores_l" densityfactor="0.5" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_ore_nores_m" densityfactor="1" rotation="360" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_silicon_nores_l" densityfactor="0.5" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_ore_xl" lodrule="asteroidxl" densityfactor="0.014" rotation="360" rotationvariation="4" noisescale="5000" seed="42" minnoisevalue="0.75" maxnoisevalue="0.8"/>
       <asteroid groupref="asteroid_silicon_l" densityfactor="0.002" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1"/>	  
     </fields>
     <resources>
-      <resource ware="ore" yield="low" />
       <resource ware="silicon" yield="low" />
     </resources>
   </region> 
@@ -2471,7 +2542,7 @@
       <asteroid groupref="asteroid_nividium_l" densityfactor="0.45" rotation="360" rotationvariation="4" noisescale="50000" seed="666" minnoisevalue="0.5" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="nividium" yield="low" />  
+      <resource ware="nividium" yield="high" />  
     </resources>
   </region>  
 <!--REM68 Kha'ak Beta-->
@@ -2493,7 +2564,7 @@
       <asteroid groupref="asteroid_nividium_l" densityfactor="0.65" rotation="360" rotationvariation="4" noisescale="50000" seed="666" minnoisevalue="0.5" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="nividium" yield="low" />  
+      <resource ware="nividium" yield="high" />  
     </resources>
   </region>  
 <!--REM69 Kha'ak Gamma--> 
@@ -2515,7 +2586,7 @@
       <asteroid groupref="asteroid_nividium_l" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="50000" seed="666" minnoisevalue="0.5" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="nividium" yield="low" />  
+      <resource ware="nividium" yield="high" />  
     </resources>
   </region>
 <!--REM70 Unknown Kha'ak Sector-->
@@ -2583,31 +2654,37 @@
     <falloff>
     </falloff>
     <fields>
-      <positional ref="fog_outside_set7_macro" lodrule="nebula" densityfactor="50.0" rotation="360" rotationvariation="5.0" noisescale="1000" seed="3214" minnoisevalue="0.80" maxnoisevalue="1" distancefactor="0.10"/>	
-      <!--positional ref="fog_outside_set1_lightorange_macro" lodrule="nebula" densityfactor="0.5" rotation="360" rotationvariation="2.5" noisescale="1000" seed="666" minnoisevalue="0.10" maxnoisevalue="0.5" distancefactor="0.5"/-->
-      <volumetricfog multiplier="0.0015" medium="fog_blue_mist" texture="assets/textures/environments/volumefog/vf_chunky_diff" lodrule="nebulafar" size="40000" sizevariation="0.25" densityfactor="0.015" rotation="360" rotationvariation="15.0" noisescale="1000" seed="8888" minnoisevalue="0.0" maxnoisevalue="1.0" distancefactor="0.3"/>
-      <volumetricfog multiplier="0.55" medium="fog_purplethin" texture="assets/textures/environments/volumefog/vf_chunky_diff" lodrule="nebulafar" size="40000" sizevariation="0.05" densityfactor="0.08" rotation="360" rotationvariation="25.0" noisescale="1000" seed="420" minnoisevalue="0.0" maxnoisevalue="0.5" distancefactor="0.4"/>		  
+      <positional ref="fog_outside_set7_macro" lodrule="nebula" densityfactor="25.0" rotation="360" rotationvariation="5.0" noisescale="1000" seed="3214" minnoisevalue="0.80" maxnoisevalue="1" distancefactor="0.10"/>			  
     </fields>
   </region>
   <region name="rem72_field2" density="0.35" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
-    <boundary class="sphere">
-      <size r="500000" />
+    <boundary class="cylinder">
+      <size r="1500000" linear="75000" />
     </boundary>
     <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
+        <step position="1.0" value="0.0" />
+      </radial>
     </falloff>
     <fields>
-      <asteroid groupref="asteroid_ore_nores_l" densityfactor="0.25" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_ore_nores_m" densityfactor="0.25" rotation="360" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_ore_nores_s" densityfactor="0.1" rotation="360" rotationvariation="16" noisescale="1500" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_ore_nores_xs" densityfactor="0.1" rotation="360" rotationvariation="32" noisescale="1500" seed="8888" minnoisevalue="0.65" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_nores_l" densityfactor="0.25" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_nores_m" densityfactor="0.25" rotation="360" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_nores_s" densityfactor="0.1" rotation="360" rotationvariation="16" noisescale="1500" seed="8888" minnoisevalue="0.5" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_silicon_nores_xs" densityfactor="0.1" rotation="360" rotationvariation="32" noisescale="1500" seed="8888" minnoisevalue="0.35" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_nividium_l" densityfactor="0.85" rotation="360" rotationvariation="4" noisescale="50000" seed="666" minnoisevalue="0.5" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_silicon_nores_l" densityfactor="0.25" rotation="10" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_silicon_nores_m" densityfactor="0.15" rotation="10" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.6" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_silicon_nores_s" densityfactor="0.01" rotation="10" rotationvariation="16" noisescale="1500" seed="8888" minnoisevalue="0.5" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_silicon_nores_xs" densityfactor="0.01" rotation="10" rotationvariation="32" noisescale="1500" seed="8888" minnoisevalue="0.35" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_nividium_l" lodrule="asteroidxl" densityfactor="0.85" rotation="10" rotationvariation="4" noisescale="50000" seed="666" minnoisevalue="0.5" maxnoisevalue="1"/>
     </fields>
     <resources>
-      <resource ware="nividium" yield="medium" />  
+      <resource ware="nividium" yield="highest" />  
     </resources>
   </region> 
 <!--REM73 Shadow's End--> 
@@ -2727,7 +2804,6 @@
       <resource ware="rawscrap" yield="low" />
     </resources>
   </region> 
-
 <!--REM76 Untainted Eternity--> 
   <region name="rem76_field1" density="0.10" rotation="3" noisescale="15000" seed="8888" minnoisevalue="0.0" maxnoisevalue="1">
     <boundaries>
@@ -2785,28 +2861,25 @@
       <volumetricfog multiplier="0.20" medium="fog_purplethin" texture="assets/textures/environments/volumefog\vf_smoothclouds_01" lodrule="nebulafar" size="16000" sizevariation="0.73" densityfactor="2.0" rotation="360" rotationvariation="0.5" noisescale="50000" seed="42" minnoisevalue="0.75" maxnoisevalue="1.0" distancefactor="0.0" />
 	  </fields>
   </region>    
-  <region name="rem76_field3" density="0.15" rotation="0" noisescale="10000" seed="32" minnoisevalue="0.15" maxnoisevalue="1">
+  <region name="rem76_field3" density="0.15" rotation="0" noisescale="420" seed="42" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="cylinder">
-      <size r="750000" linear="125000" />
+      <size r="400000" linear="400000" />
     </boundary>
     <falloff>
       <lateral>
-        <step position="0.0" value="0.0" />
-        <step position="0.1" value="1.0" />
-        <step position="0.9" value="1.0" />
-        <step position="1.0" value="0.0" />
+        <step position="0.0" value="0.50" />
+        <step position="0.9" value="0.3" />
+        <step position="0.5" value="1.0" />
+        <step position="0.7" value="0.90" />
+        <step position="0.5" value="1.0" />
       </lateral>
       <radial>
         <step position="0.0" value="1.0" />
-        <step position="0.3" value="1.0" />
-        <step position="0.5" value="0.9" />
-        <step position="0.9" value="0.4" />
+        <step position="0.99" value="1.0" />
         <step position="1.0" value="0.0" />
       </radial>
     </falloff>
     <fields>
-      <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.075" uniformred="10" uniformgreen="14" uniformblue="20" uniformdensity="0.15" backgroundfog="false" resources="methane" />
-	
       <asteroid groupref="asteroid_nividium_l" densityfactor="0.25" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.8" maxnoisevalue="1"/>	  
       <asteroid groupref="asteroid_ore_nores_l" lodrule="asteroidxl" densityfactor="0.5" rotation="360" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
       <asteroid groupref="asteroid_ore_nores_m" densityfactor="0.3" rotation="360" rotationvariation="8" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
@@ -2818,14 +2891,13 @@
       <asteroid groupref="asteroid_silicon_nores_xs" densityfactor="0.75" rotation="360" rotationvariation="32" noisescale="1500" seed="8888" minnoisevalue="0.65" maxnoisevalue="1"/>	  
 	  </fields>
     <resources>
-      <resource ware="nividium" yield="medium" />
-      <resource ware="methane" yield="medhigh" />	  
+      <resource ware="nividium" yield="medium" />	
     </resources>
   </region> 
 <!--REM77 Belt of Aguilar--> 
 <!--REM78 Tkr's Deprivation-->    
 <!--REM79 Matrix #695-->
-  <region name="rem79_field1" density="0.60" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
+  <region name="nxw01_field1" density="0.60" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="cylinder">
       <size r="350000" linear="24000" />
     </boundary>
@@ -2871,7 +2943,7 @@
       <resource ware="helium" yield="medium" />
       <resource ware="methane" yield="medium" />
     </resources>
-  </region>    
+  </region>  
 <!--Empty Belt-->  
   <region name="empty_belt" density="1" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="splinetube">

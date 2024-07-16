@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <add sel="//jobs">
+  <add sel="//jobs"> <!--OTAS-->
 	<job id="otas_bio_trader_l" name="{20204,1301}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -961,7 +961,7 @@
 		</subordinates>
 	</job>
 	<job id="otas_battleship_patrol_xl_core" name="{20221,5031}">
-		<modifiers commandeerable="true"/>
+		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
 				<param name="range" value="class.sector"/>
@@ -1012,14 +1012,14 @@
 		</subordinates>
 	</job>
 	<job id="otas_carrier_patrol_xl_core" name="{20204,3201}">
-		<modifiers commandeerable="true"/>
+		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
 				<param name="range" value="class.sector"/>
 			</order>
 		</orders>
 		<category faction="otas" tags="[factionlogic, military, carrier]" size="ship_xl"/>
-		<quota galaxy="2" maxgalaxy="3" cluster="2" sector="1"/>
+		<quota galaxy="1" maxgalaxy="3" cluster="2" sector="1"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otascore"/>
 		<environment buildatshipyard="true" preferbuilding="true"/>
 		<ship>
@@ -1073,7 +1073,7 @@
 			</order>
 		</orders>
 		<category faction="otas" tags="[factionlogic, military, destroyer]" size="ship_l"/>
-		<quota galaxy="2" sector="3"/>
+		<quota galaxy="2" sector="2"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otascore"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -1098,7 +1098,7 @@
 			</order>
 		</orders>
 		<category faction="otas" tags="[factionlogic, military, destroyer]" size="ship_l"/>
-		<quota galaxy="5" sector="3"/>
+		<quota galaxy="4" sector="3"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otasborder"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -1124,7 +1124,7 @@
 			</order>
 		</orders>
 		<category faction="otas" tags="[factionlogic, military, destroyer]" size="ship_l"/>
-		<quota galaxy="5" sector="2"/>
+		<quota galaxy="4" sector="2"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -1431,7 +1431,7 @@
 			</order>
 		</orders>
 		<category faction="otas" tags="[military, destroyer]" size="ship_l"/>
-		<quota wing="3"/>
+		<quota wing="2"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<modifiers subordinate="true"/>
@@ -1451,7 +1451,7 @@
 			</order>
 		</orders>
 		<category faction="otas" tags="[military]" size="ship_m"/>
-		<quota wing="5"/>
+		<quota wing="4"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<modifiers subordinate="true"/>
@@ -5200,9 +5200,82 @@
     </job> 
   </add>
   
- <!--ARGON--> 
+ <!--ARGON-->
+  <add sel="//jobs"> 
+  <job id="antigone_carrier_patrol_xl" name="{20204,3201}" >
+    <modifiers commandeerable="true"/>
+    <orders>
+      <order order="Patrol" default="true">
+        <param name="range" value="class.sector"/>
+      </order>
+    </orders>
+    <category faction="antigone" tags="[factionlogic, military, carrier]" size="ship_xl"/>
+    <quota galaxy="2"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="antigone" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="antigone" tags="[military, carrier]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+      </loadout>
+      <owner exact="antigone" overridenpc="true"/>
+    </ship>
+    <subordinates>
+      <subordinate job="antigone_destroyer_escort_l" assignment="attack" group="1"/>
+      <subordinate job="antigone_fighter_escort_s_carrier" assignment="attack" group="2"/>
+	  <subordinate job="antigone_frigate_escort_m" assignment="attack" group="3"/>	  
+      <subordinate job="antigone_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
+    </subordinates>
+  </job>
+  <job id="antigone_fighter_escort_s_carrier" name="{20204,2901}" startactive="false">
+    <orders>
+      <order order="Escort" default="true">
+        <param name="formation" value="formationshape.pointguard"/>
+        <param name="overrideformationskill" value="true"/>
+      </order>
+    </orders>
+    <quota wing="22"/>
+    <category faction="antigone" tags="[military, fighter]" size="ship_s"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro"/>
+    <environment buildatshipyard="true"/>
+    <modifiers subordinate="true"/>
+    <ship>
+      <select faction="antigone" tags="[military, fighter, selection]" size="ship_s"/>
+      <loadout>
+        <level min="0.4" max="1.0"/>
+      </loadout>
+      <owner exact="antigone" overridenpc="true"/>
+    </ship>
+  </job>  
+  </add>
+  <add sel="/jobs/job[@id='antigone_dronecarrier_patrol_m_sector'][@name='{20204,5001}']">
+    <subordinates>
+      <subordinate job="antigone_fighter_escort_s_frigate" assignment="attack" group="1"/>
+    </subordinates>
+  </add>  
+  <add sel="/jobs/job[@id='antigone_dronecarrier_patrol_m_sector_mission'][@name='{20204,5001}']">
+    <subordinates>
+      <subordinate job="antigone_fighter_escort_s_frigate" assignment="attack" group="1"/>
+    </subordinates>
+  </add>  
+  <replace sel="/jobs/job[@id='antigone_dronecarrier_patrol_m_sector'][@name='{20204,5001}']/quota/@galaxy">8</replace>
+  <replace sel="/jobs/job[@id='antigone_dronecarrier_patrol_m_sector'][@name='{20204,5001}']/quota/@maxgalaxy">20</replace>  
+  <replace sel="/jobs/job[@id='antigone_dronecarrier_patrol_m_sector'][@name='{20204,5001}']/quota/@sector">4</replace> 
+  <replace sel="/jobs/job[@id='antigone_fighter_patrol_s_border_zone'][@name='{20204,2901}']/quota/@galaxy">28</replace>
+  <replace sel="/jobs/job[@id='antigone_fighter_patrol_s_border_zone'][@name='{20204,2901}']/quota/@maxgalaxy">48</replace>  
+  <replace sel="/jobs/job[@id='antigone_scout_patrol_s'][@name='{20204,2801}']/quota/@galaxy">14</replace>
+  <replace sel="/jobs/job[@id='antigone_scout_patrol_s'][@name='{20204,2801}']/quota/@maxgalaxy">26</replace>
+  <replace sel="/jobs/job[@id='antigone_destroyer_patrol_l_border_sector'][@name='{20204,3301}']/quota/@galaxy">12</replace>
+  <replace sel="/jobs/job[@id='antigone_destroyer_patrol_l_border_sector'][@name='{20204,3301}']/quota/@sector">3</replace>
+  <add sel="/jobs/job[@id='antigone_destroyer_patrol_l_border_sector'][@name='{20204,3301}']/subordinates">
+    <subordinate job="antigone_fighter_escort_s_frigate" assignment="attack" group="4"/>
+  </add>  
+  
+ 
 
  <!--PARANID--> 
+  <replace sel="/jobs/job[@id='paranid_dronecarrier_patrol_m_sector'][@name='{20204,2901}']/quota/@maxgalaxy">15</replace>
+ 
   <add sel="//jobs">	
 	<job id="hop_carrier_patrol_xl_cluster_spl" name="{20204,6301}" >
       <modifiers commandeerable="true"/>
@@ -5360,7 +5433,9 @@
     </job>  
   </add> 
 
- <!--TELADI-->  
+ <!--TELADI-->
+  <replace sel="/jobs/job[@id='teladi_battleship_patrol_xl_sector_exp'][@name='{20221,5031}']/quota/@galaxy">3</replace>
+  
   <add sel="//jobs">
     <job id="min_frigate_patrol_m_sector_exp" name="{20204,2901}" comment="each sector, expansion">
       <modifiers commandeerable="true"/>
@@ -6497,5 +6572,119 @@
   <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_exp_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add> 
   <add sel="/jobs/job[@id='boron_medium_patrol_m_sector_border_mission'][@name='{20204,2901}']/location[@faction='boron']" type="@matchextension">false</add>   
   <add sel="/jobs/job[@id='boron_construction_vessel_xl'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>  
-  <add sel="/jobs/job[@id='boron_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>    
+  <add sel="/jobs/job[@id='boron_construction_vessel_xl_playeronly'][@name='{20204,5101}']/location[@faction='boron']" type="@matchextension">false</add>
+  <!--Mass Traffic-->
+  <replace sel="/jobs/job[@id='masstraffic_effectzone']/quota/@zone">10</replace>   
+  <replace sel="/jobs/job[@id='masstraffic_argon_civilian']/location/@class">station</replace>
+  <remove sel="/jobs/job[@id='masstraffic_argon_civilian']/quota/@sector"/>
+  <add sel="/jobs/job[@id='masstraffic_argon_civilian']/quota" type="@station">5</add>
+  <replace sel="/jobs/job[@id='masstraffic_argon_police']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_argon_criminal']/location[@faction='[argon, antigone]']/@faction">[argon, antigone, hatikvah]</replace>
+  <remove sel="/jobs/job[@id='masstraffic_argon_criminal']/quota/@sector"/>
+  <replace sel="/jobs/job[@id='masstraffic_argon_criminal']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_argon_criminal']/masstraffic/@respawndelay">180</replace>
+  <replace sel="/jobs/job[@id='masstraffic_argon_criminal']/masstraffic/@relaunchdelay">30</replace>
+  <replace sel="/jobs/job[@id='masstraffic_argon_dockarea']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_argon_pier']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_argon_storage']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_argon_production']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_argon_defencemodule']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_antigone_police']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_civilian']/location/@class">station</replace>
+  <remove sel="/jobs/job[@id='masstraffic_teladi_civilian']/quota/@sector"/>
+  <add sel="/jobs/job[@id='masstraffic_teladi_civilian']/quota" type="@station">5</add>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_police']/quota/@station">2</replace>
+  <remove sel="/jobs/job[@id='masstraffic_teladi_criminal']/quota/@sector"/>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_criminal']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_criminal']/masstraffic/@respawndelay">180</replace>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_criminal']/masstraffic/@relaunchdelay">30</replace>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_dockarea']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_pier']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_storage']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_production']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_teladi_defencemodule']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_civilian']/location/@class">station</replace>
+  <remove sel="/jobs/job[@id='masstraffic_paranid_civilian']/quota/@sector"/>
+  <add sel="/jobs/job[@id='masstraffic_paranid_civilian']/quota" type="@station">5</add>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_police']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_holyorder_police']/quota/@station">2</replace>
+  <remove sel="/jobs/job[@id='masstraffic_paranid_criminal']/quota/@sector"/>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_criminal']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_criminal']/masstraffic/@respawndelay">180</replace>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_criminal']/masstraffic/@relaunchdelay">30</replace>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_dockarea']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_pier']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_storage']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_production']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_paranid_defencemodule']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_xenon_civilian']/location[@faction='xenon']/@class">station</replace>
+  <remove sel="/jobs/job[@id='masstraffic_xenon_civilian']/quota/@sector"/>
+  <add sel="/jobs/job[@id='masstraffic_xenon_civilian']/quota" type="@station">5</add>
+  <replace sel="/jobs/job[@id='masstraffic_xenon_station']/quota/@station">5</replace>
+  <replace sel="/jobs/job[@id='masstraffic_hab_arg_s_01']/quota/@station">1</replace>
+  <replace sel="/jobs/job[@id='masstraffic_hab_arg_m_01']/quota/@station">1</replace>
+  <replace sel="/jobs/job[@id='masstraffic_hab_arg_l_01']/quota/@station">1</replace>
+  <replace sel="/jobs/job[@id='masstraffic_hab_tel_s_01']/quota/@station">1</replace>
+  <replace sel="/jobs/job[@id='masstraffic_hab_tel_m_01']/quota/@station">1</replace>
+  <replace sel="/jobs/job[@id='masstraffic_hab_tel_l_01']/quota/@station">1</replace>
+  <replace sel="/jobs/job[@id='masstraffic_hab_par_s_01']/quota/@station">1</replace>
+  <replace sel="/jobs/job[@id='masstraffic_hab_par_m_01']/quota/@station">1</replace>
+  <replace sel="/jobs/job[@id='masstraffic_hab_par_l_01']/quota/@station">1</replace> 
+  <replace sel="/jobs/job[@id='masstraffic_split_civilian']/location/@class">station</replace>
+  <remove sel="/jobs/job[@id='masstraffic_split_civilian']/location/@factionrace"/>
+  <add sel="/jobs/job[@id='masstraffic_split_civilian']/location" type="@faction">[split, freesplit, court]</add>
+  <remove sel="/jobs/job[@id='masstraffic_split_civilian']/quota/@sector"/>
+  <add sel="/jobs/job[@id='masstraffic_split_civilian']/quota" type="@station">5</add>
+  <replace sel="/jobs/job[@id='masstraffic_split_police']/quota/@station">2</replace>
+  <remove sel="/jobs/job[@id='masstraffic_split_criminal']/quota/@sector"/>
+  <replace sel="/jobs/job[@id='masstraffic_split_criminal']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_split_criminal']/masstraffic/@respawndelay">180</replace>
+  <replace sel="/jobs/job[@id='masstraffic_split_criminal']/masstraffic/@relaunchdelay">30</replace>
+  <remove sel="/jobs/job[@id='masstraffic_freesplit_criminal']/quota/@sector"/>
+  <replace sel="/jobs/job[@id='masstraffic_freesplit_criminal']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_freesplit_criminal']/masstraffic/@respawndelay">180</replace>
+  <replace sel="/jobs/job[@id='masstraffic_freesplit_criminal']/masstraffic/@relaunchdelay">30</replace>
+  <remove sel="/jobs/job[@id='masstraffic_split_dockarea']/location/@factionrace"/>
+  <add sel="/jobs/job[@id='masstraffic_split_dockarea']/location" type="@faction">[split, freesplit, court]</add>
+  <replace sel="/jobs/job[@id='masstraffic_split_dockarea']/quota/@station">2</replace>
+  <remove sel="/jobs/job[@id='masstraffic_split_pier']/location/@factionrace"/>
+  <add sel="/jobs/job[@id='masstraffic_split_pier']/location" type="@faction">[split, freesplit, court]</add>
+  <replace sel="/jobs/job[@id='masstraffic_split_pier']/quota/@station">2</replace>
+  <remove sel="/jobs/job[@id='masstraffic_split_storage']/location/@factionrace"/>
+  <add sel="/jobs/job[@id='masstraffic_split_storage']/location" type="@faction">[split, freesplit, court]</add>
+  <replace sel="/jobs/job[@id='masstraffic_split_storage']/quota/@station">2</replace>
+  <remove sel="/jobs/job[@id='masstraffic_split_production']/location/@factionrace"/>
+  <add sel="/jobs/job[@id='masstraffic_split_production']/location" type="@faction">[split, freesplit, court]</add>
+  <replace sel="/jobs/job[@id='masstraffic_split_production']/quota/@station">2</replace>
+  <remove sel="/jobs/job[@id='masstraffic_split_buildmodule']/location/@factionrace"/>
+  <add sel="/jobs/job[@id='masstraffic_split_buildmodule']/location" type="@faction">[split, freesplit, court]</add>
+  <remove sel="/jobs/job[@id='masstraffic_split_defencemodule']/location/@factionrace"/>
+  <add sel="/jobs/job[@id='masstraffic_split_defencemodule']/location" type="@faction">[split, freesplit, court]</add>
+  <replace sel="/jobs/job[@id='masstraffic_split_defencemodule']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_terran_civilian']/location/@class">station</replace>
+  <remove sel="/jobs/job[@id='masstraffic_terran_civilian']/quota/@sector"/>
+  <add sel="/jobs/job[@id='masstraffic_terran_civilian']/quota" type="@station">5</add>
+  <replace sel="/jobs/job[@id='masstraffic_terran_police']/quota/@station">2</replace>
+  <remove sel="/jobs/job[@id='masstraffic_terran_criminal']/quota/@sector"/>
+  <replace sel="/jobs/job[@id='masstraffic_terran_criminal']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_terran_criminal']/masstraffic/@respawndelay">180</replace>
+  <replace sel="/jobs/job[@id='masstraffic_terran_criminal']/masstraffic/@relaunchdelay">30</replace>
+  <remove sel="/jobs/job[@id='masstraffic_pioneers_criminal']/quota/@sector"/>
+  <replace sel="/jobs/job[@id='masstraffic_pioneers_criminal']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_pioneers_criminal']/masstraffic/@respawndelay">180</replace>
+  <replace sel="/jobs/job[@id='masstraffic_pioneers_criminal']/masstraffic/@relaunchdelay">30</replace>
+  <replace sel="/jobs/job[@id='masstraffic_terran_dockarea']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_terran_pier']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_terran_storage']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_terran_production']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_terran_defencemodule']/quota/@station">2</replace>
+  <remove sel="/jobs/job[@id='masstraffic_boron_civilian']/quota/@sector"/>
+  <add sel="/jobs/job[@id='masstraffic_boron_civilian']/quota" type="@station">5</add>
+  <remove sel="/jobs/job[@id='masstraffic_boron_criminal']/quota/@sector"/>
+  <replace sel="/jobs/job[@id='masstraffic_boron_criminal']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_boron_dockarea']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_boron_pier']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_boron_storage']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_boron_production']/quota/@station">2</replace>
+  <replace sel="/jobs/job[@id='masstraffic_boron_defencemodule']/quota/@station">2</replace>  
 </diff>

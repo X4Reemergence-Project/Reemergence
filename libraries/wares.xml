@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff>
+  <add sel="/wares/production">
+    <method id="scaleplate" name="{20203,1003}">
+      <default race="scaleplate" />
+    </method>
+    <method id="yaki" name="{20203,2801}">
+      <default race="yaki" />
+    </method>	
+  </add>
+  <add sel="/wares/ware[@id='workunit_busy']">
+    <production time="600" amount="200" method="scaleplate" name="{20203,1001}">
+      <primary>
+        <ware ware="spaceweed" amount="15" />
+        <ware ware="spacefuel" amount="27" />
+      </primary>
+    </production>
+    <production time="600" amount="200" method="yaki" name="{20203,2801}">
+      <primary>
+        <ware ware="majadust" amount="15" />
+        <ware ware="stimulants" amount="27" />
+      </primary>
+    </production>	
+  </add>
+  <add sel="/wares/ware[@id='workunit_idle']">
+    <production time="600" amount="200" method="scaleplate" name="{20203,1001}">
+      <primary>
+        <ware ware="spaceweed" amount="10" />
+        <ware ware="spacefuel" amount="18" />
+      </primary>
+    </production>
+    <production time="600" amount="200" method="yaki" name="{20203,2801}">
+      <primary>
+        <ware ware="majadust" amount="10" />
+        <ware ware="stimulants" amount="18" />
+      </primary>
+    </production>	
+  </add>  
 <!--
 	<add sel="/wares/ware[@id='']">
 		<owner faction=""/>
@@ -24,9 +60,32 @@
 	<replace sel="/wares/ware[@id='turret_otas_l_missilefrigate']/owner[@faction='argon']/@faction">otas</replace>	
 	<!--WEAPONS-->
 	<replace sel="/wares/ware[@id='weapon_otas_l_destroyer']/owner[@faction='argon']/@faction">otas</replace>		
-	<replace sel="/wares/ware[@id='weapon_otas_s_gatling']/owner[@faction='argon']/@faction">otas</replace>	
-	<replace sel="/wares/ware[@id='weapon_otas_s_notus_launcher']/owner[@faction='argon']/@faction">otas</replace>		
-	<replace sel="/wares/ware[@id='weapon_otas_s_notus_bomb']/owner[@faction='argon']/@faction">otas</replace>				
+	<add sel="/wares/ware[@id='weapon_otas_s_notus_launcher']">
+      <owner faction="otas"/>	
+      <owner faction="antigone"/>
+      <owner faction="buccaneers"/>
+      <owner faction="holyorder"/>
+      <owner faction="ministry"/>
+      <owner faction="paranid"/>
+      <owner faction="scaleplate"/>
+      <owner faction="teladi"/>
+      <owner faction="trinity"/>
+      <owner faction="court"/>
+      <owner faction="freesplit"/>
+      <owner faction="split"/>
+      <owner faction="fallensplit"/>	  
+      <owner faction="pioneers"/>
+      <owner faction="terran"/>
+      <owner faction="loanshark"/>		  
+      <owner faction="boron"/>	
+	</add>	
+	<replace sel="/wares/ware[@id='weapon_otas_s_notus_bomb']/owner[@faction='argon']/@faction">otas</replace>
+	<add sel="/wares/ware[@id='weapon_otas_s_notus_bomb']">
+	  <owner faction="court"/>
+	  <owner faction="fallensplit"/>
+	  <owner faction="freesplit"/>
+	  <owner faction="split"/>		
+	</add>		
 	<!-- SHIPS -->  
 	<replace sel="/wares/ware[@id='ship_otas_xl_tempest']/owner[@faction='argon']/@faction">otas</replace>	
 	<replace sel="/wares/ware[@id='ship_otas_l_aquilo']/owner[@faction='argon']/@faction">otas</replace>	
@@ -52,6 +111,80 @@
 	
 <!--RE Wares-->
 	 <add sel="//wares">
+	<!--Scaleplate Den - Crew Modules-->
+  <ware id="module_sca_hab_l_01" name="{19530007,1006}" description="{19530007,1001}" transport="container" volume="1" tags="module">
+	<price min="17721792" average="22037202" max="26352612" />
+	<production time="120" amount="1" method="default" name="{20206,101}">
+	  <primary>
+		<ware ware="claytronics" amount="254" />
+		<ware ware="energycells" amount="383" />
+	  </primary>
+	</production>
+	<component ref="hab_sca_l_01_macro" />
+	<restriction licence="station_gen_advanced" />
+	<owner faction="scaleplate" />
+  </ware>
+  <ware id="module_sca_hab_m_01" name="{19530007,1007}" description="{19530007,1001}" transport="container" volume="1" tags="module">
+	<price min="12530160" average="15581052" max="18631944" />
+	<production time="90" amount="1" method="default" name="{20206,101}">
+	  <primary>
+		<ware ware="claytronics" amount="180" />
+		<ware ware="energycells" amount="271" />
+	  </primary>
+	</production>
+	<component ref="hab_sca_m_01_macro" />
+	<restriction licence="station_gen_intermediate" />
+	<owner faction="scaleplate" />
+  </ware>
+  <ware id="module_sca_hab_s_01" name="{19530007,1008}" description="{19530007,1001}" transport="container" volume="1" tags="module">
+	<price min="8689428" average="10804878" max="12920328" />
+	<production time="30" amount="1" method="default" name="{20206,101}">
+	  <primary>
+		<ware ware="claytronics" amount="125" />
+		<ware ware="energycells" amount="188" />
+	  </primary>
+	</production>
+	<component ref="hab_sca_s_01_macro" />
+	<restriction licence="station_gen_basic" />
+	<owner faction="scaleplate" />
+  </ware>  
+	<!--Yaki Haven - Crew Modules-->
+  <ware id="module_yaki_hab_l_01" name="{19530007,1002}" description="{19530007,1001}" transport="container" volume="1" tags="module">
+	<price min="17721792" average="22037202" max="26352612" />
+	<production time="120" amount="1" method="default" name="{20206,101}">
+	  <primary>
+		<ware ware="claytronics" amount="577" />
+		<ware ware="energycells" amount="383" />
+	  </primary>
+	</production>
+	<component ref="hab_yaki_l_01_macro" />
+	<restriction licence="station_gen_advanced" />
+	<owner faction="yaki" />
+  </ware>
+  <ware id="module_yaki_hab_m_01" name="{19530007,1003}" description="{19530007,1001}" transport="container" volume="1" tags="module">
+	<price min="12530160" average="15581052" max="18631944" />
+	<production time="90" amount="1" method="default" name="{20206,101}">
+	  <primary>
+		<ware ware="claytronics" amount="408" />
+		<ware ware="energycells" amount="271" />
+	  </primary>
+	</production>
+	<component ref="hab_yaki_m_01_macro" />
+	<restriction licence="station_gen_intermediate" />
+	<owner faction="yaki" />
+  </ware>
+  <ware id="module_yaki_hab_s_01" name="{19530007,1004}" description="{19530007,1001}" transport="container" volume="1" tags="module">
+	<price min="8689428" average="10804878" max="12920328" />
+	<production time="60" amount="1" method="default" name="{20206,101}">
+	  <primary>
+		<ware ware="claytronics" amount="283" />
+		<ware ware="energycells" amount="188" />
+	  </primary>
+	</production>
+	<component ref="hab_yaki_s_01_macro" />
+	<restriction licence="station_gen_basic" />
+	<owner faction="yaki" />
+  </ware> 		 
 	<!--SHIPS-->
     <ware id="ship_spl_l_cheetah" name="{19530007,700}" description="{19530007,800}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
       <price min="6195057" average="6858890" max="7522724" />
@@ -63,9 +196,9 @@
       </production>
       <component ref="ship_spl_l_cheetah_macro" amount="1" />
       <restriction licence="militaryship" />
-      <owner faction="freesplit" />
       <owner faction="court" />
       <owner faction="fallensplit" />
+      <owner faction="freesplit" />
     </ware>
     <ware id="ship_spl_s_wolf" name="{19530007,710}" description="{19530007,810}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
       <price min="260648" average="291350" max="362053" />
@@ -78,8 +211,8 @@
 	  <component ref="ship_spl_s_wolf_macro" amount="1" />
 	  <restriction licence="militaryship" />
 	  <owner faction="court" />
-	  <owner faction="freesplit" />
 	  <owner faction="fallensplit" />
+	  <owner faction="freesplit" />
 	  <owner faction="split" />	  
     </ware>
     <ware id="ship_ter_l_chiba_e" name="{19530007,701}" description="{19530007,801}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">

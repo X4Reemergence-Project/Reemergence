@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+  <add sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='$tradestation?']" pos="after">
+	<!-- do not set $tradestation to true so no redundant tradewares are not added -->
+	<do_elseif value="$controllable.godentry == 'bor_trade_REM35_002'" comment="Blue Horizon I">
+	  <!-- special wares -->
+	  <add_tradeware object="$controllable" ware="ware.antimattercells" allowbuy="true" allowsell="true" lockavgprice="true" />
+	  <add_tradeware object="$controllable" ware="ware.graphene" allowbuy="true" allowsell="true" lockavgprice="true" />
+	  <add_tradeware object="$controllable" ware="ware.refinedmetals" allowbuy="true" allowsell="true" lockavgprice="true" />		
+	  <add_tradeware object="$controllable" ware="ware.siliconwafers" allowbuy="true" allowsell="true" lockavgprice="true" />			
+	  <add_tradeware object="$controllable" ware="ware.superfluidcoolant" allowbuy="true" allowsell="true" lockavgprice="true" />		
+	  <add_tradeware object="$controllable" ware="ware.silicon" allowbuy="true" allowsell="true" lockavgprice="false" />
+	  <add_tradeware object="$controllable" ware="ware.ore" allowbuy="true" allowsell="true" lockavgprice="false" />
+	  <add_tradeware object="$controllable" ware="ware.ice" allowbuy="true" allowsell="true" lockavgprice="false" />
+	  <add_tradeware object="$controllable" ware="ware.nividium" allowbuy="true" allowsell="false" lockavgprice="false" />		
+	</do_elseif>
+  </add>
+</diff>
