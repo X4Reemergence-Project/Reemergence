@@ -115,7 +115,7 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="Connection06" tags="part  ">
+			<connection name="Connection05" tags="part  ">
 				<offset>
 					<position x="-1.168802E+07" y="1.581795E+07" z="1906498"/>
 					<quaternion qx="-0.7539044" qy="-0.4647237" qz="0.3953203" qw="-0.243684"/>
@@ -136,7 +136,7 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="Connection07" tags="part  ">
+			<connection name="Connection06" tags="part  ">
 				<offset>
 					<position x="-1.168802E+07" y="1.581795E+07" z="1906490"/>
 					<quaternion qx="0.5392954" qy="0.2193207" qz="-0.7531556" qw="0.306293"/>
@@ -157,7 +157,7 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="Connection08" tags="part  ">
+			<connection name="Connection07" tags="part  ">
 				<offset>
 					<position x="-1.168801E+07" y="1.581797E+07" z="1906525"/>
 					<quaternion qx="-0.843116" qy="-0.5197157" qz="-0.1174957" qw="7.242708E-02"/>
@@ -178,9 +178,9 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="Connection10" tags="part cluster_l_detail  ">
+			<connection name="Connection08" tags="part cluster_l_detail  ">
 				<offset>
-					<position x="3937080" y="-3887714" z="-318525.9"/>
+					<position x="3937080" y="3887714" z="-318525.9"/>
 				</offset>
 				<parts>
 					<part name="part_asteroidx">
@@ -198,9 +198,9 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="Connection11" tags="part cluster_l_detail  ">
+			<connection name="Connection09" tags="part cluster_l_detail  ">
 				<offset>
-					<position x="147620.1" y="-98822.27" z="732000"/>
+					<position x="147620.1" y="98822.27" z="732000"/>
 				</offset>
 				<parts>
 					<part name="part_asteroid001">
@@ -218,9 +218,9 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="Connection12" tags="part cluster_l_detail  ">
+			<connection name="Connection10" tags="part cluster_l_detail  ">
 				<offset>
-					<position x="704043.9" y="-98822.27" z="253712.8"/>
+					<position x="704043.9" y="98822.27" z="253712.8"/>
 				</offset>
 				<parts>
 					<part name="part_asteroida002">
@@ -238,9 +238,9 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="Connection13" tags="part cluster_l_detail  ">
+			<connection name="Connection11" tags="part cluster_l_detail  ">
 				<offset>
-					<position x="229086.9" y="-98822.27" z="-782912.5"/>
+					<position x="229086.9" y="98822.27" z="-782912.5"/>
 				</offset>
 				<parts>
 					<part name="part_asteroidb003">
@@ -258,9 +258,9 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="Connection14" tags="part cluster_l_detail  ">
+			<connection name="Connection12" tags="part cluster_l_detail  ">
 				<offset>
-					<position x="-1039721" y="-112237.1" z="-662801.4"/>
+					<position x="-1039721" y="112237.1" z="-662801.4"/>
 				</offset>
 				<parts>
 					<part name="part_asteroidc004">
@@ -275,6 +275,91 @@
 							<max x="52061.72" y="41411.24" z="79408.08"/>
 							<center x="-352.6611" y="7428.101" z="-3851.624"/>
 						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection13" tags="part animation textureanimation  ">
+				<offset>
+					<position x="1.081253E+08" y="2.036701E+07" z="2.225224E+08"/>
+					<quaternion qx="-0.864829" qy="0.1267668" qz="-0.4020532" qw="0.2726797"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="10000"/>
+				</animations>
+				<parts>
+					<part name="part_gasgiant">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_422_gasgiant"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.618802E+07" y="2.646375E+07" z="2.618803E+07"/>
+							<center x="0" y="1.953125" z="0"/>
+						</size>
+						<size_raw>
+							<max x="2.618801E+07" y="2.646374E+07" z="2.618801E+07"/>
+							<center x="15.625" y="1.953125" z="-7.8125"/>
+						</size_raw>
+						<offset>
+							<position x="0" y="-3.90625" z="-23.4375"/>
+						</offset>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="10001" value="1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>			
+			<connection name="Connection14" tags="part  ">
+				<offset>
+					<position x="1.081253E+08" y="2.036701E+07" z="2.225224E+08"/>
+					<quaternion qx="-0.3007057" qy="-0" qz="-0" qw="-0.9537169"/>
+				</offset>
+				<parts>
+					<part name="part_gasgiant_atmo">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_422_gasgiant_atmo"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.652095E+07" y="2.652095E+07" z="2.652094E+07"/>
+							<center x="-31.25" y="-9.765625" z="23.4375"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection15" tags="part  ">
+				<offset>
+					<position x="1.081253E+08" y="2.036701E+07" z="2.225224E+08"/>
+					<quaternion qx="6.850743E-03" qy="-0.9534694" qz="-0.3006279" qw="2.172834E-02"/>
+				</offset>
+				<parts>
+					<part name="Object441">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="newplanets.rings_cluster01_gasgiant"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="9.91909E+07" y="901.7487" z="9.92125E+07"/>
+							<center x="135359.4" y="-3751555" z="6001766"/>
+						</size>
+						<offset>
+							<position x="15.625" y="0" z="0"/>
+						</offset>
+						<uv_animations/>
 					</part>
 				</parts>
 			</connection>			
