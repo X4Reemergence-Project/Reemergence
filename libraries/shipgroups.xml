@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff>
+  <remove sel="//groups/group[@name='par_hyperion_l']/select[@macro='ship_par_l_hyperion_macro']" /> <!--VRO Hyperion--> 
+  <remove sel="//groups/group[@name='hol_hyperion_l']/select[@macro='ship_par_l_hyperion_macro']" /> <!--VRO Hyperion-->   
+  <remove sel="//groups/group/select[@macro='ship_arg_l_centaur_b_macro']" /> <!--VRO Centaur-->
+  <remove sel="//groups/group/select[@macro='ship_xen_xl_u_macro']" /> <!--VRO U--> 
+
   <add sel="//groups">
 	<group name="otas_builder_xl">
 	  <select macro="ship_otas_xl_vesuvius_temp_macro" weight="100"/>
@@ -130,10 +135,7 @@
   
   <!-- ################ -->
   <!--    PARANID 	-->
-  <!-- ################ --> 
-  <remove sel="//groups/group/select[@macro='par_hyperion_l']" /> <!--VRO Hyperion-->  
-  <remove sel="//groups/group/select[@macro='hol_hyperion_l']" /> <!--VRO Hyperion-->    
-  
+  <!-- ################ -->      
   <add sel="//groups">		
 	<group name="par_tm">	
 	  <select macro="ship_par_m_tm_macro" weight="100" /> 
@@ -220,8 +222,7 @@
   
   <!-- ################ -->
   <!--    VIGOR 	-->
-  <!-- ################ -->
-  <remove sel="//groups/group/select[@macro='pir_centaur_l']" /> <!--VRO Centaur-->    
+  <!-- ################ -->  
   
   
   <!-- ################ -->
@@ -249,7 +250,6 @@
   </add>
   
   <replace sel="/groups/group[@name='ter_lightcarrier_l']/select[@macro='ship_ter_l_carrier_01_macro']/@macro">ship_ter_l_chiba_e_macro</replace>  <!--VRO Chiba for RE Chiba E-->  
-  <remove sel="//groups/group/select[@macro='ship_xen_xl_u_macro']" /> <!--VRO U-->
   
   <add sel="/groups/group[@name='ter_fighter_heavy_s']"> 
 	<select macro="ship_ter_s_falchion_macro" weight="25" />  	
