@@ -78,6 +78,16 @@
       <owner faction="terran"/>
       <owner faction="loanshark"/>		  
       <owner faction="boron"/>	
+	</add>
+	<add sel="/wares/ware[@id='weapon_otas_s_notus_launcher']">
+	  <production time="10" amount="1" method="terran" name="{20206,901}">
+		<primary>
+          <ware ware="computronicsubstrate" amount="5" />
+          <ware ware="energycells" amount="53" />
+          <ware ware="metallicmicrolattice" amount="96" />
+          <ware ware="siliconcarbide" amount="13" />		
+		</primary>
+	  </production>
 	</add>		
 	<replace sel="/wares/ware[@id='weapon_otas_s_notus_bomb']/owner[@faction='argon']/@faction">otas</replace>
 	<add sel="/wares/ware[@id='weapon_otas_s_notus_bomb']">
@@ -164,7 +174,7 @@
 	  </primary>
 	</production>
 	<component ref="hab_yaki_l_01_macro" />
-	<restriction licence="station_gen_advanced" />
+	<restriction licence="militaryequipment" />
 	<owner faction="yaki" />
   </ware>
   <ware id="module_yaki_hab_m_01" name="{19530007,1003}" description="{19530007,1001}" transport="container" volume="1" tags="module">
@@ -176,7 +186,7 @@
 	  </primary>
 	</production>
 	<component ref="hab_yaki_m_01_macro" />
-	<restriction licence="station_gen_intermediate" />
+	<restriction licence="militaryequipment" />
 	<owner faction="yaki" />
   </ware>
   <ware id="module_yaki_hab_s_01" name="{19530007,1004}" description="{19530007,1001}" transport="container" volume="1" tags="module">
@@ -188,7 +198,7 @@
 	  </primary>
 	</production>
 	<component ref="hab_yaki_s_01_macro" />
-	<restriction licence="station_gen_basic" />
+	<restriction licence="militaryequipment" />
 	<owner faction="yaki" />
   </ware> 	 
 	<!--SHIPS-->
