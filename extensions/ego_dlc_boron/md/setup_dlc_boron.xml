@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff>
-<add sel="//cue[@name='Boron_Gates_Open_KingdomEnd']/actions">
-	<find_sector macro="macro.Cluster_23_Sector001_macro" space="player.galaxy" required="true" name="$SacredRelicSector" />	
+  <add sel="//cue[@name='Boron_Gates_Open_KingdomEnd']/actions">
 	<find_sector macro="macro.Cluster_50_Sector001_macro" space="player.galaxy" required="true" name="$TurqoiseSeaIXSector" />
 	<find_sector macro="macro.Cluster_424_Sector001_macro" space="player.galaxy" extension="'ego_dlc_split'" required="true" name="$EmperorsPrideSector" />
 	<find_sector macro="macro.Cluster_REM13_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$DarkWatersSector" />
 	<find_sector macro="macro.Cluster_REM15_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$DepthsofSilenceSector" />	
 	<find_sector macro="macro.Cluster_REM17_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ShiningCurrentsSector" />
 	<find_sector macro="macro.Cluster_REM19_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ReservoirofTranquilitySector" />
-	<find_sector macro="macro.Cluster_REM23_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$UnholyDescentSector" />	
+	<find_sector macro="macro.Cluster_REM23_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$UnholyDescentSector" />
+	<find_sector macro="macro.Cluster_REM25_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ClaritysEndSector" />		
 	<find_sector macro="macro.Cluster_REM31_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$TheShallowsSector" />	
 	<find_sector macro="macro.Cluster_REM32_Sector002_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$FamilyThanSector" />	
 	<find_sector macro="macro.Cluster_REM33_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ThynsAbyssSector" />
@@ -116,9 +116,9 @@
 		<!-- Queen's Harbour <-> Sacred Relic -->
 		<find_gate name="$QueensHarbourGates" multiple="true" space="$QueensHarbourSector" active="false" />
 		<do_for_each name="$g" in="$QueensHarbourGates">
-		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $SacredRelicSector)">
-		<set_value name="$SacredRelic_QueensHarbourGate" exact="$g.exit" />
-		<set_value name="$QueensHarbour_SacredRelicGate" exact="$g" />
+		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $ClaritysEndSector)">
+		<set_value name="$ClaritysEnd_QueensHarbourGate" exact="$g.exit" />
+		<set_value name="$QueensHarbour_ClaritysEndGate" exact="$g" />
 		</do_if>
 		</do_for_each>
 		<remove_value name="$QueensHarbourGates" />
@@ -171,11 +171,12 @@
 	<set_object_active object="$UnholyDescent_FamilyThanGate" />	
 	<set_object_active object="$ThynsExcavation_ThynsAbyssGate" />	
 	<set_object_active object="$TheShallows_QueensRetributionGate" />	
-	<set_object_active object="$QueensHarbour_SacredRelicGate" />	
+	<set_object_active object="$QueensHarbour_ClaritysEndGate" />	
 	<set_object_active object="$BlueHorizon_GreatTrenchGate" />
 	<set_object_active object="$Matrix472D_ThynsAbyssGate" />		
 	<set_object_active object="$Matrix472D_GreatTrenchGate" />	
 	<set_object_active object="$ShadowsofGiantsVII_TurquoiseSeaIXGate" />
 	<set_object_active object="$AtreusCloud_FarnhamsLegendGate" />	
-</add>
+  </add>
+  <remove sel="/mdscript/cues/cue[@name='BoronFaction_States']/cues/cue[@name='Boron_Gates_Open_KingdomEnd']/actions/set_space_faction_logic_allowed"/>
 </diff>

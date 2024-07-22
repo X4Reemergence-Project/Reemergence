@@ -1131,6 +1131,12 @@
 	  <macro ref="Cluster_REM79_macro" connection="galaxy" />
 	</connection>
 	
+	<!--CLUSTER REM80 - Cloudbase South West-->
+	<connection name="Cluster_REM80_connection" ref="clusters">
+	  <offset><position x="-90000000" y="0" z="17320000" /></offset>
+	  <macro ref="Cluster_REM80_macro" connection="galaxy" />
+	</connection>	
+	
 	<!--CLUSTER ALD01 - Aldrin-->
 	<connection name="Cluster_ALD01_connection" ref="clusters">
 	  <offset><position x="-120000000" y="0" z="121240000" /></offset>
@@ -1151,6 +1157,8 @@
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate001To005']" />		
   <!-- Grand Exchange III - Black Hole Sun V -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate001To006']" />	
+  <!-- Grand Exchange IV - Eighteen Billion -->
+  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate001To002']" />	  
   <!-- Eighteen Billion - Silent Witness I -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate002To008']" />
   <!-- Memory of Profit IX - Bright Promise -->
@@ -1168,7 +1176,11 @@
   <!-- Second Contact II - Second Contact VII -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate013To040']" />	
   <!-- Hewa's Twin I - Hewa's Twin III -->
-  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate019To042']" />  
+  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate019To042']" />
+  <!-- Company Regard - Turquoise Sea X -->
+  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate020To050']" />
+  <!-- Scale Plate Green I - Company Regard -->
+  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate021To050']" />  
   <!-- Pious Mists II - Pious Mists IV -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate022To037']" />
   <!-- Pious Mists II - Pious Mists IX -->
@@ -1179,10 +1191,8 @@
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate024To036']" />	
   <!-- Faulty Logic VII - Atiya's Misfortune -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate025To026']" />		
-  <!-- Company Regard - Turquoise Sea X -->
-  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate020To050']" />
-  <!-- Scale Plate Green I - Company Regard -->
-  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate021To050']" />
+  <!-- Hatikvah's Choice I - Tharka's Cascade XV -->
+  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate029To032']" />  
   <!-- The Void - Frontier Edge -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate027To049']" />	
   <!-- Tharka's Cascade XVII - Matrix #79B -->
@@ -1273,6 +1283,14 @@
 	<connection name="ClusterGate019To042" ref="destination" path="../Cluster_19_connection/Cluster_19_Sector002_connection/Zone_Gate1_Cluster_19_Sector002_connection/connection_ClusterGate019To042">
 		<macro connection="destination" path="../../../../../Cluster_42_connection/Cluster_42_Sector001_connection/Zone_Gate1_Cluster_42_Sector001_connection/connection_ClusterGate042To019" />
 	</connection>
+	<!-- Scale Plate Green I - Turquoise Sea X -->
+	<connection name="ClusterGate021To050" ref="destination" path="../Cluster_21_connection/Cluster_21_Sector001_connection/Zone001_Cluster_21_Sector001_connection/connection_ClusterGate021To050">
+		<macro connection="destination" path="../../../../../Cluster_50_connection/Cluster_50_Sector002_connection/Zone004_Cluster_50_Sector002_connection/connection_ClusterGate050To021" />
+	</connection>
+	<!-- Scale Plate Green VII - Company Regard -->
+	<connection name="ClusterGate021To020" ref="destination" path="../Cluster_21_connection/Cluster_21_Sector002_connection/Zone003_Cluster_21_Sector002_connection/connection_ClusterGate021To020">
+		<macro connection="destination" path="../../../../../Cluster_20_connection/Cluster_20_Sector001_connection/Zone004_Cluster_20_Sector001_connection/connection_ClusterGate020To021" />
+	</connection>		
 	<!-- Pious Mists II - Pious Mists IV -->
 	<connection name="ClusterGate022To037" ref="destination" path="../Cluster_22_connection/Cluster_22_Sector001_connection/Zone_Gate1_Cluster_22_Sector001_connection/connection_ClusterGate022To037">
 		<macro connection="destination" path="../../../../../Cluster_37_connection/Cluster_37_Sector001_connection/Zone001_Cluster_37_Sector001_connection/connection_ClusterGate037To022" />
@@ -1293,14 +1311,6 @@
 	<connection name="ClusterGate025To026" ref="destination" path="../Cluster_25_connection/Cluster_25_Sector001_connection/Zone003_Cluster_25_Sector001_connection/connection_ClusterGate025To026">
 		<macro connection="destination" path="../../../../../Cluster_26_connection/Cluster_26_Sector001_connection/Zone004_Cluster_26_Sector001_connection/connection_ClusterGate026To025" />
 	</connection>			
-	<!-- Scale Plate Green I - Turquoise Sea X -->
-	<connection name="ClusterGate021To050" ref="destination" path="../Cluster_21_connection/Cluster_21_Sector001_connection/Zone001_Cluster_21_Sector001_connection/connection_ClusterGate021To050">
-		<macro connection="destination" path="../../../../../Cluster_50_connection/Cluster_50_Sector002_connection/Zone004_Cluster_50_Sector002_connection/connection_ClusterGate050To021" />
-	</connection>
-	<!-- Scale Plate Green VII - Company Regard -->
-	<connection name="ClusterGate021To020" ref="destination" path="../Cluster_21_connection/Cluster_21_Sector002_connection/Zone003_Cluster_21_Sector002_connection/connection_ClusterGate021To020">
-		<macro connection="destination" path="../../../../../Cluster_20_connection/Cluster_20_Sector001_connection/Zone004_Cluster_20_Sector001_connection/connection_ClusterGate020To021" />
-	</connection>		
 	<!-- Getsu Fune - Frontier Edge -->
 	<connection name="ClusterGate048To049" ref="destination" path="../Cluster_48_connection/Cluster_48_Sector001_connection/Zone_Gate1_Cluster_48_Sector001_connection/connection_ClusterGate048To049">
 		<macro connection="destination" path="../../../../../Cluster_49_connection/Cluster_49_Sector001_connection/Zone003_Cluster_49_Sector001_connection/connection_ClusterGate049To048" />
@@ -1321,12 +1331,10 @@
 	<connection name="ClusterGate402To032" ref="destination" path="../Cluster_402_connection/Cluster_402_Sector001_connection/Zone002_Cluster_402_Sector001_connection/connection_ClusterGate402To032">
 		<macro connection="destination" path="../../../../../Cluster_32_connection/Cluster_32_Sector001_connection/Zone003_Cluster_32_Sector001_connection/connection_ClusterGate032To402" />
 	</connection>
-
 	<!-- Zyarth's Domion IV - Family Nuut -->
 	<connection name="ClusterGate405To418" ref="destination" path="../Cluster_405_connection/Cluster_405_Sector001_connection/Zone005_Cluster_405_Sector001_connection/connection_ClusterGate405To418">
 		<macro connection="destination" path="../../../../../Cluster_418_connection/Cluster_418_Sector001_connection/Zone_Gate1_Cluster_418_Sector001_connection/connection_ClusterGate418To405" />
 	</connection>
-	
 	<!-- Thuruk's Demise II - Ianamus Zura VII -->	
 	<connection name="ClusterGate408To015" ref="destination" path="../Cluster_408_connection/Cluster_408_Sector002_connection/Zone_Gate1_Cluster_408_Sector002_connection/connection_ClusterGate408To015">
 		<macro connection="destination" path="../../../../../Cluster_15_connection/Cluster_15_Sector002_connection/Zone001_Cluster_15_Sector002_connection/connection_ClusterGate015To408" />
@@ -1545,7 +1553,7 @@
 		<macro connection="destination" path="../../../../../Cluster_REM07_connection/Cluster_REM07_Sector001_connection/ZoneG2_Cluster_REM07_Sector001_connection/connection_ClusterGateREM07ToREM08" />
 	</connection>
 	<!-- Teladi Gain - Getsu Fune -->	
-	<connection name="ClusterGateREM09To048" ref="destination" path="../Cluster_REM09_connection/Cluster_REM09_Sector001_connection/ZoneG1_Cluster_REM09_Sector001_connection/connection_ClusterGateREM09To048"><!---->
+	<connection name="ClusterGateREM09To048" ref="destination" path="../Cluster_REM09_connection/Cluster_REM09_Sector001_connection/ZoneG1_Cluster_REM09_Sector001_connection/connection_ClusterGateREM09To048">
 		<macro connection="destination" path="../../../../../Cluster_48_connection/Cluster_48_Sector001_connection/Zone_Gate2_Cluster_48_Sector001_connection/connection_ClusterGate048ToREM09" />
 	</connection>
 	<!-- Herron's Nebula - Light Water -->	
@@ -1559,7 +1567,7 @@
 	<!-- Herron's Nebula - Spaceweed Grove -->	
 	<connection name="ClusterGateREM10ToREM47" ref="destination" path="../Cluster_REM10_connection/Cluster_REM10_Sector001_connection/ZoneG4_Cluster_REM10_Sector001_connection/connection_ClusterGateREM10ToREM47">
 		<macro connection="destination" path="../../../../../Cluster_REM47_connection/Cluster_REM47_Sector001_connection/ZoneG2_Cluster_REM47_Sector001_connection/connection_ClusterGateREM47ToREM10" />
-	</connection>		
+	</connection>	
 	<!-- Tempting Fumes - Argon Prime -->	
 	<connection name="ClusterGateREM11To014" ref="destination" path="../Cluster_REM11_connection/Cluster_REM11_Sector001_connection/ZoneG1_Cluster_REM11_Sector001_connection/connection_ClusterGateREM11To014">
 		<macro connection="destination" path="../../../../../Cluster_14_connection/Cluster_14_Sector001_connection/Zone_Gate1_Cluster_14_Sector001_connection/connection_ClusterGate014ToREM11" />
@@ -1637,7 +1645,7 @@
 		<macro connection="destination" path="../../../../../Cluster_37_connection/Cluster_37_Sector001_connection/Zone_Gate1_Cluster_37_Sector001_connection/connection_ClusterGate037ToREM24" />
 	</connection>	
 	<!-- Clarity's End - Cardinal's Domain -->
-	<connection name="ClusterGateREM25To709" ref="destination" path="../Cluster_REM25_connection/Cluster_REM25_Sector001_connection/ZoneG1_Cluster_REM25_Sector001_connection/connection_ClusterGateREM25To709"><!---->
+	<connection name="ClusterGateREM25To709" ref="destination" path="../Cluster_REM25_connection/Cluster_REM25_Sector001_connection/ZoneG1_Cluster_REM25_Sector001_connection/connection_ClusterGateREM25To709">
 		<macro connection="destination" path="../../../../../Cluster_709_connection/Cluster_709_Sector001_connection/Zone_Gate1_Cluster_709_Sector001_connection/connection_ClusterGate709ToREM25" />
 	</connection>	
 	<!-- Clarity's End - Xaar's Belt III -->
@@ -1704,9 +1712,9 @@
 	<connection name="ClusterGateREM37ToREM38" ref="destination" path="../Cluster_REM37_connection/Cluster_REM37_Sector001_connection/ZoneG1_Cluster_REM37_Sector001_connection/connection_ClusterGateREM37ToREM38">
 		<macro connection="destination" path="../../../../../Cluster_REM38_connection/Cluster_REM38_Sector001_connection/ZoneG2_Cluster_REM38_Sector001_connection/connection_ClusterGateREM38ToREM37" />
 	</connection>	
-	<!-- Queen's Harbour - Sacred Relic -->
-	<connection name="ClusterGateREM37To023" ref="destination" path="../Cluster_REM37_connection/Cluster_REM37_Sector001_connection/ZoneG3_Cluster_REM37_Sector001_connection/connection_ClusterGateREM37To023">
-		<macro connection="destination" path="../../../../../Cluster_23_connection/Cluster_23_Sector001_connection/Zone_Gate1_Cluster_23_Sector001_connection/connection_ClusterGate023ToREM37" />
+	<!-- Queen's Harbour - Clarity's End -->
+	<connection name="ClusterGateREM37ToREM25" ref="destination" path="../Cluster_REM37_connection/Cluster_REM37_Sector001_connection/ZoneG3_Cluster_REM37_Sector001_connection/connection_ClusterGateREM37ToREM25">
+		<macro connection="destination" path="../../../../../Cluster_REM25_connection/Cluster_REM25_Sector001_connection/ZoneG3_Cluster_REM25_Sector001_connection/connection_ClusterGateREM25ToREM37" />
 	</connection>
 	<!-- Ocracoke's Storm II - Shadows of Giants VI -->
 	<connection name="ClusterGateREM40ToREM41" ref="destination" path="../Cluster_REM40_connection/Cluster_REM40_Sector002_connection/ZoneG1_Cluster_REM40_Sector002_connection/connection_ClusterGateREM40ToREM41">
@@ -1725,19 +1733,19 @@
 		<macro connection="destination" path="../../../../../Cluster_08_connection/Cluster_08_Sector001_connection/Zone006_Cluster_08_Sector001_connection/connection_ClusterGate008ToREM42" />
 	</connection>
 	<!-- Blue Profit - Shadow's End -->
-	<connection name="ClusterGateREM43ToREM73" ref="destination" path="../Cluster_REM43_connection/Cluster_REM43_Sector001_connection/ZoneG1_Cluster_REM43_Sector001_connection/connection_ClusterGateREM43ToREM73"><!---->
+	<connection name="ClusterGateREM43ToREM73" ref="destination" path="../Cluster_REM43_connection/Cluster_REM43_Sector001_connection/ZoneG1_Cluster_REM43_Sector001_connection/connection_ClusterGateREM43ToREM73">
 		<macro connection="destination" path="../../../../../Cluster_REM73_connection/Cluster_REM73_Sector001_connection/ZoneG2_Cluster_REM73_Sector001_connection/connection_ClusterGateREM73ToREM43" />
 	</connection>
 	<!-- Blue Profit - Bright Promise -->
-	<connection name="ClusterGateREM43To009" ref="destination" path="../Cluster_REM43_connection/Cluster_REM43_Sector001_connection/ZoneG2_Cluster_REM43_Sector001_connection/connection_ClusterGateREM43To009"><!---->
+	<connection name="ClusterGateREM43To009" ref="destination" path="../Cluster_REM43_connection/Cluster_REM43_Sector001_connection/ZoneG2_Cluster_REM43_Sector001_connection/connection_ClusterGateREM43To009">
 		<macro connection="destination" path="../../../../../Cluster_09_connection/Cluster_09_Sector001_connection/Zone002_Cluster_09_Sector001_connection/connection_ClusterGate009ToREM43" />
 	</connection>
 	<!-- The Vault - Montalaar -->
-	<connection name="ClusterGateREM45ToREM58" ref="destination" path="../Cluster_REM45_connection/Cluster_REM45_Sector001_connection/ZoneG1_Cluster_REM45_Sector001_connection/connection_ClusterGateREM45ToREM58"><!---->
+	<connection name="ClusterGateREM45ToREM58" ref="destination" path="../Cluster_REM45_connection/Cluster_REM45_Sector001_connection/ZoneG1_Cluster_REM45_Sector001_connection/connection_ClusterGateREM45ToREM58">
 		<macro connection="destination" path="../../../../../Cluster_REM58_connection/Cluster_REM58_Sector001_connection/ZoneG2_Cluster_REM58_Sector001_connection/connection_ClusterGateREM58ToREM45" />
 	</connection>		
 	<!-- The Vault - Matrix #483 -->
-	<connection name="ClusterGateREM45ToREM44" ref="destination" path="../Cluster_REM45_connection/Cluster_REM45_Sector001_connection/ZoneG2_Cluster_REM45_Sector001_connection/connection_ClusterGateREM45ToREM44"><!---->
+	<connection name="ClusterGateREM45ToREM44" ref="destination" path="../Cluster_REM45_connection/Cluster_REM45_Sector001_connection/ZoneG2_Cluster_REM45_Sector001_connection/connection_ClusterGateREM45ToREM44">
 		<macro connection="destination" path="../../../../../Cluster_REM44_connection/Cluster_REM44_Sector001_connection/ZoneG1_Cluster_REM44_Sector001_connection/connection_ClusterGateREM44ToREM45" />
 	</connection>		
 	<!-- Recovered Capital - Wretched Skies VII -->
@@ -1745,9 +1753,9 @@
 		<macro connection="destination" path="../../../../../Cluster_REM48_connection/Cluster_REM48_Sector002_connection/ZoneG1_Cluster_REM48_Sector002_connection/connection_ClusterGateREM48ToREM46" />
 	</connection>
 	<!-- Spaceweed Grove - Matrix #695 -->
-	<connection name="ClusterGateREM47ToREM79" ref="destination" path="../Cluster_REM47_connection/Cluster_REM47_Sector001_connection/ZoneG1_Cluster_REM47_Sector001_connection/connection_ClusterGateREM47ToREM79"><!---->
+	<connection name="ClusterGateREM47ToREM79" ref="destination" path="../Cluster_REM47_connection/Cluster_REM47_Sector001_connection/ZoneG1_Cluster_REM47_Sector001_connection/connection_ClusterGateREM47ToREM79">
 		<macro connection="destination" path="../../../../../Cluster_REM79_connection/Cluster_REM79_Sector001_connection/ZoneG2_Cluster_REM79_Sector001_connection/connection_ClusterGateREM79ToREM47" />
-	</connection>		
+	</connection>	
 	<!-- Wretched Skies XV - Duke's Vision -->
 	<connection name="ClusterGateREM48ToREM49" ref="destination" path="../Cluster_REM48_connection/Cluster_REM48_Sector002_connection/ZoneG2_Cluster_REM48_Sector002_connection/connection_ClusterGateREM48ToREM49">
 		<macro connection="destination" path="../../../../../Cluster_REM49_connection/Cluster_REM49_Sector001_connection/ZoneG1_Cluster_REM49_Sector001_connection/connection_ClusterGateREM49ToREM48" />
@@ -1760,6 +1768,10 @@
 	<connection name="ClusterGateREM49ToREM51" ref="destination" path="../Cluster_REM49_connection/Cluster_REM49_Sector001_connection/ZoneG3_Cluster_REM49_Sector001_connection/connection_ClusterGateREM49ToREM51">
 		<macro connection="destination" path="../../../../../Cluster_REM51_connection/Cluster_REM51_Sector001_connection/ZoneG1_Cluster_REM51_Sector001_connection/connection_ClusterGateREM51ToREM49" />
 	</connection>
+	<!-- Duke's Vision - Zyarth's Stand -->
+	<connection name="ClusterGateREM49ToREM60" ref="destination" path="../Cluster_REM49_connection/Cluster_REM49_Sector001_connection/ZoneG4_Cluster_REM49_Sector001_connection/connection_ClusterGateREM49ToREM60">
+		<macro connection="destination" path="../../../../../Cluster_REM60_connection/Cluster_REM60_Sector001_connection/ZoneG3_Cluster_REM60_Sector001_connection/connection_ClusterGateREM60ToREM49" />
+	</connection>	
 	<!-- Emperor's Wisdom - Fierce Clarity -->
 	<connection name="ClusterGateREM50ToREM51" ref="destination" path="../Cluster_REM50_connection/Cluster_REM50_Sector001_connection/ZoneG2_Cluster_REM50_Sector001_connection/connection_ClusterGateREM50ToREM51">
 		<macro connection="destination" path="../../../../../Cluster_REM51_connection/Cluster_REM51_Sector001_connection/ZoneG2_Cluster_REM51_Sector001_connection/connection_ClusterGateREM51ToREM50" />
@@ -1837,7 +1849,7 @@
 		<macro connection="destination" path="../../../../../Cluster_45_connection/Cluster_45_Sector001_connection/Zone_Gate1_Cluster_45_Sector001_connection/connection_ClusterGate045ToREM69" />
 	</connection>
 	<!-- Untainted Eternity - Heretics End -->
-	<connection name="ClusterGateREM76To031" ref="destination" path="../Cluster_REM76_connection/Cluster_REM76_Sector001_connection/ZoneG1_Cluster_REM76_Sector001_connection/connection_ClusterGateREM76To031"><!---->
+	<connection name="ClusterGateREM76To031" ref="destination" path="../Cluster_REM76_connection/Cluster_REM76_Sector001_connection/ZoneG1_Cluster_REM76_Sector001_connection/connection_ClusterGateREM76To031">
 		<macro connection="destination" path="../../../../../Cluster_31_connection/Cluster_31_Sector001_connection/Zone_Gate1_Cluster_31_Sector001_connection/connection_ClusterGate031ToREM76" />
 	</connection>
 	<!-- Belt of Aguilar - Path to Profit -->
@@ -1864,9 +1876,14 @@
 	<connection name="ClusterGateALD02ToREM06" ref="destination" path="../Cluster_ALD02_connection/Cluster_ALD02_Sector001_connection/ZoneG1_Cluster_ALD02_Sector001_connection/connection_ClusterGateALD02ToREM06">
 	  <macro connection="destination" path="../../../../../Cluster_REM06_connection/Cluster_REM06_Sector001_connection/ZoneG3_Cluster_REM06_Sector001_connection/connection_ClusterGateREM06ToALD02" />
 	</connection>
-	
-	
-	
+	<!-- Cloudbase South West - Hatikvah's Choice I -->
+	<connection name="ClusterGateREM80To029" ref="destination" path="../Cluster_REM80_connection/Cluster_REM80_Sector001_connection/ZoneG1_Cluster_REM80_Sector001_connection/connection_ClusterGateREM80To029">
+		<macro connection="destination" path="../../../../../Cluster_29_connection/Cluster_29_Sector001_connection/Zone002_Cluster_29_Sector001_connection/connection_ClusterGate029ToREM80" />
+	</connection>
+	<!-- Cloudbase South West - Tharka's Cascade XV -->
+	<connection name="ClusterGateREM80To032" ref="destination" path="../Cluster_REM80_connection/Cluster_REM80_Sector001_connection/ZoneG2_Cluster_REM80_Sector001_connection/connection_ClusterGateREM80To032">
+		<macro connection="destination" path="../../../../../Cluster_32_connection/Cluster_32_Sector001_connection/Zone004_Cluster_32_Sector001_connection/connection_ClusterGate032ToREM80" />
+	</connection>	
 	<!-- REMXX 001 - REMXX 002 -->
 	<connection name="ClusterGateREMXX1ToREMXX2" ref="destination" path="../Cluster_REMXX_connection/Cluster_REMXX_Sector001_connection/ZoneG1_Cluster_REMXX_Sector001_connection/connection_ClusterGateREMXX1ToREMXX2">
 		<macro connection="destination" path="../../../../../Cluster_REMXX_connection/Cluster_REMXX_Sector002_connection/ZoneG1_Cluster_REMXX_Sector002_connection/connection_ClusterGateREMXX2ToREMXX1" />

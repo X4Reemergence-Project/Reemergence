@@ -1892,7 +1892,7 @@
 					</macro>
 				</connection>				
 			</connections>
-		</macro>		
+		</macro>	
 	<!--SECTOR REM48 - WRETCHED SKIES CLUSTER-->
 		<macro name="Cluster_REM48_macro" class="cluster">
 			<component ref="standardcluster" />
@@ -2911,41 +2911,30 @@
 			</connections>
 		</macro>
 	<!--SECTOR REM73 - SHADOW'S END-->
-		<macro name="Cluster_REM73_macro" class="cluster">
-			<component ref="standardcluster" />
-			<connections>
-				<connection ref="content">
-					<macro>
-						<component connection="space" ref="Cluster_rem73" />
-					</macro>
-				</connection>
-				<connection name="Cluster_REM73_Sector001_connection" ref="sectors">
-					<macro ref="Cluster_REM73_Sector001_macro" connection="cluster" />
-				</connection>
-				<connection name="REM73_Sector001_Region001_connection" ref="regions">
-					<offset>
-						<position x="0" y="-40000" z="0" />
-					</offset>
-					<macro name="REM73_Sector001_Region001_macro">
-					<component connection="cluster" ref="standardregion" />
-					<properties>
-						<region ref="REM73_field1" />
-					</properties>
-					</macro>
-				</connection>
-				<connection name="REM73_Sector001_Region002_connection" ref="regions">
-					<offset>
-						<position x="0" y="-15000" z="0" />
-					</offset>
-					<macro name="REM73_Sector001_Region002_macro">
-					<component connection="cluster" ref="standardregion" />
-					<properties>
-						<region ref="rem73_field2" />
-					</properties>
-					</macro>
-				</connection>				
-			</connections>
+  <macro name="Cluster_REM73_macro" class="cluster">
+	<component ref="standardcluster" />
+	<connections>
+	  <connection ref="content">
+		<macro>
+		  <component connection="space" ref="Cluster_rem73" />
 		</macro>
+	  </connection>
+	  <connection name="Cluster_REM73_Sector001_connection" ref="sectors">
+		<macro ref="Cluster_REM73_Sector001_macro" connection="cluster" />
+	  </connection>
+	  <connection name="REM73_Sector001_Region001_connection" ref="regions">
+		<offset>
+		  <position x="0" y="-15000" z="0" />
+		</offset>
+		<macro name="REM73_Sector001_Region001_macro">
+		<component connection="cluster" ref="standardregion" />
+		  <properties>
+			<region ref="REM73_field1" />
+		  </properties>
+		</macro>
+	  </connection>				
+	</connections>
+  </macro>
 	<!--SECTOR REM74 - TEBATHIMANCKATT'S LEGACY-->
   <macro name="Cluster_REM74_macro" class="cluster">
 	<component ref="standardcluster" />
@@ -3104,7 +3093,7 @@
 	  </connection>				
 	</connections>
   </macro>		  
-	<!--SECTOR REM79 - MATRIX #695-->			
+	<!--SECTOR REM79 - MATRIX #695-->	
   <macro name="Cluster_REM79_macro" class="cluster">
 	<component ref="standardcluster" />
 	<connections>
@@ -3129,6 +3118,53 @@
 	  </connection>		
 	</connections>
   </macro> 
+	<!--SECTOR REM80 - CLOUDBASE SOUTH WEST-->	
+  <macro name="Cluster_REM80_macro" class="cluster">
+	<component ref="standardcluster" />
+	<connections>
+	  <connection ref="content">
+		<macro>
+		  <component connection="space" ref="Cluster_rem80" />
+		</macro>
+	  </connection>	
+	  <connection name="Cluster_REM80_Sector001_connection" ref="sectors">
+		<macro ref="Cluster_REM80_Sector001_macro" connection="cluster" />
+	  </connection>
+      <connection name="REM80_Sector001_Region001_connection" ref="regions">
+        <offset>
+          <position x="42700" y="-10000" z="52500" />
+        </offset>
+        <macro name="REM80_Sector001_Region001_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="rem80_field1" />
+          </properties>
+        </macro>
+      </connection>	
+      <connection name="REM80_Sector001_Region002_connection" ref="regions">
+        <offset>
+          <position x="52700" y="5000" z="12500" />
+        </offset>
+        <macro name="REM80_Sector001_Region002_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="rem80_field1" />
+          </properties>
+        </macro>
+      </connection>		  
+      <connection name="REM80_Sector001_Region003_connection" ref="regions">
+        <offset>
+          <position x="-25000" y="0" z="22500" />
+        </offset>
+        <macro name="REM80_Sector001_Region003_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="rem80_field2" />
+          </properties>
+        </macro>
+      </connection>		  
+	</connections>
+  </macro>   
 	<!--SECTOR ALD01 - ALDRIN I-->
   <macro name="Cluster_ALD01_macro" class="cluster">
     <component ref="standardcluster" />

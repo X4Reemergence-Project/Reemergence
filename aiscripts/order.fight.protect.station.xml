@@ -1,0 +1,10 @@
+<diff>
+<add sel="/aiscript/order[@id='ProtectStation']/params" if="not(/aiscript/order[@id='ProtectStation']/params/param[@name='godstationentry'])">
+  <param name="godstationentry" type="internal" default="''" text="'God Entry ID to protect'"/>
+</add>
+<add sel="/aiscript/attention/actions/label[@name='start']" pos="after" if="not(/aiscript/attention/actions/do_if/find_station[@godstationentry])">
+  <do_if value="not $station.exists and $godstationentry != ''">
+    <find_station name="$station" space="player.galaxy" godstationentry="$godstationentry" required="true"/>
+  </do_if>
+</add>
+</diff>

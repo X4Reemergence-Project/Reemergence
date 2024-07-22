@@ -1,6 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
 <diff>
   <add sel="/groups">
+<!--Aldrin-->   
+	<!--
+	<group name="hq_aldrin">
+	  <select constructionplan="aldrin_hq"/>
+	</group> 
+	-->	
+	<group name="shipyard_aldin">
+	  <select constructionplan="ter_shipyard"/>
+	</group>
+	<group name="wharf_aldin">
+	  <select constructionplan="ter_wharf"/>
+	</group>
+	<group name="equipmentdock_aldin">
+	  <select constructionplan="ter_equipmentdock"/>
+	</group>
+	<group name="tradestation_aldin">
+      <select constructionplan="ter_logisticsdock" />
+      <select constructionplan="ter_supportstation" />
+      <select constructionplan="ter_supplybase" />
+	</group>
+	<group name="defence_aldrin">
+      <select constructionplan="ter_defence" weight="80" />
+      <select constructionplan="ter_defenceplatform" weight="20" />
+	</group>  
 <!--OTAS-->  
 	<group name="hq_otas">
 	  <select constructionplan="otas_hq"/>
@@ -130,10 +154,30 @@
 	<group name="defence_atf">
       <select constructionplan="ter_defence" weight="80" />
       <select constructionplan="ter_defenceplatform" weight="20" />  
-	</group>    	
+	</group> 
+<!--Xaar-->
+	<group name="shipyard_xaar">
+	  <select constructionplan="par_shipyard"/>
+	</group>
+	<group name="wharf_xaar">
+	  <select constructionplan="par_wharf"/>
+	</group>
+	<group name="equipmentdock_xaar">
+	  <select constructionplan="par_equipmentdock"/>
+	</group>
+	<group name="tradestation_xaar">
+	  <select constructionplan="par_tradestation"/>
+	</group>
+	<group name="defence_xaar">
+	  <select constructionplan="par_defence"/>
+	</group>   	
 <!--Split-->	
 	<group name="split_scrap">
 	  <select constructionplan="split_scrap"/>
+	</group>
+<!--Terran-->	
+	<group name="ter_mercury_spp">
+	  <select constructionplan="ter_mercury_spp"/>
 	</group>		
   </add>
 </diff>

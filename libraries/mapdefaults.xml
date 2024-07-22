@@ -46,13 +46,13 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		<dataset macro="Cluster_REM02_macro">
 		  <properties>
 			<identification name="{20003,1010001}" description="{20003,1010002}" system="100"  image="enc_cluster101"/>
-			<area sunlight="0.44" economy="1" security="0.75" god="false"/>
+			<area sunlight="0.55" economy="1" security="0.75" god="false"/>
 		  </properties>
 		 </dataset>
 		<!--Sector REM02 - Ares-->
 	    <dataset macro="Cluster_REM02_Sector001_macro">
 		  <properties>
-		    <identification name="{19530001,05}" description="{19530001,06}" />
+		    <identification name="{19530001,05}" description="{19530001,06}" />		
 		    <sounds>
 			  <music ref="music_dlc_terran_soundtrack_mars" />
 		    </sounds>
@@ -129,13 +129,22 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,1041}" description="{19530001,18}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_argon" />	</sounds>
-				<area sunlight="1.27" economy="1" security="0.25"/>
 			</properties>
 		</dataset>		
 			<!--Power Circle III-->
-			<dataset macro="Cluster_REM08_Sector001_macro">	<properties>	<identification name="{19530001,21}" description="{19530001,22}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM08_Sector001_macro">
+				<properties>
+					<identification name="{19530001,21}" description="{19530001,22}" />
+					<area sunlight="0.72" economy="1" security="0.25" />
+				</properties>
+			</dataset>			
 			<!--Power Circle I-->
-			<dataset macro="Cluster_REM08_Sector002_macro">	<properties>	<identification name="{19530001,19}" description="{19530001,20}" />	</properties>	</dataset>		
+			<dataset macro="Cluster_REM08_Sector002_macro">
+				<properties>
+					<identification name="{19530001,19}" description="{19530001,20}" />
+					<area sunlight="1.27" economy="1" security="0.25" />
+				</properties>
+			</dataset>				
 		
 		<!--Sector REM09 - Teladi Gain-->
 		<dataset macro="Cluster_REM09_macro">
@@ -262,14 +271,23 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3038}" description="{19530001,48}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
-				<area sunlight="1.08" economy="1" security="0.75"/>
 			</properties>
 		</dataset>		
 			<!--Perpetual Sin III-->
-			<dataset macro="Cluster_REM21_Sector001_macro">	<properties>	<identification name="{19530001,51}" description="{19530001,52}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM21_Sector001_macro">
+				<properties>
+					<identification name="{19530001,51}" description="{19530001,52}" />
+					<area sunlight="1.38" economy="1" security="0.75" />
+				</properties>
+			</dataset>		
 			<!--Perpetual Sin I-->
-			<dataset macro="Cluster_REM21_Sector002_macro">	<properties>	<identification name="{19530001,49}" description="{19530001,50}" />	</properties>	</dataset>
-		
+			<dataset macro="Cluster_REM21_Sector002_macro">
+				<properties>
+					<identification name="{19530001,49}" description="{19530001,50}" />
+					<area sunlight="1.08" economy="1" security="0.75" />
+				</properties>
+			</dataset>			
+			
 		<!--Sector REM22 - Pontifex' Seclusion-->
 		<dataset macro="Cluster_REM22_macro">
 			<properties>
@@ -355,22 +373,36 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3020}" description="{19530001,72}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.52" economy="1" security="0.75"/>
 			</properties>
 		</dataset>		
 			<!--Xaar's Belt I-->
-			<dataset macro="Cluster_REM30_Sector001_macro">	<properties>	<identification name="{19530001,73}" description="{19530001,74}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM30_Sector001_macro">
+				<properties>
+					<identification name="{19530001,73}" description="{19530001,74}" />
+					<area sunlight="1.62" economy="1" security="0.75" />
+				</properties>
+			</dataset>
 			<!--Xaar's Belt II-->
-			<dataset macro="Cluster_REM30_Sector002_macro">	<properties>	<identification name="{19530001,75}" description="{19530001,76}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM30_Sector002_macro">
+				<properties>
+					<identification name="{19530001,75}" description="{19530001,76}" />
+					<area sunlight="1.03" economy="1" security="0.75" />
+				</properties>
+			</dataset>		
 			<!--Xaar's Belt III-->
-			<dataset macro="Cluster_REM30_Sector003_macro">	<properties>	<identification name="{19530001,77}" description="{19530001,78}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM30_Sector003_macro">
+				<properties>
+					<identification name="{19530001,77}" description="{19530001,78}" />
+					<area sunlight="1.21" economy="1" security="0.75" />
+				</properties>
+			</dataset>			
 		
 		<!--Sector REM31 - The Shallows -->
 		<dataset macro="Cluster_REM31_macro">
 			<properties>
 				<identification name="{20005,9003}" description="{19530001,80}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_periphery" />	</sounds>
-				<area sunlight="0.81" economy="1" security="1" tags="splitcolony" />
+				<area sunlight="0.81" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmsborder splitcolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM31_Sector001_macro">	<properties>	<identification name="{20005,9003}" description="{19530001,80}" />	</properties>	</dataset>
@@ -380,20 +412,29 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,5044}" description="{19530001,82}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_loyal_families" />	</sounds>
-				<area sunlight="0.86" economy="1" security="1" tags="splitcolony" />
 			</properties>
 		</dataset>		
 			<!--Family Than I-->
-			<dataset macro="Cluster_REM32_Sector001_macro">	<properties>	<identification name="{19530001,83}" description="{19530001,84}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM32_Sector001_macro">
+				<properties>
+					<identification name="{19530001,83}" description="{19530001,84}" />
+					<area sunlight="0.86" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmsborder splitcolony" />
+				</properties>
+			</dataset>			
 			<!--Family Than III-->
-			<dataset macro="Cluster_REM32_Sector002_macro">	<properties>	<identification name="{19530001,85}" description="{19530001,86}" />	</properties>	</dataset>		
-		
+			<dataset macro="Cluster_REM32_Sector002_macro">
+				<properties>
+					<identification name="{19530001,85}" description="{19530001,86}" />
+					<area sunlight="0.96" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmsborder splitcolony" />
+				</properties>
+			</dataset>	
+
 		<!--Sector REM33 - Thyn's Abyss-->
 		<dataset macro="Cluster_REM33_macro">
 			<properties>
 				<identification name="{20005,5005}" description="{19530001,88}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_ravine" />	</sounds>
-				<area sunlight="0.97" economy="1" security="0.5" tags="splitcolony" />
+				<area sunlight="0.97" economy="1" security="0.5" extensionexclusivejobs="true" tags="strongarmsborder splitcolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM33_Sector001_macro">	<properties>	<identification name="{20005,5005}" description="{19530001,88}" />	</properties>	</dataset>
@@ -403,7 +444,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,5034}" description="{19530001,90}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_thyns_exvacation" />	</sounds>
-				<area sunlight="1.16" economy="1" security="1" tags="splitcolony" />
+				<area sunlight="1.16" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmshq splitcolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM34_Sector001_macro">	<properties>	<identification name="{20005,5034}" description="{19530001,90}" />	</properties>	</dataset>
@@ -413,20 +454,29 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9008}" description="{19530001,92}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
-				<area sunlight="1.11" economy="1" security="1" tags="boroncolony" />
 			</properties>
 		</dataset>		
 			<!--Blue Horizon IV-->
-			<dataset macro="Cluster_REM35_Sector001_macro">	<properties>	<identification name="{19530001,95}" description="{19530001,96}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM35_Sector001_macro">
+				<properties>
+					<identification name="{19530001,95}" description="{19530001,96}" />
+					<area sunlight="1.11" economy="1" security="1" extensionexclusivejobs="true" tags="atreusborder boroncolony" />
+				</properties>
+			</dataset>				
 			<!--Blue Horizon I-->
-			<dataset macro="Cluster_REM35_Sector002_macro">	<properties>	<identification name="{19530001,93}" description="{19530001,94}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM35_Sector002_macro">
+				<properties>
+					<identification name="{19530001,93}" description="{19530001,94}" />
+					<area sunlight="0.88" economy="1" security="1" extensionexclusivejobs="true" tags="atreusborder boroncolony" />
+				</properties>
+			</dataset>				
 		
 		<!--Sector REM36 - Great Trench-->
 		<dataset macro="Cluster_REM36_macro">
 			<properties>
 				<identification name="{20005,2007}" description="{19530001,98}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.72" economy="1" security="0.5" tags="boroncolony" />
+				<area sunlight="0.72" economy="1" security="0.5" extensionexclusivejobs="true" tags="atreusborder boroncolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM36_Sector001_macro">	<properties>	<identification name="{20005,2007}" description="{19530001,98}" />	</properties>	</dataset>
@@ -436,7 +486,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,2017}" description="{19530001,100}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_queens_harbour" />	</sounds>
-				<area sunlight="1.13" economy="1" security="1" tags="boroncolony" />
+				<area sunlight="1.13" economy="1" security="1" extensionexclusivejobs="true" tags="atreushq boroncolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM37_Sector001_macro">	<properties>	<identification name="{20005,2017}" description="{19530001,100}" />	</properties>	</dataset>
@@ -446,7 +496,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,2018}" description="{19530001,102}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_cluster_turquoise_sea" />	</sounds>
-				<area sunlight="1.44" economy="1" security="1" tags="boroncolony" />
+				<area sunlight="1.44" economy="1" security="1" extensionexclusivejobs="true" tags="atreusborder boroncolony" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM38_Sector001_macro">	<properties>	<identification name="{20005,2018}" description="{19530001,102}" />	</properties>	</dataset>
@@ -466,26 +516,44 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,9038}" description="{19530001,106}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_terran_soundtrack_yaki" />	</sounds>
-				<area sunlight="1.37" economy="1" security="1" factionlogic="false" tags="pirborder" />
 			</properties>
 		</dataset>		
 			<!--Ocracoke's Storm I-->
-			<dataset macro="Cluster_REM40_Sector001_macro">	<properties>	<identification name="{19530001,107}" description="{19530001,108}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM40_Sector001_macro">
+				<properties>
+					<identification name="{19530001,107}" description="{19530001,108}" />
+					<area sunlight="1.05" economy="1" security="1" factionlogic="false" tags="pirborder" />
+				</properties>
+			</dataset>		
 			<!--Ocracoke's Storm II-->
-			<dataset macro="Cluster_REM40_Sector002_macro">	<properties>	<identification name="{19530001,109}" description="{19530001,110}" />	</properties>	</dataset>
-		
+			<dataset macro="Cluster_REM40_Sector002_macro">
+				<properties>
+					<identification name="{19530001,109}" description="{19530001,110}" />
+					<area sunlight="1.37" economy="1" security="1" factionlogic="false" tags="pirborder" />
+				</properties>
+			</dataset>				
+			
 		<!--Sector REM41 - Shadows of Giants Cluster-->
 		<dataset macro="Cluster_REM41_macro">
 			<properties>
 				<identification name="{20005,6025}" description="{19530001,111}" image="enc_cluster01"/>
 				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.47" economy="1" security="1" factionlogic="false" tags="pirborder" />
 			</properties>
 		</dataset>		
 			<!--Shadows of Giants VI-->
-			<dataset macro="Cluster_REM41_Sector001_macro">	<properties>	<identification name="{19530001,113}" description="{19530001,114}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM41_Sector001_macro">
+				<properties>
+					<identification name="{19530001,113}" description="{19530001,114}" />
+					<area sunlight="0.69" economy="1" security="1" factionlogic="false" tags="pirborder" />
+				</properties>
+			</dataset>				
 			<!--Shadows of Giants VII-->
-			<dataset macro="Cluster_REM41_Sector002_macro">	<properties>	<identification name="{19530001,115}" description="{19530001,116}" />	</properties>	</dataset>
+			<dataset macro="Cluster_REM41_Sector002_macro">
+				<properties>
+					<identification name="{19530001,115}" description="{19530001,116}" />
+					<area sunlight="0.21" economy="1" security="1" factionlogic="false" tags="pirborder" />
+				</properties>
+			</dataset>				
 		
 		<!--Sector REM42 - Bala Gi's Joy-->
 		<dataset macro="Cluster_REM42_macro">
@@ -532,7 +600,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,6017}" description="{19530001,126}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_teladi" />	</sounds>
-				<area sunlight="1.17" economy="1" security="0.5"/>
+				<area sunlight="0.87" economy="1" security="0.5"/>
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM46_Sector001_macro">	<properties>	<identification name="{20005,6017}" description="{19530001,126}" />	</properties>	</dataset>
@@ -558,14 +626,14 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<dataset macro="Cluster_REM48_Sector001_macro">
 				<properties>
 					<identification name="{19530001,129}" description="{19530001,130}" />
-					<area sunlight="0.72" economy="1" security="0.25" />
+					<area sunlight="0.72" economy="1" security="0.25" tags="splitdlc" />
 				</properties>
 			</dataset>
 			<!--Wretched Skies XV-->
 			<dataset macro="Cluster_REM48_Sector002_macro">
 				<properties>
 					<identification name="{19530001,131}" description="{19530001,132}" />
-					<area sunlight="0.34" economy="1" security="0.5" />
+					<area sunlight="0.34" economy="1" security="0.5" tags="splitdlc" />
 				</properties>
 			</dataset>		
 		
@@ -574,7 +642,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3027}" description="{19530001,134}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_dlc_split_soundtrack_paranid" />	</sounds>
-				<area sunlight="0.87" economy="1" security="0.25" />
+				<area sunlight="0.87" economy="1" security="0.25" tags="splitdlc" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM49_Sector001_macro">	<properties>	<identification name="{19530001,133}" description="{19530001,134}" />	</properties>	</dataset>
@@ -584,7 +652,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,3031}" description="{19530001,136}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
-				<area sunlight="2.17" economy="1" security="0.25" />
+				<area sunlight="2.17" economy="1" security="0.25" tags="splitdlc" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM50_Sector001_macro">	<properties>	<identification name="{19530001,135}" description="{19530001,136}" />	</properties>	</dataset>		
@@ -614,7 +682,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		  <properties>
 		    <identification name="{20005,1034}" description="{19530001,142}" image="enc_cluster01"/>
 		    <sounds>	<music ref="music_legends_home" />	</sounds>
-		    <area sunlight="0.97" economy="1" security="1" />
+		    <area sunlight="0.97" economy="1" security="1" tags="otashq" />
 		    <system>
 			  <space environment="{1042,12011}(Clear Space)"/>
 			  <suns>
@@ -650,7 +718,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			<properties>
 				<identification name="{20005,1024}" description="{19530001,146}" image="enc_cluster01"/>
 				<sounds>	<music ref="music_soundtrack_argon" />	</sounds>
-				<area sunlight="4.17" economy="1" security="1" />
+				<area sunlight="9.67" economy="1" security="1" tags="otasborder" />
 			</properties>
 		</dataset>
 		<dataset macro="Cluster_REM55_Sector001_macro">	<properties>	<identification name="{20005,1024}" description="{19530001,146}" />	</properties>	</dataset>
@@ -747,151 +815,151 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		
 		<!--Sector REM65 - Wastelands-->
 		<dataset macro="Cluster_REM65_macro">
-			<properties>
-				<identification name="{20005,1048}" description="{19530001,166}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
-				<area sunlight="1.42" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{20005,1048}" description="{19530001,166}" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
+			<area sunlight="1.42" economy="1" security="0.5"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM65_Sector001_macro">	<properties>	<identification name="{20005,1048}" description="{19530001,166}" />	</properties>	</dataset>
 		
 		<!--Sector REM66 - Ghinn's Escape-->
 		<dataset macro="Cluster_REM66_macro">
-			<properties>
-				<identification name="{20005,5021}" description="{19530001,168}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_windfall" />	</sounds>
-				<area sunlight="1.47" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{20005,5021}" description="{19530001,168}" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_windfall" />	</sounds>
+			<area sunlight="1.47" economy="1" security="1"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM66_Sector001_macro">	<properties>	<identification name="{20005,5021}" description="{19530001,168}" />	</properties>	</dataset>
 		
 		<!--Sector REM67 - Kha'ak Sector Alpha-->
 		<dataset macro="Cluster_REM67_macro">
-			<properties>
-				<identification name="{19530001,169}" description="{19530001,170}" system="7200" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.47" economy="1" security="1" factionlogic="false" tags="khaak" />
-			</properties>
+		  <properties>
+			<identification name="{19530001,169}" description="{19530001,170}" system="7200" image="enc_cluster01"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="1.47" economy="1" security="1" factionlogic="false" tags="khaak" />
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM67_Sector001_macro">	<properties>	<identification name="{19530001,169}" description="{19530001,170}" />	</properties>	</dataset>
 		
 		<!--Sector REM68 - Kha'ak Sector Beta-->
 		<dataset macro="Cluster_REM68_macro">
-			<properties>
-				<identification name="{19530001,171}" description="{19530001,172}" system="7200" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="3.21" economy="1" security="1" factionlogic="false" tags="khaak" />
-			</properties>
+		  <properties>
+			<identification name="{19530001,171}" description="{19530001,172}" system="7200" image="enc_cluster01"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="3.21" economy="1" security="1" factionlogic="false" tags="khaak" />
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM68_Sector001_macro">	<properties>	<identification name="{19530001,171}" description="{19530001,172}" />	</properties>	</dataset>
 		
 		<!--Sector REM69 - Kha'ak Sector Gamma-->
 		<dataset macro="Cluster_REM69_macro">
-			<properties>
-				<identification name="{19530001,173}" description="{19530001,174}" system="7200" image="enc_cluster818"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.66" economy="1" security="1" factionlogic="false" tags="khaak" />
-			</properties>
+		  <properties>
+			<identification name="{19530001,173}" description="{19530001,174}" system="7200" image="enc_cluster818"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="1.66" economy="1" security="1" factionlogic="false" tags="khaak" />
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM69_Sector001_macro">	<properties>	<identification name="{19530001,173}" description="{19530001,174}" />	</properties>	</dataset>
 		
 		<!--Sector REM70 - Unknown Kha'ak Sector-->
 		<dataset macro="Cluster_REM70_macro">
-			<properties>
-				<identification name="{19530001,175}" description="{19530001,176}" system="7200" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="2.05" economy="0" security="0" factionlogic="false" tags="khaak_unknown" />
-			</properties>
+		  <properties>
+			<identification name="{19530001,175}" description="{19530001,176}" system="7200" image="enc_cluster01"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="2.05" economy="0" security="0" factionlogic="false" tags="khaak_unknown" />
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM70_Sector001_macro">	<properties>	<identification name="{19530001,175}" description="{19530001,176}" />	</properties>	</dataset>
 		
 		<!--Sector REM71a - Unknown Sector A-->
 		<dataset macro="Cluster_REM71a_macro">
-			<properties>
-				<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
-				<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknowna"/>
-			</properties>
+		  <properties>
+			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
+			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknowna"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM71a_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
 		
 		<!--Sector REM71b - Unknown Sector B-->
 		<dataset macro="Cluster_REM71b_macro">
-			<properties>
-				<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
-				<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownb"/>
-			</properties>
+		  <properties>
+			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
+			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownb"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM71b_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
 
 		<!--Sector REM71c - Unknown Sector C-->
 		<dataset macro="Cluster_REM71c_macro">
-			<properties>
-				<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
-				<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownc"/>
-			</properties>
+		  <properties>
+			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
+			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownc"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM71c_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
 
 		<!--Sector REM71d - Unknown Sector D-->
 		<dataset macro="Cluster_REM71d_macro">
-			<properties>
-				<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
-				<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownd"/>
-			</properties>
+		  <properties>
+			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
+			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownd"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM71d_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
 		
 		<!--Sector REM71e - Unknown Sector E-->
 		<dataset macro="Cluster_REM71e_macro">
-			<properties>
-				<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
-				<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknowne"/>
-			</properties>
+		  <properties>
+			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
+			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknowne"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM71e_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
 
 		<!--Sector REM71f - Unknown Sector F-->
 		<dataset macro="Cluster_REM71f_macro">
-			<properties>
-				<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
-				<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownf"/>
-			</properties>
+		  <properties>
+			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
+			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownf"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM71f_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>
 		
 		<!--Sector REM72 - Kha'ak Hive-->
 		<dataset macro="Cluster_REM72_macro">
-			<properties>
-				<identification name="{19530001,179}" description="{19530001,180}" system="7200" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="22.73" economy="0" security="0" factionlogic="false" tags="khaak_hive" />
-			</properties>
+		  <properties>
+			<identification name="{19530001,179}" description="{19530001,180}" system="7200" image="enc_cluster01"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="22.73" economy="0" security="0" factionlogic="false" tags="khaak_hive" />
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM72_Sector001_macro">	<properties>	<identification name="{19530001,179}" description="{19530001,180}" />	</properties>	</dataset>
 
 		<!--Sector REM73 - Shadow's End-->
 		<dataset macro="Cluster_REM73_macro">
-			<properties>
-				<identification name="{20005,9006}" description="{19530001,184}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.86" economy="1" security="0.25" tags="pirborder" />
-			</properties>
+		  <properties>
+			<identification name="{20005,9006}" description="{19530001,184}" image="enc_cluster01"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="0.86" economy="1" security="0.25" tags="pirborder" />
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM73_Sector001_macro">	<properties>	<identification name="{19530001,183}" description="{19530001,184}" />	</properties>	</dataset>
 		
 		<!--Sector REM74 - Tebathimanckatt's Legacy-->
 		<dataset macro="Cluster_REM74_macro">
-			<properties>
-				<identification name="{20005,3014}" description="{19530001,186}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
-				<area sunlight="0.19" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{20005,3014}" description="{19530001,186}" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
+			<area sunlight="0.19" economy="1" security="0.5"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM74_Sector001_macro">	<properties>	<identification name="{19530001,185}" description="{19530001,186}" />	</properties>	</dataset>
 
@@ -907,47 +975,47 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		  <properties>
 			<identification name="{19530001,69}" description="{19530001,70}" />
 			  <sounds>	<music ref="music_titania" />	</sounds>	
-			  <area tags="Titania" />			  
+			  <area tags="atfhq" />			  
 		  </properties>
 		</dataset>		
 
 		<!--Sector REM76 - Untainted Eternity-->
 		<dataset macro="Cluster_REM76_macro">
-			<properties>
-				<identification name="{20005,3046}" description="{19530001,188}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="0.31" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{20005,3046}" description="{19530001,188}" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
+			<area sunlight="0.31" economy="1" security="0.5"/>
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM76_Sector001_macro">	<properties>	<identification name="{19530001,187}" description="{19530001,188}" />	</properties>	</dataset>		
 		
 		<!--Sector REM77 - Belt of Aguilar-->
 		<dataset macro="Cluster_REM77_macro">
-			<properties>
-				<identification name="{20005,1011}" description="{19530001,190}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_aguilar" />	</sounds>
-				<area sunlight="1.13" economy="1" security="1" tags="aguilar" />
-			</properties>
+		  <properties>
+			<identification name="{20005,1011}" description="{19530001,190}" image="enc_cluster01"/>
+			<sounds>	<music ref="music_aguilar" />	</sounds>
+			<area sunlight="1.13" economy="1" security="1" tags="jonfercohq" />
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM77_Sector001_macro">	<properties>	<identification name="{19530001,189}" description="{19530001,190}" />	</properties>	</dataset>	
 
 		<!--Sector REM78 - Tkr's Deprivation-->
 		<dataset macro="Cluster_REM78_macro">
-			<properties>
-				<identification name="{20005,5035}" description="{19530001,202}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
-				<area sunlight="1.27" economy="1" security="1" />
-			</properties>
+		  <properties>
+			<identification name="{20005,5035}" description="{19530001,202}" image="enc_cluster01"/>
+			<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
+			<area sunlight="1.27" economy="1" security="1" />
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM78_Sector001_macro">	<properties>	<identification name="{19530001,201}" description="{19530001,202}" />	</properties>	</dataset>		
 		
 		<!--Sector REM79 - Matrix #695-->
 		<dataset macro="Cluster_REM79_macro">
-			<properties>
-				<identification name="{19530001,203}" description="{19530001,204}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
-				<area sunlight="2.07" economy="1" security="1" tags="matrix695" />
-			</properties>
+		  <properties>
+			<identification name="{19530001,203}" description="{19530001,204}" image="enc_cluster01"/>
+			<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
+			<area sunlight="2.07" economy="1" security="1" tags="matrix695" />
+		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM79_Sector001_macro">	<properties>	<identification name="{19530001,203}" description="{19530001,204}" />	</properties>	</dataset>	
 		
@@ -955,6 +1023,7 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		<dataset macro="Cluster_104_Sector003_macro">
 		  <properties>
 			<identification name="{19530001,199}" description="{19530001,200}"  image="enc_cluster104"/>
+			<area sunlight="0.41" economy="1" security="1"/>			
 			<sounds>
 			  <music ref="music_dlc_terran_soundtrack_earth" />
 			</sounds>
@@ -963,22 +1032,46 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 			</worlds>
 			<access licence="innercore_access"/>
 		  </properties>
-		</dataset>	
+		</dataset>
+
+		<!--Sector REM80 - Cloudbase South West-->
+		<dataset macro="Cluster_REM80_macro">
+		  <properties>
+			<identification name="{20005,1029}" description="{19530001,216}" image="enc_cluster01"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
+			<area sunlight="1.71" economy="1" security="1" />
+		  </properties>
+		</dataset>
+		<dataset macro="Cluster_REM80_Sector001_macro">	<properties>	<identification name="{19530001,215}" description="{19530001,216}" />	</properties>	</dataset>			
 
 		<!--Sector ALD01 - Adlrin Cluster-->
 		<dataset macro="Cluster_ALD01_macro">
 		  <properties>
 			<identification name="{20005,7004}" description="{19530001,206}" image="enc_cluster408"/>
 			<sounds>	<music ref="legacy_music_pool" />	</sounds>
-			<area sunlight="0.87" economy="1" security="0.75"/>
 		  </properties>
 		</dataset>
 			<!--Aldrin I-->
-			<dataset macro="Cluster_ALD01_Sector001_macro">	<properties>	<identification name="{19530001,207}" description="{19530001,208}" />	</properties>	</dataset>
+			<dataset macro="Cluster_ALD01_Sector001_macro">
+				<properties>
+					<identification name="{19530001,207}" description="{19530001,208}" />
+					<area sunlight="1.01" economy="1" security="0.75" tags="aldrin" />
+				</properties>
+			</dataset>
 			<!--Aldrin II-->
-			<dataset macro="Cluster_ALD01_Sector002_macro">	<properties>	<identification name="{19530001,209}" description="{19530001,210}" />	</properties>	</dataset>
+			<dataset macro="Cluster_ALD01_Sector002_macro">
+				<properties>
+					<identification name="{19530001,209}" description="{19530001,210}" />
+					<area sunlight="0.67" economy="1" security="0.75" tags="aldrin" />
+				</properties>
+			</dataset>			
 			<!--Aldrin III-->
-			<dataset macro="Cluster_ALD01_Sector003_macro">	<properties>	<identification name="{19530001,211}" description="{19530001,212}" />	</properties>	</dataset>
+			<dataset macro="Cluster_ALD01_Sector003_macro">
+				<properties>
+					<identification name="{19530001,211}" description="{19530001,212}" />
+					<area sunlight="0.87" economy="1" security="0.75" tags="aldrin" />
+				</properties>
+			</dataset>			
 
 		<!--Sector ALD02 - The Bastion-->
 		<dataset macro="Cluster_ALD02_macro">
@@ -1039,10 +1132,17 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 
   
 	<!--NOTE: Syntax lifed from DA-->
+  <add sel="/defaults/dataset[@macro='Cluster_419_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
+  <add sel="/defaults/dataset[@macro='Cluster_420_Sector001_macro']/properties/area" type="@tags">splitdlc</add>	
+  <add sel="/defaults/dataset[@macro='Cluster_422_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
+  <add sel="/defaults/dataset[@macro='Cluster_423_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
+  <add sel="/defaults/dataset[@macro='Cluster_423_Sector002_macro']/properties/area" type="@tags">splitdlc</add>	
+	
   <add sel="/defaults/dataset[@macro='Cluster_03_Sector001_macro']/properties[count(./area)=0]" silent="true">
 	<area tags="nmmc"/>
   </add>
-  <add sel="/defaults/dataset[@macro='Cluster_03_Sector001_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">nmmc</add>	
+  <add sel="/defaults/dataset[@macro='Cluster_03_Sector001_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">nmmc</add>
+	<!--Xenon Jobs-->
   <add sel="/defaults/dataset[@macro='Cluster_17_Sector001_macro']/properties[count(./area)=0]" silent="true">
 	<area tags="matrix9"/>
   </add>
@@ -1079,5 +1179,5 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
   <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_02_macro']/properties[count(./area)=0]" silent="true">
 	<area extensionexclusivejobs="true"/>
   </add>
-  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_02_macro']/properties[count(./area)=1]/area" type="@extensionexclusivejobs" silent="true">true</add>  
+  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_02_macro']/properties[count(./area)=1]/area" type="@extensionexclusivejobs" silent="true">true</add> 
 </diff>

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff> 
+	<!--VRO-->
+  <remove sel="//groups/group[@name='par_hyperion_l']/select[@macro='ship_par_l_hyperion_macro']" />
+  <remove sel="//groups/group[@name='hol_hyperion_l']/select[@macro='ship_par_l_hyperion_macro']" /> 
+  <remove sel="//groups/group/select[@macro='ship_arg_l_centaur_b_macro']" />
+  <remove sel="//groups/group/select[@macro='ship_xen_xl_u_macro']" />
+  
+
   <!-- ################ -->
   <!--    ARGON 	-->
   <!-- ################ --> 
@@ -44,7 +51,7 @@
   
   <!-- ################ -->
   <!--    PARANID 	-->
-  <!-- ################ --> 
+  <!-- ################ -->
   <add sel="//groups">		
 	<group name="par_tm">	
 	  <select macro="ship_par_m_tm_macro" weight="100" /> 
@@ -131,7 +138,7 @@
   
   <!-- ################ -->
   <!--    VIGOR 	-->
-  <!-- ################ -->
+  <!-- ################ -->  
   
   
   <!-- ################ -->
@@ -160,7 +167,6 @@
 
   <remove sel="//groups/group[@name='teratf_destroyer_l']/select[@macro='ship_atf_l_destroyer_01_a_macro']" />    
   <replace sel="/groups/group[@name='ter_lightcarrier_l']/select[@macro='ship_ter_l_carrier_01_macro']/@macro">ship_ter_l_chiba_e_macro</replace>  <!--VRO Chiba for RE Chiba E-->  
-  <remove sel="//groups/group/select[@macro='ship_xen_xl_u_macro']" /> <!--VRO U-->
   
   <add sel="/groups/group[@name='ter_fighter_heavy_s']"> 
 	<select macro="ship_ter_s_falchion_macro" weight="25" />  	
@@ -323,7 +329,8 @@
       <select macro="ship_tel_m_bomber_01_a_macro" weight="15"/>	
       <select macro="ship_tel_m_bomber_01_b_macro" weight="15"/>
       <select macro="ship_tel_m_frigate_01_a_macro" weight="10"/>
-      <select macro="ship_tel_m_frigate_01_b_macro" weight="10"/>		 	
+      <select macro="ship_tel_m_frigate_01_b_macro" weight="10"/>
+	  <select macro="ship_pirate_m_marauder_macro" weight="10" />		  
 	</group>
   </add>  
   <add sel="//groups">		
@@ -344,7 +351,8 @@
 	  <select macro="ship_arg_s_heavyfighter_01_b_macro" weight="75" />
 	  <select macro="ship_arg_s_heavyfighter_02_a_macro" weight="75" />	  
 	  <select macro="ship_pir_s_heavyfighter_01_a_macro" weight="60" />	
-	  <select macro="ship_pirate_s_blastclaw_macro" weight="60" />		  
+	  <select macro="ship_pirate_s_blastclaw_macro" weight="60" />	
+	  <select macro="ship_pirate_m_marauder_macro" weight="10" />		  
 	</group>
   </add> 
 <!--Yaki - Skull&Bones--> 
@@ -379,7 +387,8 @@
 	<select macro="ship_arg_s_heavyfighter_01_a_macro" weight="75" />
 	<select macro="ship_arg_s_heavyfighter_01_b_macro" weight="75" />
 	<select macro="ship_arg_s_heavyfighter_02_a_macro" weight="75" />
-	<select macro="ship_pirate_s_blastclaw_macro" weight="60" />		
+	<select macro="ship_pirate_s_blastclaw_macro" weight="60" />
+	<select macro="ship_pirate_m_marauder_macro" weight="10" />		
   </add>
   <add sel="/groups/group[@name='sca_pirate_s']">	
 	<select macro="ship_arg_s_fighter_01_a_macro" weight="100" />	

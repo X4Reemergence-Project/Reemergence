@@ -1,6 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff>
   <add sel="/characters">
+    <!-- Aldrin -->
+    <!-- Aldrin Faction Representative -->
+    <character id="factionrepresentative_aldrin" group="pioneers.factionrepresentative.female">
+      <category tags="[factionrepresentative]" faction="aldrin" race="terran"/>
+      <skills>
+        <skill type="management" min="10" max="15"/>
+        <skill type="morale" max="15"/>
+        <skill type="boarding" min="6" max="15"/>
+        <skill type="engineering" min="5" max="15"/>
+        <skill type="piloting" min="11" max="15"/>
+      </skills>
+      <page exact="10103"/>
+      <owner exact="aldrin"/>
+    </character>
+    <!-- regular -->
+    <character id="service_aldrin_random_dlc_terran" group="pioneers.service">
+      <category tags="[crew, service, regular, recruitable]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="engineering" min="2" max="4"/>
+        <skill type="morale" min="2" max="4"/>
+        <skill type="piloting" min="1" max="3"/>
+        <skill type="management" max="1"/>
+        <skill type="boarding" max="1"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="marine_aldrin_random_dlc_terran" group="pioneers.marine">
+      <category tags="[crew, marine, regular, recruitable]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="boarding" min="2" max="4"/>
+        <skill type="morale" min="2" max="4"/>
+        <skill type="engineering" max="1"/>
+        <skill type="piloting" min="1" max="3"/>
+        <skill type="management" max="1"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="fighter_aldrin_regular_random" group="pioneers.pilot">
+      <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular, recruitable]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="piloting" min="5" max="7"/>
+        <skill type="morale" exact="7"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="3"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="manager_aldrin_regular_random" group="pioneers.manager">
+      <category tags="[crew, officer, manager, regular, recruitable]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="management" min="5" max="6"/>
+        <skill type="morale" max="5"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="boarding" min="2" max="3"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <!-- passenger -->
+    <character id="passenger_aldrin_random_dlc_terran" group="pioneers.passenger">
+      <category tags="[crew, passenger]" faction="[pioneers]" race="terran"/>
+      <skills>
+        <skill type="boarding" exact="0"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" max="6"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="prisoner_aldrin_random_dlc_terran" group="pioneers.prisoner">
+      <category tags="[crew, prisoner]" faction="[pioneers]" race="terran"/>
+      <skills>
+        <skill type="boarding" max="3"/>
+        <skill type="engineering" min="1" max="3"/>
+        <skill type="management" max="2"/>
+        <skill type="morale" min="1" max="2"/>
+        <skill type="piloting" min="2" max="4"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <!-- Rookies -->
+    <character id="service_aldrin_random_rookie_dlc_terran" group="pioneers.service">
+      <category tags="[crew, service, rookie, recruitable]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="engineering" min="1" max="2"/>
+        <skill type="morale" min="1" max="4"/>
+        <skill type="piloting" max="2"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="marine_aldrin_random_rookie_dlc_terran" group="pioneers.marine">
+      <category tags="[crew, marine, rookie, recruitable]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="boarding" min="1" max="2"/>
+        <skill type="morale" min="1" max="3"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="piloting" max="2"/>
+        <skill type="management" exact="0"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="fighter_aldrin_random_rookie" group="pioneers.pilot">
+      <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, rookie, recruitable]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="piloting" min="1" max="5"/>
+        <skill type="morale" min="4" max="5"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="3"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <!-- Veteran -->
+    <character id="service_aldrin_random_veteran_dlc_terran" group="pioneers.service">
+      <category tags="[crew, service, veteran, recruitable]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="engineering" min="6" max="9"/>
+        <skill type="morale" min="6" max="9"/>
+        <skill type="piloting" min="2" max="5"/>
+        <skill type="management" exact="1"/>
+        <skill type="boarding" min="1" max="2"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="marine_aldrin_random_veteran_dlc_terran" group="pioneers.marine">
+      <category tags="[crew, marine, veteran, recruitable]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="boarding" min="6" max="9"/>
+        <skill type="morale" min="6" max="9"/>
+        <skill type="engineering" min="1" max="2"/>
+        <skill type="piloting" min="3" max="6"/>
+        <skill type="management" max="1"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <!-- Elite -->
+    <character id="service_aldrin_random_elite_dlc_terran" group="pioneers.service">
+      <category tags="[crew, service, elite]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="engineering" min="10" max="12"/>
+        <skill type="morale" min="10" max="12"/>
+        <skill type="piloting" min="3" max="6"/>
+        <skill type="management" min="1" max="2"/>
+        <skill type="boarding" min="1" max="3"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="marine_aldrin_random_elite_dlc_terran" group="pioneers.marine">
+      <category tags="[crew, marine, elite]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="boarding" min="10" max="12"/>
+        <skill type="morale" min="10" max="12"/>
+        <skill type="engineering" min="2" max="3"/>
+        <skill type="piloting" min="4" max="6"/>
+        <skill type="management" min="1" max="3"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="platform_trader_aldrin_random_dlc_terran" group="pioneers.trader">
+      <category tags="[trader, licencetrader]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="management" min="9" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="aldrin"/>
+      <stock ref="'default_trader'" />
+    </character>
+    <character id="ship_trader_aldrin_random_dlc_terran" group="pioneers.shiptrader">
+      <category tags="[trader, shiptrader]" faction="[aldrin, faction.player]" race="terran" />
+      <skills>
+        <skill type="management" min="9" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="aldrin"/>
+      <stock ref="'default_trader'" />
+    </character>
+    <!-- Shady Guy -->
+    <character id="shadyguy_aldrin_random_dlc_terran" group="pioneers.shadyguy">
+      <category tags="[shadyguy]" faction="[aldrin, faction.player]" race="terran" />
+      <skills>
+        <skill type="piloting" min="5" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" min="1" max="6"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="aldrin"/>
+      <stock ref="'default_shadyguy'" />
+    </character>
+    <!-- Casually clothed platform NPCs -->
+    <character id="aldrin_casual_dlc_terran" group="pioneers.civilian">
+      <category tags="[casual]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="morale" max="1"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="2"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>  
+    <!-- Aldrin Non-Faction Characters (for use in mass traffic) -->
+    <character id="aldrin_civilian" group="pioneers.trader">
+      <category faction="civilian" tags="[npc, crew, officer, trader, commander, fighterpilot, manager, marine, masstraffic, watchdog, pilot, traderpilot]" race="terran" comment="fullyqualified"/>
+      <skills>
+        <skill type="piloting" min="7" max="14"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" max="2"/>
+        <skill type="management" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="civilian"/>
+    </character>
+    <character id="trader_aldrin_random" group="pioneers.trader">
+      <category tags="[crew, pilot, aipilot, traderpilot, masstraffic]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="piloting" min="5" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" min="5" max="6"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="fighter_aldrin_random" group="pioneers.pilot">
+      <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="piloting" min="4" max="15"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="5" max="6"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>
+    <character id="manager_aldrin_random" group="pioneers.manager">
+      <category tags="[crew, officer, manager]" faction="[aldrin, faction.player]" race="terran"/>
+      <skills>
+        <skill type="management" min="5" max="9"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" min="2" max="6"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="aldrin"/>
+    </character>	
+  
+  
     <!-- OTAS -->	
     <!-- OTAS Faction Representative -->
     <character id="factionrepresentative_otas" group="otas.factionrepresentative.male">
@@ -257,8 +515,9 @@
       <owner exact="otas"/>
     </character>
 
-  <!-- jonferco -->
-  <!-- jonferco Faction Representative -->  
+	
+  <!-- Jonferco -->
+  <!-- Jonferco Faction Representative -->  
   <character id="factionrepresentative_jonferco" group="argon.factionrepresentative.male">
     <category tags="[factionrepresentative]" faction="jonferco" race="argon"/>
     <skills>
@@ -754,7 +1013,7 @@
         <skill type="boarding" min="1" max="2"/>
       </skills>
       <owner list="[strongarms]"/>
-    </character>
+	</character>
 
 
   <!-- NMMC -->

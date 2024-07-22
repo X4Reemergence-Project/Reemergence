@@ -321,7 +321,7 @@
 		  <position x="12750" y="0" z="12750"/>
 		  <quaternion qx="0" qy="0.976296" qz="0" qw="-0.2164396"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space" />
+		<macro ref="props_gates_orb_accelerator_01_macro" connection="space" />
 	  </connection>
 	</connections>
   </macro>	
@@ -1370,15 +1370,19 @@
 	  </connection>
 	</connections>
   </macro>
-  <macro name="ZoneG3_Cluster_REM25_Sector001_macro" class="zone"><!--INACTIVE-->
+  <macro name="ZoneG3_Cluster_REM25_Sector001_macro" class="zone"><!--QUEEN'S HARBOUR-->
     <component ref="standardzone" />
 	<connections>
-	  <connection name="connection_ClusterGateREM25To" ref="gates">
+	  <connection name="connection_ClusterGateREM25ToREM37" ref="gates">
 		<offset>
 		  <position x="12750" y="0" z="12750"/>
 		  <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space" />
+		<macro ref="props_gates_anc_gate_macro" connection="space">
+		  <properties>
+			<state active="false" />
+		  </properties>									
+		</macro>	
 	  </connection>
 	</connections>
   </macro>		
@@ -2178,10 +2182,10 @@
 	  </connection>
 	</connections>
   </macro>
-  <macro name="ZoneG3_Cluster_REM37_Sector001_macro" class="zone"><!--SACRED RELIC-->
+  <macro name="ZoneG3_Cluster_REM37_Sector001_macro" class="zone"><!--CLARITY'S END-->
 	<component ref="standardzone" />
 	<connections>
-	  <connection name="connection_ClusterGateREM37To023" ref="gates">
+	  <connection name="connection_ClusterGateREM37ToREM25" ref="gates">
 		<offset>
 		  <position x="-12750" y="0" z="-12750"/>
 		  <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795"/>					
@@ -2590,7 +2594,7 @@
 	  <connection name="connection_ClusterGateREM43To009" ref="gates">
 		<offset>
 		  <position x="4750" y="0" z="18750"/>
-		  <quaternion qx="0" qy="0.7660444" qz="0" qw="-0.6427876"/>					
+		  <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834"/>					
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
@@ -2668,7 +2672,7 @@
 	  <connection name="connection_ClusterGateREM45ToREM44" ref="gates">
 		<offset>
 		  <position x="18750" y="0" z="4750"/>
-		  <quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068"/>					
+		  <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834"/>					
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
@@ -2880,7 +2884,7 @@
 	  <connection name="connection_ClusterGateREM49ToREM48" ref="gates">
 		<offset>
 		  <position x="18750" y="0" z="4750"/>
-		  <quaternion qx="0" qy="0.6087614" qz="0" qw="-0.7933533"/>					
+		  <quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068"/>					
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
@@ -2909,7 +2913,19 @@
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
 	</connections>
-  </macro>		
+  </macro>	
+  <macro name="ZoneG4_Cluster_REM49_Sector001_macro" class="zone"><!--ZYARTH'S STAND-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM49ToREM60" ref="gates">
+		<offset>
+		  <position x="11750" y="0" z="-11750"/>
+		  <quaternion qx="0" qy="0.5" qz="0" qw="-0.8660254"/>					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>  
   <macro name="Zone001_Cluster_REM49_Sector001_macro" class="zone"> <!--CENTER-->
 	<component ref="standardzone" />
   </macro>
@@ -3463,7 +3479,19 @@
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
 	</connections>
-  </macro>		
+  </macro>
+  <macro name="ZoneG3_Cluster_REM60_Sector001_macro" class="zone"><!--DUKE'S VISION-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM60ToREM49" ref="gates">
+		<offset>
+		  <position x="-21750" y="0" z="3250"/>
+		  <quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068"/>					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>	  
   <macro name="Zone001_Cluster_REM60_Sector001_macro" class="zone"> <!--CENTER-->
 	<component ref="standardzone" />
   </macro>
@@ -4352,7 +4380,66 @@
 	<connections />
   </macro> 
   
-  
+
+	<!--REM80 - CLOUDBASE SOUTH WEST-->
+  <macro name="ZoneG1_Cluster_REM80_Sector001_macro" class="zone"><!--HATIKVAH'S CHOICE I-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM80To029" ref="gates">
+		<offset>
+		  <position x="0" y="0" z="21750"/>
+		  <quaternion qx="0" qy="1" qz="0" qw="0"/>						
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>
+  <macro name="ZoneG2_Cluster_REM80_Sector001_macro" class="zone"><!--THARKA'S CASCADE XV-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM80To032" ref="gates">
+		<offset>
+		  <position x="12750" y="0" z="-12750"/>
+		  <quaternion qx="0" qy="0.5" qz="0" qw="-0.8660254"/>					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>
+  <macro name="ZoneG3_Cluster_REM80_Sector001_macro" class="zone"><!--INACTIVE-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM80To" ref="gates">
+		<offset>
+		  <position x="-12750" y="0" z="-12750"/>
+		  <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795"/>					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>  
+  <macro name="Zone001_Cluster_REM80_Sector001_macro" class="zone"> <!--CENTER-->
+	<component ref="standardzone" />
+	<connections />
+  </macro>	
+  <macro name="Zone002_Cluster_REM80_Sector001_macro" class="zone"> <!--NORTH-->
+	<component ref="standardzone" />
+	<connections />
+  </macro>
+  <macro name="Zone003_Cluster_REM80_Sector001_macro" class="zone"> <!--EAST-->
+	<component ref="standardzone" />
+	<connections />
+  </macro>	
+  <macro name="Zone004_Cluster_REM80_Sector001_macro" class="zone"> <!--SOUTH-->
+	<component ref="standardzone" />
+	<connections />
+  </macro>
+  <macro name="Zone005_Cluster_REM80_Sector001_macro" class="zone"> <!--WEST-->
+	<component ref="standardzone" />
+	<connections />
+  </macro>    
+
+ 
 	<!--ALD01 - ALDRIN I-->	
   <macro name="Zone001_Cluster_ALD01_Sector001_macro" class="zone"> <!--CENTER-->
 	<component ref="standardzone" />
