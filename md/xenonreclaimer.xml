@@ -4,7 +4,7 @@
 	<cues>
 		<cue name="ActivateReclaimer">
 			<actions>
-				<find_sector groupname="$XenonCore" multiple="true" space="player.galaxy" macro="[macro.cluster_424_sector002_macro,macro.cluster_415_sector001_macro,macro.cluster_33_sector001_macro,macro.cluster_17_sector001_macro,macro.cluster_26_sector001_macro,macro.cluster_21_sector001_macro,macro.cluster_112_sector001_macro,macro.cluster_rem79_sector001_macro,macro.cluster_rem01_sector001_macro,macro.cluster_rem06_sector001_macro,macro.cluster_rem12_sector001_macro,macro.cluster_rem26_sector001_macro,macro.cluster_rem39_sector001_macro,macro.cluster_rem44_sector001_macro]"/>
+				<find_sector groupname="$XenonCore" multiple="true" space="player.galaxy" macro="[macro.cluster_424_sector002_macro,macro.cluster_415_sector001_macro,macro.cluster_33_sector001_macro,macro.cluster_17_sector001_macro,macro.cluster_26_sector001_macro,macro.cluster_21_sector001_macro,macro.cluster_112_sector001_macro,macro.cluster_rem01_sector001_macro,macro.cluster_rem06_sector001_macro,macro.cluster_rem12_sector001_macro,macro.cluster_rem26_sector001_macro,macro.cluster_rem39_sector001_macro,macro.cluster_rem44_sector001_macro]"/>
 				<find_sector name="$Emperor_Pride" space="player.galaxy" macro="macro.cluster_424_sector002_macro" required="true"/>
 				<find_sector name="$Matrix598" space="player.galaxy" macro="macro.cluster_415_sector001_macro" required="true"/>
 				<find_sector name="$Matrix79b" space="player.galaxy" macro="macro.cluster_33_sector001_macro" required="true"/>
@@ -13,12 +13,11 @@
 				<find_sector name="$Scale_Plate_Green" space="player.galaxy" macro="macro.cluster_21_sector001_macro" required="true"/>
 				<find_sector name="$Savage_Spur" space="player.galaxy" macro="macro.cluster_112_sector001_macro" required="true"/>
 					<!--X4:Reemergence-->
-				<find_sector name="$Matrix01" space="player.galaxy" macro="macro.cluster_rem01_sector001_macro" required="true"/>
+				<find_sector name="$McCallumRelay" space="player.galaxy" macro="macro.cluster_rem01_sector001_macro" required="true"/>
 				<find_sector name="$Matrix48" space="player.galaxy" macro="macro.cluster_rem06_sector001_macro" required="true"/>
 				<find_sector name="$Split_Fire" space="player.galaxy" macro="macro.cluster_rem12_sector001_macro" required="true"/>
 				<find_sector name="$Desecrated_Skies" space="player.galaxy" macro="macro.cluster_rem26_sector001_macro" required="true"/>
-				<find_sector name="$Matrix472d" space="player.galaxy" macro="macro.cluster_rem39_sector001_macro" required="true"/>	
-				<find_sector name="$Matrix695" space="player.galaxy" macro="macro.cluster_rem79_sector001_macro" required="true"/>				
+				<find_sector name="$Matrix472d" space="player.galaxy" macro="macro.cluster_rem39_sector001_macro" required="true"/>					
 				<find_sector name="$Matrix483" space="player.galaxy" macro="macro.cluster_rem44_sector001_macro" required="true"/>					
 			</actions>
 			<cues>
@@ -86,12 +85,12 @@
 								<debug_text text="'Deactivated Savage Spur Reclaimer.'"/>								
 							</do_elseif>
 							<!--X4:Reemergence-->
-							<do_elseif value="(event.object == $Matrix01) and (not $JobSectorsActivated.indexof.{event.object})">
-								<set_job_active job="'xenon_reclaimer_matrix01'" activate="true"/>
+							<do_elseif value="(event.object == $McCallumRelay) and (not $JobSectorsActivated.indexof.{event.object})">
+								<set_job_active job="'xenon_reclaimer_mccallum_relay'" activate="true"/>
 								<append_to_list name="$JobSectorsActivated" exact="event.object"/>
-								<debug_text text="'Activated Matrix01 Reclaimer.'"/>
-								<set_job_active job="'xenon_reclaimer_matrix01'" activate="false"/>
-								<debug_text text="'Deactivated Matrix01 Reclaimer.'"/>								
+								<debug_text text="'Activated McCallumRelay Reclaimer.'"/>
+								<set_job_active job="'xenon_reclaimer_mccallum_relay'" activate="false"/>
+								<debug_text text="'Deactivated McCallumRelay Reclaimer.'"/>								
 							</do_elseif>	
 							<do_elseif value="(event.object == $Matrix48) and (not $JobSectorsActivated.indexof.{event.object})">
 								<set_job_active job="'xenon_reclaimer_matrix48'" activate="true"/>
@@ -120,14 +119,7 @@
 								<debug_text text="'Activated Matrix472D Reclaimer.'"/>
 								<set_job_active job="'xenon_reclaimer_matrix472d'" activate="false"/>
 								<debug_text text="'Deactivated Matrix472D Reclaimer.'"/>								
-							</do_elseif>
-							<do_elseif value="(event.object == $Matrix695) and (not $JobSectorsActivated.indexof.{event.object})">
-								<set_job_active job="'xenon_reclaimer_matrix695'" activate="true"/>
-								<append_to_list name="$JobSectorsActivated" exact="event.object"/>
-								<debug_text text="'Activated Matrix695 Reclaimer.'"/>
-								<set_job_active job="'xenon_reclaimer_matrix695'" activate="false"/>
-								<debug_text text="'Deactivated Matrix695 Reclaimer.'"/>								
-							</do_elseif>							
+							</do_elseif>						
 							<do_elseif value="(event.object == $Matrix483) and (not $JobSectorsActivated.indexof.{event.object})">
 								<set_job_active job="'xenon_reclaimer_matrix483'" activate="true"/>
 								<append_to_list name="$JobSectorsActivated" exact="event.object"/>
@@ -136,7 +128,7 @@
 								<debug_text text="'Deactivated Matrix483 Reclaimer.'"/>									
 							</do_elseif>							
 							<!-- Cleanup -->
-							<do_if value="$JobSectorsActivated.count ge 14">
+							<do_if value="$JobSectorsActivated.count ge 13">
 								<cancel_cue cue="MainCheck.static"/>
 								<debug_text text="'ActivateReclaimer: Canceling MainCheck.static.'"/>
 							</do_if>

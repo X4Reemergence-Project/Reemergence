@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <add sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Process_Ships']/actions/debug_text[@chance='$DebugChance'][2]" pos="before">
+    <do_if value="true">
+      <do_if value="not $DATShipyards?">
+        <set_value name="$REShipyards" exact="[]"/>
+        <set_value name="$REShipyardCount" exact="0"/>
+        <set_value name="$REWharfs" exact="[]"/>
+        <set_value name="$REWharfCount" exact="0"/>
+        <set_value name="$RESkipCheckShipyard" exact="false"/>
+        <set_value name="$RESkipCheckWharf" exact="false"/>
+        <set_value name="$RESkipCount" exact="0"/>
+        <set_value name="$REBuildCount" exact="0"/>
+      </do_if>
+      <do_elseif value="$REShipyards?">
+        <remove_value name="$REShipyards"/>
+        <remove_value name="$REShipyardCount"/>
+        <remove_value name="$REWharfs"/>
+        <remove_value name="$REWharfCount"/>
+        <remove_value name="$RESkipCheckShipyard"/>
+        <remove_value name="$RESkipCheckWharf"/>
+        <remove_value name="$RESkipCount"/>
+        <remove_value name="$REBuildCount"/>
+      </do_elseif>
+    </do_if>
+  </add>
+  <add sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Process_Ships']/actions/do_if[@value='$ShipsToBuild.count']/do_all[@exact='$Shipyards.count']/do_if[@value='$BuildModules.count']/set_value[@exact='$Shipyard.builds.queued'][@name='$QueuedBuilds']" pos="before">
+    <do_if value="$REShipyards?">
+      <!-- The count vars are for skipping distance check logic -->
+      <do_if value="$REShipyardCount? and $Shipyard.isshipyard and (($Faction == $Shipyard.owner) or $Shipyard.isplayerowned)">
+        <append_to_list name="$REShipyards" exact="$Shipyard" unique="true"/>
+        <do_if value="($Faction == $Shipyard.owner)">
+          <set_value name="$REShipyardCount" exact="1" operation="add"/>
+        </do_if>
+      </do_if>
+      <do_elseif value="$REWharfCount? and $Shipyard.iswharf and (($Faction == $Shipyard.owner) or $Shipyard.isplayerowned)">
+        <append_to_list name="$REWharfs" exact="$Shipyard" unique="true"/>
+        <do_if value="($Faction == $Shipyard.owner)">
+          <set_value name="$REWharfCount" exact="1" operation="add"/>
+        </do_if>
+      </do_elseif>
+    </do_if>
+  </add>
+  <add sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Process_Ships']/actions/do_if[@value='$ShipsToBuild.count']/remove_value[@name='$BuildProcessors']" pos="before">
+    <do_if value="$REShipyards?">
+      <do_if value="$REShipyardCount? and (not (($REShipyardCount lt 0) or ($REShipyardCount ge 2)))">
+        <!-- Skip the distance check if faction has 0 or 1 sy -->
+        <set_value name="$RESkipCheckShipyard" exact="true"/>
+      </do_if>
+      <do_if value="$REWharfCount? and (not (($REWharfCount lt 0) or ($REWharfCount ge 2)))">
+        <!-- Skip the distance check if faction has 0 or 1 wharf -->
+        <set_value name="$RESkipCheckWharf" exact="true"/>
+      </do_if>
+    </do_if>
+  </add>
+  <add sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Process_Ships']/actions/do_if[@value='$Shipyards.count']/do_all[@exact='$ShipsToBuild.count']/do_all[@exact='$Shipyards.count']" pos="before">
+    <do_if value="$REShipyards?">
+      <do_if value="$RESkipCheckShipyard? and $RESkipCheckWharf? and (not ($RESkipCheckShipyard and $RESkipCheckWharf))">
+        <set_value name="$RESingleDebugOutput" exact="false"/>
+        <!-- Create a list of the closest stations + player stations -->
+        <do_if value="(not $RESkipCheckShipyard) and $REShipyards? and $REShipyards.count and $ShipToBuild.macro.isclass.[class.ship_l,class.ship_xl]">
+          <remove_value name="$REJobCluster"/>
+          <set_value name="$REJobCluster" exact="@$ShipToBuild.jobcommander.cluster"/>
+          <do_if value="not $REJobCluster">
+            <set_value name="$REJobCluster" exact="@$ShipToBuild.jobmainsector.cluster"/>
+          </do_if>
+          <set_value name="$REValidStations" exact="[]"/>
+          <sort_list list="$REShipyards" sortbyvalue="loop.element.gatedistance.{$REJobCluster}"/>
+          <do_for_each name="$REStation" in="$REShipyards" counter="$A">
+            <do_if value="(($A == 1) or ($REValidStations.count == 0)) and ($REStation.gatedistance.{$REJobCluster} ge 0)">
+              <append_to_list name="$REValidStations" exact="$REStation"/>
+            </do_if>
+            <do_if value="not $REValidStations.indexof.{$REStation} and ($REStation.gatedistance.{$REJobCluster} ge 0)">
+              <do_if value="$REStation.gatedistance.{$REJobCluster} lt $REValidStations.{1}.gatedistance.{$REJobCluster}">
+                <clear_list list="$REValidStations"/>
+                <append_to_list name="$REValidStations" exact="$REStation"/>
+              </do_if>
+              <do_elseif value="$REStation.gatedistance.{$REJobCluster} == $REValidStations.{1}.gatedistance.{$REJobCluster}">
+                <append_to_list name="$REValidStations" exact="$REStation"/>
+              </do_elseif>
+              <do_elseif value="$REStation.isplayerowned">
+                <append_to_list name="$REValidStations" exact="$REStation"/>
+              </do_elseif>
+            </do_if>
+          </do_for_each>
+        </do_if>
+        <do_elseif value="(not $RESkipCheckWharf) and $REWharfs? and $REWharfs.count and $ShipToBuild.macro.isclass.[class.ship_xs,class.ship_s,class.ship_m]">
+          <remove_value name="$REJobCluster"/>
+          <set_value name="$REJobCluster" exact="@$ShipToBuild.jobcommander.cluster"/>
+          <do_if value="not $REJobCluster">
+            <set_value name="$REJobCluster" exact="@$ShipToBuild.jobmainsector.cluster"/>
+          </do_if>
+          <set_value name="$REValidStations" exact="[]"/>
+          <sort_list list="$REWharfs" sortbyvalue="loop.element.gatedistance.{$REJobCluster}"/>
+          <do_for_each name="$REStation" in="$REWharfs" counter="$A">
+            <do_if value="(($A == 1) or ($REValidStations.count == 0)) and ($REStation.gatedistance.{$REJobCluster} ge 0)">
+              <append_to_list name="$REValidStations" exact="$REStation"/>
+            </do_if>
+            <do_if value="not $REValidStations.indexof.{$REStation} and ($REStation.gatedistance.{$REJobCluster} ge 0)">
+              <do_if value="$REStation.gatedistance.{$REJobCluster} lt $REValidStations.{1}.gatedistance.{$REJobCluster}">
+                <clear_list list="$REValidStations"/>
+                <append_to_list name="$REValidStations" exact="$REStation"/>
+              </do_if>
+              <do_elseif value="$REStation.gatedistance.{$REJobCluster} == $REValidStations.{1}.gatedistance.{$REJobCluster}">
+                <append_to_list name="$REValidStations" exact="$REStation"/>
+              </do_elseif>
+              <do_elseif value="$REStation.isplayerowned">
+                <append_to_list name="$REValidStations" exact="$REStation"/>
+              </do_elseif>
+            </do_if>
+          </do_for_each>
+        </do_elseif>
+        <do_else>
+          <remove_value name="$REValidStations"/>
+        </do_else>
+      </do_if>
+      <do_else>
+        <remove_value name="$REValidStations"/>
+      </do_else>
+    </do_if>
+  </add>
+  <add sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Process_Ships']/actions/do_if[@value='$Shipyards.count']/do_all[@exact='$ShipsToBuild.count']/do_all[@exact='$Shipyards.count']/do_if[@value='$ShipyardTable.{$Shipyard}.$BuildableShipWares.indexof.{$ShipToBuild.macro.ware}']/do_if[@value='$HasSuitableBuildModule']" pos="before">
+    <do_if value="$REShipyards? and $HasSuitableBuildModule and ($RESkipCheckShipyard? and $RESkipCheckWharf?) and (not ($RESkipCheckShipyard and $RESkipCheckWharf))">
+      <do_if value="(((not $RESkipCheckShipyard) and $ShipToBuild.macro.isclass.[class.ship_l,class.ship_xl]) or ((not $RESkipCheckWharf) and $ShipToBuild.macro.isclass.[class.ship_xs,class.ship_s,class.ship_m])) and $REValidStations? and (not $REValidStations.indexof.{$Shipyard})">
+        <set_value name="$HasSuitableBuildModule" exact="false"/>
+        <do_if value="@$RESingleDebugOutput">
+          <set_value name="$REDebugString" exact="'MOD: DA4RE -- Skipped Build -- $Faction: %s -- $ShipToBuild.macro: %s -- $REJobCluster: %s -- Distance: %s -- BestShipyard: %s(%s)(%s) -- BestDistance: %s'.[$Faction,@$ShipToBuild.macro,@$REJobCluster.knownname,@$Shipyard.gatedistance.{$REJobCluster},@$REValidStations.{1}.knownname,@$REValidStations.{1}.idcode,@$REValidStations.{1}.sector.knownname,@$REValidStations.{1}.gatedistance.{$REJobCluster}]"/>
+          <remove_value name="$RESingleDebugOutput"/>
+          <remove_value name="$REJobCluster"/>
+        </do_if>
+      </do_if>
+    </do_if>
+  </add>
+  <add sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Process_Ships']/actions/do_if[@value='$Shipyards.count']/do_all[@exact='$ShipsToBuild.count']/do_all[@exact='$PriceOrder.count']" pos="before">
+    <do_if value="true">
+      <do_if value="$REShipyards? and $REDebugString? and (not $DistanceOrder.count)">
+        <set_value name="$RESkipCount" exact="1" operation="add"/>
+      </do_if>
+      <remove_value name="$REDebugString"/>
+    </do_if>
+  </add>
+  <add sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Process_Ships']/actions/do_if[@value='$Shipyards.count']/do_all[@exact='$ShipsToBuild.count']/do_if[@value='$ScoredShipyardTable.keys.count']/add_build_to_construct_ship[@faction='$Faction']" pos="before">
+    <do_if value="$REBuildCount?">
+      <set_value name="$REBuildCount" exact="1" operation="add"/>
+    </do_if>
+  </add>
+</diff>
