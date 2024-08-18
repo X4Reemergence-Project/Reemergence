@@ -203,6 +203,20 @@
 	<owner faction="yaki" />
   </ware> 	 
 	<!--SHIPS-->
+	  <ware id="ship_arg_m_express" name="{19530007,760}" description="{19530007,860}" transport="ship" volume="1" tags="ship">
+		<price min="177000" average="208235" max="239470" />
+		<production time="20" amount="1" method="default" name="{20206,101}">
+		  <primary>
+			<ware ware="energycells" amount="108" />
+			<ware ware="hullparts" amount="191" />
+		  </primary>
+		</production>
+		<component ref="ship_arg_m_express_macro" />
+		<restriction licence="generaluseship" />
+		<owner faction="otas" /> <!-- temporary addition to request players to test the new ship type (TP) -->
+		<owner faction="argon" /> 
+		<owner faction="antigone" />
+	  </ware>		
     <ware id="ship_spl_l_cheetah" name="{19530007,700}" description="{19530007,800}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
       <price min="6195057" average="6858890" max="7522724" />
       <production time="90" amount="1" method="default" name="{20206,101}">

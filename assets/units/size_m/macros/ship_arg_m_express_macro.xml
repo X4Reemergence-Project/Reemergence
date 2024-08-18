@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Exported by: Michael (192.168.3.59) at 13.10.2021_12-31-19-->
 <macros>
-  <macro name="ship_arg_m_tm_macro" class="ship_m">
-    <component ref="ship_arg_m_tm" />
+  <macro name="ship_arg_m_express_macro" class="ship_m">
+    <component ref="ship_arg_m_express" />
     <properties>
-      <identification name="{19530007,733}" basename="{19530007,733}" description="{19530007,833}" icon="ship_m_neutral_01" /> <!-- temporary icon due to lack of custom one -->
+      <identification name="{19530007,760}" description="{19530007,860}" icon="ship_m_trade_01" />
       <software>
         <software ware="software_dockmk2" compatible="1" />
         <software ware="software_flightassistmk1" default="1" />
@@ -15,21 +14,21 @@
         <software ware="software_targetmk1" compatible="1" />
         <software ware="software_trademk1" default="1" />
       </software>
-      <explosiondamage value="100" shield="500" />
+      <explosiondamage value="1000" />
       <storage missile="20" />
-      <hull max="40000" />
+      <hull max="43100" />
       <secrecy level="1" />
-      <purpose primary="fight" />
-      <people capacity="21" />
+      <purpose primary="trade" />
+      <people capacity="37" />
       <sounds>
         <shipdetail ref="shipdetail_ship_m_02" />
       </sounds>
-      <physics mass="26.966">
-        <inertia pitch="9.177" yaw="6.177" roll="4.942" />
-        <drag forward="5.207345" reverse="22.1441" horizontal="14.9655" vertical="14.9655" pitch="14.5662" yaw="14.5662" roll="14.5662" />
+      <physics mass="51.559">
+        <inertia pitch="9.15" yaw="9.15" roll="7.25" />
+        <drag forward="7.35" reverse="29.9" horizontal="34.1" vertical="34.1" pitch="16.9" yaw="17.2" roll="17.2" />
       </physics>
       <thruster tags="medium" />
-      <ship type="carrier" />
+      <ship type="transporter" />
       <sound_occlusion inside="0.4" />
     </properties>
     <connections>
@@ -45,25 +44,6 @@
       <connection ref="con_storage01">
         <macro ref="storage_arg_s_trans_container_01_a_macro" connection="ShipConnection" />
       </connection>
-
-	
-	<connection ref="con_dockingarea_invisible_left_01">
-		<macro ref="dockarea_invisible_s_macro" connection="Connection01" />
-	</connection>
-	<connection ref="con_dockingarea_invisible_left_02">
-		<macro ref="dockarea_invisible_s_macro" connection="Connection01" />
-	</connection>
-	<connection ref="con_dockingarea_invisible_right_01">
-		<macro ref="dockarea_invisible_s_macro" connection="Connection01" />
-	</connection>
-	<connection ref="con_dockingarea_invisible_right_02">
-		<macro ref="dockarea_invisible_s_macro" connection="Connection01" />
-	</connection>
-		
-    <connection ref="con_buildmodule">
-        <macro ref="buildmodule_gen_carrier_macro" connection="object" />
-    </connection>
-
-    </connections>	
+    </connections>
   </macro>
 </macros>
