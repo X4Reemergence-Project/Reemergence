@@ -1,0 +1,155 @@
+diff --git a/jobs.xml b/jobs_mod.xml
+index f0050d5..20f58f2 100644
+--- a/jobs.xml
++++ b/jobs_mod.xml
+@@ -5676,7 +5676,7 @@
+       </order>
+     </orders>
+     <category faction="loanshark" tags="[plunderer, scrapyard, large]" size="ship_l"/>
+-    <quota galaxy="3"/>
++    <quota galaxy="2"/>
+     <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+     <basket basket="pirate_container"/>
+@@ -5700,7 +5700,7 @@
+       </order>
+     </orders>
+     <category faction="loanshark" tags="[plunderer, scrapyard, fighter]" size="ship_s"/>
+-    <quota galaxy="5"/>
++    <quota galaxy="3"/>
+     <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+     <basket basket="pirate_container"/>
+@@ -5762,13 +5762,12 @@
+   <job id="vig_iceunion_raider_large" name="{20204,11201}">
+     <modifiers commandeerable="true"/>
+     <orders>
+-      <order order="Plunder" default="true">
+-        <param name="range_internal" value="'sector'"/>
+-        <param name="plundermode" value="0"/>
++      <order order="Patrol" default="true">
++        <param name="range" value="class.zone"/>
+       </order>
+     </orders>
+-    <category faction="loanshark" tags="[military, plunderer, iceunion, large]" size="ship_l"/>
+-    <quota galaxy="5" cluster="2"/>
++    <category faction="loanshark" tags="[military, raider, iceunion, large]" size="ship_l"/>
++    <quota galaxy="3" cluster="2"/>
+     <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+     <basket basket="pirate_container"/>
+@@ -5792,8 +5791,8 @@
+         <param name="plundermode" value="0"/>
+       </order>
+     </orders>
+-    <category faction="loanshark" tags="[military, plunderer, iceunion, fighter]" size="ship_s"/>
+-    <quota galaxy="7" cluster="3"/>
++    <category faction="loanshark" tags="[military, raider, iceunion, fighter]" size="ship_s"/>
++    <quota galaxy="2" cluster="3"/>
+     <location class="sector" macro="Cluster_501_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+     <basket basket="pirate_container"/>
+@@ -5812,13 +5811,12 @@
+   <job id="vig_scrapyard_raider_large" name="{20204,13201}">
+     <modifiers commandeerable="true"/>
+     <orders>
+-      <order order="Plunder" default="true">
+-        <param name="range_internal" value="'sector'"/>
+-        <param name="plundermode" value="0"/>
++      <order order="Patrol" default="true">
++        <param name="range" value="class.zone"/>
+       </order>
+     </orders>
+-    <category faction="loanshark" tags="[military, plunderer, scrapyard, large]" size="ship_l"/>
+-    <quota galaxy="5" cluster="2"/>
++    <category faction="loanshark" tags="[military, raider, scrapyard, large]" size="ship_l"/>
++    <quota galaxy="3" cluster="2"/>
+     <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+     <basket basket="pirate_container"/>
+@@ -5837,13 +5835,12 @@
+   <job id="vig_scrapyard_raider_fighter" name="{20204,13201}">
+     <modifiers commandeerable="true"/>
+     <orders>
+-      <order order="Plunder" default="true">
+-        <param name="range_internal" value="'sector'"/>
+-        <param name="plundermode" value="0"/>
++      <order order="Patrol" default="true">
++        <param name="range" value="class.zone"/>
+       </order>
+     </orders>
+-    <category faction="loanshark" tags="[military, plunderer, scrapyard, fighter]" size="ship_s"/>
+-    <quota galaxy="7" cluster="3"/>
++    <category faction="loanshark" tags="[military, raider, scrapyard, fighter]" size="ship_s"/>
++    <quota galaxy="2" cluster="3"/>
+     <location class="sector" macro="Cluster_502_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+     <basket basket="pirate_container"/>
+@@ -5862,12 +5859,11 @@
+   <job id="vig_aurora_raider_large" name="{20204,14201}">
+     <modifiers commandeerable="true"/>
+     <orders>
+-      <order order="Plunder" default="true">
+-        <param name="range_internal" value="'sector'"/>
+-        <param name="plundermode" value="0"/>
++      <order order="Patrol" default="true">
++        <param name="range" value="class.zone"/>
+       </order>
+     </orders>
+-    <category faction="loanshark" tags="[military, plunderer, aurora, large]" size="ship_l"/>
++    <category faction="loanshark" tags="[military, raider, aurora, large]" size="ship_l"/>
+     <quota galaxy="5" cluster="2"/>
+     <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+@@ -5887,12 +5883,11 @@
+   <job id="vig_aurora_raider_fighter" name="{20204,14201}">
+     <modifiers commandeerable="true"/>
+     <orders>
+-      <order order="Plunder" default="true">
+-        <param name="range_internal" value="'sector'"/>
+-        <param name="plundermode" value="0"/>
++      <order order="Patrol" default="true">
++        <param name="range" value="class.zone"/>
+       </order>
+     </orders>
+-    <category faction="loanshark" tags="[military, plunderer, aurora, fighter]" size="ship_s"/>
++    <category faction="loanshark" tags="[military, raider, aurora, fighter]" size="ship_s"/>
+     <quota galaxy="7" cluster="3"/>
+     <location class="sector" macro="Cluster_503_Sector001_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+@@ -5912,13 +5907,12 @@
+   <job id="vig_common_raider_large" name="{20204,3401}">
+     <modifiers commandeerable="true"/>
+     <orders>
+-      <order order="Plunder" default="true">
+-        <param name="range_internal" value="'sector'"/>
+-        <param name="plundermode" value="0"/>
++      <order order="Patrol" default="true">
++        <param name="range" value="class.zone"/>
+       </order>
+     </orders>
+-    <category faction="loanshark" tags="[military, plunderer, common, large]" size="ship_l"/>
+-    <quota galaxy="5" cluster="2"/>
++    <category faction="loanshark" tags="[military, raider, common, large]" size="ship_l"/>
++    <quota galaxy="3" cluster="2"/>
+     <location class="galaxy" macro="xu_ep2_universe_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+     <basket basket="pirate_container"/>
+@@ -5937,13 +5931,12 @@
+   <job id="vig_common_raider_fighter" name="{20204,3401}">
+     <modifiers commandeerable="true"/>
+     <orders>
+-      <order order="Plunder" default="true">
+-        <param name="range_internal" value="'sector'"/>
+-        <param name="plundermode" value="0"/>
++      <order order="Patrol" default="true">
++        <param name="range" value="class.zone"/>
+       </order>
+     </orders>
+-    <category faction="loanshark" tags="[military, plunderer, common, fighter]" size="ship_s"/>
+-    <quota galaxy="7" cluster="3"/>
++    <category faction="loanshark" tags="[military, raider, common, fighter]" size="ship_s"/>
++    <quota galaxy="2" cluster="3"/>
+     <location class="galaxy" macro="xu_ep2_universe_macro" faction="loanshark" relation="self" comparison="exact" matchextension="false"/>
+     <environment buildatshipyard="true"/>
+     <basket basket="pirate_container"/>
