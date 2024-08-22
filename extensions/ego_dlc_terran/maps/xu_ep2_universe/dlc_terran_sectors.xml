@@ -309,11 +309,19 @@
           <position x="-127630" y="0" z="108765" />
 		</offset>
 	</replace>
+	<add sel="//macro[@name='Cluster_112_Sector001_macro']/connections"><!--Ocracoke's Storm-->
+		<connection name="Zone_Gate1_Cluster_112_Sector001_connection" ref="zones">
+			<offset>
+				<position x="45000" y="0" z="195000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_112_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>		
 	<replace sel="/macros/macro[@name='Cluster_112_Sector002_macro']/connections/connection[@name='Zone002_Cluster_112_Sector002_connection']/offset"><!--Getsu Fune-->
 		<offset>	
           <position x="-63140" y="0" z="-55165" />
 		</offset>
-	</replace>	
+	</replace>
 
 	
 	<!-- Sector 113 - Segaris -->
@@ -416,7 +424,7 @@
          <position x="-75255" y="0" z="-33360" />		  
 		</offset>
 	</replace>
-	<replace sel="/macros/macro[@name='Cluster_116_Sector001_macro']/connections/connection[@name='Zone003_Cluster_116_Sector001_connection']/offset"><!--Oort Cloud Beta-->
+	<replace sel="/macros/macro[@name='Cluster_116_Sector001_macro']/connections/connection[@name='Zone003_Cluster_116_Sector001_connection']/offset"><!--Planet 9-->
 		<offset>
           <position x="3640" y="0" z="120530" />
 		</offset>
