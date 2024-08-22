@@ -22,8 +22,9 @@
 	  <select macro="ship_otas_m_ides_stalwart_macro" weight="100"/>
 	</group>
 	<group name="otas_trader_container_s">
-	  <select macro="ship_otas_s_courier_stalwart_macro" weight="100"/>
+	  <select macro="ship_arg_m_express_macro" weight="25"/>  	 <!--experimental-->
 	  <select macro="ship_otas_s_callisto_stalwart_macro" weight="100"/>
+	  <select macro="ship_otas_s_callisto_stalwart_macro" weight="100"/>	  
 	</group>
 	<group name="otas_miner_solid_l">
 	  <select macro="ship_otas_l_magnetar_mineral_stalwart_macro" weight="100"/>
@@ -105,9 +106,12 @@
 	<group name="ant_centaur">
       <select macro="ship_arg_m_centaur_macro" weight="100"/>   	  
 	</group>
-  </add> 
+  </add>
   <add sel="/groups/group[@name='ant_fighter_heavy_s']"> 
 	<select macro="ship_arg_s_buster_macro" weight="10" />  	
+  </add>    
+  <add sel="/groups/group[@name='ant_trader_container_s']"> 
+	<select macro="ship_arg_m_express_macro" weight="50" />  	 <!--experimental-->
   </add>    
   <add sel="/groups/group[@name='ant_gunboat_m']"> 
 	<select macro="ship_arg_m_centaur_macro" weight="75" />  	
@@ -126,7 +130,10 @@
 	<group name="arg_centaur">
       <select macro="ship_arg_m_centaur_macro" weight="100"/>   	  
 	</group>
-  </add>   
+  </add> 
+  <add sel="/groups/group[@name='arg_trader_container_s']"> 
+	<select macro="ship_arg_m_express_macro" weight="50" />  	 <!--experimental-->  	
+  </add>  
   <add sel="/groups/group[@name='arg_fighter_heavy_s']"> 
 	<select macro="ship_arg_s_buster_macro" weight="10" />  	
   </add>  
