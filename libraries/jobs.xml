@@ -942,7 +942,7 @@
 	</job>	
 
 	  <!-- OTAS Combat Jobs -->  
-	<job id="otas_battleship_patrol_xl_border" name="{20221,5031}">
+	<job id="otas_battleship_patrol_xl_sector" name="{20221,5031}">
 		<modifiers commandeerable="true"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -951,7 +951,7 @@
 		</orders>
 		<category faction="otas" tags="[factionlogic, military, battleship]" size="ship_xl"/>
 		<quota galaxy="3" maxgalaxy="4" cluster="2" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otasborder"/>
+		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" />
 		<environment buildatshipyard="true" />
 		<ship>
 			<select faction="otas" tags="[military, battleship]" size="ship_xl"/>
@@ -967,84 +967,6 @@
 			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
 		</subordinates>
 	</job>
-	<job id="otas_battleship_patrol_xl_core" name="{20221,5031}">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, battleship]" size="ship_xl"/>
-		<quota galaxy="1" maxgalaxy="2" cluster="1" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otascore"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, battleship]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="2"/>
-		</subordinates>
-	</job>	
-	<job id="otas_carrier_patrol_xl_border" name="{20204,3201}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, carrier]" size="ship_xl"/>
-		<quota galaxy="3" maxgalaxy="4" cluster="2" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otasborder"/>
-		<environment buildatshipyard="true" />
-		<ship>
-			<select faction="otas" tags="[military, carrier]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>			
-			<subordinate job="otas_fighter_escort_s_carrier" assignment="attack" group="2"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
-			<subordinate job="otas_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
-		</subordinates>
-	</job>
-	<job id="otas_carrier_patrol_xl_core" name="{20204,3201}">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-			</order>
-		</orders>
-		<category faction="otas" tags="[factionlogic, military, carrier]" size="ship_xl"/>
-		<quota galaxy="1" maxgalaxy="3" cluster="2" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" tags="otascore"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[military, carrier]" size="ship_xl"/>
-			<loadout>
-				<level exact="1.0"/>
-				<variation exact="0"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>
-			<subordinate job="otas_destroyer_escort_l" assignment="attack" group="1"/>			
-			<subordinate job="otas_fighter_escort_s_carrier" assignment="attack" group="2"/>
-			<subordinate job="otas_frigate_escort_m" assignment="attack" group="3"/>
-			<subordinate job="otas_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
-		</subordinates>
-	</job>
 	<job id="otas_carrier_patrol_xl_sector" name="{20204,3201}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -1053,7 +975,7 @@
 			</order>
 		</orders>
 		<category faction="otas" tags="[factionlogic, military, carrier]" size="ship_xl"/>
-		<quota galaxy="2" maxgalaxy="3" cluster="2" sector="1"/>
+		<quota galaxy="3" maxgalaxy="4" cluster="2" sector="1"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false" />
 		<environment buildatshipyard="true" preferbuilding="true"/>
 		<ship>
@@ -5274,6 +5196,97 @@
 
  <!--SPLIT-->  
   <add sel="//jobs">
+	<!--Zyarth-->
+	<job id="zyarth_carrier_patrol_xl_familythan" name="{20204,6201}">
+      <modifiers commandeerable="true"/>
+      <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.zone"/>
+		</order>
+      </orders>
+      <category faction="split" tags="[factionlogic, military, carrier]" size="ship_xl"/>
+      <quota galaxy="1"/>
+      <location class="sector" macro="Cluster_rem32_sector001_macro" faction="split" relation="self" comparison="exact" tags="splitcolony" matchextension="false"/>
+	  <environment buildatshipyard="true"/>
+	  <ship>
+		<select faction="split" tags="[military, carrier]" size="ship_xl"/>
+		<owner exact="split" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="zyarth_escort_m_carrier" assignment="attack"/>
+		<subordinate job="zyarth_escort_s_carrier" assignment="defence"/>
+		<subordinate job="zyarth_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
+	  </subordinates>
+	</job>
+	<job id="zyarth_destroyer_patrol_l_familythan" name="{20204,3301}">
+      <modifiers commandeerable="true"/>
+      <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.cluster"/>
+		</order>
+      </orders>
+      <category faction="split" tags="[factionlogic, military, destroyer]" size="ship_l"/>
+      <quota galaxy="2" sector="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="split" relation="self" comparison="exact" tags="splitcolony" matchextension="false"/>
+      <environment buildatshipyard="true"/>
+      <ship>
+	    <select faction="split" tags="[military, destroyer]" size="ship_l"/>
+		<loadout>
+		  <level min="0.6" max="1.0"/>
+		</loadout>
+      <owner exact="split" overridenpc="true"/>
+      </ship>
+      <subordinates>
+		<subordinate job="zyarth_frigate_escort_m" assignment="attack"/>
+		<subordinate job="zyarth_resupplier_escort_xl" assignment="supplyfleet" group="10"/>
+      </subordinates>
+	</job>
+	<job id="zyarth_corvette_patrol_m_familythan" name="{20204,2901}">
+      <modifiers commandeerable="true"/>
+      <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.sector"/>
+		</order>
+      </orders>
+      <category faction="split" tags="[factionlogic, military, corvette]" size="ship_m"/>
+      <quota galaxy="3" maxgalaxy="4" sector="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="split" relation="self" comparison="exact" tags="splitcolony" matchextension="false"/>
+      <environment buildatshipyard="true"/>
+	  <ship>
+		<select faction="split" tags="[military, corvette]" size="ship_m"/>
+		<loadout>
+		  <level min="0.6" max="1.0"/>
+		</loadout>
+		<owner exact="split" overridenpc="true"/>
+      </ship>
+      <subordinates>
+		<subordinate job="zyarth_corvette_escort_m" assignment="attack"/>
+      </subordinates>
+	</job>
+	<job id="zyarth_fighter_patrol_s_familythan" name="{20204,2901}">
+      <modifiers commandeerable="true"/>
+      <orders>
+		<order order="Patrol" default="true">
+		  <param name="range" value="class.zone"/>
+		</order>
+      </orders>
+      <category faction="split" tags="[factionlogic, military, fighter]" size="ship_s"/>
+      <quota galaxy="4" maxgalaxy="5" zone="1"/>
+      <location class="galaxy" macro="xu_ep2_universe_macro" faction="split" relation="self" comparison="exact" tags="splitcolony" matchextension="false"/>
+      <environment buildatshipyard="true"/>
+      <ship>
+		<select faction="split" tags="[fighter, heavy]" size="ship_s"/>
+		<loadout>
+          <level min="0.6" max="1.0"/>
+		</loadout>
+		<owner exact="split" overridenpc="true"/>
+	  </ship>
+	  <subordinates>
+		<subordinate job="zyarth_fighter_escort_s_patrol"/>
+	  </subordinates>
+	</job>  
+	
+	<!--Fallen Families-->
 	<job id="faf_cheetah_plunder" name="{20204,4201}">
 	  <modifiers commandeerable="false"/>
       <orders>
