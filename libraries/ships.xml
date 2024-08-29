@@ -3,7 +3,8 @@
   <remove sel="//ships/ship[@id='xenon_xl_u']" /> <!--VRO U--> 
   <remove sel="//ships/ship[@id='paranid_hyperion']" /> <!--VRO Hyperion-->   
   <remove sel="//ships/ship[@id='holyorder_hyperion']" /> <!--VRO Hyperion--> 
-  <remove sel="//ships/ship[@id='loanshark_centaur']" /> <!--VRO Centaur-->   
+  <remove sel="//ships/ship[@id='loanshark_centaur']" /> <!--VRO Centaur--> 
+  <replace sel="/ships/ship[@id='pioneer_tug_m']/@group">pio_pata</replace>  <!--Para for Manticore-->  
 
   <add sel="//ships">
   <ship id="otas_builder_xl" group="otas_builder_xl">
@@ -382,6 +383,15 @@
     <drop ref="ship_small_military"/>
     <people ref="terran_military_crew"/>
   </ship>
+  <ship id="pio_pata" group="pio_pata">
+    <category tags="[pata]" faction="[pioneers]" size="ship_m"/>
+    <pilot>
+      <select faction="pioneers" tags="traderpilot"/>
+    </pilot>
+    <basket basket="all_container"/>
+    <drop ref="ship_medium_civilian"/>
+    <people ref="pioneers_freighter_crew"/>
+  </ship>    
   <ship id="pio_falchion" group="pio_falchion">
     <category tags="[military, falchion]" faction="[pioneers]" size="ship_s"/>
     <pilot>
