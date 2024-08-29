@@ -203,6 +203,31 @@
 	<owner faction="yaki" />
   </ware> 	 
 	<!--SHIPS-->
+  <ware id="ship_ter_m_pata" name="{19530007,743}" description="{19530007,843}" transport="ship" volume="1" tags="ship">
+    <price min="342342" average="402755" max="463168" />
+    <production time="25" amount="1" method="default" name="{20206,901}">
+      <primary>
+        <ware ware="computronicsubstrate" amount="47" />
+        <ware ware="energycells" amount="54" />
+        <ware ware="siliconcarbide" amount="9" />
+      </primary>
+    </production>
+    <component ref="ship_ter_m_pata_macro" />
+    <restriction licence="generaluseship" />
+    <owner faction="pioneers" />
+  </ware>
+    <ware id="ship_spl_l_adder" name="{19530007,724}" description="{19530007,824}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
+      <price min="6195057" average="6858890" max="7522724" />
+      <production time="90" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1000" />
+          <ware ware="hullparts" amount="4850" />
+        </primary>
+      </production>
+      <component ref="ship_spl_l_adder_macro" amount="1" />
+      <restriction licence="militaryship" />
+      <owner faction="split" />
+    </ware>	
 	<ware id="ship_arg_m_express" name="{19530007,760}" description="{19530007,860}" transport="ship" volume="1" tags="ship">
 	  <price min="177000" average="208235" max="239470" />
 	  <production time="20" amount="1" method="default" name="{20206,101}">
@@ -611,6 +636,28 @@
     <owner faction="trinity" />	
   </ware>    
 	<!--iSHIELDS-->
+    <ware id="ishield_ter_m_pata" name="{19530007,943}" description="{19530007,943}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_ter_m_pata_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
+    <ware id="ishield_spl_l_adder" name="{19530007,924}" description="{19530007,924}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_spl_l_adder_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>
     <ware id="ishield_spl_l_cheetah" name="{19530007,900}" description="{19530007,900}" group="shields" transport="equipment" volume="1" tags="equipment shield">
       <price min="12" average="16" max="21" />
       <production time="1" amount="1" method="default" name="{20206,101}">
