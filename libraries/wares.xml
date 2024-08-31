@@ -204,7 +204,20 @@
 	<owner faction="yaki" />
   </ware> 	 
 	<!--SHIPS-->
-  <ware id="ship_ter_m_pata" name="{19530007,743}" description="{19530007,843}" group="ships_terran" transport="ship" volume="1" tags="ship">
+    <ware id="ship_ter_s_bulwark" name="{19530007,744}" description="{19530007,844}" transport="ship" volume="1" tags="ship">
+      <price min="254686" average="299630" max="344575" />
+      <production time="9" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="7" />
+          <ware ware="energycells" amount="51" />
+          <ware ware="metallicmicrolattice" amount="23" />
+        </primary>
+      </production>
+      <component ref="ship_ter_s_bulwark_macro" />
+      <restriction licence="generaluseship" />
+      <owner faction="pioneers" />
+    </ware>	
+  <ware id="ship_ter_m_pata" name="{19530007,743}" description="{19530007,843}" transport="ship" volume="1" tags="ship">
     <price min="342342" average="402755" max="463168" />
     <production time="25" amount="1" method="default" name="{20206,901}">
       <primary>
