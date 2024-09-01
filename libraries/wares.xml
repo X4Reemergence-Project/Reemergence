@@ -482,7 +482,28 @@
 		<owner faction="otas" />		  			  
       </ware>
 	</replace>
-	<add sel="//wares">
+  <add sel="//wares">
+	<ware id="weapon_gen_s_repairbeam" name="{20113,1001}" description="{20113,1002}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+      <price min="32092" average="35658" max="39223" />
+      <production time="10" amount="1" method="default" name="{20206,101}">
+        <primary>
+		  <ware ware="advancedelectronics" amount="5" />
+          <ware ware="energycells" amount="10" />
+          <ware ware="weaponcomponents" amount="5" />
+        </primary>
+      </production>
+      <production time="10" amount="1" method="terran" name="{20206,901}">
+        <primary>
+          <ware ware="computronicsubstrate" amount="3" />
+          <ware ware="energycells" amount="100" />
+          <ware ware="metallicmicrolattice" amount="44" />
+          <ware ware="siliconcarbide" amount="5" />
+        </primary>
+      </production>		
+      <component ref="weapon_gen_s_repairbeam_macro" amount="1" />
+      <restriction licence="generaluseequipment" />
+      <use threshold="0" /> 
+	</ware>		
     <ware id="weapon_gen_s_plasmabomb" name="{19530007,200}" description="{19530007,300}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
       <price min="150867" average="167630" max="184393" />
       <production time="8" amount="1" method="default" name="{20206,101}">
@@ -652,6 +673,17 @@
     <owner faction="trinity" />	
   </ware>    
 	<!--iSHIELDS-->
+    <ware id="ishield_ter_s_bulwark" name="{19530007,944}" description="{19530007,944}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_ter_s_bulwark_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>	
     <ware id="ishield_ter_m_pata" name="{19530007,943}" description="{19530007,943}" group="shields" transport="equipment" volume="1" tags="equipment shield">
       <price min="12" average="16" max="21" />
       <production time="1" amount="1" method="default" name="{20206,101}">
