@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Exported by: Rothank-->
 <macros>
-	<macro name="ship_ter_s_bulwark_macro" class="ship_s">
-		<component ref="ship_ter_s_bulwark" />
+	<macro name="ship_vig_s_douala_macro" class="ship_s">
+		<component ref="ship_vig_s_douala" />
 		<properties>
-			<identification name="{19530007,744}" makerrace="terran" description="{19530007,844}" icon="ship_s_utility" />
+			<identification name="{19530007,745}" makerrace="argon" description="{19530007,845}" icon="ship_s_utility" />
 			<software>
 				<software ware="software_dockmk2" compatible="1" />
 				<software ware="software_flightassistmk1" default="1" />
@@ -15,17 +15,17 @@
 				<software ware="software_targetmk1" compatible="1" />
 				<software ware="software_trademk1" compatible="1" />
 			</software>
-			<storage missile="0" unit="2" />
-			<hull max="2600" />
+			<storage missile="0" unit="3" />
+			<hull max="2200" />
 			<secrecy level="2" />
 			<purpose primary="trade" />
 			<people capacity="1" />
 			<sounds>
-				<shipdetail ref="shipdetail_ship_02" />
+				<shipdetail ref="shipdetail_ship_03" />
 			</sounds>
-			<physics mass="19.475">
-				<inertia pitch="1.696" yaw="1.696" roll="1.357" />
-				<drag forward="2" reverse="6" horizontal="4.105" vertical="4.105" pitch="3.273" yaw="3.273" roll="3.273" />
+			<physics mass="25.234">
+				<inertia pitch="1.905" yaw="1.905" roll="1.905" />
+				<drag forward="2.404" reverse="6.653" horizontal="4.515" vertical="4.515" pitch="3.600" yaw="3.600" roll="3.600" />
 			</physics>
 			<thruster tags="small" />
 			<ship type="courier" />
@@ -36,13 +36,13 @@
 				<macro ref="cockpit_gen_virtual_01_macro" connection="ship" />
 			</connection>
 			<connection ref="con_dock_xs">
-				<macro ref="dock_gen_xs_ship_flat_macro" connection="Connection_component" />
+				<macro ref="dock_gen_xs_ship_01_macro" connection="Connection_component" />
 			</connection>
 			<connection ref="con_shipstorage_xs_01">
 				<macro ref="shipstorage_gen_xs_01_macro" connection="object" />
 			</connection>
-			<!--     <connection ref="con_storage01">
-        <macro ref="storage_ter_s_miner_solid_01_a_macro" connection="ShipConnection" />
+			<!--      <connection ref="con_storage01">
+        <macro ref="storage_pir_s_heavyfighter_01_a_macro" connection="ShipConnection" />
       </connection> -->
 		</connections>
 	</macro>

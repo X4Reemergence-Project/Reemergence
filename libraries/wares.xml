@@ -204,6 +204,18 @@
 	<owner faction="yaki" />
   </ware> 	 
 	<!--SHIPS-->
+    <ware id="ship_vig_s_douala" name="{19530007,745}" description="{19530007,845}" transport="ship" volume="1" tags="ship">
+      <price min="216483" average="254686" max="292889" />
+      <production time="9" amount="1" method="default" name="{20206,901}">
+        <primary>
+          <ware ware="energycells" amount="47" />
+          <ware ware="hullparts" amount="164" />
+        </primary>
+      </production>
+      <component ref="ship_vig_s_douala_macro" />
+      <restriction licence="generaluseship" />
+      <owner faction="scavenger" />
+    </ware>		
     <ware id="ship_ter_s_bulwark" name="{19530007,744}" description="{19530007,844}" transport="ship" volume="1" tags="ship">
       <price min="254686" average="299630" max="344575" />
       <production time="9" amount="1" method="default" name="{20206,901}">
@@ -663,6 +675,17 @@
     <owner faction="trinity" />	
   </ware>    
 	<!--iSHIELDS-->
+    <ware id="ishield_vig_s_douala" name="{19530007,945}" description="{19530007,945}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+      <price min="12" average="16" max="21" />
+      <production time="1" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="energycells" amount="1" />
+        </primary>
+      </production>
+      <component ref="ishield_vig_s_douala_macro" amount="1" />
+      <use threshold="0" />
+      <restriction licence="generaluseequipment" />	
+    </ware>		
     <ware id="ishield_ter_s_bulwark" name="{19530007,944}" description="{19530007,944}" group="shields" transport="equipment" volume="1" tags="equipment shield">
       <price min="12" average="16" max="21" />
       <production time="1" amount="1" method="default" name="{20206,101}">
