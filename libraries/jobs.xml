@@ -4696,12 +4696,15 @@
 	  <modifiers commandeerable="false"/>
 	  <orders>
 		<order order="Patrol" default="true">
-		  <param name="range" value="class.sector"/>
+          <param name="range" value="class.sector"/>
+          <param name="stayinspace" value="true"/>
+          <param name="defences_maxgatedistance" value="0" />
+          <param name="defences_includedassignments" value="[assignment.attack]" />	
 		</order>
 	  </orders>
-	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
-	  <quota galaxy="10" maxgalaxy="12" cluster="2"/>
-      <time interval="1200"/>		  
+	  <category faction="khaak" tags="[military, destroyer]" size="ship_l"/>
+	  <quota galaxy="5" maxgalaxy="6" cluster="1"/>
+      <time interval="3600"/>		  
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
 	  <environment buildatshipyard="false" gate="true"/>
 	  <ship>
@@ -4717,10 +4720,12 @@
 	  <modifiers commandeerable="false"/>
 	  <orders>
 		<order order="Patrol" default="true">
-		  <param name="range" value="class.sector"/>
+          <param name="range" value="class.sector"/>
+          <param name="stayinspace" value="true"/>
+          <param name="defences_maxgatedistance" value="0" />
 		</order>
 	  </orders>
-	  <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+	  <category faction="khaak" tags="[military, fighter]" size="ship_m"/>
 	  <quota galaxy="10" maxgalaxy="15"/>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
 	  <environment buildatshipyard="false" gate="true"/>
@@ -4736,10 +4741,12 @@
 	  <modifiers commandeerable="false"/>
 	  <orders>
 		<order order="Patrol" default="true">
-		  <param name="range" value="class.sector"/>
+          <param name="range" value="class.sector"/>
+          <param name="stayinspace" value="true"/>
+          <param name="defences_maxgatedistance" value="0" />
 		</order>
 	  </orders>
-	  <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
+	  <category faction="khaak" tags="[military, fighter]" size="ship_m"/>
 	  <quota galaxy="20" maxgalaxy="25"/>
 	  <location class="galaxy" macro="xu_ep2_universe_macro" faction="khaak" relation="self" comparison="exact" matchextension="true" tags="khaak" />
 	  <environment buildatshipyard="false" gate="true"/>
@@ -4757,7 +4764,7 @@
 	  </orders>
 	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
 	  <quota galaxy="2" maxgalaxy="3" />
-      <time interval="1800"/>	  
+      <time interval="2400"/>	  
       <location class="sector" macro="Cluster_REM67_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
 	  <environment buildatshipyard="false" gate="true"/>
 	  <ship>
@@ -4778,7 +4785,7 @@
       </orders>
       <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
       <quota galaxy="3" maxgalaxy="5"/>
-      <time interval="600"/>
+      <time interval="1200"/>
       <location class="sector" macro="Cluster_REM67_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
       <environment buildatshipyard="false" gate="true"/>
       <ship>
@@ -4798,7 +4805,7 @@
 	  </orders>
 	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
 	  <quota galaxy="2" maxgalaxy="3" />
-      <time interval="1800"/>	  
+      <time interval="2400"/>	  
       <location class="sector" macro="Cluster_REM68_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
 	  <environment buildatshipyard="false" gate="true"/>
 	  <ship>
@@ -4819,7 +4826,7 @@
       </orders>
       <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
       <quota galaxy="3" maxgalaxy="5"/>
-      <time interval="600"/>
+      <time interval="1200"/>
       <location class="sector" macro="Cluster_REM68_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
       <environment buildatshipyard="false" gate="true"/>
       <ship>
@@ -4839,7 +4846,7 @@
 	  </orders>
 	  <category faction="khaak" tags="[factionlogic, military, destroyer]" size="ship_l"/>
 	  <quota galaxy="2" maxgalaxy="3" />
-      <time interval="1800"/>	  
+      <time interval="2400"/>	  
       <location class="sector" macro="Cluster_REM69_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
 	  <environment buildatshipyard="false" gate="true"/>
 	  <ship>
@@ -4860,7 +4867,7 @@
       </orders>
       <category faction="khaak" tags="[factionlogic, military, fighter]" size="ship_m"/>
       <quota galaxy="3" maxgalaxy="5"/>
-      <time interval="600"/>
+      <time interval="1200"/>
       <location class="sector" macro="Cluster_REM69_Sector001_macro" faction="khaak" relation="self" comparison="exact" matchextension="true"/>
       <environment buildatshipyard="false" gate="true"/>
       <ship>
