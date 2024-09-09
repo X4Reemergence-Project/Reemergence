@@ -3013,7 +3013,7 @@
   </region>
 <!--REM81 Secret-->
 <!--REM82 Ocracoke's Storm-->
-  <region name="rem82_field" density="0.25" rotation="0" noisescale="15000" seed="42" minnoisevalue="0.15" maxnoisevalue="1">
+  <region name="rem82_field1" density="0.25" rotation="3" noisescale="15000" seed="8888" minnoisevalue="0.0" maxnoisevalue="1">
     <boundaries>
       <boundary class="splinetube">
         <size r="47500" />
@@ -3037,16 +3037,53 @@
       </radial>
     </falloff>
     <fields>
-      <asteroid groupref="asteroid_ore_nores_l" lodrule="asteroidxl" densityfactor="0.3" rotation="8" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>
-      <asteroid groupref="asteroid_ore_nores_m" lodrule="asteroidxl" densityfactor="0.5" rotation="8" rotationvariation="4" noisescale="15000" seed="8888" minnoisevalue="0.7" maxnoisevalue="1"/>	
-      <debris groupref="debris_l" densityfactor="0.3" rotation="360" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
-      <debris groupref="debris_m" densityfactor="6.1" rotation="360" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
-      <debris groupref="debris_s" densityfactor="4.8" rotation="360" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1"/>
+      <!--Lockboxes end--> 	
+      <asteroid groupref="asteroid_ice_l" densityfactor="0.3" rotation="0" rotationvariation="8" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_ice_m" densityfactor="0.5" rotation="0" rotationvariation="16" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1"/>	  
+      <debris groupref="debris_l" densityfactor="0.5" rotation="0" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
+      <debris groupref="debris_l" densityfactor="0.5" rotation="0" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1"/>
+      <debris groupref="debris_m" densityfactor="1" rotation="0" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1"/>
+      <debris groupref="debris_s" densityfactor="0.1" rotation="0" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1"/>
     </fields>
     <resources>
+      <resource ware="ice" yield="low" />	
       <resource ware="rawscrap" yield="high" />
     </resources>
-  </region>     
+  </region>
+  <region name="rem82_field2" density="0.25" rotation="0" noisescale="50000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="cylinder">
+      <size r="1250000" linear="50000" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1"/>
+      <!--Lockboxes end-->
+      <asteroid groupref="asteroid_ore_nores_m" densityfactor="0.5" rotation="8" rotationvariation="8" noisescale="5000" seed="42" minnoisevalue="0.7" maxnoisevalue="1"/>
+      <asteroid groupref="asteroid_silicon_nores_m" densityfactor="0.5" rotation="8" rotationvariation="8" noisescale="5000" seed="42" minnoisevalue="0.6" maxnoisevalue="1"/>	  
+      <debris groupref="debris_m" densityfactor="0.5" rotation="10" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1"/>
+      <debris groupref="debris_s" densityfactor="0.5" rotation="10" rotationvariation="10" noisescale="10000" seed="32" minnoisevalue="0.5" maxnoisevalue="1"/>
+    </fields>
+    <resources>	 	
+      <resource ware="rawscrap" yield="low" />
+    </resources>
+  </region> 
 <!--Empty Belt-->  
   <region name="empty_belt" density="1" rotation="0" noisescale="15000" seed="8888" minnoisevalue="0.15" maxnoisevalue="1">
     <boundary class="splinetube">
