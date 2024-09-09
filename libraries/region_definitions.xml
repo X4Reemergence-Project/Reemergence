@@ -1840,40 +1840,6 @@
     <resources>
       <resource ware="methane" yield="medium" />
     </resources>
-  </region>
-  <region name="rem48_field2" density="0.1" rotation="0" noisescale="50000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
-    <boundary class="cylinder">
-      <size r="1250000" linear="50000" />
-    </boundary>
-    <falloff>
-      <lateral>
-        <step position="0.0" value="0.0" />
-        <step position="0.1" value="1.0" />
-        <step position="0.9" value="1.0" />
-        <step position="1.0" value="0.0" />
-      </lateral>
-      <radial>
-        <step position="0.0" value="1.0" />
-        <step position="0.3" value="1.0" />
-        <step position="0.5" value="0.9" />
-        <step position="0.9" value="0.4" />
-        <step position="1.0" value="0.0" />
-      </radial>
-    </falloff>
-    <fields>
-      <!--Lockboxes-->
-      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1"/>
-      <!--Lockboxes end-->  	  
-
-      <debris groupref="debris_paranid_xl" densityfactor="0.005" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1"/>
-      <debris groupref="debris_paranid_l" densityfactor="0.15" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1"/>	  
-      <debris groupref="debris_split_xl" densityfactor="0.005" rotation="360" rotationvariation="1" noisescale="10000" seed="42" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
-      <debris groupref="debris_split_s" densityfactor="4.5" rotation="360" rotationvariation="10" noisescale="10000" seed="42" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
-      <debris groupref="debris_s" densityfactor="0.75" rotation="360" rotationvariation="10" noisescale="10000" seed="666" minnoisevalue="0.5" maxnoisevalue="1" distancefactor="2.0"/>
-    </fields>
-    <resources>	 	
-      <resource ware="rawscrap" yield="medium" />
-    </resources>
   </region>  
 <!--REM49 Duke's Vision -->  
   <region name="rem49_field1" density="0.1" rotation="0" noisescale="15000" seed="666" minnoisevalue="0.15" maxnoisevalue="1">
