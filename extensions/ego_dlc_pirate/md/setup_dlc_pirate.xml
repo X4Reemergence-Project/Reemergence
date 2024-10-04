@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/actions/set_value[@name='$loansharkjobs.$iceunion.$targetsectors']/@exact">[macro.Cluster_06_Sector002_macro, macro.Cluster_06_Sector001_macro, macro.Cluster_REM77_Sector001_macro, macro.Cluster_05_Sector001_macro, macro.Cluster_13_Sector001_macro, macro.Cluster_02_Sector001_macro]</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/actions/set_value[@name='$loansharkjobs.$scrapyard.$targetsectors']/@exact">[macro.Cluster_REM42_Sector001_macro, macro.Cluster_01_Sector002_macro, macro.Cluster_06_Sector002_macro, macro.Cluster_06_Sector001_macro, macro.Cluster_REM77_Sector001_macro]</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/actions/set_value[@name='$loansharkjobs.$aurora.$targetsectors']/@exact">[macro.Cluster_REM42_Sector001_macro,macro.Cluster_01_Sector001_macro, macro.Cluster_01_Sector002_macro, macro.Cluster_01_Sector003_macro, macro.Cluster_05_Sector001_macro, macro.Cluster_REM57_Sector001_macro,macro.Cluster_02_Sector001_macro]</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any/check_value[1]/@value">event.param.job == 'vig_union_plunderer_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any/check_value[2]/@value">event.param.job == 'vig_scrapyard_plunderer_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any/check_value[3]/@value">event.param.job == 'vig_aurora_plunderer_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any/check_value[4]/@value">event.param.job == 'vig_iceunion_raider_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any/check_value[5]/@value">event.param.job == 'vig_scrapyard_raider_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any/check_value[6]/@value">event.param.job == 'vig_aurora_raider_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any/check_value[7]/@value">event.param.job == 'vig_common_raider_large'</replace>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any">
+    <check_value value="event.param.job == 'vig_union_plunderer_fighter'"/>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any">
+    <check_value value="event.param.job == 'vig_scrapyard_plunderer_fighter'"/>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any">
+    <check_value value="event.param.job == 'vig_aurora_plunderer_fighter'"/>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any">
+    <check_value value="event.param.job == 'vig_iceunion_raider_fighter'"/>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any">
+    <check_value value="event.param.job == 'vig_scrapyard_raider_fighter'"/>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any">
+    <check_value value="event.param.job == 'vig_aurora_raider_fighter'"/>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/conditions/check_any">
+    <check_value value="event.param.job == 'vig_common_raider_fighter'"/>
+  </add>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_if/@value">event.param.job == 'vig_union_plunderer_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[1]/@value">event.param.job == 'vig_scrapyard_plunderer_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[2]/@value">event.param.job == 'vig_aurora_plunderer_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[3]/@value">event.param.job == 'vig_iceunion_raider_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[4]/@value">event.param.job == 'vig_scrapyard_raider_large'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[5]/@value">event.param.job == 'vig_aurora_raider_large'</replace>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[6]" pos="before">
+    <do_elseif value="event.param.job == 'vig_common_raider_large'">
+      <add_to_group groupname="$commonraiders" object="event.param"/>
+    </do_elseif>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[7]" pos="before">
+    <do_elseif value="event.param.job == 'vig_union_plunderer_fighter'">
+      <add_to_group groupname="$loansharkjobs.$iceunion.$plunderers" object="event.param"/>
+    </do_elseif>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[8]" pos="before">
+    <do_elseif value="event.param.job == 'vig_scrapyard_plunderer_fighter'">
+      <add_to_group groupname="$loansharkjobs.$scrapyard.$plunderers" object="event.param"/>
+    </do_elseif>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[9]" pos="before">
+    <do_elseif value="event.param.job == 'vig_aurora_plunderer_fighter'">
+      <add_to_group groupname="$loansharkjobs.$aurora.$plunderers" object="event.param"/>
+    </do_elseif>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[10]" pos="before">
+    <do_elseif value="event.param.job == 'vig_iceunion_raider_fighter'">
+      <add_to_group groupname="$loansharkjobs.$iceunion.$raiders" object="event.param"/>
+    </do_elseif>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[11]" pos="before">
+    <do_elseif value="event.param.job == 'vig_scrapyard_raider_fighter'">
+      <add_to_group groupname="$loansharkjobs.$scrapyard.$raiders" object="event.param"/>
+    </do_elseif>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[12]" pos="before">
+    <do_elseif value="event.param.job == 'vig_aurora_raider_fighter'">
+      <add_to_group groupname="$loansharkjobs.$aurora.$raiders" object="event.param"/>
+    </do_elseif>
+  </add>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/actions/do_elseif[13]/@value">event.param.job == 'vig_common_raider_fighter'</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/patch/set_value[@name='$loansharkjobs.$iceunion.$maxplunderers']/@exact">6</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/patch/set_value[@name='$loansharkjobs.$scrapyard.$maxplunderers']/@exact">5</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/patch/set_value[@name='$loansharkjobs.$aurora.$maxplunderers']/@exact">6</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/patch/set_value[@name='$loansharkjobs.$iceunion.$maxraiders']/@exact">5</replace>
+  <replace sel="/mdscript/cues/cue[@name='LoansharkJobs_Setup']/cues/cue/patch/set_value[@name='$loansharkjobs.$aurora.$maxraiders']/@exact">5</replace>
+</diff>

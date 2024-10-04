@@ -6,16 +6,16 @@
 			<layer>
 				<waypoints/>
 				<lights>
-					<omni name="XU Omni01" shadow="0" r="216" g="243" b="255" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_oort" trigger="1" intensity="0.2" specularintensity="0.1">
+					<omni name="XU Omni01" shadow="0" r="216" g="243" b="255" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_c_31" trigger="1" intensity="0.55" specularintensity="0.55">
 						<lightanimations/>
 						<offset>
-							<position x="1.78755E+08" y="4.066152E+07" z="1.330967E+08"/>
+							<position x="3.11026E+08" y="6.14035E+08" z="5.00053E+08"/>
 						</offset>
 					</omni>
-					<ambient name="XU Ambient001" r="27" g="31" b="34" range="1E+11" intensity="0.2">
+					<ambient name="XU Ambient001" r="27" g="31" b="34" range="1E+11" intensity="0.45">
 						<lightanimations/>
 						<offset>
-							<position x="5.922367E+07" y="0" z="7.721783E+07"/>
+							<position x="-5.036438E+07" y="0" z="-7.443225E+07"/>
 						</offset>
 					</ambient>
 				</lights>
@@ -72,30 +72,65 @@
 				</parts>
 			</connection>
 			<connection name="Connection03" tags="part  ">
-				<offset>
-					<quaternion qx="-0" qy="-0.8236316" qz="-0" qw="-0.5671251"/>
-				</offset>
+				<offset/>
 				<parts>
-					<part name="Background_milkyway">
+					<part name="part_c08_neb_06_03">
 						<lods>
 							<lod index="0">
 								<materials>
-									<material id="1" ref="p1terranenv.milkyway_bright"/>
+									<material id="1" ref="p1.p1_env_nebular_06"/>
 								</materials>
 							</lod>
 						</lods>
 						<size>
-							<max x="4.069424E+08" y="4.069425E+08" z="4.069425E+08"/>
-							<center x="0" y="31.25" z="-62.5"/>
+							<max x="2.644501E+08" y="3.152151E+08" z="2.228493E+08"/>
+							<center x="-1.824662E+08" y="6.461555E+07" z="2.231381E+08"/>
 						</size>
-						<pivot>
-							<offset>
-								<position x="0" y="-50000" z="0"/>
-							</offset>
-						</pivot>
 					</part>
 				</parts>
 			</connection>
+			<connection name="Connection04" tags="part  ">
+				<offset>
+					<position x="-4.099279E+07" y="8298467" z="3.670722E+07"/>
+					<quaternion qx="-0" qy="-0.8870109" qz="-0" qw="-0.4617486"/>
+				</offset>
+				<parts>
+					<part name="part_lava_planet">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environmentsv3.planet_oof"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.02422E+07" y="5.024221E+07" z="5.02422E+07"/>
+							<center x="42.96875" y="-1.953125" z="-41.01563"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part  ">
+				<offset>
+					<position x="4.681315E+07" y="-7420323" z="-13610758"/>
+					<quaternion qx="0" qy="0.9659258" qz="0" qw="0.258819 "/>
+				</offset>
+				<parts>
+					<part name="planet001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="planetsv2.cluster_408_moon1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.499644E+07" y="2.5E+07" z="2.5E+07"/>
+							<center x="-2285.156" y="0" z="-2728.027"/>
+						</size>
+					</part>
+				</parts>
+			</connection>			
 		</connections>
 	</component>
 </components>

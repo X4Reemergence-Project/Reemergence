@@ -4,6 +4,7 @@
   <remove sel="//ships/ship[@id='paranid_hyperion']" /> <!--VRO Hyperion-->   
   <remove sel="//ships/ship[@id='holyorder_hyperion']" /> <!--VRO Hyperion--> 
   <remove sel="//ships/ship[@id='loanshark_centaur']" /> <!--VRO Centaur--> 
+  <replace sel="/ships/ship[@id='pioneer_tug_m']/@group">pio_pata</replace>  <!--Para for Manticore-->
 
   <add sel="//ships">
   <ship id="otas_battleship_xl" group="otas_battleship_xl">
@@ -134,6 +135,24 @@
     <drop ref="masstraffic_civilian"/>
   </ship>
  
+  <!--ATF-->
+  <ship id="atf_police_m" group="ter_military_m">
+    <category tags="[police]" faction="atf" size="ship_m"/>
+    <pilot>
+      <select faction="terran" tags="fighterpilot"/>
+    </pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="terran_military_crew"/>
+  </ship>
+  <ship id="atf_police_s" group="ter_fighter_s">
+    <category tags="[police]" faction="atf" size="ship_s"/>
+    <pilot>
+      <select faction="terran" tags="fighterpilot"/>
+    </pilot>
+    <drop ref="ship_small_military"/>
+    <people ref="terran_military_crew"/>
+  </ship>    
+ 
   <!--ARGON-->
   <ship id="ant_buster" group="ant_buster">
     <category tags="[military, buster]" faction="[antigone]" size="ship_s"/>
@@ -202,6 +221,14 @@
 	</pilot>
     <drop ref="ship_large_military"/>
     <people ref="teladi_military_crew"/>
+  </ship>
+  <ship id="tel_shrike_e" group="tel_shrike_e">
+	<category tags="[military, frigate, mission]" faction="[teladi, ministry, scaleplate, nmmc]" size="ship_l"/>
+	<pilot>
+	  <select faction="teladi" tags="fighterpilot"/>
+	</pilot>
+    <drop ref="ship_large_military"/>
+    <people ref="teladi_military_crew"/>
   </ship>  
   
   <!--SPLIT-->
@@ -241,7 +268,7 @@
   <!--VIGOR-->
   <!--RIPTIDE-->
   
-  <!--TERRAN-->
+  <!--TERRAN-->  
   <ship id="ter_falchion" group="ter_falchion">
     <category tags="[military, falchion]" faction="[terran, atf]" size="ship_s"/>
     <pilot>
@@ -250,6 +277,15 @@
     <drop ref="ship_small_military"/>
     <people ref="terran_military_crew"/>
   </ship>
+  <ship id="pio_pata" group="pio_pata">
+    <category tags="[pata]" faction="[pioneers]" size="ship_m"/>
+    <pilot>
+      <select faction="pioneers" tags="traderpilot"/>
+    </pilot>
+    <basket basket="all_container"/>
+    <drop ref="ship_medium_civilian"/>
+    <people ref="pioneers_freighter_crew"/>
+  </ship>    
   <ship id="pio_falchion" group="pio_falchion">
     <category tags="[military, falchion]" faction="[pioneers]" size="ship_s"/>
     <pilot>
@@ -294,14 +330,14 @@
 	<drop ref="ship_large_xenon"/>
   </ship>    
   <ship id="xenon_battleship_nxw" group="xen_battleship_nxw" capturable="false">
-	<category tags="[military, battleship]" faction="[xenon]" size="ship_xl"/>
+	<category tags="[battleship]" faction="[xenon]" size="ship_xl"/>
 	<pilot>
 	  <select faction="xenon" tags="fighterpilot"/>
 	</pilot>
 	<drop ref="ship_large_xenon"/>
   </ship>  
   <ship id="xenon_destroyer_defender" group="xen_destroyer_xl" capturable="false">
-	<category tags="[military, defender]" faction="[xenon]" size="ship_xl"/>
+	<category tags="[defender]" faction="[xenon]" size="ship_xl"/>
 	<pilot>
 	  <select faction="xenon" tags="fighterpilot"/>
 	</pilot>

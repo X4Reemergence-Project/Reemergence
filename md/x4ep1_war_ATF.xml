@@ -1,0 +1,1947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="X4Ep1_War_ATF" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+
+  <cues>
+    <!-- DLC - This is dependent on the base game X4Ep1_War_Subscriptions.Start cue-->
+    <cue name="Start" checkinterval="1s">
+      <conditions>
+        <cue_is_complete cue="md.X4Ep1_War_Subscriptions.Start"/>
+      </conditions>
+      <cues>
+        <!--
+		
+		WARNING! Replace all mentions of "faction.atf" with the ATF equivalent!
+        ###################################
+        ATF VS XENON
+        ###################################-->
+
+        <cue name="ATF_VS_XENON" namespace="this">
+          <actions>
+            <!--Common values-->
+            <set_value name="$ManagerCue" exact="md.X4Ep1_War_Subscriptions.Start"/>
+            <set_value name="$Faction" exact="faction.atf"/>
+            <set_value name="$EnemyFaction" exact="faction.xenon"/>
+            <set_value name="$MissionGroup" exact="missiongroup.atf_war_xenon"/>
+            <set_value name="$Mission_Contact" exact="null"/>
+            <set_value name="$Page" exact="30216" comment="Terran-Xenon page"/>
+            <set_value name="$ManagerCue.$MissionGroupCues.{$MissionGroup}" exact="this"/>
+            <set_value name="$SubscriptionMinRel" exact="$Faction.relation.friend.min"/>
+            <set_value name="$SubscriptionLossRel" exact="-0.00064" comment="for UI-value -1"/>
+            <set_value name="$HasIntroMission" exact="false"/>
+            <set_value name="$DebugChance" exact="$ManagerCue.$DebugChance"/>
+
+            <!--Status-->
+            <set_value name="$SubscriptionStatus" exact="null"/>
+            <set_value name="$IntroducedToContact" exact="false"/>
+            <set_value name="$JobsDescribed" exact="false"/>
+            <set_value name="$ConflictDescribed" exact="false"/>
+            <set_value name="$IntroMissionSuccessful" exact="false"/>
+            <set_value name="$CooldownTime" exact="-1s"/>
+
+            <!--Stats-->
+            <set_value name="$ThreadsCompleted" exact="0"/>
+            <set_value name="$ThreadsFailed" exact="0"/>
+
+            <set_value name="$MissionsCompleted" exact="0"/>
+            <set_value name="$MissionsFailed" exact="0"/>
+          </actions>
+          <cues>
+            <cue name="ATF_VS_XENON_Init">
+              <actions>
+                <set_value name="$ContactCreatorCue" exact="ATF_VS_XENON_Create_Contact"/>
+                <set_value name="$IntroMissionCue" exact="ATF_VS_XENON_Introduction"/>
+
+                <!--$SubscriptionStatus:
+                - 'unsubscribed'
+                - 'probation'
+                - 'subscribed'
+                - 'cooldown'-->
+                <signal_cue_instantly cue="ATF_VS_XENON_Set_Subscription_Status" param="'unsubscribed'"/>
+              </actions>
+            </cue>
+
+            <!--
+            ####################
+            DEBUG
+            ####################-->
+
+            <cue name="ATF_VS_XENON_Debug_Reset">
+              <conditions>
+                <event_cue_signalled/>
+              </conditions>
+              <actions>
+                <do_all exact="$ManagerCue.$Threads.count" counter="$i" reverse="true">
+                  <do_if value="$ManagerCue.$Threads.{$i}.$ThreadCue.$Definition.$MissionGroup == $MissionGroup">
+                    <signal_cue_instantly cue="$ManagerCue.$Threads.{$i}.$CleanupCue"/>
+                  </do_if>
+                </do_all>
+                <set_value name="$DefinitionKeys" exact="$ManagerCue.$ThreadDefinitions.keys.list"/>
+                <do_all exact="$DefinitionKeys.count" counter="$i" reverse="true">
+                  <do_if value="$ManagerCue.$ThreadDefinitions.{$DefinitionKeys.{$i}}.$MissionGroup == $MissionGroup">
+                    <remove_value name="$ManagerCue.$ThreadDefinitions.{$DefinitionKeys.{$i}}"/>
+                  </do_if>
+                </do_all>
+                <do_if value="$Mission_Contact.isclass.npc">
+                  <destroy_object object="$Mission_Contact"/>
+                </do_if>
+                <set_value name="$Mission_Contact" exact="null"/>
+                <reset_cue cue="namespace"/>
+                <reset_cue cue="md.X4Ep1_War_Subscriptions.Gamestart" comment="Trigger CalculateThreads again"/>
+              </actions>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Debug_Subscribe" instantiate="true">
+              <conditions>
+                <event_cue_signalled/>
+              </conditions>
+              <actions>
+                <signal_cue_instantly cue="ATF_VS_XENON_Set_Subscription_Status" param="'subscribed'"/>
+              </actions>
+            </cue>
+
+            <!--
+            ####################
+            SUBSCRIPTION
+            ####################-->
+
+            <!--event.param == new status-->
+            <cue name="ATF_VS_XENON_Set_Subscription_Status" instantiate="true">
+              <conditions>
+                <event_cue_signalled/>
+              </conditions>
+              <actions>
+                <do_if value="
+                       event.param == 'unsubscribed' or
+                       event.param == 'probation' or
+                       event.param == 'subscribed' or
+                       event.param == 'cooldown'">
+
+                  <debug_text text="'Changing subscription status from ' + $SubscriptionStatus + ' to ' + event.param" chance="$DebugChance"/>
+                  <set_value name="$SubscriptionStatus" exact="event.param"/>
+
+                  <!--Be careful with state change handlers here if the requested state was the same as the previous one-->
+                  <do_if value="event.param == 'subscribed' and md.X4Ep1_War_Subscriptions.Gamestart.state == cuestate.complete">
+                    <signal_cue_instantly cue="md.X4Ep1_War_Subscriptions.Player_Subscribed_To_War" param="$MissionGroup"/>
+                    <signal_cue cue="md.X4Ep1_War_Subscriptions.CalculateThreads"/>
+                  </do_if>
+                  <do_elseif value="event.param == 'cooldown'">
+                    <!--TODO @Owen balance cooldown. Have a harsher cooldown in certain situations?-->
+                    <set_value name="$CooldownTime" exact="player.age + 5min"/>
+                  </do_elseif>
+                  <!-- update global missiongroup-registry -->
+                  <do_if value="$SubscriptionStatus == 'subscribed'">
+                    <assert value="not md.$SubscribedMissionGroups.indexof.{$MissionGroup}" />
+                    <do_if value="not md.$SubscribedMissionGroups.indexof.{$MissionGroup}">
+                      <append_to_list name="md.$SubscribedMissionGroups" exact="$MissionGroup"/>
+                    </do_if>
+                  </do_if>
+                  <do_else>
+                    <remove_from_list name="md.$SubscribedMissionGroups" exact="$MissionGroup"/>
+                  </do_else>
+                </do_if>
+                <do_else>
+                  <assert value="false" text="'Unknown subscription status: ' + event.param + ' [Owen]'"/>
+                </do_else>
+              </actions>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Check_Cooldown" instantiate="true" checkinterval="5s">
+              <conditions>
+                <check_value value="$SubscriptionStatus == 'cooldown' and player.age gt $CooldownTime"/>
+              </conditions>
+              <actions>
+                <debug_text text="player.age + ' Ending  cooldown'" chance="$DebugChance"/>
+                <signal_cue_instantly cue="ATF_VS_XENON_Set_Subscription_Status" param="'subscribed'"/>
+              </actions>
+            </cue>
+
+            <!--
+            ####################
+            CONTACT
+            ####################-->
+
+
+            <!--event.param == Cloned table of the host sectors for a war front or a list of spaces in which to search for a placement object (or null to fallback to any owned space in the galaxy)-->
+            <cue name="ATF_VS_XENON_Create_Contact">
+              <conditions>
+                <event_cue_signalled/>
+                <check_value value="$Faction.isactive"/>
+              </conditions>
+              <actions>
+                <set_value name="this.$SelectedSpace" exact="null"/>
+                <do_if value="event.param and typeof event.param == datatype.table">
+                  <set_value name="this.$HostSectorKeys" exact="event.param.keys.sorted"/>
+                  <do_all exact="this.$HostSectorKeys.count" counter="$i" reverse="true">
+                    <do_if value="this.$HostSectorKeys.{$i}.accessrestricted">
+                      <remove_value name="this.$HostSectorKeys.{$i}"/>
+                    </do_if>
+                  </do_all>
+                  <do_for_each name="$PotentialHostSector" in="this.$HostSectorKeys">
+                    <do_if value="$PotentialHostSector.security ge 0.75f and not $PotentialHostSector.accessrestricted">
+                      <!--Select a sector with stations and a high security value-->
+                      <find_station_by_true_owner name="this.$PotentialStation" faction="$Faction" space="$PotentialHostSector">
+                        <match_child class="class.walkablemodule" checkoperational="true" haswalkableroom="true"/>
+                      </find_station_by_true_owner>
+                      <do_if value="this.$PotentialStation">
+                        <set_value name="this.$SelectedSpace" exact="$PotentialHostSector"/>
+                        <break/>
+                      </do_if>
+                    </do_if>
+                  </do_for_each>
+                  <do_if value="not this.$SelectedSpace">
+                    <!--Simply select the furthest sector with stations-->
+                    <do_all exact="this.$HostSectorKeys.count" counter="$i" reverse="true">
+                      <!--TODO @Owen - attempt to find major stations first-->
+                      <find_station name="this.$PotentialStation" owner="$Faction" space="this.$HostSectorKeys.{$i}">
+                        <match_content class="class.walkablemodule" checkoperational="true" haswalkableroom="true"/>
+                      </find_station>
+                      <do_if value="this.$PotentialStation">
+                        <set_value name="this.$SelectedSpace" exact="this.$HostSectorKeys.{$i}"/>
+                        <break/>
+                      </do_if>
+                    </do_all>
+                  </do_if>
+                </do_if>
+
+                <do_if value="not this.$SelectedSpace">
+                  <find_sector name="this.$PotentialSectors" accessgrantedto="faction.player" multiple="true"/>
+                  <sort_list list="this.$PotentialSectors" sortbyvalue="loop.element.security" sortdescending="true"/>
+                  <do_for_each name="this.$PotentialSector" in="this.$PotentialSectors">
+                    <find_station_by_true_owner name="this.$PotentialStation" faction="$Faction" space="this.$PotentialSector">
+                      <match_child class="class.walkablemodule" checkoperational="true" haswalkableroom="true"/>
+                    </find_station_by_true_owner>
+                    <do_if value="this.$PotentialStation">
+                      <set_value name="this.$SelectedSpace" exact="this.$PotentialStation.sector"/>
+                      <do_if value="event.param">
+                        <debug_text text="'Fallback case for not finding suitable sector to place mission contact for ' + $MissionGroup + '. Placing on ' + this.$PotentialStation + ' ' + this.$PotentialStation.knownname + ' in ' + this.$SelectedSpace.knownname" filter="error"/>
+                      </do_if>
+                      <break/>
+                    </do_if>
+                  </do_for_each>
+                </do_if>
+                <do_if value="this.$SelectedSpace">
+                  <find_station_by_true_owner name="$PlacementObject" faction="$Faction" space="this.$SelectedSpace" required="true">
+                    <match_child class="class.walkablemodule" checkoperational="true" haswalkableroom="true"/>
+                  </find_station_by_true_owner>
+                  <assert value="$PlacementObject.exists" text="'Station was unable to be found in ' + this.$SelectedSpace.knownname + ' even when it should have [Owen]'"/>
+                  <do_if value="$PlacementObject">
+                    <do_if value="not $Mission_Contact.isclass.npc">
+                      <create_cue_actor name="$Mission_Contact" cue="namespace" group="terran.factionrepresentative.female">
+                        <page exact="10108"/>
+                        <owner exact="$Faction"/>
+                        <skills>
+                          <skill type="management"  min="12"  max="15"/>
+                          <skill type="morale"      min="12"  max="15"/>
+                          <skill type="piloting"    min="6"   max="15"/>
+                          <skill type="engineering" min="6"   max="15"/>
+                          <skill type="boarding"    min="6"   max="15"/>
+                        </skills>
+                      </create_cue_actor>
+                      <do_if value="$Mission_Contact">
+                        <set_entity_type entity="$Mission_Contact" type="entitytype.crowd"/>
+                        <set_entity_traits entity="$Mission_Contact" missionactor="true" remote="false" customhandler="true" />
+                        <set_entity_overrides entity="$Mission_Contact" title="'{30216,201}'"/>
+                        <debug_text text="'Created mission contact ' + $Mission_Contact + ' ' + $Mission_Contact.knownname + ' for placement on ' + $PlacementObject + ' ' + $PlacementObject.knownname" chance="$DebugChance"/>
+                      </do_if>
+                    </do_if>
+                  </do_if>
+                </do_if>
+
+                <assert value="$Mission_Contact.isclass.npc" text="'Unable to generate mission contact [Owen]'"/>
+                <do_if value="not $Mission_Contact.isclass.npc or not $PlacementObject.exists">
+                  <reset_cue cue="this"/>
+                </do_if>
+              </actions>
+              <cues>
+                <cue name="ATF_VS_XENON_Place_Contact_Init">
+                  <actions>
+                    <do_if value="$PlacementObject.attention ge attention.nearby">
+                      <signal_cue cue="ATF_VS_XENON_Place_Contact_Create_Interior"/>
+                    </do_if>
+                  </actions>
+                </cue>
+
+                <cue name="ATF_VS_XENON_Place_Contact_Create_Interior">
+                  <conditions>
+                    <check_any>
+                      <event_cue_signalled/>
+                      <check_all>
+                        <event_object_changed_attention object="$PlacementObject"/>
+                        <check_value value="event.param ge attention.nearby"/>
+                      </check_all>
+                    </check_any>
+                  </conditions>
+                  <actions>
+                    <debug_text text="'Attempting to create dynamic interior to place NPC'" chance="$DebugChance"/>
+                    <get_room_definition macro="$StartCorridorMacro" tags="tag.corridor" race="$Faction.primaryrace" />
+                    <get_room_definition macro="$StartRoomMacro" doors="$RoomDoors" tags="tag.warroom" race="$Faction.primaryrace" />
+
+                    <!--TODO @Owen either make persistent or use a seed-->
+                    <create_dynamic_interior object="$PlacementObject" corridor="$StartCorridorMacro" room="$StartRoomMacro" name="'{30216,3}'" interiorname="$DynamicInterior" corridorname="$DynamicCorridor" roomname="$DynamicRoom" />
+                    <assert value="$DynamicInterior" text="'Unable to create dynamic interior for contact ' + $Mission_Contact + ' ' + $Mission_Contact.knownname + ' [Owen]'"/>
+                    <do_if value="$DynamicInterior">
+                      <find_npc_slot name="$NPC_Slot" object="$DynamicRoom" tags="tag.stand"/>
+                      <do_if value="not $NPC_Slot">
+                        <find_npc_slot name="$NPC_Slot" object="$DynamicRoom"/>
+                      </do_if>
+                      <assert value="$NPC_Slot" text="'Can not find slot for mission contact in ' + $DynamicInterior + ' ' + $DynamicInterior.knownname + ' [Owen]'"/>
+                      <do_if value="$NPC_Slot">
+                        <add_actor_to_room actor="$Mission_Contact" slot="$NPC_Slot"/>
+                        <debug_text text="'Added mission contact ' + $Mission_Contact + ' ' + $Mission_Contact.knownname + ' to ' + $PlacementObject + ' ' + $PlacementObject.knownname" chance="$DebugChance"/>
+                      </do_if>
+                    </do_if>
+                  </actions>
+                  <cues>
+                    <cue name="ATF_VS_XENON_Place_Contact_WithinDynamicInterior_Destroy">
+                      <conditions>
+                        <event_object_interiors_despawning object="$PlacementObject"/>
+                      </conditions>
+                      <actions>
+                        <remove_actor_from_room actor="$Mission_Contact"/>
+                        <include_actions ref="md.X4Ep1_War_Subscriptions.Remove_Dynamic_Interior"/>
+                        <do_if value="$Faction.isactive">
+                          <reset_cue cue="ATF_VS_XENON_Place_Contact_Create_Interior"/>
+                        </do_if>
+                        <do_else>
+                          <debug_text text="'Faction is now inactive. Deactivating contact handling.'"/>
+                          <reset_cue cue="$ContactCreatorCue"/>
+                        </do_else>
+                      </actions>
+                    </cue>
+                  </cues>
+                </cue>
+
+                <cue name="ATF_VS_XENON_Contact_Killed">
+                  <conditions>
+                    <event_object_destroyed object="$Mission_Contact"/>
+                  </conditions>
+                  <actions>
+                    <set_value name="$Mission_Contact" exact="null"/>
+                    <reset_cue cue="ATF_VS_XENON_Create_Contact"/>
+                  </actions>
+                </cue>
+
+                <cue name="ATF_VS_XENON_Placement_Object_Destroyed">
+                  <conditions>
+                    <event_object_destroyed object="$PlacementObject"/>
+                  </conditions>
+                  <actions>
+                    <include_actions ref="md.X4Ep1_War_Subscriptions.Remove_Dynamic_Interior"/>
+                    <set_value name="$PlacementObject" exact="null"/>
+                    <reset_cue cue="$ContactCreatorCue"/>
+                  </actions>
+                </cue>
+
+                <cue name="ATF_VS_XENON_Contact__Faction_Deactivated">
+                  <conditions>
+                    <event_faction_deactivated faction="$Faction"/>
+                  </conditions>
+                  <actions>
+                    <do_if value="ATF_VS_XENON_Place_Contact_Create_Interior.state == cuestate.waiting">
+                      <debug_text text="'Faction is now inactive. Deactivating contact handling.'"/>
+                      <reset_cue cue="$ContactCreatorCue"/>
+                    </do_if>
+                    <!--else, the depawning of the interior must happen-->
+                  </actions>
+                </cue>
+
+                <cue name="ATF_VS_XENON_Contact_Conversation_Started" instantiate="true">
+                  <conditions>
+                    <check_any>
+                      <event_conversation_started actor="$Mission_Contact" />
+                      <event_conversation_returned_to_section actor="$Mission_Contact" />
+                    </check_any>
+                    <check_value value="event.param == 'default' and $Faction.isactive" />
+                  </conditions>
+                  <actions>
+
+                    <!--<remove_mission cue="$MissionIntroCue" type="completed"/>
+                    <reset_cue cue="ATF_VS_XENON_Introduction"/>-->
+
+                    <do_if value="event.name == 'event_conversation_started'">
+                      <do_if value="$SubscriptionStatus == 'unsubscribed' or $SubscriptionStatus == 'cooldown'">
+                        <do_if value="player.entity.isfemale">
+                          <add_npc_line speaker="$Mission_Contact" line="3007" comment="Pilot. (female)"/>
+                        </do_if>
+                        <do_else>
+                          <add_npc_line speaker="$Mission_Contact" line="3006" comment="Pilot. (male)"/>
+                        </do_else>
+                      </do_if>
+                      <do_else>
+                        <!--More familiar greeting-->
+                        <add_npc_line speaker="$Mission_Contact" line="3003" comment="Captain."/>
+                      </do_else>
+                    </do_if>
+
+                    <include_actions ref="ATF_VS_XENON_Contact_Player_Lines"/>
+                  </actions>
+                </cue>
+
+                <library name="ATF_VS_XENON_Contact_Player_Lines">
+                  <actions>
+
+                    <!--Specific sections-->
+                    <do_if value="event.name == 'event_conversation_next_section' and event.param == 'war_subscribe_request'">
+                      <do_if value="$Faction.relationto.{faction.player} ge $SubscriptionMinRel">
+                        <add_player_choice text="{1002,3000401}" section="war_subscribe_ask_intro" comment="What kind of jobs can I expect?"/>
+                      </do_if>
+                    </do_if>
+                    <do_elseif value="event.name == 'event_conversation_next_section' and (event.param == 'war_subscribe_ask_intro' or event.param == 'war_subscribe_request_2')">
+                      <add_player_choice text="{1002,3021402}" section="war_subscribe_ask_conflict" comment="What can you tell me about the conflict itself?"/>
+                      <add_player_choice text="{1002,3000402}" section="war_subscribe_start_intro" position="top_right" comment="Let's get started."/>
+                    </do_elseif>
+                    <do_elseif value="event.name == 'event_conversation_next_section' and event.param == 'war_subscribe_ask_conflict'">
+                      <add_player_choice text="{1002,3021403}" section="war_subscribe_ask_conflict_2" comment="What will you do?"/>
+                      <add_player_choice text="{1002,3000402}" section="war_subscribe_start_intro" position="top_right" comment="Let's get started."/>
+                    </do_elseif>
+                    <do_elseif value="event.name == 'event_conversation_next_section' and event.param == 'war_subscribe_ask_conflict_2'">
+                      <add_player_choice text="{1002,3000402}" section="war_subscribe_start_intro" position="top_right" comment="Let's get started."/>
+                    </do_elseif>
+
+                    <!--Start or other sections-->
+                    <do_else>
+                      <do_if value="$SubscriptionStatus == 'unsubscribed'">
+                        <do_if value="ATF_VS_XENON_Introduction.state == cuestate.waiting">
+                          <!--Intro mission is not in a state where the player can take it.-->
+                          <!--TODO @Owen - voice lines on rejecting the player?-->
+                          <add_player_choice text="{1002,3021001}" section="war_subscribe_request_2" comment="I'm here about the Xenon."/>
+                        </do_if>
+                        <do_elseif value="$IntroducedToContact">
+                          <do_if value="$JobsDescribed">
+                            <add_player_choice text="{1002,3000402}" section="war_subscribe_start_intro" position="top_right" comment="Let's get started."/>
+                            <add_player_choice text="{1002,3021002}" section="war_subscribe_ask_conflict" comment="What can you tell me about the conflict itself?"/>
+                          </do_if>
+                          <do_else>
+                            <add_player_choice text="{1002,3000401}" section="war_subscribe_ask_intro" comment="What kind of jobs can I expect?"/>
+                          </do_else>
+                        </do_elseif>
+                        <do_else>
+                          <add_player_choice text="{1002,3021001}" section="war_subscribe_request" comment="I'm here about the Xenon."/>
+                        </do_else>
+                      </do_if>
+                      <do_elseif value="$SubscriptionStatus == 'probation'">
+                        <do_if value="$IntroMissionSuccessful">
+                          <add_player_choice text="{1002,3000404}" section="war_intro_complete" comment="I completed the task."/>
+                        </do_if>
+                        <do_else>
+                          <add_player_choice text="{1002,3000405}" section="war_abort_intro" comment="I would like to stop."/>
+                        </do_else>
+                      </do_elseif>
+                    </do_else>
+                  </actions>
+                </library>
+
+                <cue name="ATF_VS_XENON_Contact_NextSection" instantiate="true">
+                  <conditions>
+                    <event_conversation_next_section actor="$Mission_Contact" sectionprefix="war_"/>
+                  </conditions>
+                  <actions>
+                    <set_value name="$AddPlayerChoices" exact="true"/>
+                    <do_if value="event.param == 'war_subscribe_request'">
+                      <do_if value="$Faction.relationto.{faction.player} ge $SubscriptionMinRel">
+                        <set_value name="$IntroducedToContact" exact="true"/>
+                        <add_npc_line speaker="$Mission_Contact" line="30216001" hidechoices="true" comment="Ah, very good."/>
+                        <add_npc_line speaker="$Mission_Contact" line="30216002" hidechoices="true"/>
+                        <do_if value="player.entity.race == race.argon">
+                          <!--Holy Order citizen-->
+                          <add_npc_line speaker="$Mission_Contact" line="30216004" hidechoices="true"/>
+                        </do_if>
+                        <do_else>
+                          <!--Holy Order friend-->
+                          <add_npc_line speaker="$Mission_Contact" line="30216003" hidechoices="true"/>
+                        </do_else>
+
+                        <add_npc_line speaker="$Mission_Contact" line="30216005" hidechoices="true"/>
+                        <add_npc_line speaker="$Mission_Contact" line="30216006" hidechoices="true"/>
+                        <add_npc_line speaker="$Mission_Contact" line="30216007" hidechoices="true"/>
+                        <do_if value="player.entity.race != race.paranid">
+                          <!--Non-Paranid player line-->
+                          <add_npc_line speaker="$Mission_Contact" line="30216008" hidechoices="true"/>
+                        </do_if>
+                        <do_else>
+                          <add_npc_line speaker="$Mission_Contact" line="30216009" hidechoices="true"/>
+                          <add_npc_line speaker="$Mission_Contact" line="30216010" hidechoices="true"/>
+                        </do_else>
+                      </do_if>
+                      <do_else>
+                        <add_npc_line speaker="$Mission_Contact" line="30216026" comment="Sorry, but that is a very sensitive situation. We require pilots who have proven themselves to the Argon Federation."/>
+                      </do_else>
+                    </do_if>
+                    <do_elseif value="event.param == 'war_subscribe_ask_intro'">
+                      <set_value name="$JobsDescribed" exact="true"/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216011" hidechoices="true"/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216012" hidechoices="true"/>
+                    </do_elseif>
+                    <do_elseif value="event.param == 'war_subscribe_ask_conflict'">
+                      <set_value name="$ConflictDescribed" exact="true"/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216013" hidechoices="true"/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216014" hidechoices="true"/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216015" hidechoices="true"/>
+                    </do_elseif>
+                    <do_elseif value="event.param == 'war_subscribe_ask_conflict_2'">
+                      <add_npc_line speaker="$Mission_Contact" line="30216016" hidechoices="true"/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216017" hidechoices="true"/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216018" hidechoices="true"/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216019" hidechoices="true"/>
+                    </do_elseif>
+                    <do_elseif value="event.param == 'war_subscribe_request_2'">
+                      <!--This section is for when the intro mission is not currently active for the player to accept it. Either reject the player or signal the intro mission to activate.-->
+                      <include_actions ref="ATF_VS_XENON_Can_Activate_Introduction"/>
+                      <do_if value="$CanActivateIntro">
+                        <signal_cue cue="ATF_VS_XENON_Introduction"/>
+                        <add_npc_line speaker="$Mission_Contact" line="30216001" hidechoices="true" comment="Ah, very good."/>
+                      </do_if>
+                      <do_else>
+                        <set_value name="$AddPlayerChoices" exact="false"/>
+                        <add_npc_line speaker="$Mission_Contact" line="30216027" hidechoices="true"/>
+                      </do_else>
+                    </do_elseif>
+                    <do_elseif value="event.param == 'war_subscribe_start_intro'">
+                      <do_if value="$HasIntroMission">
+                        <set_value name="$AddPlayerChoices" exact="false"/>
+                        <signal_cue cue="ATF_VS_XENON_Player_Requested_Subscription"/>
+                        <add_npc_line speaker="$Mission_Contact" line="30216020" hidechoices="true"/>
+                        <add_npc_line speaker="$Mission_Contact" line="30216021" hidechoices="true"/>
+                      </do_if>
+                      <do_else>
+                        <set_value name="$AddPlayerChoices" exact="false"/>
+                        <add_npc_line speaker="$Mission_Contact" line="2113" hidechoices="true" comment="Excellent."/>
+                        <add_npc_line speaker="$Mission_Contact" line="30216023" hidechoices="true" comment="You will now find tasks related to the Holy Order conflict in your mission interface."/>
+                        <signal_cue cue="ATF_VS_XENON_Cancel_Intro_Talkto"/>
+                        <reset_cue cue="ATF_VS_XENON_Introduction"/>
+                        <signal_cue_instantly cue="ATF_VS_XENON_Set_Subscription_Status" param="'subscribed'"/>
+                      </do_else>
+                    </do_elseif>
+                    <do_elseif value="event.param == 'war_intro_complete'">
+                      <set_value name="$AddPlayerChoices" exact="false"/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216022" hidechoices="true" comment="Yes, I saw. Very good."/>
+                      <add_npc_line speaker="$Mission_Contact" line="30216023" hidechoices="true" comment="You will now find tasks related to the Holy Order conflict in your mission interface."/>
+                      <signal_cue_instantly cue="ATF_VS_XENON_Set_Subscription_Status" param="'subscribed'"/>
+                    </do_elseif>
+                    <do_elseif value="event.param == 'war_abort_intro'">
+                      <set_value name="$AddPlayerChoices" exact="false"/>
+                      <signal_cue cue="ATF_VS_XENON_Player_Requests_Intro_Abort"/>
+                    </do_elseif>
+
+                    <do_if value="$AddPlayerChoices">
+                      <include_actions ref="ATF_VS_XENON_Contact_Player_Lines"/>
+                    </do_if>
+                  </actions>
+                </cue>
+
+              </cues>
+            </cue>
+
+
+            <!--event.param = table[
+            $cue                = thread cue namespace,
+            $completedmissions  = number of completed missions,
+            $failedmissions     = number of failed missions]-->
+            <cue name="ATF_VS_XENON_Thread_Finished" instantiate="true">
+              <conditions>
+                <event_cue_signalled cue="md.X4Ep1_War_Subscriptions.Cleanup_Thread"/>
+                <!--<debug_text text="event.param.$cue.$Definition.$MissionGroup"/>
+                <debug_text text="$MissionGroup"/>-->
+                <check_value value="event.param.$cue.$Definition.$MissionGroup == $MissionGroup"/>
+                <!--<debug_text text="$ManagerCue.$ActiveThreads.indexof.{event.param.$cue}"/>-->
+                <check_value value="$ManagerCue.$ActiveThreads.indexof.{event.param.$cue}"/>
+              </conditions>
+              <actions>
+                <debug_text text="'player finished ' + event.param.$cue + ' for ' + $MissionGroup + '. Completed missions: ' + event.param.$completedmissions + ' - Failed missions: ' + event.param.$failedmissions" chance="$DebugChance"/>
+
+                <set_value name="$MissionsCompleted" operation="add" exact="event.param.$completedmissions"/>
+                <set_value name="$MissionsFailed" operation="add" exact="event.param.$completedmissions"/>
+
+                <do_if value="$MissionsCompleted ge 20">
+                  <unlock_achievement name="WAR_MISSIONS" />
+                </do_if>
+
+                <do_if value="event.param.$failed">
+                  <set_value name="$ThreadsFailed" operation="add"/>
+                  <do_if value="not event.param.$interrupted">
+                    <signal_cue_instantly cue="ATF_VS_XENON_Set_Subscription_Status" param="'cooldown'"/>
+                  </do_if>
+                </do_if>
+                <do_else>
+                  <set_value name="$ThreadsCompleted" operation="add"/>
+                  <signal_cue cue="md.X4Ep1_War_Subscriptions.CalculateThreads"/>
+                </do_else>
+
+              </actions>
+            </cue>
+
+            <!--
+            ####################
+            INTRODUCTION
+            ####################-->
+
+            <cue name="ATF_VS_XENON_Player_Requested_Subscription" instantiate="true">
+              <conditions>
+                <event_cue_signalled/>
+              </conditions>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Player_Requests_Intro_Abort" instantiate="true">
+              <conditions>
+                <event_cue_signalled/>
+              </conditions>
+            </cue>
+
+            <library name="ATF_VS_XENON_Can_Activate_Introduction">
+              <actions>
+                <!--TODO @Owen other conditions based on if they failed a previous intro mission and need a cooldocwn-->
+                <set_value name="$CanActivateIntro" exact="false"/>
+                <do_if value="$Faction.relationto.{faction.player} ge $SubscriptionMinRel">
+                  <set_value name="$CanActivateIntro" exact="true"/>
+                </do_if>
+              </actions>
+            </library>
+
+            <cue name="ATF_VS_XENON_Introduction">
+              <conditions>
+                <event_cue_signalled/>
+                <check_value value="$Faction.isactive"/>
+              </conditions>
+              <actions>
+                <debug_text text="'Starting intro mission handling for ' + $MissionGroup" chance="$DebugChance"/>
+                <set_value name="$MissionIntroCue" exact="this"/>
+                <signal_cue_instantly cue="ATF_VS_XENON_Set_Subscription_Status" param="'unsubscribed'"/>
+              </actions>
+              <cues>
+                <cue name="ATF_VS_XENON_Introduction_Init">
+                  <actions>
+                    <do_if value="$Faction.relationto.{faction.player} ge $SubscriptionMinRel">
+                      <signal_cue cue="ATF_VS_XENON_Introduction_Create_Offer"/>
+                    </do_if>
+                  </actions>
+                </cue>
+
+                <cue name="ATF_VS_XENON_Introduction_Create_Offer">
+                  <conditions>
+                    <check_any>
+                      <check_all>
+                        <event_player_relation_changed faction="$Faction"/>
+                        <check_value value="event.param2.{1} ge $SubscriptionMinRel"/>
+                      </check_all>
+                      <event_cue_signalled/>
+                    </check_any>
+                  </conditions>
+                  <actions>
+                    <debug_text text="'Faction: ' + $Faction + ' Created Offer'" chance="$DebugChance"/>
+                    <do_if value="not $Mission_Contact.isclass.npc or not $PlacementObject.isoperational">
+                      <debug_text text="'Mission contact was not yet created for ' + $MissionGroup + '. Triggering creation now but location may not be near a war front. [Owen]'" filter="error"/>
+                      <signal_cue_instantly cue="$ContactCreatorCue"/>
+                    </do_if>
+
+                    <do_if value="$Mission_Contact.isclass.npc and $PlacementObject.isoperational">
+                      <debug_text text="'Player has passed the conditions for the intro mission to be available for group: ' + $MissionGroup" chance="$DebugChance"/>
+                      <create_offer cue="$MissionIntroCue" actor="$Mission_Contact" type="missiontype.fight" name="readtext.{30216}.{1}" description="readtext.{30216}.{2}" difficulty="level.trivial" faction="$Faction" group="$MissionGroup">
+                        <briefing>
+                          <objective step="1" action="objective.talkto" object="$Mission_Contact"/>
+                        </briefing>
+                      </create_offer>
+                      <!-- Guild Notification Mail -->
+                      <run_actions ref="md.X4Ep1_War_Subscriptions.SendSubscriptionMail">
+                        <param name="Page" value="30216"/>
+                        <param name="Faction" value="$Faction"/>
+                        <param name="Mission_Contact" value="$Mission_Contact"/>
+                      </run_actions>
+                    </do_if>
+                    <do_else>
+                      <debug_text text="'Unable to start intro mission due to missing mission client [Owen]'" filter="error"/>
+                      <reset_cue cue="$MissionIntroCue"/>
+                    </do_else>
+                  </actions>
+                  <cues>
+                    <cue name="ATF_VS_XENON_Introduction_Offer_Accepted">
+                      <conditions>
+                        <event_object_signalled object="$Mission_Contact" param="'accept'" />
+                      </conditions>
+                      <actions>
+                        <create_mission cue="$MissionIntroCue" offercue="$MissionIntroCue"/>
+                        <update_mission cue="$MissionIntroCue">
+                          <briefing>
+                            <objective step="1" action="objective.talkto" text="$Mission_Contact.knownname"/>
+                          </briefing>
+                        </update_mission>
+                        <remove_offer cue="$MissionIntroCue"/>
+                        <signal_cue_instantly cue="md.GenericMissions.DisconnectedActorObjectiveLibrary" param="table[
+                                              $actor = $Mission_Contact,
+                                              $object = $PlacementObject,
+                                              $missioncue = $MissionIntroCue,
+                                              $cancelcue = ATF_VS_XENON_Cancel_Intro_Talkto,
+                                              $libfailedcue = ATF_VS_XENON_Intro_Abort,
+                                              $objective = objective.talkto,
+                                              $debugchance = $DebugChance]"/>
+                      </actions>
+                    </cue>
+                  </cues>
+                </cue>
+
+                <cue name="ATF_VS_XENON_Intro_Abort">
+                  <conditions>
+                    <check_any>
+                      <event_mission_aborted cue="ATF_VS_XENON_Introduction"/>
+                      <event_cue_signalled cue="ATF_VS_XENON_Player_Requests_Intro_Abort"/>
+                      <event_cue_signalled/>
+                      <event_object_destroyed object="$Mission_Contact"/>
+                      <event_object_destroyed object="$PlacementObject"/>
+                      <event_faction_deactivated faction="$Faction"/>
+                    </check_any>
+                  </conditions>
+                  <actions>
+                    <debug_text text="'Aborting due to ' + event.name" chance="$DebugChance"/>
+                    <do_if value="$MissionIntroCue.hasmission">
+                      <remove_mission cue="$MissionIntroCue" type="aborted"/>
+                    </do_if>
+                    <signal_cue_instantly cue="ATF_VS_XENON_Set_Subscription_Status" param="'unsubscribed'"/>
+                    <reset_cue cue="ATF_VS_XENON_Introduction"/>
+                  </actions>
+                </cue>
+
+                <cue name="ATF_VS_XENON_Cancel_Intro_Talkto" instantiate="true">
+                  <conditions>
+                    <event_cue_signalled/>
+                  </conditions>
+                </cue>
+
+                <cue name="ATF_VS_XENON_Start_Intro_Mission">
+                  <conditions>
+                    <event_cue_signalled cue="ATF_VS_XENON_Player_Requested_Subscription"/>
+                  </conditions>
+                  <actions>
+                    <signal_cue cue="ATF_VS_XENON_Cancel_Intro_Talkto"/>
+                    <signal_cue_instantly cue="ATF_VS_XENON_Set_Subscription_Status" param="'probation'"/>
+                    <set_value name="$IntroMissionSuccessful" exact="false"/>
+
+                    <do_if value="$MissionIntroCue.hasmissionoffer">
+                      <remove_offer cue="$MissionIntroCue"/>
+                    </do_if>
+
+                    <do_if value="not $MissionIntroCue.hasmission">
+                      <create_mission cue="$MissionIntroCue" type="missiontype.fight" name="readtext.{30216}.{10}" description="readtext.{30216}.{11}" difficulty="level.trivial" faction="$Faction" group="$MissionGroup"/>
+                    </do_if>
+
+                    <create_ship name="$TestShip" sector="player.sector">
+                      <select faction="faction.xenon" size="class.ship_s"/>
+                      <owner exact="faction.xenon"/>
+                      <pilot actor="null"/>
+                      <safepos object="player.entity" min="30km" max="40km"/>
+                    </create_ship>
+
+                    <update_mission cue="$MissionIntroCue">
+                      <briefing>
+                        <objective step="1" action="objective.destroy" object="$TestShip"/>
+                      </briefing>
+                    </update_mission>
+                    <set_objective cue="$MissionIntroCue" action="objective.destroy" object="$TestShip"/>
+                  </actions>
+                  <cues>
+                    <cue name="ATF_VS_XENON_Start_Intro_Mission_Successful">
+                      <conditions>
+                        <event_object_destroyed object="$TestShip"/>
+                      </conditions>
+                      <actions>
+                        <update_mission cue="$MissionIntroCue">
+                          <briefing>
+                            <objective step="2" action="objective.talkto" object="$Mission_Contact"/>
+                          </briefing>
+                        </update_mission>
+                        <set_value name="$IntroMissionSuccessful" exact="true"/>
+                        <signal_cue_instantly cue="md.GenericMissions.DisconnectedActorObjectiveLibrary" param="table[
+                                              $actor = $Mission_Contact,
+                                              $object = $PlacementObject,
+                                              $missioncue = $MissionIntroCue,
+                                              $cancelcue = ATF_VS_XENON_Start_Intro_Mission_Remove_Mission,
+                                              $libfailedcue = ATF_VS_XENON_Intro_Abort,
+                                              $objective = objective.talkto,
+                                              $step = 2,
+                                              $debugchance = $DebugChance]"/>
+                      </actions>
+                    </cue>
+
+                    <cue name="ATF_VS_XENON_Start_Intro_Mission_Remove_Mission">
+                      <conditions>
+                        <event_cue_signalled/>
+                      </conditions>
+                      <actions>
+                        <remove_mission cue="$MissionIntroCue" type="completed"/>
+                        <reset_cue cue="ATF_VS_XENON_Introduction"/>
+                      </actions>
+                    </cue>
+
+                    <cue name="ATF_VS_XENON_Start_Intro_Mission_End">
+                      <conditions>
+                        <event_conversation_started actor="$Mission_Contact"/>
+                        <check_value value="$IntroMissionSuccessful"/>
+                      </conditions>
+                      <actions>
+                        <allow_conversation_escape enabled="false"/>
+                        <signal_cue cue="ATF_VS_XENON_Start_Intro_Mission_Remove_Mission"/>
+                      </actions>
+                    </cue>
+                  </cues>
+                </cue>
+              </cues>
+            </cue>
+
+            <!--
+            ####################
+            THREADS
+            ####################-->
+            <cue name="ATF_VS_XENON_Reinforce_Defence">
+              <cues>
+                <cue name="ATF_VS_XENON_Reinforce_Defence_Register">
+                  <actions>
+                    <!--Terran vs Xenon - Reinforce Defence-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_reinforce_defence'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Cold_War, md.X4Ep1_War_Subscriptions.Situation__Contention, md.X4Ep1_War_Subscriptions.Situation__Defence_Prep],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.protect,
+                           $Difficulty = level.medium,
+                           $SubMissionLib = ATF_VS_XENON_Reinforce_Defence_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Reinforce_Defence_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Reinforce_Defence_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Reinforce_Defence_Construct_Reward,
+                           $MinMissions = 4,
+                           $MaxMissions = 5,
+                           $ThreadAbortRelation = -0.00064]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Reinforce_Defence_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <set_value name="$Submissions.$deploy_lasertowers"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.DeployInPlace__Standard,    $MissionType = missiontype.drop,  $Page = 30216, $TextOffset = [101000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$deploy_mines"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.DeployInPlace__Standard,    $MissionType = missiontype.drop,  $Page = 30216, $TextOffset = [101100, 101200], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$achieve_coverage__host_sector"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Achieve_Coverage__Standard, $MissionType = missiontype.drop,  $Page = 30216, $TextOffset = [102000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$repair__damagedship"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.RepairObject__Standard,     $MissionType = missiontype.repair,  $Page = 30216, $TextOffset = [103000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$taxi__specialist"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Passenger_Transport__Standard, $MissionType = missiontype.transport, $Page = 30216, $TextOffset = [104000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$deliver__crew"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Get_Exact_Crew__Standard, $MissionType = missiontype.deliver, $Page = 30216, $TextOffset = [110000, 110100], $Sequence = -1 ]"/>
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Reinforce_Defence_Construct_Name">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$Name" exact="{30216, 3000}"/>
+                      <set_value name="this.$Name" exact="{30216, 3001}"/>
+                      <set_value name="this.$Name" exact="{30216, 3002}"/>
+                    </do_any>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Reinforce_Defence_Construct_Description">
+                  <actions>
+                    <do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 3101}"/>
+                        <set_value name="this.$Description" exact="{30216, 3102}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 3111}"/>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 3121}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 3122}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 3201}"/>
+                        <set_value name="this.$Description" exact="{30216, 3202}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 3211}"/>
+                      <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 3221}"/>
+                    </do_elseif>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Reinforce_Defence_Construct_Reward">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="15" comment="special subscription paint"/>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="15" comment="basic terran faction paint"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_tuningsoftware, ware.modpart_shieldgeneratorcoil_t1, ware.modpart_shieldgeneratorcoil_t2].random]" weight="15" comment="modpart"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_tuningsoftware, [ware.modpart_shieldgeneratorcoil_t1, ware.modpart_shieldgeneratorcoil_t2].random]" weight="15" comment="complete mod"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_shieldgeneratorcoil_t3]" weight="5" comment="rare modpart"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_2, ware.inv_seminar_piloting_2, ware.inv_seminar_management_2].random]" weight="15"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="4"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="1"/>
+                    </do_any>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+              </cues>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Construct_Defence">
+              <cues>
+                <cue name="ATF_VS_XENON_Construct_Defence_Register">
+                  <actions>
+                    <!--Terran vs Xenon - Construct Defence-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_construct_defence'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Cold_War, md.X4Ep1_War_Subscriptions.Situation__Contention, md.X4Ep1_War_Subscriptions.Situation__Defence_Prep, md.X4Ep1_War_Subscriptions.Situation__Pushback],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.build,
+                           $Difficulty = level.hard,
+                           $SubMissionLib = ATF_VS_XENON_Construct_Defence_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Construct_Defence_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Construct_Defence_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Construct_Defence_Construct_Reward,
+                           $MinMissions = 1,
+                           $MaxMissions = 2,
+                           $ThreadAbortRelation = -0.00064]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Construct_Defence_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <set_value name="$Submissions.$build__defencestation"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Build_Station__Standard, $MissionType = missiontype.build, $Page = 30216, $TextOffset = [105000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$build__fleet"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Get_Exact_Fleet__Standard, $MissionType = missiontype.build, $Page = 30216, $TextOffset = [120000], $Sequence = -1 ]"/>
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Construct_Defence_Construct_Name">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$Name" exact="{30216, 4000}"/>
+                      <set_value name="this.$Name" exact="{30216, 4001}"/>
+                    </do_any>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Construct_Defence_Construct_Description">
+                  <actions>
+                    <do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 4101}"/>
+                        <set_value name="this.$Description" exact="{30216, 4102}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 4111}"/>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 4121}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 4122}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 4201}"/>
+                        <set_value name="this.$Description" exact="{30216, 4202}"/>
+                      </do_any>
+
+                      <!-- TODO Adrian: Enable once text comitted -->
+                      <!--<set_value name="this.$Description" operation="add" exact="' ' + {30216, 4211}"/>-->
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 4221}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 4222}"/>
+                      </do_any>
+                    </do_elseif>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Construct_Defence_Construct_Reward">
+                  <actions>
+                    <do_if value="true" chance="70">
+                      <!--mod(part) reward-->
+                      <do_any>
+                        <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="15" comment="special subscription paint"/>
+                        <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="15" comment="basic terran faction paint"/>
+                        <set_value name="this.$RewardObject" exact="[[ware.modpart_tuningsoftware, ware.modpart_shieldgeneratorcoil_t1, ware.modpart_shieldgeneratorcoil_t2].random]" weight="15" comment="modpart"/>
+                        <set_value name="this.$RewardObject" exact="[ware.modpart_tuningsoftware, [ware.modpart_shieldgeneratorcoil_t1, ware.modpart_shieldgeneratorcoil_t2].random]" weight="15" comment="complete mod"/>
+                        <set_value name="this.$RewardObject" exact="[ware.modpart_shieldgeneratorcoil_t3]" weight="5" comment="rare modpart"/>
+                        <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_2, ware.inv_seminar_piloting_2, ware.inv_seminar_management_2].random]" weight="15"/>
+                        <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="15"/>
+                        <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="1"/>
+                      </do_any>
+                    </do_if>
+                    <do_else>
+                      <!-- setup the ship-reward -->
+                      <set_value name="this.$RewardObject" exact="[]"/>
+                      <set_value name="$shipcargo" exact="[[0, ware.energycells]]"/>
+                      <set_value name="$Faction" exact="faction.terran"/>
+					  <set_value name="$shipmacro" exact="ship_ter_s_heavyfighter_01.macro"/>
+                      <run_actions ref="md.LIB_Generic.FindNearestStationForFaction" result="$SuitableStation">
+                        <param name="Faction" value="$Faction"/>
+                      </run_actions>
+
+                      <do_if value="$shipmacro and $SuitableStation">
+                        <generate_loadout result="$shiploadout" macro="$shipmacro" level="[0.3, 0.4, 0.5, 0.6, 0.7].random"/>
+                        <set_value name="$MaxCrewCapacity" exact="$shipmacro.people.capacity"/>
+                        <set_value name="$RewardShip" exact="table[
+                            $macro        = $shipmacro,
+                            $loadout      = $shiploadout, 
+                            $cargo        = $shipcargo, 
+                            $station      = $SuitableStation, 
+                            $pilot        = [faction.terran, [tag.pilot], [8,10].random],
+                            $bulkcrew     = [$MaxCrewCapacity, ['terran_military_crew', 'terran_freighter_crew'].random, 100], 
+                            $mods         = [ware.mod_shield_capacity_01_mk3, ware.mod_engine_travelthrust_02_mk2],
+                            $paintmod     = [ware.paintmod_0072].random,
+                        ]"/>
+                        <append_to_list name="this.$RewardObject" exact="$RewardShip"/>
+                      </do_if>
+                    </do_else>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+
+              </cues>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Secure_Resources">
+              <cues>
+                <cue name="ATF_VS_XENON_Secure_Resources_Register">
+                  <actions>
+                    <!--Terran vs Xenon - Secure Resources-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_secure_resources'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Cold_War, md.X4Ep1_War_Subscriptions.Situation__Contention, md.X4Ep1_War_Subscriptions.Situation__Defence_Prep, md.X4Ep1_War_Subscriptions.Situation__Invasion_Prep],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.trade,
+                           $Difficulty = level.medium,
+                           $SubMissionLib = ATF_VS_XENON_Secure_Resources_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Secure_Resources_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Secure_Resources_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Secure_Resources_Construct_Reward,
+                           $MinMissions = 4,
+                           $MaxMissions = 5,
+                           $ThreadAbortRelation = -0.00064]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Secure_Resources_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <set_value name="$Submissions.$large_supply__food"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Large_Supply__Standard,     $MissionType = missiontype.trade, $Page = 30216, $TextOffset = [100000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$large_supply__shiptech"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Large_Supply__Standard,     $MissionType = missiontype.trade, $Page = 30216, $TextOffset = [100100], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$deploy_lasertowers_at_resources"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.DeployInPlace__Standard,    $MissionType = missiontype.drop,  $Page = 30216, $TextOffset = [101300], $Sequence = -1 ]"/>
+                    <!--<set_value name="$Submissions.$find_resources__ores"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Find_Resources__Standard,   $MissionType = missiontype.find,  $Page = 30216, $TextOffset = [106000], $Sequence = -1 ]"/>-->
+                    <set_value name="$Submissions.$supply_station"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Supply_Factory__Standard,   $MissionType = missiontype.find,  $Page = 30216, $TextOffset = [130000], $Sequence = -1 ]"/>
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Secure_Resources_Construct_Name">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$Name" exact="{30216, 5000}"/>
+                      <set_value name="this.$Name" exact="{30216, 5001}"/>
+                    </do_any>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Secure_Resources_Construct_Description">
+                  <actions>
+                    <do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 5101}"/>
+                        <set_value name="this.$Description" exact="{30216, 5102}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 5111}"/>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 5121}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 5122}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 5201}"/>
+                        <set_value name="this.$Description" exact="{30216, 5202}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 5211}"/>
+                      <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 5221}"/>
+                    </do_elseif>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Secure_Resources_Construct_Reward">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="15" comment="special subscription paint"/>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="15" comment="basic terran faction paint"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_extendedfuelcontainer, ware.modpart_nividiumoxide, ware.modpart_enginefuelinjector_t1, ware.modpart_enginefuelinjector_t2].random]" weight="15" comment="modpart"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_extendedfuelcontainer, ware.modpart_nividiumoxide, [ware.modpart_enginefuelinjector_t1, ware.modpart_enginefuelinjector_t2].random]" weight="15" comment="complete mod"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_enginefuelinjector_t3]" weight="5" comment="rare modpart"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_2, ware.inv_seminar_piloting_2, ware.inv_seminar_management_2].random]" weight="15"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="4"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="1"/>
+                    </do_any>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+
+              </cues>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Preemptive_Offensive">
+              <cues>
+                <cue name="ATF_VS_XENON_Preemptive_Offensive_Register">
+                  <actions>
+                    <!--Terran vs Xenon - Preemptive Offensive-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_preemptive_offensive'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Cold_War, md.X4Ep1_War_Subscriptions.Situation__Invasion_Prep],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.fight,
+                           $Difficulty = level.hard,
+                           $SubMissionLib = ATF_VS_XENON_Preemptive_Offensive_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Preemptive_Offensive_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Preemptive_Offensive_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Preemptive_Offensive_Construct_Reward,
+                           $MinMissions = 4,
+                           $MaxMissions = 6,
+                           $ThreadAbortRelation = -0.00064]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Preemptive_Offensive_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <set_value name="$Submissions.$assassination"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Assassinate__Standard, $MissionType = missiontype.kill,  $Page = 30216, $TextOffset = [107000, 107100], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$destroy_rare_ship"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.DestroyRarelyOnSight__Standard,   $MissionType = missiontype.destroy, $Page = 30216, $TextOffset = [140000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$destroy_station_turrets"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.DestroyStation__Standard,   $MissionType = missiontype.destroy, $Page = 30216, $TextOffset = [180000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$destroy_objects_mines"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Destroy_Objects__Clear_Explosives, $MissionType = missiontype.destroy, $Page = 30216, $TextOffset = [160000, 160100], $Sequence = -1 ]"/>
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Preemptive_Offensive_Construct_Name">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$Name" exact="{30216, 6000}"/>
+                      <set_value name="this.$Name" exact="{30216, 6001}"/>
+                    </do_any>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Preemptive_Offensive_Construct_Description">
+                  <actions>
+                    <do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 6101}"/>
+                        <set_value name="this.$Description" exact="{30216, 6102}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 6111}"/>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 6121}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 6122}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 6201}"/>
+                        <set_value name="this.$Description" exact="{30216, 6202}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 6211}"/>
+                      <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 6221}"/>
+                    </do_elseif>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Preemptive_Offensive_Construct_Reward">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="15" comment="special subscription paint"/>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="15" comment="basic terran faction paint"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_highenergycatalyst, ware.modpart_tuningsoftware, ware.modpart_weaponchamber_t1, ware.modpart_weaponchamber_t2].random]" weight="15" comment="modpart"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_highenergycatalyst, ware.modpart_tuningsoftware, [ware.modpart_weaponchamber_t1, ware.modpart_weaponchamber_t2].random]" weight="15" comment="complete mod"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_weaponchamber_t3]" weight="5" comment="rare modpart"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_2, ware.inv_seminar_piloting_2, ware.inv_seminar_management_2].random]" weight="15"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="4"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="1"/>
+                    </do_any>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+
+              </cues>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Station_Offensive">
+              <cues>
+                <cue name="ATF_VS_XENON_Station_Offensive_Register">
+                  <actions>
+                    <!--Terran vs Xenon - Station Offensive-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_station_offensive'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Cold_War, md.X4Ep1_War_Subscriptions.Situation__Invasion_Prep, md.X4Ep1_War_Subscriptions.Situation__Invading, md.X4Ep1_War_Subscriptions.Situation__Pushback],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.destroy,
+                           $Difficulty = level.veryhard,
+                           $SubMissionLib = ATF_VS_XENON_Station_Offensive_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Station_Offensive_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Station_Offensive_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Station_Offensive_Construct_Reward,
+                           $MinMissions = 1,
+                           $MaxMissions = 1,
+                           $ThreadAbortRelation = -0.00064]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Station_Offensive_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <set_value name="$Submissions.$destroy_station"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.DestroyStation__Standard,   $MissionType = missiontype.destroy, $Page = 30216, $TextOffset = [170000], $Sequence = -1 ]"/>
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Station_Offensive_Construct_Name">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$Name" exact="{30216, 9000}"/>
+                    </do_any>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Station_Offensive_Construct_Description">
+                  <actions>
+                    <do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 9101}"/>
+                        <set_value name="this.$Description" exact="{30216, 9102}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 9111}"/>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 9121}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 9122}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 9201}"/>
+                        <set_value name="this.$Description" exact="{30216, 9202}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 9211}"/>
+                      <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 9221}"/>
+                    </do_elseif>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Station_Offensive_Construct_Reward">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="10" comment="special subscription paint"/>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="10" comment="basic terran faction paint"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_highenergycatalyst, ware.modpart_tuningsoftware, ware.modpart_weaponchamber_t1, ware.modpart_weaponchamber_t2].random]" weight="5" comment="modpart"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_highenergycatalyst, ware.modpart_tuningsoftware, [ware.modpart_weaponchamber_t1, ware.modpart_weaponchamber_t2].random]" weight="10" comment="complete mod"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_weaponchamber_t3]" weight="10" comment="rare modpart"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="6"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="3"/>
+                    </do_any>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+
+              </cues>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Gather_Intel">
+              <cues>
+                <cue name="ATF_VS_XENON_Preemptive_Gather_Intel">
+                  <actions>
+                    <!--Terran vs Xenon - Gather Intel-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_gather_intel'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Cold_War, md.X4Ep1_War_Subscriptions.Situation__Contention, md.X4Ep1_War_Subscriptions.Situation__Invasion_Prep],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.intelligence,
+                           $Difficulty = level.easy,
+                           $SubMissionLib = ATF_VS_XENON_Gather_Intel_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Gather_Intel_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Gather_Intel_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Gather_Intel_Construct_Reward,
+                           $MinMissions = 2,
+                           $MaxMissions = 3,
+                           $ThreadAbortRelation = -0.00064]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Gather_Intel_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <set_value name="$Submissions.$deploy_satellite"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.DeployInPlace__Standard,    $MissionType = missiontype.drop,  $Page = 30216, $TextOffset = [101400], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$achieve_coverage__enemy_sector"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Achieve_Coverage__Standard, $MissionType = missiontype.drop,  $Page = 30216, $TextOffset = [102100], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$find_resources__enemy_sector"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Find_Resources__Standard,   $MissionType = missiontype.find,  $Page = 30216, $TextOffset = [106100], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$scan__ship"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Scan__Standard,             $MissionType = missiontype.find,  $Page = 30216, $TextOffset = [150000, 150700, 150800, 150900], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$scan__station"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Scan__Standard,             $MissionType = missiontype.find,  $Page = 30216, $TextOffset = [150100], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$scan__module"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Scan__Standard,             $MissionType = missiontype.find,  $Page = 30216, $TextOffset = [150200], $Sequence = -1 ]"/>
+                    <!--<set_value name="$Submissions.$scan__for_idcode"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Scan__Standard,             $MissionType = missiontype.find,  $Page = 30216, $TextOffset = [150600], $Sequence = -1 ]"/>-->
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Gather_Intel_Construct_Name">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$Name" exact="{30216, 7000}"/>
+                      <set_value name="this.$Name" exact="{30216, 7001}"/>
+                    </do_any>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Gather_Intel_Construct_Description">
+                  <actions>
+                    <!--<do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 7101}"/>
+                        <set_value name="this.$Description" exact="{30216, 7102}"/>
+                      </do_any>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 7111}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 7112}"/>
+                      </do_any>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 7121}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 7122}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">-->
+                    <do_any>
+                      <set_value name="this.$Description" exact="{30216, 7201}"/>
+                      <set_value name="this.$Description" exact="{30216, 7202}"/>
+                    </do_any>
+
+                    <set_value name="this.$Description" operation="add" exact="' ' + {30216, 7211}"/>
+                    <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 7221}"/>
+                    <!--</do_elseif>-->
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Gather_Intel_Construct_Reward">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="15" comment="special subscription paint"/>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="15" comment="basic terran faction paint"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_nividiumcrystallite, ware.modpart_shipnanoweave_t1, ware.modpart_shipnanoweave_t2].random]" weight="9" comment="modpart"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_nividiumcrystallite, [ware.modpart_shipnanoweave_t1, ware.modpart_shipnanoweave_t2].random]" weight="8" comment="complete mod"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_extendedfuelcontainer, ware.modpart_nividiumoxide, ware.modpart_enginefuelinjector_t1, ware.modpart_enginefuelinjector_t2].random]" weight="9" comment="modpart"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_extendedfuelcontainer, ware.modpart_nividiumoxide, [ware.modpart_enginefuelinjector_t1, ware.modpart_enginefuelinjector_t2].random]" weight="8" comment="complete mod"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_shipnanoweave_t3, ware.modpart_enginefuelinjector_t3].random]" weight="4" comment="rare modpart"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_2, ware.inv_seminar_piloting_2, ware.inv_seminar_management_2].random]" weight="14"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="4"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="1"/>
+                    </do_any>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+
+              </cues>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Support_Invasion">
+              <cues>
+                <cue name="ATF_VS_XENON_Preemptive_Support_Invasion">
+                  <actions>
+                    <!--Terran vs Xenon - Support Invasion-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_support_invasion'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Invading],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.fight,
+                           $Difficulty = level.hard,
+                           $SubMissionLib = ATF_VS_XENON_Support_Invasion_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Support_Invasion_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Support_Invasion_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Support_Invasion_Construct_Reward,
+                           $MinMissions = 1,
+                           $MaxMissions = 1,
+                           $ThreadAbortRelation = -0.00064]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Support_Invasion_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <!--<set_value name="$Submissions.$support_invasion"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Support_Invasion__Standard,    $MissionType = missiontype.fight,  $Page = 30216, $TextOffset = [109000], $Sequence = -1 ]"/>-->
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Support_Invasion_Construct_Name">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$Name" exact="{30216, 8000}"/>
+                    </do_any>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Support_Invasion_Construct_Description">
+                  <actions>
+                    <do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 8101}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 8111}"/>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 8121}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 8201}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 8211}"/>
+                      <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 8221}"/>
+                    </do_elseif>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Support_Invasion_Construct_Reward">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="15" comment="special subscription paint"/>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="15" comment="basic terran faction paint"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_nividiumcrystallite, ware.modpart_shipnanoweave_t1, ware.modpart_shipnanoweave_t2].random]" weight="9"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_highenergycatalyst, ware.modpart_tuningsoftware, ware.modpart_weaponchamber_t1, ware.modpart_weaponchamber_t2].random]" weight="8"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_nividiumcrystallite, [ware.modpart_shipnanoweave_t1, ware.modpart_shipnanoweave_t2].random]" weight="9"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_highenergycatalyst, ware.modpart_tuningsoftware, [ware.modpart_weaponchamber_t1, ware.modpart_weaponchamber_t2].random]" weight="8"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_shipnanoweave_t3, ware.modpart_weaponchamber_t3].random]" weight="4"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_2, ware.inv_seminar_piloting_2, ware.inv_seminar_management_2].random]" weight="14"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="4"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="1"/>
+                    </do_any>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+
+              </cues>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Distant_Reinforce_Defence">
+              <cues>
+                <cue name="ATF_VS_XENON_Distant_Reinforce_Defence_Register">
+                  <actions>
+                    <!--Terran vs Xenon - Distant Reinforce Defence-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_distant_reinforce_defence'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Always],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.protect,
+                           $Difficulty = level.medium,
+                           $SubMissionLib = ATF_VS_XENON_Distant_Reinforce_Defence_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Distant_Reinforce_Defence_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Distant_Reinforce_Defence_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Distant_Reinforce_Defence_Construct_Reward,
+                           $MinMissions = 2,
+                           $MaxMissions = 3,
+                           $ThreadAbortRelation = -0.00064,
+                           
+                           $UseArea = true,
+                           $MaxInstances = 2]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Distant_Reinforce_Defence_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <!--Chance that the first mission is a taxi mission to the front line. Having it later would be annoying.-->
+                    <set_value name="$Submissions.$taxi__specialist"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Passenger_Transport__Standard, $MissionType = missiontype.transport, $Page = 30216, $TextOffset = [104100], $Sequence = 1, $Chance = 40 ]"/>
+                    <!--Put mines and lasertowers in the same variant so there aren't too many deploy missions in one thread-->
+                    <set_value name="$Submissions.$deploy_minesorlasertowers"
+				                    exact="table[$Cue = md.X4Ep1_War_Subscriptions.DeployInPlace__Standard,    $MissionType = missiontype.drop,  $Page = 30216, $TextOffset = [101500, 101600, 101700, 101800], $Sequence = -1 ]"/>
+                    <!--Note: No new text offset for this as the generic 'place mines in enemy sector' suits fine-->
+                    <set_value name="$Submissions.$achieve_coverage__enemy_sector"
+                            exact="table[$Cue = md.X4Ep1_War_Subscriptions.Achieve_Coverage__Standard, $MissionType = missiontype.drop,  $Page = 30216, $TextOffset = [102100], $Sequence = -1 ]"/>
+                    <!--TODO @Owen Achieve_Coverage__Standard variant for placing in neighbouring sectors?-->
+
+                    <set_value name="$Submissions.$repair__damagedship"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.RepairObject__Standard,     $MissionType = missiontype.repair,  $Page = 30216, $TextOffset = [103100], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$deliver__crew"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Get_Exact_Crew__Standard, $MissionType = missiontype.deliver, $Page = 30216, $TextOffset = [110000, 110100], $Sequence = -1 ]"/>
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Distant_Reinforce_Defence_Construct_Name" purpose="run_actions">
+                  <params>
+                    <param name="AreaBaseSector" default="null"/>
+                  </params>
+                  <actions>
+                    <do_if value="$AreaBaseSector.exists">
+                      <do_any>
+                        <return value="$AreaBaseSector.knownname + ': ' + {30216, 10000}"/>
+                        <return value="$AreaBaseSector.knownname + ': ' + {30216, 10001}"/>
+                        <return value="$AreaBaseSector.knownname + ': ' + {30216, 10001}"/>
+                      </do_any>
+                    </do_if>
+                    <do_else>
+                      <do_any>
+                        <return value="{30216, 10000}"/>
+                        <return value="{30216, 10001}"/>
+                        <return value="{30216, 10002}"/>
+                      </do_any>
+                    </do_else>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Distant_Reinforce_Defence_Construct_Description">
+                  <actions>
+                    <do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 10101}"/>
+                        <set_value name="this.$Description" exact="{30216, 10102}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 10111}"/>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 10121}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 10122}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 10201}"/>
+                        <set_value name="this.$Description" exact="{30216, 10202}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 10211}"/>
+                      <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 10221}"/>
+                    </do_elseif>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Distant_Reinforce_Defence_Construct_Reward">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="15" comment="special subscription paint"/>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="15" comment="basic terran faction paint"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_tuningsoftware, ware.modpart_shieldgeneratorcoil_t1, ware.modpart_shieldgeneratorcoil_t2].random]" weight="15" comment="modpart"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_tuningsoftware, [ware.modpart_shieldgeneratorcoil_t1, ware.modpart_shieldgeneratorcoil_t2].random]" weight="15" comment="complete mod"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_shieldgeneratorcoil_t3]" weight="5" comment="rare modpart"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_2, ware.inv_seminar_piloting_2, ware.inv_seminar_management_2].random]" weight="15"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="4"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="1"/>
+                    </do_any>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+              </cues>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Distant_Construct_Defence">
+              <cues>
+                <cue name="ATF_VS_XENON_Distant_Construct_Defence_Register">
+                  <actions>
+                    <!--Terran vs Xenon - Construct Defence-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_distant_construct_defence'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Always],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.build,
+                           $Difficulty = level.hard,
+                           $SubMissionLib = ATF_VS_XENON_Distant_Construct_Defence_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Distant_Construct_Defence_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Distant_Construct_Defence_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Distant_Construct_Defence_Construct_Reward,
+                           $MinMissions = 1,
+                           $MaxMissions = 2,
+                           $ThreadAbortRelation = -0.00064,
+                           
+                           $UseArea = true,
+                           $MaxInstances = 2]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Distant_Construct_Defence_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <set_value name="$Submissions.$build__defencestation"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Build_Station__Standard, $MissionType = missiontype.build, $Page = 30216, $TextOffset = [105100], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$build__fleet"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Get_Exact_Fleet__Standard, $MissionType = missiontype.build, $Page = 30216, $TextOffset = [120100], $Sequence = -1 ]"/>
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Distant_Construct_Defence_Construct_Name" purpose="run_actions">
+                  <params>
+                    <param name="AreaBaseSector" default="null"/>
+                  </params>
+                  <actions>
+                    <do_if value="$AreaBaseSector.exists">
+                      <do_any>
+                        <return value="$AreaBaseSector.knownname + ': ' + {30216, 11000}"/>
+                        <return value="$AreaBaseSector.knownname + ': ' + {30216, 11001}"/>
+                        <return value="$AreaBaseSector.knownname + ': ' + {30216, 11002}"/>
+                      </do_any>
+                    </do_if>
+                    <do_else>
+                      <do_any>
+                        <return value="{30216, 11000}"/>
+                        <return value="{30216, 11001}"/>
+                        <return value="{30216, 11002}"/>
+                      </do_any>
+                    </do_else>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Distant_Construct_Defence_Construct_Description">
+                  <actions>
+                    <do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 11101}"/>
+                        <set_value name="this.$Description" exact="{30216, 11102}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 11111}"/>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 11121}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 11122}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 11201}"/>
+                        <set_value name="this.$Description" exact="{30216, 11202}"/>
+                      </do_any>
+
+                      <!-- TODO Adrian: Enable once text comitted -->
+                      <!--<set_value name="this.$Description" operation="add" exact="' ' + {30216, 4211}"/>-->
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 11221}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 11222}"/>
+                      </do_any>
+                    </do_elseif>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Distant_Construct_Defence_Construct_Reward">
+                  <actions>
+                    <do_if value="true" chance="70">
+                      <!--mod(part) reward-->
+                      <do_any>
+                        <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="15" comment="special subscription paint"/>
+                        <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="15" comment="basic terran faction paint"/>
+                        <set_value name="this.$RewardObject" exact="[[ware.modpart_tuningsoftware, ware.modpart_shieldgeneratorcoil_t1, ware.modpart_shieldgeneratorcoil_t2].random]" weight="15" comment="modpart"/>
+                        <set_value name="this.$RewardObject" exact="[ware.modpart_tuningsoftware, [ware.modpart_shieldgeneratorcoil_t1, ware.modpart_shieldgeneratorcoil_t2].random]" weight="15" comment="complete mod"/>
+                        <set_value name="this.$RewardObject" exact="[ware.modpart_shieldgeneratorcoil_t3]" weight="5" comment="rare modpart"/>
+                        <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_2, ware.inv_seminar_piloting_2, ware.inv_seminar_management_2].random]" weight="15"/>
+                        <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="14"/>
+                        <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="1"/>
+                      </do_any>
+                    </do_if>
+                    <do_else>
+                      <!-- setup the ship-reward -->
+                      <set_value name="this.$RewardObject" exact="[]"/>
+                      <set_value name="$shipcargo" exact="[[0, ware.energycells]]"/>
+                      <set_value name="$Faction" exact="faction.terran"/>
+					  <set_value name="$shipmacro" exact="ship_ter_s_heavyfighter_01.macro"/>
+                      <run_actions ref="md.LIB_Generic.FindNearestStationForFaction" result="$SuitableStation">
+                        <param name="Faction" value="$Faction"/>
+                      </run_actions>
+
+                      <do_if value="$shipmacro and $SuitableStation">
+                        <generate_loadout result="$shiploadout" macro="$shipmacro" level="[0.3, 0.4, 0.5, 0.6, 0.7].random"/>
+                        <set_value name="$MaxCrewCapacity" exact="$shipmacro.people.capacity"/>
+                        <set_value name="$RewardShip" exact="table[
+                            $macro        = $shipmacro,
+                            $loadout      = $shiploadout, 
+                            $cargo        = $shipcargo, 
+                            $station      = $SuitableStation, 
+                            $pilot        = [faction.terran, [tag.pilot], [8,10].random],
+                            $bulkcrew     = [$MaxCrewCapacity, ['terran_military_crew', 'terran_freighter_crew'].random, 100], 
+                            $mods         = [ware.mod_shield_capacity_01_mk3, ware.mod_engine_travelthrust_02_mk2],
+                            $paintmod     = [ware.paintmod_0087].random,
+                        ]"/>
+                        <append_to_list name="this.$RewardObject" exact="$RewardShip"/>
+                      </do_if>
+                    </do_else>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+
+              </cues>
+            </cue>
+
+            <cue name="ATF_VS_XENON_Distant_Preemptive_Offensive">
+              <cues>
+                <cue name="ATF_VS_XENON_Distant_Preemptive_Offensive_Register">
+                  <actions>
+                    <!--Terran vs Xenon - Preemptive Offensive-->
+                    <set_value name="$ThreadID" exact="'$ATF_VS_XENON_distant_preemptive_offensive'"/>
+                    <set_value name="$Thread" exact="table[
+                           $ID = $ThreadID,
+                           $Faction = $Faction,
+                           $EnemyFaction = $EnemyFaction,
+                           $MissionGroup = $MissionGroup,
+                           $ThreadConditionLibs = [md.X4Ep1_War_Subscriptions.Situation__Always],
+                           $ThreadType = 'sequential',
+                           $MissionType = missiontype.fight,
+                           $Difficulty = level.hard,
+                           $SubMissionLib = ATF_VS_XENON_Distant_Preemptive_Offensive_Get_Submissions,
+                           $NameLib = ATF_VS_XENON_Distant_Preemptive_Offensive_Construct_Name,
+                           $DescriptionLib = ATF_VS_XENON_Distant_Preemptive_Offensive_Construct_Description,
+                           $RewardLib = ATF_VS_XENON_Distant_Preemptive_Offensive_Construct_Reward,
+                           $MinMissions = 4,
+                           $MaxMissions = 6,
+                           $ThreadAbortRelation = -0.00064,
+                           
+                           $UseArea = true,
+                           $MaxInstances = 2]"/>
+
+                    <assert value="not $ManagerCue.$ThreadDefinitions.{$ThreadID}?" text="'Thread definition ' + $ThreadID + ' already exists in this table [Owen]'"/>
+                    <set_value name="$ManagerCue.$ThreadDefinitions.{$ThreadID}" exact="$Thread"/>
+                  </actions>
+                </cue>
+
+                <!--Called from CalculateThreads. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Distant_Preemptive_Offensive_Get_Submissions">
+                  <actions>
+                    <set_value name="$Submissions" exact="table[]"/>
+                    <set_value name="$Submissions.$assassinate_non_friend"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Assassinate__Standard, $MissionType = missiontype.kill,  $Page = 30216, $TextOffset = [107200], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$destroy_rare_ship"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.DestroyRarelyOnSight__Standard,   $MissionType = missiontype.destroy, $Page = 30216, $TextOffset = [140000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$destroy_station_turrets"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.DestroyStation__Standard,   $MissionType = missiontype.destroy, $Page = 30216, $TextOffset = [180000], $Sequence = -1 ]"/>
+                    <set_value name="$Submissions.$destroy_objects_mines"
+                                 exact="table[$Cue = md.X4Ep1_War_Subscriptions.Destroy_Objects__Clear_Explosives, $MissionType = missiontype.destroy, $Page = 30216, $TextOffset = [160000, 160100], $Sequence = -1 ]"/>
+
+                    <set_value name="$New_Thread.$Submissions" exact="$Submissions"/>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Distant_Preemptive_Offensive_Construct_Name" purpose="run_actions">
+                  <params>
+                    <param name="AreaBaseSector" default="null"/>
+                  </params>
+                  <actions>
+                    <do_if value="$AreaBaseSector.exists">
+                      <do_any>
+                        <return value="$AreaBaseSector.knownname + ': ' + {30216, 12000}"/>
+                        <return value="$AreaBaseSector.knownname + ': ' + {30216, 12001}"/>
+                      </do_any>
+                    </do_if>
+                    <do_else>
+                      <do_any>
+                        <return value="{30216, 11000}"/>
+                        <return value="{30216, 11001}"/>
+                      </do_any>
+                    </do_else>
+                  </actions>
+                </library>
+
+                <!--Called from CalculateThreads where several values are set to help decide the briefing text. Result saved to $New_Thread. Namespace is not this parent.-->
+                <library name="ATF_VS_XENON_Distant_Preemptive_Offensive_Construct_Description">
+                  <actions>
+                    <do_if value="$ThreadMood == 'negative'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 12101}"/>
+                        <set_value name="this.$Description" exact="{30216, 12102}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 12111}"/>
+
+                      <do_any>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 12121}"/>
+                        <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 12122}"/>
+                      </do_any>
+                    </do_if>
+                    <do_elseif value="$ThreadMood == 'positive'">
+                      <do_any>
+                        <set_value name="this.$Description" exact="{30216, 12201}"/>
+                        <set_value name="this.$Description" exact="{30216, 12202}"/>
+                      </do_any>
+
+                      <set_value name="this.$Description" operation="add" exact="' ' + {30216, 12211}"/>
+                      <set_value name="this.$Description" operation="add" exact="'\n' + {30216, 12221}"/>
+                    </do_elseif>
+                  </actions>
+                </library>
+
+                <library name="ATF_VS_XENON_Distant_Preemptive_Offensive_Construct_Reward">
+                  <actions>
+                    <do_any>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0115]" weight="15" comment="special subscription paint"/>
+                      <set_value name="this.$RewardObject" exact="[ware.paintmod_0117]" weight="15" comment="basic terran faction paint"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.modpart_highenergycatalyst, ware.modpart_tuningsoftware, ware.modpart_weaponchamber_t1, ware.modpart_weaponchamber_t2].random]" weight="15" comment="modpart"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_highenergycatalyst, ware.modpart_tuningsoftware, [ware.modpart_weaponchamber_t1, ware.modpart_weaponchamber_t2].random]" weight="15" comment="complete mod"/>
+                      <set_value name="this.$RewardObject" exact="[ware.modpart_weaponchamber_t3]" weight="5" comment="rare modpart"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_2, ware.inv_seminar_piloting_2, ware.inv_seminar_management_2].random]" weight="15"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_3, ware.inv_seminar_piloting_3, ware.inv_seminar_management_3].random]" weight="4"/>
+                      <set_value name="this.$RewardObject" exact="[[ware.inv_seminar_piloting_4, ware.inv_seminar_management_4].random]" weight="1"/>
+                    </do_any>
+                    <run_actions ref="md.LIB_Generic.GenerateRewardText" result="this.$RewardText">
+                      <param name="RewardObject" value="this.$RewardObject"/>
+                    </run_actions>
+                  </actions>
+                </library>
+
+              </cues>
+            </cue>
+
+          </cues>
+        </cue>
+
+      </cues>
+    </cue>
+
+  </cues>
+</mdscript>

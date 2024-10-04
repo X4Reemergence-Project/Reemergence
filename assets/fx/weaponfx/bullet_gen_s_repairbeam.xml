@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<components>
+	<component name="bullet_gen_s_repairbeam" class="bullet">
+		<source geometry="assets\fx\weaponFx\bullet_spacesuit_repairlaser_01_mk1_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="104" g="127" b="143" range="7.899999" shadowrange="7.899999" lighteffect="1" trigger="1" intensity="3" specularintensity="1">
+						<lightanimations/>
+						<offset/>
+					</omni>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="bullet">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part animation textureanimation  ">
+				<offset>
+					<position x="0" y="-1.221053E-08" z="0"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="1" end="10"/>
+				</animations>
+				<parts>
+					<part name="anim_beam_core">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.bullets_fx_master"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="8.124802E-02" y="6.801439E-02" z="1.0010697"/>
+							<center x="0" y="1.034659E-09" z="0.5010697"/>
+						</size>
+						<size_raw>
+							<max x="8.124802E-02" y="6.801439E-02" z="1.0010697"/>
+							<center x="-1.862645E-09" y="1.034659E-09" z="0.5010697"/>
+						</size_raw>
+						<pivot>
+							<offset>
+								<position x="6.983609E-02" y="0" z="0"/>
+							</offset>
+						</pivot>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="1" value="-0"/>
+									<key frame="15" value="-1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="connection_laser01" tags="laser">
+				<offset>
+					<position x="7.335663E-03" y="0" z="6.603815E-03"/>
+				</offset>
+			</connection>
+		</connections>
+	</component>
+</components>

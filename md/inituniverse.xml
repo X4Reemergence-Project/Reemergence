@@ -2,7 +2,7 @@
 <diff>
   <add sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='$tradestation?']" pos="after">
 	<!-- do not set $tradestation to true so no redundant tradewares are not added -->
-	<do_elseif value="$controllable.godentry == 'asc_hq_cluster_REM37'" comment="Queen's Harbour">
+	<do_elseif value="$controllable.godentry == 'asc_hq_cluster_REM37_001'" comment="Queen's Harbour">
 	  <!-- common wares -->
 	  <add_tradeware object="$controllable" ware="ware.medicalsupplies" allowbuy="true" allowsell="true" lockavgprice="true" />
 	  <add_tradeware object="$controllable" ware="ware.water" allowbuy="true" allowsell="true" lockavgprice="true" />
@@ -25,8 +25,9 @@
 	  <add_tradeware object="$controllable" ware="ware.turretcomponents" allowbuy="true" allowsell="true" lockavgprice="true" />
 	  <add_tradeware object="$controllable" ware="ware.weaponcomponents" allowbuy="true" allowsell="true" lockavgprice="true" />
 	</do_elseif>
-
-	<do_elseif value="$controllable.godentry == 'asc_trade_REM35_001'" comment="Blue Horizon I">
+	
+	<!-- do not set $tradestation to true so no redundant tradewares are not added -->	
+	<do_elseif value="$controllable.godentry == 'asc_trade_REM35_002'" comment="Blue Horizon I">
 	  <!-- special wares -->
 	  <add_tradeware object="$controllable" ware="ware.antimattercells" allowbuy="true" allowsell="true" lockavgprice="true" />
 	  <add_tradeware object="$controllable" ware="ware.graphene" allowbuy="true" allowsell="true" lockavgprice="true" />

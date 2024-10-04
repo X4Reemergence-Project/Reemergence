@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+  <add sel="//macro[@name='Cluster_407_macro']/connections">
+	<connection name="C407S01_RegionRE1_connection" ref="regions">
+	  <offset>
+		<position x="-40000" y="-10000" z="135000"/>
+	  </offset>
+	  <macro name="C407S01_RegionRE1_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_methane_field"/>
+		</properties>
+	  </macro>
+	</connection>
+	<connection name="C407S01_RegionRE2_connection" ref="regions">
+	  <offset>
+		<position x="10000" y="5000" z="160000"/>
+	  </offset>
+	  <macro name="C407S01_RegionRE2_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_methane_field"/>
+		</properties>
+	  </macro>
+	</connection>	
+	<connection name="C407S01_RegionRE3_connection" ref="regions">
+	  <offset>
+		<position x="35000" y="-15000" z="100000"/>
+	  </offset>
+	  <macro name="C407S01_RegionRE3_macro">
+		<component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="helium_rich_field"/>
+		</properties>
+	  </macro>
+	</connection>
+  </add>
+  <add sel="//macro[@name='Cluster_408_macro']/connections">
+	<connection name="C408S01_RegionRE1_connection" ref="regions">
+	  <offset>
+		<position x="45000" y="-5000" z="15000"/>
+	  </offset>
+	  <macro name="C408S01_RegionRE1_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_hydrogen_field"/>
+		</properties>
+	  </macro>
+	</connection>
+	<connection name="C408S01_RegionRE2_connection" ref="regions">
+	  <offset>
+		<position x="75000" y="0" z="-10000"/>
+	  </offset>
+	  <macro name="C408S01_RegionRE2_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_hydrogen_field"/>
+		</properties>
+	  </macro>
+	</connection>	
+  </add>  
+</diff>

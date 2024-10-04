@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff>
   <add sel="//cue[@name='Boron_Gates_Open_KingdomEnd']/actions">
-	<find_sector macro="macro.Cluster_50_Sector001_macro" space="player.galaxy" required="true" name="$TurqoiseSeaIXSector" />
-	<find_sector macro="macro.Cluster_424_Sector001_macro" space="player.galaxy" extension="'ego_dlc_split'" required="true" name="$EmperorsPrideSector" />
-	<find_sector macro="macro.Cluster_REM13_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$DarkWatersSector" />
-	<find_sector macro="macro.Cluster_REM15_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$DepthsofSilenceSector" />	
-	<find_sector macro="macro.Cluster_REM17_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ShiningCurrentsSector" />
+	<find_sector macro="macro.Cluster_424_Sector001_macro" space="player.galaxy" extension="'ego_dlc_split'" required="true" name="$EmperorsPrideSector" />	
+	<find_sector macro="macro.Cluster_REM17_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ShiningCurrentsSector" />	
 	<find_sector macro="macro.Cluster_REM19_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ReservoirofTranquilitySector" />
 	<find_sector macro="macro.Cluster_REM23_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$UnholyDescentSector" />
 	<find_sector macro="macro.Cluster_REM25_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ClaritysEndSector" />		
@@ -17,10 +14,10 @@
 	<find_sector macro="macro.Cluster_REM36_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$GreatTrenchSector" />		
 	<find_sector macro="macro.Cluster_REM37_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$QueensHarbourSector" />	
 	<find_sector macro="macro.Cluster_REM38_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$QueensRetributionSector" />
-	<find_sector macro="macro.Cluster_REM39_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$Matrix472DSector" />	
-	<find_sector macro="macro.Cluster_REM41_Sector002_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ShadowsofGiantsVIISector" />		
+	<find_sector macro="macro.Cluster_REM39_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$Matrix472DSector" />
+	<find_sector macro="macro.Cluster_REM40_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$AdventuresPromiseSector" />		
 	<find_sector macro="macro.Cluster_REM68_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$KhaakBetaSector" />	
-	<find_sector macro="macro.Cluster_Mod_FarnhamLegend_Rev_01_Sector001_macro" space="player.galaxy" extension="'ws_2971583324'" required="false" name="$FarnhamSector" />	
+	<find_sector macro="macro.Cluster_REM81_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$TheHoleSector" />	
 	
 		
 		<!-- Watchful Gaze <-> Emperor's Pride -->
@@ -53,12 +50,12 @@
 		</do_for_each>
 		<remove_value name="$SancturaryofDarknessGates" />		
 
-		<!-- Atreus' Clouds <-> Farnham's Legend -->
+		<!-- Atreus' Clouds <-> The Hole -->
 		<find_gate name="$AtreusCloudGates" multiple="true" space="$AtreusCloudSector" active="false" />
 		<do_for_each name="$g" in="$AtreusCloudGates">
-		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $FarnhamSector)">
-		<set_value name="$FarnhamsLegend_AtreusCloudGate" exact="$g.exit" />
-		<set_value name="$AtreusCloud_FarnhamsLegendGate" exact="$g" />
+		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $TheHoleSector)">
+		<set_value name="$TheHole_AtreusCloudGate" exact="$g.exit" />
+		<set_value name="$AtreusCloud_TheHoleGate" exact="$g" />
 		</do_if>
 		</do_for_each>
 		<remove_value name="$AtreusCloudGates" />
@@ -72,17 +69,7 @@
 		</do_if>
 		</do_for_each>
 		<remove_value name="$MenelausOasisGates" />			
-				
-		<!-- Dark Waters <-> Depths of Silence -->
-		<find_gate name="$DarkWatersGates" multiple="true" space="$DarkWatersSector" active="false" />
-		<do_for_each name="$g" in="$DarkWatersGates">
-		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $DepthsofSilenceSector)">
-		<set_value name="$DepthsofSilence_DarkWatersGate" exact="$g.exit" />
-		<set_value name="$DarkWaters_DepthsofSilenceGate" exact="$g" />
-		</do_if>
-		</do_for_each>
-		<remove_value name="$DarkWatersGates" />
-
+		
 		<!-- Unholy Descent <-> Family Than -->
 		<find_gate name="$UnholyDescentGates" multiple="true" space="$UnholyDescentSector" active="false" />
 		<do_for_each name="$g" in="$UnholyDescentGates">
@@ -113,7 +100,7 @@
 		</do_for_each>
 		<remove_value name="$TheShallowsGates" />
 		
-		<!-- Queen's Harbour <-> Sacred Relic -->
+		<!-- Queen's Harbour <-> Clarity's End -->
 		<find_gate name="$QueensHarbourGates" multiple="true" space="$QueensHarbourSector" active="false" />
 		<do_for_each name="$g" in="$QueensHarbourGates">
 		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $ClaritysEndSector)">
@@ -152,19 +139,19 @@
 		</do_if>
 		</do_for_each>
 		<remove_value name="$Matrix472DGates" />
-
-		<!-- Shadows of Giants VII <-> Turquoise Sea IX -->
-		<find_gate name="$ShadowsofGiantsVIIGates" multiple="true" space="$ShadowsofGiantsVIISector" active="false" />
-		<do_for_each name="$g" in="$ShadowsofGiantsVIIGates">
-		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $TurqoiseSeaIXSector)">
-		<set_value name="$TurquoiseSeaIX_ShadowsofGiantsVIIGate" exact="$g.exit" />
-		<set_value name="$ShadowsofGiantsVII_TurquoiseSeaIXGate" exact="$g" />
+		
+		<!-- Adventure's Promise <-> Great Trench -->
+		<find_gate name="$AdventuresPromiseGates" multiple="true" space="$AdventuresPromiseSector" active="false" />
+		<do_for_each name="$g" in="$AdventuresPromiseGates">
+		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $GreatTrenchSector)">
+		<set_value name="$GreatTrench_AdventuresPromiseGate" exact="$g.exit" />
+		<set_value name="$AdventuresPromise_GreatTrenchGate" exact="$g" />
 		</do_if>
 		</do_for_each>
-		<remove_value name="$ShadowsofGiantsVIIGates" />		
+		<remove_value name="$AdventuresPromiseGates" />		
 		
-	<set_object_active object="$WatchfulGaze_EmperorsPrideGate" />
-	<set_object_active object="$DarkWaters_DepthsofSilenceGate" />			
+		
+	<set_object_active object="$WatchfulGaze_EmperorsPrideGate" />		
 	<set_object_active object="$MenelausOasis_ReservoirofTranquilityGate" />	
 	<set_object_active object="$SancturaryofDarkness_ShinningCurrentsGate" />	
 	<set_object_active object="$SancturaryofDarkness_KhaakBetaGate" />	
@@ -174,9 +161,9 @@
 	<set_object_active object="$QueensHarbour_ClaritysEndGate" />	
 	<set_object_active object="$BlueHorizon_GreatTrenchGate" />
 	<set_object_active object="$Matrix472D_ThynsAbyssGate" />		
-	<set_object_active object="$Matrix472D_GreatTrenchGate" />	
-	<set_object_active object="$ShadowsofGiantsVII_TurquoiseSeaIXGate" />
-	<set_object_active object="$AtreusCloud_FarnhamsLegendGate" />	
+	<set_object_active object="$Matrix472D_GreatTrenchGate" />
+	<set_object_active object="$AdventuresPromise_GreatTrenchGate" />	
+	<set_object_active object="$AtreusCloud_TheHoleGate" />	
   </add>
   <remove sel="/mdscript/cues/cue[@name='BoronFaction_States']/cues/cue[@name='Boron_Gates_Open_KingdomEnd']/actions/set_space_faction_logic_allowed"/>
 </diff>

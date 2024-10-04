@@ -1,63 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff>
-<!-- 
-CAPITAL: <area sunlight="1" economy="1" security="1" />
-ADVANCED: <area sunlight="1" economy="0.75" security="0.8" />
-INTERIOR: <area sunlight="1" economy="0.6" security="0.6" />
-BORDER: <area sunlight="1" economy="0.4" security="0.4" />
-NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
--->
 	<add sel="/defaults">	
 		<!-- Sol -->
 		<dataset macro="Cluster_REM00_macro">
 		  <properties>
 			<identification name="{20003,1160001}" description="{20003,1160002}" system="100"  image="enc_cluster116"/>
-			<area sunlight="0.02" economy="0.25" security="0.25" god="false"/>
+			<area sunlight="0.01" economy="1" security="0.25" god="false" tags="reterran" />			
 		  </properties>
 		 </dataset>
-		<!--Sector REM00 - Planet 9-->
+		<!--Cluster REM00 - Planet 9-->
 		<dataset macro="Cluster_REM00_Sector001_macro">
 		  <properties>
-			<identification name="{19530001,01}" description="{19530001,02}" />
-			  <sounds>
-				<music ref="music_dlc_terran_soundtrack_oort_cloud" />
-			  </sounds>
+			<identification name="{4837254,10}" description="{4837254,11}" />
+			<sounds>
+			  <music ref="music_dlc_terran_soundtrack_oort_cloud" />
+			</sounds>
+			<worlds>
+			  <world part="GravitationalLens01"/>		  
+			</worlds>			  
 		  </properties>
 		</dataset>
 		 
-		<!-- Sol -->
+		<!--Cluster REM01 - Matrix #23-->
 		<dataset macro="Cluster_REM01_macro">
 		  <properties>
-			<identification name="{19530001,03}" description="{19530001,04}" system="100"  image="enc_cluster116"/>
-			<area sunlight="0.01" economy="0.25" security="0.25" tags="mccallum" />
-		  </properties>
-		 </dataset>
-		<!--Sector REM01 - McCallum Relay-->
-		<dataset macro="Cluster_REM01_Sector001_macro">
-		  <properties>
-			<identification name="{19530001,03}" description="{19530001,04}" />
-			  <sounds>
-				<music ref="music_soundtrack_xenon" />
-			  </sounds>
+			<identification name="{4837254,20}" description="{4837254,21}" image="enc_rem01"/>
+			<sounds>	<music ref="music_dlc_terran_soundtrack_yaki" />	</sounds>
+			<area sunlight="1.89" economy="1" security="0.25" tags="matrix23" />
+			<system>
+			  <space environment="{1042,12041}(Asteroids)"/>
+			  <suns>
+				<sun class="{1042,13121}(Blue Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,20} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15101}(Barren)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,16061}(Xenon Structures)" part="planet001">
+				  <moons>
+					<moon name="{4837254,20} {20403,101}(a) {20402,1}(I)" geology="{1042,15031}(Volcanic)" atmosphere="{1042,11091}(Sulphur Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="part_lava_planet"/>
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>	
 		  </properties>
 		</dataset>
+		<dataset macro="Cluster_REM01_Sector001_macro">
+		  <properties>
+		    <identification name="{4837254,20}" description="{4837254,21}" />
+		    <worlds>
+			  <world part="planet001"/>		  
+		    </worlds>		  
+		  </properties>
+		</dataset>		
 
 		<!-- Sol -->
 		<dataset macro="Cluster_REM02_macro">
 		  <properties>
 			<identification name="{20003,1010001}" description="{20003,1010002}" system="100"  image="enc_cluster101"/>
-			<area sunlight="0.55" economy="1" security="0.75" god="false"/>
+			<area sunlight="0.55" economy="1" security="0.75" god="false" tags="reterran" />
 		  </properties>
 		 </dataset>
-		<!--Sector REM02 - Ares-->
+		<!--Cluster REM02 - Mars 2-->
 	    <dataset macro="Cluster_REM02_Sector001_macro">
 		  <properties>
-		    <identification name="{19530001,05}" description="{19530001,06}" />		
+		    <identification name="{4837254,30}" description="{4837254,31}" />		
 		    <sounds>
 			  <music ref="music_dlc_terran_soundtrack_mars" />
 		    </sounds>
 		    <worlds>
-			  <world part="part_mars"/>
+			  <world part="part_mars" factor="0.15"/>
 		    </worlds>
 		    <access licence="outercore_access"/>
 		  </properties>
@@ -67,1035 +76,2392 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		<dataset macro="Cluster_REM03_macro">
 		  <properties>
 			<identification name="{20003,1060001}" description="{20003,1060002}" system="100"  image="enc_cluster106"/>
-			<area sunlight="6.8" economy="1" security="0.5" god="false"/>
+			<area sunlight="6.8" economy="1" security="0.75" god="false" tags="reterran" />
 		  </properties>
 		 </dataset>
-		<!--Sector REM03 - Hermes-->
+		<!--Cluster REM03 - Mercury 2-->
 	    <dataset macro="Cluster_REM03_Sector001_macro">
 		  <properties>
-		    <identification name="{19530001,07}" description="{19530001,08}" />
+		    <identification name="{4837254,40}" description="{4837254,41}" />
 		    <sounds>
 			  <music ref="music_dlc_terran_soundtrack_terran_core" />
 		    </sounds>
 		    <worlds>
-			  <world part="part_mercury"/>
+			  <world part="part_mercury" factor="0.15"/>
 		    </worlds>
 		    <access licence="outercore_access"/>
 		  </properties>
 	    </dataset>
 	
-		<!--Sector REM04 - Althes-->
+		<!--Cluster REM04 - Althes-->
 		<dataset macro="Cluster_REM04_macro">
-			<properties>
-				<identification name="{20005,7005}" description="{19530001,10}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_terran_soundtrack_brennans_triumph" />	</sounds>
-				<area sunlight="0.87" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,50}" description="{4837254,51}" image="enc_rem04"/>
+			<sounds>	<music ref="music_dlc_terran_soundtrack_brennans_triumph" />	</sounds>
+			<area sunlight="2.19" economy="1" security="0" tags="reterran" />
+			<system>
+			  <space environment="{1042,12021}(Thin Nebula)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>
+			  </suns>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM04_Sector001_macro">	<properties>	<identification name="{20005,7005}" description="{19530001,10}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM04_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,50}" description="{4837254,51}" />			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM05 - Megnir-->
+		<!--Cluster REM05 - Megnir-->
 		<dataset macro="Cluster_REM05_macro">
-			<properties>
-				<identification name="{20005,7006}" description="{19530001,12}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_terran_soundtrack_pioneers" />	</sounds>
-				<area sunlight="2.19" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,60}" description="{4837254,61}" image="enc_rem05"/>
+			<sounds>	<music ref="music_dlc_terran_soundtrack_pioneers" />	</sounds>
+			<area sunlight="0.87" economy="1" security="0.5" tags="repio" />
+			<system>
+			  <space environment="{1042,12041}(Asteroids)"/>
+			  <suns>
+				<sun class="{1042,13091}(Yellow Giant)"/>
+				<sun class="{1042,13011}(Red Dwarf)"/>				
+			  </suns>
+			  <planets>
+				<planet name="{4837254,60} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15031}(Volcanic)" atmosphere="{1042,11091}(Sulphur Dioxide)" population="{1042,10021}" maxpopulation="17563331" settlements="{1042,16101}(Small Settlements)" part="part_oof_planet">
+				  <moons>
+					<moon name="{4837254,60} {20403,101}(a) {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,10021}" maxpopulation="70253327" settlements="{1042,16041}(Multiple Cities)" part="Sphere002"/>
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM05_Sector001_macro">	<properties>	<identification name="{20005,7006}" description="{19530001,12}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM05_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,60}" description="{4837254,61}" />
+		    <worlds>
+			  <world part="part_oof_planet" />
+			  <world part="Sphere002" />			  
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM06 - Matrix #48-->
+		<!--Cluster REM06 - Matrix #48-->
 		<dataset macro="Cluster_REM06_macro">
-			<properties>
-				<identification name="{19530001,13}" description="{19530001,14}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_terran_soundtrack_yaki" />	</sounds>
-				<area sunlight="2.51" economy="1" security="0.25" tags="matrix48" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,70}" description="{4837254,71}" image="enc_rem06"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
+			<area sunlight="0.86" economy="1" security="0.25" tags="matrix48" />
+			<system>
+			  <space environment="{1042,12041}(Asteroids)"/>
+			  <suns>
+				<sun class="{1042,13091}(Yellow Giant)"/>
+				<sun class="{1042,13011}(Red Dwarf)"/>				
+			  </suns>
+			  <planets>
+				<planet name="{4837254,70} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15011}(Tundra)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,16011}(Uninhabited)" settlements="{1042,16061}(Xenon Structures)" part="planet001c"/>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM06_Sector001_macro">	<properties>	<identification name="{19530001,13}" description="{19530001,14}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM06_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,70}" description="{4837254,71}" />
+		    <worlds>
+			  <world part="planet001c" />		  
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM07 - Matrix #79A-->
+		<!--Cluster REM07 - Matrix #79A-->
 		<dataset macro="Cluster_REM07_macro">
-			<properties>
-				<identification name="{19530001,15}" description="{19530001,16}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
-				<area sunlight="2.11" economy="1" security="0.5" tags="matrix79a" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,80}" description="{4837254,81}" image="enc_cluster33"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
+			<area sunlight="2.11" economy="1" security="0.5" tags="matrix79a" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13091}(Yellow Giant)"/>
+			  </suns>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM07_Sector001_macro">	<properties>	<identification name="{19530001,15}" description="{19530001,16}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM07_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,80}" description="{4837254,81}" />						
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM08 - Power Circle Cluster-->
+		<!--Cluster REM08 - Power Circle-->
 		<dataset macro="Cluster_REM08_macro">
-			<properties>
-				<identification name="{20005,1041}" description="{19530001,18}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_argon" />	</sounds>
-			</properties>
+		  <properties>
+			<identification name="{4837254,90}" description="{4837254,91}" image="enc_rem08"/>
+			<sounds>	<music ref="music_soundtrack_argon" />	</sounds>
+			<system>
+			  <space environment="{1042,12041}(Asteroids)"/>
+			  <suns>
+				<sun class="{1042,13041}(White Dwarf)"/>			
+			  </suns>
+			  <planets>
+				<planet name="Shipfall" class="{1042,14031}(Terrestrial)" geology="{1042,15031}(Volcanic)" atmosphere="{1042,11091}(Sulphur Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="planet001b">
+				  <moons>
+					<moon name="{4837254,90} {20403,101}(a) {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,10021}" maxpopulation="18586749" settlements="{1042,16101}(Small Settlements)" part="Sphere003"/>
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>		
-			<!--Power Circle III-->
-			<dataset macro="Cluster_REM08_Sector001_macro">
-				<properties>
-					<identification name="{19530001,21}" description="{19530001,22}" />
-					<area sunlight="0.72" economy="1" security="0.25" />
-				</properties>
-			</dataset>			
 			<!--Power Circle I-->
+			<dataset macro="Cluster_REM08_Sector001_macro">
+			  <properties>
+				<identification name="{4837254,100}" description="{4837254,101}" />
+				<area sunlight="0.72" economy="1" security="0.25" />
+				<worlds>
+				  <world part="planet001b"/>		  
+				</worlds>				
+			  </properties>
+			</dataset>			
+			<!--Power Circle V-->
 			<dataset macro="Cluster_REM08_Sector002_macro">
-				<properties>
-					<identification name="{19530001,19}" description="{19530001,20}" />
-					<area sunlight="1.27" economy="1" security="0.25" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,110}" description="{4837254,111}" />
+				<area sunlight="1.27" economy="1" security="0.25" />
+				<worlds>
+				  <world part="Sphere003"/>		  
+				</worlds>				
+			  </properties>
 			</dataset>				
 		
-		<!--Sector REM09 - Teladi Gain-->
+		<!--Cluster REM09 - Teladi Gain-->
 		<dataset macro="Cluster_REM09_macro">
-			<properties>
-				<identification name="{20005,6012}" description="{19530001,24}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_teladi" />	</sounds>
-				<area sunlight="1.17" economy="1" security="0.45"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,120}" description="{4837254,121}" image="enc_rem09"/>
+			<sounds>	<music ref="music_soundtrack_teladi" />	</sounds>
+			<area sunlight="1.17" economy="1" security="0.45"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>			
+			  </suns>
+			  <planets>
+				<planet name="{4837254,120} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15121}(Swamp)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="139488597" settlements="{1042,16041}(Multiple Cities)" part="planet">
+				  <moons>
+					<moon name="{4837254,120} {20403,101}(a) {20402,1}(I)" geology="{1042,15081}(Ice)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="moon"/>
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM09_Sector001_macro">	<properties>	<identification name="{20005,6012}" description="{19530001,24}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM09_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,120}" description="{4837254,121}" />
+		    <worlds>
+			  <world part="planet" />		  
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM10 - Herron's Nebula-->
+		<!--Cluster REM10 - Herron's Nebula-->
 		<dataset macro="Cluster_REM10_macro">
-			<properties>
-				<identification name="{20005,1032}" description="{19530001,26}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
-				<area sunlight="1.03" economy="1" security="0.75"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,130}" description="{4837254,131}" image="enc_rem10"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
+			<area sunlight="0.83" economy="1" security="0.75"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,130} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15131}(Forest)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="752414414" settlements="{1042,16051}(Densely Populated)" part="planet1">
+				  <moons>
+					<moon name="{4837254,130} {20403,101}(a) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,11061}(Methane/Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>
+					<moon name="{4837254,130} {20403,101}(a) {20402,2}(II)" geology="{1042,15101}(Barren)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere004"/>					
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM10_Sector001_macro">	<properties>	<identification name="{20005,1032}" description="{19530001,26}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM10_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,130}" description="{4837254,131}" />
+			<worlds>
+			  <world part="planet1"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM11 - Tempting Fumes-->
+		<!--Cluster REM11 - Three Worlds-->
 		<dataset macro="Cluster_REM11_macro">
-			<properties>
-				<identification name="{20005,9041}" description="{19530001,28}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.84" economy="1" security="0.75" tags="pirborder"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,140}" description="{4837254,141}" image="enc_rem11"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13121}(Blue Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,140} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="96069541" settlements="{1042,16041}(Multiple Cities)" part="planet1">
+				  <moons>
+					<moon name="{4837254,140} {20403,101}(a) {20402,1}(I)" geology="{1042,15061}(Canyons)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="moon1"/>
+				  </moons>
+				</planet>
+				<planet name="{4837254,140} {20403,102}(b)" class="{1042,14101}(Earth Analog)" geology="{1042,15131}(Forest)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="121688085" settlements="{1042,16041}(Multiple Cities)" part="planet2">
+				  <moons>
+					<moon name="{4837254,140} {20403,102}(b) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,11021}(Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="moon2"/>
+				  </moons>
+				</planet>
+				<planet name="{4837254,140} {20403,103}(c)" class="{1042,14101}(Earth Analog)" geology="{1042,15131}(Forest)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="102474177" settlements="{1042,16041}(Multiple Cities)" part="planet3"/>					
+			  </planets>
+			</system>
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM11_Sector001_macro">	<properties>	<identification name="{20005,9041}" description="{19530001,28}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM11_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,140}" description="{4837254,141}" />
+			<area sunlight="0.84" economy="1" security="0.75" tags="reantigone" />
+			<worlds>
+			  <world part="planet1"/>
+			  <world part="planet2"/>
+			  <world part="planet3"/>			  
+			</worlds>
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM12 - Split Fire-->
+		<!--Cluster REM12 - Split Fire-->
 		<dataset macro="Cluster_REM12_macro">
-			<properties>
-				<identification name="{20005,5029}" description="{19530001,30}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
-				<area sunlight="2.13" economy="1" security="0.25" tags="splitfire" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,150}" description="{4837254,30}" image="enc_rem12"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
+			<area sunlight="2.13" economy="1" security="0.25" tags="splitfire" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13041}(White Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,150} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11101}(Nitrogen/Hydrogen)" population="{1042,10011}(None)" settlements="{1042,16061}(Xenon Structures)" part="part_earthlike" />					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM12_Sector001_macro">	<properties>	<identification name="{20005,5029}" description="{19530001,30}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM12_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,150}" description="{4837254,151}" />
+			<worlds>
+			  <world part="part_earthlike"/>		  
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM13 - Dark Waters-->
+		<!--Cluster REM13 - Dark Waters-->
 		<dataset macro="Cluster_REM13_macro">
-			<properties>
-				<identification name="{20005,2004}" description="{19530001,32}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
-				<area sunlight="0.79" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,160}" description="{4837254,161}" image="enc_rem13"/>
+			<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
+			<area sunlight="0.79" economy="1" security="0.5"/>
+			<system>
+			  <space environment="{1042,12021}(Thin Nebula)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,160} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11031}(Oxygen)" population="{1042,10011}(None)" settlements="{1042,10011}(None)" part="part_earthlike" >
+				  <moons>
+					<moon name="{4837254,160} {20403,101}(a) {20402,1}(I)" geology="{1042,15101}(Barren)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" />
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM13_Sector001_macro">	<properties>	<identification name="{20005,2004}" description="{19530001,32}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM13_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,160}" description="{4837254,161}" />
+			<worlds>
+			  <world part="part_earthlike"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM14 - Mists of Elysium-->
+		<!--Cluster REM14 - Mists of Elysium-->
 		<dataset macro="Cluster_REM14_macro">
-			<properties>
-				<identification name="{20005,2015}" description="{19530001,34}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_boron_soundtrack_inner_bubble" />	</sounds>
-				<area sunlight="1.62" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,170}" description="{4837254,171}" image="enc_rem14"/>
+			<sounds>	<music ref="music_dlc_boron_soundtrack_inner_bubble" />	</sounds>
+			<area sunlight="1.62" economy="1" security="0.5"/>
+			<system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+				<sun class="{1042,13081}(Red Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,170} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15121}(Swamp)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10011}(None)" settlements="{1042,10011}(None)" part="part_earthlike001" >
+				  <moons>
+					<moon name="{4837254,170} {20403,101}(a) {20402,1}(I)" geology="{1042,15101}(Barren)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" />
+					<moon name="{4837254,170} {20403,101}(a) {20402,2}(II)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,11021}(Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" />
+					<moon name="{4837254,170} {20403,101}(a) {20402,3}(III)" geology="{1042,15061}(Canyons)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" />
+					<moon name="{4837254,170} {20403,101}(a) {20402,4}(IV)" geology="{1042,15031}(Volcanic)" atmosphere="{1042,11091}(Sulphur Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" />					
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM14_Sector001_macro">	<properties>	<identification name="{20005,2015}" description="{19530001,34}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM14_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,170}" description="{4837254,171}" />
+			<worlds>
+			  <world part="part_earthlike001"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM15 - Depths of Silence-->
+		<!--Cluster REM15 - Depths of Silence-->
 		<dataset macro="Cluster_REM15_macro">
-			<properties>
-				<identification name="{20005,2005}" description="{19530001,36}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
-				<area sunlight="1.21" economy="1" security="0.75" tags="khaak" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,180}" description="{4837254,181}" image="enc_rem15"/>
+			<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
+			<area sunlight="1.21" economy="1" security="0.75" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,180} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15011}(Tundra)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10011}(None)" settlements="{1042,10011}(None)" part="planet001c" />				
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM15_Sector001_macro">	<properties>	<identification name="{20005,2005}" description="{19530001,36}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM15_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,180}" description="{4837254,181}" />
+			<worlds>
+			  <world part="planet001c"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM16 - Light Water-->
+		<!--Cluster REM16 - Light Water-->
 		<dataset macro="Cluster_REM16_macro">
-			<properties>
-				<identification name="{20005,2010}" description="{19530001,38}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
-				<area sunlight="0.42" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,190}" description="{4837254,191}" image="enc_rem16"/>
+			<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
+			<area sunlight="0.42" economy="1" security="1"/>
+			<system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,190} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="20067414" settlements="{4837255,9}(Orbital Cities)" part="sphere001" />				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM16_Sector001_macro">	<properties>	<identification name="{20005,2010}" description="{19530001,38}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM16_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,190}" description="{4837254,191}" />
+			<worlds>
+			  <world part="sphere001"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM17 - Shining Currents-->
+		<!--Cluster REM17 - Shining Currents-->
 		<dataset macro="Cluster_REM17_macro">
-			<properties>
-				<identification name="{20005,2025}" description="{19530001,40}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_boron_soundtrack_outer_bubble" />	</sounds>
-				<area sunlight="1.01" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,200}" description="{4837254,201}" image="enc_rem17"/>
+			<sounds>	<music ref="music_dlc_boron_soundtrack_outer_bubble" />	</sounds>
+			<area sunlight="1.01" economy="1" security="1"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,200} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15121}(Swamp)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10011}(None)" settlements="{1042,10011}(None)" part="planet" >
+				  <moons>
+					<moon name="{4837254,200} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" />
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM17_Sector001_macro">	<properties>	<identification name="{20005,2025}" description="{19530001,40}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM17_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,200}" description="{4837254,201}" />
+			<worlds>
+			  <world part="planet"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM18 - Shore of Infinity-->
+		<!--Cluster REM18 - Shore of Infinity-->
 		<dataset macro="Cluster_REM18_macro">
-			<properties>
-				<identification name="{20005,2026}" description="{19530001,42}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_boron_soundtrack_kingdom_end" />	</sounds>
-				<area sunlight="0.94" economy="1" security="0.25" tags="lostboron" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,210}" description="{4837254,211}" image="enc_rem18"/>
+			<sounds>	<music ref="music_dlc_boron_soundtrack_kingdom_end" />	</sounds>
+			<area sunlight="0.94" economy="1" security="0.25" tags="lostboron" />
+			<system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,210} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="17002112" settlements="{1042,16101}(Small Settlements)" part="Sphere001" >
+				  <moons>
+					<moon name="{4837254,210} {20403,101}(a) {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" />
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM18_Sector001_macro">	<properties>	<identification name="{20005,2026}" description="{19530001,42}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM18_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,210}" description="{4837254,211}" />
+			<worlds>
+			  <world part="Sphere001"/>		  
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM19 - Reservoir of Tranquillity-->
+		<!--Cluster REM19 - Reservoir of Tranquillity-->
 		<dataset macro="Cluster_REM19_macro">
-			<properties>
-				<identification name="{20005,2020}" description="{19530001,44}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.62" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,220}" description="{4837254,221}" image="enc_rem19"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="0.62" economy="1" security="1"/>
+			<system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+				<sun class="{1042,13081}(Red Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,220} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15011}(Tundra)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="10438126" settlements="{1042,16101}(Small Settlements)" part="planet001c" />					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM19_Sector001_macro">	<properties>	<identification name="{20005,2020}" description="{19530001,44}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM19_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,220}" description="{4837254,221}" />
+			<worlds>
+			  <world part="planet001c"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM20 - Duke's Domain-->
+		<!--Cluster REM20 - Duke's Domain-->
 		<dataset macro="Cluster_REM20_macro">
-			<properties>
-				<identification name="{20005,3026}" description="{19530001,46}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_paranid" />	</sounds>
-				<area sunlight="1.37" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,230}" description="{4837254,231}" image="enc_rem20"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_paranid" />	</sounds>
+			<area sunlight="0.73" economy="1" security="1"/>
+			<system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+				<sun class="{1042,13081}(Red Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,220} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15111}(Desert)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="1140026239" settlements="{1042,16051}(Densely Populated)" part="planet001" />					
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM20_Sector001_macro">	<properties>	<identification name="{20005,3026}" description="{19530001,46}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM20_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,230}" description="{4837254,231}" />
+			<worlds>
+			  <world part="planet001"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM21 - Perpetual Sin Cluster-->
+		<!--Cluster REM21 - Perpetual Sin-->
 		<dataset macro="Cluster_REM21_macro">
-			<properties>
-				<identification name="{20005,3038}" description="{19530001,48}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
-			</properties>
+		  <properties>
+			<identification name="{4837254,240}" description="{4837254,241}" image="enc_rem21"/>
+			<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13111}(White Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,240} {20403,101}(a)" class="{1042,14121}(Dwarf Planet)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,11061}(Methane/Hydrogen)" population="{1042,10021}" maxpopulation="3925609" settlements="{1042,16101}(Small Settlements)" part="Sphere002" />
+				<planet name="{4837254,240} {20403,102}(b)" class="{1042,14121}(Dwarf Planet)" geology="{1042,15061}(Canyons)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,10021}" maxpopulation="1720476" settlements="{1042,16101}(Small Settlements)" part="Sphere003" />					
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>		
 			<!--Perpetual Sin III-->
 			<dataset macro="Cluster_REM21_Sector001_macro">
-				<properties>
-					<identification name="{19530001,51}" description="{19530001,52}" />
-					<area sunlight="1.38" economy="1" security="0.75" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,250}" description="{4837254,251}" />
+				<area sunlight="1.38" economy="1" security="0.75" />
+				<worlds>
+				  <world part="Sphere003"/>		  
+				</worlds>					
+			  </properties>
 			</dataset>		
 			<!--Perpetual Sin I-->
 			<dataset macro="Cluster_REM21_Sector002_macro">
-				<properties>
-					<identification name="{19530001,49}" description="{19530001,50}" />
-					<area sunlight="1.08" economy="1" security="0.75" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,260}" description="{4837254,261}" />
+				<area sunlight="1.08" economy="1" security="0.75" />
+				<worlds>
+				  <world part="Sphere002"/>		  
+				</worlds>					
+			  </properties>
 			</dataset>			
 			
-		<!--Sector REM22 - Pontifex' Seclusion-->
+		<!--Cluster REM22 - Pontifex' Seclusion-->
 		<dataset macro="Cluster_REM22_macro">
-			<properties>
-				<identification name="{20005,3041}" description="{19530001,56}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.69" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,280}" description="{4837254,281}" image="enc_rem22"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="0.69" economy="1" security="1"/>
+			<system>
+			  <space environment="{1042,12021}(Thin Nebula)"/>
+			  <suns>
+				<sun class="{1042,13081}(Red Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,280} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15121}(Swamp)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="358849971" settlements="{1042,16071}(Megalopolis)" part="part_earthlike001" >
+				  <moons>
+					<moon name="{4837254,280} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" />
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM22_Sector001_macro">	<properties>	<identification name="{20005,3041}" description="{19530001,56}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM22_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,280}" description="{4837254,281}" />
+			<worlds>
+			  <world part="part_earthlike001"/>		  
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM23 - Unholy Descent-->
+		<!--Cluster REM23 - Unholy Descent-->
 		<dataset macro="Cluster_REM23_macro">
-			<properties>
-				<identification name="{20005,3045}" description="{19530001,58}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
-				<area sunlight="1.32" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,290}" description="{4837254,291}" image="enc_rem23"/>
+			<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
+			<area sunlight="1.32" economy="1" security="0.5"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13081}(Red Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,290} {20403,101}(a)" class="{1042,14081}(Gas Giant)" geology="{1042,10011}(None)" atmosphere="{1042,11051}(Helium)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="part_dwarf" >
+				  <moons>
+					<moon name="{4837254,290} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003" />
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM23_Sector001_macro">	<properties>	<identification name="{20005,3045}" description="{19530001,58}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM23_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,290}" description="{4837254,291}" />
+			<worlds>
+			  <world part="Sphere003"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM24 - Cathedral of Xaar-->
+		<!--Cluster REM24 - Cathedral of Xaar-->
 		<dataset macro="Cluster_REM24_macro">
-			<properties>
-				<identification name="{20005,9034}" description="{19530001,60}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_paranid" />	</sounds>
-				<area sunlight="2.77" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,300}" description="{4837254,301}" image="enc_rem24"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_paranid" />	</sounds>
+			<area sunlight="2.77" economy="1" security="1"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13081}(Red Giant)"/>
+				<sun class="{1042,13051}(Blue Dwarf)"/>				
+			  </suns>
+			  <planets>
+				<planet name="{4837254,300} {20403,101}(a)" class="{1042,14081}(Gas Giant)" geology="{1042,10011}(None)" atmosphere="{1042,11051}(Helium)" population="{1042,10021}" maxpopulation="16643899" settlements="{4837255,9}(Orbital Cities)" part="part_saturn" >
+				  <moons>
+					<moon name="{4837254,300} {20403,101}(a) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="moon" />
+					<moon name="{4837254,300} {20403,101}(a) {20402,1}(II)" geology="{1042,15061}(Canyons)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003" />					
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM24_Sector001_macro">	<properties>	<identification name="{20005,9034}" description="{19530001,60}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM24_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,300}" description="{4837254,301}" />
+			<worlds>
+			  <world part="part_saturn"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM25 - Clarity's End-->
+		<!--Cluster REM25 - Clarity's End-->
 		<dataset macro="Cluster_REM25_macro">
-			<properties>
-				<identification name="{20005,3023}" description="{19530001,62}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="2.01" economy="1" security="0.75"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,310}" description="{4837254,311}" image="enc_rem25"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
+			<area sunlight="2.01" economy="1" security="0.75"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,310} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="15769256" settlements="{1042,16101}(Small Settlements)" part="planet001c" />					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM25_Sector001_macro">	<properties>	<identification name="{20005,3023}" description="{19530001,62}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM25_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,310}" description="{4837254,311}" />
+			<worlds>
+			  <world part="planet001c"/>		  
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM26 - Desecrated Skies-->
+		<!--Cluster REM26 - Desecrated Skies-->
 		<dataset macro="Cluster_REM26_macro">
-			<properties>
-				<identification name="{20005,9023}" description="{19530001,64}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
-				<area sunlight="0.73" economy="1" security="0.75" tags="desecrated" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,320}" description="{4837254,321}" image="enc_rem26"/>
+			<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
+			<area sunlight="0.73" economy="1" security="0.75" tags="desecrated" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13011}(Red Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,320} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15031}(Volcanic)" atmosphere="{1042,11091}(Sulphur Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="planet001b" />					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM26_Sector001_macro">	<properties>	<identification name="{20005,9023}" description="{19530001,64}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM26_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,320}" description="{4837254,321}" />
+			<worlds>
+			  <world part="planet001b"/>		  
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM27 - Perdition's End-->
+		<!--Cluster REM27 - Perdition's End-->
 		<dataset macro="Cluster_REM27_macro">
-			<properties>
-				<identification name="{20005,3037}" description="{19530001,66}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
-				<area sunlight="1.27" economy="1" security="0.75"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,330}" description="{4837254,331}" image="enc_rem27"/>
+			<sounds>	<music ref="music_soundtrack_paranid" />	</sounds>
+			<area sunlight="1.27" economy="1" security="0.75"/>
+			<system>
+			  <space environment="{1042,12041}(Asteroids)"/>
+			  <suns>
+				<sun class="{1042,13141}(Yellow Supergiant)"/>
+			  </suns>
+			  <planets>
+				<planet name="Asteroids" class="{1042,12041}(Asteroids)" geology="{1042,12041}(Asteroids)" atmosphere="{1042,10011}(None)" population="{1042,10021}" maxpopulation="29601" settlements="{1042,16031}(Research Outpost)" part="planet001b" />					
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM27_Sector001_macro">	<properties>	<identification name="{20005,3037}" description="{19530001,66}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM27_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,330}" description="{4837254,331}" />
+			<worlds>
+			  <world part="planet001b"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM28 - Ket's Reckoning-->
+		<!--Cluster REM28 - Kha'ak Sector Delta-->
 		<dataset macro="Cluster_REM28_macro">
-			<properties>
-				<identification name="{20005,9039}" description="{19530001,68}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.13" economy="1" security="1" factionlogic="false" tags="khaak" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,340}" description="{4837254,341}" system="7200" image="enc_cluster411"/>			
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="1.13" economy="1" security="1" factionlogic="false" tags="khaak" />
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM28_Sector001_macro">	<properties>	<identification name="{20005,9039}" description="{19530001,68}" />	</properties>	</dataset>		
+		<dataset macro="Cluster_REM28_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,340}" description="{4837254,341}" />
+		  </properties>
+		</dataset>		
 		
-		<!--Sector REM29 - Sanctum Verge-->
+		<!--Cluster REM29 - Sanctum Verge-->
 		<dataset macro="Cluster_REM29_macro">
-			<properties>
-				<identification name="{20005,3018}" description="{19530001,54}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="0.92" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,270}" description="{4837254,271}" image="enc_rem29"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13041}(White Dwarf)"/>
+			  </suns>
+			</system>			
+			<area sunlight="0.92" economy="1" security="1"/>
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM29_Sector001_macro">	<properties>	<identification name="{20005,3018}" description="{19530001,54}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM29_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,270}" description="{4837254,271}" />
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM30 - Xaar's Belt Cluster-->
+		<!--Cluster REM30 - Xaar's Belt-->
 		<dataset macro="Cluster_REM30_macro">
-			<properties>
-				<identification name="{20005,3020}" description="{19530001,72}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-			</properties>
+		  <properties>
+			<identification name="{4837254,360}" description="{4837254,361}" image="enc_rem30"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13171}(Blue Supergiant)"/>				
+			  </suns>
+			  <planets>
+				<planet name="{4837254,360} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15021}(Mountains)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="part_earthlike" >
+				  <moons>
+					<moon name="{4837254,306} {20403,101}(a) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere002" />
+					<moon name="{4837254,360} {20403,101}(a) {20402,1}(II)" geology="{1042,15061}(Canyons)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003" />					
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>		
 			<!--Xaar's Belt I-->
 			<dataset macro="Cluster_REM30_Sector001_macro">
-				<properties>
-					<identification name="{19530001,73}" description="{19530001,74}" />
-					<area sunlight="1.62" economy="1" security="0.75" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,370}" description="{4837254,371}" />
+				<area sunlight="1.62" economy="1" security="0.75" />
+				<worlds>
+				  <world part="Sphere002" factor="0.5"/>		  
+				</worlds>					
+			  </properties>
 			</dataset>
 			<!--Xaar's Belt II-->
 			<dataset macro="Cluster_REM30_Sector002_macro">
-				<properties>
-					<identification name="{19530001,75}" description="{19530001,76}" />
-					<area sunlight="1.03" economy="1" security="0.75" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,380}" description="{4837254,381}" />
+				<area sunlight="1.03" economy="1" security="0.75" />
+				<worlds>
+				  <world part="Sphere003"/>		  
+				</worlds>						
+			  </properties>
 			</dataset>		
 			<!--Xaar's Belt III-->
 			<dataset macro="Cluster_REM30_Sector003_macro">
-				<properties>
-					<identification name="{19530001,77}" description="{19530001,78}" />
-					<area sunlight="1.21" economy="1" security="0.75" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,390}" description="{4837254,391}" />
+				<area sunlight="1.21" economy="1" security="0.75" />
+				<worlds>
+				  <world part="Sphere002" factor="0.5"/>		  
+				</worlds>						
+			  </properties>
 			</dataset>			
 		
-		<!--Sector REM31 - The Shallows -->
+		<!--Cluster REM31 - The Shallows -->
 		<dataset macro="Cluster_REM31_macro">
-			<properties>
-				<identification name="{20005,9003}" description="{19530001,80}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_periphery" />	</sounds>
-				<area sunlight="0.81" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmsborder splitcolony" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,400}" description="{4837254,401}" image="enc_rem31"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_periphery" />	</sounds>
+			<area sunlight="0.81" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmsborder" />
+			<system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,400} {20403,101}(a)" class="{1042,14081}(Gas Giant)" geology="{1042,10011}(None)" atmosphere="{1042,11111}(Hydrogen/Helium)" population="{1042,10021}" maxpopulation="122219314" settlements="{4837255,9}(Orbital Cities)" part="planet001"/>
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM31_Sector001_macro">	<properties>	<identification name="{20005,9003}" description="{19530001,80}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM31_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,400}" description="{4837254,401}" />
+			<worlds>
+			  <world part="planet001" />
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM32 - Family Than Cluster-->
+		<!--Cluster REM32 - Family Than-->
 		<dataset macro="Cluster_REM32_macro">
-			<properties>
-				<identification name="{20005,5044}" description="{19530001,82}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_loyal_families" />	</sounds>
-			</properties>
+		  <properties>
+			<identification name="{4837254,410}" description="{4837254,411}" image="enc_rem32"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_loyal_families" />	</sounds>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13121}(Blue Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,410} {20403,101}(a)" class="{1042,14011}(Super Earth)" geology="{1042,15021}(Mountains)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="524406457" settlements="{1042,16041}(Multiple Cities)" part="planet001c">
+				  <moons>
+					<moon name="{4837254,410} {20403,101}(a) {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,10021}" maxpopulation="72542315" settlements="{4837255,10}(Mining Facilities)" part="Sphere003"/>
+				  </moons>
+				</planet>
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>		
 			<!--Family Than I-->
 			<dataset macro="Cluster_REM32_Sector001_macro">
-				<properties>
-					<identification name="{19530001,83}" description="{19530001,84}" />
-					<area sunlight="0.86" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmsborder splitcolony" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,420}" description="{4837254,421}" />
+				<area sunlight="0.91" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmsborder" />
+				<worlds>
+				  <world part="planet001c" />
+				</worlds>					
+			  </properties>
 			</dataset>			
-			<!--Family Than III-->
+			<!--Family Than II-->
 			<dataset macro="Cluster_REM32_Sector002_macro">
-				<properties>
-					<identification name="{19530001,85}" description="{19530001,86}" />
-					<area sunlight="0.96" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmsborder splitcolony" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,430}" description="{4837254,431}" />
+				<area sunlight="1.06" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmsborder" />
+				<worlds>
+				  <world part="Sphere003" />
+				</worlds>					
+			  </properties>
 			</dataset>	
 
-		<!--Sector REM33 - Thyn's Abyss-->
+		<!--Cluster REM33 - Thyn's Abyss-->
 		<dataset macro="Cluster_REM33_macro">
-			<properties>
-				<identification name="{20005,5005}" description="{19530001,88}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_ravine" />	</sounds>
-				<area sunlight="0.97" economy="1" security="0.5" extensionexclusivejobs="true" tags="strongarmsborder splitcolony" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,440}" description="{4837254,441}" image="enc_rem33"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_ravine" />	</sounds>
+			<area sunlight="0.97" economy="1" security="0.5" extensionexclusivejobs="true" tags="strongarmsborder" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13141}(Yellow Supergiant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,440} {20403,101}(a)" class="{1042,14121}(Dwarf Planet)" geology="{1042,15061}(Canyons)" atmosphere="{1042,11101}(Nitrogen/Hydrogen)" population="{1042,10021}" maxpopulation="13613483" settlements="{1042,16101}(Small Settlements)" part="Sphere002">
+				  <moons>
+					<moon name="{4837254,440} {20403,101}(a) {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,10011}(None)" settlements="{1042,10011}(None)" part="Sphere003"/>
+				  </moons>
+				</planet>
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM33_Sector001_macro">	<properties>	<identification name="{20005,5005}" description="{19530001,88}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM33_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,440}" description="{4837254,441}" />
+			<worlds>
+			  <world part="Sphere002"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM34 - Thyn's Excavation-->
+		<!--Cluster REM34 - Thyn's Excavation-->
 		<dataset macro="Cluster_REM34_macro">
-			<properties>
-				<identification name="{20005,5034}" description="{19530001,90}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_thyns_exvacation" />	</sounds>
-				<area sunlight="1.16" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmshq splitcolony" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,450}" description="{4837254,451}" image="enc_rem34"/>
+			<sounds>	<music ref="music_thyns_exvacation" />	</sounds>
+			<area sunlight="1.35" economy="1" security="1" extensionexclusivejobs="true" tags="strongarmshq" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13141}(Yellow Supergiant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,450} {20403,101}(a)" class="{1042,14081}(Gas Giant)" geology="{1042,10011}(None)" atmosphere="{1042,11061}(Methane/Hydrogen)" population="{1042,10021}" maxpopulation="1333513356" settlements="{1042,16081}(Sky City)" part="planet001">
+				  <moons>
+					<moon name="{4837254,450} {20403,101}(a) {20402,1}(I)" geology="{1042,15061}(Canyons)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,10021}" maxpopulation="70184913" settlements="{1042,16041}(Multiple Cities)" part="Sphere002"/>
+					<moon name="{4837254,450} {20403,101}(a) {20402,2}(II)" geology="{1042,15031}(Volcanic)" atmosphere="{1042,11091}(Sulphur Dioxide)" population="{1042,10011}(None)" settlements="{1042,10011}(None)" part="moon001"/>
+				  </moons>
+				</planet>
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM34_Sector001_macro">	<properties>	<identification name="{20005,5034}" description="{19530001,90}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM34_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,450}" description="{4837254,451}" />
+			<worlds>
+			  <world part="planet001"/>	
+			  <world part="Sphere002"/>				  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM35 - Blue Horizon Cluster-->
+		<!--Cluster REM35 - Blue Horizon-->
 		<dataset macro="Cluster_REM35_macro">
-			<properties>
-				<identification name="{20005,9008}" description="{19530001,92}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
-			</properties>
+		  <properties>
+			<identification name="{4837254,460}" description="{4837254,461}" image="enc_rem35"/>
+			<sounds>	<music ref="music_dlc_boron_soundtrack_border" />	</sounds>
+			<system>
+			  <space environment="{1042,12041}(Asteroids)"/>
+			  <suns>
+				<sun class="{1042,13041}(White Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{1042,12041}(Asteroids)" class="{1042,12041}(Asteroids)" geology="{1042,12041}(Asteroids)" atmosphere="{1042,10011}(None)" population="{1042,10021}" maxpopulation="220060342" settlements="{4837255,10}(Mining Facilities)" part="part_astrolow"/>
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>		
-			<!--Blue Horizon IV-->
-			<dataset macro="Cluster_REM35_Sector001_macro">
-				<properties>
-					<identification name="{19530001,95}" description="{19530001,96}" />
-					<area sunlight="1.11" economy="1" security="1" extensionexclusivejobs="true" tags="atreusborder boroncolony" />
-				</properties>
-			</dataset>				
 			<!--Blue Horizon I-->
+			<dataset macro="Cluster_REM35_Sector001_macro">
+			  <properties>
+				<identification name="{4837254,470}" description="{4837254,471}" />
+				<area sunlight="1.11" economy="1" security="1" extensionexclusivejobs="true" tags="atreusborder" />
+				<worlds>
+				  <world part="part_astrolow" factor="0.5"/>
+				</worlds>				
+			  </properties>
+			</dataset>				
+			<!--Blue Horizon IV-->
 			<dataset macro="Cluster_REM35_Sector002_macro">
-				<properties>
-					<identification name="{19530001,93}" description="{19530001,94}" />
-					<area sunlight="0.88" economy="1" security="1" extensionexclusivejobs="true" tags="atreusborder boroncolony" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,480}" description="{4837254,481}" />
+				<area sunlight="0.88" economy="1" security="1" extensionexclusivejobs="true" tags="atreusborder" />
+				<worlds>
+				  <world part="part_astrolow" factor="0.5"/>
+				</worlds>					
+			  </properties>
 			</dataset>				
 		
-		<!--Sector REM36 - Great Trench-->
+		<!--Cluster REM36 - Great Trench-->
 		<dataset macro="Cluster_REM36_macro">
-			<properties>
-				<identification name="{20005,2007}" description="{19530001,98}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.72" economy="1" security="0.5" extensionexclusivejobs="true" tags="atreusborder boroncolony" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,490}" description="{4837254,491}" image="enc_rem36"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="0.72" economy="1" security="0.5" extensionexclusivejobs="true" tags="atreusborder" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,490} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15121}(Swamp)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="1719889" settlements="{1042,16101}(Small Settlements)" part="part_earthlike001">
+				  <moons>
+					<moon name="{4837254,490} {20403,101}(a) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM36_Sector001_macro">	<properties>	<identification name="{20005,2007}" description="{19530001,98}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM36_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,490}" description="{4837254,491}" />
+			<worlds>
+			  <world part="part_earthlike001"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM37 - Queen's Harbour-->
+		<!--Cluster REM37 - Queen's Harbour-->
 		<dataset macro="Cluster_REM37_macro">
-			<properties>
-				<identification name="{20005,2017}" description="{19530001,100}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_queens_harbour" />	</sounds>
-				<area sunlight="1.13" economy="1" security="1" extensionexclusivejobs="true" tags="atreushq boroncolony" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,500}" description="{4837254,501}" image="enc_rem37"/>
+			<sounds>	<music ref="music_queens_harbour" />	</sounds>
+			<area sunlight="1.44" economy="1" security="1" extensionexclusivejobs="true" tags="atreushq" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,500} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="1341109679" settlements="{1042,16041}(Multiple Cities)" part="Sphere001"/>
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM37_Sector001_macro">	<properties>	<identification name="{20005,2017}" description="{19530001,100}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM37_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,500}" description="{4837254,501}" />
+			<worlds>
+			  <world part="Sphere001"/>		  
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM38 - Queen's Retribution-->
+		<!--Cluster REM38 - Queen's Retribution-->
 		<dataset macro="Cluster_REM38_macro">
-			<properties>
-				<identification name="{20005,2018}" description="{19530001,102}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_cluster_turquoise_sea" />	</sounds>
-				<area sunlight="1.44" economy="1" security="1" extensionexclusivejobs="true" tags="atreusborder boroncolony" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,510}" description="{4837254,511}" image="enc_rem38"/>
+			<sounds>	<music ref="music_cluster_turquoise_sea" />	</sounds>
+			<area sunlight="0.93" economy="1" security="1" extensionexclusivejobs="true" tags="atreusborder" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,510} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="527750133" settlements="{1042,16041}(Multiple Cities)" part="planet001c">
+				  <moons>
+					<moon name="{4837254,510} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>
+				  </moons>
+				</planet>
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM38_Sector001_macro">	<properties>	<identification name="{20005,2018}" description="{19530001,102}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM38_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,510}" description="{4837254,511}" />
+			<worlds>
+			  <world part="planet001c"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 
-		<!--Sector REM39 - Matrix #472D-->
+		<!--Cluster REM39 - Matrix #472D-->
 		<dataset macro="Cluster_REM39_macro">
-			<properties>
-				<identification name="{19530001,103}" description="{19530001,104}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
-				<area sunlight="2.18" economy="1" security="0.75" tags="matrix472d" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,520}" description="{4837254,521}" image="enc_rem39"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_xenon" />	</sounds>
+			<area sunlight="2.18" economy="1" security="0.75" tags="matrix472d" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,520} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15131}(Forest)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,16011}(Uninhabited)" settlements="{1042,16061}(Xenon Structures)" part="part_earthlike001"/>
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM39_Sector001_macro">	<properties>	<identification name="{19530001,103}" description="{19530001,104}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM39_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,520}" description="{4837254,521}" />
+			<worlds>
+			  <world part="part_earthlike001"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM40 - Ocracoke's Storm Cluster-->
+		<!--Cluster REM40 - Adventure's Promise-->
 		<dataset macro="Cluster_REM40_macro">
-			<properties>
-				<identification name="{20005,9038}" description="{19530001,106}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_terran_soundtrack_yaki" />	</sounds>
-			</properties>
+		  <properties>
+			<identification name="{4837254,530}" description="{4837254,531}" image="enc_rem40"/>
+			<sounds>	<music ref="music_dlc_terran_soundtrack_yaki" />	</sounds>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13041}(White Dwarf)"/>
+			  </suns>
+			</system>			
+		  </properties>
 		</dataset>		
-			<!--Ocracoke's Storm I-->
+			<!--Adventure's Promise I-->
 			<dataset macro="Cluster_REM40_Sector001_macro">
-				<properties>
-					<identification name="{19530001,107}" description="{19530001,108}" />
-					<area sunlight="1.05" economy="1" security="1" factionlogic="false" tags="pirborder" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,540}" description="{4837254,541}" />
+				<area sunlight="1.05" economy="1" security="1" factionlogic="false" tags="pirborder" />
+			  </properties>
 			</dataset>		
-			<!--Ocracoke's Storm II-->
+			<!--Adventure's Promise II-->
 			<dataset macro="Cluster_REM40_Sector002_macro">
-				<properties>
-					<identification name="{19530001,109}" description="{19530001,110}" />
-					<area sunlight="1.37" economy="1" security="1" factionlogic="false" tags="pirborder" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,550}" description="{4837254,551}" />
+				<area sunlight="1.37" economy="1" security="1" factionlogic="false" tags="pirborder" />
+			  </properties>
 			</dataset>				
 			
-		<!--Sector REM41 - Shadows of Giants Cluster-->
+		<!--Cluster REM41 - Shadows of Giants-->
 		<dataset macro="Cluster_REM41_macro">
-			<properties>
-				<identification name="{20005,6025}" description="{19530001,111}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-			</properties>
+		  <properties>
+			<identification name="{4837254,560}" description="{4837254,561}" image="enc_rem41"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,560} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15121}(Swamp)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="part_earthlike">
+				  <moons>
+					<moon name="{4837254,560} {20403,101}(a) {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="part_moon"/>
+				  </moons>
+				</planet>
+			  </planets>			  
+			</system>			
+		  </properties>
 		</dataset>		
 			<!--Shadows of Giants VI-->
 			<dataset macro="Cluster_REM41_Sector001_macro">
-				<properties>
-					<identification name="{19530001,113}" description="{19530001,114}" />
-					<area sunlight="0.69" economy="1" security="1" factionlogic="false" tags="pirborder" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,570}" description="{4837254,571}" />
+				<area sunlight="0.69" economy="1" security="1" factionlogic="false" tags="pirborder" />
+				<worlds>
+				  <world part="part_earthlike" factor="0.75"/>
+				</worlds>					
+			  </properties>
 			</dataset>				
 			<!--Shadows of Giants VII-->
 			<dataset macro="Cluster_REM41_Sector002_macro">
-				<properties>
-					<identification name="{19530001,115}" description="{19530001,116}" />
-					<area sunlight="0.21" economy="1" security="1" factionlogic="false" tags="pirborder" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,580}" description="{4837254,581}" />
+				<area sunlight="0.21" economy="1" security="1" factionlogic="false" tags="pirborder" />
+				<worlds>
+				  <world part="part_earthlike" factor="0.25"/>
+				</worlds>					
+			  </properties>
 			</dataset>				
 		
-		<!--Sector REM42 - Bala Gi's Joy-->
+		<!--Cluster REM42 - Bala Gi's Joy-->
 		<dataset macro="Cluster_REM42_macro">
-			<properties>
-				<identification name="{20005,9020}" description="{19530001,118}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.07" economy="1" security="0.5" tags="pirborder" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,590}" description="{4837254,591}" image="enc_rem42"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="1.07" economy="1" security="0.5" tags="pirborder" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,590} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15031}(Volcanic)" atmosphere="{1042,11091}(Sulphur Dioxide)" population="{1042,10021}" maxpopulation="55466483" settlements="{1042,16041}(Multiple Cities)" part="planet001b">
+				  <moons>
+					<moon name="{4837254,590} {20403,101}(a) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere002"/>
+					<moon name="{4837254,590} {20403,101}(a) {20402,2}(II)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>					
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM42_Sector001_macro">	<properties>	<identification name="{20005,9020}" description="{19530001,118}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM42_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,590}" description="{4837254,591}" />
+			<worlds>
+			  <world part="planet001b"/>		  
+			</worlds>					
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM43 - Blue Profit-->
+		<!--Cluster REM43 - Blue Profit-->
 		<dataset macro="Cluster_REM43_macro">
-			<properties>
-				<identification name="{20005,6030}" description="{19530001,120}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.39" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,600}" description="{4837254,601}" image="enc_rem43"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="1.39" economy="1" security="0.5"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,600} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="260979002" settlements="{1042,16041}(Multiple Cities)" part="part_earthlike">
+				  <moons>
+					<moon name="{4837254,600} {20403,101}(a) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM43_Sector001_macro">	<properties>	<identification name="{20005,6030}" description="{19530001,120}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM43_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,600}" description="{4837254,601}" />
+			<worlds>
+			  <world part="part_earthlike"/>		  
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM44 - Matrix #483-->
+		<!--Cluster REM44 - Matrix #483-->
 		<dataset macro="Cluster_REM44_macro">
-			<properties>
-				<identification name="{19530001,121}" description="{19530001,122}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
-				<area sunlight="2.16" economy="1" security="1" tags="matrix483" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,610}" description="{4837254,611}" image="enc_rem44"/>
+			<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
+			<area sunlight="2.16" economy="1" security="1" tags="matrix483" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,610} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15151}(Polar)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,16061}(Xenon Structures)" part="part_earthlike001">
+				  <moons>
+					<moon name="{4837254,610} {20403,101}(a) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM44_Sector001_macro">	<properties>	<identification name="{19530001,121}" description="{19530001,122}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM44_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,610}" description="{4837254,611}" />
+			<worlds>
+			  <world part="part_earthlike001"/>		  
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM45 - The Vault-->
+		<!--Cluster REM45 - The Vault-->
 		<dataset macro="Cluster_REM45_macro">
-			<properties>
-				<identification name="{20005,6048}" description="{19530001,124}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="1.21" economy="1" security="0.75"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,620}" description="{4837254,621}" image="enc_rem45"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
+			<area sunlight="1.21" economy="1" security="0.75"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,620} {20403,101}(a)" class="{1042,14051}(Moon)" geology="{1042,15091}(Craters)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="part_moon"/>				
+				<planet name="{4837254,620} {20403,102}(b)" class="{1042,14051}(Moon)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,11111}(Hydrogen/Helium)" population="{1042,10021}" maxpopulation="273557" settlements="{1042,16031}(Research Outpost)" part="Sphere003"/>	
+				<planet name="{4837254,620} {20403,103}(c)" class="{1042,14051}(Moon)" geology="{1042,15061}(Canyons)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere002"/>	
+			  </planets>
+			</system>			  
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM45_Sector001_macro">	<properties>	<identification name="{20005,6048}" description="{19530001,124}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM45_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,620}" description="{4837254,621}" />
+			<worlds>
+			  <world part="Sphere003"/>		  
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM46 - Recovered Capital-->
+		<!--Cluster REM46 - Wretched Skies I Family Lomm-->
 		<dataset macro="Cluster_REM46_macro">
-			<properties>
-				<identification name="{20005,6017}" description="{19530001,126}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_teladi" />	</sounds>
-				<area sunlight="0.87" economy="1" security="0.5"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,630}" description="{4837254,631}" system="400" image="enc_cluster400"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_periphery" />	</sounds>
+			<area sunlight="1.58" economy="1" security="0.5" tags="resplit" />			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM46_Sector001_macro">	<properties>	<identification name="{20005,6017}" description="{19530001,126}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM46_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,630}" description="{4837254,631}" />
+			<worlds>
+			  <world part="part_gasgiant" factor="0.20"/>		  
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM47 - Spaceweed Grove-->		
+		<!--Cluster REM47 - Spaceweed Grove-->		
 		<dataset macro="Cluster_REM47_macro">
-			<properties>
-				<identification name="{20005,9032}" description="{19530001,182}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_periphery" />	</sounds>
-				<area sunlight="0.78" economy="1" security="0.5" tags="pirborder" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,910}" description="{4837254,911}" image="enc_rem47"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_periphery" />	</sounds>
+			<area sunlight="0.78" economy="1" security="0.5" tags="pirborder" />
+			<system>
+			  <space environment="{1042,12021}(Thin Nebula)"/>
+			  <suns>
+				<sun class="{1042,13091}(Yellow Giant)"/>
+			  </suns>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM47_Sector001_macro">	<properties>	<identification name="{20005,9032}" description="{19530001,182}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM47_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,910}" description="{4837254,911}" />
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM48 - Wretched Skies Cluster-->
+		<!--Cluster REM48 - Wretched Skies-->
 		<dataset macro="Cluster_REM48_macro">
-			<properties>
-				<identification name="{20005,9002}" description="{19530001,128}" system="400" image="enc_cluster400"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_loyal_families" />	</sounds>
-			</properties>
+		  <properties>
+			<identification name="{4837254,640}" description="{4837254,641}" system="400" image="enc_cluster400"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_loyal_families" />	</sounds>			
+		  </properties>
 		</dataset>
 			<!--Wretched Skies XII-->
 			<dataset macro="Cluster_REM48_Sector001_macro">
-				<properties>
-					<identification name="{19530001,129}" description="{19530001,130}" />
-					<area sunlight="0.72" economy="1" security="0.25" tags="splitdlc" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,650}" description="{4837254,651}" />
+				<area sunlight="0.72" economy="1" security="0.25" />
+			  </properties>
 			</dataset>
 			<!--Wretched Skies XV-->
 			<dataset macro="Cluster_REM48_Sector002_macro">
-				<properties>
-					<identification name="{19530001,131}" description="{19530001,132}" />
-					<area sunlight="0.34" economy="1" security="0.5" tags="splitdlc" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,660}" description="{4837254,661}" />
+				<area sunlight="0.34" economy="1" security="0.5" />
+			  </properties>
 			</dataset>		
 		
-		<!--Sector REM49 - Duke's Vision -->
+		<!--Cluster REM49 - Duke's Vision-->
 		<dataset macro="Cluster_REM49_macro">
-			<properties>
-				<identification name="{20005,3027}" description="{19530001,134}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_paranid" />	</sounds>
-				<area sunlight="0.87" economy="1" security="0.25" tags="splitdlc" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,670}" description="{4837254,671}" image="enc_rem49"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_paranid" />	</sounds>
+			<area sunlight="0.87" economy="1" security="0.25" />
+		    <system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+			    <sun class="{1042,13121}(Blue Giant)"/>
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,670} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15131}(Forest)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="579273119" settlements="{1042,16041}(Multiple Cities)" part="planet001c"/>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM49_Sector001_macro">	<properties>	<identification name="{19530001,133}" description="{19530001,134}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM49_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,670}" description="{4837254,671}" />
+		    <worlds>
+			  <world part="planet001c"/>
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM50 - Emperor's Wisdom-->
+		<!--Cluster REM50 - Emperor's Wisdom-->
 		<dataset macro="Cluster_REM50_macro">
-			<properties>
-				<identification name="{20005,3031}" description="{19530001,136}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
-				<area sunlight="2.17" economy="1" security="0.25" tags="splitdlc" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,680}" description="{4837254,681}" image="enc_rem50"/>
+			<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
+			<area sunlight="2.17" economy="1" security="0.25" />
+		    <system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+			    <sun class="{1042,13041}(White Dwarf)"/>
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,680} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15021}(Mountains)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="3193609373" settlements="{1042,16051}(Densely Populated)" part="planet01">
+				  <moons>
+					<moon name="{4837254,680} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+					<moon name="{4837254,680} {20403,101}(a) {20402,2}(II)" geology="{1042,15091}(Craters)" atmosphere="{1042,11061}(Methane/Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM50_Sector001_macro">	<properties>	<identification name="{19530001,135}" description="{19530001,136}" />	</properties>	</dataset>		
+		<dataset macro="Cluster_REM50_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,680}" description="{4837254,681}" />
+		    <worlds>
+			  <world part="planet01"/>
+		    </worlds>			
+		  </properties>
+		</dataset>		
 		
-		<!--Sector REM51 - Fierce Clarity-->
+		<!--Cluster REM51 - Fierce Clarity-->
 		<dataset macro="Cluster_REM51_macro">
-			<properties>
-				<identification name="{20005,3019}" description="{19530001,138}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="0.07" economy="1" security="0.5" tags="pirborder" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,690}" description="{4837254,691}" image="enc_rem51"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
+			<area sunlight="0.07" economy="1" security="0.5" tags="pirborder" />
+		    <system>
+			  <space environment="{1042,12041}(Asteroids)"/>
+			  <suns>
+			    <sun class="{1042,13041}(White Dwarf)"/>
+			  </suns>
+			</system>
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM51_Sector001_macro">	<properties>	<identification name="{20005,3019}" description="{19530001,138}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM51_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,690}" description="{4837254,691}" />
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM52 - Danna's Chance-->
+		<!--Cluster REM52 - Danna's Chance-->
 		<dataset macro="Cluster_REM52_macro">
-			<properties>
-				<identification name="{20005,9022}" description="{19530001,140}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.18" economy="1" security="0.5" factionlogic="false" tags="pircore" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,700}" description="{4837254,701}" image="enc_rem52"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="0.18" economy="1" security="0.5" factionlogic="false" tags="pircore" />
+		    <system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+			    <sun class="{1042,13041}(White Dwarf)"/>
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,700} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="62646329" settlements="{1042,16101}(Small Settlements)" part="sphere001">
+				  <moons>
+					<moon name="{4837254,700} {20403,101}(a) {20402,1}(I)" geology="{1042,15081}(Ice)" atmosphere="{1042,11061}(Methane/Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+					<moon name="{4837254,700} {20403,101}(a) {20402,2}(II)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM52_Sector001_macro">	<properties>	<identification name="{20005,9022}" description="{19530001,140}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM52_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,700}" description="{4837254,701}" />
+		    <worlds>
+			  <world part="sphere001"/>
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM53 - Legend's Home-->
+		<!--Cluster REM53 - Legend's Home-->
 		<dataset macro="Cluster_REM53_macro">
 		  <properties>
-		    <identification name="{20005,1034}" description="{19530001,142}" image="enc_cluster01"/>
+		    <identification name="{4837254,710}" description="{4837254,711}" image="enc_rem53"/>
 		    <sounds>	<music ref="music_legends_home" />	</sounds>
 		    <area sunlight="0.97" economy="1" security="1" tags="otashq" />
 		    <system>
 			  <space environment="{1042,12011}(Clear Space)"/>
 			  <suns>
-			    <sun class="{1042,13111}(White Giant)"/>
+			    <sun class="{1042,13041}(White Dwarf)"/>
 			  </suns>				  
 			  <planets>
-			    <planet name="{20005,1034}(Legend's Home)" class="{1042,14101}(Earth Analog)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="1412750000" settlements="{1042,16041}(Multiple Cities)" part="planet001b"/>					
+			    <planet name="{4837254,710} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15021}(Mountains)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="1827763003" settlements="{1042,16051}(Densely Populated)" part="planet001b">
+				  <moons>
+					<moon name="{4837254,710} {20403,101}(a) {20402,1}(I)" geology="{1042,15061}(Canyons)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+					<moon name="{4837254,710} {20403,101}(a) {20402,2}(II)" geology="{1042,15151}(Polar)" atmosphere="{1042,11061}(Methane/Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>				
 			  </planets>
 			</system>				
 		  </properties>
 		</dataset>
 		<dataset macro="Cluster_REM53_Sector001_macro">	
 		  <properties>	
-			<identification name="{20005,1034}" description="{19530001,142}" />
+			<identification name="{4837254,710}" description="{4837254,711}" />
 		    <worlds>
 			  <world part="planet001b"/>
 		    </worlds>			
 		  </properties>
 		</dataset>
 		
-		<!--Sector REM54 - Merchant Haven-->
+		<!--Cluster REM54 - Ministry of Finance-->
 		<dataset macro="Cluster_REM54_macro">
-			<properties>
-				<identification name="{20005,6041}" description="{19530001,144}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.08" economy="1" security="1" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,720}" description="{4837254,721}" image="enc_rem54"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="1.08" economy="1" security="1" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>			
+			  </suns>
+			  <planets>
+				<planet name="{4837254,720} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15021}(Mountains)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="414740377" settlements="{1042,16071}(Megalopolis)" part="planet">
+				  <moons>
+					<moon name="{4837254,720} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+					<moon name="{4837254,720} {20403,101}(a) {20402,2}(II)" geology="{1042,15101}(Barren)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM54_Sector001_macro">	<properties>	<identification name="{20005,6041}" description="{19530001,144}" />	</properties>	</dataset>		
+		<dataset macro="Cluster_REM54_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,720}" description="{4837254,721}" />
+		    <worlds>
+			  <world part="planet"/>
+		    </worlds>				
+		  </properties>
+		</dataset>		
 
-		<!--Sector REM55 - Akeela's Beacon-->
+		<!--Cluster REM55 - Akeela's Beacon-->
 		<dataset macro="Cluster_REM55_macro">
-			<properties>
-				<identification name="{20005,1024}" description="{19530001,146}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_argon" />	</sounds>
-				<area sunlight="9.67" economy="1" security="1" tags="otasborder" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,730}" description="{4837254,731}" image="enc_rem55"/>
+			<sounds>	<music ref="music_soundtrack_argon" />	</sounds>
+			<area sunlight="9.67" economy="1" security="1" tags="otasborder" />
+			<system>
+			  <space environment="{1042,12021}(Thin Nebula)"/>
+			  <suns>
+				<sun class="{1042,13141}(Yellow Supergiant)"/>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>	
+				<sun class="{1042,13151}(Orange Supergiant)"/>	
+				<sun class="{1042,13131}(Red Supergiant)"/>					
+			  </suns>
+			  <planets>
+				<planet name="{4837254,730} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="320115940" settlements="{1042,16041}(Multiple Cities)" part="part_earthlike001">
+				  <moons>
+					<moon name="{4837254,730} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+					<moon name="{4837254,730} {20403,101}(a) {20402,2}(II)" geology="{1042,15101}(Barren)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM55_Sector001_macro">	<properties>	<identification name="{20005,1024}" description="{19530001,146}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM55_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,730}" description="{4837254,731}" />
+		    <worlds>
+			  <world part="part_earthlike001"/>
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM56 - Aladna Hill-->
+		<!--Cluster REM56 - Aladna Hill-->
 		<dataset macro="Cluster_REM56_macro">
-			<properties>
-				<identification name="{20005,1025}" description="{19530001,148}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="0.87" economy="1" security="0.75" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,740}" description="{4837254,741}" image="enc_rem56"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="0.87" economy="1" security="0.75" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13041}(White Dwarf)"/>			
+			  </suns>
+			  <planets>
+				<planet name="{4837254,740} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="907863559" settlements="{1042,16051}(Densely Populated)" part="planet">
+				  <moons>
+					<moon name="{4837254,740} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>			
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM56_Sector001_macro">	<properties>	<identification name="{20005,1025}" description="{19530001,148}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM56_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,740}" description="{4837254,741}" />
+		    <worlds>
+			  <world part="planet"/>
+		    </worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM57 - Light of Heart-->
+		<!--Cluster REM57 - Light of Heart-->
 		<dataset macro="Cluster_REM57_macro">
-			<properties>
-				<identification name="{20005,1035}" description="{19530001,150}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
-				<area sunlight="1.11" economy="1" security="1" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,750}" description="{4837254,751}" image="enc_rem57"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
+			<area sunlight="1.11" economy="1" security="1" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13141}(Yellow Supergiant)"/>				
+			  </suns>
+			  <planets>
+				<planet name="{4837254,750} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15111}(Desert)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="303305047" settlements="{1042,16041}(Multiple Cities)" part="part_earthlike001">
+				  <moons>
+					<moon name="{4837254,750} {20403,101}(a) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+					<moon name="{4837254,750} {20403,101}(a) {20402,2}(II)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM57_Sector001_macro">	<properties>	<identification name="{20005,1035}" description="{19530001,150}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM57_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,750}" description="{4837254,751}" />
+		    <worlds>
+			  <world part="part_earthlike001"/>
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM58 - Montalaar-->
+		<!--Cluster REM58 - Montalaar-->
 		<dataset macro="Cluster_REM58_macro">
-			<properties>
-				<identification name="{20005,1037}" description="{19530001,152}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
-				<area sunlight="1.18" economy="1" security="0.25" tags="pirborder" />
-			</properties>
+		  <properties>
+			<identification name="{4837254,760}" description="{4837254,761}" image="enc_rem58"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
+			<area sunlight="1.18" economy="1" security="0.25" tags="pirborder" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13141}(Yellow Supergiant)"/>				
+			  </suns>
+			  <planets>
+				<planet name="{4837254,760} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15101}(Barren)" atmosphere="{1042,11011}(Methane)" population="{1042,10021}" maxpopulation="38576171" settlements="{4837255,9}(Orbital Cities)" part="planet">
+				  <moons>
+					<moon name="{4837254,760} {20403,101}(a) {20402,1}(I)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM58_Sector001_macro">	<properties>	<identification name="{20005,1037}" description="{19530001,152}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM58_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,760}" description="{4837254,761}" />
+		    <worlds>
+			  <world part="planet"/>
+		    </worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM59 - Mines of Fortune-->
+		<!--Cluster REM59 - Mines of Fortune-->
 		<dataset macro="Cluster_REM59_macro">
-			<properties>
-				<identification name="{20005,6042}" description="{19530001,154}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
-				<area sunlight="0.67" economy="1" security="0.75"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,770}" description="{4837254,771}" image="enc_rem59"/>
+			<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
+			<area sunlight="0.67" economy="1" security="0.75"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>				
+			  </suns>
+			  <planets>
+				<planet name="{4837254,770} {20403,101}(a)" class="{1042,14121}(Dwarf Planet)" geology="{1042,15091}(Craters)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,10021}" maxpopulation="260797" settlements="{1042,16021}(Mining Colonies)" part="Sphere002"/>
+				<planet name="{4837254,770} {20403,102}(b)" class="{1042,14121}(Dwarf Planet)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>								
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM59_Sector001_macro">	<properties>	<identification name="{20005,6042}" description="{19530001,154}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM59_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,770}" description="{4837254,771}" />
+		    <worlds>
+			  <world part="Sphere002"/>
+			  <world part="Sphere003"/>			  
+		    </worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM60 - Zyarth's Stand-->
+		<!--Cluster REM60 - Zyarth's Stand-->
 		<dataset macro="Cluster_REM60_macro">
-			<properties>
-				<identification name="{20005,5037}" description="{19530001,156}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_split_soundtrack_patriarchy" />	</sounds>
-				<area sunlight="0.87" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,780}" description="{4837254,781}" image="enc_rem60"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_patriarchy" />	</sounds>
+			<area sunlight="0.87" economy="1" security="1" tags="resplit" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,780} {20403,101}(a)" class="{1042,14121}(Dwarf Planet)" geology="{1042,15091}(Craters)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="392133495" settlements="{1042,16101}(Small Settlements)" part="Sphere002"/>					
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM60_Sector001_macro">	<properties>	<identification name="{20005,5037}" description="{19530001,156}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM60_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,780}" description="{4837254,781}" />
+		    <worlds>
+			  <world part="Sphere002"/>
+		    </worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM61 - Patriarch's Conclusion-->
+		<!--Cluster REM61 - Patriarch's Conclusion-->
 		<dataset macro="Cluster_REM61_macro">
-			<properties>
-				<identification name="{20005,5039}" description="{19530001,158}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_dlc_pirate_soundtrack_windfall" />	</sounds>
-				<area sunlight="3.19" economy="1" security="0.75"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,790}" description="{4837254,791}" image="enc_rem61"/>
+			<sounds>	<music ref="music_dlc_pirate_soundtrack_windfall" />	</sounds>
+			<area sunlight="1.19" economy="1" security="0.75"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13021}(Yellow Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,790} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15111}(Desert)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="3491367" settlements="{1042,16101}(Small Settlements)" part="planet001">
+				  <moons>
+					<moon name="{4837254,790} {20403,101}(a) {20402,1}(I)" geology="{1042,15081}(Ice)" atmosphere="{1042,11061}(Methane/Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere002"/>
+					<moon name="{4837254,790} {20403,101}(a) {20402,2}(II)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM61_Sector001_macro">	<properties>	<identification name="{20005,5039}" description="{19530001,158}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM61_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,790}" description="{4837254,791}" />
+		    <worlds>
+			  <world part="planet001"/>
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM62 - Elena's Fortune-->
+		<!--Cluster REM62 - Elena's Fortune-->
 		<dataset macro="Cluster_REM62_macro">
-			<properties>
-				<identification name="{20005,1030}" description="{19530001,160}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.24" economy="1" security="0.75"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,800}" description="{4837254,801}" image="enc_rem62"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="1.24" economy="1" security="0.75"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,800} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15131}(Forest)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="32634016" settlements="{1042,16041}(Multiple Cities)" part="planet1">	
+				  <moons>
+					<moon name="{4837254,800} {20403,101}(a) {20402,1}(I)" geology="{1042,15081}(Ice)" atmosphere="{1042,11061}(Methane/Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere002"/>
+					<moon name="{4837254,800} {20403,101}(a) {20402,2}(II)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM62_Sector001_macro">	<properties>	<identification name="{20005,1030}" description="{19530001,160}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM62_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,800}" description="{4837254,801}" />
+		    <worlds>
+			  <world part="planet1"/>
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM63 - Nyana's Hideout-->
+		<!--Cluster REM63 - Nyana's Hideout-->
 		<dataset macro="Cluster_REM63_macro">
-			<properties>
-				<identification name="{20005,1039}" description="{19530001,162}" image="enc_cluster01"/>
-				<sounds>	<music ref="legacy_music_pool" />	</sounds>
-				<area sunlight="1.19" economy="1" security="1"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,810}" description="{4837254,811}" image="enc_rem63"/>
+			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+			<area sunlight="1.19" economy="1" security="1"/>
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13111}(White Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,810} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15111}(Desert)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="1074013856" settlements="{1042,16071}(Megalopolis)" part="planet001c">	
+				  <moons>
+					<moon name="{4837254,810} {20403,101}(a) {20402,1}(I)" geology="{1042,15081}(Ice)" atmosphere="{1042,11111}(Hydrogen/Helium)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere002"/>
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>				
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM63_Sector001_macro">	<properties>	<identification name="{20005,1039}" description="{19530001,162}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM63_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,810}" description="{4837254,811}" />
+		    <worlds>
+			  <world part="planet001c"/>
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM64 - Interworlds-->
+		<!--Cluster REM64 - Interworlds-->
 		<dataset macro="Cluster_REM64_macro">
-			<properties>
-				<identification name="{20005,1033}" description="{19530001,164}" image="enc_cluster01"/>
-				<sounds>	<music ref="music_cluster_turquoise_sea" />	</sounds>
-				<area sunlight="1.27" economy="1" security="0.75"/>
-			</properties>
+		  <properties>
+			<identification name="{4837254,820}" description="{4837254,821}" image="enc_rem64"/>
+			<sounds>	<music ref="music_cluster_turquoise_sea" />	</sounds>
+			<area sunlight="1.27" economy="1" security="0.75"/>
+			<system>
+			  <space environment="{1042,12041}(Asteroids)"/>
+			  <suns>
+				<sun class="{1042,13111}(White Giant)"/>
+			  </suns>
+			  <planets>
+				<planet name="{4837254,820} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15111}(Desert)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="10740927" settlements="{1042,16101}(Small Settlements)" part="planet001">	
+				  <moons>
+					<moon name="{4837254,820} {20403,101}(a) {20402,1}(I)" geology="{1042,15081}(Ice)" atmosphere="{1042,11111}(Hydrogen/Helium)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere003"/>
+				  </moons>				  
+				</planet>
+				<planet name="{4837254,820} {20403,101}(b)" class="{1042,14031}(Terrestrial)" geology="{1042,15021}(Mountains)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="32222781" settlements="{1042,16041}(Multiple Cities)" part="planet001c"/>				
+			  </planets>
+			</system>			
+		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM64_Sector001_macro">	<properties>	<identification name="{20005,1033}" description="{19530001,164}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM64_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,820}" description="{4837254,821}" />
+		    <worlds>
+			  <world part="planet001"/>
+			  <world part="planet001c"/>			  
+		    </worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM65 - Wastelands-->
+		<!--Cluster REM65 - Wastelands-->
 		<dataset macro="Cluster_REM65_macro">
 		  <properties>
-			<identification name="{20005,1048}" description="{19530001,166}" image="enc_cluster01"/>
+			<identification name="{4837254,830}" description="{4837254,831}" image="enc_rem65"/>
 			<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
 			<area sunlight="1.42" economy="1" security="0.5"/>
+		    <system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+			    <sun class="{1042,13151}(Orange Supergiant)"/>
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,830}" class="{1042,14101}(Earth Analog)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="6582135" settlements="{1042,16101}(Small Settlements)" part="Sphere001">					
+				  <moons>
+					<moon name="{4837254,830} {20402,1}(I)" geology="{1042,15151}(Polar)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+				  </moons>
+				</planet>
+			  </planets>
+			</system>				
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM65_Sector001_macro">	<properties>	<identification name="{20005,1048}" description="{19530001,166}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM65_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,830}" description="{4837254,831}" />
+			<worlds>
+			  <world part="Sphere001"/>
+			</worlds>				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM66 - Ghinn's Escape-->
+		<!--Cluster REM66 - Ghinn's Escape-->
 		<dataset macro="Cluster_REM66_macro">
 		  <properties>
-			<identification name="{20005,5021}" description="{19530001,168}" image="enc_cluster01"/>
+			<identification name="{4837254,840}" description="{4837254,841}" image="enc_rem66"/>
 			<sounds>	<music ref="music_dlc_pirate_soundtrack_windfall" />	</sounds>
 			<area sunlight="1.47" economy="1" security="1"/>
+		    <system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+			    <sun class="{1042,13031}(Orange Dwarf)"/>
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,840}" class="{1042,14101}(Earth Analog)" geology="{1042,15121}(Swamp)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="292803328" settlements="{1042,16041}(Multiple Cities)" part="planet">					
+				  <moons>
+					<moon name="{4837254,840} {20402,1}(I)" geology="{1042,15081}(Ice)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+				  </moons>
+				</planet>
+			  </planets>
+			</system>			
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM66_Sector001_macro">	<properties>	<identification name="{20005,5021}" description="{19530001,168}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM66_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,840}" description="{4837254,841}" />
+			<worlds>
+			  <world part="planet"/>
+			</worlds>	 				
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM67 - Kha'ak Sector Alpha-->
+		<!--Cluster REM67 - Kha'ak Sector Alpha-->
 		<dataset macro="Cluster_REM67_macro">
 		  <properties>
-			<identification name="{19530001,169}" description="{19530001,170}" system="7200" image="enc_cluster01"/>
+			<identification name="{4837254,850}" description="{4837254,851}" system="7200" image="enc_cluster411"/>
 			<sounds>	<music ref="legacy_music_pool" />	</sounds>
 			<area sunlight="1.47" economy="1" security="1" factionlogic="false" tags="khaak" />
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM67_Sector001_macro">	<properties>	<identification name="{19530001,169}" description="{19530001,170}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM67_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,850}" description="{4837254,851}" />
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM68 - Kha'ak Sector Beta-->
+		<!--Cluster REM68 - Kha'ak Sector Beta-->
 		<dataset macro="Cluster_REM68_macro">
 		  <properties>
-			<identification name="{19530001,171}" description="{19530001,172}" system="7200" image="enc_cluster01"/>
+			<identification name="{4837254,860}" description="{4837254,861}" system="7200" image="enc_cluster411"/>
 			<sounds>	<music ref="legacy_music_pool" />	</sounds>
 			<area sunlight="3.21" economy="1" security="1" factionlogic="false" tags="khaak" />
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM68_Sector001_macro">	<properties>	<identification name="{19530001,171}" description="{19530001,172}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM68_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,860}" description="{4837254,861}" />
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM69 - Kha'ak Sector Gamma-->
+		<!--Cluster REM69 - Kha'ak Sector Gamma-->
 		<dataset macro="Cluster_REM69_macro">
 		  <properties>
-			<identification name="{19530001,173}" description="{19530001,174}" system="7200" image="enc_cluster818"/>
+			<identification name="{4837254,870}" description="{4837254,871}" system="7200" image="enc_cluster411"/>
 			<sounds>	<music ref="legacy_music_pool" />	</sounds>
 			<area sunlight="1.66" economy="1" security="1" factionlogic="false" tags="khaak" />
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM69_Sector001_macro">	<properties>	<identification name="{19530001,173}" description="{19530001,174}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM69_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,870}" description="{4837254,871}" />
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM70 - Unknown Kha'ak Sector-->
+		<!--Cluster REM70 - Unknown Kha'ak Sector-->
 		<dataset macro="Cluster_REM70_macro">
 		  <properties>
-			<identification name="{19530001,175}" description="{19530001,176}" system="7200" image="enc_cluster01"/>
+			<identification name="{4837254,880}" description="{4837254,881}" system="7200" image="enc_cluster411"/>
 			<sounds>	<music ref="legacy_music_pool" />	</sounds>
 			<area sunlight="2.05" economy="0" security="0" factionlogic="false" tags="khaak_unknown" />
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM70_Sector001_macro">	<properties>	<identification name="{19530001,175}" description="{19530001,176}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM70_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,880}" description="{4837254,881}" />
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM71a - Unknown Sector A-->
+		<!--Cluster REM71a - Unknown Sector A-->
 		<dataset macro="Cluster_REM71a_macro">
 		  <properties>
-			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<identification name="{4837254,890}" description="{4837254,891}" system="7100" image="enc_cluster25"/>
 			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
 			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknowna"/>
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM71a_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
+		<dataset macro="Cluster_REM71a_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,890}" description="{4837254,891}" />
+		  </properties>
+		</dataset>	
 		
-		<!--Sector REM71b - Unknown Sector B-->
+		<!--Cluster REM71b - Unknown Sector B-->
 		<dataset macro="Cluster_REM71b_macro">
 		  <properties>
-			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<identification name="{4837254,890}" description="{4837254,891}" system="7100" image="enc_cluster33"/>
 			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
 			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownb"/>
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM71b_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
+		<dataset macro="Cluster_REM71b_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,890}" description="{4837254,891}" />
+		  </properties>
+		</dataset>	
 
-		<!--Sector REM71c - Unknown Sector C-->
+		<!--Cluster REM71c - Unknown Sector C-->
 		<dataset macro="Cluster_REM71c_macro">
 		  <properties>
-			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<identification name="{4837254,890}" description="{4837254,891}" system="7100" image="enc_cluster25"/>
 			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
 			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownc"/>
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM71c_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
+		<dataset macro="Cluster_REM71c_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,890}" description="{4837254,891}" />
+		  </properties>
+		</dataset>	
 
-		<!--Sector REM71d - Unknown Sector D-->
+		<!--Cluster REM71d - Unknown Sector D-->
 		<dataset macro="Cluster_REM71d_macro">
 		  <properties>
-			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<identification name="{4837254,890}" description="{4837254,891}" system="7100" image="enc_cluster33"/>
 			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
 			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownd"/>
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM71d_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
+		<dataset macro="Cluster_REM71d_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,890}" description="{4837254,891}" />
+		  </properties>
+		</dataset>	
 		
-		<!--Sector REM71e - Unknown Sector E-->
+		<!--Cluster REM71e - Unknown Sector E-->
 		<dataset macro="Cluster_REM71e_macro">
 		  <properties>
-			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<identification name="{4837254,890}" description="{4837254,891}" system="7100" image="enc_cluster25"/>
 			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
 			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknowne"/>
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM71e_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>	
+		<dataset macro="Cluster_REM71e_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,890}" description="{4837254,891}" />
+		  </properties>
+		</dataset>	
 
-		<!--Sector REM71f - Unknown Sector F-->
+		<!--Cluster REM71f - Unknown Sector F-->
 		<dataset macro="Cluster_REM71f_macro">
 		  <properties>
-			<identification name="{19530001,177}" description="{19530001,178}" system="7100" image="enc_cluster01"/>
+			<identification name="{4837254,890}" description="{4837254,891}" system="7100" image="enc_cluster33"/>
 			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
 			<area sunlight="0.01" economy="0" security="0" god="false" factionlogic="false" extensionexclusivejobs="true" tags="unknownf"/>
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM71f_Sector001_macro">	<properties>	<identification name="{19530001,177}" description="{19530001,178}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM71f_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,890}" description="{4837254,891}" />
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM72 - Kha'ak Hive-->
+		<!--Cluster REM72 - Kha'ak Hive-->
 		<dataset macro="Cluster_REM72_macro">
 		  <properties>
-			<identification name="{19530001,179}" description="{19530001,180}" system="7200" image="enc_cluster01"/>
+			<identification name="{4837254,900}" description="{4837254,901}" system="7200" image="enc_cluster411"/>
 			<sounds>	<music ref="legacy_music_pool" />	</sounds>
 			<area sunlight="22.73" economy="0" security="0" factionlogic="false" tags="khaak_hive" />
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM72_Sector001_macro">	<properties>	<identification name="{19530001,179}" description="{19530001,180}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM72_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,900}" description="{4837254,901}" />
+		  </properties>
+		</dataset>
 
-		<!--Sector REM73 - Shadow's End-->
+		<!--Cluster REM73 - Shadow's End-->
 		<dataset macro="Cluster_REM73_macro">
 		  <properties>
-			<identification name="{20005,9006}" description="{19530001,184}" image="enc_cluster01"/>
+			<identification name="{4837254,920}" description="{4837254,921}" image="enc_rem73"/>
 			<sounds>	<music ref="legacy_music_pool" />	</sounds>
 			<area sunlight="0.86" economy="1" security="0.25" tags="pirborder" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13091}(Yellow Giant)"/>			
+			  </suns>
+			  <planets>
+				<planet name="{4837254,920} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15031}(Volcanic)" atmosphere="{1042,11091}(Sulphur Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="part_oof_planet">
+				  <moons>
+					<moon name="{4837254,920} {20403,101}(a) {20402,1}(I)" geology="{1042,15061}(Canyons)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,10021}" maxpopulation="41757624" settlements="{4837255,10}(Mining Facilities)" part="moon"/>
+					<moon name="{4837254,920} {20403,101}(a) {20402,2}(II)" geology="{1042,15081}(Ice)" atmosphere="{1042,11031}(Oxygen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Sphere002"/>				
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>				
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM73_Sector001_macro">	<properties>	<identification name="{19530001,183}" description="{19530001,184}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM73_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,920}" description="{4837254,921}" />
+			<worlds>
+			  <world part="moon"/>
+			</worlds>			
+		  </properties>
+		</dataset>
 		
-		<!--Sector REM74 - Tebathimanckatt's Legacy-->
+		<!--Cluster REM74 - Tebathimanckatt's Legacy-->
 		<dataset macro="Cluster_REM74_macro">
 		  <properties>
-			<identification name="{20005,3014}" description="{19530001,186}" image="enc_cluster01"/>
+			<identification name="{4837254,930}" description="{4837254,931}" image="enc_rem74"/>
 			<sounds>	<music ref="music_dlc_pirate_soundtrack_leap_of_faith" />	</sounds>
 			<area sunlight="0.19" economy="1" security="0.5"/>
+		    <system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+			    <sun class="{1042,13191}(Black Hole)"/>
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,930}" class="{1042,14131}(Ice Giant)" geology="{1042,15081}(Ice)" atmosphere="{1042,11021}(Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="planet001" />
+			  </planets>
+			</system>			
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM74_Sector001_macro">	<properties>	<identification name="{19530001,185}" description="{19530001,186}" />	</properties>	</dataset>
+		<dataset macro="Cluster_REM74_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,930}" description="{4837254,931}" />
+			<worlds>
+			  <world part="planet001"/>
+			</worlds>					
+		  </properties>
+		</dataset>
 
 		<!-- Sol -->
 		<dataset macro="Cluster_REM75_macro">
 		  <properties>
-			<identification name="{20003,1160001}" description="{20003,1160002}" system="100"  image="enc_cluster109"/>
+			<identification name="{20003,1160001}" description="{20003,1160002}" system="100"  image="enc_rem75"/>
 			<area sunlight="0.07" economy="1" security="1" />
 		  </properties>
 		 </dataset>
-		<!--Sector REM75 - Titania-->
+		<!--Cluster REM75 - Titania-->
 		<dataset macro="Cluster_REM75_Sector001_macro">
 		  <properties>
-			<identification name="{19530001,69}" description="{19530001,70}" />
-			  <sounds>	<music ref="music_titania" />	</sounds>	
-			  <area tags="atfhq" />			  
+			<identification name="{4837254,350}" description="{4837254,351}" />
+			<sounds>	<music ref="music_titania" />	</sounds>	
+			<area tags="atfhq" />
+			<worlds>
+			  <world part="part_titania"/>
+			</worlds>			  
 		  </properties>
 		</dataset>		
 
-		<!--Sector REM76 - Untainted Eternity-->
+		<!--Cluster REM76 - Untainted Eternity-->
 		<dataset macro="Cluster_REM76_macro">
 		  <properties>
-			<identification name="{20005,3046}" description="{19530001,188}" image="enc_cluster01"/>
+			<identification name="{4837254,940}" description="{4837254,941}" image="enc_rem76"/>
 			<sounds>	<music ref="music_dlc_pirate_soundtrack_avarice" />	</sounds>
 			<area sunlight="0.31" economy="1" security="0.5"/>
+		    <system>
+			  <space environment="{1042,12051}(Protoplanetary Disc)"/>
+			  <suns>
+			    <sun class="{1042,13191}(Black Hole)"/>
+			  </suns>				  
+			</system>			
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM76_Sector001_macro">	<properties>	<identification name="{19530001,187}" description="{19530001,188}" />	</properties>	</dataset>		
+		<dataset macro="Cluster_REM76_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,940}" description="{4837254,941}" />
+		  </properties>
+		</dataset>		
 		
-		<!--Sector REM77 - Belt of Aguilar-->
+		<!--Cluster REM77 - Belt of Aguilar-->
 		<dataset macro="Cluster_REM77_macro">
 		  <properties>
-			<identification name="{20005,1011}" description="{19530001,190}" image="enc_cluster01"/>
+			<identification name="{4837254,950}" description="{4837254,951}" image="enc_rem77"/>
 			<sounds>	<music ref="music_aguilar" />	</sounds>
 			<area sunlight="1.13" economy="1" security="1" tags="jonfercohq" />
+			<system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+				<sun class="{1042,13091}(Yellow Giant)"/>			
+			  </suns>
+			  <planets>
+				<planet name="{4837254,950} {20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{1042,15021}(Mountains)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="997959891" settlements="{1042,16041}(Multiple Cities)" part="planet001c">
+				  <moons>
+					<moon name="{4837254,950} {20403,101}(a) {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+					<moon name="{4837254,950} {20403,101}(a) {20402,2}(II)" geology="{1042,15081}(Ice)" atmosphere="{1042,11031}(Oxygen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>					
+			  </planets>
+			</system>				
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM77_Sector001_macro">	<properties>	<identification name="{19530001,189}" description="{19530001,190}" />	</properties>	</dataset>	
+		<dataset macro="Cluster_REM77_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,950}" description="{4837254,951}" />
+			<worlds>
+			  <world part="planet001c"/>
+			</worlds>				
+		  </properties>
+		</dataset>	
 
-		<!--Sector REM78 - Tkr's Deprivation-->
+		<!--Cluster REM78 - Tkr's Deprivation-->
 		<dataset macro="Cluster_REM78_macro">
 		  <properties>
-			<identification name="{20005,5035}" description="{19530001,202}" image="enc_cluster01"/>
+			<identification name="{4837254,970}" description="{4837254,971}" image="enc_rem78"/>
 			<sounds>	<music ref="music_soundtrack_periphery" />	</sounds>
 			<area sunlight="1.27" economy="1" security="1" />
+		    <system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+			    <sun class="{1042,13091}(Yellow Giant)"/>
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,970}" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="81540354" settlements="{1042,16041}(Multiple Cities)" part="planet">					
+				  <moons>
+					<moon name="{4837254,970} {20402,1}(I)" geology="{1042,15061}(Canyons)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+				  </moons>
+				</planet>
+			  </planets>
+			</system>			
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM78_Sector001_macro">	<properties>	<identification name="{19530001,201}" description="{19530001,202}" />	</properties>	</dataset>		
+		<dataset macro="Cluster_REM78_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,970}" description="{4837254,971}" />
+			<worlds>
+			  <world part="planet"/>
+			</worlds>			
+		  </properties>
+		</dataset>		
 		
-		<!--Sector REM79 - Matrix #695-->
+		<!--Cluster REM79 - Matrix #695-->
 		<dataset macro="Cluster_REM79_macro">
 		  <properties>
-			<identification name="{19530001,203}" description="{19530001,204}" image="enc_cluster01"/>
+			<identification name="{4837254,980}" description="{4837254,981}" image="enc_rem79"/>
 			<sounds>	<music ref="music_soundtrack_xenon" />	</sounds>
 			<area sunlight="2.07" economy="1" security="1" tags="matrix695" />
+		    <system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+			    <sun class="{1042,13051}(Blue Dwarf)"/>
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,980}" class="{1042,14031}(Terrestrial)" geology="{1042,15021}(Mountains)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,16011}(Uninhabited)" settlements="{1042,16061}(Xenon Structures)" part="planet001c">					
+				  <moons>
+					<moon name="{4837254,980} {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+					<moon name="{4837254,980} {20402,1}(II)" geology="{1042,15061}(Canyons)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>					
+				  </moons>
+				</planet>
+			  </planets>
+			</system>			
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM79_Sector001_macro">	<properties>	<identification name="{19530001,203}" description="{19530001,204}" />	</properties>	</dataset>	
-		
-		<!--Earth - Torrus 87-->
-		<dataset macro="Cluster_104_Sector003_macro">
+		<dataset macro="Cluster_REM79_Sector001_macro">
 		  <properties>
-			<identification name="{19530001,199}" description="{19530001,200}"  image="enc_cluster104"/>
-			<area sunlight="0.41" economy="1" security="1"/>			
-			<sounds>
-			  <music ref="music_dlc_terran_soundtrack_earth" />
-			</sounds>
+			<identification name="{4837254,980}" description="{4837254,981}" />
 			<worlds>
-			  <world part="part_earth"/>
-			</worlds>
-			<access licence="innercore_access"/>
+			  <world part="planet001c"/>
+			</worlds>			
 		  </properties>
-		</dataset>
+		</dataset>	
 
-		<!--Sector REM80 - Cloudbase South West-->
+		<!--Cluster REM80 - Cloudbase South West-->
 		<dataset macro="Cluster_REM80_macro">
 		  <properties>
-			<identification name="{20005,1029}" description="{19530001,216}" image="enc_cluster01"/>
+			<identification name="{4837254,1040}" description="{4837254,1041}" image="enc_rem80"/>
 			<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
-			<area sunlight="1.71" economy="1" security="1" />
+			<area sunlight="1.46" economy="1" security="1" />
+		    <system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+			    <sun class="{1042,13041}(White Dwarf)"/>
+			    <sun class="{1042,13041}(White Dwarf)"/>
+			    <sun class="{1042,13041}(White Dwarf)"/>				
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,1040}" class="{1042,14031}(Terrestrial)" geology="{1042,15121}(Swamp)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="505453493" settlements="{1042,16041}(Multiple Cities)" part="part_earthlike001">					
+				  <moons>
+					<moon name="{4837254,1040} {20402,1}(I)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>
+			  </planets>
+			</system>			
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_REM80_Sector001_macro">	<properties>	<identification name="{19530001,215}" description="{19530001,216}" />	</properties>	</dataset>			
+		<dataset macro="Cluster_REM80_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,1040}" description="{4837254,1041}" />
+			<worlds>
+			  <world part="part_earthlike001"/>
+			</worlds>			
+		  </properties>
+		</dataset>		
 
-		<!--Sector ALD01 - Adlrin Cluster-->
+		<!--Cluster REM81 - The Hole-->
+		<dataset macro="Cluster_REM81_macro">
+		  <properties>
+			<identification name="{4837254,1050}" description="{4837254,1051}" image="enc_rem81"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_argon" />	</sounds>
+			<area sunlight="0.17" economy="1" security="1" />
+		    <system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+			    <sun class="{1042,13021}(Yellow Dwarf)"/>			
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,1050}" class="{1042,14101}(Earth Analog)" geology="{1042,15131}(Forest)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="47924585" settlements="{1042,16101}(Small Settlements)" part="planet001c">					
+				  <moons>
+					<moon name="{4837254,1050} {20402,1}(I)" geology="{1042,15061}(Canyons)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>				
+				  </moons>
+				</planet>
+			  </planets>
+			</system>				
+		  </properties>
+		</dataset>
+		<dataset macro="Cluster_REM81_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,1050}" description="{4837254,1051}" />
+			<worlds>
+			  <world part="planet001c"/>
+			</worlds>			
+		  </properties>
+		</dataset>	
+
+		<!--Cluster REM82 - Ocracoke's Storm-->
+		<dataset macro="Cluster_REM82_macro">
+		  <properties>
+			<identification name="{4837254,1060}" description="{4837254,1061}" image="enc_rem82"/>
+			<sounds>	<music ref="music_dlc_terran_soundtrack_yaki" />	</sounds>
+			<area sunlight="1.83" economy="1" security="1" factionlogic="false" />
+			  <planets>
+				<planet name="{4837254,1060}" class="{1042,14031}(Terrestrial)" geology="{1042,15101}(Barren)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="planet"/>				
+			  </planets>			
+		  </properties>
+		</dataset>
+		<dataset macro="Cluster_REM82_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,1060}" description="{4837254,1061}" />
+			<worlds>
+			  <world part="planet"/>
+			</worlds>				
+		  </properties>
+		</dataset>	
+
+		<!--Cluster REM83 - Patriarch's Seat-->
+		<dataset macro="Cluster_REM83_macro">
+		  <properties>
+			<identification name="{4837254,1070}" description="{4837254,1071}" image="enc_rem83"/>
+			<sounds>	<music ref="music_dlc_split_soundtrack_patriarchy" />	</sounds>
+			<area sunlight="1.11" economy="1" security="1" tags="resplit" />
+			<system>
+			  <space environment="{1042,12031}(Nebula)"/>
+			  <suns>
+				<sun class="{1042,13041}(White Dwarf)"/>
+			  </suns>
+			  <planets>
+				<planet name="Oceania" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="3257081301" settlements="{1042,16051}(Densely Populated)" part="part_earthlike">
+				  <moons>
+					<moon name="Oceania {20402,1}(I)" geology="{1042,15061}(Canyons)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+				  </moons>
+				</planet>				
+			  </planets>
+			</system>			
+		  </properties>
+		</dataset>
+		<dataset macro="Cluster_REM83_Sector001_macro">
+		  <properties>
+			<identification name="{4837254,1070}" description="{4837254,1071}" />
+		    <worlds>
+			  <world part="part_earthlike"/>
+		    </worlds>			
+		  </properties>
+		</dataset>			
+
+		<!--Cluster ALD01 - Adlrin-->
 		<dataset macro="Cluster_ALD01_macro">
 		  <properties>
-			<identification name="{20005,7004}" description="{19530001,206}" image="enc_cluster408"/>
+			<identification name="{4837254,990}" description="{4837254,991}" image="enc_ald01"/>
 			<sounds>	<music ref="legacy_music_pool" />	</sounds>
+		    <system>
+			  <space environment="{1042,12041}(Asteroids)"/>
+			  <suns>
+			    <sun class="{1042,13031}(Orange Dwarf)"/>
+			  </suns>				  
+			  <planets>
+			    <planet name="{4837254,990}" class="{4837255,5}(Asteroid)" geology="{1042,15091}(Craters)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="1989995421" settlements="{1042,16041}(Multiple Cities)" part="part_rock">					
+				  <moons>
+					<moon name="{1042,12041}(Asteroids)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,10021}" maxpopulation="286948415" settlements="{4837255,8}(Asteroid Settlements)" part="Object020"/>
+				  </moons>
+				</planet>
+			  </planets>
+			</system>			
 		  </properties>
 		</dataset>
 			<!--Aldrin I-->
 			<dataset macro="Cluster_ALD01_Sector001_macro">
-				<properties>
-					<identification name="{19530001,207}" description="{19530001,208}" />
-					<area sunlight="1.01" economy="1" security="0.75" tags="aldrin" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,1000}" description="{4837254,1001}" />
+				<area sunlight="1.01" economy="1" security="1" extensionexclusivejobs="true" tags="aldrin" />
+				<worlds>
+				  <world part="part_rock"/>
+				</worlds>
+			  </properties>
 			</dataset>
 			<!--Aldrin II-->
 			<dataset macro="Cluster_ALD01_Sector002_macro">
-				<properties>
-					<identification name="{19530001,209}" description="{19530001,210}" />
-					<area sunlight="0.67" economy="1" security="0.75" tags="aldrin" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,1010}" description="{4837254,1011}" />
+				<area sunlight="0.67" economy="1" security="0.5" extensionexclusivejobs="true" tags="aldrin" />
+				<worlds>
+				  <world part="Object020"/>
+				</worlds>				
+			  </properties>
 			</dataset>			
 			<!--Aldrin III-->
 			<dataset macro="Cluster_ALD01_Sector003_macro">
-				<properties>
-					<identification name="{19530001,211}" description="{19530001,212}" />
-					<area sunlight="0.87" economy="1" security="0.75" tags="aldrin" />
-				</properties>
+			  <properties>
+				<identification name="{4837254,1020}" description="{4837254,1021}" />
+				<area sunlight="1.57" economy="1" security="0.75" extensionexclusivejobs="true" tags="aldrin" />
+			  </properties>
 			</dataset>			
 
-		<!--Sector ALD02 - The Bastion-->
+		<!--Cluster ALD02 - The Bastion-->
 		<dataset macro="Cluster_ALD02_macro">
 		  <properties>
-			<identification name="{19530001,213}" description="{19530001,214}" image="enc_cluster411"/>
+			<identification name="{4837254,1030}" description="{4837254,1031}" image="enc_ald02"/>
 			<sounds>	<music ref="music_dlc_terran_soundtrack_brennans_triumph" />	</sounds>
-			<area sunlight="1.47" economy="1" security="0.25"/>
+			<area sunlight="1.27" economy="1" security="0.25"/>
+		    <system>
+			  <space environment="{1042,12011}(Clear Space)"/>
+			  <suns>
+			    <sun class="{1042,13141}(Yellow Supergiant)"/>
+			  </suns>				  
+			</system>				
 		  </properties>
 		</dataset>
-		<dataset macro="Cluster_ALD02_Sector001_macro">	<properties>	<identification name="{19530001,213}" description="{19530001,214}" />	</properties>	</dataset>
-		
-		<!--Sector REMX - REM Test-->
-		<dataset macro="Cluster_REMXX_macro">
+		<dataset macro="Cluster_ALD02_Sector001_macro">
 		  <properties>
-			<identification name="{19530001,18000}" description="{19530001,18001}" image="enc_cluster01"/>
-			<area sunlight="1" economy="1" security="1"/>
+			<identification name="{4837254,1030}" description="{4837254,1031}" />
 		  </properties>
-		</dataset>
-		<dataset macro="Cluster_REMXX_Sector001_macro">	<properties>	<identification name="{19530001,18002}" description="{19530001,18003}" />	</properties>	</dataset>	
-		<dataset macro="Cluster_REMXX_Sector002_macro">	<properties>	<identification name="{19530001,18004}" description="{19530001,18005}" />	</properties>	</dataset>	
-		<dataset macro="Cluster_REMXX_Sector003_macro">	<properties>	<identification name="{19530001,18006}" description="{19530001,18007}" />	</properties>	</dataset>			
+		</dataset>			
 	</add>
 
 
+		<!--Basegame-->		
   <remove sel="//dataset[@macro='Cluster_44_macro']/properties/area/@factionlogic"/>
   <remove sel="//dataset[@macro='Cluster_45_macro']/properties/area/@factionlogic"/>	
 	<!--Music-->
@@ -1114,9 +2480,495 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 	  <music ref="music_hatikvah" />
 	</sounds>
   </add>
-  
+  <!--Grand Exchange I/III/IV-->
+  <replace sel="/defaults/dataset[@macro='Cluster_01_macro']/properties/system/planets/planet/@maxpopulation">1172623650</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_01_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001" factor="0.1"/>
+    </worlds>
+  </add> 
+  <add sel="/defaults/dataset[@macro='Cluster_01_Sector002_macro']/properties">
+    <worlds>
+      <world part="planet001" factor="0.15"/>
+    </worlds>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_01_Sector003_macro']/properties">
+    <worlds>
+      <world part="planet001" factor="0.75"/>
+    </worlds>
+  </add>  
+  <!--Nopileos' Fortune II/VI-->
+  <replace sel="/defaults/dataset[@macro='Cluster_04_macro']/properties/system/planets/planet/@maxpopulation">272767500</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_04_macro']/properties/system/planets/planet/moons/moon/@maxpopulation">204577500</replace>  
+  <remove sel="/defaults/dataset[@macro='Cluster_04_Sector001_macro']/properties/worlds/world[@part='planet001']"/>
+  <remove sel="/defaults/dataset[@macro='Cluster_04_Sector002_macro']/properties/worlds/world[@part='planet']"/>  
+  <!--Path to Profit-->
+  <replace sel="/defaults/dataset[@macro='Cluster_05_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_05_macro']/properties/system/planets/planet/@settlements">{4837255,10}(Mining Facilities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_05_macro']/properties/system/planets/planet" type="@maxpopulation">5655505</add>
+  <add sel="/defaults/dataset[@macro='Cluster_05_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001"/>
+    </worlds>
+  </add>  
+  <!--Black Hole Sun IV/V-->
+  <replace sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/identification/@image">enc_new_cluster06</replace>  
+  <replace sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/system/planets/planet/moons/moon/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/system/planets/planet/moons/moon/@settlements">{1042,16041}(Multiple Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/system/planets/planet/moons/moon" type="@maxpopulation">167946576</add>
+  <add sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/system/planets/planet/moons/moon" type="@part">Sphere001</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_06_Sector002_macro']/properties/worlds/world/@part">Sphere001</replace>
+  <remove sel="/defaults/dataset[@macro='Cluster_06_Sector002_macro']/properties/worlds/world/@factor"/>  
+  <!--The Reach-->
+  <replace sel="/defaults/dataset[@macro='Cluster_07_macro']/properties/system/planets/planet/@maxpopulation">470011030</replace>  
+  <!--Silent Witness I-->
+  <replace sel="/defaults/dataset[@macro='Cluster_08_macro']/properties/system/planets/planet/@settlements">{4837255,9}(Orbital Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_08_macro']/properties/system/planets/planet" type="@maxpopulation">83499337</add>
+  <add sel="/defaults/dataset[@macro='Cluster_08_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001"/>
+    </worlds>
+  </add>  
+  <!--Bright Promise-->
+  <replace sel="/defaults/dataset[@macro='Cluster_09_macro']/properties/system/planets/planet/@maxpopulation">577056</replace>  
+  <!--Unholy Retribution-->
+  <replace sel="/defaults/dataset[@macro='Cluster_10_macro']/properties/system/planets/planet/moons/moon/@maxpopulation">55024850</replace>  
+  <!--Pontifex's Claim-->
+  <replace sel="/defaults/dataset[@macro='Cluster_11_macro']/properties/system/planets/planet/@maxpopulation">229656036</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_11_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>  
+  <!--True Sight-->
+  <replace sel="/defaults/dataset[@macro='Cluster_12_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_12_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_12_macro']/properties/system/planets/planet" type="@maxpopulation">93345216</add>
+  <add sel="/defaults/dataset[@macro='Cluster_12_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001"/>
+    </worlds>
+  </add>  
+  <!--Second Contact II-->
+  <replace sel="/defaults/dataset[@macro='Cluster_13_macro']/properties/system/planets/planet/@maxpopulation">1084233330</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_13_macro']/properties/system/planets/planet/@settlements">{1042,16041}(Multiple Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_13_macro']/properties/system/planets/planet/moons">
+    <moon name="Beacon" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_13_Sector001_macro']/properties/worlds/world" type="@factor">0.1</add>  
+  <!--Argon Prime-->
+  <replace sel="/defaults/dataset[@macro='Cluster_14_macro']/properties/system/planets/planet/@maxpopulation">5388113907</replace>  
+  <!--Ianamus Zura IV/VII-->
+  <replace sel="/defaults/dataset[@macro='Cluster_15_macro']/properties/system/planets/planet/@maxpopulation">5822051013</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_15_Sector001_macro']/properties/worlds/world" type="@factor">0.95</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_15_Sector002_macro']/properties/worlds/world/@factor">0.05</replace>  
+  <!--Trinity Sanctum III-->
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/identification/@image">enc_new_cluster18</replace>   
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/suns/sun/@class">{1042,13121}(Blue Giant)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/@name">{20003,180001} {20403,101}(a)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/@class">{1042,14031}(Terrestrial)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/@geology">{1042,15111}(Desert)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/@atmosphere">{1042,11071}(Nitrogen/Oxygen)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/@settlements">{1042,16051}(Densely Populated)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/@part">planet001</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet" type="@maxpopulation">3470754777</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/moons/moon[@name='{20003,180001} {20403,107}(g) {20402,1}(I)']/@name">{20003,180001} {20403,101}(a) {20402,1}(I)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/moons/moon[@name='{20003,180001} {20403,101}(a) {20402,1}(I)']/@atmosphere">{1042,10011}(None)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/moons/moon[@name='{20003,180001} {20403,107}(g) {20402,2}(II)']/@name">{20003,180001} {20403,101}(a) {20402,2}(II)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/moons/moon[@name='{20003,180001} {20403,101}(a) {20402,2}(II)']/@atmosphere">{1042,10011}(None)</replace>
+  <remove sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/moons/moon[@name='{20003,180001} {20403,107}(g) {20402,3}(III)']"/>
+  <remove sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/moons/moon[@name='{20003,180001} {20403,107}(g) {20402,4}(IV)']"/>
+  <add sel="/defaults/dataset[@macro='Cluster_18_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001"/>
+    </worlds>
+  </add>
+  <!--Hewa's Twin I/II-->
+  <replace sel="/defaults/dataset[@macro='Cluster_19_macro']/properties/system/planets/planet/@maxpopulation">827929510</replace>   
+  <add sel="/defaults/dataset[@macro='Cluster_19_Sector001_macro']/properties/worlds/world" type="@factor">0.5</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_19_Sector002_macro']/properties/worlds/world/@factor">0.3</replace>  
+  <!--Company Regard-->
+  <replace sel="/defaults/dataset[@macro='Cluster_20_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_20_macro']/properties/system/planets/planet/@settlements">{1042,16091}(Agora Ouranos)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_20_macro']/properties/system/planets/planet" type="@maxpopulation">51535512</add>
+  <add sel="/defaults/dataset[@macro='Cluster_20_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001"/>
+    </worlds>
+  </add>  
+  <!--Pious Mists II-->
+  <replace sel="/defaults/dataset[@macro='Cluster_22_macro']/properties/system/planets/planet/@geology">{1042,15111}(Desert)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_22_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_22_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_22_macro']/properties/system/planets/planet" type="@maxpopulation">25270080</add>
+  <add sel="/defaults/dataset[@macro='Cluster_22_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet"/>
+    </worlds>
+  </add>  
+  <!--Sacred Relic-->
+  <replace sel="/defaults/dataset[@macro='Cluster_23_macro']/properties/system/planets/planet/@maxpopulation">484628403</replace>  
+  <!--Holy Vision-->
+  <replace sel="/defaults/dataset[@macro='Cluster_24_macro']/properties/system/planets/planet/@maxpopulation">3297217038</replace>  
+  <!--Fauly Logic I/VII-->
+  <replace sel="/defaults/dataset[@macro='Cluster_25_macro']/properties/identification/@image">enc_new_cluster25</replace>   
+  <add sel="/defaults/dataset[@macro='Cluster_25_macro']/properties/system">
+    <planets>
+      <planet name="{20003,250001}{20403,108}(h)" class="{1042,14031}(Terrestrial)" geology="{4837255,7}(Toxic)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="part_earthlike001">
+        <moons>
+          <moon name="{20003,250001} {20403,108}(h) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,11061}(Methane/Hydrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Moon1"/>
+          <moon name="{20003,250001} {20403,108}(h) {20402,2}(II)" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="Moon2"/>
+        </moons>
+      </planet>
+    </planets>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_25_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_earthlike001"/>
+    </worlds>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_25_Sector002_macro']/properties">
+    <worlds>
+      <world part="Moon1"/>
+      <world part="Moon2"/>
+    </worlds>
+  </add>  
+  <!--The Void-->
+  <replace sel="/defaults/dataset[@macro='Cluster_27_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_27_macro']/properties/system/planets/planet/@settlements">{4837255,9}(Orbital Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_27_macro']/properties/system/planets/planet" type="@maxpopulation">117986292</add>
+  <add sel="/defaults/dataset[@macro='Cluster_27_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001"/>
+    </worlds>
+  </add>  
+  <!--Antigone Memorial-->
+  <replace sel="/defaults/dataset[@macro='Cluster_28_macro']/properties/system/planets/planet/@maxpopulation">3366400865</replace>  
+  <!--Hatikvah's Choice I/III-->
+  <replace sel="/defaults/dataset[@macro='Cluster_29_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_29_macro']/properties/system/planets/planet/@settlements">{4837255,9}(Orbital Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_29_macro']/properties/system/planets/planet" type="@maxpopulation">162433263</add>
+  <add sel="/defaults/dataset[@macro='Cluster_29_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001"/>
+    </worlds>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_29_Sector002_macro']/properties">
+    <worlds>
+      <world part="planet001" factor="0.95"/>
+    </worlds>
+  </add>  
+  <!--Morningstar III-->
+  <replace sel="/defaults/dataset[@macro='Cluster_30_macro']/properties/system/planets/planet/@maxpopulation">194479594</replace>  
+  <!--Heretic's End-->
+  <replace sel="/defaults/dataset[@macro='Cluster_31_macro']/properties/system/planets/planet/@maxpopulation">147192381</replace>  
+  <!--Profit Center Alpha-->  
+  <replace sel="/defaults/dataset[@macro='Cluster_34_macro']/properties/system/planets/planet/@maxpopulation">1725063168</replace>  
+  <!--Lasting Vengeance-->
+  <replace sel="/defaults/dataset[@macro='Cluster_35_macro']/properties/system/planets/planet/@maxpopulation">313486337</replace>  
+  <!--Cardinal's Redress-->
+  <replace sel="/defaults/dataset[@macro='Cluster_36_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_36_macro']/properties/system/planets/planet/@settlements">{4837255,10}(Mining Facilities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_36_macro']/properties/system/planets/planet" type="@maxpopulation">49415093</add>
+  <add sel="/defaults/dataset[@macro='Cluster_36_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001"/>
+    </worlds>
+  </add>  
+  <!--Second Contact VII-->
+  <add sel="/defaults/dataset[@macro='Cluster_40_Sector001_macro']/properties/worlds/world" type="@factor">0.15</add>  
+  <!--Second Contact XI-->
+  <add sel="/defaults/dataset[@macro='Cluster_41_Sector001_macro']/properties/worlds/world" type="@factor">0.75</add>  
+  <!--Hewa's Twin III/IV-->  
+  <replace sel="/defaults/dataset[@macro='Cluster_42_Sector001_macro']/properties/worlds/world/@factor">0.15</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_42_Sector002_macro']/properties/worlds/world/@factor">0.035</replace>
+  <!--Hewa's Twin V-->
+  <replace sel="/defaults/dataset[@macro='Cluster_43_Sector001_macro']/properties/worlds/world/@factor">0.025</replace>  
+  <!--Morning Star IV-->
+  <add sel="/defaults/dataset[@macro='Cluster_46_Sector001_macro']/properties/worlds/world" type="@factor">0.305</add>  
+  <!--Cardinal's Domain-->
+  <replace sel="/defaults/dataset[@macro='cluster_709_macro']/properties/system/planets/planet/@maxpopulation">1643811946</replace>
+  <remove sel="/defaults/dataset[@macro='cluster_709_Sector001_macro']/properties/worlds/world/@factor"/>  
+  <!--Moo-Kye's Revenge-->
+  <replace sel="/defaults/dataset[@macro='cluster_710_macro']/properties/system/planets/planet[@name='{20003,7100001} {20403,101}(a)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='cluster_710_macro']/properties/system/planets/planet[@name='{20003,7100001} {20403,101}(a)']/@settlements">{1042,16101}(Small Settlements)</replace>
+  <add sel="/defaults/dataset[@macro='cluster_710_macro']/properties/system/planets/planet[@name='{20003,7100001} {20403,101}(a)']" type="@maxpopulation">28101320</add>
+  <remove sel="/defaults/dataset[@macro='cluster_710_Sector001_macro']/properties/worlds/world/@factor"/>  
+  <!--Mi Ton's Refuge-->
+  <replace sel="/defaults/dataset[@macro='cluster_711_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='cluster_711_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>
+  <add sel="/defaults/dataset[@macro='cluster_711_macro']/properties/system/planets/planet" type="@maxpopulation">63624376</add>
+  <remove sel="/defaults/dataset[@macro='cluster_711_Sector001_macro']/properties/worlds/world/@factor"/>  
+  <!--Loomanckstrat's Legacy-->
+  <add sel="/defaults/dataset[@macro='cluster_712_macro']/properties/system">
+    <planets>
+      <planet name="{1042,12041}(Asteroids)" class="{1042,12041}(Asteroids)" geology="{1042,12041}(Asteroids)" atmosphere="{1042,10011}(None)" population="{1042,10021}" maxpopulation="13537924" settlements="{4837255,8}(Asteroid Settlements)" part="part_loomanckstratslegacy"/>
+    </planets>
+  </add>
+  <remove sel="/defaults/dataset[@macro='cluster_712_Sector001_macro']/properties/worlds/world/@factor"/>  
+  <!--CEO's Doubt-->
+  <replace sel="/defaults/dataset[@macro='cluster_713_macro']/properties/system/planets/planet[@name='{20003,7130001} {20403,101}(a)']/@maxpopulation">102067239</replace>
+  <remove sel="/defaults/dataset[@macro='cluster_713_Sector001_macro']/properties/worlds/world/@factor"/>  
+  <!--Freedom's Reach-->
+  <replace sel="/defaults/dataset[@macro='cluster_714_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='cluster_714_macro']/properties/system/planets/planet/@settlements">{1042,16031}(Research Outpost)</replace>
+  <add sel="/defaults/dataset[@macro='cluster_714_macro']/properties/system/planets/planet" type="@maxpopulation">2072163</add>
+  <remove sel="/defaults/dataset[@macro='cluster_714_Sector001_macro']/properties/worlds/world/@factor"/>  
 
+		<!--Split DLC-->	
+  <add sel="/defaults/dataset[@macro='Cluster_419_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
+  <add sel="/defaults/dataset[@macro='Cluster_420_Sector001_macro']/properties/area" type="@tags">splitdlc</add>	
+  <add sel="/defaults/dataset[@macro='Cluster_422_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
+  <add sel="/defaults/dataset[@macro='Cluster_423_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
+  <add sel="/defaults/dataset[@macro='Cluster_423_Sector002_macro']/properties/area" type="@tags">splitdlc</add>
+  <!--Wretched Skies IV-->
+  <replace sel="/defaults/dataset[@macro='Cluster_400_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_400_macro']/properties/system/planets/planet/@settlements">{4837255,9}(Orbital Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_400_macro']/properties/system/planets/planet" type="@maxpopulation">1203078108</add>
+  <add sel="/defaults/dataset[@macro='Cluster_400_macro']/properties/system/planets/planet" type="@part">part_gasgiant</add>
+  <add sel="/defaults/dataset[@macro='Cluster_400_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_gasgiant" factor="0.05"/>
+    </worlds>
+  </add>
+  <!--Family Zhin-->  
+  <replace sel="/defaults/dataset[@macro='Cluster_401_macro']/properties/system/planets/planet/moons/moon/@maxpopulation">53661408</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_401_macro']/properties/system/planets/planet/moons/moon/@settlements">{4837255,10}(Mining Facilities)</replace>
+  <!--Family Kritt-->
+  <replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/identification/@image">enc_new_cluster402</replace>   
+  <replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/@class">{1042,14101}(Earth Analog)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/@geology">{1042,15131}(Forest)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/@atmosphere">{1042,11071}(Nitrogen/Oxygen)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/@settlements">{1042,16041}(Multiple Cities)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/@part">part_earthlike001</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet" type="@maxpopulation">243630891</add>
+  <remove sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/text()[1]"/>
+  <add sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet">
+    <moons>
+      <moon name="{20003,4020001} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+      <moon name="{20003,4020001} {20403,101}(a) {20402,1}(II)" geology="{1042,15091}(Craters)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+    </moons>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_earthlike001"/>
+    </worlds>
+  </add>
+  <!--Wretched Skies V-->
+  <add sel="/defaults/dataset[@macro='Cluster_403_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_gasgiant" factor="0.75"/>
+    </worlds>
+  </add>
+  <!--Zyarth's Dominion I-->
+  <replace sel="/defaults/dataset[@macro='Cluster_404_macro']/properties/system/planets/comment()[1]">
+    <planet name="{20003,4040001}" class="{1042,13021}(Yellow Dwarf)" geology="{1042,10011}(None)" atmosphere="{1042,10011}(None)" population="{1042,10021}" maxpopulation="76082036" settlements="{4837255,9}(Orbital Cities)" part="part_sun">
+    </planet>
+  </replace>
+  <!--Zyarth's Dominion IV-->
+  <add sel="/defaults/dataset[@macro='Cluster_405_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_sun"/>
+    </worlds>
+  </add>  
+  <!--Family Tkr-->
+  <replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/identification/@image">enc_new_cluster407</replace>   
+  <replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@name">{20003,4070001} {20403,101}(a)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@class">{1042,14031}(Terrestrial)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@geology">{1042,15131}(Forest)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@atmosphere">{1042,11071}(Nitrogen/Oxygen)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@settlements">{1042,16051}(Densely Populated)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@part">planet001c</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet" type="@maxpopulation">2135556240</add>
+  <remove sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/text()[1]"/>
+  <add sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet">
+    <moons>
+      <moon name="{20003,4070001} {20403,101}(a) {20402,1}(I)" geology="{1042,15071}(Rocks)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
+    </moons>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_407_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001c"/>
+    </worlds>
+  </add>
+  <!--Tharka's Ravine XXIV-->
+  <replace sel="/defaults/dataset[@macro='Cluster_409_macro']/properties/system/planets/planet[@name='{20003,4090001} {20403,105}(e)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_409_macro']/properties/system/planets/planet[@name='{20003,4090001} {20403,105}(e)']/@settlements">{4837255,9}(Orbital Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_409_macro']/properties/system/planets/planet[@name='{20003,4090001} {20403,105}(e)']" type="@maxpopulation">650012643</add>
+  <add sel="/defaults/dataset[@macro='Cluster_409_macro']/properties/system/planets">
+    <planet name="{1042,12041}(Asteroids)" class="{1042,12041}(Asteroids)" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,10021}" maxpopulation="557616116" settlements="{4837255,8}(Asteroid Settlements)" part="part_astrolow">
+    </planet>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_409_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_gasgiant"/>
+    </worlds>
+  </add>
+  <!--Tharka's Ravine XVI-->
+  <add sel="/defaults/dataset[@macro='Cluster_410_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_astrolow"/>
+    </worlds>
+  </add>
+  <!--Guiding Star V--> 
+  <replace sel="/defaults/dataset[@macro='Cluster_416_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_416_macro']/properties/system/planets/planet/@settlements">{1042,16081}(Sky City)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_416_macro']/properties/system/planets/planet" type="@maxpopulation">172326595</add>
+  <add sel="/defaults/dataset[@macro='Cluster_416_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_gasgiant_atmo"/>
+    </worlds>
+  </add>  
+  <!--Family Nhuut-->
+  <replace sel="/defaults/dataset[@macro='Cluster_418_macro']/properties/system/planets/planet/@maxpopulation">447528984</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_418_macro']/properties/system/planets/planet/moons/moon[@name='{20003,4180001} {20403,103}(c) {20402,1}(I)']/@maxpopulation">111881246</replace>
+  <!--Rhy's Defiance-->
+  <replace sel="/defaults/dataset[@macro='Cluster_414_macro']/properties/system/planets/planet/@population">{1042,10011}(None)</replace>
+  <remove sel="/defaults/dataset[@macro='Cluster_414_macro']/properties/system/planets/planet/@maxpopulation"/>
+  <!--Two Grand-->
+  <replace sel="/defaults/dataset[@macro='Cluster_420_macro']/properties/system/planets/planet/@maxpopulation">1225787408</replace>  
+  <!--Emperor's Pride-->
+  <replace sel="/defaults/dataset[@macro='Cluster_424_macro']/properties/system/planets/planet/@population">{1042,10011}(None)</replace>
+  <remove sel="/defaults/dataset[@macro='Cluster_424_macro']/properties/system/planets/planet/@maxpopulation"/>
+  <remove sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties/worlds/world/@factor"/>  
   
+		<!--Terran DLC-->
+  <!--Asteroid Belt-->
+  <add sel="/defaults/dataset[@macro='Cluster_100_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_c03_bg"/>
+    </worlds>
+  </add>
+  <!--Mars-->
+  <replace sel="/defaults/dataset[@macro='Cluster_101_Sector001_macro']/properties/identification/@name">{4837254,2000}</replace>  
+  <add sel="/defaults/dataset[@macro='Cluster_101_Sector001_macro']/properties/worlds/world" type="@factor">0.85</add>  
+  <!--Sol System-->  
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7017}(Mercury)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7017}(Mercury)']/@settlements">{4837255,10}(Mining Facilities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7017}(Mercury)']" type="@maxpopulation">83130194</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7013}(Venus)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7013}(Venus)']/@settlements">{4837255,9}(Orbital Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7013}(Venus)']" type="@maxpopulation">63205062</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7015}(Earth)']/@maxpopulation">12217293027</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7015}(Earth)']/moons/moon/@maxpopulation">2219379</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7012}(Mars)']/@name">{20005,7011}(Asteroid Belt)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7011}(Asteroid Belt)']/@class">{1042,12041}(Asteroids)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7011}(Asteroid Belt)']/@geology">{1042,12041}(Asteroids)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7011}(Asteroid Belt)']/@atmosphere">{1042,10011}(None)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7011}(Asteroid Belt)']/@maxpopulation">647166</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7011}(Asteroid Belt)']/@settlements">{1042,16021}(Mining Colonies)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7011}(Asteroid Belt)']/@part">part_c03_bg</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7018}(Jupiter)']" pos="before">
+    <planet name="{20005,7012}(Mars)" class="{1042,14031}(Terrestrial)" geology="{1042,15091}(Craters)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,10021}" maxpopulation="160203270" settlements="{1042,16071}(Megalopolis)" part="part_mars"/>
+  </add>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7018}(Jupiter)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7018}(Jupiter)']/@settlements">{4837255,9}(Orbital Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7018}(Jupiter)']" type="@maxpopulation">392954838</add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7018}(Jupiter)']" type="@part">part_jupiter</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/@settlements">{1042,16081}(Sky City)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']" type="@maxpopulation">522103748</add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']" type="@part">part_saturn</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/moons/moon[@name='{20005,7016}(Titan)']/@name">{1042,12041}(Asteroids)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/moons/moon[@name='{1042,12041}(Asteroids)']/@geology">{1042,12041}(Asteroids)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/moons/moon[@name='{1042,12041}(Asteroids)']/@atmosphere">{1042,10011}(None)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/moons/moon[@name='{1042,12041}(Asteroids)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/moons/moon[@name='{1042,12041}(Asteroids)']/@settlements">{4837255,10}(Mining Facilities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/moons/moon[@name='{1042,12041}(Asteroids)']" type="@maxpopulation">40413167</add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/moons/moon[@name='{1042,12041}(Asteroids)']" type="@part">part_saturn_rings</add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7019}(Saturn)']/moons/moon[@name='{20005,7035}(Dione)']" pos="before">
+    <moon name="{20005,7016}(Titan)" geology="{1042,15051}(Rocks/Ice)" atmosphere="{1042,11041}(Nitrogen)" population="{1042,10021}" maxpopulation="14003037" settlements="{1042,16101}(Small Settlements)" part="part_titan"/>
+  </add>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7020}(Uranus)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7020}(Uranus)']/@settlements">{4837255,9}(Mining Facilities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7020}(Uranus)']" type="@maxpopulation">206925755</add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7020}(Uranus)']" type="@part">part_uranus</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7020}(Uranus)']/moons/moon[@name='{20005,7043}(Titania)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7020}(Uranus)']/moons/moon[@name='{20005,7043}(Titania)']/@settlements">{1042,16071}(Megalopolis)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7020}(Uranus)']/moons/moon[@name='{20005,7043}(Titania)']" type="@maxpopulation">274299600</add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7020}(Uranus)']/moons/moon[@name='{20005,7043}(Titania)']" type="@part">part_titania</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7021}(Neptune)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7021}(Neptune)']/@settlements">{1042,16081}(Sky City)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7021}(Neptune)']" type="@maxpopulation">1122290509</add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7021}(Neptune)']" type="@part">part_neptune</add>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7022}(Pluto)']/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7022}(Pluto)']/@settlements">{1042,16101}(Small Settlements)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7022}(Pluto)']" type="@maxpopulation">14160333</add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7022}(Pluto)']" type="@part">part_pluto</add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets">
+    <planet name="{20005,7046}(Oort Cloud)" class="{1042,12041}(Asteroids)" geology="{1042,12041}(Asteroids)" atmosphere="{1042,10011}(None)" population="{1042,10021}" maxpopulation="539305" settlements="{1042,16021}(Mining Colonies)" part="part_asteroid001"/>
+  </add>
+  <add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets">
+	<planet name="Nyx" class="{1042,14131}(Ice Giant)" geology="{1042,15081}(Ice)" atmosphere="{1042,11021}(Hydrogen)" population="{1042,10011}(None)" settlements="{1042,16061}(Xenon Structures)" part="GravitationalLens01"/>
+  </add>  
+  <!--Mercury-->
+  <replace sel="/defaults/dataset[@macro='Cluster_106_Sector001_macro']/properties/identification/@name">{4837254,2010}</replace>  
+  <add sel="/defaults/dataset[@macro='Cluster_106_Sector001_macro']/properties/worlds/world" type="@factor">0.85</add>  
+  <!--Jupiter-->
+  <add sel="/defaults/dataset[@macro='Cluster_107_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_jupiter"/>
+    </worlds>
+  </add>  
+  <!--Saturn I-->  
+  <add sel="/defaults/dataset[@macro='Cluster_108_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_saturn"/>
+    </worlds>
+  </add> 
+  <!--Titan-->
+  <add sel="/defaults/dataset[@macro='Cluster_108_Sector002_macro']/properties">
+    <worlds>
+      <world part="part_titan"/>
+    </worlds>
+  </add> 
+  <!--Saturn II-->
+  <add sel="/defaults/dataset[@macro='Cluster_108_Sector003_macro']/properties">
+    <worlds>
+      <world part="part_saturn_rings"/>
+    </worlds>
+  </add>
+  <!--Uranus-->  
+  <add sel="/defaults/dataset[@macro='Cluster_109_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_uranus"/>
+    </worlds>
+  </add>  
+  <!--Neptune-->  
+  <add sel="/defaults/dataset[@macro='Cluster_110_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_neptune"/>
+    </worlds>
+  </add>  
+  <!--Pluto-->
+  <add sel="/defaults/dataset[@macro='Cluster_111_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_pluto"/>
+    </worlds>
+  </add>  
+  <!--Oort Cloud--> 
+  <add sel="/defaults/dataset[@macro='Cluster_116_Sector001_macro']/properties">
+    <worlds>
+      <world part="part_asteroid001"/>
+    </worlds>
+  </add> 
+  <!--Brennan's Triumph-->
+  <replace sel="/defaults/dataset[@macro='Cluster_115_macro']/properties/system/planets/planet[@name='{20005,9052}(Taurus)']/@maxpopulation">259458997</replace>    
+
+		<!--Pirate DLC-->
+  <!--Windfall-->
+  <replace sel="/defaults/dataset[@macro='Cluster_501_macro']/properties/system/planets/planet/@geology">{1042,15021}(Mountains)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_501_macro']/properties/system/planets/planet/@atmosphere">{1042,11071}(Nitrogen/Oxygen)</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_501_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_501_macro']/properties/system/planets/planet/@settlements">{1042,16041}(Multiple Cities)</replace>
+  <add sel="/defaults/dataset[@macro='Cluster_501_macro']/properties/system/planets/planet" type="@maxpopulation">522051013</add>
+  <add sel="/defaults/dataset[@macro='Cluster_501_macro']/properties/system/planets/planet" type="@part">planet001c</add>
+  <add sel="/defaults/dataset[@macro='Cluster_502_Sector001_macro']/properties">
+    <worlds>
+      <world part="planet001c"/>
+    </worlds>
+  </add>
+  
+		<!--Boron DLC-->
 	<!--Remove Boron Sector's DLC jobs lock-->
 	<!-- This is currently disabled as VRO completes this step
   <remove sel="//dataset[@macro='Cluster_601_macro']/properties/area/@extensionexclusivejobs"/>
@@ -1128,16 +2980,39 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
   <remove sel="//dataset[@macro='Cluster_607_macro']/properties/area/@extensionexclusivejobs"/>
   <remove sel="//dataset[@macro='Cluster_608_macro']/properties/area/@extensionexclusivejobs"/>
   <remove sel="//dataset[@macro='Cluster_609_macro']/properties/area/@extensionexclusivejobs"/>  
-	-->
-
+	-->	
+  <!--Barren Shores-->
+  <replace sel="/defaults/dataset[@macro='Cluster_602_macro']/properties/system/planets/planet/@maxpopulation">313256369</replace>
+  <remove sel="/defaults/dataset[@macro='Cluster_602_Sector001_macro']/properties/worlds/world/@factor"/> 
+  <!--Great Reef-->  
+  <replace sel="/defaults/dataset[@macro='Cluster_603_macro']/properties/system/planets/planet[@name='{20005,9069}(Nakshatra)']/@maxpopulation">744376645</replace>
+  <remove sel="/defaults/dataset[@macro='Cluster_603_Sector001_macro']/properties/worlds/world/@factor"/> 
+  <!--Kingdom End I-->
+  <replace sel="/defaults/dataset[@macro='Cluster_606_macro']/properties/system/planets/planet/@maxpopulation">6366704060</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_606_Sector001_macro']/properties/worlds/world/@factor">0.8</replace>
+  <!--Reflected Stars-->
+  <replace sel="/defaults/dataset[@macro='Cluster_606_Sector002_macro']/properties/worlds/world/@factor">0.11</replace>
+  <!--Towering Wave-->  
+  <replace sel="/defaults/dataset[@macro='Cluster_606_Sector003_macro']/properties/worlds/world/@factor">0.09</replace>	
+  <!--Atreus' Clouds-->	
+  <replace sel="/defaults/dataset[@macro='Cluster_608_macro']/properties/system/planets/planet/@maxpopulation">1102861148</replace>
+  <remove sel="/defaults/dataset[@macro='Cluster_608_Sector001_macro']/properties/worlds/world/@factor"/>
+  <!--Menelaus' Oasis-->
+  <replace sel="/defaults/dataset[@macro='Cluster_609_macro']/properties/system/planets/planet/@maxpopulation">510670340</replace>
+  <remove sel="/defaults/dataset[@macro='Cluster_609_Sector001_macro']/properties/worlds/world/@factor"/>
   
-	<!--NOTE: Syntax lifed from DA-->
-  <add sel="/defaults/dataset[@macro='Cluster_419_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
-  <add sel="/defaults/dataset[@macro='Cluster_420_Sector001_macro']/properties/area" type="@tags">splitdlc</add>	
-  <add sel="/defaults/dataset[@macro='Cluster_422_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
-  <add sel="/defaults/dataset[@macro='Cluster_423_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
-  <add sel="/defaults/dataset[@macro='Cluster_423_Sector002_macro']/properties/area" type="@tags">splitdlc</add>	
-	
+		<!--Timelines DLC-->  
+  <!--President's End-->
+  <replace sel="/defaults/dataset[@macro='cluster_704_macro']/properties/system/planets/planet[@name='{20003,7040001} {20403,101}(a)']/@maxpopulation">396918524</replace>
+  <replace sel="/defaults/dataset[@macro='cluster_704_macro']/properties/system/planets/planet[@name='{20003,7040001} {20403,101}(a)']/@settlements">{1042,16071}(Megalopolis)</replace>  
+  <!--Nopileos' Memorial-->
+  <replace sel="/defaults/dataset[@macro='cluster_705_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
+  <replace sel="/defaults/dataset[@macro='cluster_705_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>
+  <add sel="/defaults/dataset[@macro='cluster_705_macro']/properties/system/planets/planet" type="@maxpopulation">23120196</add>  
+  <!--Hatikvah's Faith-->  
+  <replace sel="/defaults/dataset[@macro='cluster_706_macro']/properties/system/planets/planet[@name='{20003,7060001} {20403,101}(a)']/@maxpopulation">2032399</replace>
+  
+	<!--NOTE: Syntax lifed from DA-->	
   <add sel="/defaults/dataset[@macro='Cluster_03_Sector001_macro']/properties[count(./area)=0]" silent="true">
 	<area tags="nmmc"/>
   </add>
@@ -1170,14 +3045,5 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
   <add sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties[count(./area)=0]" silent="true">
 	<area tags="emperor"/>
   </add>
-  <add sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">emperor</add>
-  <!--Farnham's Legend Revision-->
-  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_01_macro']/properties[count(./area)=0]" silent="true">
-	<area extensionexclusivejobs="true"/>
-  </add>
-  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_01_macro']/properties[count(./area)=1]/area" type="@extensionexclusivejobs" silent="true">true</add>
-  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_02_macro']/properties[count(./area)=0]" silent="true">
-	<area extensionexclusivejobs="true"/>
-  </add>
-  <add sel="/defaults/dataset[@macro='Cluster_Mod_FarnhamLegend_Rev_02_macro']/properties[count(./area)=1]/area" type="@extensionexclusivejobs" silent="true">true</add> 
+  <add sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties[count(./area)=1]/area" type="@tags" silent="true">emperor</add> 
 </diff>

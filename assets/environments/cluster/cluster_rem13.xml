@@ -113,47 +113,64 @@
 			</connection>
 			<connection name="Connection05" tags="part  ">
 				<offset>
-					<position x="-4.01366E+07" y="-18298467" z="2.213867E+08"/>				
+					<position x="-0.31366E+07" y="-1298467" z="0.193867E+08"/>
+					<quaternion qx="7.126259E-02" qy="0.5735283" qz="-5.017726E-02" qw="-0.8145362"/>					
 				</offset>
 				<parts>
-					<part name="atmosphere001">
+					<part name="part_earthlike_atmo">
 						<lods>
 							<lod index="0">
 								<materials>
-									<material id="1" ref="newplanets.atmo_cluster14_planet1"/>
+									<material id="1" ref="environmentsv3.cluster_609_earthlike_atmo"/>
 								</materials>
 							</lod>
 						</lods>
-						<size>						
-							<max x="-1.648884E+07" y="3.649603E+07" z="4.649246E+07"/>
-							<center x="0" y="58.59375" z="-11.71875"/>
+						<size>
+							<max x="5327094" y="5342121" z="5327095"/>
+							<center x="1.220703" y="0" z="-3.90625"/>
 						</size>
 					</part>
 				</parts>
 			</connection>
 			<connection name="Connection06" tags="part  ">
 				<offset>
-					<position x="-4.01366E+07" y="-18298467" z="2.213867E+08"/>					
+					<position x="-0.31366E+07" y="-1298467" z="0.193867E+08"/>
+					<quaternion qx="7.126259E-02" qy="0.5735283" qz="-5.017726E-02" qw="-0.8145362"/>				
 				</offset>
+				<animations>
+					<animation name="loop" start="0" end="108000"/>
+				</animations>
 				<parts>
-					<part name="planet001c">
+					<part name="part_earthlike">
 						<lods>
 							<lod index="0">
 								<materials>
-									<material id="1" ref="newplanets.planet_cluster14_planet1"/>
+									<material id="1" ref="environmentsv3.cluster_609_earthlike"/>
 								</materials>
 							</lod>
 						</lods>
 						<size>
-							<max x="3.559888E+07" y="3.560589E+07" z="3.560241E+07"/>
-							<center x="0" y="58.59375" z="-13.67188"/>
+							<max x="5272899" y="5329824" z="5272902"/>
+							<center x="0.7324219" y="-0.9765625" z="-3.417969"/>
 						</size>
+						<size_raw>
+							<max x="5272900" y="5329825" z="5272900"/>
+							<center x="0.7324219" y="0" z="-2.441406"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="108000" value="1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
 					</part>
 				</parts>
 			</connection>
 			<connection name="Connection07" tags="part animation  ">
 				<offset>
-					<position x="-5.099279E+07" y="18298467" z="12.670722E+07"/>
+					<position x="-6.099279E+07" y="38298467" z="14.670722E+07"/>
 					<quaternion qx="-0" qy="-0.8870109" qz="-0" qw="-0.4617486"/>
 				</offset>
 				<animations>

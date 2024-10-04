@@ -1684,7 +1684,7 @@
         <skill type="management" exact="0"/>
         <skill type="boarding" exact="0"/>
       </skills>
-      <owner exact="terran"/>
+      <owner exact="atf"/>
     </character>
     <character id="fighter_atf_random" group="terran.pilot">
       <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular]" faction="[atf, faction.player]" race="terran"/>
@@ -2193,6 +2193,797 @@
       <skill type="boarding" exact="0"/>
     </skills>
     <owner exact="ownerless"/>
-  </character> 	
+  </character>
+
+  
+  <!-- Beryll -->
+  <!-- Beryll Faction Representative -->  
+  <character id="factionrepresentative_beryll" group="argon.factionrepresentative.male">
+    <category tags="[factionrepresentative]" faction="beryll" race="argon"/>
+    <skills>
+      <skill type="management" min="10" max="15"/>
+      <skill type="morale" max="15"/>
+      <skill type="boarding" min="6" max="15"/>
+      <skill type="engineering" min="5" max="15"/>
+      <skill type="piloting" min="11" max="15"/>
+    </skills>
+    <page exact="10106"/>
+    <owner exact="beryll"/>
+  </character>  
+  <character id="trader_beryll_random" group="argon.trader">
+    <category tags="[crew, pilot, aipilot, traderpilot, masstraffic]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="piloting" min="7" max="14"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" max="2"/>
+      <skill type="management" max="1"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <character id="fighter_beryll_random" group="argon.pilot">
+    <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="piloting" min="7" max="14"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" max="2"/>
+      <skill type="management" exact="0"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <character id="manager_beryll_random" group="argon.manager">
+    <category tags="[crew, officer, manager]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="management" min="4" max="11"/>
+      <skill type="morale" max="12"/>
+      <skill type="piloting" min="2" max="4"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <!-- regular -->
+  <character id="service_beryll_random" group="argon.service">
+    <category tags="[crew, service, regular, recruitable]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="engineering" min="2" max="4"/>
+      <skill type="morale" min="2" max="4"/>
+      <skill type="piloting" min="1" max="3"/>
+      <skill type="management" max="1"/>
+      <skill type="boarding" max="1"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <character id="marine_beryll_random" group="argon.marine">
+    <category tags="[crew, marine, regular, recruitable]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="boarding" min="2" max="4"/>
+      <skill type="morale" min="2" max="4"/>
+      <skill type="engineering" max="1"/>
+      <skill type="piloting" min="1" max="3"/>
+      <skill type="management" max="1"/>
+    </skills>
+    <owner list="[beryll]"/>	
+  </character>
+  <character id="fighter_beryll_regular_random" group="argon.pilot">
+    <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular, recruitable]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="piloting" min="7" max="8"/>
+      <skill type="morale" min="2" max="8"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" exact="0"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <character id="manager_beryll_regular_random" group="argon.manager">
+    <category tags="[crew, officer, manager, regular, recruitable]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="management" min="5" max="7"/>
+      <skill type="morale" min="2" max="7"/>
+      <skill type="piloting" min="1" max="6"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <!-- passengers -->
+  <character id="passenger_beryll_random" group="argon.passenger">
+    <category tags="[crew, passenger]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="boarding" exact="0"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" exact="0"/>
+      <skill type="morale" max="12"/>
+      <skill type="piloting" min="2" max="4"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <character id="prisoner_beryll_random" group="argon.prisoner">
+    <category tags="[crew, prisoner]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="boarding" max="3"/>
+      <skill type="engineering" min="1" max="3"/>
+      <skill type="management" max="2"/>
+      <skill type="morale" min="1" max="2"/>
+      <skill type="piloting" min="2" max="4"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <!-- Rookies -->
+  <character id="service_beryll_random_rookie" group="argon.service">
+    <category tags="[crew, service, rookie, recruitable]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="engineering" min="1" max="2"/>
+      <skill type="morale" min="1" max="4"/>
+      <skill type="piloting" max="2"/>
+      <skill type="management" exact="0"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <character id="marine_beryll_random_rookie" group="argon.marine">
+    <category tags="[crew, marine, rookie, recruitable]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="boarding" min="1" max="2"/>
+      <skill type="morale" min="1" max="3"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="piloting" max="2"/>
+      <skill type="management" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>	
+  </character>
+  <character id="fighter_beryll_random_rookie" group="argon.pilot">
+    <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, rookie, recruitable]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="piloting" min="4" max="6"/>
+      <skill type="morale" min="3" max="6"/>
+      <skill type="engineering" exact="0"/>
+      <skill type="management" exact="0"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <!-- Veteran -->
+  <character id="service_beryll_random_veteran" group="argon.service">
+    <category tags="[crew, service, veteran, recruitable]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="engineering" min="6" max="9"/>
+      <skill type="morale" min="6" max="9"/>
+      <skill type="piloting" min="2" max="5"/>
+      <skill type="management" exact="1"/>
+      <skill type="boarding" min="1" max="2"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <character id="marine_beryll_random_veteran" group="argon.marine">
+    <category tags="[crew, marine, veteran, recruitable]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="boarding" min="6" max="9"/>
+      <skill type="morale" min="6" max="9"/>
+      <skill type="engineering" min="1" max="2"/>
+      <skill type="piloting" min="3" max="6"/>
+      <skill type="management" max="1"/>
+    </skills>
+    <owner list="[beryll]"/>	
+  </character>
+  <!-- Elite -->
+  <character id="service_beryll_random_elite" group="argon.service">
+    <category tags="[crew, service, elite]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="engineering" min="10" max="12"/>
+      <skill type="morale" min="10" max="12"/>
+      <skill type="piloting" min="3" max="6"/>
+      <skill type="management" min="1" max="2"/>
+      <skill type="boarding" min="1" max="3"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <character id="marine_beryll_random_elite" group="argon.marine">
+    <category tags="[crew, marine, elite]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="boarding" min="10" max="12"/>
+      <skill type="morale" min="10" max="12"/>
+      <skill type="engineering" min="2" max="3"/>
+      <skill type="piloting" min="4" max="6"/>
+      <skill type="management" min="1" max="3"/>
+    </skills>
+    <owner list="[beryll]"/>	
+  </character>
+  <character id="fighter_beryll_random_elite" group="argon.pilot">
+    <category tags="[elitepilot]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="piloting" exact="12"/>
+      <skill type="morale" exact="12"/>
+      <skill type="engineering" min="3" max="6"/>
+      <skill type="management" exact="0"/>
+      <skill type="boarding" min="3" max="9"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>
+  <character id="platform_trader_beryll_random" group="argon.trader">
+    <category tags="[trader, licencetrader]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="management" min="4" max="11"/>
+      <skill type="morale" max="12"/>
+      <skill type="piloting" min="2" max="4"/>
+      <skill type="engineering" max="1"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>
+    <stock ref="'default_trader'" />
+  </character>
+  <character id="ship_trader_beryll_random" group="argon.shiptrader">
+    <category tags="[trader, shiptrader]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="management" min="4" max="11"/>
+      <skill type="morale" max="12"/>
+      <skill type="piloting" min="2" max="4"/>
+      <skill type="engineering" max="1"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]"/>
+    <stock ref="'default_trader'" />
+  </character>
+  <character id="shadyguy_beryll_random" group="argon.shadyguy">
+    <category tags="[shadyguy]" faction="[beryll, faction.player]" race="argon" />
+    <skills>
+      <skill type="piloting" min="8" max="11"/>
+      <skill type="morale" max="12"/>
+      <skill type="engineering" max="2"/>
+      <skill type="management" exact="0"/>
+      <skill type="boarding" exact="0"/>
+    </skills>
+    <owner list="[beryll]" />
+    <stock ref="'default_shadyguy'" />
+  </character>
+  <!-- Casually clothed platform NPCs -->
+  <character id="beryll_casual" group="argon.civilian">
+    <category tags="[casual]" faction="[beryll, faction.player]" race="argon"/>
+    <skills>
+      <skill type="morale" max="1"/>
+      <skill type="piloting" max="2"/>
+      <skill type="engineering" max="1"/>
+      <skill type="management" max="1"/>
+      <skill type="boarding" max="1"/>
+    </skills>
+    <owner list="[beryll]"/>
+  </character>	
+
+
+	<!-- Thuruk -->
+	<!-- Thuruk Faction Representative -->  	
+    <character id="factionrepresentative_thuruk" group="split.factionrepresentative.male">
+      <category tags="[factionrepresentative]" faction="thuruk" race="split"/>
+      <skills>
+        <skill type="management" min="10" max="15"/>
+        <skill type="morale" max="15"/>
+        <skill type="boarding" min="6" max="15"/>
+        <skill type="engineering" min="5" max="15"/>
+        <skill type="piloting" min="11" max="15"/>
+      </skills>
+      <page exact="10405"/>
+      <owner exact="thuruk"/>
+    </character>	
+	<character id="trader_thuruk_random" group="split.trader">
+      <category tags="[crew, pilot, aipilot, traderpilot, masstraffic]" faction="[thuruk, faction.player]" race="split"/>
+      <skills>
+        <skill type="piloting" min="5" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" min="5" max="6"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="fighter_thuruk_random" group="split.pilot">
+      <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular]" faction="[thuruk, faction.player]" race="split"/>
+      <skills>
+        <skill type="piloting" min="4" max="15"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="5" max="6"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="manager_thuruk_random" group="split.manager">
+      <category tags="[crew, officer, manager]" faction="[thuruk, faction.player]" race="split"/>
+      <skills>
+        <skill type="management" min="5" max="9"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" min="2" max="6"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <!-- regular -->
+    <character id="service_thuruk_random_dlc_split" group="split.service">
+      <category tags="[crew, service, regular, recruitable]" faction="[thuruk, faction.player]" race="split"/>
+      <skills>
+        <skill type="engineering" min="2" max="4"/>
+        <skill type="morale" min="2" max="4"/>
+        <skill type="piloting" min="1" max="3"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="2"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="marine_thuruk_random_dlc_split" group="split.marine">
+      <category tags="[crew, marine, regular, recruitable]" faction="[thuruk, faction.player]" race="split"/>
+      <skills>
+        <skill type="boarding" min="2" max="4" profile="increasing"/>
+        <skill type="morale" min="2" max="4"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="piloting" min="1" max="3"/>
+        <skill type="management" exact="0"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="fighter_thuruk_regular_random" group="split.pilot">
+      <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular, recruitable]" faction="[thuruk, faction.player]" race="split"/>
+      <skills>
+        <skill type="piloting" min="5" max="7"/>
+        <skill type="morale" exact="7"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="3"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="manager_thuruk_regular_random" group="split.manager">
+      <category tags="[crew, officer, manager, regular, recruitable]" faction="[thuruk, faction.player]" race="split"/>
+      <skills>
+        <skill type="management" min="5" max="6"/>
+        <skill type="morale" max="5"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="boarding" min="2" max="3"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <!-- passenger -->
+    <character id="passenger_thuruk_random_dlc_split" group="split.passenger">
+      <category tags="[crew, passenger]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="boarding" exact="0"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" max="6"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="prisoner_thuruk_random_dlc_split" group="split.prisoner">
+      <category tags="[crew, prisoner]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="boarding" min="1" max="4"/>
+        <skill type="engineering" min="1" max="2"/>
+        <skill type="management" max="2"/>
+        <skill type="morale" min="1" max="2"/>
+        <skill type="piloting" min="1" max="3"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <!-- Rookies -->
+    <character id="service_thuruk_random_rookie_dlc_split" group="split.service">
+      <category tags="[crew, service, rookie, recruitable]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="engineering" min="1" max="2"/>
+        <skill type="morale" min="1" max="4"/>
+        <skill type="piloting" max="2"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" max="1"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="marine_thuruk_random_rookie_dlc_split" group="split.marine">
+      <category tags="[crew, marine, rookie, recruitable]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="boarding" min="1" max="2" profile="increasing"/>
+        <skill type="morale" min="1" max="3"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="piloting" max="2"/>
+        <skill type="management" exact="0"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="fighter_thuruk_random_rookie" group="split.pilot">
+      <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, rookie, recruitable]" faction="[thuruk, faction.player]" race="split"/>
+      <skills>
+        <skill type="piloting" min="1" max="5"/>
+        <skill type="morale" min="4" max="5"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="3"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <!-- Veteran -->
+    <character id="service_thuruk_random_veteran_dlc_split" group="split.service">
+      <category tags="[crew, service, veteran, recruitable]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="engineering" min="6" max="9"/>
+        <skill type="morale" min="6" max="9"/>
+        <skill type="piloting" min="2" max="4"/>
+        <skill type="management" max="1"/>
+        <skill type="boarding" min="1" max="3" profile="increasing"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="marine_thuruk_random_veteran_dlc_split" group="split.marine">
+      <category tags="[crew, marine, veteran, recruitable]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="boarding" min="6" max="9"/>
+        <skill type="morale" min="6" max="9"/>
+        <skill type="engineering" max="2"/>
+        <skill type="piloting" min="4" max="6"/>
+        <skill type="management" max="1"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <!-- Elite -->
+    <character id="service_thuruk_random_elite_dlc_split" group="split.service">
+      <category tags="[crew, service, elite]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="engineering" min="10" max="12"/>
+        <skill type="morale" min="10" max="12"/>
+        <skill type="piloting" min="3" max="6"/>
+        <skill type="management" max="2"/>
+        <skill type="boarding" min="2" max="4"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="marine_thuruk_random_elite_dlc_split" group="split.marine">
+      <category tags="[crew, marine, elite]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="boarding" min="10" max="12"/>
+        <skill type="morale" min="10" max="12"/>
+        <skill type="engineering" min="1" max="3"/>
+        <skill type="piloting" min="5" max="6"/>
+        <skill type="management" min="1" max="2"/>
+      </skills>
+      <owner list="[thuruk]"/>
+    </character>
+    <character id="platform_trader_thuruk_random_dlc_split" group="split.trader">
+      <category tags="[trader, licencetrader]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="management" min="9" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner list="[thuruk]"/>
+      <stock ref="'default_trader'" />
+    </character>
+    <character id="ship_trader_thuruk_random_dlc_split" group="split.shiptrader">
+      <category tags="[trader, shiptrader]" faction="[thuruk]" race="split" />
+      <skills>
+        <skill type="management" min="9" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner list="[thuruk]"/>
+      <stock ref="'default_trader'" />
+    </character>
+    <character id="shadyguy_thuruk_random_dlc_split" group="split.shadyguy">
+      <category tags="[shadyguy]" faction="[thuruk]" race="split" />
+      <skills>
+        <skill type="piloting" min="5" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" min="1" max="6"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner list="[thuruk]" />
+      <stock ref="'default_shadyguy'" />
+    </character>
+    <!-- Casually clothed platform NPCs -->
+    <character id="thuruk_casual_dlc_split" group="split.civilian">
+      <category tags="[casual]" faction="[thuruk]" race="split"/>
+      <skills>
+        <skill type="morale" max="1"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="2"/>
+      </skills>
+      <owner list="[thuruk]"/>
+	</character> 
+
+
+    <!-- tma -->
+    <!-- tma Faction Representative -->
+    <character id="factionrepresentative_tma" group="terran.factionrepresentative.female">
+      <category tags="[factionrepresentative]" faction="tma" race="terran"/>
+      <skills>
+        <skill type="management" min="10" max="15"/>
+        <skill type="morale" max="15"/>
+        <skill type="boarding" min="6" max="15"/>
+        <skill type="engineering" min="5" max="15"/>
+        <skill type="piloting" min="11" max="15"/>
+      </skills>
+      <page exact="10109"/>
+      <owner exact="tma"/>
+    </character>
+    <character id="tma_civilian" group="terran.trader">
+      <category faction="civilian" tags="[npc, crew, officer, trader, commander, fighterpilot, manager, marine, masstraffic, watchdog, pilot, traderpilot]" race="terran" comment="fullyqualified"/>
+      <skills>
+        <skill type="piloting" min="7" max="14"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" max="2"/>
+        <skill type="management" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="civilian"/>
+    </character>
+    <character id="tma_smuggler" group="terran.trader">
+      <category faction="smuggler" tags="[npc, crew, officer, trader, commander, fighterpilot, manager, marine, masstraffic, watchdog, pilot, traderpilot]" race="terran" comment="fullyqualified"/>
+      <skills>
+        <skill type="piloting" min="7" max="14"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" max="2"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="smuggler"/>
+    </character>
+    <character id="tma_criminal" group="terran.trader">
+      <category faction="criminal" tags="[crew, officer, trader, commander, fighterpilot, manager, marine, masstraffic, watchdog, pilot, traderpilot]" race="terran" comment="fullyqualified"/>
+      <skills>
+        <skill type="piloting" min="6" max="14"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" max="2"/>
+        <skill type="management" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="criminal"/>
+    </character>
+    <character id="tma_ownerless" group="terran.pilot">
+      <category faction="ownerless" tags="[crew, officer, trader, commander, fighterpilot, manager, marine, masstraffic, watchdog, pilot, traderpilot]" race="terran" comment="fullyqualified"/>
+      <skills>
+        <skill type="piloting" min="7" max="14"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" max="2"/>
+        <skill type="management" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="ownerless"/>
+    </character>
+    <character id="trader_tma_random" group="terran.trader">
+      <category tags="[crew, pilot, aipilot, traderpilot, masstraffic]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="piloting" min="5" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" min="5" max="6"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="fighter_tma_random" group="terran.pilot">
+      <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="piloting" min="4" max="15"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="5" max="6"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="manager_tma_random" group="terran.manager">
+      <category tags="[crew, officer, manager]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="management" min="5" max="9"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" min="2" max="6"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <!-- regular -->
+    <character id="service_tma_random_dlc_terran" group="terran.service">
+      <category tags="[crew, service, regular, recruitable]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="engineering" min="2" max="4"/>
+        <skill type="morale" min="2" max="4"/>
+        <skill type="piloting" min="1" max="3"/>
+        <skill type="management" max="1"/>
+        <skill type="boarding" max="1"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="marine_tma_random_dlc_terran" group="terran.marine">
+      <category tags="[crew, marine, regular, recruitable]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="boarding" min="2" max="4"/>
+        <skill type="morale" min="2" max="4"/>
+        <skill type="engineering" max="1"/>
+        <skill type="piloting" min="1" max="3"/>
+        <skill type="management" max="1"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="fighter_tma_regular_random" group="terran.pilot">
+      <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, regular, recruitable]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="piloting" min="5" max="7"/>
+        <skill type="morale" exact="7"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="3"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="manager_tma_regular_random" group="terran.manager">
+      <category tags="[crew, officer, manager, regular, recruitable]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="management" min="5" max="6"/>
+        <skill type="morale" max="5"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="boarding" min="2" max="3"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <!-- passenger -->
+    <character id="passenger_tma_random_dlc_terran" group="terran.passenger">
+      <category tags="[crew, passenger]" faction="[tma]" race="terran"/>
+      <skills>
+        <skill type="boarding" exact="0"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" max="6"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="prisoner_tma_random_dlc_terran" group="terran.prisoner">
+      <category tags="[crew, prisoner]" faction="[tma]" race="terran"/>
+      <skills>
+        <skill type="boarding" max="3"/>
+        <skill type="engineering" min="1" max="3"/>
+        <skill type="management" max="2"/>
+        <skill type="morale" min="1" max="2"/>
+        <skill type="piloting" min="2" max="4"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <!-- Rookies -->
+    <character id="service_tma_random_rookie_dlc_terran" group="terran.service">
+      <category tags="[crew, service, rookie, recruitable]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="engineering" min="1" max="2"/>
+        <skill type="morale" min="1" max="4"/>
+        <skill type="piloting" max="2"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="marine_tma_random_rookie_dlc_terran" group="terran.marine">
+      <category tags="[crew, marine, rookie, recruitable]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="boarding" min="1" max="2"/>
+        <skill type="morale" min="1" max="3"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="piloting" max="2"/>
+        <skill type="management" exact="0"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="fighter_tma_random_rookie" group="terran.pilot">
+      <category tags="[crew, officer, pilot, aipilot, fighterpilot, commander, masstraffic, watchdog, rookie, recruitable]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="piloting" min="1" max="5"/>
+        <skill type="morale" min="4" max="5"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="3"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <!-- Veteran -->
+    <character id="service_tma_random_veteran_dlc_terran" group="terran.service">
+      <category tags="[crew, service, veteran, recruitable]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="engineering" min="6" max="9"/>
+        <skill type="morale" min="6" max="9"/>
+        <skill type="piloting" min="2" max="5"/>
+        <skill type="management" exact="1"/>
+        <skill type="boarding" min="1" max="2"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="marine_tma_random_veteran_dlc_terran" group="terran.marine">
+      <category tags="[crew, marine, veteran, recruitable]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="boarding" min="6" max="9"/>
+        <skill type="morale" min="6" max="9"/>
+        <skill type="engineering" min="1" max="2"/>
+        <skill type="piloting" min="3" max="6"/>
+        <skill type="management" max="1"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <!-- Elite -->
+    <character id="service_tma_random_elite_dlc_terran" group="terran.service">
+      <category tags="[crew, service, elite]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="engineering" min="10" max="12"/>
+        <skill type="morale" min="10" max="12"/>
+        <skill type="piloting" min="3" max="6"/>
+        <skill type="management" min="1" max="2"/>
+        <skill type="boarding" min="1" max="3"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="marine_tma_random_elite_dlc_terran" group="terran.marine">
+      <category tags="[crew, marine, elite]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="boarding" min="10" max="12"/>
+        <skill type="morale" min="10" max="12"/>
+        <skill type="engineering" min="2" max="3"/>
+        <skill type="piloting" min="4" max="6"/>
+        <skill type="management" min="1" max="3"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>
+    <character id="platform_trader_tma_random_dlc_terran" group="terran.trader">
+      <category tags="[trader, licencetrader]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="management" min="9" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="tma"/>
+      <stock ref="'default_trader'" />
+    </character>
+    <character id="ship_trader_tma_random_dlc_terran" group="terran.shiptrader">
+      <category tags="[trader, shiptrader]" faction="[tma, faction.player]" race="terran" />
+      <skills>
+        <skill type="management" min="9" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" max="1"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="tma"/>
+      <stock ref="'default_trader'" />
+    </character>
+    <!-- Shady Guy -->
+    <character id="shadyguy_tma_random_dlc_terran" group="terran.shadyguy">
+      <category tags="[shadyguy]" faction="[tma]" race="terran" />
+      <skills>
+        <skill type="piloting" min="5" max="12"/>
+        <skill type="morale" max="12"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" min="1" max="6"/>
+        <skill type="boarding" exact="0"/>
+      </skills>
+      <owner exact="tma"/>
+      <stock ref="'default_shadyguy'" />
+    </character>
+    <!-- Casually clothed pltmaorm NPCs -->
+    <character id="tma_casual_dlc_terran" group="terran.civilian">
+      <category tags="[casual]" faction="[tma, faction.player]" race="terran"/>
+      <skills>
+        <skill type="morale" max="1"/>
+        <skill type="piloting" max="3"/>
+        <skill type="engineering" exact="0"/>
+        <skill type="management" exact="0"/>
+        <skill type="boarding" min="1" max="2"/>
+      </skills>
+      <owner exact="tma"/>
+    </character>	
   </add>
 </diff>

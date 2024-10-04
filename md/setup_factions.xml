@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mdscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="otas_setup" xsi:noNamespaceSchemaLocation="md.xsd">
+<mdscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="setup_factions" xsi:noNamespaceSchemaLocation="md.xsd">
   <cues>
 	  <!--Will run once, either on gamestart or when a game is loaded where this mod was not active before-->
 	<cue name="Setup" namespace="this" version="3">
@@ -11,6 +11,9 @@
 	  </conditions>
 	  <actions>		
 		<do_if value="global.$smugglercoverfactions?">
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.xaar}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.aldrin"/>
+		  </do_if>			
 		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.otas}">
 			<append_to_list name="global.$smugglercoverfactions" exact="faction.otas"/>
 		  </do_if>
@@ -31,9 +34,27 @@
 		  </do_if>	
 		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.xaar}">
 			<append_to_list name="global.$smugglercoverfactions" exact="faction.xaar"/>
-		  </do_if>		  
+		  </do_if>	  
 		</do_if>
-		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem53_sector001_macro"/>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.Cluster_rem05_Sector001_macro" comment="Megnir"/>		
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.Cluster_rem08_Sector002_macro" comment="Power Circle I"/>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem10_sector001_macro" comment="Herron's Nebula"/>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem11_sector001_macro" comment="Tempting Fumes"/>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem18_sector001_macro" comment="Shore of Infinity"/>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem20_sector001_macro" comment="Duke's Domain"/>		
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem21_sector002_macro" comment="Perpetual Sin I"/>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem24_sector001_macro" comment="Cathedral of Xaar"/>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem33_sector001_macro" comment="Thyn's Abyss"/>	
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem36_sector001_macro" comment="Great Trench"/>	
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem43_sector001_macro" comment="Blue Profit"/>	
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem51_sector001_macro" comment="Fierce Clarity"/>	
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem56_sector001_macro" comment="Aladna Hill"/>			
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem59_sector001_macro" comment="Mines of Fortune"/>	
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem60_sector001_macro" comment="Zyarth's Stand"/>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem65_sector001_macro" comment="Wastelands"/>	
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem74_sector001_macro" comment="Tebathimanckatt's Legacy"/>	
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem76_sector001_macro" comment="Untainted Eternity"/>	
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem78_sector001_macro" comment="Tkr's Deprivation"/>			
 		<debug_text text="'Khaak Manager Ran'"/>	  
 	  </actions>
 	</cue>
@@ -64,6 +85,7 @@
 		<do_if value="not md.$EquipmentTable?">
 		  <set_value name="md.$EquipmentTable" exact="table[]"/>
 		</do_if>
+		<get_ware_definition result="md.$EquipmentTable.{faction.aldrin}" faction="faction.aldrin" flags="equipment"/>		
 		<get_ware_definition result="md.$EquipmentTable.{faction.otas}" faction="faction.otas" flags="equipment"/>
 		<get_ware_definition result="md.$EquipmentTable.{faction.jonferco}" faction="faction.jonferco" flags="equipment"/>
 		<get_ware_definition result="md.$EquipmentTable.{faction.strongarms}" faction="faction.strongarms" flags="equipment"/>
@@ -73,7 +95,10 @@
 		<get_ware_definition result="md.$EquipmentTable.{faction.xaar}" faction="faction.xaar" flags="equipment"/>		
 		<do_if value="not md.$FactionData?">
 		  <set_value name="md.$FactionData" exact="table[]"/>
-		</do_if>	
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.aldrin}?">
+		  <set_value name="md.$FactionData.{faction.aldrin}" exact="table[]"/>
+		</do_if>		
 		<do_if value="not md.$FactionData.{faction.otas}?">
 		  <set_value name="md.$FactionData.{faction.otas}" exact="table[]"/>
 		</do_if>
@@ -103,7 +128,7 @@
 		<event_cue_completed cue="md.X4Ep1_Mentor_Subscriptions.Start"/>
 	  </conditions>
 	  <actions>
-		<append_list_elements name="md.X4Ep1_Mentor_Subscriptions.Start.$SignalLeakStationFactions" other="[faction.otas, faction.jonferco, faction.strongarms, faction.nmmc, faction.atreus, faction.atf, faction.xaar]"/>
+		<append_list_elements name="md.X4Ep1_Mentor_Subscriptions.Start.$SignalLeakStationFactions" other="[faction.aldrin, faction.otas, faction.jonferco, faction.strongarms, faction.nmmc, faction.atreus, faction.atf, faction.xaar]"/>
 	  </actions>
 	</cue>	
   </cues>

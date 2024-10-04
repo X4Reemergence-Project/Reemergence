@@ -3,7 +3,7 @@
   <macro name="ship_xen_m_fighter_y_macro" class="ship_m">
     <component ref="ship_xen_m_fighter_y" />
     <properties>
-      <identification name="{20403,25}" description="{19530004,1}" icon="ship_m_frigate_01" />
+      <identification name="{20403,25}" description="{19530004,1}" makerrace="xenon" icon="ship_m_frigate_01" />
       <software>
         <software ware="software_dockmk2" compatible="1" />
         <software ware="software_flightassistmk1" default="1" />
@@ -14,11 +14,16 @@
         <software ware="software_targetmk1" default="1" />
         <software ware="software_trademk1" compatible="1" />
       </software>
+      <explosiondamage value="500" shield="2500" />	  
       <storage missile="12" />	  
       <hull max="54250" />
+      <glow engine="1" />
       <secrecy level="2" />
       <purpose primary="fight" />
-      <people capacity="0" />
+      <people capacity="1" />
+      <sounds>
+        <shipdetail ref="shipdetail_xenon_m_01" />
+      </sounds>
       <physics mass="54.9">
         <inertia pitch="11.8" yaw="11.8" roll="11.8" />
         <drag forward="9.2" reverse="25.777" horizontal="19.8" vertical="19.8" pitch="21.6" yaw="21.6" roll="21.6" />
@@ -27,18 +32,16 @@
       <loadouts>
         <loadout id="default">
           <macros>
-            <engine macro="engine_xen_m_combat_01_mk1_macro" path="../con_engine_01" />
-            <shield macro="shield_xen_m_standard_01_mk1_macro" path="../con_shield_01" optional="1" />
-            <shield macro="shield_xen_m_standard_01_mk1_macro" path="../con_shield_02" optional="1" />
-            <shield macro="ishield_xen_m_fighter_y_macro" path="../con_ishield_01" optional="1" />
-            <turret macro="turret_xen_m_laser_01_mk1_macro" path="../con_turret_bottom" optional="1" />
-            <weapon macro="weapon_xen_m_laser_01_mk1_macro" path="../con_primaryweapon_01" optional="1" />
-            <weapon macro="weapon_gen_s_xentorp_macro" path="../con_primaryweapon_02" optional="1" />
-            <weapon macro="weapon_gen_s_xentorp_macro" path="../con_primaryweapon_03" optional="1" />			
-<!--			
-            <weapon macro="weapon_xen_m_plasmabomb_macro" path="../con_primaryweapon_02" optional="1" />
-            <weapon macro="weapon_xen_m_plasmabomb_macro" path="../con_primaryweapon_03" optional="1" />
--->			
+            <engine macro="engine_xen_m_virtual_01_mk1_macro" path="../con_engine_01" />
+            <engine macro="engine_xen_m_virtual_01_mk1_macro" path="../con_engine_02" />
+            <engine macro="engine_xen_m_virtual_01_mk1_macro" path="../con_engine_03" />
+            <engine macro="engine_xen_m_virtual_01_mk1_macro" path="../con_engine_04" />
+            <shield macro="shield_xen_m_virtual_01_mk1_macro" path="../con_shield_01" />
+            <shield macro="shield_xen_m_virtual_01_mk1_macro" path="../con_shield_02" />
+            <shield macro="ishield_xen_m_fighter_y_macro" path="../con_ishield_01" optional="1" />			
+            <turret macro="turret_xen_m_gatling_01_mk1_macro" path="../con_turret_m_01" optional="1" />
+            <weapon macro="weapon_gen_s_xentorp_macro" path="../con_weapon_01" optional="1" />
+            <weapon macro="weapon_gen_s_xentorp_macro" path="../con_weapon_02" optional="1" />		  
           </macros>
           <ammunition>
             <ammunition macro="countermeasure_flares_01_macro" min="16" max="16" optional="1" />
@@ -53,8 +56,17 @@
       <ship type="bomber" />	 	  
     </properties>
     <connections>
-      <connection ref="con_cockpit">
+      <connection ref="con_cockpit_01">
         <macro ref="cockpit_gen_virtual_01_macro" connection="ship" />
+      </connection>
+      <connection ref="con_dock_xs">
+        <macro ref="dock_gen_xs_ship_01_macro" connection="Connection_component" />
+      </connection>
+      <connection ref="con_shipstorage_xs_01">
+        <macro ref="shipstorage_gen_xs_01_macro" connection="object" />
+      </connection>
+      <connection ref="con_storage_01">
+        <macro ref="storage_xen_m_corvette_02_a_macro" connection="ShipConnection" />
       </connection>
     </connections>
   </macro>

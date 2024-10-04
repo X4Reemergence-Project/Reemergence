@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<components>
+	<component name="Cluster_REM82" class="celestialbody">
+		<source geometry="extensions\reemergence\assets\environments\cluster\Cluster_rem82_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="200" g="214" b="255" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_ol" trigger="1" intensity="1.15">
+						<lightanimations/>
+						<offset>
+							<position x="1.429009E+08" y="2.235848E+08" z="-2.114305E+08"/>
+						</offset>
+					</omni>
+					<ambient name="XU Ambient001" r="0" g="0" b="25" range="1E+09" intensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="-2.402422E+07" y="0" z="2.087432E+07"/>
+						</offset>
+					</ambient>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0" optional="0"/>
+			<connection name="position" tags="position" value="1" optional="1"/>
+			<connection name="space" tags="celestialbody">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="part_c02_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.p1_env_bg_vertexcolor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.96968E+08" y="5.96972E+08" z="5.96968E+08"/>
+							<center x="62.5" y="-31.25" z="62.5"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part  ">
+				<offset>
+					<position x="0.50035E+08" y="1.592513E+07" z="6.030336E+07"/>
+				</offset>
+				<parts>
+					<part name="atmosphere">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="newplanets.atmo_cluster_02_planet1"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.648884E+07" y="3.649603E+07" z="3.649246E+07"/>
+							<center x="0" y="58.59375" z="-11.71875"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part  ">
+				<offset>
+					<position x="0.50035E+08" y="1.592513E+07" z="6.030336E+07"/>
+				</offset>
+				<parts>
+					<part name="planet">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="newplanets.planet1_cluster_02"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.559888E+07" y="3.560589E+07" z="3.560241E+07"/>
+							<center x="0" y="58.59375" z="-13.67188"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part  ">
+				<offset>
+					<position x="1.226121E+07" y="0" z="8100438"/>
+					<quaternion qx="-0" qy="-6.975656E-02" qz="-0" qw="-0.9975641"/>
+				</offset>
+				<parts>
+					<part name="Background">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.backgroundstars"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.255449E+08" y="4.25545E+08" z="4.25545E+08"/>
+							<center x="76.17188" y="31.25" z="-0.9765625"/>
+						</size>
+						<pivot>
+							<offset>
+								<position x="0" y="-50000" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part  ">
+				<offset>
+					<position x="-4.5742E+07" y="108593.8" z="-1.1051E+07"/>
+				</offset>
+				<parts>
+					<part name="bigstar01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="3.95635E+08" y="3.90158E+08" z="4.14369E+08"/>
+							<center x="4.147334E+07" y="6430313" z="-9030688"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection06" tags="part  ">
+				<offset>
+					<position x="2.2569E+08" y="-2.240721E+08" z="-3.543554E+07"/>
+					<quaternion qx="-0.3174553" qy="0.6650183" qz="-0.2216065" qw="-0.638642"/>
+				</offset>
+				<parts>
+					<part name="mediumstar01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.720312E+08" y="2.721826E+08" z="2.722001E+08"/>
+							<center x="-2.256405E+08" y="2.241539E+08" z="3.508539E+07"/>
+						</size>
+						<offset>
+							<position x="15.625" y="-31.25" z="-3.90625"/>
+						</offset>
+						<pivot>
+							<offset>
+								<position x="-2.685547" y="0" z="18.70601"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection07" tags="part  ">
+				<offset>
+					<position x="-1.059928E+08" y="5.442108E+07" z="-1.439017E+08"/>
+				</offset>
+				<parts>
+					<part name="nebula01">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.831834E+08" y="5.450009E+08" z="5.667643E+08"/>
+							<center x="-2.86543E+07" y="4.89268E+07" z="2.713655E+07"/>
+						</size>
+						<offset>
+							<position x="7.8125" y="-3.90625" z="15.625"/>
+						</offset>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection08" tags="part  ">
+				<offset>
+					<position x="-1.059928E+08" y="1.442108E+07" z="1.439017E+08"/>
+				</offset>
+				<parts>
+					<part name="nebula02">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.831834E+08" y="5.450009E+08" z="5.667643E+08"/>
+							<center x="-2.86543E+07" y="4.89268E+07" z="2.713655E+07"/>
+						</size>
+						<offset>
+							<position x="7.8125" y="-3.90625" z="15.625"/>
+						</offset>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection09" tags="part  ">
+				<offset>
+					<position x="-2.161923E+07" y="-7.568397E+07" z="-7.121897E+07"/>
+				</offset>
+				<parts>
+					<part name="nebula03">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="5.197141E+08" y="4.875068E+08" z="4.941834E+08"/>
+							<center x="-17.57813" y="31.25" z="-15.625"/>
+						</size>
+					</part>
+				</parts>
+			</connection>			
+		</connections>
+	</component>
+</components>

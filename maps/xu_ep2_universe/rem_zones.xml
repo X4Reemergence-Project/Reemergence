@@ -6,25 +6,13 @@
 	<connections>
 	  <connection name="connection_ClusterGateREM00To116" ref="gates">
 		<offset>
-		  <position x="0" y="0" z="-22750"/>
-		  <quaternion qx="0" qy="0.21643964396" qz="0" qw="0.976296296"/>					
+		  <position x="-12750" y="0" z="-12750"/>
+		  <quaternion qx="0" qy="0.5372996" qz="0" qw="0.8433914"/>					
 		</offset>
 		<macro ref="props_ter_accelerator_01_macro" connection="space" />
 	  </connection>
 	</connections>
-  </macro>		
-  <macro name="ZoneG2_Cluster_REM00_Sector001_macro" class="zone"><!--McCALLUM RELAY-->
-	<component ref="standardzone" />
-	<connections>
-	  <connection name="connection_ClusterGateREM00ToREM01" ref="gates">
-		<offset>
-		  <position x="0" y="0" z="22750"/>
-		  <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834"/>					
-		</offset>
-		<macro ref="props_ter_accelerator_01_macro" connection="space" />
-	  </connection>
-	</connections>
-  </macro>		
+  </macro>			
   <macro name="Zone001_Cluster_REM00_Sector001_macro" class="zone"> <!--CENTER-->
 	<component ref="standardzone" />
   </macro>
@@ -42,19 +30,43 @@
   </macro>		
 
 		
-	<!--REM01 - McCALLUM RELAY-->	
-  <macro name="ZoneG1_Cluster_REM01_Sector001_macro" class="zone"><!--PLANET 9-->
+	<!--REM01 - MATRIX #23-->	
+  <macro name="ZoneG1_Cluster_REM01_Sector001_macro" class="zone"><!--MATRIX #48-->
 	<component ref="standardzone" />
 	<connections>
-	  <connection name="connection_ClusterGateREM01ToREM00" ref="gates">
+	  <connection name="connection_ClusterGateREM01ToREM06" ref="gates">
 		<offset>
-		  <position x="-12750" y="0" z="12750"/>
-		  <quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834"/>					
+		  <position x="12750" y="0" z="-12750"/>
+		  <quaternion qx="0" qy="0.6087614" qz="0" qw="-0.7933533"/>					
 		</offset>
-		<macro ref="props_ter_accelerator_01_macro" connection="space" />
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
 	</connections>
-  </macro>		
+  </macro>
+  <macro name="ZoneG2_Cluster_REM01_Sector001_macro" class="zone"><!--INACTIVE-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM01To" ref="gates">
+		<offset>
+		  <position x="0" y="0" z="22750"/>
+		  <quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068"/>				  				
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>	
+  <macro name="ZoneG3_Cluster_REM01_Sector001_macro" class="zone"><!--INACTIVE-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM01To" ref="gates">
+		<offset>
+		  <position x="-22750" y="0" z="0"/>
+		  <quaternion qx="0" qy="1" qz="0" qw="0"/>				
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>	  
   <macro name="Zone001_Cluster_REM01_Sector001_macro" class="zone"> <!--CENTER-->
 	<component ref="standardzone" />
   </macro>
@@ -78,7 +90,7 @@
   </macro>		
 
 		
-	<!--REM02 - ARES-->
+	<!--REM02 - MARS 2-->
   <macro name="Zone001_Cluster_REM02_Sector001_macro" class="zone"><!--NORTH-->
 	<component ref="standardzone" />
   </macro>
@@ -88,7 +100,7 @@
   <macro name="Zone003_Cluster_REM02_Sector001_macro" class="zone"><!--SOUTHEAST-->
 	<component ref="standardzone" />
   </macro>
-  <macro name="Zone004_Cluster_REM02_Sector001_macro" class="zone"><!--SOUTH\MARS-->
+  <macro name="Zone004_Cluster_REM02_Sector001_macro" class="zone"><!--SOUTH\MARS 1-->
 	<component ref="standardzone" />
 	<connections>			
 	  <connection name="connection_ClusterGateREM02To101" ref="gates">
@@ -111,14 +123,14 @@
   </macro>		
 
 		
-	<!--REM03 - HERMES-->
+	<!--REM03 - MERCURY 2-->
   <macro name="Zone001_Cluster_REM03_Sector001_macro" class="zone"><!--NORTH-->
 	<component ref="standardzone" />
   </macro>
   <macro name="Zone002_Cluster_REM03_Sector001_macro" class="zone"><!--NORTHEAST-->
 	<component ref="standardzone" />
   </macro>
-  <macro name="Zone003_Cluster_REM03_Sector001_macro" class="zone"><!--SOUTHEAST\MERCURY-->
+  <macro name="Zone003_Cluster_REM03_Sector001_macro" class="zone"><!--SOUTHEAST\MERCURY 1-->
 	<component ref="standardzone" />
 	<connections>			
 	  <connection name="connection_ClusterGateREM03To106" ref="gates">
@@ -162,8 +174,8 @@
 	<connections>
 	  <connection name="connection_ClusterGateREM04ToREM06" ref="gates">
 		<offset>
-		  <position x="0" y="0" z="22750"/>
-		  <quaternion qx="0" qy="0.991444914449" qz="0" qw="0.13052625262"/>					
+		  <position x="-12750" y="0" z="12750"/>
+		  <quaternion qx="0" qy="0.8433914" qz="0" qw="0.5372996"/>					
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
@@ -180,7 +192,31 @@
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
 	</connections>
-  </macro>		
+  </macro>
+  <macro name="ZoneG4_Cluster_REM04_Sector001_macro" class="zone"><!--NEPTUNE-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM04To110" ref="gates">
+		<offset>
+		  <position x="0" y="0" z="22750"/>
+		  <quaternion qx="0" qy="1" qz="0" qw="0"/>					
+		</offset>
+		<macro ref="props_ter_gate_01_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>
+  <macro name="ZoneG5_Cluster_REM04_Sector001_macro" class="zone"><!--BRENNAN'S TRIUMPH-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM04To115" ref="gates">
+		<offset>
+		  <position x="12750" y="0" z="12750"/>
+		  <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834"/>					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>	    
   <macro name="Zone001_Cluster_REM04_Sector001_macro" class="zone"> <!--CENTER-->
 	<component ref="standardzone" />
   </macro>
@@ -205,7 +241,7 @@
 	  <connection name="connection_ClusterGateREM05To113" ref="gates">
 		<offset>
 		  <position x="22750" y="0" z="0"/>
-		  <quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795"/>					
+		  <quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068"/>					
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
@@ -217,7 +253,7 @@
 	  <connection name="connection_ClusterGateREM05ToREM04" ref="gates">
 		<offset>
 		  <position x="-12750" y="0" z="12750"/>
-		  <quaternion qx="0" qy="0.7372773" qz="0" qw="0.6755902"/>					
+		  <quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834"/>					
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
@@ -265,13 +301,13 @@
 	  </connection>
 	</connections>
   </macro>	
-  <macro name="ZoneG2_Cluster_REM06_Sector001_macro" class="zone"><!--INACTIVE-->
+  <macro name="ZoneG2_Cluster_REM06_Sector001_macro" class="zone"><!--MATRIX #23-->
 	<component ref="standardzone" />
 	<connections>
-	  <connection name="connection_ClusterGateREM06To" ref="gates">
+	  <connection name="connection_ClusterGateREM06ToREM01" ref="gates">
 		<offset>
-		  <position x="12750" y="0" z="12750"/>
-		  <quaternion qx="0" qy="-0.5" qz="0" qw="0.8660254"/>					
+		  <position x="-12750" y="0" z="12750"/>
+		  <quaternion qx="0" qy="0.8660254" qz="0" qw="0.5"/>					
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
@@ -325,7 +361,7 @@
 	  </connection>
 	</connections>
   </macro>	
-  <macro name="ZoneG2_Cluster_REM07_Sector001_macro" class="zone"><!--POWER CIRCLE III-->
+  <macro name="ZoneG2_Cluster_REM07_Sector001_macro" class="zone"><!--POWER CIRCLE I-->
 	<component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM07ToREM08" ref="gates">
@@ -354,7 +390,7 @@
   </macro>
 
 		
-	<!--REM08 - POWER CIRCLE III-->		
+	<!--REM08 - POWER CIRCLE I-->		
   <macro name="ZoneG1_Cluster_REM08_Sector001_macro" class="zone"><!--MATRIX #79A-->
 	<component ref="standardzone" />
 	<connections>
@@ -384,7 +420,7 @@
   </macro>		
 
 		
-	<!--REM08 - POWER CIRCLE I-->		
+	<!--REM08 - POWER CIRCLE V-->		
   <macro name="ZoneG1_Cluster_REM08_Sector002_macro" class="zone"><!--SECOND CONTACT XI-->
 	<component ref="standardzone" />
 	<connections>
@@ -465,10 +501,10 @@
 	  </connection>
 	</connections>
   </macro>	
-  <macro name="ZoneG2_Cluster_REM09_Sector001_macro" class="zone"><!--INACTIVE-->
+  <macro name="ZoneG2_Cluster_REM09_Sector001_macro" class="zone"><!--THREE WORLDS-->
 	<component ref="standardzone" />
 	<connections>
-	  <connection name="connection_ClusterGateREM09To" ref="gates">
+	  <connection name="connection_ClusterGateREM09ToREM11" ref="gates">
 		<offset>
 		  <position x="0" y="0" z="-22750"/>
 		  <quaternion qx="0" qy="0" qz="0" qw="1"/>					
@@ -482,7 +518,7 @@
 	<connections>
 	  <connection name="connection_ClusterGateREM09To" ref="gates">
 		<offset>
-		  <position x="22750" y="0" z="0"/>
+		  <position x="12750" y="0" z="-12750"/>
 		  <quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068"/>					
 		</offset>
 		  <macro ref="props_gates_anc_gate_macro" connection="space" />
@@ -507,10 +543,10 @@
 
 		
 	<!--REM10 - HERRON'S NEBULA-->	
-  <macro name="ZoneG1_Cluster_REM10_Sector001_macro" class="zone"><!--LIGHT WATER-->
+  <macro name="ZoneG1_Cluster_REM10_Sector001_macro" class="zone"><!--THE HOLE-->
     <component ref="standardzone" />
 	<connections>
-	  <connection name="connection_ClusterGateREM10ToREM16" ref="gates">
+	  <connection name="connection_ClusterGateREM10ToREM81" ref="gates">
 		<offset>
 		  <position x="-12750" y="0" z="12750"/>
 		  <quaternion qx="0" qy="0.976296" qz="0" qw="0.2164396"/>					
@@ -531,10 +567,10 @@
 	  </connection>
 	</connections>
   </macro>	
-  <macro name="ZoneG3_Cluster_REM10_Sector001_macro" class="zone"><!--INACTIVE-->
+  <macro name="ZoneG3_Cluster_REM10_Sector001_macro" class="zone"><!--SEGARIS-->
     <component ref="standardzone" />
 	<connections>
-	  <connection name="connection_ClusterGateREM10To" ref="gates">
+	  <connection name="connection_ClusterGateREM10To113" ref="gates">
 		<offset>
 		  <position x="12750" y="0" z="12750"/>
 		  <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834"/>						
@@ -572,19 +608,43 @@
   </macro>
 
 		
-	<!--REM11 - TEMPTING FUMES-->
-  <macro name="ZoneG1_Cluster_REM11_Sector001_macro" class="zone"><!--ARGON PRIME-->
+	<!--REM11 - THREE WORLDS-->
+  <macro name="ZoneG1_Cluster_REM11_Sector001_macro" class="zone"><!--THE VOID-->
     <component ref="standardzone" />
 	<connections>
-	  <connection name="connection_ClusterGateREM11To014" ref="gates">
+	  <connection name="connection_ClusterGateREM11To027" ref="gates">
 		<offset>
 		  <position x="-12750" y="0" z="12750"/>
-		  <quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />					
+		  <quaternion qx="0" qy="0.819152" qz="0" qw="0.5735764" />					
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
 	</connections>
-  </macro>		
+  </macro>
+  <macro name="ZoneG2_Cluster_REM11_Sector001_macro" class="zone"><!--TELADI GAIN-->
+    <component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM11ToREM09" ref="gates">
+		<offset>
+		  <position x="0" y="0" z="25500"/>
+		  <quaternion qx="0" qy="1" qz="0" qw="0" />					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>
+  <macro name="ZoneG3_Cluster_REM11_Sector001_macro" class="zone"><!--INACTVE-->
+    <component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM11To" ref="gates">
+		<offset>
+		  <position x="0" y="0" z="-25500"/>
+		  <quaternion qx="0" qy="1" qz="0" qw="0" />					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>  
   <macro name="Zone001_Cluster_REM11_Sector001_macro" class="zone"> <!--CENTER-->
     <component ref="standardzone" />
   </macro>
@@ -671,11 +731,7 @@
 		  <position x="0" y="0" z="22750"/>
 		  <quaternion qx="0" qy="1" qz="0" qw="0"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space">
-		  <properties>
-			<state active="false" />
-		  </properties>									
-		</macro>	
+		<macro ref="props_gates_anc_gate_macro" connection="space" />	
 	  </connection>
 	</connections>
   </macro>
@@ -783,11 +839,7 @@
 		  <position x="0" y="0" z="-22750"/>
 		  <quaternion qx="0" qy="0.3007058" qz="0" qw="0.953717"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space">
-		  <properties>
-			<state active="false" />
-		  </properties>									
-		</macro>	
+		<macro ref="props_gates_anc_gate_macro" connection="space" />	
 	  </connection>
 	</connections>
   </macro>		
@@ -827,10 +879,10 @@
 	  </connection>
 	</connections>
   </macro>		
-  <macro name="ZoneG3_Cluster_REM16_Sector001_macro" class="zone"><!--HERRON'S NEBULA-->
+  <macro name="ZoneG3_Cluster_REM16_Sector001_macro" class="zone"><!--THE HOLE-->
     <component ref="standardzone" />
 	<connections>
-	  <connection name="connection_ClusterGateREM16ToREM10" ref="gates">
+	  <connection name="connection_ClusterGateREM16ToREM81" ref="gates">
 		<offset>
 		  <position x="12750" y="0" z="-12750"/>
 		  <quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795"/>					
@@ -1080,7 +1132,7 @@
   </macro>
 
 		
-	<!--REM21 - PERPETUAL SIN III-->
+	<!--REM21 - PERPETUAL SIN I-->
   <macro name="ZoneG1_Cluster_REM21_Sector001_macro" class="zone"><!--SANCTUM VERGE-->
 	<component ref="standardzone" />
 	<connections>
@@ -1104,7 +1156,7 @@
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
 	</connections>
-  </macro>		
+  </macro>  
   <macro name="Zone001_Cluster_REM21_Sector001_macro" class="zone"> <!--CENTER-->
 	<component ref="standardzone" />
   </macro>
@@ -1122,7 +1174,7 @@
   </macro>
 
 		
-	<!--REM21 - PERPETUAL SIN I-->
+	<!--REM21 - PERPETUAL SIN III-->
   <macro name="ZoneG1_Cluster_REM21_Sector002_macro" class="zone"><!--UNHOLY DESCENT-->
 	<component ref="standardzone" />
 	<connections>
@@ -1258,7 +1310,7 @@
 
 		
 	<!--REM23 - UNHOLY DESCENT-->
-  <macro name="ZoneG1_Cluster_REM23_Sector001_macro" class="zone"><!--PERPETUAL SIN-->
+  <macro name="ZoneG1_Cluster_REM23_Sector001_macro" class="zone"><!--PERPETUAL SIN III-->
     <component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM23ToREM21" ref="gates">
@@ -1270,7 +1322,7 @@
 	 </connection>
 	</connections>
   </macro>
-  <macro name="ZoneG2_Cluster_REM23_Sector001_macro" class="zone"><!--FAMILY THAN III-->
+  <macro name="ZoneG2_Cluster_REM23_Sector001_macro" class="zone"><!--FAMILY THAN II-->
     <component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM23ToREM32" ref="gates">
@@ -1505,7 +1557,7 @@
   </macro>
 
 		
-	<!--REM28 - KET'S RECKONING-->
+	<!--REM28 - KHA'AK SECTOR DELTA-->
   <macro name="ZoneG1_Cluster_REM28_Sector001_macro" class="zone"><!--WINDFALL III-->
 	<component ref="standardzone" />
 	<connections>
@@ -1563,7 +1615,19 @@
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
 	</connections>
-  </macro>		
+  </macro>
+  <macro name="ZoneG3_Cluster_REM29_Sector001_macro" class="zone"><!--HOLY VISION-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM29To024" ref="gates">
+		<offset>
+		  <position x="-12750" y="0" z="12750"/>
+		  <quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>	  
   <macro name="Zone001_Cluster_REM29_Sector001_macro" class="zone"> <!--CENTER-->
 	<component ref="standardzone" />
   </macro>
@@ -1838,14 +1902,14 @@
   </macro>	
 		
 		
-	<!--REM32 - FAMILY THAN III-->
+	<!--REM32 - FAMILY THAN II-->
   <macro name="ZoneG1_Cluster_REM32_Sector002_macro" class="zone"><!--UNHOLY DESCENT-->
 	<component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM32ToREM23" ref="gates">
 		<offset>
 		  <position x="-12750" y="0" z="-12750"/>
-		  <quaternion qx="0" qy="0" qz="0" qw="1"/>					
+		  <quaternion qx="0" qy="0.5" qz="0" qw="0.8660254"/>					
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space">
 		  <properties>
@@ -1994,7 +2058,7 @@
   </macro>
 
 		
-	<!--REM35 - BLUE HORIZON IV -->
+	<!--REM35 - BLUE HORIZON I -->
   <macro name="ZoneG1_Cluster_REM35_Sector001_macro" class="zone"><!--GREAT TRENCH-->
 	<component ref="standardzone" />
 	<connections>
@@ -2039,7 +2103,7 @@
 	<component ref="standardzone" />
   </macro>		
 		
-	<!--REM35 - BLUE HORIZON I-->
+	<!--REM35 - BLUE HORIZON IV-->
   <macro name="ZoneG1_Cluster_REM35_Sector002_macro" class="zone"><!--QUEEN'S RETRIBUTION-->
 	<component ref="standardzone" />
 	<connections>
@@ -2096,7 +2160,7 @@
 
 		
 	<!--REM36 - GREAT TRENCH-->
-  <macro name="ZoneG1_Cluster_REM36_Sector001_macro" class="zone"><!--BLUE HORIZON IV-->
+  <macro name="ZoneG1_Cluster_REM36_Sector001_macro" class="zone"><!--BLUE HORIZON I-->
 	<component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM36ToREM35" ref="gates">
@@ -2112,7 +2176,7 @@
 	  </connection>
 	</connections>
   </macro>
-  <macro name="ZoneG2_Cluster_REM36_Sector001_macro" class="zone"><!--OCRACOKE'S STORM I-->
+  <macro name="ZoneG2_Cluster_REM36_Sector001_macro" class="zone"><!--ADVENTURE'S PROMISE I-->
 	<component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM36ToREM40" ref="gates">
@@ -2120,7 +2184,11 @@
 		  <position x="0" y="0" z="-22750"/>
 		  <quaternion qx="0" qy="0.1305262" qz="0" qw="-0.99144491"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space" />
+		<macro ref="props_gates_anc_gate_macro" connection="space" >
+		  <properties>
+			<state active="false" />
+		  </properties>									
+		</macro>			
 	  </connection>
 	</connections>
   </macro>	
@@ -2250,7 +2318,7 @@
 	  </connection>
 	</connections>
   </macro>
-  <macro name="ZoneG3_Cluster_REM38_Sector001_macro" class="zone"><!--BLUE HORIZON I-->
+  <macro name="ZoneG3_Cluster_REM38_Sector001_macro" class="zone"><!--BLUE HORIZON IV-->
 	<component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM38ToREM35" ref="gates">
@@ -2335,7 +2403,7 @@
   </macro>		
 
 		
-	<!--REM40 - OCRACOKE'S STORM I-->
+	<!--REM40 - ADVENTURE'S PROMISE I-->
   <macro name="ZoneG1_Cluster_REM40_Sector001_macro" class="zone"><!--GREAT TRENCH-->
 	<component ref="standardzone" />
 	<connections>
@@ -2344,7 +2412,11 @@
 		  <position x="5650" y="500" z="25850"/>
 		  <quaternion qx="0" qy="1" qz="0" qw="0"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space" />
+		<macro ref="props_gates_anc_gate_macro" connection="space" >
+		  <properties>
+			<state active="false" />
+		  </properties>									
+		</macro>			
 	  </connection>
 	</connections>
   </macro>	
@@ -2364,7 +2436,7 @@
 	<component ref="standardzone" />
   </macro>
 
-	<!--REM40 - OCRACOKE'S STORM II-->	
+	<!--REM40 - ADVENTURE'S PROMISE II-->	
   <macro name="ZoneG1_Cluster_REM40_Sector002_macro" class="zone"><!--SHADOWS OF GIANTS VI-->
 	<component ref="standardzone" />
 	<connections>
@@ -2376,19 +2448,7 @@
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
 	</connections>
-  </macro>
-  <macro name="ZoneG2_Cluster_REM40_Sector002_macro" class="zone"><!--INACTIVE-->
-	<component ref="standardzone" />
-	<connections>
-	  <connection name="connection_ClusterGateREM40To" ref="gates">
-		<offset>
-		  <position x="10650" y="500" z="15850"/>
-		  <quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834"/>					
-		</offset>
-		<macro ref="props_gates_orb_accelerator_01_macro" connection="space" />
-	  </connection>
-	</connections>
-  </macro>			
+  </macro>		
   <macro name="Zone001_Cluster_REM40_Sector002_macro" class="zone"> <!--CENTER-->
 	<component ref="standardzone" />
   </macro>
@@ -2405,7 +2465,7 @@
 	<component ref="standardzone" />
   </macro>
 		
-	<!--REM40 - OCRACOKE'S STORM SUPERHIGHWAYS-->
+	<!--REM40 - ADVENTURE'S PROMISE SUPERHIGHWAYS-->
   <macro name="tzoneCluster_REM40_Sector001SHCon6_GateZone_macro" class="zone">
 	<component ref="standardzone" />
 	<connections>
@@ -2433,7 +2493,7 @@
 		
 
 	<!--REM41 - SHADOWS OF GIANTS VI-->
-  <macro name="ZoneG1_Cluster_REM41_Sector001_macro" class="zone"><!--OCRACOKE'S STORM II-->
+  <macro name="ZoneG1_Cluster_REM41_Sector001_macro" class="zone"><!--ADVENTURE'S PROMISE II-->
 	<component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM41ToREM40" ref="gates">
@@ -2470,11 +2530,7 @@
 		  <position x="5000" y="0" z="-17550"/>
 		  <quaternion qx="0" qy="0.3007058" qz="0" qw="-0.953717"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space">
-		  <properties>
-			<state active="false" />
-		  </properties>									
-		</macro>					
+		<macro ref="props_gates_anc_gate_macro" connection="space"/>				
 	  </connection>
 	</connections>
   </macro>		
@@ -2695,28 +2751,28 @@
   </macro>
 		
 
-	<!--REM46 - RECOVERED CAPITAL-->
+	<!--REM46 - WRETCHED SKIES I FAMILY LOMM-->
   <macro name="ZoneG1_Cluster_REM46_Sector001_macro" class="zone"><!--WRETCHED SKIES IV-->
 	<component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM46To400" ref="gates">
 		<offset>
-		  <position x="-18750" y="0" z="-4750"/>
-		  <quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068"/>					
+		  <position x="-18750" y="0" z="4750"/>
+		  <quaternion qx="0" qy="0.9659258" qz="0" qw="-0.258819"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space" />
+		<macro ref="props_gates_orb_accelerator_01_macro" connection="space" />
 	  </connection>
 	</connections>
   </macro>
-  <macro name="ZoneG2_Cluster_REM46_Sector001_macro" class="zone"><!--WRETCHED SKIES VII-->
+  <macro name="ZoneG2_Cluster_REM46_Sector001_macro" class="zone"><!--WRETCHED SKIES XV-->
 	<component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM46ToREM48" ref="gates">
 		<offset>
 		  <position x="18750" y="0" z="4750"/>
-		  <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795"/>					
+		  <quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space" />
+		<macro ref="props_gates_orb_accelerator_01_macro" connection="space" />
 	  </connection>
 	</connections>
   </macro>		
@@ -2810,15 +2866,15 @@
 
 
 	<!--REM48 - WRETCHED SKIES XV-->
-  <macro name="ZoneG1_Cluster_REM48_Sector002_macro" class="zone"><!--RECOVERED CAPITAL-->
+  <macro name="ZoneG1_Cluster_REM48_Sector002_macro" class="zone"><!--WRETCHED SKIES I FAMILY LOMM-->
 	<component ref="standardzone" />
 	<connections>
 	  <connection name="connection_ClusterGateREM48ToREM46" ref="gates">
 		<offset>
 		  <position x="-11750" y="0" z="-11750"/>
-		  <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834"/>					
+		  <quaternion qx="0" qy="0.9848078" qz="0" qw="-0.1736482"/>					
 		</offset>
-		<macro ref="props_gates_anc_gate_macro" connection="space" />
+		<macro ref="props_gates_orb_accelerator_01_macro" connection="space" />
 	  </connection>
 	</connections>
   </macro>
@@ -3147,7 +3203,7 @@
   </macro>		
 		
 
-	<!--REM54 - MERCHANT HAVEN-->
+	<!--REM54 - MINISTRY OF FINANCE-->
   <macro name="ZoneG1_Cluster_REM54_Sector001_macro" class="zone"><!--BRIGHT PROMISE-->
 	<component ref="standardzone" />
 	<connections>
@@ -3351,13 +3407,7 @@
   </macro>
   <macro name="Zone005_Cluster_REM57_Sector001_macro" class="zone"> <!--WEST-->
 	<component ref="standardzone" />
-  </macro>
-  <macro name="ZoneEQ_Cluster_REM57_Sector001_macro" class="zone"> <!--EQUIPMENT DOCK-->
-	<component ref="standardzone" />
-  </macro>
-  <macro name="ZoneTD_Cluster_REM57_Sector001_macro" class="zone"> <!--TRADE STATION-->
-	<component ref="standardzone" />
-  </macro>		
+  </macro>	
 
 	<!--REM58 - MONTALAAR-->
   <macro name="ZoneG1_Cluster_REM58_Sector001_macro" class="zone"><!--GRAND EXCHANGE IV-->
@@ -3880,7 +3930,7 @@
 	  <connection name="connection_ClusterGateREM69To045" ref="gates">
 		<offset>
 		  <position x="-21750" y="0" z="0"/>
-		  <quaternion qx="0" qy="1" qz="0" qw="0"/>					
+		  <quaternion qx="0" qy="0.5" qz="0" qw="0.8660254"/>				
 		</offset>
 		<macro ref="props_gates_anc_gate_macro" connection="space" />
 	  </connection>
@@ -4439,6 +4489,160 @@
 	<connections />
   </macro>    
 
+  
+	<!--REM81 - THE HOLE-->	
+  <macro name="ZoneG1_Cluster_REM81_Sector001_macro" class="zone"><!--LIGHT WATER-->
+    <component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM81ToREM16" ref="gates">
+		<offset>
+		  <position x="-12750" y="0" z="12750"/>
+		  <quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834"/>					
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>	
+  <macro name="ZoneG2_Cluster_REM81_Sector001_macro" class="zone"><!--SECOND CONTACT XI-->
+    <component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM81To041" ref="gates">
+		<offset>
+		  <position x="12750" y="0" z="12750"/>
+		  <quaternion qx="0" qy="0.8433914" qz="0" qw="-0.5372996"/>						
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>	
+  <macro name="ZoneG3_Cluster_REM81_Sector001_macro" class="zone"><!--ATREUS' CLOUDS-->
+    <component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM81To608" ref="gates">
+		<offset>
+		  <position x="-12750" y="0" z="-12750"/>
+		  <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795"/>						
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space">
+		  <properties>
+			<state active="false" />
+		  </properties>									
+		</macro>			
+	  </connection>
+	</connections>
+  </macro>	
+  <macro name="ZoneG4_Cluster_REM81_Sector001_macro" class="zone"><!--HERRON'S NEBULA-->
+    <component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM81ToREM10" ref="gates">
+		<offset>
+		  <position x="0" y="0" z="-24750"/>
+		  <quaternion qx="0" qy="0" qz="0" qw="1"/>						
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>		
+  <macro name="Zone001_Cluster_REM81_Sector001_macro" class="zone"> <!--CENTER-->
+    <component ref="standardzone" />
+  </macro>
+  <macro name="Zone002_Cluster_REM81_Sector001_macro" class="zone"> <!--NORTH-->
+    <component ref="standardzone" />
+  </macro>
+  <macro name="Zone003_Cluster_REM81_Sector001_macro" class="zone"> <!--EAST-->
+    <component ref="standardzone" />
+  </macro>
+  <macro name="Zone004_Cluster_REM81_Sector001_macro" class="zone"> <!--SOUTH-->
+    <component ref="standardzone" />
+  </macro>
+  <macro name="Zone005_Cluster_REM81_Sector001_macro" class="zone"> <!--WEST-->
+    <component ref="standardzone" />
+  </macro>  
+  
+  
+	<!--REM82 - OCRACOKE'S STORM-->	
+  <macro name="ZoneG1_Cluster_REM82_Sector001_macro" class="zone"><!--SAVAGE SPUR I-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM82To112" ref="gates">
+		<offset>
+		  <position x="-24500" y="0" z="0"/>
+		  <quaternion qx="0" qy="0" qz="0" qw="1"/>				  
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>
+  <macro name="ZoneG2_Cluster_REM82_Sector001_macro" class="zone"><!--INACTIVE-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM82To" ref="gates">
+		<offset>
+		  <position x="0" y="0" z="24500"/>
+		  <quaternion qx="0" qy="0" qz="0" qw="1"/>				  
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>	  
+  <macro name="Zone001_Cluster_REM82_Sector001_macro" class="zone"> <!--CENTER-->
+	<component ref="standardzone" />
+  </macro>
+  <macro name="Zone002_Cluster_REM82_Sector001_macro" class="zone"> <!--NORTH-->
+	<component ref="standardzone" />
+  </macro>
+  <macro name="Zone003_Cluster_REM82_Sector001_macro" class="zone"> <!--EAST-->
+	<component ref="standardzone" />
+  </macro>
+  <macro name="Zone004_Cluster_REM82_Sector001_macro" class="zone"> <!--SOUTH-->
+	<component ref="standardzone" />
+  </macro>
+  <macro name="Zone005_Cluster_REM82_Sector001_macro" class="zone"> <!--WEST-->
+	<component ref="standardzone" />
+  </macro>
+
+
+	<!--REM83 - PATRIARCH'S SEAT-->	
+  <macro name="ZoneG1_Cluster_REM83_Sector001_macro" class="zone"><!--FAMILY ZHIN-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM83To401" ref="gates">
+		<offset>
+		  <position x="-12250" y="0" z="-12250"/>
+		  <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795"/>				  
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>
+  <macro name="ZoneG2_Cluster_REM83_Sector001_macro" class="zone"><!--FAMILY KRITT-->
+	<component ref="standardzone" />
+	<connections>
+	  <connection name="connection_ClusterGateREM83To402" ref="gates">
+		<offset>
+		  <position x="-12250" y="0" z="12250"/>
+		  <quaternion qx="0" qy="0.9961947" qz="0" qw="0.0871557"/>				  
+		</offset>
+		<macro ref="props_gates_anc_gate_macro" connection="space" />
+	  </connection>
+	</connections>
+  </macro>	  
+  <macro name="Zone001_Cluster_REM83_Sector001_macro" class="zone"> <!--CENTER-->
+	<component ref="standardzone" />
+  </macro>
+  <macro name="Zone002_Cluster_REM83_Sector001_macro" class="zone"> <!--NORTH-->
+	<component ref="standardzone" />
+  </macro>
+  <macro name="Zone003_Cluster_REM83_Sector001_macro" class="zone"> <!--EAST-->
+	<component ref="standardzone" />
+  </macro>
+  <macro name="Zone004_Cluster_REM83_Sector001_macro" class="zone"> <!--SOUTH-->
+	<component ref="standardzone" />
+  </macro>
+  <macro name="Zone005_Cluster_REM83_Sector001_macro" class="zone"> <!--WEST-->
+	<component ref="standardzone" />
+  </macro>   
+  
  
 	<!--ALD01 - ALDRIN I-->	
   <macro name="Zone001_Cluster_ALD01_Sector001_macro" class="zone"> <!--CENTER-->

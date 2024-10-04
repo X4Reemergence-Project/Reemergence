@@ -22,7 +22,10 @@
   </add> 
   <add sel="/groups/group[@name='ant_fighter_heavy_s']"> 
 	<select macro="ship_arg_s_buster_macro" weight="10" />  	
-  </add>    
+  </add>  
+  <add sel="/groups/group[@name='ant_trader_container_s']"> 
+	<select macro="ship_arg_m_express_macro" weight="50" />  	 <!--experimental-->
+  </add>      
   <add sel="/groups/group[@name='ant_gunboat_m']"> 
 	<select macro="ship_arg_m_centaur_macro" weight="75" />  	
   </add>  
@@ -40,6 +43,9 @@
 	<group name="arg_centaur">
       <select macro="ship_arg_m_centaur_macro" weight="100"/>   	  
 	</group>
+  </add>
+  <add sel="/groups/group[@name='arg_trader_container_s']"> 
+	<select macro="ship_arg_m_express_macro" weight="50" />  	 <!--experimental-->  	
   </add>   
   <add sel="/groups/group[@name='arg_fighter_heavy_s']"> 
 	<select macro="ship_arg_s_buster_macro" weight="10" />  	
@@ -71,16 +77,39 @@
 	<group name="tel_cassowary">	
 	  <select macro="ship_tel_l_cassowary_macro" weight="100" /> 
 	</group>
+  </add>
+  <add sel="//groups">		
+	<group name="tel_shrike_e">	
+	  <select macro="ship_tel_l_shrike_e_macro" weight="100" /> 
+	</group>
   </add>   
   
-  <replace sel="/groups/group[@name='tel_shrike_l']/select[@macro='ship_tel_l_shrike_a_macro']/@macro">ship_tel_l_cassowary_macro</replace>  <!--VRO Shrike for RE Cassowary-->  
+  <replace sel="/groups/group[@name='tel_shrike_l']/select[@macro='ship_tel_l_shrike_a_macro']/@macro">ship_tel_l_cassowary_macro</replace>  <!--VRO Shrike for RE Cassowary-->
+  <add sel="/groups/group[@name='tel_shrike_l']"> 
+    <select macro="ship_tel_l_shrike_e_macro" weight="100"/>
+  </add>  
  
   
   <!-- ################ -->
   <!--    SPLIT 	-->
   <!-- ################ -->
   <replace sel="/groups/group[@name='spl_panther_l']/select[@macro='ship_spl_l_panther_a_macro']/@macro">ship_spl_l_cheetah_macro</replace>  <!--VRO Panther for RE Cheetah -->   
-  
+
+  <add sel="//groups">		
+	<group name="cub_adder">	
+	  <select macro="ship_spl_l_adder_macro" weight="100" /> 
+	</group>
+  </add>
+  <add sel="//groups">		
+	<group name="faf_adder">	
+	  <select macro="ship_spl_l_adder_macro" weight="100" /> 
+	</group>
+  </add>    
+  <add sel="//groups">		
+	<group name="spl_adder">	
+	  <select macro="ship_spl_l_adder_macro" weight="100" /> 
+	</group>
+  </add>    
   <add sel="//groups">		
 	<group name="frf_cheetah">	
 	  <select macro="ship_spl_l_cheetah_macro" weight="100" /> 
@@ -115,7 +144,10 @@
 	<group name="spl_wolf">
       <select macro="ship_spl_s_wolf_macro" weight="100"/>   	  
 	</group>
-  </add>  
+  </add>
+  <add sel="/groups/group[@name='spl_destroyer_l']"> 
+	<select macro="ship_spl_l_adder_macro" weight="60" />  	
+  </add>       
   <add sel="/groups/group[@name='spl_fighter_s']"> 
 	<select macro="ship_spl_s_wolf_macro" weight="10" />  	
   </add>   
@@ -154,6 +186,11 @@
       <select macro="ship_ter_s_falchion_macro" weight="100"/>   	  
 	</group>
   </add>
+  <add sel="//groups">		
+	<group name="pio_pata">
+      <select macro="ship_ter_m_pata_macro" weight="100"/>   	  
+	</group>
+  </add>      
   <add sel="//groups">		
 	<group name="pio_falchion">
       <select macro="ship_ter_s_falchion_macro" weight="100"/>   	  
@@ -262,7 +299,7 @@
 	</group>
 	<group name="otas_scout_s">
 	  <select macro="ship_otas_s_solano_macro" weight="100"/>			
-	</group>
+	</group>	
   </add>
 
   <!-- ################ -->
@@ -314,9 +351,8 @@
 	  <select macro="ship_tel_l_destroyer_01_b_macro" weight="275" />
 	  <select macro="ship_tel_l_destroyer_02_a_macro" weight="200" />	  
 	  <select macro="ship_pirate_l_brigantine_macro" weight="120" />
-	  <select macro="ship_tel_l_cassowary_macro" weight="150" />    	  
+	  <select macro="ship_tel_l_cassowary_macro" weight="250" />    	  
 	  <select macro="ship_arg_l_trans_container_03_p_macro" weight="100" /> <!--VRO-->
-	  <select macro="ship_arg_l_centaur_b_macro" weight="100" /> <!--VRO-->
 	  <select macro="ship_sca_l_hound_macro" weight="280" /> <!--VRO-->
 	</group>
   </add>
@@ -330,11 +366,12 @@
       <select macro="ship_tel_m_bomber_01_b_macro" weight="15"/>
       <select macro="ship_tel_m_frigate_01_a_macro" weight="10"/>
       <select macro="ship_tel_m_frigate_01_b_macro" weight="10"/>
-	  <select macro="ship_pirate_m_marauder_macro" weight="10" />		  
+	  <select macro="ship_pirate_m_marauder_macro" weight="25" />	 
+	  <select macro="ship_arg_m_centaur_macro" weight="10" />		  
 	</group>
   </add>  
   <add sel="//groups">		
-	  <group name="sca_small_re">
+	<group name="sca_small_re">
 	  <select macro="ship_arg_s_fighter_01_a_macro" weight="100" />	
 	  <select macro="ship_arg_s_fighter_01_b_macro" weight="100" />		
 	  <select macro="ship_arg_s_fighter_02_a_macro" weight="100" />	
@@ -347,12 +384,10 @@
 	  <select macro="ship_tel_s_fighter_01_b_macro" weight="100" />	
 	  <select macro="ship_tel_s_fighter_02_a_macro" weight="100" />	
 	  <select macro="ship_tel_s_fighter_02_b_macro" weight="100" />		
-	  <select macro="ship_arg_s_heavyfighter_01_a_macro" weight="75" />
-	  <select macro="ship_arg_s_heavyfighter_01_b_macro" weight="75" />
 	  <select macro="ship_arg_s_heavyfighter_02_a_macro" weight="75" />	  
 	  <select macro="ship_pir_s_heavyfighter_01_a_macro" weight="60" />	
 	  <select macro="ship_pirate_s_blastclaw_macro" weight="60" />	
-	  <select macro="ship_pirate_m_marauder_macro" weight="10" />		  
+	  <select macro="ship_pirate_m_marauder_macro" weight="25" />		  
 	</group>
   </add> 
 <!--Yaki - Skull&Bones--> 
@@ -384,11 +419,10 @@
     <select macro="ship_tel_m_frigate_01_a_macro" weight="10"/>
     <select macro="ship_tel_m_frigate_01_b_macro" weight="10"/>	
 	<select macro="ship_pir_s_heavyfighter_01_a_macro" weight="75" />
-	<select macro="ship_arg_s_heavyfighter_01_a_macro" weight="75" />
-	<select macro="ship_arg_s_heavyfighter_01_b_macro" weight="75" />
 	<select macro="ship_arg_s_heavyfighter_02_a_macro" weight="75" />
 	<select macro="ship_pirate_s_blastclaw_macro" weight="60" />
-	<select macro="ship_pirate_m_marauder_macro" weight="10" />		
+	<select macro="ship_pirate_m_marauder_macro" weight="15" />	
+	<select macro="ship_arg_m_centaur_macro" weight="15" />			
   </add>
   <add sel="/groups/group[@name='sca_pirate_s']">	
 	<select macro="ship_arg_s_fighter_01_a_macro" weight="100" />	
@@ -406,7 +440,6 @@
   <!--Comment: Ships had been assigned to racial groups or custom SCA groups-->
   <add sel="/groups/group[@name='sca_pirate_l']">
 	<select macro="ship_arg_l_trans_container_03_p_macro" weight="40" /> 
-	<select macro="ship_arg_l_centaur_b_macro" weight="60" />	
 	<select macro="ship_sca_l_hound_macro" weight="60" /> 
   </add>
   

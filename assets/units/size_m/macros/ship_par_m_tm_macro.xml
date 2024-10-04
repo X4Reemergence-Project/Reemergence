@@ -4,7 +4,7 @@
   <macro name="ship_par_m_tm_macro" class="ship_m">
     <component ref="ship_par_m_tm" />
     <properties>
-      <identification name="{20101,120901}" basename="{20101,120901}" description="{19530007,832}" icon="ship_m_neutral_01" /> <!-- temporary icon due to lack of custom one -->
+      <identification name="{20101,120901}" basename="{20101,120901}" description="{19530007,832}" makerrace="paranid" icon="ship_m_neutral_01" /> <!-- temporary icon due to lack of custom one -->
       <software>
         <software ware="software_dockmk2" compatible="1" />
         <software ware="software_flightassistmk1" default="1" />
@@ -21,6 +21,9 @@
       <secrecy level="1" />
       <purpose primary="fight" />
       <people capacity="17" />
+	  <sounds>
+        <shipdetail ref="shipdetail_ship_m_02" />
+      </sounds>
       <physics mass="31.3656">
         <inertia pitch="4.666" yaw="6.666" roll="5.333" />
         <drag forward="3.9564 " reverse="15.8256 " horizontal="18.5731 " vertical="18.5731 " pitch="13.702" yaw="13.702" roll="13.702" />
