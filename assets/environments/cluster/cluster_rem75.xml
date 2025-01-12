@@ -98,14 +98,14 @@
 			</connection>
 			<connection name="Connection04" tags="part animation textureanimation  ">
 				<offset>
-					<position x="10.327607E+07" y="-4.139411E+07" z="4.139411E+07"/>
+					<position x="7.327607E+07" y="-0.139411E+07" z="2.839411E+07"/>
 					<quaternion qx="-0" qy="-0" qz="-0.7529896" qw="-0.6580324"/>
 				</offset>
 				<animations>
 					<animation name="loop" start="0" end="108000"/>
 				</animations>
 				<parts>
-					<part name="part_uranus2">
+					<part name="part_uranus">
 						<lods>
 							<lod index="0">
 								<materials>
@@ -133,13 +133,12 @@
 				</parts>
 				<waypoints/>
 			</connection>
-			<connection name="Connection05" tags="part iklink  " parent="part_uranus">
+			<connection name="Connection05" tags="part iklink nocollision  " parent="part_uranus">
 				<offset>
-					<position x="0" y="0" z="0"/>					
-					<quaternion qx="0.3794095" qy="-0.0499502" qz="0.1205905" qw="0.9159756"/>									
+					<position x="468.3459" y="0" z="-4174.219"/>
 				</offset>
 				<parts>
-					<part name="part_uranus_rings2">
+					<part name="part_uranus_rings">
 						<lods>
 							<lod index="0">
 								<materials>
@@ -158,9 +157,30 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="Connection06" tags="part  ">
+			<connection name="Connection06" tags="part iklink  " parent="part_uranus">
+				<parts>
+					<part name="part_uranus_atmo">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1terranenv.atmo_planet_uranus"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2.5589E+07" y="2.5589E+07" z="2.5589E+07"/>
+							<center x="1.953125" y="-0.991815" z="-3.90625"/>
+						</size>
+						<size_raw>
+							<max x="2.5589E+07" y="2.5589E+07" z="2.5589E+07"/>
+							<center x="0" y="-0.0152525" z="-3.90625"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>			
+			<connection name="Connection07" tags="part  ">
 				<offset>
-					<position x="-0.06465E+07" y="-1584043" z="0.18906E+08"/>
+					<position x="0.66465E+07" y="-1584043" z="0.13906E+08"/>
 				</offset>
 				<parts>
 					<part name="part_titania">

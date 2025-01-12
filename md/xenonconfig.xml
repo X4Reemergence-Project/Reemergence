@@ -1,42 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <mdscript name="xenonconfig">
-<cues>
-  <cue name="EngageMiners" instantiate="false">
-	<conditions>			
-		<event_cue_signalled cue="md.Setup.Start" />
-		<check_value value="player.age ge 2h"/>		<!-- 2h -->	
-		<debug_text text="'Xenon miners set'" />					
-	</conditions>
-	<actions>
-		<set_job_active job="'xenon_miner_emperor_pride'" activate="true"/>
-		<set_job_active job="'xenon_miner_matrix598'" activate="true" />
-		<set_job_active job="'xenon_miner_matrix79b'" activate="true" />
-		<set_job_active job="'xenon_miner_matrix9'" activate="true" />
-		<set_job_active job="'xenon_miner_atiyas_misfortune'" activate="true" />
-		<set_job_active job="'xenon_miner_scale_plate_green'" activate="true" />
-		<set_job_active job="'xenon_miner_savage_spur'" activate="true" />				
-		<debug_text text="'Additonal Xenon miners activated'" />				
-	</actions>
-  </cue>	
-	
-  <cue name="EngageTraders" instantiate="false">
-	 <conditions>			
-	  <event_cue_signalled cue="md.Setup.Start" />
-	  <check_value value="player.age ge 2h"/>		<!-- 2h -->	
-	  <debug_text text="'Xenon traders set'" />				
-	 </conditions>
-	 <actions>
-	  <set_job_active job="'xenon_trader_emperor_pride'" activate="true"/>
-	  <set_job_active job="'xenon_trader_matrix598'" activate="true" />
-	  <set_job_active job="'xenon_trader_matrix79b'" activate="true" />
-	  <set_job_active job="'xenon_trader_matrix9'" activate="true" />
-	  <set_job_active job="'xenon_trader_atiyas_misfortune'" activate="true" />
-	  <set_job_active job="'xenon_trader_scale_plate_green'" activate="true" />
-	  <set_job_active job="'xenon_trader_savage_spur'" activate="true" />	
-	  <debug_text text="'Additonal Xenon traders activated'" />				
-	</actions>
-  </cue>
-	
+<cues>	
   <cue name="EngageWave1" instantiate="false">
 	<conditions>
 	  <event_cue_signalled cue="md.Setup.Start" />
@@ -44,22 +8,7 @@
 	  <debug_text text="'Xenon Wave1 set'" />				
 	</conditions>
 	<actions>		
-	  <set_job_active job="'xenon_strike_craft_emperor_pride'" activate="true"/>
-	  <set_job_active job="'xenon_strike_craft_matrix598'" activate="true"/>
-	  <set_job_active job="'xenon_strike_craft_matrix79b'" activate="true"/>
-	  <set_job_active job="'xenon_strike_craft_matrix9'" activate="true"/>
-	  <set_job_active job="'xenon_strike_craft_atiyas_misfortune'" activate="true"/>
-	  <set_job_active job="'xenon_strike_craft_scale_plate_green'" activate="true"/>
-	  <set_job_active job="'xenon_strike_craft_savage_spur'" activate="true"/>	 
-		<!--X:Reemergence-->				
-	  <set_job_active job="'xenon_strike_craft_matrix23'" activate="true"/>				
-	  <set_job_active job="'xenon_strike_craft_matrix48'" activate="true"/>		
-	  <set_job_active job="'xenon_strike_craft_split_fire'" activate="true"/>		
-	  <set_job_active job="'xenon_strike_craft_depths_of_silence'" activate="true"/>		
-	  <set_job_active job="'xenon_strike_craft_desecrated_skies'" activate="true"/>		
-	  <set_job_active job="'xenon_strike_craft_matrix472d'" activate="true"/>
-	  <set_job_active job="'xenon_strike_craft_matrix695'" activate="true"/>	  
-	  <set_job_active job="'xenon_strike_craft_matrix483'" activate="true"/>						
+	  <set_job_active job="'xenon_strike_craft_sa'" activate="true"/>	  
 	  <debug_text text="'First Defenders activated'"/>
 	</actions>
   </cue>
@@ -71,22 +20,7 @@
 	  <debug_text text="'Xenon Wave2 set'" />				
 	</conditions>
 	<actions>			
-	  <set_job_active job="'xenon_destroyers_emperor_pride'" activate="true"/>
-	  <set_job_active job="'xenon_destroyers_matrix598'" activate="true"/>
-	  <set_job_active job="'xenon_destroyers_matrix79b'" activate="true"/>
-	  <set_job_active job="'xenon_destroyers_matrix9'" activate="true"/>
-	  <set_job_active job="'xenon_destroyers_atiyas_misfortune'" activate="true"/>
-	  <set_job_active job="'xenon_destroyers_scale_plate_green'" activate="true"/>
-	  <set_job_active job="'xenon_destroyers_savage_spur'" activate="true"/>
-		<!--X:Reemergence-->				
-	  <set_job_active job="'xenon_destroyers_matrix23'" activate="true"/>				
-	  <set_job_active job="'xenon_destroyers_matrix48'" activate="true"/>		
-	  <set_job_active job="'xenon_destroyers_split_fire'" activate="true"/>		
-	  <set_job_active job="'xenon_destroyers_depths_of_silence'" activate="true"/>		
-	  <set_job_active job="'xenon_destroyers_desecrated_skies'" activate="true"/>		
-      <set_job_active job="'xenon_destroyers_matrix472d'" activate="true"/>	
-	  <set_job_active job="'xenon_destroyers_matrix695'" activate="true"/>	  
-      <set_job_active job="'xenon_destroyers_matrix483'" activate="true"/>					
+	  <set_job_active job="'xenon_destroyers_sa'" activate="true"/>  
       <debug_text text="'Second Defenders activated'"/>
 	</actions>
   </cue>		
@@ -98,21 +32,7 @@
 	  <debug_text text="'Xenon Wave3 set'" />				
     </conditions>
 	<actions>			
-	  <set_job_active job="'xenon_battleship_emperor_pride'" activate="true"/>
-	  <set_job_active job="'xenon_battleship_matrix598'" activate="true"/>
-	  <set_job_active job="'xenon_battleship_matrix79b'" activate="true"/>
-	  <set_job_active job="'xenon_battleship_matrix9'" activate="true"/>
-	  <set_job_active job="'xenon_battleship_atiyas_misfortune'" activate="true"/>
-	  <set_job_active job="'xenon_battleship_scale_plate_green'" activate="true"/>
-	  <set_job_active job="'xenon_battleship_savage_spur'" activate="true"/>
-		<!--X:Reemergence-->				
-	  <set_job_active job="'xenon_battleship_matrix23'" activate="true"/>				
-	  <set_job_active job="'xenon_battleship_matrix48'" activate="true"/>		
-	  <set_job_active job="'xenon_battleship_split_fire'" activate="true"/>		
-	  <set_job_active job="'xenon_battleship_depths_of_silence'" activate="true"/>		
-	  <set_job_active job="'xenon_battleship_desecrated_skies'" activate="true"/>
-	  <set_job_active job="'xenon_battleship_matrix695'" activate="true"/>	  
-	  <set_job_active job="'xenon_battleship_matrix483'" activate="true"/>					
+	  <set_job_active job="'xenon_battleship_sa'" activate="true"/>	  
 	  <debug_text text="'Third Defenders activated'"/>
 	</actions>
   </cue>	

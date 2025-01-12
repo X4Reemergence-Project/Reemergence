@@ -11,7 +11,7 @@
 	  </conditions>
 	  <actions>		
 		<do_if value="global.$smugglercoverfactions?">
-		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.xaar}">
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.aldrin}">
 			<append_to_list name="global.$smugglercoverfactions" exact="faction.aldrin"/>
 		  </do_if>			
 		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.otas}">
@@ -34,7 +34,19 @@
 		  </do_if>	
 		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.xaar}">
 			<append_to_list name="global.$smugglercoverfactions" exact="faction.xaar"/>
-		  </do_if>	  
+		  </do_if>
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.enclave}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.enclave"/>
+		  </do_if>
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.beryll}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.beryll"/>
+		  </do_if>	
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.thuruk}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.thuruk"/>
+		  </do_if>	
+		  <do_if value="not global.$smugglercoverfactions.indexof.{faction.tma}">
+			<append_to_list name="global.$smugglercoverfactions" exact="faction.tma"/>
+		  </do_if>			  
 		</do_if>
 		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.Cluster_rem05_Sector001_macro" comment="Megnir"/>		
 		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.Cluster_rem08_Sector002_macro" comment="Power Circle I"/>
@@ -54,7 +66,8 @@
 		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem65_sector001_macro" comment="Wastelands"/>	
 		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem74_sector001_macro" comment="Tebathimanckatt's Legacy"/>	
 		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem76_sector001_macro" comment="Untainted Eternity"/>	
-		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem78_sector001_macro" comment="Tkr's Deprivation"/>			
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem78_sector001_macro" comment="Tkr's Deprivation"/>
+		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem90_sector001_macro" comment="Red Light"/>		
 		<debug_text text="'Khaak Manager Ran'"/>	  
 	  </actions>
 	</cue>
@@ -92,7 +105,11 @@
 		<get_ware_definition result="md.$EquipmentTable.{faction.nmmc}" faction="faction.nmmc" flags="equipment"/>
 		<get_ware_definition result="md.$EquipmentTable.{faction.atreus}" faction="faction.atreus" flags="equipment"/>
 		<get_ware_definition result="md.$EquipmentTable.{faction.atf}" faction="faction.atf" flags="equipment"/>	
-		<get_ware_definition result="md.$EquipmentTable.{faction.xaar}" faction="faction.xaar" flags="equipment"/>		
+		<get_ware_definition result="md.$EquipmentTable.{faction.xaar}" faction="faction.xaar" flags="equipment"/>	
+		<get_ware_definition result="md.$EquipmentTable.{faction.enclave}" faction="faction.enclave" flags="equipment"/>
+		<get_ware_definition result="md.$EquipmentTable.{faction.beryll}" faction="faction.beryll" flags="equipment"/>
+		<get_ware_definition result="md.$EquipmentTable.{faction.thuruk}" faction="faction.thuruk" flags="equipment"/>
+		<get_ware_definition result="md.$EquipmentTable.{faction.tma}" faction="faction.tma" flags="equipment"/>		
 		<do_if value="not md.$FactionData?">
 		  <set_value name="md.$FactionData" exact="table[]"/>
 		</do_if>
@@ -119,7 +136,19 @@
 		</do_if>	
 		<do_if value="not md.$FactionData.{faction.xaar}?">
 		  <set_value name="md.$FactionData.{faction.xaar}" exact="table[]"/>
-		</do_if>			
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.enclave}?">
+		  <set_value name="md.$FactionData.{faction.enclave}" exact="table[]"/>
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.beryll}?">
+		  <set_value name="md.$FactionData.{faction.beryll}" exact="table[]"/>
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.thuruk}?">
+		  <set_value name="md.$FactionData.{faction.thuruk}" exact="table[]"/>
+		</do_if>
+		<do_if value="not md.$FactionData.{faction.tma}?">
+		  <set_value name="md.$FactionData.{faction.tma}" exact="table[]"/>
+		</do_if>		
 		<debug_text text="'Start Actions Ran'"/>				
 		</actions>
 	</library>
@@ -128,7 +157,7 @@
 		<event_cue_completed cue="md.X4Ep1_Mentor_Subscriptions.Start"/>
 	  </conditions>
 	  <actions>
-		<append_list_elements name="md.X4Ep1_Mentor_Subscriptions.Start.$SignalLeakStationFactions" other="[faction.aldrin, faction.otas, faction.jonferco, faction.strongarms, faction.nmmc, faction.atreus, faction.atf, faction.xaar]"/>
+		<append_list_elements name="md.X4Ep1_Mentor_Subscriptions.Start.$SignalLeakStationFactions" other="[faction.aldrin, faction.otas, faction.jonferco, faction.strongarms, faction.nmmc, faction.atreus, faction.atf, faction.xaar, faction.enclave, faction.beryll, faction.thuruk, faction.tma]"/>
 	  </actions>
 	</cue>	
   </cues>

@@ -44,11 +44,11 @@
   <add sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Process_Ships']/actions/do_if[@value='$ShipsToBuild.count']/remove_value[@name='$BuildProcessors']" pos="before">
     <do_if value="$REShipyards?">
       <do_if value="$REShipyardCount? and (not (($REShipyardCount lt 0) or ($REShipyardCount ge 3)))">
-        <!-- Skip the distance check if faction has 0 or 2 sy -->
+        <!-- Skip the distance check if faction has 0 or 2 shipyards -->
         <set_value name="$RESkipCheckShipyard" exact="true"/>
       </do_if>
       <do_if value="$REWharfCount? and (not (($REWharfCount lt 0) or ($REWharfCount ge 3)))">
-        <!-- Skip the distance check if faction has 0 or 2 wharf -->
+        <!-- Skip the distance check if faction has 0 or 2 wharves -->
         <set_value name="$RESkipCheckWharf" exact="true"/>
       </do_if>
     </do_if>

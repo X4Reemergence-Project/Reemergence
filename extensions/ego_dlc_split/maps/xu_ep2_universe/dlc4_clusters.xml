@@ -8,7 +8,7 @@
 	  <macro name="C407S01_RegionRE1_macro">
 	  <component connection="cluster" ref="standardregion"/>
 		<properties>
-		  <region ref="p1_40km_methane_field"/>
+		  <region ref="p1_40km_methane_highyield_field"/>
 		</properties>
 	  </macro>
 	</connection>
@@ -57,6 +57,18 @@
 		  <region ref="p1_40km_hydrogen_field"/>
 		</properties>
 	  </macro>
+	</connection>
+	<connection name="C408S01_RegionRE3_connection" ref="regions">
+	  <offset>
+		<position x="60000" y="5000" z="-12500"/>
+	  </offset>
+	  <macro name="C408S01_RegionRE3_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_hydrogen_field"/>
+		</properties>
+	  </macro>
 	</connection>	
-  </add>  
+  </add>
+  <replace sel="/macros/macro[@name='Cluster_416_macro']/connections/connection[@name='C416S02_Region002_connection']/offset/position/@y">9645406</replace>   
 </diff>

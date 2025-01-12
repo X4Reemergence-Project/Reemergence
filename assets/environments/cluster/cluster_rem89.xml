@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<components>
+	<component name="Cluster_REM89" class="celestialbody">
+		<source geometry="extensions\reemergence\assets\environments\cluster\Cluster_rem89_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights>
+					<omni name="XU Omni01" shadow="0" r="245" g="255" b="255" range="1E+11" shadowrange="1E+11" lighteffect="1" lenseffect="sun_ol" trigger="1" intensity="1.89" >
+						<lightanimations/>
+						<offset>
+							<position x="1.429009E+08" y="2.235848E+08" z="-2.114305E+08"/>
+						</offset>
+					</omni>
+					<ambient name="XU Ambient001" r="0" g="0" b="25" range="1E+09" intensity="1">
+						<lightanimations/>
+						<offset>
+							<position x="-2.402422E+07" y="0" z="2.087432E+07"/>
+						</offset>
+					</ambient>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0" optional="0"/>
+			<connection name="position" tags="position" value="1" optional="1"/>
+			<connection name="space" tags="celestialbody">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="part_c03_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.p1_env_bg_vertexcolor"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.52497E+08" y="4.525E+08" z="4.52497E+08"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part  ">
+				<offset>
+					<position x="1.226121E+07" y="0" z="8100438"/>
+					<quaternion qx="-0" qy="-6.975656E-02" qz="-0" qw="-0.9975641"/>
+				</offset>
+				<parts>
+					<part name="Background">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.backgroundstars"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.255449E+08" y="4.25545E+08" z="4.25545E+08"/>
+							<center x="76.17188" y="31.25" z="-0.9765625"/>
+						</size>
+						<pivot>
+							<offset>
+								<position x="0" y="-50000" z="0"/>
+							</offset>
+						</pivot>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part  ">
+				<offset>
+					<position x="5289843" y="-1.654493E+07" z="-7424373"/>
+				</offset>
+				<parts>
+					<part name="mediumstar001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.190706E+08" y="3.616261E+08" z="4.29686E+08"/>
+							<center x="0.9765625" y="9.765625" z="-1.953125"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part  ">
+				<offset>
+					<position x="-1.804167E+07" y="655800.8" z="53531.25"/>
+				</offset>
+				<parts>
+					<part name="smallstar001">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1.staratlas_additive"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4.058144E+08" y="3.824583E+08" z="3.863262E+08"/>
+							<center x="-15.625" y="11.71875" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part  ">			
+				<offset>
+					<position x="9.266534E+07" y="0" z="1.342731E+08"/>
+					<quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068"/>					
+				</offset>
+				<parts>
+				  <part name="part_moon">
+					<lods>
+					  <lod index="0">
+						<materials>
+						  <material id="1" ref="newplanets.planet_cluster49_moon1" />
+						</materials>
+					  </lod>
+					</lods>
+					<size>
+					  <max x="29874000" y="29874000" z="29874000" />
+					  <center x="0" y="0" z="0" />
+					</size>
+				  </part>
+				</parts>
+			</connection>			
+			<connection name="Connection06" tags="part ">
+				<offset>
+					<position x="9.266534E+07" y="0" z="1.342731E+08"/>
+					<quaternion qx="0" qy="0" qz="0.3826834" qw="0.9238795"/>					
+				</offset>			
+				<parts>
+				  <part name="part_rings">
+					<lods>
+					  <lod index="0">
+						<materials>
+						  <material id="1" ref="p1terranenv.planet_saturn_rings" />
+						</materials>
+					  </lod>
+					</lods>
+					<size>
+					  <max x="127670392" y="334.6388" z="127670392" />
+					  <center x="2" y="-325" z="0" />
+					</size>
+				  </part>
+				</parts>
+			</connection>
+			<connection name="Connection07" tags="part animation textureanimation  ">
+				<offset>
+					<position x="-1.707439E+07" y="1547000" z="-0.532969E+08"/>
+				</offset>
+				<animations>
+					<animation name="loop" start="0" end="108000"/>
+				</animations>
+				<parts>
+					<part name="part_titan">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1terranenv.moon_titan"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="2547000" y="2547000" z="2547000"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<size_raw>
+							<max x="2547000" y="2547000" z="2547000"/>
+							<center x="0" y="0" z="0"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="108000" value="1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>			
+		</connections>
+	</component>
+</components>

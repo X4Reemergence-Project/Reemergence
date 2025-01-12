@@ -8,7 +8,7 @@
 		</offset>
 	</replace>		
 	<add sel="//macros">
-		<macro name="Zone_Gate_Cluster_601_Sector001_macro" class="zone"><!--Watchful Gaze to Emperor's Pride IV-->
+		<macro name="Zone_Gate_Cluster_601_Sector001_macro" class="zone"><!--Emperor's Pride IV-->
 			<component ref="standardzone"/>
 			<connections>
 				<connection name="connection_ClusterGate601To424" ref="gates">
@@ -64,47 +64,37 @@
 	<replace sel="/macros/macro[@name='Zone005_Cluster_603_Sector001_macro']/connections/connection[@name='connection_ClusterGate603To604']/offset"><!--Ocean of Fantasy-->
 		<offset>
           <position x="-12750" y="0" z="-12750" />
-          <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
+          <quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068" />
 		</offset>
 	</replace>	
 
 	
 	<!-- Sector 604 - Ocean of Fantasy -->
-	<replace sel="/macros/macro[@name='Zone001_Cluster_604_Sector001_macro']/connections/connection[@name='connection_ClusterGateInactive']/offset"><!--Inactive-->
-		<offset>
-          <position x="12750" y="0" z="-12500" />
-          <quaternion qx="0" qy="0.5" qz="0" qw="0.8660254" />
-		</offset>
-	</replace>
+	<add sel="/macros/macro[@name='Zone001_Cluster_604_Sector001_macro']/connections"><!--Shining Currents-->
+		<connection name="connection_ClusterGate604ToREM17" ref="gates">
+			<offset>
+				<position x="-12750" y="0" z="12750" />
+				<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
+			</offset>
+			<macro ref="props_gates_anc_gate_macro" connection="space" >
+			<properties>
+				<state active="false" />
+			</properties>
+			</macro>
+		</connection>
+	</add>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_604_Sector001_macro']/connections/connection[@name='connection_ClusterGate604to048']" />		
 	<replace sel="/macros/macro[@name='Zone004_Cluster_604_Sector001_macro']/connections/connection[@name='connection_ClusterGate604To603']/offset"><!--Great Reef-->
 		<offset>
-          <position x="12750" y="0" z="12750" />
-          <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
+          <position x="12750" y="0" z="-12750" />
+          <quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
 	</replace>	
 
 	
 	<!-- Sector 605 - Sanctuary of Darkness -->
 	<add sel="//macros">
-		<macro name="Zone_Gate1_Cluster_605_Sector001_macro" class="zone"><!--Sanctuary of Darkness to Shining Currents-->
-			<component ref="standardzone"/>
-			<connections>
-				<connection name="connection_ClusterGate605ToREM17" ref="gates">
-					<offset>
-						<position x="-12750" y="0" z="-12750"/>
-						<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
-					</offset>
-					<macro ref="props_gates_anc_gate_macro" connection="space">
-					<properties>
-            			<state active="false" />
-					</properties>									
-					</macro>
-				</connection>
-			</connections>
-		</macro>
-	</add>	
-	<add sel="//macros">
-		<macro name="Zone_Gate2_Cluster_605_Sector001_macro" class="zone"><!--Sanctuary of Darkness to Kha'ak Sector Beta-->
+		<macro name="Zone_Gate_Cluster_605_Sector001_macro" class="zone"><!--Kha'ak Sector Beta-->
 			<component ref="standardzone"/>
 			<connections>
 				<connection name="connection_ClusterGate605ToREM68" ref="gates">
@@ -129,6 +119,20 @@
           <quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
 	</replace>
+	<add sel="//macros">
+		<macro name="Zone_Gate_Cluster_606_Sector001_macro" class="zone"><!--Atreus' Clouds-->
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate606To608" ref="gates">
+					<offset>
+						<position x="0" y="0" z="22750"/>
+						<quaternion qx="0" qy="1" qz="0" qw="0" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>	
 	
 	
 	<!-- Sector 607 - Rolk's Demise -->
@@ -144,22 +148,34 @@
           <quaternion qx="0" qy="1" qz="0" qw="0" />
 		</offset>
 	</replace>
-	<replace sel="/macros/macro[@name='Zone005_Cluster_607_Sector001_macro']/connections/connection[@name='connection_ClusterGate607To608']/offset"><!--Atreus' Clouds-->
-		<offset>
-          <position x="12750" y="0" z="12750" />
-          <quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
-		</offset>
-	</replace>	
+	<remove sel="/macros/macro[@name='Zone005_Cluster_607_Sector001_macro']/connections/connection[@name='connection_ClusterGate607To608']" />
+	<add sel="/macros/macro[@name='Zone005_Cluster_607_Sector001_macro']/connections"><!--Depths of Silence-->
+		<connection name="connection_ClusterGate607ToREM15" ref="gates">
+			<offset>
+				<position x="0" y="0" z="-22750" />
+				<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
+			</offset>
+			<macro ref="props_gates_anc_gate_macro" connection="space">					
+			<properties>
+            	<state active="false" />
+			</properties>				
+			</macro>
+		</connection>
+	</add>	
 
 	
 	<!-- Sector 608 - Atreus' Clouds -->
-	<replace sel="/macros/macro[@name='Zone002_Cluster_608_Sector001_macro']/connections/connection[@name='connection_ClusterGate608To607']/offset"><!--Rolk's Demise-->
-		<offset>
-          <position x="12750" y="0" z="-12750" />
-          <quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
-		</offset>
-	</replace>
-	<remove sel="/macros/macro[@name='Zone003_Cluster_608_Sector001_macro']/connections/connection[@name='connection_ClusterGate608To']" />
+	<remove sel="/macros/macro[@name='Zone002_Cluster_608_Sector001_macro']/connections/connection[@name='connection_ClusterGate608To607']" />
+	<add sel="/macros/macro[@name='Zone002_Cluster_608_Sector001_macro']/connections"><!--Kingdom End-->
+		<connection name="connection_ClusterGate608To606" ref="gates">
+			<offset>
+				<position x="0" y="0" z="-22750" />
+				<quaternion qx="0" qy="0" qz="0" qw="1" />
+			</offset>
+			<macro ref="props_gates_anc_gate_macro" connection="space"/>					
+		</connection>
+	</add>	
+	<remove sel="/macros/macro[@name='Zone003_Cluster_608_Sector001_macro']/connections/connection[@name='connection_ClusterGate608To721']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_608_Sector001_macro']/connections"><!--The Hole-->
 		<connection name="connection_ClusterGate608ToREM81" ref="gates">
 			<offset>
@@ -195,7 +211,7 @@
 		</offset>
 	</replace>
 	<add sel="//macros">
-		<macro name="Zone_Gate_Cluster_609_Sector001_macro" class="zone"><!--Menelaus' Oasis to Reservoir of Tranquility-->
+		<macro name="Zone_Gate_Cluster_609_Sector001_macro" class="zone"><!--Reservoir of Tranquility-->
 			<component ref="standardzone"/>
 			<connections>
 				<connection name="connection_ClusterGate609ToREM19" ref="gates">

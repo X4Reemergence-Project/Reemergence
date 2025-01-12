@@ -22,22 +22,24 @@
 		<set_value name="md.$FactionData.{faction.nmmc}" exact="table[]" />
 		<set_value name="md.$FactionData.{faction.atreus}" exact="table[]" />
 		<set_value name="md.$FactionData.{faction.atf}" exact="table[]" />	
-		<set_value name="md.$FactionData.{faction.xaar}" exact="table[]" />	
+		<set_value name="md.$FactionData.{faction.xaar}" exact="table[]" />
+		<set_value name="md.$FactionData.{faction.enclave}" exact="table[]" />			
 		<set_value name="md.$FactionData.{faction.beryll}" exact="table[]" />	
 		<set_value name="md.$FactionData.{faction.tma}" exact="table[]" />	
 		<set_value name="md.$FactionData.{faction.thuruk}" exact="table[]" />			
 	  </actions>
 	  <patch sinceversion="2">
-		<set_value name="AldrinFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_ald01_sector001_macro" /><!--Aldrin I-->	  
+		<set_value name="AldrinFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem92_sector001_macro" /><!--Aldrin I-->	  
 		<set_value name="OTASFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem53_sector001_macro" /><!--Legend's Home-->
 		<set_value name="JonfercoFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem77_sector001_macro" /><!--Belt of Aguilar-->
 		<set_value name="StrongArmsFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_03_sector001_macro" /><!--Thyn's Excavation-->
 		<set_value name="NMMCFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem54_sector001_macro" /><!--Memory of Profit IX-->
 		<set_value name="AtreusFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem37_sector001_macro" /><!--Queen's Harbour-->
 		<set_value name="ATFFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem75_sector001_macro" />	<!--Titania-->	
-		<set_value name="XaarFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem50_sector001_macro" /> <!--Emperor's Wisdom-->	
+		<set_value name="XaarFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem50_sector001_macro" /> <!--Emperor's Wisdom-->
+		<set_value name="EnclaveFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem62_sector001_macro" /> <!--Argon Sector M148-->		
 		<set_value name="BeryllFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem15_sector001_macro" /> <!--Depths of Silence-->	
-		<set_value name="ThurukFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem66_sector001_macro" /> <!--Ghinn's Escape-->	
+		<set_value name="ThurukFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_rem61_sector001_macro" /> <!--Patriarch's Conclusion-->	
 		<set_value name="TMAFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_108_sector003_macro" /> <!--Saturn II-->			
 	  </patch>
 	</cue>	
@@ -49,7 +51,7 @@
 		  <param name="BaseAggressionLevel" value="moodlevel.normal"/>
 		  <param name="BaseAvariceLevel" value="moodlevel.low"/>
 		  <param name="BaseLawfulness" value="0.8"/>
-		  <param name="PreferredHQSpaceMacro" value="macro.cluster_ald01_sector001_macro" comment="Aldrin I"/>
+		  <param name="PreferredHQSpaceMacro" value="macro.cluster_rem92_sector001_macro" comment="Aldrin I"/>
 		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation']"/>
 		  <param name="SatelliteNetworkGoal" value="7"/>
 		  <param name="LasertowerNetworkGoal" value="7"/>
@@ -177,6 +179,23 @@
 		</cue>
 	  </cues>
 	</cue>
+	<cue name="EnclaveFactionLogic">
+	  <cues>
+		<cue name="EnclaveFactionLogic_Manager" ref="Manager">
+		  <param name="Faction" value="faction.enclave"/>
+		  <param name="BaseAggressionLevel" value="moodlevel.high"/>
+		  <param name="BaseAvariceLevel" value="moodlevel.low"/>
+		  <param name="BaseLawfulness" value="0.9"/>
+		  <param name="PreferredHQSpaceMacro" value="macro.cluster_rem62_sector001_macro" comment="Argon Sector M148"/>
+		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation']"/>
+		  <param name="SatelliteNetworkGoal" value="2"/>
+		  <param name="LasertowerNetworkGoal" value="2"/>
+          <param name="MinefieldGoalPerSector" value="3" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>		  
+		  <param name="DebugChance" value="0"/>
+		  <param name="DebugChance2" value="0"/>
+		</cue>
+	  </cues>
+	</cue>	
     <cue name="BeryllFactionLogic">
       <cues>
         <cue name="BeryllFactionLogic_Manager" ref="Manager">
@@ -201,7 +220,7 @@
           <param name="BaseAggressionLevel" value="moodlevel.normal"/>
           <param name="BaseAvariceLevel" value="moodlevel.low"/>
           <param name="BaseLawfulness" value="0.0"/>
-          <param name="PreferredHQSpaceMacro" value="macro.cluster_rem66_sector001_macro" comment="Ghinn's Escape"/>
+          <param name="PreferredHQSpaceMacro" value="macro.cluster_rem61_sector001_macro" comment="Ghinn's Escape"/>
 		  <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation']"/>
 		  <param name="SatelliteNetworkGoal" value="2"/>
 		  <param name="LasertowerNetworkGoal" value="2"/>
