@@ -2093,5 +2093,12 @@
 	</add>
 	<add sel="/wares/ware[@id='missile_rgw']">
 		<owner faction="otas"/>	
-	</add>		
+	</add>
+	<!--Split Mk4 Engines-->
+	<replace sel="/wares/ware[@id='engine_spl_m_combat_01_mk4']/@tags">equipment engine noblueprint noplayerblueprint</replace>
+	<replace sel="/wares/ware[@id='engine_spl_m_combat_01_mk4']/owner[@faction='court']/@faction">ownerless</replace>
+	<remove sel="/wares/ware[@id='engine_spl_m_combat_01_mk4']/owner[@faction='split']"/>
+	<replace sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/@tags">equipment engine noblueprint noplayerblueprint</replace>
+	<replace sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/owner[@faction='court']/@faction">ownerless</replace>
+	<remove sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/owner[@faction='split']"/>		
 </diff>
