@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff> 
+  <replace sel="//macros">
+    <macros>
+  <macro name="pier_ter_harbor_05_macro" class="pier" >
+    <component ref="pier_ter_harbor_05" />
+    <properties>
+      <identification name="{19530007,150000}" shortname="{20104,74903}" makerrace="terran" description="{20104,74902}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+          <set ref="tradestation_terran" />
+          <set ref="piratebase" />
+        </sets>
+      </build>
+      <explosiondamage value="1000" shield="5000" />
+      <storage unit="5" />
+      <hull max="180000" />
+    </properties>
+    <connections>
+      <connection ref="ConnectionFor_dockingbay_gen_xl_pier_01_macro">
+        <macro ref="dockingbay_gen_xl_pier_01_macro" connection="position" />
+      </connection>
+    </connections>
+  </macro>
+    </macros>
+  </replace>
+</diff>

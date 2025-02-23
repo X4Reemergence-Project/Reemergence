@@ -1659,12 +1659,18 @@
 	</add>	
 
 
-  <!-- CLUSTER 720 - Ore Belt -->  
+  <!-- CLUSTER 720 - Ore Belt -->
+	<replace sel="/macros/macro[@name='Zone001_Cluster_720_Sector001_macro']/connections/connection[@name='connection_ClusterGate720To730']/offset"><!--Third Redemption-->
+		<offset>
+			<position x="27750" y="0" z="0" />
+			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
+		</offset>
+	</replace>   
 	<remove sel="/macros/macro[@name='Zone002_Cluster_720_Sector001_macro']/connections/connection[@name='connection_ClusterGate720To049']" /> 
 	<add sel="/macros/macro[@name='Zone002_Cluster_720_Sector001_macro']/connections"><!--INACTIVE-->
 		<connection name="connection_ClusterGate720To" ref="gates">
 			<offset>
-				<position x="-27750" y="0" z="27750" />
+				<position x="-14750" y="0" z="-14750" />
 				<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
@@ -1683,7 +1689,7 @@
 	<replace sel="/macros/macro[@name='Zone005_Cluster_720_Sector001_macro']/connections/connection[@name='connection_ClusterGate720To721']/offset"><!--Adventure's Promise-->
 		<offset>
 			<position x="27750" y="0" z="27750" />
-			<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
+			<quaternion qx="0" qy="1" qz="0" qw="0" />
 		</offset>
 	</replace> 
 	
@@ -1780,7 +1786,7 @@
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
 	</add>
-	<remove sel="/macros/macro[@name='Zone003_Cluster_724_Sector001_macro']/connections/connection[@name='connection_ClusterGate724To115']" />
+	<remove sel="/macros/macro[@name='Zone003_Cluster_724_Sector001_macro']/connections/connection[@name='connection_ClusterGate724To722']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_724_Sector001_macro']/connections"><!--Tebathimanckatt's Legacy-->
 		<connection name="connection_ClusterGate724ToREM74" ref="gates">
 			<offset>

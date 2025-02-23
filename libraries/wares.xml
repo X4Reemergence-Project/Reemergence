@@ -128,6 +128,26 @@
 	
 <!--RE Wares-->
 	 <add sel="//wares">
+	<!--TER Short Pier-->
+  <ware id="module_ter_pier_05" name="{19530007,150000}" description="{20104,74902}" transport="container" volume="1" tags="module">
+	<price min="1835686" average="2159631" max="2483576" />
+	<production time="433" amount="1" method="default" name="{20206,901}">
+	  <primary>
+		<ware ware="computronicsubstrate" amount="85" />
+		<ware ware="energycells" amount="625" />
+		<ware ware="siliconcarbide" amount="174" />
+	  </primary>
+	</production>
+	<research time="10">
+	  <research>
+		<ware ware="research_module_dock" />
+	  </research>
+	</research>
+	<component ref="pier_ter_harbor_05_macro" amount="1" />
+	<restriction licence="station_gen_basic" />
+	<owner faction="pioneers" />
+	<owner faction="terran" />
+  </ware>	 
 	<!--Scaleplate Den - Crew Modules-->
   <ware id="module_sca_hab_l_01" name="{19530007,1006}" description="{19530007,1001}" transport="container" volume="1" tags="module">
 	<price min="17721792" average="22037202" max="26352612" />
