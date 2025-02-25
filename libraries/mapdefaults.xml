@@ -1021,6 +1021,11 @@ NEUTRAL: <area sunlight="1" economy="0.2" security="0.2" />
 		<dataset macro="Cluster_REM82_Sector001_macro">	<properties>	<identification name="{19530001,219}" description="{19530001,220}" />	</properties>	</dataset>				
 	</add>	
 
+  <!--Mars-->
+  <replace sel="/defaults/dataset[@macro='Cluster_101_Sector001_macro']/properties/identification/@name">{19530001,1500}</replace>   
+  <!--Mercury-->
+  <replace sel="/defaults/dataset[@macro='Cluster_106_Sector001_macro']/properties/identification/@name">{19530001,1502}</replace> 	
+	
 	<!--Music-->
   <add sel="/defaults/dataset[@macro='Cluster_03_Sector001_macro']/properties">
 	<sounds>

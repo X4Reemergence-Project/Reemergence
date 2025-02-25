@@ -3,18 +3,26 @@
 	<!-- Sector 601 - Watchful Gaze -->	
 	<replace sel="/macros/macro[@name='Cluster_601_Sector001_macro']/connections/connection[@name='Zone002_Cluster_601_Sector001_connection']/offset"><!--Heretic's End-->
 		<offset>	
-          <position x="137330" y="0" z="138575" />	
+          <position x="147330" y="0" z="118575" />	
 		</offset>
 	</replace>
 	<replace sel="/macros/macro[@name='Cluster_601_Sector001_macro']/connections/connection[@name='Zone005_Cluster_601_Sector001_connection']/offset"><!--Barren Shores-->
 		<offset>	
-		 <position x="-129500" y="0" z="106970" />	
+		 <position x="-89500" y="0" z="146970" />	
 		</offset>
-	</replace>		
+	</replace>
+	<add sel="//macro[@name='Cluster_601_Sector001_macro']/connections"><!--Emperor's Pride IV-->
+		<connection name="Zone_Gate_Cluster_601_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-35000" y="0" z="-140000"/>
+			</offset>
+			<macro ref="Zone_Gate_Cluster_601_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>		
 
 	
 	<!-- Sector 602 - Barren Shores -->
-	<replace sel="/macros/macro[@name='Cluster_602_Sector001_macro']/connections/connection[@name='Zone001_Cluster_602_Sector001_connection']/offset"><!--Null-->
+	<replace sel="/macros/macro[@name='Cluster_602_Sector001_macro']/connections/connection[@name='Zone001_Cluster_602_Sector001_connection']/offset"><!--Inactive-->
         <offset>
           <position x="-98085" y="0" z="-95545" />
         </offset>
@@ -50,19 +58,35 @@
 
 	
 	<!-- Sector 604 - Ocean of Fantasy -->
-	<replace sel="/macros/macro[@name='Cluster_604_Sector001_macro']/connections/connection[@name='Zone001_Cluster_604_Sector001_connection']/offset"><!--Null-->
+	<replace sel="/macros/macro[@name='Cluster_604_Sector001_macro']/connections/connection[@name='Zone001_Cluster_604_Sector001_connection']/offset"><!--Inactive-->
         <offset>
-          <position x="-70675" y="0" z="-122755" />
+          <position x="-102755" y="0" z="118045" />
         </offset>
 	</replace>
 	<replace sel="/macros/macro[@name='Cluster_604_Sector001_macro']/connections/connection[@name='Zone004_Cluster_604_Sector001_connection']/offset"><!--Great Reef-->
         <offset>
-          <position x="72310" y="0" z="118045" />
+          <position x="52310" y="0" z="-118045" />
         </offset>
-	</replace>	
+	</replace>		
 
 	
 	<!-- Sector 605 - Sanctuary of Darkness -->
+	<add sel="//macro[@name='Cluster_605_Sector001_macro']/connections"><!--Shining Currents-->
+		<connection name="Zone_Gate1_Cluster_605_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-83000" y="0" z="-59000"/>
+			</offset>
+			<macro ref="Zone_Gate1_Cluster_605_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>	
+	<add sel="//macro[@name='Cluster_605_Sector001_macro']/connections"><!--Kha'ak Sector Beta-->
+		<connection name="Zone_Gate2_Cluster_605_Sector001_connection" ref="zones">
+			<offset>
+				<position x="85000" y="0" z="66000"/>
+			</offset>
+			<macro ref="Zone_Gate2_Cluster_605_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>		
 
 	
 	<!-- Sector 606 - Kingdom End -->
@@ -115,34 +139,7 @@
           <position x="158695" y="0" z="-62250" />
         </offset>
 	</replace>	
-
-	
-<!--New Gates-->
-	<add sel="//macro[@name='Cluster_601_Sector001_macro']/connections"><!--Watchful Gaze to Emperor's Pride IV-->
-		<connection name="Zone_Gate_Cluster_601_Sector001_connection" ref="zones">
-			<offset>
-				<position x="35000" y="0" z="-140000"/>
-			</offset>
-			<macro ref="Zone_Gate_Cluster_601_Sector001_macro" connection="sector"/>
-		</connection>
-	</add>	
-	<add sel="//macro[@name='Cluster_605_Sector001_macro']/connections"><!--Sanctuary of Darkness to Shining Currents-->
-		<connection name="Zone_Gate1_Cluster_605_Sector001_connection" ref="zones">
-			<offset>
-				<position x="-83000" y="0" z="-59000"/>
-			</offset>
-			<macro ref="Zone_Gate1_Cluster_605_Sector001_macro" connection="sector"/>
-		</connection>
-	</add>	
-	<add sel="//macro[@name='Cluster_605_Sector001_macro']/connections"><!--Sanctuary of Darkness to Kha'ak Sector Beta-->
-		<connection name="Zone_Gate2_Cluster_605_Sector001_connection" ref="zones">
-			<offset>
-				<position x="85000" y="0" z="66000"/>
-			</offset>
-			<macro ref="Zone_Gate2_Cluster_605_Sector001_macro" connection="sector"/>
-		</connection>
-	</add>		
-	<add sel="//macro[@name='Cluster_609_Sector001_macro']/connections"><!--Menelaus' Oasis to Reservoir of Tranquility-->
+	<add sel="//macro[@name='Cluster_609_Sector001_macro']/connections"><!--Reservoir of Tranquility-->
 		<connection name="Zone_Gate_Cluster_609_Sector001_connection" ref="zones">
 			<offset>
 				<position x="-25000" y="0" z="105000"/>
@@ -150,6 +147,8 @@
 			<macro ref="Zone_Gate_Cluster_609_Sector001_macro" connection="sector"/>
 		</connection>
 	</add>
+
+	
 	<!--Remove Highways but SoD-->
   <remove sel="/macros/macro[@name='Cluster_606_Sector001_macro']/connections/connection[@name='Highway01_Cluster606_S1_connection'][@ref='zonehighways']"/>
   <remove sel="/macros/macro[@name='Cluster_606_Sector001_macro']/connections/connection[@name='Highway02_Cluster606_S1_connection'][@ref='zonehighways']"/>
