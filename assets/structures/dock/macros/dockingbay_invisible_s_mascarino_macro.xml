@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: Lino (192.168.3.146) at 19.03.2019_14-11-38-->
+<macros>
+  <macro name="dockingbay_invisible_s_mascarino_macro" class="dockingbay">
+    <component ref="dockingbay_invisible_s_mascarino" />
+    <properties>
+      <identification name="{20104,72601}" shortname="{20104,72603}" description="{20104,72602}" />
+      <translationspeed max="5" />
+      <translationacceleration max="2" />
+      <effects>
+      </effects>
+<!-- in theory, >allow="1" allowunits="0"< should stop drones from landing here. WITHOUT it drones get stuck. WITH it they launch and dock. Not ideal, but WORKS! -->	  
+      <dock external="1" allow="1" allowunits="0" uselandinggear="1" />
+      <undock rotate="1" />
+      <room walkable="0" />
+      <docksize tags="dock_s" />
+    </properties>
+  </macro>
+</macros>
