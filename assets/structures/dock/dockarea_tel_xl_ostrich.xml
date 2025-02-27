@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<components>
+	<component name="dockarea_tel_xl_ostrich" class="dockarea">
+		<source geometry="assets\structures\dock\\dockarea_par_l_destroyer_01_data"/>
+		<layers>
+			<layer>
+<!-- S waypoints -->			
+				<waypoints>
+					<waypoint name="entry__left_waypoint01" tags="dockpath start " group="s_left" x="-77.5" y="20" z="500" qx="0" qy="0" qz="0" qw="0">
+						<links>
+							<link ref="entry_left_waypoint02"/>
+						</links>
+					</waypoint>
+					<waypoint name="entry_left_waypoint02" tags="dockpath end " group="s_left" x="-77.5" y="20" z="100" qx="0" qy="0" qz="0" qw="0">
+					</waypoint>	
+					<waypoint name="entry__right_waypoint01" tags="dockpath start " group="s_right" x="77.5" y="20" z="500" qx="0" qy="0" qz="0" qw="0">
+						<links>
+							<link ref="entry_right_waypoint02"/>
+						</links>
+					</waypoint>
+					<waypoint name="entry_right_waypoint02" tags="dockpath end " group="s_right" x="77.5" y="20" z="100" qx="0" qy="0" qz="0" qw="0">
+					</waypoint>						
+				</waypoints>			
+				<lights/>
+			</layer>
+		</layers>
+		<connections>
+<!-- M todock/launchpos (Boron style to avoid collision issues) -->
+			<connection name="con_dockingbay_flat_m_01_macro_dock" group="m_middle" tags="todock ">
+				<offset>
+					<position x="0" y="0" z="500" />					
+				</offset>
+			</connection>
+			<connection name="con_dockingbay_flat_m_01_macro_launchpos" group="m_middle" tags="launchpos "> <!-- doesn't work, "launchpos" is ignored when "todock" is present -->
+				<offset>
+					<position x="0" y="0" z="300" />
+					<rotation pitch="0" yaw="90" roll="0"/>					
+				</offset>
+			</connection>		
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="dockarea">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part noshadowcaster platformcollision dockarea component collisiononly  ">
+				<offset/>
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hullpattern"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.8157368" y="0.6352959" z="0.9177036"/>
+							<center x="0" y="-0.2802219" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionFor_dockingbay_arg_s_01_macro" group="s_left" tags="dockingbay" >
+				<offset>
+					<position x="-77.5" y="0" z="70"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionFor_dockingbay_arg_m_01_macro" group="m_middle" tags="dockingbay">
+				<offset/>
+			</connection>
+			<connection name="ConnectionFor_dockingbay_arg_s_01_macro1" group="s_right" tags="dockingbay">
+				<offset>
+					<position x="77.5" y="0" z="70"/>
+				</offset>
+			</connection>
+		</connections>
+	</component>
+</components>
