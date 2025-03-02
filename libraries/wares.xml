@@ -2265,5 +2265,21 @@
 	<remove sel="/wares/ware[@id='engine_spl_m_combat_01_mk4']/owner[@faction='split']"/>
 	<replace sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/@tags">equipment engine noblueprint noplayerblueprint</replace>
 	<replace sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/owner[@faction='court']/@faction">ownerless</replace>
-	<remove sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/owner[@faction='split']"/>		
+	<remove sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/owner[@faction='split']"/>
+	<!-- generic L weapon for VIG/RIP, for Pardal -->
+	<add sel="/wares/ware[@id='weapon_arg_l_destroyer_01_mk1']">
+		<production time="10" amount="1" method="closedloop" name="{20206,1201}">
+			<primary>
+				<ware ware="claytronics" amount="53"/>
+				<ware ware="energycells" amount="844"/>
+				<ware ware="hullparts" amount="309"/>
+			</primary>
+		</production>
+	</add>
+	<add sel="/wares/ware[@id='weapon_arg_l_destroyer_01_mk1']">
+		<owner faction="loanshark"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_arg_l_destroyer_01_mk1']">
+		<owner faction="scavenger"/>
+	</add>
 </diff>
