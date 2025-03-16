@@ -4,17 +4,32 @@
 		<component ref="engine_otas_l_allround_01_mk1"/>
 		<properties>
 			<identification name="{19530002,600}" basename="{20107,1001}" shortname="{20107,1005}" makerrace="otas" description="{19530002,6001}" mk="1" />
-			  <boost duration="45" thrust="2" attack="10" release="2.5" />
-			  <travel charge="10" thrust="30" attack="20" release="18" />
-			  <thrust forward="5362" reverse="5675" />
-			  <angular />
-			  <hull max="25330" threshold="0.3" />
-			<effects>
-				<boosting ref="arg_boost_fx_l"/>
-			</effects>
-			<sounds>
-				<enginedetail ref="enginedetail_ship_terran_l_xl_01"/>
-			</sounds>
+<boost duration="36.4" recharge="96" thrust="2.9" acceleration="2.34" attack="10" release="3.5" coast="1.25" />
+<travel charge="10" thrust="31" attack="15" release="13" />
+<thrust forward="5183" reverse="5591" />
+<angular />
+<hull max="30480" threshold="0.3" />
+          <effects>
+            <boosting ref="arg_boost_fx_l" />
+            <traveling ref="gen_traveldrive_fx_l" />
+          </effects>
+          <sounds>
+            <enginedetail ref="enginedetail_ship_l_01" />
+          </sounds>
+          <decelerationcurve>
+            <point position="1.01" value="1" />
+            <point position="1.1" value="2" />
+            <point position="1.5" value="5" />
+            <point position="2.1" value="14" />
+            <point position="2.5" value="20" />
+          </decelerationcurve>
+          <strafecurve>
+            <point position="1.01" value="1" />
+            <point position="1.1" value="2" />
+            <point position="1.5" value="5" />
+            <point position="2.1" value="12" />
+            <point position="2.5" value="18" />
+          </strafecurve>
 		</properties>
 	</macro>
 </macros>
