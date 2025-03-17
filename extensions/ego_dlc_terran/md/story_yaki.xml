@@ -3,4 +3,8 @@
   <replace sel="//cue[@name='Ch23_Create_Mission']/actions/set_value[@name='$DescriptionText']/@exact">readtext.{30226}.{13002} + '\n\n' + readtext.{20003}.{1120001} + '\n' + readtext.{20003}.{330001} + '\n' + readtext.{19530001}.{15}</replace>
   <replace sel="//cue[@name='Ch23_2_Eliminate_Xenon']/actions/set_value[@name='$XenonTargetClusterMacroList']/@exact">[macro.Cluster_112_macro, macro.Cluster_33_macro, macro.Cluster_REM07_macro]</replace>
   <replace sel="//cue[@name='Ch23_2_Eliminate_Xenon']/actions/set_value[@name='$XenonTargetClusterMacroList']/@comment">Savage Spur, Matrix #79B, Matrix #79A</replace>
+<!-- Special plot Katana will now be named Boroboroton - A possessed futon that comes to life at night to kill a sleeping person. -->
+  <add sel="//create_ship [@name='$ProtectoratePlayerShip']" pos="after">
+	<set_object_name object="$ProtectoratePlayerShip" page="19530007" line="160000" comment="Boroboroton"/>
+	</add>
 </diff>
