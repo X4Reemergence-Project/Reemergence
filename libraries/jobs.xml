@@ -2080,27 +2080,6 @@
 			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_strike_craft_matrix483" name="{19530003,1}" startactive="false">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-				<param name="stayinspace" value="true"/>				
-			</order>
-		</orders>
-		<category faction="xenon" tags="[military, frigate]" size="ship_m"/>
-		<quota galaxy="2" maxgalaxy="3" />
-		<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix483"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="xenon" tags="[military, bomber]" size="ship_m"/>
-			<owner exact="xenon" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />
-			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />			
-		</subordinates>
-	</job>
 	<job id="xenon_strike_craft_mccallum_relay" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
@@ -2206,7 +2185,7 @@
 			<subordinate job="xenon_lx_bomber_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_strike_craft_matrix695" name="{19530003,1}" startactive="false">
+	<job id="xenon_strike_craft_matrix483" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2382,28 +2361,6 @@
 			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_destroyers_matrix695" name="{19530003,1}" startactive="false">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-				<param name="range" value="class.sector"/>
-				<param name="stayinspace" value="true"/>				
-			</order>
-		</orders>
-		<category faction="xenon" tags="[military, defender]" size="ship_xl"/>
-		<quota galaxy="1" maxgalaxy="2" />
-		<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix695"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="xenon" tags="[military, destroyer]" size="ship_xl"/>
-			<owner exact="xenon" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="xenon_destroyer_escort_sa" rebuild="true" />
-			<subordinate job="xenon_frigate_m_escort_sa" rebuild="true" />				
-			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />			
-		</subordinates>
-	</job>
 	<job id="xenon_destroyers_mccallum_relay" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
@@ -2492,7 +2449,7 @@
 			<subordinate job="xenon_frigate_s_escort_sa" rebuild="true" />			
 		</subordinates>
 	</job>
-	<job id="xenon_destroyers_matrix483" name="{19530003,1}" startactive="false">
+	<job id="xenon_destroyers_matrix695" name="{19530003,1}" startactive="false">
 		<modifiers commandeerable="false"/>
 		<orders>
 			<order order="Patrol" default="true">
@@ -2672,30 +2629,6 @@
 		<category faction="xenon" tags="[military, battleship]" size="ship_xl"/>
 		<quota galaxy="1" maxgalaxy="1" />
 		<location class="sector" macro="Cluster_112_Sector002_macro" faction="xenon" relation="self" comparison="exact" matchextension="false" tags="savage" />
-		<environment buildatshipyard="true"/>
-        <time start="0" interval="7200"/>			
-		<ship>
-			<select faction="xenon" tags="[military, battleship]" size="ship_xl"/>
-			<owner exact="xenon" overridenpc="true"/>
-		</ship>
-		<subordinates>
-			<subordinate job="xenon_destroyer_escort_sa" assignment="defence" group="1" rebuild="true" />
-			<subordinate job="xenon_frigate_m_escort_sa" assignment="defence" group="2" rebuild="true" />				
-		</subordinates>
-	</job>
-	<job id="xenon_battleship_matrix695" name="{19530003,1}" startactive="false">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="Patrol" default="true">
-			  <param name="range" value="class.sector"/>
-			  <param name="stayinspace" value="true"/>
-			  <param name="defences_maxgatedistance" value="1" />
-			  <param name="defences_includedassignments" value="[assignment.attack]" />					
-			</order>
-		</orders>
-		<category faction="xenon" tags="[military, battleship]" size="ship_xl"/>
-		<quota galaxy="1" maxgalaxy="1" />
-		<location class="sector" macro="Cluster_REM79_Sector001_macro" faction="xenon" relation="self" comparison="exact" tags="matrix695"/>
 		<environment buildatshipyard="true"/>
         <time start="0" interval="7200"/>			
 		<ship>
