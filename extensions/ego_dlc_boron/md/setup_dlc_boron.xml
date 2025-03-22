@@ -2,7 +2,6 @@
 <diff>
 <add sel="//cue[@name='Boron_Gates_Open_KingdomEnd']/actions">
 	<find_sector macro="macro.Cluster_23_Sector001_macro" space="player.galaxy" required="true" name="$SacredRelicSector" />	
-	<find_sector macro="macro.Cluster_50_Sector001_macro" space="player.galaxy" required="true" name="$TurqoiseSeaIXSector" />
 	<find_sector macro="macro.Cluster_424_Sector001_macro" space="player.galaxy" extension="'ego_dlc_split'" required="true" name="$EmperorsPrideSector" />
 	<find_sector macro="macro.Cluster_REM13_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$DarkWatersSector" />
 	<find_sector macro="macro.Cluster_REM15_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$DepthsofSilenceSector" />	
@@ -16,9 +15,7 @@
 	<find_sector macro="macro.Cluster_REM35_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$BlueHorizonSector" />	
 	<find_sector macro="macro.Cluster_REM36_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$GreatTrenchSector" />		
 	<find_sector macro="macro.Cluster_REM37_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$QueensHarbourSector" />	
-	<find_sector macro="macro.Cluster_REM38_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$QueensRetributionSector" />
-	<find_sector macro="macro.Cluster_REM39_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$Matrix472DSector" />	
-	<find_sector macro="macro.Cluster_REM41_Sector002_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$ShadowsofGiantsVIISector" />		
+	<find_sector macro="macro.Cluster_REM38_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$QueensRetributionSector" />		
 	<find_sector macro="macro.Cluster_REM68_Sector001_macro" space="player.galaxy" extension="'reemergence'" required="true" name="$KhaakBetaSector" />	
 	<find_sector macro="macro.Cluster_Mod_FarnhamLegend_Rev_01_Sector001_macro" space="player.galaxy" extension="'ws_2971583324'" required="false" name="$FarnhamSector" />	
 	
@@ -132,36 +129,7 @@
 		</do_if>
 		</do_for_each>
 		<remove_value name="$BlueHorizonGates" />	
-
-		<!-- Matrix #472D <-> Thyn's Abyss -->
-		<find_gate name="$Matrix472DGates" multiple="true" space="$Matrix472DSector" active="false" />
-		<do_for_each name="$g" in="$Matrix472DGates">
-		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $ThynsAbyssSector)">
-		<set_value name="$ThynsAbyss_Matrix472DGate" exact="$g.exit" />
-		<set_value name="$Matrix472D_ThynsAbyssGate" exact="$g" />
-		</do_if>
-		</do_for_each>
-		<remove_value name="$Matrix472DGates" />		
-		
-		<!-- Matrix #472D <-> Great Trench -->
-		<find_gate name="$Matrix472DGates" multiple="true" space="$Matrix472DSector" active="false" />
-		<do_for_each name="$g" in="$Matrix472DGates">
-		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $GreatTrenchSector)">
-		<set_value name="$GreatTrench_Matrix472DGate" exact="$g.exit" />
-		<set_value name="$Matrix472D_GreatTrenchGate" exact="$g" />
-		</do_if>
-		</do_for_each>
-		<remove_value name="$Matrix472DGates" />
-
-		<!-- Shadows of Giants VII <-> Turquoise Sea IX -->
-		<find_gate name="$ShadowsofGiantsVIIGates" multiple="true" space="$ShadowsofGiantsVIISector" active="false" />
-		<do_for_each name="$g" in="$ShadowsofGiantsVIIGates">
-		<do_if value=" ($g.exit.exists) and ($g.exit.sector == $TurqoiseSeaIXSector)">
-		<set_value name="$TurquoiseSeaIX_ShadowsofGiantsVIIGate" exact="$g.exit" />
-		<set_value name="$ShadowsofGiantsVII_TurquoiseSeaIXGate" exact="$g" />
-		</do_if>
-		</do_for_each>
-		<remove_value name="$ShadowsofGiantsVIIGates" />		
+	
 		
 	<set_object_active object="$WatchfulGaze_EmperorsPrideGate" />
 	<set_object_active object="$DarkWaters_DepthsofSilenceGate" />			
@@ -173,9 +141,6 @@
 	<set_object_active object="$TheShallows_QueensRetributionGate" />	
 	<set_object_active object="$QueensHarbour_SacredRelicGate" />	
 	<set_object_active object="$BlueHorizon_GreatTrenchGate" />
-	<set_object_active object="$Matrix472D_ThynsAbyssGate" />		
-	<set_object_active object="$Matrix472D_GreatTrenchGate" />	
-	<set_object_active object="$ShadowsofGiantsVII_TurquoiseSeaIXGate" />
 	<set_object_active object="$AtreusCloud_FarnhamsLegendGate" />	
   </add>
   <remove sel="/mdscript/cues/cue[@name='BoronFaction_States']/cues/cue[@name='Boron_Gates_Open_KingdomEnd']/actions/set_space_faction_logic_allowed"/>
