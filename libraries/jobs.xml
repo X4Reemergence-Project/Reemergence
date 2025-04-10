@@ -5129,7 +5129,47 @@
       <subordinates>
         <subordinate job="ministry_fighter_escort_s_frigate" assignment="attack" group="1"/>
       </subordinates>	  
-    </job>  
+    </job>
+	<job id="teladi_rem46_tug_m" name="{20204,5401}" >
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="SalvageRoutine" default="true">
+          <param name="range" value="4"/>
+        </order>
+      </orders>
+      <basket basket="rawscrap"/>
+      <category faction="teladi" tags="[factionlogic, tug]" size="ship_m"/>
+      <quota galaxy="3"/>
+	  <location class="sector" macro="Cluster_REM46_Sector001_macro" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="teladi" tags="[tug]" size="ship_m"/>
+		<loadout>
+			<level exact="1"/>
+		</loadout>
+        <owner exact="teladi" overridenpc="true"/>
+      </ship>
+	</job>
+	<job id="teladi_rem47_tug_m" name="{20204,5401}" >
+      <modifiers commandeerable="true"/>
+      <orders>
+        <order order="SalvageRoutine" default="true">
+          <param name="range" value="4"/>
+        </order>
+      </orders>
+      <basket basket="rawscrap"/>
+      <category faction="teladi" tags="[factionlogic, tug]" size="ship_m"/>
+      <quota galaxy="3"/>
+	  <location class="sector" macro="Cluster_REM47_Sector001_macro" />
+      <environment buildatshipyard="true"/>
+      <ship>
+        <select faction="teladi" tags="[tug]" size="ship_m"/>
+		<loadout>
+			<level exact="1"/>
+		</loadout>
+        <owner exact="teladi" overridenpc="true"/>
+      </ship>
+	</job> 
   </add>   
 
  <!--SPLIT-->  
