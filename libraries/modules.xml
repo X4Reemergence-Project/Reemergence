@@ -294,12 +294,6 @@
 	<module id="welfare_otas" group="welfare_gen">
 	  <category tags="[welfare, module]" race="otas" faction="[otas]" />
 	</module>
-	<!--Processing Modules-->
-	<module id="processing_otas" group="processing_gen">
-	  <category ware="scrapmetal" tags="[processing, module]" race="otas" faction="[otas]" />
-	</module>
-	<module id="recycling_otas" group="recycling_gen">
-	  <category tags="[recycling, module]" race="otas" faction="[otas]" />
-	</module>
-  </add>	
+  </add>
+  <remove sel="//module[@id='processing_gen'][@group='processing_gen']"/>  
 </diff>
