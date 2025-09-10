@@ -465,6 +465,7 @@
 			<restriction licence="generaluseship" />
 			<owner faction="paranid" />
 			<owner faction="holyorder" />
+			<owner faction="trinity" />
 		</ware>
 		<ware id="ship_bor_m_tm" name="{20101,51501}" description="{19530007,835}" group="ships_boron" transport="ship" size="ship" volume="1" tags="ship">
 			<price min="302277" average="355620" max="408963" />
@@ -600,7 +601,14 @@
 					<ware ware="metallicmicrolattice" amount="29" />
 					<ware ware="siliconcarbide" amount="3" />
 				</primary>
-			</production>	  
+			</production>
+    		<production time="90" amount="1" method="closedloop" name="{20206,1201}">
+      			<primary>
+        			<ware ware="claytronics" amount="1" />
+        			<ware ware="energycells" amount="21" />
+        			<ware ware="hullparts" amount="5" />
+      			</primary>
+    		</production>
 			<component ref="ship_gen_s_fightingdrone_01_a_macro" />
 			<container ref="sm_gen_pickup_equipment_01_macro" />
 			<restriction licence="generaluseequipment" />	  
