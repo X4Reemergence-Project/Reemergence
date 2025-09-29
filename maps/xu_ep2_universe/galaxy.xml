@@ -310,6 +310,14 @@
   </replace> 	
 
   
+<!--8.0 Sector-->
+  <!-- CLUSTER 725 - Void of Opportunity -->
+  <!--
+  <replace sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='Cluster_725_connection']/offset">
+	<offset><position x="-30000000" y="0" z="-17320000" /></offset>
+  </replace>
+  -->
+  
 	
 <!--SPLIT-->	
 	<!-- CLUSTER 400 - Wretched Skies IV -->
@@ -643,7 +651,14 @@
   <!-- CLUSTER 730 - Third Redemption -->
   <replace sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='Cluster_730_connection']/offset">
 	<offset><position x="-105000000" y="0" z="-95260000" /></offset>
-  </replace>    
+  </replace>
+
+
+  <!--ENVOY-->
+  <!-- CLUSTER 740 - Scarlet Star -->	
+  <replace sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='Cluster_740_connection']/offset">
+	<offset><position x="-45000000" y="0" z="-8660000" /></offset>
+  </replace>  
 	
 	
 <!--Farnham's Legend Revised-->	
@@ -1190,6 +1205,10 @@
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate002To008']" />
   <!-- Memory of Profit IX - Bright Promise -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate003To009']" />
+  <!-- Path to Profit - Void of Opportunity -->
+  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate005To725']" />
+  <!-- Black Hole Sun V - Void of Opportunity -->
+  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate006To725']" />  
   <!-- Silent Witness I - Hatikvah's Choice I -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate008To029']" />		
   <!-- Silent Witness I - Profit Center Alpha -->
@@ -1215,7 +1234,9 @@
   <!-- Holy Vision - Faulty Logic I -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate024To025']" />
   <!-- Holy Vision - Cardinal's Redress -->
-  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate024To036']" />	
+  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate024To036']" />
+  <!-- Holy Vision - Void of Opportunity -->
+  <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate024To725']" />  
   <!-- Faulty Logic VII - Atiya's Misfortune -->
   <remove sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate025To026']" />		
   <!-- Hatikvah's Choice I - Tharka's Cascade XV -->
@@ -1293,6 +1314,10 @@
 	<!-- Silent Witness I - Hatikvah's Choice I -->
 	<connection name="ClusterGate008To029" ref="destination" path="../Cluster_08_connection/Cluster_08_Sector001_connection/Zone004_Cluster_08_Sector001_connection/connection_ClusterGate008To029">
 		<macro connection="destination" path="../../../../../Cluster_29_connection/Cluster_29_Sector001_connection/Zone_Gate1_Cluster_29_Sector001_connection/connection_ClusterGate029To008" />
+	</connection>
+	<!-- Silent Witness I - Void of Opportunity -->
+	<connection name="ClusterGate008To725" ref="destination" path="../Cluster_08_connection/Cluster_08_Sector001_connection/Zone006_Cluster_08_Sector001_connection/connection_ClusterGate008To725">
+		<macro connection="destination" path="../../../../../Cluster_725_connection/Cluster_725_Sector001_connection/Zone005_Cluster_725_Sector001_connection/connection_ClusterGate725To008" />
 	</connection>		
 	<!-- Pontifex's Claim - True Sight -->
 	<connection name="ClusterGate011To012" ref="destination" path="../Cluster_11_connection/Cluster_11_Sector001_connection/Zone_Gate3_Cluster_11_Sector001_connection/connection_ClusterGate011To012">
@@ -1769,9 +1794,9 @@
 	<connection name="ClusterGateREM42To001" ref="destination" path="../Cluster_REM42_connection/Cluster_REM42_Sector001_connection/ZoneG1_Cluster_REM42_Sector001_connection/connection_ClusterGateREM42To001">
 		<macro connection="destination" path="../../../../../Cluster_01_connection/Cluster_01_Sector002_connection/Zone004_Cluster_01_Sector002_connection/connection_ClusterGate001ToREM42" />
 	</connection>	
-	<!-- Bala Gi's Joy - Silent Witness I -->
-	<connection name="ClusterGateREM42To008" ref="destination" path="../Cluster_REM42_connection/Cluster_REM42_Sector001_connection/ZoneG2_Cluster_REM42_Sector001_connection/connection_ClusterGateREM42To008">
-		<macro connection="destination" path="../../../../../Cluster_08_connection/Cluster_08_Sector001_connection/Zone006_Cluster_08_Sector001_connection/connection_ClusterGate008ToREM42" />
+	<!-- Bala Gi's Joy - Void of Opportunity -->
+	<connection name="ClusterGateREM42To725" ref="destination" path="../Cluster_REM42_connection/Cluster_REM42_Sector001_connection/ZoneG2_Cluster_REM42_Sector001_connection/connection_ClusterGateREM42To725">
+		<macro connection="destination" path="../../../../../Cluster_725_connection/Cluster_725_Sector001_connection/Zone001_Cluster_725_Sector001_connection/connection_ClusterGate725ToREM42" />
 	</connection>
 	<!-- Blue Profit - Shadow's End -->
 	<connection name="ClusterGateREM43ToREM73" ref="destination" path="../Cluster_REM43_connection/Cluster_REM43_Sector001_connection/ZoneG1_Cluster_REM43_Sector001_connection/connection_ClusterGateREM43ToREM73">
