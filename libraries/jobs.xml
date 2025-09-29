@@ -6,29 +6,6 @@
   <remove sel="//jobs/job[@id='loanshark_centaur_l_sector']" /> 
 
   <add sel="//jobs"> <!--OTAS-->
-	<job id="otas_bio_trader_l" name="{20204,1301}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="bio_argon"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="6" sector="2"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<job id="otas_bio_trader_m" name="{20204,1401}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -41,7 +18,7 @@
 		</orders>
 		<basket basket="bio_argon"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="12" cluster="6" sector="4"/>
+		<quota galaxy="24" cluster="8" sector="4"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true" preferbuilding="true"/>
 		<ship>
@@ -64,7 +41,7 @@
 		</orders>
 		<basket basket="bio_argon"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="9" sector="3"/>
+		<quota galaxy="12" sector="4"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true" preferbuilding="true"/>
 		<ship>
@@ -155,29 +132,6 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<job id="otas_energycell_trader_l" name="{20204,101}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="energycells"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="12" sector="3"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<job id="otas_energycell_trader_m" name="{20204,201}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -190,7 +144,7 @@
 		</orders>
 		<basket basket="energycells"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="14" sector="4"/>
+		<quota galaxy="26" sector="7"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -244,29 +198,6 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<job id="otas_equipment_trader_l" name="{20204,301}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="equipment"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="4" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<job id="otas_equipment_trader_m" name="{20204,401}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -279,7 +210,7 @@
 		</orders>
 		<basket basket="equipment"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="6" cluster="3" sector="2"/>
+		<quota galaxy="12" cluster="5" sector="2"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -310,29 +241,6 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<job id="otas_construction_trader_l" name="{20204,401}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>				
-			</order>
-		</orders>
-		<basket basket="construction_stations"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="6" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<job id="otas_construction_trader_m" name="{20204,401}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -345,7 +253,7 @@
 		</orders>
 		<basket basket="construction_stations"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="12" sector="3"/>
+		<quota galaxy="24" sector="6"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -376,29 +284,6 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<job id="otas_ship_construction_trader_l" name="{20204,401}">
-		<modifiers rebuild="true" commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="construction_ships"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="4" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<job id="otas_ship_construction_trader_m" name="{20204,401}">
 		<modifiers rebuild="true" commandeerable="true"/>
 		<orders>
@@ -411,7 +296,7 @@
 		</orders>
 		<basket basket="construction_ships"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="6" sector="2"/>
+		<quota galaxy="12" sector="4"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -442,29 +327,6 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<job id="otas_refinedgas_trader_l" name="{20204,501}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="refined_gas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="5" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<job id="otas_refinedgas_trader_m" name="{20204,601}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -477,7 +339,7 @@
 		</orders>
 		<basket basket="refined_gas"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="6" cluster="2" sector="2"/>
+		<quota galaxy="16" cluster="6" sector="6"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -508,29 +370,6 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<job id="otas_refinedmineral_trader_l" name="{20204,501}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="refined_mineral_normal_otas"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="5" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<job id="otas_refinedmineral_trader_m" name="{20204,601}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -543,7 +382,7 @@
 		</orders>
 		<basket basket="refined_mineral_normal_otas"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="6" cluster="2" sector="2"/>
+		<quota galaxy="16" cluster="6" sector="6"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -597,29 +436,6 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<job id="otas_tech_trader_l" name="{20204,301}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>				
-			</order>
-		</orders>
-		<basket basket="tech"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="5" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<job id="otas_tech_trader_m" name="{20204,401}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -632,7 +448,7 @@
 		</orders>
 		<basket basket="tech"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="10" sector="2"/>
+		<quota galaxy="18" sector="4"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<ship>
@@ -666,29 +482,6 @@
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
 	</job>
-	<job id="otas_water_trader_l" name="{20204,1501}">
-		<modifiers commandeerable="true"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="minbuy" value="0"/>
-				<param name="maxbuy" value="5"/>
-				<param name="minsell" value="0"/>
-				<param name="maxsell" value="5"/>			
-			</order>
-		</orders>
-		<basket basket="water"/>
-		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_l"/>
-		<quota galaxy="3" sector="1"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true" preferbuilding="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
 	<job id="otas_water_trader_m" name="{20204,1601}">
 		<modifiers commandeerable="true"/>
 		<orders>
@@ -701,7 +494,7 @@
 		</orders>
 		<basket basket="water"/>
 		<category faction="otas" tags="[factionlogic, freighter, trader]" size="ship_m"/>
-		<quota galaxy="10" cluster="4" sector="2"/>
+		<quota galaxy="15" cluster="5" sector="3"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true" preferbuilding="true"/>
 		<ship>
@@ -722,33 +515,13 @@
 		</orders>
 		<basket basket="all_container"/>
 		<category faction="otas" tags="[stationtrader]" size="ship_m"/>
-		<quota galaxy="0" maxgalaxy="24"/>
+		<quota galaxy="0" maxgalaxy="36"/>
 		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
 		<environment buildatshipyard="true"/>
 		<ship>
 			<select faction="otas" tags="[trader, container]" size="ship_m"/>
 			<loadout>
 				<level min="0.25" max="1.0" profile="bell"/>
-			</loadout>
-			<owner exact="otas" overridenpc="true"/>
-		</ship>
-	</job>
-	<job id="otas_stationtrader_l" name="{20204,701}">
-		<modifiers commandeerable="false"/>
-		<orders>
-			<order order="TradeRoutine" default="true">
-				<param name="maxbuy" value="5"/>
-			</order>
-		</orders>
-		<basket basket="all_container"/>
-		<category faction="otas" tags="[stationtrader]" size="ship_l"/>
-		<quota galaxy="0" maxgalaxy="12"/>
-		<location class="galaxy" macro="xu_ep2_universe_macro" faction="otas" relation="self" comparison="exact" matchextension="false"/>
-		<environment buildatshipyard="true"/>
-		<ship>
-			<select faction="otas" tags="[trader, container]" size="ship_l"/>
-			<loadout>
-				<level min="0.5" max="1.0" profile="bell"/>
 			</loadout>
 			<owner exact="otas" overridenpc="true"/>
 		</ship>
