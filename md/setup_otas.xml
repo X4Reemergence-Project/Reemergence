@@ -16,7 +16,31 @@
 		  </do_if>
 		</do_if>
 		<find_sector groupname="md.Khaak_Activity.Manager.$PotentialHiveStationSectors" macro="macro.cluster_rem54_sector001_macro"/>
-		<debug_text text="'Khaak Manager Ran'"/>	  
+		<debug_text text="'Khaak Manager Ran'"/>
+	  </actions>
+	</cue>
+	<cue name="SetupOTASDIPLO" namespace="this" version="1" mapeditor="false">
+	  <conditions>
+		<check_any>
+		  <event_universe_generated/>
+		  <event_cue_signalled cue="md.Setup.Start"/>
+		</check_any>
+	  </conditions>
+	  <actions>
+       <do_if value="not md.Diplomacy.Start.$DiplomacyFactionTable?">
+          <set_value name="md.Diplomacy.Start.$DiplomacyFactionTable" exact="table[]"/>
+        </do_if>
+        <!-- Add the diplomatic table entries for the OTAS faction -->
+        <set_value name="md.Diplomacy.Start.$DiplomacyFactionTable.{faction.otas}"    exact="table[$DiplomatAvailable = ['yes', tag.group_19],
+                                                                                                    $EventCapable = 'yes',
+                                                                                                    $InateAgentExperience = 'negotiation']"/>
+        <do_if value="not md.Diplomacy.Start.$DiplomaticBribesTable?">
+          <set_value name="md.Diplomacy.Start.$DiplomaticBribesTable" exact="table[]"/>
+        </do_if>
+        <append_list_elements name="md.Diplomacy.Start.$DiplomaticBribesTable.{ware.inv_microbrewdrink}" other="[faction.otas]" create="true"/>
+        <append_list_elements name="md.Diplomacy.Start.$DiplomaticBribesTable.{ware.inv_infusedbeverage}" other="[faction.otas]" create="true"/>
+        <append_list_elements name="md.Diplomacy.Start.$DiplomaticBribesTable.{ware.inv_nividiumjewel}" other="[faction.otas]" create="true"/>
+        <append_list_elements name="md.Diplomacy.Start.$DiplomaticBribesTable.{ware.inv_xenotext}" other="[faction.otas]" create="true"/>
 	  </actions>
 	</cue>
 	  <!--Run Start_Actions on a new game-->
