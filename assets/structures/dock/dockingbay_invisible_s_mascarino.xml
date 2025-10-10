@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <components>
 	<component name="dockingbay_invisible_s_mascarino" class="dockingbay">
-		<source geometry="extensions\reemergence\assets\structures\dock\dockingbay_invisible_s_data"/>
 		<layers>
 			<layer>
 				<waypoints/>
@@ -11,24 +10,7 @@
 		<connections>
 			<connection name="container" tags="contents" value="0"/>
 			<connection name="position" tags="position" value="1"/>
-			<connection name="Connection01" tags="part nocollision detail_xl  ">
-				<offset/>
-				<parts>
-					<part name="part_main" >
-						<lods>
-							<lod index="0">
-								<materials>
-									<material id="1" ref="generic.generic_p1_hulltexture"/>
-								</materials>
-							</lod>
-						</lods>
-						<size>
-							<max x="10.579192" y="10.579192" z="10.5"/>
-							<center x="0" y="0" z="5.960464E-08"/>
-						</size>
-					</part>
-				</parts>
-			</connection>
+			<connection name="space" tags="dockingbay" />
 			<connection name="Connection_component" tags="component dock_s ">
 				<offset/>
 			</connection>
