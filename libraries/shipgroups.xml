@@ -137,17 +137,32 @@
   </add>  
   <add sel="/groups/group[@name='arg_gunboat_m']"> 
 	<select macro="ship_arg_m_centaur_macro" weight="75" />  	
-  </add> 
-
+  </add>
+  <add sel="/groups/group[@name='arg_cyclops_l']">  <!--188-hf8 adds Scylla to VRO Cyclops group-->  
+	<select macro="ship_arg_l_scylla_macro" weight="100" />  	
+  </add>
+  <add sel="/groups/group[@name='ant_cyclops_l']">  <!--188-hf8 adds Scylla to VRO Cyclops group-->  
+	<select macro="ship_arg_l_scylla_macro" weight="100" />  	
+  </add>  
   
+
   <!-- ################ -->
   <!--    PARANID 	-->
-  <!-- ################ -->      
+  <!-- ################ -->
+  <add sel="/groups/group[@name='par_destroyer_l']"> 
+	<select macro="ship_par_l_ariadne_macro" weight="20" />		<!--188-hf8 Adds Aridane to Godrealm L-group-->  	
+  </add>   
   <add sel="//groups">		
 	<group name="par_tm">	
 	  <select macro="ship_par_m_tm_macro" weight="100" /> 
 	</group>
-  </add> 
+  </add>
+  <add sel="/groups/group[@name='hol_destroyer_l']"> 
+	<select macro="ship_par_l_ariadne_macro" weight="20" />		<!--188-hf8 Adds Aridane to Holy Order L-group-->  	
+  </add>
+  <add sel="/groups/group[@name='tri_destroyer_l']"> 
+	<select macro="ship_par_l_ariadne_macro" weight="20" />		<!--188-hf8 Adds Aridane to Trinity L-group-->  	
+  </add>    
   
   
   <!-- ################ -->
@@ -315,16 +330,19 @@
   <!-- ################ -->
   <!--    BORON 	-->
   <!-- ################ -->
+  <add sel="/groups/group[@name='bor_battleship_xl']">  <!--188-hf8 adds Hammerhead to VRO Megaladon group-->  
+	<select macro="ship_bor_xl_hammerhead_macro" weight="200" />  	
+  </add>
   <add sel="//groups">		
 	<group name="bor_marlin">	
 	  <select macro="ship_bor_l_marlin_macro" weight="100" /> 
 	</group>
-  </add> 
+  </add>
   <add sel="//groups">		
 	<group name="bor_tm">	
 	  <select macro="ship_bor_m_tm_macro" weight="100" /> 
 	</group>
-  </add> 	  
+  </add>
  
   <!-- ################ -->
   <!--    XENON 	-->

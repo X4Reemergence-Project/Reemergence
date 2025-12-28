@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: Volodymyr (192.168.3.68) on 2023-03-14 15:58:21-->
+<macros>
+  <macro name="dockarea_invisible_m_macro" class="dockarea">
+    <component ref="dockarea_invisible_m" />
+    <properties>
+      <identification name="{20104, 70001}" description="{20104, 70002}" />
+      <hull integrated="1" />
+      <sound_occlusion inside="0.2" outside="0.5" />
+    </properties>
+    <connections>
+      <connection ref="ConnectionFor_dockingbay_m_invisible_macro">
+        <macro ref="dockingbay_invisible_m_macro" connection="position" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

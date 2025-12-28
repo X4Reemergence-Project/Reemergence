@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<components>
+	<component name="struct_arg_cross_y" class="connectionmodule">
+		<source geometry="extensions\reemergence\assets\structures\connectionmodules\struct_arg_cross_y_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+<lights>
+    <box name="XU BoxLight01" shadow="0" r="208" g="238" b="255" lighteffect="1" trigger="1" intensity="1.4" specularintensity="1">
+        <size x="250" y="115" z="115"/>
+        <lightanimations/>
+        <offset>
+          <position x="-143.01" y="2.497129" z="-82.56686" />
+          <quaternion qx="0.6123725" qy="-0.3535534" qz="-0.3535535" qw="-0.6123723" />
+        </offset>
+    </box>
+    <box name="XU BoxLight010" shadow="0" r="208" g="238" b="255" lighteffect="1" trigger="1" intensity="1.4" specularintensity="1">
+        <size x="250" y="115" z="115"/>
+        <lightanimations/>
+        <offset>
+          <position x="125.0793" y="2.497129" z="-82.56684" />
+          <quaternion qx="0.3535534" qy="-0.6123724" qz="-0.6123725" qw="-0.3535534" />
+        </offset>
+    </box>
+    <box name="XU BoxLight01001" shadow="0" r="208" g="238" b="255" lighteffect="1" trigger="1" intensity="1.4" specularintensity="1">
+        <size x="250" y="115" z="115"/>
+        <lightanimations/>
+        <offset>
+          <position x="-1.525879e-05" y="2.497129" z="165.1337" />
+          <quaternion qx="0.7071069" qy="5.926068e-08" qz="-2.130723e-07" qw="-0.7071066" />
+        </offset>
+    </box>	
+</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="connectionmodule">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+							<lod index="1">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+							<lod index="2">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+							<lod index="3">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="200" y="100" z="200"/>>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part detail_s nocollision forceoutline ">
+				<offset/>
+				<parts>
+					<part name="detail_s_main">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+									<material id="3" ref="generic.generic_p1_alphatexture"/>
+									<material id="4" ref="p1effects.p1_lightcone_soft"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="200" y="100" z="200"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part detail_m nocollision animation textureanimation forceoutline  ">
+				<offset/>
+				<animations>
+					<animation name="loop" start="1" end="100"/>
+				</animations>
+				<parts>
+					<part name="anim_poslights">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_gradient_colour"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="200" y="100" z="200"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="bezier_float">
+									<key frame="0" value="0" in_tangent_type="auto" out_tangent_type="auto"/>
+									<key frame="100" value="-1" in_tangent_type="auto" out_tangent_type="auto"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part detail_m nocollision forceoutline  ">
+				<offset/>
+				<parts>
+					<part name="fx_decals">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1paint.paint_p1_decal_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="200" y="100" z="200"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+      <connection name="snap001" tags="snap ">
+        <offset>
+          <position x="3.051758e-05" y="0" z="-200" />
+          <quaternion qx="0" qy="-1" qz="0" qw="-2.8213e-07" />
+        </offset>
+      </connection>
+      <connection name="snap002" tags="snap ">
+        <offset>
+          <position x="-173.2051" y="0" z="99.99998" />
+          <quaternion qx="0" qy="0.5" qz="0" qw="-0.8660254" />
+        </offset>
+      </connection>
+      <connection name="snap003" tags="snap ">
+        <offset>
+          <position x="173.2051" y="0" z="100" />
+          <quaternion qx="0" qy="-0.4999997" qz="0" qw="-0.8660256" />
+        </offset>
+      </connection>
+      <connection name="connection_info01" tags="info ">
+        <offset>
+          <position x="46.55116" y="71.8237" z="-26.87632" />
+          <quaternion qx="0" qy="-0.8660254" qz="0" qw="-0.5000001" />
+        </offset>
+      </connection>
+      <connection name="connection_missionoffer" tags="mission ">
+        <offset>
+          <position x="-46.55116" y="71.8237" z="-26.87633" />
+          <quaternion qx="0" qy="0.8660256" qz="0" qw="-0.4999997" />
+        </offset>
+      </connection>
+		</connections>
+	</component>
+</components>

@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<components>
+	<component name="struct_ter_cross_hex" class="connectionmodule">
+		<source geometry="extensions\reemergence\assets\structures\connectionmodules\struct_ter_cross_hex_data"/>
+		<layers>
+			<layer>
+				<waypoints>
+					<waypoint name="XU_Waypoint_07_065" tags="sizeLevel1 speed_slow typedock end " x="545.9825" y="-20.76772" z="-457.4363" qx="-0" qy="0.4226185" qz="-0" qw="-0.9063077">
+						<links/>
+					</waypoint>
+					<waypoint name="XU_Waypoint_07_066" tags="sizeLevel1 speed_slow typenormal " x="612.6991" y="-20.76772" z="-513.4181" qx="-0" qy="0.4226185" qz="-0" qw="-0.9063077">
+						<links>
+							<link ref="XU_Waypoint_07_065"/>
+						</links>
+					</waypoint>
+					<waypoint name="XU_Waypoint_07_067" tags="sizeLevel1 speed_slow typenormal blocklink start " x="657.0019" y="-44.89632" z="-550.1782" qx="-0" qy="0.4226185" qz="-0" qw="-0.9063077">
+						<links>
+							<link ref="XU_Waypoint_07_066"/>
+						</links>
+					</waypoint>
+					<waypoint name="XU_Waypoint_07_068" tags="sizeLevel1 speed_slow typedock start " x="-544.3264" y="-20.76767" z="457.4542" qx="-0" qy="-0.9063078" qz="-0" qw="-0.4226183">
+						<links>
+							<link ref="XU_Waypoint_07_069"/>
+						</links>
+					</waypoint>
+					<waypoint name="XU_Waypoint_07_069" tags="sizeLevel1 speed_slow typenormal " x="-614.2271" y="-20.76767" z="516.1079" qx="-0" qy="-0.9063078" qz="-0" qw="-0.4226183">
+						<links>
+							<link ref="XU_Waypoint_07_070"/>
+						</links>
+					</waypoint>
+					<waypoint name="XU_Waypoint_07_070" tags="sizeLevel1 speed_slow typenormal end blocklink " x="-658.564" y="-44.89627" z="553.7126" qx="-0" qy="-0.9063078" qz="-0" qw="-0.4226183">
+						<links/>
+					</waypoint>
+				</waypoints>
+				<lights/>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="space" tags="connectionmodule">
+				<offset/>
+			</connection>
+			<connection name="Connection01" tags="part  ">
+				<offset/>
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="p1terran.ter_p1_hullpattern_01"/>
+									<material id="3" ref="p1terran.ter_p1_fx_01"/>
+								</materials>
+							</lod>
+							<lod index="1">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="p1terran.ter_p1_hullpattern_01"/>
+									<material id="3" ref="p1terran.ter_p1_fx_01"/>
+								</materials>
+							</lod>
+							<lod index="2">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture"/>
+									<material id="2" ref="p1terran.ter_p1_hullpattern_01"/>
+									<material id="3" ref="p1terran.ter_p1_fx_01"/>
+								</materials>
+							</lod>
+							<lod index="3">
+								<materials>
+									<material id="1" ref="p1terran.ter_p1_hullpattern_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="800" y="60" z="800"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection02" tags="part nocollision detail_s forceoutline  ">
+				<offset/>
+				<parts>
+					<part name="detail_s_main">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_alphatexture"/>
+									<material id="2" ref="p1natural.p1_natural_trees_01"/>
+									<material id="3" ref="generic.generic_p1_hulltexture"/>
+									<material id="4" ref="p1terran.ter_p1_fx_01"/>
+									<material id="5" ref="p1effects.p1_lightcone_soft"/>
+									<material id="6" ref="generic.generic_p1_alphatexture_b"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="778.0165" y="130.0451" z="786.7111"/>
+							<center x="1.831055E-04" y="69.44946" z="8.694305"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part detail_m nocollision animation textureanimation forceoutline  ">
+				<offset/>
+				<animations>
+					<animation name="loop" start="1" end="100"/>
+				</animations>
+				<parts>
+					<part name="anim_poslights">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_gradient_colour"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="733.4378" y="60" z="736.2435"/>
+							<center x="0" y="0" z="15.51627"/>
+						</size>
+						<size_raw>
+							<max x="733.4378" y="60" z="736.2435"/>
+							<center x="0" y="0" z="15.51627"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="0"/>
+									<key frame="100" value="-1"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection10" tags="part nocollision forceoutline detail_m ">
+				<offset/>
+				<parts>
+					<part name="fx_decals">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1paint.paint_p1_decal_01_ter"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="798.0087" y="60" z="798.0087"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+      <connection name="connection_info01" tags="info ">
+        <offset>
+          <position x="0" y="55.99995" z="-680" />
+        </offset>
+      </connection>
+      <connection name="connection_missionoffer" tags="mission ">
+        <offset>
+          <position x="0" y="55.99995" z="680" />
+        </offset>
+      </connection>
+      <connection name="snap001" tags="snap ">
+        <offset>
+          <position x="0" y="0" z="800.0001" />
+        </offset>
+      </connection>
+      <connection name="snap002" tags="snap ">
+        <offset>
+          <position x="692.8203" y="0" z="400.0002" />
+          <quaternion qx="0" qy="-0.4999998" qz="0" qw="-0.8660256" />
+        </offset>
+      </connection>
+      <connection name="snap003" tags="snap ">
+        <offset>
+          <position x="692.8204" y="0" z="-399.9999" />
+          <quaternion qx="0" qy="-0.8660253" qz="0" qw="-0.5000002" />
+        </offset>
+      </connection>
+      <connection name="snap004" tags="snap ">
+        <offset>
+          <position x="0.0001192093" y="0" z="-800.0001" />
+          <quaternion qx="0" qy="-1" qz="0" qw="-3.139165e-07" />
+        </offset>
+      </connection>
+      <connection name="snap005" tags="snap ">
+        <offset>
+          <position x="-692.8204" y="0" z="-400.0001" />
+          <quaternion qx="0" qy="0.8660254" qz="0" qw="-0.5" />
+        </offset>
+      </connection>
+      <connection name="snap006" tags="snap ">
+        <offset>
+          <position x="-692.8204" y="0" z="400" />
+          <quaternion qx="0" qy="0.5000002" qz="0" qw="-0.8660253" />
+        </offset>
+      </connection>
+			<connection name="con_aimtarget_01" tags="aimtarget ">
+				<offset>
+					<position x="4.430565E-05" y="-3.470804E-05" z="-690.4368"/>
+					<quaternion qx="4.371139E-08" qy="-1" qz="4.371139E-08" qw="-1.910685E-15"/>
+				</offset>
+			</connection>
+			<connection name="con_aimtarget_02" tags="aimtarget ">
+				<offset>
+					<position x="690.4368" y="-3.470804E-05" z="-7.730142E-05"/>
+					<quaternion qx="2.512148E-15" qy="-0.7071068" qz="6.181724E-08" qw="-0.7071067"/>
+				</offset>
+			</connection>
+			<connection name="con_aimtarget_03" tags="aimtarget ">
+				<offset>
+					<position x="5.99474E-05" y="-3.470804E-05" z="690.4368"/>
+				</offset>
+			</connection>
+			<connection name="con_aimtarget_04" tags="aimtarget ">
+				<offset>
+					<position x="-690.4368" y="-3.470804E-05" z="-4.734336E-06"/>
+					<quaternion qx="-6.181724E-08" qy="0.7071068" qz="-0" qw="-0.7071068"/>
+				</offset>
+			</connection>
+		</connections>
+	</component>
+</components>
