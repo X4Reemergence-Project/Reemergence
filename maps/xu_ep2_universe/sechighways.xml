@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <add sel="/macros/macro[@name='SuperHighway002_Cluster_04_macro']" pos="after"><!--1 to 3-->
+    <macro name="SuperHighway003_Cluster_04_macro" class="highway">
+      <component ref="standardsechighway"/>
+      <connections>
+        <connection ref="entrypoint">
+          <offset>
+            <position x="815000" y="0" z="945000"/>
+          </offset>
+        </connection>
+        <connection ref="exitpoint">
+          <offset>
+            <position x="30580" y="0" z="240200000"/>
+          </offset>
+        </connection>
+      </connections>
+      <properties>
+        <boundaries>
+          <boundary class="splinetube">		  
+			<splineposition x="815000" y="0" z="945000" tx="0.8220743" ty="0" tz="0.5693802" weight="0" inlength="0" outlength="14624200" />
+			<!--splineposition x="-21198958" y="0" z="53740320" tx="0" ty="0" tz="0" weight="1" inlength="0" outlength="0" /-->
+			<splineposition x="30580" y="0" z="240200000" tx="0.00506474496796727" ty="0" tz="0.999987185001373" weight="0" inlength="3121290" outlength="0" />			  
+            <size r="1000"/>
+          </boundary>
+        </boundaries>
+        <controls>
+          <linear>
+            <time/>
+          </linear>
+          <angular>
+            <roll/>
+          </angular>
+        </controls>
+      </properties>
+    </macro>
+  </add>
+  <add sel="/macros/macro[@name='SuperHighway002_Cluster_04_macro']" pos="after"><!--3 to 1-->
+    <macro name="SuperHighway004_Cluster_04_macro" class="highway">
+      <component ref="standardsechighway"/>
+      <connections>
+        <connection ref="entrypoint">
+          <offset>
+            <position x="46580" y="0" z="240200000"/>
+          </offset>
+        </connection>
+        <connection ref="exitpoint">
+          <offset>
+            <position x="825000" y="0" z="935000"/>
+          </offset>
+        </connection>
+      </connections>
+      <properties>
+        <boundaries>
+          <boundary class="splinetube">
+			<splineposition x="46580" y="0" z="240200000" tx="-0.00506148906424642" ty="0" tz="-0.999987185001373" weight="0" inlength="0" outlength="3121290" />	
+			<!--splineposition x="-21198958" y="0" z="53740320" tx="0" ty="0" tz="0" weight="1" inlength="0" outlength="0" /-->
+			<splineposition x="825000" y="0" z="935000" tx="-0.8220743" ty="0" tz="-0.5693802" weight="0" inlength="0" outlength="14624200" />		  
+            <size r="1000"/>
+          </boundary>
+        </boundaries>
+        <controls>
+          <linear>
+            <time/>
+          </linear>
+          <angular>
+            <roll/>
+          </angular>
+        </controls>
+      </properties>
+    </macro>
+  </add>  
+</diff>

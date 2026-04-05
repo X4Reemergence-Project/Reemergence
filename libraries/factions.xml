@@ -19,92 +19,670 @@ UI value mapping (analogously for negative values):
   0.0032    = 5
 -->
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <replace sel="/factions/faction[@id='khaak']/@tags">claimspace aggressive noresupply notradeoffer privateloadout privateship</replace>  
-  <replace sel="/factions/faction[@id='yaki']/@tags">economic privateloadout privateship plunder</replace>    
+	<replace sel="/factions/faction[@id='hatikvah']/@tags">economic pirate plunder privateloadout privateship protective watchdoguser</replace>
+	<replace sel="/factions/faction[@id='khaak']/@tags">claimspace aggressive noresupply notradeoffer privateloadout privateship</replace>
+	<replace sel="/factions/faction[@id='ministry']/@tags">economic police protective watchdoguser privateloadout privateship publicship</replace>
+	<replace sel="/factions/faction[@id='yaki']/@tags">economic privateloadout privateship plunder</replace>
 
-  <add sel="/factions/faction[@id='hatikvah']/relations">
-    <relation faction="holyorder" relation="-0.032" />
-    <relation faction="split" relation="-0.032" />	
-  </add>  
-  <add sel="/factions/faction[@id='holyorder']/relations">
-    <relation faction="hatikvah" relation="-0.032" />
-    <relation faction="teladi" relation="-0.0032" />	
-  </add>
-  <add sel="/factions/faction[@id='split']/relations">
-    <relation faction="hatikvah" relation="-0.032" />
-  </add>
-  <add sel="/factions/faction[@id='teladi']/relations">
-    <relation faction="holyorder" relation="-0.0032" />
-  </add>      
-  
-  <add sel="//factions">
-    <faction id="otas" name="{19530002,100}" description="{19530002,101}" shortname="{19530002,100}" prefixname="{19530002,118}" primaryrace="argon" behaviourset="default" known="1" tags="claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship" policefaction="otas">
-	  <color r="160" g="100" b="40" />
-      <icon active="faction_otas" inactive="faction_otas" />
-      <licences>
-		<licence type="capitalequipment" 	name="{19530002,103}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />
-		<licence type="capitalship" 		name="{19530002,104}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />		
-		<licence type="ceremonyally" 		name="{19530002,105}" minrelation="0.1" />
-		<licence type="ceremonyfriend" 		name="{19530002,106}" minrelation="0.01" />
-		<licence type="generaluseequipment" name="{19530002,107}" minrelation="-0.01" />
-		<licence type="generaluseship" 		name="{19530002,108}" minrelation="-0.01" />
-		<licence type="militaryequipment" 	name="{19530002,109}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
-		<licence type="militaryship" 		name="{19530002,110}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
-		<licence type="police" 				name="{19530002,111}" description="{20207,1002}" minrelation="0.01" precursor="ceremonyfriend" price="156000" maxlegalscan="3" />
-		<licence type="station_equip_lxl" 	name="{19530002,112}" minrelation="0.1" precursor="ceremonyally" />
-		<licence type="station_equip_sm" 	name="{19530002,113}" minrelation="0.1" precursor="ceremonyally" />
-		<licence type="station_gen_advanced" name="{19530002,114}" minrelation="0.1" precursor="ceremonyally" />
-		<licence type="station_gen_basic" 	name="{19530002,115}" minrelation="-0.01" price="0" />
-		<licence type="station_gen_intermediate" name="{19530002,116}" minrelation="0.01" precursor="ceremonyfriend" />
-		<licence type="tradesubscription" 	name="{19530002,117}" description="{20207,4002}" minrelation="0.1" precursor="ceremonyally" price="10000000" />
-		<licence type="shipsalecontract" 	name="{19530002,119}" description="{20207,9002}" minrelation="0.1" precursor="ceremonyally" price="1" tags="hidden" /> 			
-      </licences>
-      <relations>
-		<relation faction="ministry" relation="0" />
-		<relation faction="freesplit" relation="0" />
-		<relation faction="holyorder" relation="-0.032" />	
-        <relation faction="antigone" relation="-0.032" />
-        <relation faction="terran" relation="-0.06" />		
-		<relation faction="smuggler" relation="-0.5" />
-		<relation faction="loanshark" relation="-0.06" />		
-		<relation faction="criminal" relation="-0.5" />		
-        <relation faction="argon" relation="-0.09" />
-        <relation faction="fallensplit" relation="-0.32" />		
-		<relation faction="scaleplate" relation="-0.32" />		
-        <relation faction="khaak" relation="-1" />		
-        <relation faction="xenon" relation="-1" />
-        <relation faction="yaki" relation="-0.32" />		
-		<relation faction="split" relation="0.1" />
-		<relation faction="paranid" relation="0.032" />		
-		<relation faction="teladi" relation="0.032" />
-		<relation faction="pioneers" relation="0.032" />		
-		<relation faction="scavenger" relation="0.06" />			
-      </relations>
-    </faction>
-  </add>
-  <add sel="//factions/faction[@id='ministry']/relations"><relation faction="otas" relation="0" /></add>  
-  <add sel="//factions/faction[@id='split']/relations"><relation faction="otas" relation="0.1" /></add>  
-  <add sel="//factions/faction[@id='holyorder']/relations"><relation faction="otas" relation="-0.032" /></add> 
-  <add sel="//factions/faction[@id='antigone']/relations"><relation faction="otas" relation="-0.032" /></add> 
-  <add sel="//factions/faction[@id='terran']/relations"><relation faction="otas" relation="-0.06" /></add>    
-  <add sel="//factions/faction[@id='fallensplit']/relations"><relation faction="otas" relation="-0.32" /></add>  
-  <add sel="//factions/faction[@id='scaleplate']/relations"><relation faction="otas" relation="-0.32" /></add>  
-  <add sel="//factions/faction[@id='smuggler']/relations"><relation faction="otas" relation="-0.5" /></add>   
-  <add sel="//factions/faction[@id='loanshark']/relations"><relation faction="otas" relation="-0.06" /></add>   
-  <add sel="//factions/faction[@id='criminal']/relations"><relation faction="otas" relation="-0.5" /></add> 
-  <add sel="//factions/faction[@id='argon']/relations"><relation faction="otas" relation="-0.09" /></add>  
-  <add sel="//factions/faction[@id='khaak']/relations"><relation faction="otas" relation="-1" /></add>
-  <add sel="//factions/faction[@id='xenon']/relations"><relation faction="otas" relation="-1" /></add>
-  <add sel="//factions/faction[@id='yaki']/relations"><relation faction="otas" relation="-0.32" /></add>  
-  <add sel="//factions/faction[@id='freesplit']/relations"><relation faction="otas" relation="0" /></add>
-  <add sel="//factions/faction[@id='paranid']/relations"><relation faction="otas" relation="0.032" /></add>   
-  <add sel="//factions/faction[@id='teladi']/relations"><relation faction="otas" relation="0.032" /></add>
-  <add sel="//factions/faction[@id='pioneers']/relations"><relation faction="otas" relation="0.032" /></add>  
-  <add sel="//factions/faction[@id='scavenger']/relations"><relation faction="otas" relation="0.06" /></add> 
-  <!-- Player -->
-  <add sel="/factions/faction[@id='player']/licences">
-	<licence type="generaluseequipment" factions="otas" />
-	<licence type="generaluseship" factions="otas" />
-	<licence type="station_gen_basic" factions="otas" />
-  </add>    
-</diff>
+	<add sel="/factions/faction[@id='hatikvah']/relations">
+		<relation faction="holyorder" relation="-0.032" />
+		<relation faction="split" relation="-0.032" />
+	</add>  
+	<add sel="/factions/faction[@id='holyorder']/relations">
+		<relation faction="hatikvah" relation="-0.032" />
+		<relation faction="teladi" relation="-0.0032" />	
+	</add>
+	<add sel="/factions/faction[@id='split']/relations">
+		<relation faction="hatikvah" relation="-0.032" />
+	</add>
+	<add sel="/factions/faction[@id='teladi']/relations">
+		<relation faction="holyorder" relation="-0.0032" />
+	</add>   
+
+
+	<add sel="//factions">
+		<faction id="xaar" name="{4837250,1300}" shortname="{4837250,1301}" prefixname="{4837250,1301}" description="{4837250,1302}" primaryrace="paranid" behaviourset="default" tags="claimspace economic police protective privateloadout privateship" policefaction="xaar">
+			<color ref="faction_xaar" />
+			<icon active="faction_xaar" inactive="faction_xaar" />
+			<licences>
+				<licence type="ceremonyally" 			name="{4837250,1304}" minrelation="0.1" />
+				<licence type="ceremonyfriend" 			name="{4837250,1305}" minrelation="0.01" />	
+				<licence type="generaluseequipment" 	name="{4837250,1306}" minrelation="-0.01" />
+				<licence type="generaluseship" 			name="{4837250,1307}" minrelation="-0.01" />
+				<licence type="militaryequipment" 		name="{4837250,1308}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="militaryship" 			name="{4837250,1309}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="capitalequipment" 		name="{4837250,1310}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="capitalship" 			name="{4837250,1311}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />		
+				<licence type="shipsalecontract" 		name="{4837250,1312}" description="{20207,9002}" minrelation="0.1" precursor="ceremonyally" price="1" tags="hidden" /> 		
+				<licence type="station_equip_lxl" 		name="{4837250,1313}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_equip_sm" 		name="{4837250,1314}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_advanced" 	name="{4837250,1315}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_basic" 		name="{4837250,1316}" minrelation="-0.01" price="0" />
+				<licence type="station_gen_intermediate" name="{4837250,1317}" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="police" 					name="{4837250,1318}" description="{20207,1002}" minrelation="0.01" precursor="ceremonyfriend" price="156000" maxlegalscan="3" />	
+				<licence type="tradesubscription" 		name="{4837250,1319}" description="{20207,4002}" minrelation="0.1" precursor="ceremonyally" price="10000000" />			
+			</licences>
+			<relations>
+				<!--Hostiles-->
+				<relation faction="buccaneers" relation="-0.1" />			
+				<relation faction="criminal" relation="-0.5" />
+				<relation faction="holyorderfanatic" relation="-1" /> 
+				<relation faction="khaak" relation="-1" />	
+				<relation faction="scaleplate" relation="-0.32" />	
+				<relation faction="smuggler" relation="-0.06" />
+				<relation faction="yaki" relation="-0.32" />				
+				<relation faction="xenon" relation="-1" />	
+				<!--Base-->
+				<relation faction="alliance" relation="-0.01" />
+				<relation faction="antigone" relation="-0.032" />
+				<relation faction="argon" relation="-0.032" />		
+				<relation faction="hatikvah" relation="-0.032" />			
+				<relation faction="holyorder" relation="-0.1" />
+				<relation faction="ministry" relation="0.011" />		
+				<relation faction="paranid" relation="-0.1" />		
+				<relation faction="teladi" relation="0.011" />
+				<relation faction="trinity" relation="-0.1" />		
+				<!--Split-->
+				<relation faction="court" relation="-0.032" />		
+				<relation faction="fallensplit" relation="-0.032" />
+				<relation faction="freesplit" relation="-0.032" />
+				<relation faction="split" relation="0.1" />
+				<!--Terran-->
+				<relation faction="pioneers" relation="-0.032" />		
+				<relation faction="terran" relation="-0.032" />		
+				<!--Pirate-->
+				<relation faction="loanshark" relation="-0.032" />
+				<relation faction="scavenger" relation="0.032" />
+				<!--Boron-->
+				<relation faction="boron" relation="-0.1" />
+				<!--New Factions-->
+				<relation faction="aldrin" relation="-0.032" />	
+				<relation faction="atreus" relation="-0.1" />		
+				<relation faction="otas" relation="-0.032" />	
+				<relation faction="strongarms" relation="-0.032" />
+			</relations>		
+		</faction>  
+
+
+		<faction id="strongarms" name="{4837250,2400}" shortname="{4837250,2401}" prefixname="{4837250,2401}" description="{4837250,2402}" primaryrace="split" behaviourset="default" tags="claimspace economic police protective privateloadout privateship plunder" policefaction="strongarms">
+			<color ref="faction_strongarms" />
+			<icon active="faction_strongarms" inactive="faction_strongarms" />
+			<licences>
+				<licence type="ceremonyally" 			name="{4837250,2404}" minrelation="0.1" />
+				<licence type="ceremonyfriend" 			name="{4837250,2405}" minrelation="0.01" />	
+				<licence type="generaluseequipment" 	name="{4837250,2406}" minrelation="-0.01" />
+				<licence type="generaluseship" 			name="{4837250,2407}" minrelation="-0.01" />
+				<licence type="militaryequipment" 		name="{4837250,2408}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="militaryship" 			name="{4837250,2409}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="capitalequipment" 		name="{4837250,2410}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="capitalship" 			name="{4837250,2411}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />		
+				<licence type="shipsalecontract" 		name="{4837250,2412}" description="{20207,9002}" minrelation="0.1" precursor="ceremonyally" price="1" tags="hidden" /> 		
+				<licence type="station_equip_lxl" 		name="{4837250,2413}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_equip_sm" 		name="{4837250,2414}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_advanced" 	name="{4837250,2415}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_basic" 		name="{4837250,2416}" minrelation="-0.01" price="0" />
+				<licence type="station_gen_intermediate" name="{4837250,2417}" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="police" 					name="{4837250,2418}" description="{20207,1002}" minrelation="0.01" precursor="ceremonyfriend" price="156000" maxlegalscan="3" />	
+				<licence type="tradesubscription" 		name="{4837250,2419}" description="{20207,4002}" minrelation="0.1" precursor="ceremonyally" price="10000000" />	
+
+				<licence type="capitalequipment" 	factions="split" />
+				<licence type="capitalship" 		factions="split" />
+				<licence type="generaluseequipment" factions="split" />
+				<licence type="generaluseship" 		factions="split" />
+				<licence type="militaryequipment" 	factions="split" />
+				<licence type="militaryship" 		factions="split" />	
+			</licences>
+			<relations>
+				<!--Hostiles-->
+				<relation faction="buccaneers" relation="-0.032" />			
+				<relation faction="criminal" relation="-0.5" />
+				<relation faction="holyorderfanatic" relation="-1" /> 
+				<relation faction="khaak" relation="-1" />	
+				<relation faction="scaleplate" relation="-0.32" />	
+				<relation faction="smuggler" relation="-0.06" />
+				<relation faction="yaki" relation="-0.32" />				
+				<relation faction="xenon" relation="-1" />	
+				<!--Base-->
+				<relation faction="alliance" relation="-0.032" />
+				<relation faction="antigone" relation="-0.1" />
+				<relation faction="argon" relation="-0.1" />		
+				<relation faction="hatikvah" relation="-0.032" />			
+				<relation faction="holyorder" relation="0.1" />
+				<relation faction="ministry" relation="-0.01" />		
+				<relation faction="paranid" relation="-0.032" />		
+				<relation faction="teladi" relation="0.032" />
+				<relation faction="trinity" relation="0.032" />		
+				<!--Split-->
+				<relation faction="court" relation="0.32" />		
+				<relation faction="fallensplit" relation="-0.032" />
+				<relation faction="freesplit" relation="0.32" />
+				<relation faction="split" relation="-0.1" />					
+				<!--Terran-->
+				<relation faction="pioneers" relation="-0.011" />		
+				<relation faction="terran" relation="-0.0032" />		
+				<!--Pirate-->
+				<relation faction="loanshark" relation="-0.032" />
+				<relation faction="scavenger" relation="0.032" />
+				<!--Boron-->
+				<relation faction="boron" relation="-0.32" />
+				<!--New Factions-->
+				<relation faction="aldrin" relation="-0.032" />	
+				<relation faction="atreus" relation="-0.32" />
+				<relation faction="otas" relation="-0.032" />
+				<relation faction="xaar" relation="-0.032" />
+			</relations>		
+		</faction>	
+
+		<faction id="atreus" name="{4837250,2500}" shortname="{4837250,2501}" prefixname="{4837250,2501}" description="{4837250,2502}" primaryrace="boron" behaviourset="default" tags="claimspace police economic protective privateloadout privateship" policefaction="atreus">
+			<color ref="faction_atreus" />
+			<icon active="faction_atreus" inactive="faction_atreus" />
+			<licences>
+				<licence type="ceremonyally" 			name="{4837250,2504}" minrelation="0.1" />
+				<licence type="ceremonyfriend" 			name="{4837250,2505}" minrelation="0.01" />	
+				<licence type="generaluseequipment" 	name="{4837250,2506}" minrelation="-0.01" />
+				<licence type="generaluseship" 			name="{4837250,2507}" minrelation="-0.01" />
+				<licence type="militaryequipment" 		name="{4837250,2508}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="militaryship" 			name="{4837250,2509}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="capitalequipment" 		name="{4837250,2510}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="capitalship" 			name="{4837250,2511}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />		
+				<licence type="shipsalecontract" 		name="{4837250,2512}" description="{20207,9002}" minrelation="0.1" precursor="ceremonyally" price="1" tags="hidden" /> 		
+				<licence type="station_equip_lxl" 		name="{4837250,2513}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_equip_sm" 		name="{4837250,2514}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_advanced" 	name="{4837250,2515}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_basic" 		name="{4837250,2516}" minrelation="-0.01" price="0" />
+				<licence type="station_gen_intermediate" name="{4837250,2517}" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="police" 					name="{4837250,2518}" description="{20207,1002}" minrelation="0.01" precursor="ceremonyfriend" price="156000" maxlegalscan="3" />	
+				<licence type="tradesubscription" 		name="{4837250,2519}" description="{20207,4002}" minrelation="0.1" precursor="ceremonyally" price="10000000" />	
+
+				<licence type="capitalequipment" 	factions="boron" />
+				<licence type="capitalship" 		factions="boron" />
+				<licence type="generaluseequipment" factions="boron" />
+				<licence type="generaluseship" 		factions="boron" />
+				<licence type="militaryequipment" 	factions="boron" />
+				<licence type="militaryship" 		factions="boron" />
+			</licences>
+			<relations>
+				<!--Hostiles-->
+				<relation faction="buccaneers" relation="-0.032" />			
+				<relation faction="criminal" relation="-0.5" />
+				<relation faction="holyorderfanatic" relation="-1" /> 
+				<relation faction="khaak" relation="-1" />	
+				<relation faction="scaleplate" relation="-0.32" />	
+				<relation faction="smuggler" relation="-0.06" />
+				<relation faction="yaki" relation="-0.32" />				
+				<relation faction="xenon" relation="-1" />		
+				<!--Base-->
+				<relation faction="alliance" relation="0.1" />
+				<relation faction="antigone" relation="0.1" />
+				<relation faction="argon" relation="0.5" />		
+				<relation faction="hatikvah" relation="0.011" />			
+				<relation faction="holyorder" relation="-0.032" />
+				<relation faction="ministry" relation="0.011" />		
+				<relation faction="paranid" relation="0.011" />		
+				<relation faction="teladi" relation="0.011" />
+				<relation faction="trinity" relation="0.011" />			
+				<!--Split-->
+				<relation faction="court" relation="-0.1" />		
+				<relation faction="fallensplit" relation="-0.32" />
+				<relation faction="freesplit" relation="-0.1" />
+				<relation faction="split" relation="-0.32" />			
+				<!--Terran-->
+				<relation faction="pioneers" relation="0.011" />			
+				<relation faction="terran" relation="-0.032" />	 		
+				<!--Pirate-->
+				<relation faction="loanshark" relation="-0.032" />
+				<relation faction="scavenger" relation="0.032" />		
+				<!--Boron-->
+				<relation faction="boron" relation="0.67" />		
+				<!--New Factions-->
+				<relation faction="aldrin" relation="0.011" />	
+				<relation faction="otas" relation="-0.032" />		
+				<relation faction="strongarms" relation="-0.32" />
+				<relation faction="xaar" relation="-0.032" /> 		
+			</relations>
+			<buildrules method="boron" />		
+		</faction>	
+
+		<faction id="aldrin" name="{4837250,2700}" shortname="{4837250,2701}" prefixname="{4837250,2701}" description="{4837250,2702}" primaryrace="terran" behaviourset="default" known="1" tags="claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship" policefaction="aldrin">
+			<color ref="faction_aldrin" />
+			<icon active="faction_aldrin" inactive="faction_aldrin" />
+			<licences>
+				<licence type="ceremonyally" 			name="{4837250,2704}" minrelation="0.1" />
+				<licence type="ceremonyfriend" 			name="{4837250,2705}" minrelation="0.01" />	
+				<licence type="generaluseequipment" 	name="{4837250,2706}" minrelation="-0.01" />
+				<licence type="generaluseship" 			name="{4837250,2707}" minrelation="-0.01" />
+				<licence type="militaryequipment" 		name="{4837250,2708}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="militaryship" 			name="{4837250,2709}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="capitalequipment" 		name="{4837250,2710}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="capitalship" 			name="{4837250,2711}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />		
+				<licence type="shipsalecontract" 		name="{4837250,2712}" description="{20207,9002}" minrelation="0.1" precursor="ceremonyally" price="1" tags="hidden" /> 		
+				<licence type="station_equip_lxl" 		name="{4837250,2713}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_equip_sm" 		name="{4837250,2714}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_advanced" 	name="{4837250,2715}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_basic" 		name="{4837250,2716}" minrelation="-0.01" price="0" />
+				<licence type="station_gen_intermediate" name="{4837250,2717}" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="police" 					name="{4837250,2718}" description="{20207,1002}" minrelation="0.01" precursor="ceremonyfriend" price="156000" maxlegalscan="3" />	
+				<licence type="tradesubscription" 		name="{4837250,2719}" description="{20207,4002}" minrelation="0.1" precursor="ceremonyally" price="10000000" />			  	
+			</licences> 
+			<relations>
+				<!--Hostiles-->
+				<relation faction="buccaneers" relation="-0.032" />			
+				<relation faction="criminal" relation="-0.5" />
+				<relation faction="holyorderfanatic" relation="-1" /> 
+				<relation faction="khaak" relation="-1" />	
+				<relation faction="scaleplate" relation="-0.32" />	
+				<relation faction="smuggler" relation="-0.06" />
+				<relation faction="yaki" relation="-1" />				
+				<relation faction="xenon" relation="-1" />	  
+				<!--Base-->
+				<relation faction="alliance" relation="0.1" />		
+				<relation faction="antigone" relation="0.011" />
+				<relation faction="argon" relation="0.011" />		
+				<relation faction="hatikvah" relation="0.011" />			
+				<relation faction="holyorder" relation="-0.032" />
+				<relation faction="ministry" relation="0.011" />		
+				<relation faction="paranid" relation="0.011" />		
+				<relation faction="teladi" relation="0.011" />
+				<relation faction="trinity" relation="0.032" />			
+				<!--Split-->
+				<relation faction="court" relation="-0.011" />
+				<relation faction="fallensplit" relation="-0.32" />
+				<relation faction="freesplit" relation="-0.011" />
+				<relation faction="split" relation="-0.032" />
+				<!--Terran-->
+				<relation faction="pioneers" relation="0.67" />		
+				<relation faction="terran" relation="-0.032" />	
+				<!--Pirate-->		
+				<relation faction="loanshark" relation="-0.032" />	
+				<relation faction="scavenger" relation="0.011" />		
+				<!--Boron-->
+				<relation faction="boron" relation="0.011" />	
+				<!--New Factions-->
+				<relation faction="atreus" relation="0.011" />		
+				<relation faction="otas" relation="-0.011" /> 		
+				<relation faction="strongarms" relation="-0.032" />
+				<relation faction="xaar" relation="-0.032" />			
+			</relations>
+			<buildrules method="terran" />	  
+		</faction> 
+
+		<faction id="otas" name="{4837250,2900}" shortname="{4837250,2901}" prefixname="{4837250,2901}" description="{4837250,2902}" primaryrace="argon" behaviourset="default" known="1" tags="peaceful claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship" policefaction="otas">
+			<color ref="faction_otas" />  
+			<icon active="faction_otas" inactive="faction_otas" />
+			<licences>
+				<licence type="ceremonyally" 			name="{4837250,2904}" minrelation="0.1" />
+				<licence type="ceremonyfriend" 			name="{4837250,2905}" minrelation="0.01" />	
+				<licence type="generaluseequipment" 	name="{4837250,2906}" minrelation="-0.01" />
+				<licence type="generaluseship" 			name="{4837250,2907}" minrelation="-0.01" />
+				<licence type="militaryequipment" 		name="{4837250,2908}" icon="bse_star" minrelation="0.0032" />
+				<licence type="militaryship" 			name="{4837250,2909}" icon="bse_star" minrelation="0.0032" />
+				<licence type="capitalequipment" 		name="{4837250,2910}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="capitalship" 			name="{4837250,2911}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />		
+				<licence type="shipsalecontract" 		name="{4837250,2912}" description="{20207,9002}" minrelation="0.1" precursor="ceremonyally" price="1" tags="hidden" /> 		
+				<licence type="station_equip_lxl" 		name="{4837250,2913}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_equip_sm" 		name="{4837250,2914}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_advanced" 	name="{4837250,2915}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_basic" 		name="{4837250,2916}" minrelation="-0.01" price="0" />
+				<licence type="station_gen_intermediate" name="{4837250,2917}" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="police" 					name="{4837250,2918}" description="{20207,1002}" minrelation="0.01" precursor="ceremonyfriend" price="156000" maxlegalscan="3" />	
+				<licence type="tradesubscription" 		name="{4837250,2919}" description="{20207,4002}" minrelation="0.1" precursor="ceremonyally" price="10000000" />				
+			</licences>
+			<relations>
+				<!--Hostiles-->
+				<relation faction="buccaneers" relation="-0.032" />			
+				<relation faction="criminal" relation="-0.5" />
+				<relation faction="holyorderfanatic" relation="-1" /> 
+				<relation faction="khaak" relation="-1" />	
+				<relation faction="scaleplate" relation="-0.32" />	
+				<relation faction="smuggler" relation="-0.06" />
+				<relation faction="yaki" relation="-0.32" />				
+				<relation faction="xenon" relation="-1" />	  
+				<!--Base-->
+				<relation faction="alliance" relation="0.1" />		
+				<relation faction="antigone" relation="-0.032" />
+				<relation faction="argon" relation="-0.05" />		
+				<relation faction="hatikvah" relation="0.032" />			
+				<relation faction="holyorder" relation="-0.032" />
+				<relation faction="ministry" relation="0.011" />		
+				<relation faction="paranid" relation="-0.011" />		
+				<relation faction="teladi" relation="0.032" />
+				<relation faction="trinity" relation="0.032" />			
+				<!--Split-->
+				<relation faction="court" relation="-0.032" />
+				<relation faction="fallensplit" relation="-0.32" />
+				<relation faction="freesplit" relation="0.011" />
+				<relation faction="split" relation="0.1" />
+				<!--Terran-->
+				<relation faction="pioneers" relation="0.011" />		
+				<relation faction="terran" relation="-0.032" />	
+				<!--Pirate-->		
+				<relation faction="loanshark" relation="-0.032" />	
+				<relation faction="scavenger" relation="0.032" />		
+				<!--Boron-->
+				<relation faction="boron" relation="0.032" />	
+				<!--New Factions-->
+				<relation faction="aldrin" relation="-0.011" />	
+				<relation faction="atreus" relation="0.032" />		
+				<relation faction="strongarms" relation="-0.032" />	
+				<relation faction="xaar" relation="0.011" /> 		
+			</relations>
+		</faction>
+
+		<faction id="enclave" name="{4837250,21100}" shortname="{4837250,21101}" prefixname="{4837250,21101}" description="{4837250,21102}" primaryrace="argon" behaviourset="default" tags="peaceful claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship" policefaction="enclave">
+			<color ref="faction_enclave" />
+			<icon active="faction_enclave" inactive="faction_enclave" />
+			<licences>
+				<licence type="ceremonyally" 			name="{4837250,21104}" minrelation="0.1" />
+				<licence type="ceremonyfriend" 			name="{4837250,21105}" minrelation="0.01" />	
+				<licence type="generaluseequipment" 	name="{4837250,21106}" minrelation="-0.01" />
+				<licence type="generaluseship" 			name="{4837250,21107}" minrelation="-0.01" />
+				<licence type="militaryequipment" 		name="{4837250,21108}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="militaryship" 			name="{4837250,21109}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="capitalequipment" 		name="{4837250,21110}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="capitalship" 			name="{4837250,21111}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" />		
+				<licence type="shipsalecontract" 		name="{4837250,21112}" description="{20207,9002}" minrelation="0.1" precursor="ceremonyally" price="1" tags="hidden" /> 		
+				<licence type="station_equip_lxl" 		name="{4837250,21113}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_equip_sm" 		name="{4837250,21114}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_advanced" 	name="{4837250,21115}" minrelation="0.1" precursor="ceremonyally" />
+				<licence type="station_gen_basic" 		name="{4837250,21116}" minrelation="-0.01" price="0" />
+				<licence type="station_gen_intermediate" name="{4837250,21117}" minrelation="0.01" precursor="ceremonyfriend" />
+				<licence type="police" 					name="{4837250,21118}" description="{20207,1002}" minrelation="0.01" precursor="ceremonyfriend" price="156000" maxlegalscan="3" />	
+				<licence type="tradesubscription" 		name="{4837250,21119}" description="{20207,4002}" minrelation="0.1" precursor="ceremonyally" price="10000000" />	
+
+				<licence type="capitalequipment" 	factions="argon" />
+				<licence type="capitalship" 		factions="argon" />
+				<licence type="generaluseequipment" factions="argon" />
+				<licence type="generaluseship" 		factions="argon" />
+				<licence type="militaryequipment" 	factions="argon" />
+				<licence type="militaryship" 		factions="argon" />
+				<licence type="police" 				factions="argon" />		
+			</licences>
+			<relations>
+				<!--Hostiles-->
+				<relation faction="buccaneers" relation="-0.032" />			
+				<relation faction="criminal" relation="-0.5" />
+				<relation faction="holyorderfanatic" relation="-1" /> 
+				<relation faction="khaak" relation="-1" />	
+				<relation faction="scaleplate" relation="-0.32" />	
+				<relation faction="smuggler" relation="-0.06" />
+				<relation faction="yaki" relation="-0.32" />				
+				<relation faction="xenon" relation="-1" />	  
+				<!--Base-->
+				<relation faction="alliance" relation="0.1" />		
+				<relation faction="antigone" relation="0.011" />
+				<relation faction="argon" relation="0.5" />		
+				<relation faction="hatikvah" relation="0.032" />			
+				<relation faction="holyorder" relation="-0.032" />
+				<relation faction="ministry" relation="0.011" />		
+				<relation faction="paranid" relation="-0.011" />		
+				<relation faction="teladi" relation="0.032" />
+				<relation faction="trinity" relation="-0.011" />			
+				<!--Split-->
+				<relation faction="court" relation="-0.032" />
+				<relation faction="fallensplit" relation="-0.32" />
+				<relation faction="freesplit" relation="-0.032" />
+				<relation faction="split" relation="-0.05" />
+				<!--Terran-->
+				<relation faction="pioneers" relation="0.011" />		
+				<relation faction="terran" relation="-0.032" />	
+				<!--Pirate-->		
+				<relation faction="loanshark" relation="-0.032" />	
+				<relation faction="scavenger" relation="0.032" />		
+				<!--Boron-->
+				<relation faction="boron" relation="0.1" />	
+				<!--New Factions-->
+				<relation faction="aldrin" relation="-0.011" />	
+				<relation faction="atreus" relation="0.011" />		
+				<relation faction="otas" relation="-0.032" /> 			
+				<relation faction="strongarms" relation="-0.032" />	
+				<relation faction="xaar" relation="-0.032" /> 		
+			</relations>	
+		</faction>	
+	</add>
+	<!--Xaar's Faithful-->
+	<!--Hostiles-->
+	<add sel="//factions/faction[@id='buccaneers']/relations"><relation faction="xaar" relation="-0.032" /></add>  
+	<add sel="//factions/faction[@id='criminal']/relations"><relation faction="xaar" relation="-0.5" /></add>  
+	<add sel="//factions/faction[@id='holyorderfanatic']/relations"><relation faction="xaar" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='khaak']/relations"><relation faction="xaar" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='scaleplate']/relations"><relation faction="xaar" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='smuggler']/relations"><relation faction="xaar" relation="-0.06" /></add>   
+	<add sel="//factions/faction[@id='yaki']/relations"><relation faction="xaar" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='xenon']/relations"><relation faction="xaar" relation="-1" /></add>  
+	<!--Base-->
+	<add sel="//factions/faction[@id='alliance']/relations"><relation faction="xaar" relation="-0.011" /></add> 
+	<add sel="//factions/faction[@id='antigone']/relations"><relation faction="xaar" relation="-0.032" /></add>   
+	<add sel="//factions/faction[@id='argon']/relations"><relation faction="xaar" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='hatikvah']/relations"><relation faction="xaar" relation="-0.032" /></add> 
+	<add sel="//factions/faction[@id='holyorder']/relations"><relation faction="xaar" relation="-0.1" /></add> 
+	<add sel="//factions/faction[@id='ministry']/relations"><relation faction="xaar" relation="0.011" /></add> 
+	<add sel="//factions/faction[@id='paranid']/relations"><relation faction="xaar" relation="-0.1" /></add>
+	<add sel="//factions/faction[@id='teladi']/relations"><relation faction="xaar" relation="0.011" /></add>
+	<add sel="//factions/faction[@id='trinity']/relations"><relation faction="xaar" relation="-0.1" /></add>  
+	<!--Split-->
+	<add sel="//factions/faction[@id='court']/relations"><relation faction="xaar" relation="-0.032" /></add> 	
+	<add sel="//factions/faction[@id='fallensplit']/relations"><relation faction="xaar" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='freesplit']/relations"><relation faction="xaar" relation="-0.032" /></add>  
+	<add sel="//factions/faction[@id='split']/relations"><relation faction="xaar" relation="0.1" /></add>    
+	<!--Terran-->
+	<add sel="//factions/faction[@id='pioneers']/relations"><relation faction="xaar" relation="-0.032" /></add> 	
+	<add sel="//factions/faction[@id='terran']/relations"><relation faction="xaar" relation="-0.032" /></add>  	
+	<!--Pirate-->
+	<add sel="//factions/faction[@id='loanshark']/relations"><relation faction="xaar" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='scavenger']/relations"><relation faction="xaar" relation="0.032" /></add>  
+	<!--Boron-->	
+	<add sel="//factions/faction[@id='boron']/relations"><relation faction="xaar" relation="-0.1" /></add>
+
+
+	<!--Split Strong Arms-->
+	<!--Hostiles-->
+	<add sel="//factions/faction[@id='buccaneers']/relations"><relation faction="strongarms" relation="-0.032" /></add>  
+	<add sel="//factions/faction[@id='criminal']/relations"><relation faction="strongarms" relation="-0.5" /></add>  
+	<add sel="//factions/faction[@id='holyorderfanatic']/relations"><relation faction="strongarms" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='khaak']/relations"><relation faction="strongarms" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='scaleplate']/relations"><relation faction="strongarms" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='smuggler']/relations"><relation faction="strongarms" relation="-0.06" /></add>   
+	<add sel="//factions/faction[@id='yaki']/relations"><relation faction="strongarms" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='xenon']/relations"><relation faction="strongarms" relation="-1" /></add>  
+	<!--Base-->
+	<add sel="//factions/faction[@id='alliance']/relations"><relation faction="strongarms" relation="-0.032" /></add> 
+	<add sel="//factions/faction[@id='antigone']/relations"><relation faction="strongarms" relation="-0.1" /></add>   
+	<add sel="//factions/faction[@id='argon']/relations"><relation faction="strongarms" relation="-0.1" /></add>
+	<add sel="//factions/faction[@id='hatikvah']/relations"><relation faction="strongarms" relation="-0.032" /></add> 
+	<add sel="//factions/faction[@id='holyorder']/relations"><relation faction="strongarms" relation="0.1" /></add> 
+	<add sel="//factions/faction[@id='ministry']/relations"><relation faction="strongarms" relation="-0.011" /></add> 
+	<add sel="//factions/faction[@id='paranid']/relations"><relation faction="strongarms" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='teladi']/relations"><relation faction="strongarms" relation="0.032" /></add>
+	<add sel="//factions/faction[@id='trinity']/relations"><relation faction="strongarms" relation="0.032" /></add>  
+	<!--Split-->
+	<add sel="//factions/faction[@id='court']/relations"><relation faction="strongarms" relation="0.32" /></add> 	
+	<add sel="//factions/faction[@id='fallensplit']/relations"><relation faction="strongarms" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='freesplit']/relations"><relation faction="strongarms" relation="0.32" /></add>  
+	<add sel="//factions/faction[@id='split']/relations"><relation faction="strongarms" relation="-0.1" /></add>    
+	<!--Terran-->
+	<add sel="//factions/faction[@id='pioneers']/relations"><relation faction="strongarms" relation="-0.32" /></add> 	
+	<add sel="//factions/faction[@id='terran']/relations"><relation faction="strongarms" relation="-0.06" /></add>  	
+	<!--Pirate-->
+	<add sel="//factions/faction[@id='loanshark']/relations"><relation faction="strongarms" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='scavenger']/relations"><relation faction="strongarms" relation="0.032" /></add>  
+	<!--Boron-->	
+	<add sel="//factions/faction[@id='boron']/relations"><relation faction="strongarms" relation="-0.32" /></add>
+
+
+	<!--Atreus Shipbuilding Currents-->
+	<!--Hostiles-->
+	<add sel="//factions/faction[@id='buccaneers']/relations"><relation faction="atreus" relation="-0.032" /></add>  
+	<add sel="//factions/faction[@id='criminal']/relations"><relation faction="atreus" relation="-0.5" /></add>  
+	<add sel="//factions/faction[@id='holyorderfanatic']/relations"><relation faction="atreus" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='khaak']/relations"><relation faction="atreus" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='scaleplate']/relations"><relation faction="atreus" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='smuggler']/relations"><relation faction="atreus" relation="-0.06" /></add>   
+	<add sel="//factions/faction[@id='yaki']/relations"><relation faction="atreus" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='xenon']/relations"><relation faction="atreus" relation="-1" /></add>  
+	<!--Base-->
+	<add sel="//factions/faction[@id='alliance']/relations"><relation faction="atreus" relation="0.1" /></add> 
+	<add sel="//factions/faction[@id='antigone']/relations"><relation faction="atreus" relation="0.1" /></add>   
+	<add sel="//factions/faction[@id='argon']/relations"><relation faction="atreus" relation="0.5" /></add>
+	<add sel="//factions/faction[@id='hatikvah']/relations"><relation faction="atreus" relation="0.011" /></add> 
+	<add sel="//factions/faction[@id='holyorder']/relations"><relation faction="atreus" relation="-0.032" /></add> 
+	<add sel="//factions/faction[@id='ministry']/relations"><relation faction="atreus" relation="0.011" /></add> 
+	<add sel="//factions/faction[@id='paranid']/relations"><relation faction="atreus" relation="0.011" /></add>
+	<add sel="//factions/faction[@id='teladi']/relations"><relation faction="atreus" relation="0.011" /></add>
+	<add sel="//factions/faction[@id='trinity']/relations"><relation faction="atreus" relation="0.011" /></add>  
+	<!--Split-->
+	<add sel="//factions/faction[@id='court']/relations"><relation faction="atreus" relation="-0.1" /></add> 	
+	<add sel="//factions/faction[@id='fallensplit']/relations"><relation faction="atreus" relation="-0.32" /></add>
+	<add sel="//factions/faction[@id='freesplit']/relations"><relation faction="atreus" relation="-0.1" /></add>  
+	<add sel="//factions/faction[@id='split']/relations"><relation faction="atreus" relation="-0.32" /></add>    
+	<!--Terran-->
+	<add sel="//factions/faction[@id='pioneers']/relations"><relation faction="atreus" relation="0.011" /></add> 	
+	<add sel="//factions/faction[@id='terran']/relations"><relation faction="atreus" relation="-0.032" /></add>  	
+	<!--Pirate-->
+	<add sel="//factions/faction[@id='loanshark']/relations"><relation faction="atreus" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='scavenger']/relations"><relation faction="atreus" relation="0.032" /></add>  
+	<!--Boron-->	
+	<add sel="//factions/faction[@id='boron']/relations"><relation faction="atreus" relation="0.67" /></add>
+
+
+	<!--Aldrin Colony-->
+	<!--Hostiles-->
+	<add sel="//factions/faction[@id='buccaneers']/relations"><relation faction="aldrin" relation="-0.032" /></add>  
+	<add sel="//factions/faction[@id='criminal']/relations"><relation faction="aldrin" relation="-0.5" /></add>  
+	<add sel="//factions/faction[@id='holyorderfanatic']/relations"><relation faction="aldrin" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='khaak']/relations"><relation faction="aldrin" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='scaleplate']/relations"><relation faction="aldrin" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='smuggler']/relations"><relation faction="aldrin" relation="-0.06" /></add>   
+	<add sel="//factions/faction[@id='yaki']/relations"><relation faction="aldrin" relation="-1" /></add>  
+	<add sel="//factions/faction[@id='xenon']/relations"><relation faction="aldrin" relation="-1" /></add>  
+	<!--Base-->
+	<add sel="//factions/faction[@id='alliance']/relations"><relation faction="aldrin" relation="0.1" /></add> 
+	<add sel="//factions/faction[@id='antigone']/relations"><relation faction="aldrin" relation="0.011" /></add>   
+	<add sel="//factions/faction[@id='argon']/relations"><relation faction="aldrin" relation="0.011" /></add>
+	<add sel="//factions/faction[@id='hatikvah']/relations"><relation faction="aldrin" relation="0.011" /></add> 
+	<add sel="//factions/faction[@id='holyorder']/relations"><relation faction="aldrin" relation="-0.032" /></add> 
+	<add sel="//factions/faction[@id='ministry']/relations"><relation faction="aldrin" relation="0.011" /></add> 
+	<add sel="//factions/faction[@id='paranid']/relations"><relation faction="aldrin" relation="0.011" /></add>
+	<add sel="//factions/faction[@id='teladi']/relations"><relation faction="aldrin" relation="0.011" /></add>
+	<add sel="//factions/faction[@id='trinity']/relations"><relation faction="aldrin" relation="0.032" /></add>  
+	<!--Split-->
+	<add sel="//factions/faction[@id='court']/relations"><relation faction="aldrin" relation="-0.011" /></add> 	
+	<add sel="//factions/faction[@id='fallensplit']/relations"><relation faction="aldrin" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='freesplit']/relations"><relation faction="aldrin" relation="-0.011" /></add>  
+	<add sel="//factions/faction[@id='split']/relations"><relation faction="aldrin" relation="-0.032" /></add>    
+	<!--Terran-->
+	<add sel="//factions/faction[@id='pioneers']/relations"><relation faction="aldrin" relation="0.67" /></add> 	
+	<add sel="//factions/faction[@id='terran']/relations"><relation faction="aldrin" relation="-0.032" /></add>  	
+	<!--Pirate-->
+	<add sel="//factions/faction[@id='loanshark']/relations"><relation faction="aldrin" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='scavenger']/relations"><relation faction="aldrin" relation="0.032" /></add>  
+	<!--Boron-->	
+	<add sel="//factions/faction[@id='boron']/relations"><relation faction="aldrin" relation="0.011" /></add>    
+
+
+	<!--Optimised Technology, Armaments and Shielding Corporation-->
+	<!--Hostiles-->
+	<add sel="//factions/faction[@id='buccaneers']/relations"><relation faction="otas" relation="-0.032" /></add>  
+	<add sel="//factions/faction[@id='criminal']/relations"><relation faction="otas" relation="-0.5" /></add>  
+	<add sel="//factions/faction[@id='holyorderfanatic']/relations"><relation faction="otas" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='khaak']/relations"><relation faction="otas" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='scaleplate']/relations"><relation faction="otas" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='smuggler']/relations"><relation faction="otas" relation="-0.06" /></add>   
+	<add sel="//factions/faction[@id='yaki']/relations"><relation faction="otas" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='xenon']/relations"><relation faction="otas" relation="-1" /></add>  
+	<!--Base-->
+	<add sel="//factions/faction[@id='alliance']/relations"><relation faction="otas" relation="0.1" /></add> 
+	<add sel="//factions/faction[@id='antigone']/relations"><relation faction="otas" relation="-0.032" /></add>   
+	<add sel="//factions/faction[@id='argon']/relations"><relation faction="otas" relation="-0.05" /></add>
+	<add sel="//factions/faction[@id='hatikvah']/relations"><relation faction="otas" relation="0.032" /></add> 
+	<add sel="//factions/faction[@id='holyorder']/relations"><relation faction="otas" relation="-0.032" /></add> 
+	<add sel="//factions/faction[@id='ministry']/relations"><relation faction="otas" relation="0.011" /></add> 
+	<add sel="//factions/faction[@id='paranid']/relations"><relation faction="otas" relation="0.011" /></add>
+	<add sel="//factions/faction[@id='teladi']/relations"><relation faction="otas" relation="0.032" /></add>
+	<add sel="//factions/faction[@id='trinity']/relations"><relation faction="otas" relation="0.032" /></add>  
+	<!--Split-->
+	<add sel="//factions/faction[@id='court']/relations"><relation faction="otas" relation="-0.032" /></add> 	
+	<add sel="//factions/faction[@id='fallensplit']/relations"><relation faction="otas" relation="-0.32" /></add>
+	<add sel="//factions/faction[@id='freesplit']/relations"><relation faction="otas" relation="0.011" /></add>  
+	<add sel="//factions/faction[@id='split']/relations"><relation faction="otas" relation="0.1" /></add>    
+	<!--Terran-->
+	<add sel="//factions/faction[@id='pioneers']/relations"><relation faction="otas" relation="0.011" /></add> 	
+	<add sel="//factions/faction[@id='terran']/relations"><relation faction="otas" relation="-0.032" /></add>  	
+	<!--Pirate-->
+	<add sel="//factions/faction[@id='loanshark']/relations"><relation faction="otas" relation="-0.032" /></add>
+	<add sel="//factions/faction[@id='scavenger']/relations"><relation faction="otas" relation="0.032" /></add>  
+	<!--Boron-->	
+	<add sel="//factions/faction[@id='boron']/relations"><relation faction="otas" relation="0.032" /></add>
+
+
+	<!--Final Fury Enclave-->
+	<!--Hostiles-->
+	<add sel="//factions/faction[@id='buccaneers']/relations"><relation faction="enclave" relation="-0.032" /></add>  
+	<add sel="//factions/faction[@id='criminal']/relations"><relation faction="enclave" relation="-0.5" /></add>  
+	<add sel="//factions/faction[@id='holyorderfanatic']/relations"><relation faction="enclave" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='khaak']/relations"><relation faction="enclave" relation="-1" /></add> 
+	<add sel="//factions/faction[@id='scaleplate']/relations"><relation faction="enclave" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='smuggler']/relations"><relation faction="enclave" relation="-0.06" /></add>   
+	<add sel="//factions/faction[@id='yaki']/relations"><relation faction="enclave" relation="-0.32" /></add>  
+	<add sel="//factions/faction[@id='xenon']/relations"><relation faction="enclave" relation="-1" /></add>  
+	<!--Base-->
+	<add sel="//factions/faction[@id='alliance']/relations"><relation faction="enclave" relation="0.1" /></add> 
+	<add sel="//factions/faction[@id='antigone']/relations"><relation faction="enclave" relation="0.011" /></add>   
+	<add sel="//factions/faction[@id='argon']/relations"><relation faction="enclave" relation="0.032" /></add>
+	<add sel="//factions/faction[@id='hatikvah']/relations"><relation faction="enclave" relation="0.011" /></add> 
+	<add sel="//factions/faction[@id='holyorder']/relations"><relation faction="enclave" relation="-0.032" /></add> 
+	<add sel="//factions/faction[@id='ministry']/relations"><relation faction="enclave" relation="0.011" /></add> 
+	<add sel="//factions/faction[@id='paranid']/relations"><relation faction="enclave" relation="-0.011" /></add>
+	<add sel="//factions/faction[@id='teladi']/relations"><relation faction="enclave" relation="0.032" /></add>
+	<add sel="//factions/faction[@id='trinity']/relations"><relation faction="enclave" relation="-0.011" /></add>  
+	<!--Split-->
+	<add sel="//factions/faction[@id='court']/relations"><relation faction="enclave" relation="-0.032" /></add> 	
+	<add sel="//factions/faction[@id='fallensplit']/relations"><relation faction="enclave" relation="-0.32" /></add>
+	<add sel="//factions/faction[@id='freesplit']/relations"><relation faction="enclave" relation="-0.032" /></add>  
+	<add sel="//factions/faction[@id='split']/relations"><relation faction="enclave" relation="-0.05" /></add>    
+	<!--Terran-->
+	<add sel="//factions/faction[@id='pioneers']/relations"><relation faction="enclave" relation="0.032" /></add> 	
+	<add sel="//factions/faction[@id='terran']/relations"><relation faction="enclave" relation="-0.011" /></add>  	
+	<!--Pirate-->
+	<add sel="//factions/faction[@id='loanshark']/relations"><relation faction="enclave" relation="-0.011" /></add>
+	<add sel="//factions/faction[@id='scavenger']/relations"><relation faction="enclave" relation="-0.032" /></add>  
+	<!--Boron-->	
+	<add sel="//factions/faction[@id='boron']/relations"><relation faction="enclave" relation="0.032" /></add>     
+
+
+	<!--Faction Licences-->
+	<add sel="/factions/faction[@id='player']/licences">
+		<licence type="generaluseequipment" factions="xaar strongarms atreus aldrin otas" />
+		<licence type="generaluseship" factions="xaar strongarms atreus aldrin otas" />
+		<licence type="station_gen_basic" factions="xaar strongarms atreus aldrin otas" />
+	</add> 
+	<add sel="/factions/faction[@id='freesplit']/licences">
+		<licence type="police" factions="strongarms" />
+	</add>
+	<add sel="/factions/faction[@id='argon']/licences">
+		<licence type="capitalequipment" factions="otas" />
+		<licence type="capitalship" factions="otas" />
+		<licence type="generaluseequipment" factions="otas" />
+		<licence type="generaluseship" factions="otas" />
+		<licence type="militaryequipment" factions="otas" />
+		<licence type="militaryship" factions="otas" />	
+		<licence type="police" factions="otas" />		
+	</add> 
+	<add sel="/factions/faction[@id='split']/licences">
+		<licence type="capitalequipment" factions="strongarms" />
+		<licence type="capitalship" factions="strongarms" />
+		<licence type="generaluseequipment" factions="strongarms" />
+		<licence type="generaluseship" factions="strongarms" />
+		<licence type="militaryequipment" factions="strongarms" />
+		<licence type="militaryship" factions="strongarms" />	
+		<licence type="police" factions="strongarms" />		
+	</add> 
+	<add sel="/factions/faction[@id='boron']/licences">
+		<licence type="capitalequipment" factions="atreus" />
+		<licence type="capitalship" factions="atreus" />
+		<licence type="generaluseequipment" factions="atreus" />
+		<licence type="generaluseship" factions="atreus" />
+		<licence type="militaryequipment" factions="atreus" />
+		<licence type="militaryship" factions="atreus" />	
+		<!--licence type="police" factions="atreus" /-->		
+	</add>   
+</diff>  

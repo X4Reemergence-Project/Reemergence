@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="landmarks_kha_nest_03_macro" class="station">
+    <component ref="landmarks_kha_nest_01" />
+    <properties>
+      <identification name="{20102,5021}" />
+      <build buildstorage="0" />
+      <explosiondamage value="2000" shield="10000" />
+      <hull max="532000" />
+      <ownership claim="1" />
+    </properties>
+    <connections>
+      <connection ref="ConnectionFor_landmarks_kha_hive_arm_01_macro">
+        <macro ref="landmarks_kha_hive_arm_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_landmarks_kha_hive_cluster_01_macro">
+        <macro ref="landmarks_kha_hive_cluster_01_macro" connection="position" />
+      </connection>
+      <connection ref="connection_controlroom01">
+        <macro ref="control_room_macro" connection="connection01" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

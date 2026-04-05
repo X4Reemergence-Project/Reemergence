@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+	<!--Family Kritt-->
+  <add sel="/macros/macro[@name='Cluster_402_macro']/connections/connection[@name='C402S01_Region001_connection']" pos="before">
+    <connection name="Cluster_402_Sector002_connection" ref="sectors"><!--Family Kritt VI-->
+      <offset>
+        <position x="-50000000" y="0" z="-1"/>
+      </offset>
+      <macro ref="Cluster_402_Sector002_macro" connection="cluster"/>
+    </connection>	
+    <connection name="Cluster_402_Sector003_connection" ref="sectors"><!--Family Kritt VIII-->
+      <offset>
+        <position x="50000000" y="0" z="-31045000"/>
+      </offset>
+      <macro ref="Cluster_402_Sector003_macro" connection="cluster"/>
+    </connection>	
+    <connection name="SuperHighway001_Cluster_402_connection" ref="sechighways"><!--1 to 2-->
+      <offset>
+        <position x="0" y="0" z="0"/>
+      </offset>
+      <macro ref="SuperHighway001_Cluster_402_macro" connection="cluster">
+        <connections>
+          <connection ref="entrypoint">
+            <macro ref="tzoneCluster_402_Sector001SHCon1_GateZone_macro" path="../../Cluster_402_Sector001_connection/tzoneCluster_402_Sector001SHCon1_GateZone_connection" connection="exitpoint1"/>
+          </connection>
+          <connection ref="exitpoint">
+            <macro ref="tzoneCluster_402_Sector002SHCon6_GateZone_macro" path="../../Cluster_402_Sector002_connection/tzoneCluster_402_Sector002SHCon6_GateZone_connection" connection="entrypoint1"/>
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+    <connection name="SuperHighway002_Cluster_402_connection" ref="sechighways"><!--2 to 1-->
+      <offset>
+        <position x="0" y="0" z="0"/>
+      </offset>
+      <macro ref="SuperHighway002_Cluster_402_macro" connection="cluster">
+        <connections>
+          <connection ref="exitpoint">
+            <macro ref="tzoneCluster_402_Sector001SHCon2_GateZone_macro" path="../../Cluster_402_Sector001_connection/tzoneCluster_402_Sector001SHCon2_GateZone_connection" connection="entrypoint1"/>
+          </connection>
+          <connection ref="entrypoint">
+            <macro ref="tzoneCluster_402_Sector002SHCon5_GateZone_macro" path="../../Cluster_402_Sector002_connection/tzoneCluster_402_Sector002SHCon5_GateZone_connection" connection="exitpoint1"/>
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+    <connection name="SuperHighway003_Cluster_402_connection" ref="sechighways"><!--1 to 3-->
+      <offset>
+        <position x="0" y="0" z="0"/>
+      </offset>
+      <macro ref="SuperHighway003_Cluster_402_macro" connection="cluster">
+        <connections>
+          <connection ref="entrypoint">
+            <macro ref="tzoneCluster_402_Sector001SHCon3_GateZone_macro" path="../../Cluster_402_Sector001_connection/tzoneCluster_402_Sector001SHCon3_GateZone_connection" connection="exitpoint1"/>
+          </connection>
+          <connection ref="exitpoint">
+            <macro ref="tzoneCluster_402_Sector003SHCon10_GateZone_macro" path="../../Cluster_402_Sector003_connection/tzoneCluster_402_Sector003SHCon10_GateZone_connection" connection="entrypoint1"/>
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+    <connection name="SuperHighway004_Cluster_402_connection" ref="sechighways"><!--3 to 1-->
+      <offset>
+        <position x="0" y="0" z="0"/>
+      </offset>
+      <macro ref="SuperHighway004_Cluster_402_macro" connection="cluster">
+        <connections>
+          <connection ref="exitpoint">
+            <macro ref="tzoneCluster_402_Sector001SHCon4_GateZone_macro" path="../../Cluster_402_Sector001_connection/tzoneCluster_402_Sector001SHCon4_GateZone_connection" connection="entrypoint1"/>
+          </connection>
+          <connection ref="entrypoint">
+            <macro ref="tzoneCluster_402_Sector003SHCon9_GateZone_macro" path="../../Cluster_402_Sector003_connection/tzoneCluster_402_Sector003SHCon9_GateZone_connection" connection="exitpoint1"/>
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+    <connection name="SuperHighway005_Cluster_402_connection" ref="sechighways"><!--2 to 3-->
+      <offset>
+        <position x="0" y="0" z="0"/>
+      </offset>
+      <macro ref="SuperHighway005_Cluster_402_macro" connection="cluster">
+        <connections>
+          <connection ref="entrypoint">
+            <macro ref="tzoneCluster_402_Sector002SHCon7_GateZone_macro" path="../../Cluster_402_Sector002_connection/tzoneCluster_402_Sector002SHCon7_GateZone_connection" connection="exitpoint1"/>
+          </connection>
+          <connection ref="exitpoint">
+            <macro ref="tzoneCluster_402_Sector003SHCon12_GateZone_macro" path="../../Cluster_402_Sector003_connection/tzoneCluster_402_Sector003SHCon12_GateZone_connection" connection="entrypoint1"/>
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+    <connection name="SuperHighway006_Cluster_402_connection" ref="sechighways"><!--3 to 2-->
+      <offset>
+        <position x="0" y="0" z="0"/>
+      </offset>
+      <macro ref="SuperHighway006_Cluster_402_macro" connection="cluster">
+        <connections>
+          <connection ref="exitpoint">
+            <macro ref="tzoneCluster_402_Sector002SHCon8_GateZone_macro" path="../../Cluster_402_Sector002_connection/tzoneCluster_402_Sector002SHCon8_GateZone_connection" connection="entrypoint1"/>
+          </connection>
+          <connection ref="entrypoint">
+            <macro ref="tzoneCluster_402_Sector003SHCon11_GateZone_macro" path="../../Cluster_402_Sector003_connection/tzoneCluster_402_Sector003SHCon11_GateZone_connection" connection="exitpoint1"/>
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+	<connection name="C402S02_RegionRE1_connection" ref="regions">
+	  <offset>
+		<position x="-50000000" y="0" z="0"/>
+	  </offset>
+	  <macro name="C402S02_RegionRE1_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="cluster_402_re1"/>
+		</properties>
+	  </macro>
+	</connection>	
+  </add> 
+
+  
+	<!--Family Tkr-->
+  <add sel="//macro[@name='Cluster_407_macro']/connections">
+	<connection name="C407S01_RegionRE1_connection" ref="regions">
+	  <offset>
+		<position x="-40000" y="-10000" z="135000"/>
+	  </offset>
+	  <macro name="C407S01_RegionRE1_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_methane_highyield_field"/>
+		</properties>
+	  </macro>
+	</connection>
+	<connection name="C407S01_RegionRE2_connection" ref="regions">
+	  <offset>
+		<position x="10000" y="5000" z="160000"/>
+	  </offset>
+	  <macro name="C407S01_RegionRE2_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_methane_field"/>
+		</properties>
+	  </macro>
+	</connection>	
+	<connection name="C407S01_RegionRE3_connection" ref="regions">
+	  <offset>
+		<position x="35000" y="-15000" z="100000"/>
+	  </offset>
+	  <macro name="C407S01_RegionRE3_macro">
+		<component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="helium_rich_field"/>
+		</properties>
+	  </macro>
+	</connection>
+	<connection name="C407S01_RegionRE4_connection" ref="regions">
+	  <offset>
+		<position x="55000" y="15000" z="140000"/>
+	  </offset>
+	  <macro name="C407S01_RegionRE4_macro">
+		<component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_helium_highyield_field"/>
+		</properties>
+	  </macro>
+	</connection>	
+  </add>
+  
+  
+	<!--Thuruk's Demise III/II-->
+  <add sel="//macro[@name='Cluster_408_macro']/connections">
+	<connection name="C408S01_RegionRE1_connection" ref="regions">
+	  <offset>
+		<position x="45000" y="-5000" z="15000"/>
+	  </offset>
+	  <macro name="C408S01_RegionRE1_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_hydrogen_field"/>
+		</properties>
+	  </macro>
+	</connection>
+	<connection name="C408S01_RegionRE2_connection" ref="regions">
+	  <offset>
+		<position x="75000" y="0" z="-10000"/>
+	  </offset>
+	  <macro name="C408S01_RegionRE2_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_hydrogen_field"/>
+		</properties>
+	  </macro>
+	</connection>
+	<connection name="C408S01_RegionRE3_connection" ref="regions">
+	  <offset>
+		<position x="60000" y="5000" z="-12500"/>
+	  </offset>
+	  <macro name="C408S01_RegionRE3_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="p1_40km_hydrogen_field"/>
+		</properties>
+	  </macro>
+	</connection>	
+  </add>
+  
+  
+	<!--Guiding Star VII-->
+  <replace sel="/macros/macro[@name='Cluster_416_macro']/connections/connection[@name='C416S02_Region002_connection']/offset/position/@y">9645406</replace> 
+  
+  
+	<!--Litany of Fury XII-->
+  <add sel="//macro[@name='Cluster_423_macro']/connections">	
+	<connection name="C423S02_RegionRE1_connection" ref="regions">
+	  <offset>
+		<position x="130226256" y="0" z="112144392" />
+	  </offset>
+	  <macro name="C423S02_RegionRE1_macro">
+	  <component connection="cluster" ref="standardregion"/>
+		<properties>
+		  <region ref="cluster_423_re1"/>
+		</properties>
+	  </macro>
+	</connection>
+  </add>	
+</diff>
