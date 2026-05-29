@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <add sel="/highwayconfigurations/configurations">
+    <configuration id="aldrinlocalhighwayconfiguration">
+      <tubeconfiguration ref="aldrin_tube_config"/>
+      <motionblurconfiguration ref="local_hw_motionblur_config"/>
+      <entryandexitgateconfiguration ref="aldrin_hw_entry_exit_gate_config"/>
+      <blockerconfiguration ref="empty_blocker_config"/>
+      <boosterconfiguration ref="local_hw_booster_config"/>
+      <trafficconfiguration ref="local_hw_traffic_config"/>
+      <effectconfiguration ref="local_hw_effect_config"/>
+    </configuration>
+  </add>
+  <add sel="/highwayconfigurations/tubeconfigurations">
+    <tubeconfiguration id="aldrin_tube_config" material="effects.dummy_highway_road" macroname="props_he_local_highway_stream_02_macro" adsignmacroname="adsign_gen_signholder_01_macro">
+      <scaling maxplayerspeedscale="2" maxhighwayspeedscale="4" />
+      <fading fadeinfraction="0.08" fadeoutfraction="0.05" />
+      <edge edgestartfraction="0.9" maxedgedeceleration="0.5" breakoutspeed="0.9" height="50" speedfactor="0.5" />
+      <acceleration base="0.005" decelerationfactor="250" />
+      <aifactor speed="0.05" acceleration="0.25" />
+      <part partname="anim_repeater" speed="5" />
+      <roll lookahead="2" factor="4" />
+      <mesh tiling="15000" tiling_blips="1000" static="0.015" maxsheer="2" sample="250" skip="10" />
+    </tubeconfiguration>
+  </add>
+  <add sel="/highwayconfigurations/entryandexitgateconfigurations">
+    <entryandexitgateconfiguration id="aldrin_hw_entry_exit_gate_config" entrygate="he_gen_localhighway_entrance_01_macro" exitgate="he_gen_localhighway_exit_01_macro"/>
+  </add>
+</diff>

@@ -745,7 +745,7 @@
 		<!--Family Kritt VI (Cluster 402 Sector 002)-->
 		<station id="zya_defence_cluster_402_sector002" race="split" owner="split" type="factory">
 			<quotas>
-				<quota galaxy="2" zone="1" />
+				<quota galaxy="2" />
 			</quotas>
 			<location class="sector" macro="cluster_402_sector002_macro" matchextension="false">
 				<corerange max="0.3" />
@@ -760,7 +760,7 @@
 		<!--Family Kritt VIII (Cluster 402 Sector 003)-->
 		<station id="zya_defence_cluster_402_sector003" race="split" owner="split" type="factory">
 			<quotas>
-				<quota galaxy="2" zone="1" />
+				<quota galaxy="2" />
 			</quotas>
 			<location class="sector" macro="cluster_402_sector003_macro" matchextension="false">
 				<corerange max="0.3" />
@@ -814,7 +814,7 @@
 			</station>
 		</station>
 		<!--Family Tkr (Cluster 407)-->
-		<station id="frf_defence_cluster_407_sector001" race="split" owner="freesplit" type="factory">
+		<station id="frf_defence_cluster_407_sector001_re" race="split" owner="freesplit" type="factory">
 			<quotas>
 				<quota galaxy="2" zone="1" />
 			</quotas>
@@ -1013,7 +1013,7 @@
 			<quotas>
 				<quota galaxy="1" sector="1" zone="1" />
 			</quotas>
-			<location class="sector" macro="cluster_100_sector001_macro" />
+			<location class="sector" macro="cluster_100_sector001_macro" matchextension="false"/>
 				<position x="-30875" y="0.0" z="96825" pitch="0" roll="0" />
 				<station constructionplan="'ter_supportstation'">
 					<loadout>
@@ -1058,7 +1058,7 @@
 			<quotas>
 				<quota galaxy="1" />
 			</quotas>
-			<location class="sector" macro="cluster_107_sector003_macro" />
+			<location class="sector" macro="cluster_107_sector003_macro" matchextension="false"/>
 			<position x="85000" y="0" z="-55000" pitch="0" roll="0" />
 			<station constructionplan="'ganymede_it'">
 				<loadout>
@@ -1086,7 +1086,7 @@
 			<quotas>
 				<quota galaxy="1" />
 			</quotas>
-			<location class="sector" macro="cluster_109_sector002_macro" />
+			<location class="sector" macro="cluster_109_sector002_macro" matchextension="false"/>
 			<position x="55000" y="0" z="-85000" pitch="0" roll="0" />
 			<station constructionplan="'oberon_ias'">
 				<loadout>
@@ -1144,7 +1144,7 @@
 			<quotas>
 				<quota galaxy="1" sector="1" />
 			</quotas>
-			<location class="sector" macro="cluster_602_sector001_macro" />
+			<location class="sector" macro="cluster_602_sector001_macro" matchextension="false"/>
 			<position  x="85000" y="0" z="-10500" roll="0" pitch="0"/>
 			<station>
 				<select faction="boron" tags="[equipmentdock]" />
@@ -3530,7 +3530,7 @@
 		<!--REM75 Umbriel-->
 		<!--REM76 Untainted Eternity-->
 		<!--REM77 Belt of Aguilar-->	
-		<station id="jsdd_hq_01" race="argon" owner="antigone" type="tradingstation" respawnable="true">
+		<station id="aguilar_hq_01" race="argon" owner="antigone" type="tradingstation" respawnable="true">
 			<quotas>
 				<quota galaxy="1" zone="1" />
 			</quotas>
@@ -5805,123 +5805,7 @@
 			<module>
 				<select ware="weaponcomponents" race="paranid"/>
 			</module>
-		</product>
-
-
-		<!--Jonferco-->
-		<product id="jsdd_engineparts" ware="engineparts" owner="antigone" type="factory">
-			<quotas>
-				<quota galaxy="3" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="antigone" relation="self" comparison="exact" matchextension="true"/>
-			<module>
-				<select ware="engineparts" race="argon"/>
-			</module>
-		</product>
-		<product id="jsdd_hullparts" ware="hullparts" owner="antigone" type="factory">
-			<quotas>
-				<quota galaxy="3" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="antigone" relation="self" comparison="exact" matchextension="true"/>
-			<module>
-				<select ware="hullparts" race="argon" faction="argon"/>
-			</module>
-		</product>
-		<product id="jsdd_plasmaconductors" ware="plasmaconductors" owner="antigone" type="factory">
-			<quotas>
-				<quota galaxy="3" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="antigone" relation="self" comparison="exact" matchextension="true"/>
-			<module>
-				<select ware="plasmaconductors" race="argon"/>
-			</module>
-		</product>
-		<product id="jsdd_scanningarrays" ware="scanningarrays" owner="antigone" type="factory">
-			<quotas>
-				<quota galaxy="3" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="antigone" relation="self" comparison="exact" matchextension="true"/>
-			<module>
-				<select ware="scanningarrays" race="argon"/>
-			</module>
-		</product>
-
-
-		<!--Ministry-->
-		<product id="min_shieldcomponents" ware="shieldcomponents" owner="ministry" type="factory">
-			<quotas>
-				<quota galaxy="4" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="ministry" relation="self" comparison="exact" matchextension="true"/>
-			<module>
-				<select ware="shieldcomponents" race="teladi"/>
-			</module>
-		</product>
-		<product id="min_turretcomponents" ware="turretcomponents" owner="ministry" type="factory">
-			<quotas>
-				<quota galaxy="2" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="ministry" relation="self" comparison="exact" matchextension="true"/>
-			<module>
-				<select ware="turretcomponents" race="teladi"/>
-			</module>
-		</product>
-		<product id="min_weaponcomponents" ware="weaponcomponents" owner="ministry" type="factory">
-			<quotas>
-				<quota galaxy="2" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="ministry" relation="self" comparison="exact" matchextension="true"/>
-			<module>
-				<select ware="weaponcomponents" race="teladi"/>
-			</module>
 		</product>		
-		
-		
-		<!--NMMC-->
-		<product id="nmmc_teladianium" ware="teladianium" owner="nmmc" type="factory">
-			<quotas>
-				<quota galaxy="4" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="nmmc" relation="self" comparison="exact" matchextension="false">
-				<region ware="ore" max="100000" />
-			</location>
-			<module>
-				<select ware="teladianium" race="teladi"/>
-			</module>
-		</product>
-		<product id="nmmc_refinedmetals" ware="refinedmetals" owner="nmmc" type="factory">
-			<quotas>
-				<quota galaxy="4" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="nmmc" relation="self" comparison="exact" matchextension="false">
-				<region ware="ore" max="100000" />
-			</location>
-			<module>
-				<select ware="refinedmetals" race="argon"/>
-			</module>
-		</product>	
-		<product id="nmmc_siliconwafers" ware="siliconwafers" owner="nmmc" type="factory">
-			<quotas>
-				<quota galaxy="4" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="nmmc" relation="self" comparison="exact" matchextension="false">
-				<region ware="silicon" max="100000" />
-			</location>
-			<module>
-				<select ware="siliconwafers" race="teladi"/>
-			</module>
-		</product>
-		<product id="nmmc_water" ware="water" owner="nmmc" type="factory">
-			<quotas>
-				<quota galaxy="3" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="nmmc" relation="self" comparison="exact" matchextension="false">
-				<region ware="ice" max="100000" />
-			</location>
-			<module>
-				<select ware="water" race="teladi"/>
-			</module>
-		</product>	
 
 
 		<!--OTAS-->
@@ -6331,179 +6215,8 @@
 			<module>
 				<select ware="spaceweed" race="teladi"/>
 			</module>
-		</product>		
+		</product>
 
-		<!--Economy Stations-->
-		<!--REM52+REM84+REM85 Danna's Chance-->
-		<!--
-		<product id="sca_antimattercells" ware="antimattercells" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="2"/>
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true">
-				<region ware="hydrogen" max="100000" />
-			</location>
-			<module>
-				<select ware="antimattercells" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_claytronics" ware="claytronics" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="10" />
-			</quotas>
-			<location class="sector" macro="cluster_REM85_Sector001_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="claytronics" race="teladi" />
-			</module>
-		</product>
-		<product id="sca_energycells" ware="energycells" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="10" sector="5"/>
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true">
-				<sunlight min="1.0" />
-			</location>
-			<module>
-				<select ware="energycells" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_graphene" ware="graphene" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="4" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true">
-				<region ware="methane" max="100000" />
-			</location>
-			<module>
-				<select ware="graphene" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_hullparts" ware="hullparts" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="16" />
-			</quotas>
-			<location class="sector" macro="cluster_REM85_Sector001_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="hullparts" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_medicalsupplies" ware="medicalsupplies" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="12" sector="4"/>
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="medicalsupplies" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_microchips" ware="microchips" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="6" />
-			</quotas>
-			<location class="sector" macro="cluster_REM85_Sector001_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="microchips" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_nostropoil" ware="nostropoil" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="5" />
-			</quotas>
-			<location class="sector" macro="cluster_REM52_Sector001_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="nostropoil" race="teladi"/>
-			</module>
-		</product>	
-		<product id="sca_quantumtubes" ware="quantumtubes" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="3"/>
-			</quotas>
-			<location class="sector" macro="cluster_REM85_Sector001_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="quantumtubes" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_refinedmetals" ware="refinedmetals" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="6" />
-			</quotas>
-			<location class="sector" macro="cluster_REM85_Sector003_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true">
-				<region ware="ore" max="100000" />
-			</location>
-			<module>
-				<select ware="refinedmetals" race="argon"/>
-			</module>
-		</product>
-		<product id="sca_siliconwafers" ware="siliconwafers" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="5" />
-			</quotas>
-			<location class="sector" macro="cluster_REM85_Sector003_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true">
-				<region ware="silicon" max="100000"/>
-			</location>
-			<module>
-				<select ware="siliconwafers" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_spices" ware="spices" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="5" />
-			</quotas>
-			<location class="sector" macro="cluster_REM84_Sector001_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="spices" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_sunriseflowers" ware="sunriseflowers" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="6" />
-			</quotas>
-			<location class="sector" macro="cluster_REM84_Sector001_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="sunriseflowers" race="teladi"/>
-			</module>
-		</product>	
-		<product id="sca_superfluidcoolant" ware="superfluidcoolant" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="2" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true">
-				<region ware="helium" max="100000" />
-			</location>
-			<module>
-				<select ware="superfluidcoolant" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_swampplant" ware="swampplant" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="4" />
-			</quotas>
-			<location class="sector" macro="cluster_REM84_Sector001_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="swampplant" race="teladi"/>
-			</module>
-		</product>	
-		<product id="sca_water" ware="water" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="3" />
-			</quotas>
-			<location class="galaxy" macro="xu_ep2_universe_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true">
-				<region ware="ice" max="100000" />
-			</location>
-			<module>
-				<select ware="water" race="teladi"/>
-			</module>
-		</product>
-		<product id="sca_wheat" ware="wheat" owner="scaleplate" type="factory">
-			<quotas>
-				<quota galaxy="4" />
-			</quotas>
-			<location class="sector" macro="cluster_REM52_Sector001_macro" faction="[scaleplate, ownerless]" tags="gunnes" matchextension="true"/>
-			<module>
-				<select ware="wheat" race="teladi"/>
-			</module>
-		</product>	
-		-->
 
 		<!--SPLIT-->	
 		<product id="spl_antimattercells_re" ware="antimattercells" owner="split" type="factory">
