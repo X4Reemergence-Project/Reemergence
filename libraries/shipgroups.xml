@@ -1,379 +1,666 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff>
 	<!--VRO-->
-  <remove sel="//groups/group/select[@macro='ship_arg_l_centaur_b_macro']" />
-  <remove sel="//groups/group/select[@macro='ship_xen_xl_u_macro']" />
-  
+	<remove sel="//groups/group/select[@macro='ship_arg_l_centaur_b_macro']" />
+	<remove sel="//groups/group/select[@macro='ship_xen_xl_u_macro']" />
 
-  <add sel="//groups">
-	<group name="otas_builder_xl">
-	  <select macro="ship_otas_xl_vesuvius_temp_macro" weight="100"/>
-	</group>
-	<group name="otas_resupplier_xl">
-	  <select macro="ship_otas_xl_genthus_temp_macro" weight="100"/>
-	</group>
-	<group name="otas_trader_container_l">
-	  <select macro="ship_otas_m_mistral_macro" weight="100"/>
-	  <!--<select macro="ship_otas_l_mistral_temp_macro" weight="100"/>-->  	 <!--188-hf5 removed from the list. OTAS will now field a lot of Mistrals, but no L transports-->	
-	</group>
-	<group name="otas_trader_container_m">
-	  <select macro="ship_otas_m_mistral_macro" weight="100"/>  	 <!--188-hf5 added custom Mistral, removed temp Stalwarts-->
-	</group>
-	<group name="otas_trader_container_s">
-	  <select macro="ship_arg_m_express_macro" weight="25"/>  	 <!--experimental-->
-	  <select macro="ship_otas_s_callisto_stalwart_macro" weight="100"/>
-	  <select macro="ship_otas_s_callisto_stalwart_macro" weight="100"/>	  
-	</group>
-	<group name="otas_miner_solid_l">
-	  <select macro="ship_otas_l_magnetar_mineral_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_liquid_l">
-	  <select macro="ship_otas_l_magnetar_gas_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_solid_m">
-	  <select macro="ship_otas_m_drill_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_liquid_m">
-	  <select macro="ship_otas_m_sunder_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_solid_s">
-	  <select macro="ship_otas_s_courier_miner_stalwart_macro"/>
-	</group>
-	<group name="otas_miner_solid_mixed">
-	  <select macro="ship_otas_l_magnetar_mineral_stalwart_macro" weight="100"/>
-	  <select macro="ship_otas_m_drill_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_miner_liquid_mixed">
-	  <select macro="ship_otas_l_magnetar_gas_stalwart_macro" weight="100"/>
-	  <select macro="ship_otas_m_sunder_stalwart_macro" weight="100"/>
-	</group>
-	<group name="otas_battleship_xl">
-	  <select macro="ship_otas_xl_tempest_macro" weight="100"/>
-	</group>	
-	<group name="otas_carrier_xl">
-	  <select macro="ship_otas_xl_andaman_temp_macro" weight="100"/>
-	</group>
-	<group name="otas_destroyer_l">  	 <!--188-hf5 removed temp Zepyrus-->
-	  <select macro="ship_otas_l_aquilo_macro" weight="20"/>
-	  <select macro="ship_otas_l_boreas_macro" weight="100"/>				
-	</group>		
-	<group name="otas_escort_l">  	 <!--188-hf5 removed temp Zepyrus-->
-	  <select macro="ship_otas_l_astraeus_macro" weight="100"/>
-	  <select macro="ship_otas_l_aquilo_macro" weight="20"/>	  
-	</group>
-	<group name="otas_frigate_m">  	 <!--188-hf5 added custom Zepyrus, removed temp Sirokos-->
-	  <select macro="ship_otas_m_skiron_temp_macro" weight="50"/>	
-	  <select macro="ship_otas_m_zephyrus_macro" weight="100"/>
-	</group>
-	<group name="otas_gunboat_m">  	 <!--188-hf5 added custom Zepyrus, removed temp Sirokos-->
-	  <select macro="ship_otas_m_skiron_temp_macro" weight="100"/>
-	  <select macro="ship_otas_m_zephyrus_macro" weight="50"/>
-	</group>
-	<group name="otas_tugboat_m">
-	  <select macro="ship_gen_m_tugboat_01_a_macro" weight="100"/>
-	</group>		
-	<group name="otas_fighter_s">
-	  <select macro="ship_otas_s_eurus_macro" weight="100"/>			
-	  <select macro="ship_otas_s_notus_macro" weight="25"/>
-	  <select macro="ship_otas_s_venti_temp_macro" weight="40"/>			
-	</group>
-	<group name="otas_fighter_heavy_s">
-	  <select macro="ship_otas_s_auster_temp_macro" weight="20"/>	
-	  <select macro="ship_otas_s_notus_macro" weight="80"/>	
-	  <select macro="ship_otas_s_venti_temp_macro" weight="100"/>				
-	</group>
-	<group name="otas_fighter_light_s">
-	  <select macro="ship_otas_s_eurus_macro" weight="100"/>			
-	  <select macro="ship_otas_s_solano_macro" weight="20"/>	
-	</group>
-	<group name="otas_scout_s">
-	  <select macro="ship_otas_s_solano_macro" weight="100"/>			
-	</group>
-  </add>	
 
- 
-  <!-- ################ -->
-  <!--    ARGON 	-->
-  <!-- ################ --> 
-  <add sel="//groups">		
-	<group name="ant_buster">
-      <select macro="ship_arg_s_buster_macro" weight="100"/>   	  
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="ant_centaur">
-      <select macro="ship_arg_m_centaur_macro" weight="100"/>   	  
-	</group>
-  </add>
-  <add sel="/groups/group[@name='ant_fighter_heavy_s']"> 
-	<select macro="ship_arg_s_buster_macro" weight="10" />  	
-  </add>    
-  <add sel="/groups/group[@name='ant_trader_container_s']"> 
-	<select macro="ship_arg_m_express_macro" weight="50" />  	 <!--experimental-->
-  </add>    
-  <add sel="/groups/group[@name='ant_gunboat_m']"> 
-	<select macro="ship_arg_m_centaur_macro" weight="75" />  	
-  </add>  
-  <add sel="//groups">		
-	<group name="arg_tm">	
-	  <select macro="ship_arg_m_tm_macro" weight="100" /> <!--also used by ANT-->
-	</group>
-  </add>  
-  <add sel="//groups">		
-	<group name="arg_buster">
-      <select macro="ship_arg_s_buster_macro" weight="100"/>   	  
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="arg_centaur">
-      <select macro="ship_arg_m_centaur_macro" weight="100"/>   	  
-	</group>
-  </add> 
-  <add sel="/groups/group[@name='arg_trader_container_s']"> 
-	<select macro="ship_arg_m_express_macro" weight="50" />  	 <!--experimental-->  	
-  </add>  
-  <add sel="/groups/group[@name='arg_fighter_heavy_s']"> 
-	<select macro="ship_arg_s_buster_macro" weight="10" />  	
-  </add>  
-  <add sel="/groups/group[@name='arg_gunboat_m']"> 
-	<select macro="ship_arg_m_centaur_macro" weight="75" />  	
-  </add>
-  <add sel="/groups/group[@name='arg_cyclops_l']">  <!--adds Scylla to VRO Cyclops group-->  
-	<select macro="ship_arg_l_scylla_macro" weight="100" />  	
-  </add>
-  <add sel="/groups/group[@name='ant_cyclops_l']">  <!--adds Scylla to VRO Cyclops group-->  
-	<select macro="ship_arg_l_scylla_macro" weight="100" />  	
-  </add>  
-  
+	<!-- ################ -->
+	<!--    ARGON 	-->
+	<!-- ################ --> 
+	<add sel="//groups">		
+		<group name="ant_centaur">
+			<select macro="ship_arg_m_centaur_macro" weight="100"/>   	  
+		</group>
+	</add>
+	<add sel="/groups/group[@name='ant_gunboat_m']"> 
+		<select macro="ship_arg_m_centaur_macro" weight="75" />  	
+	</add>  
+	<add sel="//groups">		
+		<group name="arg_tm">	
+			<select macro="ship_arg_m_orthrus_macro" weight="100" /> <!--also used by ANT-->
+		</group>
+	</add>  
+	<add sel="//groups">		
+		<group name="arg_centaur">
+			<select macro="ship_arg_m_centaur_macro" weight="100"/>   	  
+		</group>
+	</add> 
+	<add sel="/groups/group[@name='arg_gunboat_m']"> 
+		<select macro="ship_arg_m_centaur_macro" weight="75" />  	
+	</add>
 
-  <!-- ################ -->
-  <!--    PARANID 	-->
-  <!-- ################ -->
-  <add sel="/groups/group[@name='par_destroyer_l']"> 
-	<select macro="ship_par_l_ariadne_macro" weight="20" />		<!--Adds Aridane to Godrealm L-group-->  	
-  </add>   
-  <add sel="//groups">		
-	<group name="par_tm">	
-	  <select macro="ship_par_m_tm_macro" weight="100" /> 
-	</group>
-  </add>
-  <add sel="/groups/group[@name='hol_destroyer_l']"> 
-	<select macro="ship_par_l_ariadne_macro" weight="20" />		<!--Adds Aridane to Holy Order L-group-->  	
-  </add>
-  <add sel="/groups/group[@name='tri_destroyer_l']"> 
-	<select macro="ship_par_l_ariadne_macro" weight="20" />		<!--Adds Aridane to Trinity L-group-->  	
-  </add>    
-  
-  
-  <!-- ################ -->
-  <!--    TELADI 	-->
-  <!-- ################ -->
-  <add sel="//groups">		
-	<group name="tel_tm">	
-	  <select macro="ship_tel_m_tm_macro" weight="100" /> 
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="tel_cassowary">	
-	  <select macro="ship_tel_l_cassowary_macro" weight="100" /> 
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="tel_shrike_e">	
-	  <select macro="ship_tel_l_shrike_e_macro" weight="100" /> 
-	</group>
-  </add>   
-  <add sel="/groups/group[@name='tel_trader_container_l']"> 
-	<select macro="ship_tel_xl_ostrich_macro" weight="2" />  	
-  </add>   
- 
- <replace sel="/groups/group[@name='tel_shrike_l']/select[@macro='ship_tel_l_shrike_a_macro']/@macro">ship_tel_l_cassowary_macro</replace>  <!--VRO Shrike for RE Cassowary-->
-  <add sel="/groups/group[@name='tel_shrike_l']"> 
-    <select macro="ship_tel_l_shrike_e_macro" weight="100"/>
-  </add> 
- 
-  
-  <!-- ################ -->
-  <!--    SPLIT 	-->
-  <!-- ################ -->
-  <replace sel="/groups/group[@name='spl_panther_l']/select[@macro='ship_spl_l_panther_a_macro']/@macro">ship_spl_l_cheetah_macro</replace>  <!--VRO Panther for RE Cheetah -->   
 
-  <add sel="//groups">		
-	<group name="cub_adder">	
-	  <select macro="ship_spl_l_adder_macro" weight="100" /> 
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="faf_adder">	
-	  <select macro="ship_spl_l_adder_macro" weight="100" /> 
-	</group>
-  </add>    
-  <add sel="//groups">		
-	<group name="spl_adder">	
-	  <select macro="ship_spl_l_adder_macro" weight="100" /> 
-	</group>
-  </add>  
-  <add sel="//groups">		
-	<group name="frf_cheetah">	
-	  <select macro="ship_spl_l_cheetah_macro" weight="100" /> 
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="cub_tm">	
-	  <select macro="ship_spl_m_tm_macro" weight="100" /> 
-	</group>
-  </add> 	
-  <add sel="//groups">		
-	<group name="frf_tm">	
-	  <select macro="ship_spl_m_tm_macro" weight="100" /> 
-	</group>
-  </add> 	
-  <add sel="//groups">		
-	<group name="spl_tm">	
-	  <select macro="ship_spl_m_tm_macro" weight="100" /> 
-	</group>
-  </add> 	  
-  <add sel="//groups">		
-	<group name="cub_wolf">
-      <select macro="ship_spl_s_wolf_macro" weight="100"/>   	  
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="frf_wolf">
-      <select macro="ship_spl_s_wolf_macro" weight="100"/>   	  
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="spl_wolf">
-      <select macro="ship_spl_s_wolf_macro" weight="100"/>   	  
-	</group>
-  </add> 
-  <add sel="/groups/group[@name='spl_destroyer_l']"> 
-	<select macro="ship_spl_l_adder_macro" weight="60" />  	
-  </add>     
-  <add sel="/groups/group[@name='spl_fighter_s']"> 
-	<select macro="ship_spl_s_wolf_macro" weight="10" />  	
-  </add>   
-  <add sel="/groups/group[@name='spl_fighter_heavy_s']"> 
-	<select macro="ship_spl_s_wolf_macro" weight="25" />  	
-  </add>
-  <add sel="/groups/group[@name='frf_fighter_s']"> 
-	<select macro="ship_spl_s_wolf_macro" weight="10" />  	
-  </add>     
-  <add sel="/groups/group[@name='frf_fighter_heavy_s']"> 
-	<select macro="ship_spl_s_wolf_macro" weight="25" />  	
-  </add>
-  <add sel="/groups/group[@name='cub_fighter_s']"> 
-	<select macro="ship_spl_s_wolf_macro" weight="10" />  	
-  </add>     
-  <add sel="/groups/group[@name='cub_fighter_heavy_s']"> 
-	<select macro="ship_spl_s_wolf_macro" weight="25" />  	
-  </add>    
+	<!-- ################ -->
+	<!--    PARANID 	-->
+	<!-- ################ -->  
+	<add sel="//groups">		
+		<group name="par_tm">	
+			<select macro="ship_par_m_helianthus_macro" weight="100" /> 
+		</group>
+	</add>  
 
-  
-  <!-- ################ -->
-  <!--    VIGOR 	-->
-  <!-- ################ --> 
-  <add sel="/groups/group[@name='loanshark_pirate_l']"> 
-	<select macro="ship_vig_l_pardal_macro" weight="50" />  
-	<select macro="ship_vig_l_mascarino_macro" weight="75" />  	
-  </add>   
-  
-  
-  <!-- ################ -->
-  <!--    RIPTIDE 	-->
-  <!-- ################ --> 
-  
-  
-  <!-- ################ -->
-  <!--    TERRAN 	-->
-  <!-- ################ --> 
-  <add sel="//groups">		
-	<group name="ter_falchion">
-      <select macro="ship_ter_s_falchion_macro" weight="100"/>   	  
-	</group>
-  </add> 
-  <add sel="//groups">		
-	<group name="pio_pata">
-      <select macro="ship_ter_m_pata_macro" weight="100"/>   	  
-	</group>
-  </add>   
-  <add sel="//groups">		
-	<group name="pio_falchion">
-      <select macro="ship_ter_s_falchion_macro" weight="100"/>   	  
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="pio_kagawa">
-      <select macro="ship_ter_xl_kagawa_macro" weight="100"/>   	  
-	</group>
-  </add>
-  
-  <replace sel="/groups/group[@name='ter_lightcarrier_l']/select[@macro='ship_ter_l_carrier_01_macro']/@macro">ship_ter_l_chiba_e_macro</replace>  <!--VRO Chiba for RE Chiba E-->  
-  
-  <add sel="/groups/group[@name='ter_fighter_heavy_s']"> 
-	<select macro="ship_ter_s_falchion_macro" weight="25" />  	
-  </add>
-  <add sel="/groups/group[@name='ter_fighter_s']"> 
-	<select macro="ship_ter_s_falchion_macro" weight="10" />  	
-  </add>   
-  <add sel="/groups/group[@name='pio_fighter_heavy_s']"> 
-	<select macro="ship_ter_s_falchion_macro" weight="15" />  	
-  </add> 
-  <add sel="/groups/group[@name='pio_fighter_s']"> 
-	<select macro="ship_ter_s_falchion_macro" weight="20" />  	
-  </add>  
-  <add sel="/groups/group[@name='ter_trader_container_l']"> 
-	<select macro="ship_ter_xl_kagawa_macro" weight="2" />  	
-  </add>   
- 
-  <!-- ################ -->
-  <!--    BORON 	-->
-  <!-- ################ -->
-  <add sel="/groups/group[@name='bor_battleship_xl']">  <!--adds Hammerhead to VRO Megalodon group-->  
-	<select macro="ship_bor_xl_hammerhead_macro" weight="200" />  	
-  </add>
-  <add sel="//groups">		
-	<group name="bor_marlin">	
-	  <select macro="ship_bor_l_marlin_macro" weight="100" /> 
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="bor_tm">	
-	  <select macro="ship_bor_m_tm_macro" weight="100" /> 
-	</group>
-  </add>
- 
-  <!-- ################ -->
-  <!--    XENON 	-->
-  <!-- ################ -->
-  <add sel="/groups/group[@name='xen_fighter_m']">
-	<select macro="ship_xen_m_fighter_y_macro" weight="10" />
-	<select macro="ship_xen_m_fighter_d_macro" weight="75" />
-  </add>
-  <add sel="//groups">		
-	<group name="xen_reclaimer">
-	  <select macro="ship_xen_xl_reclaimer_macro" weight="100" />
-	</group>
-  </add>			
-  <add sel="//groups">		
-	<group name="xen_battleship_nxw">
-	  <select macro="ship_xen_xl_carrier_01_a_macro" weight="100" />
-	</group>
-  </add>		
-  <add sel="//groups">		
-	<group name="xen_lx">
-	  <select macro="ship_xen_s_fighter_lx_macro" weight="100" />
-	</group>
-  </add>
-  <add sel="//groups">	
-	<group name="xen_y">
-	  <select macro="ship_xen_m_fighter_y_macro" weight="100" />
-	</group>
-  </add>
-  <add sel="//groups">		
-	<group name="xen_d">
-	  <select macro="ship_xen_m_fighter_d_macro" weight="100" />
-	</group>
-  </add>   
+
+	<!-- ################ -->
+	<!--    TELADI 	-->
+	<!-- ################ -->
+	<add sel="//groups">		
+		<group name="tel_tm">	
+			<select macro="ship_tel_m_jacana_macro" weight="100" /> 
+		</group>
+	</add>
+	<add sel="//groups">		
+		<group name="tel_cassowary">	
+			<select macro="ship_tel_l_cassowary_macro" weight="100" /> 
+		</group>
+	</add>
+	<add sel="//groups">		
+		<group name="tel_shrike_e">	
+			<select macro="ship_tel_l_shrike_e_macro" weight="100" /> 
+		</group>
+	</add>   
+	<add sel="/groups/group[@name='tel_trader_container_l']"> 
+		<select macro="ship_tel_xl_ostrich_macro" weight="2" />  	
+	</add>   
+
+
+	<!-- ################ -->
+	<!--     SPLIT 	-->
+	<!-- ################ -->
+	<add sel="//groups">		
+		<group name="cub_adder">	
+			<select macro="ship_spl_l_adder_macro" weight="100" /> 
+		</group>
+	</add>
+	<add sel="//groups">		
+		<group name="faf_adder">	
+			<select macro="ship_spl_l_adder_macro" weight="100" /> 
+		</group>
+	</add>    
+	<add sel="//groups">		
+		<group name="spl_adder">	
+			<select macro="ship_spl_l_adder_macro" weight="100" /> 
+		</group>
+	</add>  
+	<add sel="//groups">		
+		<group name="frf_cheetah">	
+			<select macro="ship_spl_l_cheetah_macro" weight="100" /> 
+		</group>
+	</add>
+	<add sel="//groups">		
+		<group name="cub_tm">	
+			<select macro="ship_spl_m_iguana_macro" weight="100" /> 
+		</group>
+	</add> 	
+	<add sel="//groups">		
+		<group name="frf_tm">	
+			<select macro="ship_spl_m_iguana_macro" weight="100" /> 
+		</group>
+	</add> 	
+	<add sel="//groups">		
+		<group name="spl_tm">	
+			<select macro="ship_spl_m_iguana_macro" weight="100" /> 
+		</group>
+	</add>   
+
+
+	<!-- ################ -->
+	<!--    VIGOR 	-->
+	<!-- ################ --> 
+	<add sel="/groups/group[@name='loanshark_pirate_l']"> 
+		<select macro="ship_vig_l_pardal_macro" weight="50" />  
+		<select macro="ship_vig_l_mascarino_macro" weight="75" />  	
+	</add>   
+
+
+	<!-- ################ -->
+	<!--    RIPTIDE 	-->
+	<!-- ################ --> 
+
+
+	<!-- ################ -->
+	<!--    TERRAN 	-->
+	<!-- ################ --> 
+	<add sel="//groups">		
+		<group name="pio_pata">
+			<select macro="ship_ter_m_pata_macro" weight="100"/>   	  
+		</group>
+	</add>   
+	<add sel="//groups">		
+		<group name="pio_kagawa">
+			<select macro="ship_ter_xl_kagawa_macro" weight="100"/>   	  
+		</group>
+	</add> 
+	<add sel="/groups/group[@name='ter_trader_container_l']"> 
+		<select macro="ship_ter_xl_kagawa_macro" weight="2" />  	
+	</add>   
+
+
+	<!-- ################ -->
+	<!--    BORON 	-->
+	<!-- ################ -->
+	<add sel="//groups">		
+		<group name="bor_tm">	
+			<select macro="ship_bor_m_pleco_macro" weight="100" /> 
+		</group>
+	</add>
+
+
+	<!-- ################ -->
+	<!--    XENON 	-->
+	<!-- ################ -->
+	<add sel="/groups/group[@name='xen_fighter_m']">
+		<select macro="ship_xen_m_fighter_y_macro" weight="10" />
+		<select macro="ship_xen_m_fighter_d_macro" weight="75" />
+	</add>
+	<add sel="//groups">		
+		<group name="xen_reclaimer">
+			<select macro="ship_xen_xl_reclaimer_macro" weight="100" />
+		</group>
+	</add>			
+	<add sel="//groups">		
+		<group name="xen_battleship_nxw">
+			<select macro="ship_xen_xl_carrier_01_a_macro" weight="100" />
+		</group>
+	</add>		
+	<add sel="//groups">		
+		<group name="xen_lx">
+			<select macro="ship_xen_s_fighter_lx_macro" weight="100" />
+		</group>
+	</add>
+	<add sel="//groups">	
+		<group name="xen_y">
+			<select macro="ship_xen_m_fighter_y_macro" weight="100" />
+		</group>
+	</add>
+	<add sel="//groups">		
+		<group name="xen_d">
+			<select macro="ship_xen_m_fighter_d_macro" weight="100" />
+		</group>
+	</add>
+
+
+	<!-- ################ -->
+	<!--    ALDRIN 	-->
+	<!-- ################ -->
+	<add sel="//groups">		
+		<group name="ald_builder_xl">
+			<select macro="ship_ter_xl_builder_01_a_macro" weight="100"/><!--Stand-in for Ceres-->
+		</group>
+		<group name="ald_resupplier_xl">
+			<select macro="ship_ter_xl_resupplier_01_a_macro" weight="100"/><!--Stand-in for Vesta-->
+		</group>   	
+		<group name="ald_trader_container_l">
+			<select macro="ship_ald_l_fortuna_macro" weight="100"/>
+		</group>
+		<group name="ald_trader_container_m">
+			<select macro="ship_ter_m_trans_container_01_a_macro" weight="100"/><!--Stand-in for Pallas-->
+		</group>
+		<group name="ald_trader_container_s">
+			<select macro="ship_ter_s_trans_container_01_a_macro" weight="100"/><!--Borrowed Tech: Frog-->
+		</group>
+		<group name="ald_miner_solid_l">
+			<select macro="ship_ald_l_themis_solid_macro" weight="100"/>
+		</group>
+		<group name="ald_miner_liquid_l">
+			<select macro="ship_ald_l_themis_liquid_macro" weight="100"/>
+		</group>
+		<group name="ald_miner_solid_m">
+			<select macro="ship_ter_m_miner_solid_01_a_macro" weight="100"/><!--Stand-in for Pallas-->
+		</group>
+		<group name="ald_miner_liquid_m">
+			<select macro="ship_ter_m_miner_liquid_01_a_macro" weight="100"/><!--Stand-in for Pallas-->
+		</group>
+		<group name="ald_miner_solid_mixed">
+			<select macro="ship_ald_l_themis_solid_macro" weight="30"/>
+			<select macro="ship_ter_m_miner_solid_01_a_macro" weight="70"/><!--Stand-in for Pallas-->
+		</group>
+		<group name="ald_miner_liquid_mixed">
+			<select macro="ship_ald_l_themis_liquid_macro" weight="30"/>
+			<select macro="ship_ter_m_miner_liquid_01_a_macro" weight="70"/><!--Stand-in for Pallas-->
+		</group>
+		<group name="ald_miner_solid_s">
+			<select macro="ship_ter_s_miner_solid_01_a_macro" weight="100"/><!--Borrowed Tech: Kopis-->
+		</group>
+		<group name="ald_tugboat_m">
+			<select macro="ship_ter_m_pata_macro" weight="100"/><!--Borrowed Tech: Pata-->
+		</group>			
+		<!--Military-->
+		<group name="ald_battleship_xl">
+			<select macro="ship_ld_xl_castalia_macro" weight="100"/>
+		</group>
+		<group name="ald_cruiser_l">
+			<select macro="ship_ald_l_aletheia_macro" weight="100"/>
+		</group>
+		<group name="ald_destroyer_l">
+			<select macro="ship_ald_l_nysa_macro" weight="100"/>
+		</group>
+		<group name="ald_corvette_m">
+			<select macro="ship_ald_m_springblossom_macro" weight="100"/>
+		</group>
+		<group name="ald_fighter_s">
+			<select macro="ship_ald_s_spitfyre_macro" weight="100"/>
+		</group>
+		<group name="ald_scout_s">
+			<select macro="ship_ald_s_spitfyre_macro" weight="100"/>
+		</group>
+	</add>	
+
+
+	<!-- ################ -->
+	<!--    ATREUS 	-->
+	<!-- ################ -->
+	<add sel="//groups">
+		<group name="asc_builder_xl">
+			<select macro="ship_bor_xl_builder_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_resupplier_xl">
+			<select macro="ship_bor_xl_resupplier_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_trader_container_l">
+			<select macro="ship_bor_l_trans_container_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_trader_container_m">
+			<select macro="ship_bor_m_trans_container_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_trader_container_s">
+			<select macro="ship_bor_s_trans_container_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_miner_solid_l">
+			<select macro="ship_bor_l_miner_solid_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_miner_liquid_l">
+			<select macro="ship_bor_l_miner_liquid_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_miner_solid_m">
+			<select macro="ship_bor_m_miner_solid_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_miner_liquid_m">
+			<select macro="ship_bor_m_miner_liquid_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_miner_solid_s">
+			<select macro="ship_bor_s_miner_solid_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_miner_solid_mixed">
+			<select macro="ship_bor_l_miner_solid_01_a_macro" weight="100"/>
+			<select macro="ship_bor_m_miner_solid_01_a_macro" weight="100"/>
+			<select macro="ship_bor_s_miner_solid_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_miner_liquid_mixed">
+			<select macro="ship_bor_l_miner_liquid_01_a_macro" weight="100"/>
+			<select macro="ship_bor_m_miner_liquid_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_tugboat_m">
+			<select macro="ship_gen_m_tugboat_01_a_macro" weight="100"/>
+		</group>			
+		<!--Military-->
+		<group name="asc_battleship_xl">
+			<select macro="ship_asc_xl_hammerhead_macro" weight="100"/>
+		</group>
+		<group name="asc_carrier_l">
+			<select macro="ship_bor_l_carrier_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_frigate_l">
+			<select macro="ship_asc_l_marlin_macro" weight="100"/>
+		</group>		
+		<group name="asc_frigate_mixed_l">
+			<select macro="ship_asc_l_kraken_macro" weight="20"/>
+			<select macro="ship_asc_l_marlin_macro" weight="80"/>			
+		</group>		
+		<group name="asc_strike_l">
+			<select macro="ship_asc_l_kraken_macro" weight="100"/>
+		</group>
+		<group name="asc_angel_m">
+			<select macro="ship_asc_m_angel_macro" weight="100"/>
+		</group>
+		<group name="asc_carrer_m">	
+			<select macro="ship_bor_m_pleco_macro" weight="100" /> 
+		</group>		
+		<group name="asc_gunboat_m">
+			<select macro="ship_bor_m_gunboat_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_bomber">
+			<select macro="ship_asc_s_candiru_macro" weight="100"/>
+		</group>		
+		<group name="asc_fighter_s">
+			<select macro="ship_asc_s_candiru_macro" weight="20"/>		
+			<select macro="ship_bor_s_heavyfighter_01_a_macro" weight="80"/>
+			<select macro="ship_bor_s_fighter_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_fighter_heavy_s">	
+			<select macro="ship_bor_s_heavyfighter_01_a_macro" weight="100"/>			
+		</group>
+		<group name="asc_fighter_light_s">
+			<select macro="ship_bor_s_fighter_01_a_macro" weight="100"/>
+		</group>
+		<group name="asc_scout_s">
+			<select macro="ship_bor_s_scout_01_a_macro" weight="90"/>
+			<select macro="ship_bor_s_scout_02_a_macro" weight="10"/>
+		</group>
+	</add>		
+	
+
+	<!-- ################ -->
+	<!--    ENCLAVE -->
+	<!-- ################ -->
+	<add sel="//groups">
+		<group name="enc_builder_xl">
+			<select macro="ship_arg_xl_builder_01_b_macro" weight="100"/>
+		</group>
+		<group name="enc_resupplier_xl">
+			<select macro="ship_arg_xl_resupplier_01_b_macro" weight="100"/>
+		</group>
+		<group name="enc_trader_container_l">
+			<select macro="ship_arg_l_trans_container_02_b_macro" weight="100"/>
+			<select macro="ship_arg_l_trans_container_03_b_macro" weight="100"/>
+		</group>		
+		<group name="enc_trader_container_m">
+			<select macro="ship_arg_m_trans_container_01_b_macro" weight="100"/>
+			<select macro="ship_arg_m_trans_container_02_b_macro" weight="100"/>			
+		</group>
+		<group name="enc_trader_container_s">
+			<select macro="ship_arg_s_trans_container_02_b_macro" weight="100"/>	  
+		</group>
+		<group name="enc_miner_solid_l">
+			<select macro="ship_arg_l_miner_solid_01_b_macro" weight="100"/>
+		</group>
+		<group name="enc_miner_liquid_l">
+			<select macro="ship_arg_l_miner_liquid_01_b_macro" weight="100"/>
+		</group>
+		<group name="enc_miner_solid_m">
+			<select macro="ship_arg_m_miner_solid_01_b_macro" weight="100"/>
+		</group>
+		<group name="enc_miner_liquid_m">
+			<select macro="ship_arg_m_miner_liquid_01_b_macro" weight="100"/>
+		</group>
+		<group name="enc_miner_solid_s">
+			<select macro="ship_arg_s_miner_solid_01_a_macro"/>
+		</group>
+		<group name="enc_miner_solid_mixed">
+			<select macro="ship_arg_l_miner_solid_01_b_macro" weight="100"/>
+			<select macro="ship_arg_m_miner_solid_01_b_macro" weight="100"/>
+		</group>
+		<group name="enc_miner_liquid_mixed">
+			<select macro="ship_arg_l_miner_liquid_01_b_macro" weight="100"/>
+			<select macro="ship_arg_m_miner_liquid_01_b_macro" weight="100"/>
+		</group>
+		<group name="enc_tugboat_m">
+			<select macro="ship_gen_m_tugboat_01_a_macro" weight="100"/>
+		</group>			
+		<!--Military-->
+		<group name="enc_battlecarrier_xl">
+			<select macro="ship_enc_xl_daedalus_macro" weight="100"/>
+		</group>
+		<group name="enc_destroyer_l">
+			<select macro="ship_enc_l_erebus_macro" weight="100"/>
+		</group>
+		<group name="enc_frigate_l">
+			<select macro="ship_arg_l_nyx_macro" weight="100"/>
+		</group>
+		<group name="enc_carrier_m">
+			<select macro="ship_arg_m_orthrus_macro" weight="100"/><!--Stand-in for Perdix-->
+		</group>  
+		<group name="enc_gunboat_m">
+			<select macro="ship_arg_m_bomber_01_b_macro" weight="100"/><!--Stand-in for Talos-->
+		</group>
+		<group name="enc_bomber_s">
+			<select macro="ship_arg_s_buster_macro" weight="100"/>
+		</group>  
+		<group name="enc_fighter_s">
+			<select macro="ship_arg_s_buster_macro" weight="100"/>		
+			<select macro="ship_arg_s_heavyfighter_02_a_macro" weight="90"/>
+		</group>
+		<group name="enc_fighter_heavy_s">			
+			<select macro="ship_arg_s_heavyfighter_02_a_macro" weight="100"/><!--Stand-in for Icarus-->
+		</group>
+		<group name="enc_scout_s">
+			<select macro="ship_arg_s_scout_01_b_macro" weight="100"/>
+		</group>
+	</add>	   	
+	
+	
+	<!-- ################ -->
+	<!--    OTAS 	-->
+	<!-- ################ -->   
+	<add sel="//groups">
+		<group name="otas_builder_xl">
+			<select macro="ship_arg_xl_builder_01_b_macro" weight="100"/>
+		</group>
+		<group name="otas_resupplier_xl">
+			<select macro="ship_arg_xl_resupplier_01_b_macro" weight="100"/>
+		</group>
+		<group name="otas_trader_container_m">
+			<select macro="ship_otas_m_mistral_macro" weight="100"/>
+		</group>
+		<group name="otas_trader_container_s">
+			<select macro="ship_arg_s_trans_container_01_b_macro" weight="100"/>
+			<select macro="ship_arg_s_trans_container_02_b_macro" weight="100"/>	  
+		</group>
+		<group name="otas_miner_solid_l">
+			<select macro="ship_arg_l_miner_solid_01_b_macro" weight="100"/>
+		</group>
+		<group name="otas_miner_liquid_l">
+			<select macro="ship_arg_l_miner_liquid_01_b_macro" weight="100"/>
+		</group>
+		<group name="otas_miner_solid_m">
+			<select macro="ship_arg_m_miner_solid_01_b_macro" weight="100"/>
+		</group>
+		<group name="otas_miner_liquid_m">
+			<select macro="ship_arg_m_miner_liquid_01_b_macro" weight="100"/>
+		</group>
+		<group name="otas_miner_solid_s">
+			<select macro="ship_arg_s_miner_solid_01_a_macro"/>
+		</group>
+		<group name="otas_miner_solid_mixed">
+			<select macro="ship_arg_l_miner_solid_01_b_macro" weight="100"/>
+			<select macro="ship_arg_m_miner_solid_01_b_macro" weight="100"/>
+		</group>
+		<group name="otas_miner_liquid_mixed">
+			<select macro="ship_arg_l_miner_liquid_01_b_macro" weight="100"/>
+			<select macro="ship_arg_m_miner_liquid_01_b_macro" weight="100"/>
+		</group>
+		<group name="otas_tugboat_m">
+			<select macro="ship_gen_m_tugboat_01_a_macro" weight="100"/>
+		</group>			
+		<!--Military-->
+		<group name="otas_battleship_xl">
+			<select macro="ship_otas_xl_tempest_macro" weight="100"/>
+		</group>	
+		<group name="otas_carrier_xl">
+			<select macro="ship_arg_xl_carrier_02_a_macro" weight="100"/>
+		</group>
+		<group name="otas_cruiser_l">
+			<select macro="ship_otas_l_boreas_macro" weight="100"/>				
+		</group>
+		<group name="otas_frigate_l">
+			<select macro="ship_otas_l_astraeus_macro" weight="100"/>  
+		</group>
+		<group name="otas_frigate_mixed_l">
+			<select macro="ship_otas_l_astraeus_macro" weight="100"/>
+			<select macro="ship_otas_l_aquilo_macro" weight="20"/>	  
+		</group>
+		<group name="otas_strike_l">
+			<select macro="ship_otas_l_aquilo_macro" weight="100"/>	  
+		</group>		
+		<group name="otas_carrier_m">	
+			<select macro="ship_otas_m_zephyrus_macro" weight="100" /> 
+		</group>		
+		<group name="otas_gunboat_m">
+			<select macro="ship_otas_m_skiron_temp_macro" weight="100"/><!--Temp Model-->
+		</group>
+		<group name="otas_bomber">
+			<select macro="ship_otas_s_notus_macro" weight="100"/>
+		</group>		
+		<group name="otas_fighter_s">
+			<select macro="ship_otas_s_eurus_macro" weight="100"/>			
+			<select macro="ship_otas_s_notus_macro" weight="20"/>
+			<select macro="ship_otas_s_venti_macro" weight="80"/>			
+		</group>
+		<group name="otas_fighter_heavy_s">		
+			<select macro="ship_otas_s_venti_macro" weight="100"/>				
+		</group>
+		<group name="otas_fighter_light_s">
+			<select macro="ship_otas_s_eurus_macro" weight="100"/>			
+			<select macro="ship_otas_s_solano_macro" weight="20"/>	
+		</group>
+		<group name="otas_scout_s">
+			<select macro="ship_otas_s_solano_macro" weight="100"/>			
+		</group>
+	</add>
+
+
+	<!-- ################ -->
+	<!--    STRONGARMS 	-->
+	<!-- ################ -->
+	<add sel="//groups">
+		<group name="str_builder_xl">
+			<select macro="ship_spl_xl_builder_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_resupplier_xl">
+			<select macro="ship_spl_xl_resupplier_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_trader_container_l">
+			<select macro="ship_spl_l_trans_container_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_trader_container_m">
+			<select macro="ship_spl_m_trans_container_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_trader_container_s">
+			<select macro="ship_spl_s_trans_container_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_miner_solid_l">
+			<select macro="ship_spl_l_miner_solid_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_miner_liquid_l">
+			<select macro="ship_spl_l_miner_liquid_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_miner_solid_m">
+			<select macro="ship_spl_m_miner_solid_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_miner_liquid_m">
+			<select macro="ship_spl_m_miner_liquid_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_miner_solid_mixed">
+			<select macro="ship_spl_l_miner_solid_01_a_macro" weight="30"/>
+			<select macro="ship_spl_m_miner_solid_01_a_macro" weight="70"/>
+		</group>
+		<group name="str_miner_liquid_mixed">
+			<select macro="ship_spl_l_miner_liquid_01_a_macro" weight="30"/>
+			<select macro="ship_spl_m_miner_liquid_01_a_macro" weight="70"/>
+		</group>
+		<group name="str_miner_solid_s">
+			<select macro="ship_spl_s_miner_solid_01_a_macro" weight="100"/>
+		</group>
+		<group name="str_tugboat_m">
+			<select macro="ship_gen_m_tugboat_01_a_macro" weight="100"/>
+		</group>		
+		<!--Military-->
+		<group name="str_battleship_xl">
+			<select macro="ship_str_xl_tiger_macro" weight="100"/>
+		</group>
+		<group name="str_carrier_l">
+			<select macro="ship_str_l_cheetah_macro" weight="100"/>  
+		</group>		
+		<group name="str_frigate_l">
+			<select macro="ship_str_l_serval_macro" weight="100"/>  
+		</group>
+		<group name="str_frigate_mixed_l">
+			<select macro="ship_str_l_caracal_macro" weight="20"/>
+			<select macro="ship_str_l_serval_macro" weight="100"/>
+		</group>
+		<group name="str_strike_l">
+			<select macro="ship_str_l_caracal_macro" weight="100"/>	  
+		</group>
+		<group name="str_carrer_m">	
+			<select macro="ship_spl_m_iguana_macro" weight="100" /> 
+		</group>		
+		<group name="str_corvette_m">
+			<select macro="ship_spl_m_corvette_01_a_macro" weight="100"/><!--Stand-in for Ocelot-->
+		</group>
+		<group name="str_bomber">
+			<select macro="ship_spl_s_wolf_macro" weight="100"/>
+		</group>
+		<group name="str_fighter_s">
+			<select macro="ship_spl_s_fighter_02_b_macro" weight="90"/>
+			<select macro="ship_spl_s_wolf_macro" weight="10"/>			
+		</group>		
+		<group name="str_fighter_light_s">
+			<select macro="ship_spl_s_fighter_02_b_macro" weight="100"/>
+		</group>
+		<group name="str_scout_s">
+			<select macro="ship_spl_s_scout_01_b_macro" weight="100"/>
+		</group>	
+	</add>	 
+
+
+	<!-- ################ -->
+	<!--    XAAR 	-->
+	<!-- ################ -->
+	<add sel="//groups">
+		<group name="xaar_builder_xl">
+			<select macro="ship_par_xl_builder_01_b_macro" weight="100"/>
+		</group>
+		<group name="xaar_resupplier_xl">
+			<select macro="ship_par_xl_resupplier_02_a_macro" weight="100"/>
+		</group>
+		<group name="xaar_trader_container_l">
+			<select macro="ship_par_l_trans_container_03_a_macro" weight="100"/>
+		</group>
+		<group name="xaar_trader_container_m">
+			<select macro="ship_par_m_trans_container_01_b_macro" weight="100"/>
+			<select macro="ship_par_m_trans_container_02_b_macro" weight="100"/>
+		</group>
+		<group name="xaar_trader_container_s">
+			<select macro="ship_par_s_trans_container_01_b_macro" weight="100"/>
+		</group>
+		<group name="xaar_miner_solid_l">
+			<select macro="ship_par_l_miner_solid_02_a_macro" weight="100"/>
+		</group>
+		<group name="xaar_miner_liquid_l">
+			<select macro="ship_par_l_miner_liquid_02_a_macro" weight="100"/>
+		</group>
+		<group name="xaar_miner_solid_m">
+			<select macro="ship_par_m_miner_solid_01_b_macro" weight="100"/>
+		</group>
+		<group name="xaar_miner_liquid_m">
+			<select macro="ship_par_m_miner_liquid_01_b_macro" weight="100"/>
+		</group>
+		<group name="xaar_miner_solid_s">
+			<select macro="ship_par_s_miner_solid_01_a_macro" weight="100"/>
+		</group>
+		<group name="xaar_miner_solid_mixed">
+			<select macro="ship_par_l_miner_solid_02_a_macro" weight="30"/>
+			<select macro="ship_par_m_miner_solid_01_b_macro" weight="70"/>
+		</group>
+		<group name="xaar_miner_liquid_mixed">
+			<select macro="ship_par_l_miner_liquid_02_a_macro" weight="30"/>
+			<select macro="ship_par_m_miner_liquid_01_b_macro" weight="70"/>
+		</group>
+		<!--Military-->
+		<group name="xaar_battleship_xl">
+			<select macro="ship_xaar_xl_chronos_macro" weight="100"/>
+		</group>		
+		<group name="xaar_frigate_l">
+			<select macro="ship_xaar_l_artemis_macro" weight="100"/>  
+		</group>
+		<group name="xaar_frigate_mixed_l">
+			<select macro="ship_xaar_l_artemis_macro" weight="100"/>
+			<select macro="ship_xaar_l_apollo_macro" weight="20"/>
+		</group>
+		<group name="xaar_strike_l">
+			<select macro="ship_xaar_l_apollo_macro" weight="100"/>	  
+		</group>
+		<group name="xaar_carrer_m">	
+			<select macro="ship_par_m_helianthus_macro" weight="100" /> 
+		</group>		
+		<group name="xaar_corvette_m">
+			<select macro="ship_par_m_corvette_01_b_macro" weight="100"/><!--Stand-in for Hades & Poseidon-->
+		</group>
+		<group name="xaar_fighter_light_s">
+			<select macro="ship_par_s_fighter_02_b_macro" weight="100"/>
+		</group>
+		<group name="xaar_scout_s">
+			<select macro="ship_par_s_scout_01_b_macro" weight="100"/>
+		</group>		
+	</add>	  	
 </diff>
