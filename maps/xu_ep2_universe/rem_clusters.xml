@@ -2857,7 +2857,54 @@
 						<region ref="rem55_field2" />
 					</properties>
 				</macro>
-			</connection>					
+			</connection>
+			<connection name="Cluster_REM55_Sector002_connection" ref="sectors">
+				<offset>
+					<position x="0" y="0" z="37855015" />
+				</offset>
+				<macro ref="Cluster_REM55_Sector002_macro" connection="cluster" />
+			</connection>
+			<connection name="REM55_Sector002_AudioRegion01_connection" ref="regions">
+				<offset>
+					<position x="0" y="0" z="0" />
+				</offset>
+				<macro name="REM55_Sector002_AudioRegion01_macro">
+					<component connection="cluster" ref="standardregion" />
+					<properties>
+						<region ref="audioregion_re" />
+					</properties>
+				</macro>
+			</connection>				
+			<connection name="SuperHighway001_Cluster_REM55_connection" ref="sechighways">
+				<offset>
+					<position x="39315.52734375" y="0" z="18927508" />
+				</offset>
+				<macro ref="SuperHighway001_Cluster_REM55_macro" connection="cluster">
+					<connections>
+						<connection ref="entrypoint">
+							<macro ref="tzoneCluster_REM55_Sector001SHCon6_GateZone_macro" path="../../Cluster_REM55_Sector001_connection/tzoneCluster_REM55_Sector001SHCon6_GateZone_connection" connection="exitpoint1" />
+						</connection>
+						<connection ref="exitpoint">
+							<macro ref="tzoneCluster_REM55_Sector002SHCon5_GateZone_macro" path="../../Cluster_REM55_Sector002_connection/tzoneCluster_REM55_Sector002SHCon5_GateZone_connection" connection="entrypoint1" />
+						</connection>
+					</connections>
+				</macro>
+			</connection>
+			<connection name="SuperHighway002_Cluster_REM55_connection" ref="sechighways">
+				<offset>
+					<position x="49201.66796875" y="0" z="18927508" />
+				</offset>
+				<macro ref="SuperHighway002_Cluster_REM55_macro" connection="cluster">
+					<connections>
+						<connection ref="exitpoint">
+							<macro ref="tzoneCluster_REM55_Sector001SHCon10_GateZone_macro" path="../../Cluster_REM55_Sector001_connection/tzoneCluster_REM55_Sector001SHCon10_GateZone_connection" connection="entrypoint1" />
+						</connection>
+						<connection ref="entrypoint">
+							<macro ref="tzoneCluster_REM55_Sector002SHCon9_GateZone_macro" path="../../Cluster_REM55_Sector002_connection/tzoneCluster_REM55_Sector002SHCon9_GateZone_connection" connection="exitpoint1" />
+						</connection>
+					</connections>
+				</macro>
+			</connection>			
 		</connections>
 	</macro>	
 	<!--CLUSTER REM56 - ALADNA HILL-->

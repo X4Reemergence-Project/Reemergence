@@ -2582,7 +2582,7 @@
 			<quotas>
 				<quota galaxy="1" />
 			</quotas>
-			<location class="sector" macro="cluster_REM55_sector001_macro" />
+			<location class="sector" macro="cluster_REM55_sector002_macro" />
 			<position x="45000" y="0" z="25775" pitch="0" roll="0" />
 			<station>
 				<select faction="argon" tags="[tradestation]"/>
@@ -2591,6 +2591,15 @@
 				</loadout>
 			</station>
 		</station>
+		<station id="otas_defence_cluster_REM55_sector002" race="argon" owner="otas" type="factory">
+			<quotas>
+				<quota galaxy="2" />
+			</quotas>
+			<location class="sector" macro="cluster_REM55_sector002_macro" />
+			<station>
+				<select faction="argon" tags="[defence]" />
+			</station>
+		</station>		
 		<!--REM56 Aladna Hill-->
 		<station id="otas_defence_cluster_REM56_sector001" race="argon" owner="otas" type="factory">
 			<quotas>
@@ -3529,6 +3538,15 @@
 		<!--REM71f Unknown Sector (F)-->
 		<!--REM72 Kha'ak Hive-->
 		<!--REM73 Shadow's End-->
+		<station id="otas_defence_cluster_REM73_sector001" race="argon" owner="otas" type="factory">
+			<quotas>
+				<quota galaxy="2" />
+			</quotas>
+			<location class="sector" macro="cluster_REM73_sector001_macro" />
+			<station>
+				<select faction="argon" tags="[defence]" />
+			</station>
+		</station>		
 		<!--REM74 Tebathimanckatt's Legacy-->
 		<!--REM75 Umbriel-->
 		<station id="atf_mfs" race="terran" owner="terran" type="factory" respawnable="true">
@@ -6100,6 +6118,16 @@
 				<select ware="wheat" race="argon"/>
 			</module>
 		</product>
+		<!--REM73 Shadow's End-->
+		<product id="otas_stimulants" ware="stimulants" owner="otas" type="factory">
+			<quotas>
+				<quota galaxy="5" />
+			</quotas>
+			<location class="sector" macro="Cluster_REM73_sector001_macro" faction="[ownerless]" />
+			<module>
+				<select ware="stimulants" race="otas"/>
+			</module>
+		</product>			
 
 
 		<!--PARANID-->
