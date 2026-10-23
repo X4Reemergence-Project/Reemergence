@@ -6,7 +6,7 @@
 		</method>
 		<method id="yaki" name="{20203,2801}">
 			<default race="yaki" />
-		</method>	
+		</method>
 	</add>
 	<add sel="/wares/ware[@id='workunit_busy']">
 		<production time="600" amount="200" method="scaleplate" name="{20203,1001}">
@@ -20,7 +20,7 @@
 				<ware ware="majadust" amount="15" />
 				<ware ware="stimulants" amount="27" />
 			</primary>
-		</production>	
+		</production>
 	</add>
 	<add sel="/wares/ware[@id='workunit_idle']">
 		<production time="600" amount="200" method="scaleplate" name="{20203,1001}">
@@ -34,8 +34,8 @@
 				<ware ware="majadust" amount="10" />
 				<ware ware="stimulants" amount="18" />
 			</primary>
-		</production>	
-	</add>  
+		</production>
+	</add>
 <!--
 	<add sel="/wares/ware[@id='']">
 		<owner faction=""/>
@@ -43,6 +43,277 @@
 -->
 	<add sel="//wares">
 		<!--ENGINES-->
+		<!--M-->
+		<ware id="engine_otas_m_allround_01_mk1" name="{19530002,602}" description="{19530002,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="11767" average="13074" max="14382" />
+			<production time="15" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="3" />
+					<ware ware="energycells" amount="15" />
+					<ware ware="engineparts" amount="5" />
+				</primary>
+			</production>
+			<component ref="engine_otas_m_allround_01_mk1_macro"/>
+			<icon video="engine_arg_m_allround_01_mk1_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="engine_otas_m_allround_01_mk2" name="{19530002,603}" description="{19530002,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="58166" average="64629" max="71092" />
+			<production time="15" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="18" />
+					<ware ware="energycells" amount="30" />
+					<ware ware="engineparts" amount="22" />
+				</primary>
+			</production>
+			<component ref="engine_otas_m_allround_01_mk2_macro"/>
+			<icon video="engine_arg_m_allround_01_mk2_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.31"/>
+			<owner faction="otas"/>
+		</ware>		
+		<ware id="engine_otas_m_allround_01_mk3" name="{19530002,604}" description="{19530002,6021}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="287722" average="319691" max="351660" />
+			<production time="15" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="90" />
+					<ware ware="energycells" amount="60" />
+					<ware ware="engineparts" amount="110" />
+				</primary>
+			</production>
+			<component ref="engine_otas_m_allround_01_mk3_macro"/>
+			<icon video="engine_arg_m_allround_01_mk3_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.41"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="engine_otas_m_combat_01_mk1" name="{19530002,605}" description="{19530002,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="14357" average="15952" max="17547" />
+			<production time="15" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="3" />
+					<ware ware="energycells" amount="15" />
+					<ware ware="engineparts" amount="7" />
+				</primary>
+			</production>
+			<component ref="engine_otas_m_combat_01_mk1_macro"/>
+			<icon video="engine_arg_m_combat_01_mk1_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="engine_otas_m_combat_01_mk2" name="{19530002,606}" description="{19530002,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="69711" average="77457" max="85202" />
+			<production time="15" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="22" />
+					<ware ware="energycells" amount="30" />
+					<ware ware="engineparts" amount="26" />
+				</primary>
+			</production>
+			<component ref="engine_otas_m_combat_01_mk2_macro"/>
+			<icon video="engine_arg_m_combat_01_mk2_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.41"/>
+			<owner faction="otas"/>
+		</ware>		
+		<ware id="engine_otas_m_combat_01_mk3" name="{19530002,607}" description="{19530002,6051}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="345444" average="383827" max="422209" />
+			<production time="15" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="110" />
+					<ware ware="energycells" amount="60" />
+					<ware ware="engineparts" amount="130" />
+				</primary>
+			</production>
+			<component ref="engine_otas_m_combat_01_mk3_macro"/>
+			<icon video="engine_arg_m_combat_01_mk3_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.7"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="engine_otas_m_travel_01_mk1" name="{19530002,608}" description="{19530002,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="13062" average="14513" max="15964" />
+			<production time="15" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="3" />
+					<ware ware="energycells" amount="15" />
+					<ware ware="engineparts" amount="6" />
+				</primary>
+			</production>
+			<component ref="engine_otas_m_travel_01_mk1_macro"/>
+			<icon video="engine_arg_m_travel_01_mk1_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="engine_otas_m_travel_01_mk2" name="{19530002,609}" description="{19530002,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="65234" average="72482" max="79730" />
+			<production time="15" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="20" />
+					<ware ware="energycells" amount="30" />
+					<ware ware="engineparts" amount="25" />
+				</primary>
+			</production>
+			<component ref="engine_otas_m_travel_01_mk2_macro"/>
+			<icon video="engine_arg_m_travel_01_mk2_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.31"/>
+			<owner faction="otas"/>
+		</ware>		
+		<ware id="engine_otas_m_travel_01_mk3" name="{19530002,610}" description="{19530002,6081}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="331013" average="367793" max="404572" />
+			<production time="15" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="105" />
+					<ware ware="energycells" amount="60" />
+					<ware ware="engineparts" amount="125" />
+				</primary>
+			</production>
+			<component ref="engine_otas_m_travel_01_mk3_macro"/>
+			<icon video="engine_arg_m_travel_01_mk3_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.41"/>
+			<owner faction="otas"/>
+		</ware>		
+		<!--S-->
+		<ware id="engine_otas_s_allround_01_mk1" name="{19530002,611}" description="{19530002,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="5526" average="6140" max="6754" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="10" />
+					<ware ware="engineparts" amount="4" />
+				</primary>
+			</production>
+			<component ref="engine_otas_s_allround_01_mk1_macro"/>
+			<icon video="engine_arg_s_allround_01_mk1_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>	
+		<ware id="engine_otas_s_allround_01_mk2" name="{19530002,612}" description="{19530002,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="26370" average="29300" max="32230" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="8" />
+					<ware ware="energycells" amount="20" />
+					<ware ware="engineparts" amount="10" />
+				</primary>
+			</production>
+			<component ref="engine_otas_s_allround_01_mk2_macro"/>
+			<icon video="engine_arg_s_allround_01_mk2_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.31"/>
+			<owner faction="otas"/>
+		</ware>	
+		<ware id="engine_otas_s_allround_01_mk3" name="{19530002,613}" description="{19530002,6111}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="123301" average="137001" max="150701" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="40" />
+					<ware ware="energycells" amount="40" />
+					<ware ware="engineparts" amount="45" />
+				</primary>
+			</production>
+			<component ref="engine_otas_s_allround_01_mk3_macro"/>
+			<icon video="engine_arg_s_allround_01_mk3_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.41"/>
+			<owner faction="otas"/>
+		</ware>	
+		<ware id="engine_otas_s_combat_01_mk1" name="{19530002,614}" description="{19530002,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="8116" average="9017" max="9919" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="10" />
+					<ware ware="engineparts" amount="6" />
+				</primary>
+			</production>
+			<component ref="engine_otas_s_combat_01_mk1_macro"/>
+			<icon video="engine_arg_s_combat_01_mk1_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>	
+		<ware id="engine_otas_s_combat_01_mk2" name="{19530002,615}" description="{19530002,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="40504" average="45005" max="49505" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="12" />
+					<ware ware="energycells" amount="20" />
+					<ware ware="engineparts" amount="16" />
+				</primary>
+			</production>
+			<component ref="engine_otas_s_combat_01_mk2_macro"/>
+			<icon video="engine_arg_s_combat_01_mk2_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.41"/>
+			<owner faction="otas"/>
+		</ware>	
+		<ware id="engine_otas_s_combat_01_mk3" name="{19530002,616}" description="{19530002,6141}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="181023" average="201137" max="221250" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="60" />
+					<ware ware="energycells" amount="40" />
+					<ware ware="engineparts" amount="65" />
+				</primary>
+			</production>
+			<component ref="engine_otas_s_combat_01_mk3_macro"/>
+			<icon video="engine_arg_s_combat_01_mk3_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.7"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="engine_otas_s_travel_01_mk1" name="{19530002,617}" description="{19530002,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="6821" average="7579" max="8336" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="10" />
+					<ware ware="engineparts" amount="5" />
+				</primary>
+			</production>
+			<component ref="engine_otas_s_travel_01_mk1_macro"/>
+			<icon video="engine_arg_s_travel_01_mk1_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>	
+		<ware id="engine_otas_s_travel_01_mk2" name="{19530002,618}" description="{19530002,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="34732" average="38591" max="42450" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="10" />
+					<ware ware="energycells" amount="20" />
+					<ware ware="engineparts" amount="14" />
+				</primary>
+			</production>
+			<component ref="engine_otas_s_travel_01_mk2_macro"/>
+			<icon video="engine_arg_s_travel_01_mk2_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.31"/>
+			<owner faction="otas"/>
+		</ware>	
+		<ware id="engine_otas_s_travel_01_mk3" name="{19530002,619}" description="{19530002,6171}" group="engines" transport="equipment" volume="1" tags="engine equipment">
+			<price min="166592" average="185103" max="203613" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="antimatterconverters" amount="55" />
+					<ware ware="energycells" amount="40" />
+					<ware ware="engineparts" amount="60" />
+				</primary>
+			</production>
+			<component ref="engine_otas_s_travel_01_mk3_macro"/>
+			<icon video="engine_arg_s_travel_01_mk3_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.41"/>
+			<owner faction="otas"/>
+		</ware>	
+
+		
 		<!--MODULES-->
 			<!--Scaleplate Den-->
 		<ware id="module_hab_sca_l_01" name="{4837253,42030}" description="{4837253,42001}" transport="container" volume="1" tags="module">
@@ -80,9 +351,9 @@
 			<component ref="hab_sca_s_01_macro" />
 			<restriction licence="station_gen_basic" />
 			<owner faction="scaleplate" />
-		</ware>		
+		</ware>
 			<!--Yaki Haven-->
-		<ware id="module_yaki_hab_l_01" name="{4837253,46030}" description="{4837253,46001}" transport="container" volume="1" tags="module">
+		<ware id="module_hab_yaki_l_01" name="{4837253,46030}" description="{4837253,46001}" transport="container" volume="1" tags="module">
 			<price min="16627714" average="19562016" max="22496318" />
 			<production time="120" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -94,7 +365,7 @@
 			<restriction licence="militaryequipment" />
 			<owner faction="yaki" />
 		</ware>
-		<ware id="module_yaki_hab_m_01" name="{4837253,46020}" description="{4837253,46001}" transport="container" volume="1" tags="module">
+		<ware id="module_hab_yaki_m_01" name="{4837253,46020}" description="{4837253,46001}" transport="container" volume="1" tags="module">
 			<price min="11754290" average="13828576" max="15902862" />
 			<production time="90" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -106,7 +377,7 @@
 			<restriction licence="militaryequipment" />
 			<owner faction="yaki" />
 		</ware>
-		<ware id="module_yaki_hab_s_01" name="{4837253,46010}" description="{4837253,46001}" transport="container" volume="1" tags="module">
+		<ware id="module_hab_yaki_s_01" name="{4837253,46010}" description="{4837253,46001}" transport="container" volume="1" tags="module">
 			<price min="8172621" average="9614848" max="11057075" />
 			<production time="60" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -132,12 +403,160 @@
 			<owner faction="enclave" />
 			<owner faction="otas" />
 			<owner faction="yaki" />
-		</ware>		
+		</ware>
 	</add>
+	
+	
 		<!--SHIELDS-->
-		<!--TURRETS-->
-		<!--WEAPONS-->
-		<!--SHIPS--> 
+	<add sel="//wares">
+		<ware id="shield_otas_l_standard_01_mk1" name="{19530002,500}" description="{19530002,500}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="42166" average="46851" max="51536"/>
+			<production time="20" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="50"/>
+					<ware ware="fieldcoils" amount="13"/>
+					<ware ware="shieldcomponents" amount="10"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_l_standard_01_mk1_macro"/>
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="shield_otas_l_standard_01_mk2" name="{19530002,501}" description="{20106,3042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="205644" average="228494" max="251343"/>
+			<production time="20" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="100"/>
+					<ware ware="fieldcoils" amount="65"/>
+					<ware ware="shieldcomponents" amount="50"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_l_standard_01_mk2_macro"/>
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.31"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="shield_otas_m_standard_01_mk1" name="{19530002,502}" description="{20106,2002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="12838" average="14264" max="15691"/>
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="20"/>
+					<ware ware="fieldcoils" amount="3"/>
+					<ware ware="shieldcomponents" amount="5"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_m_standard_01_mk1_macro"/>
+			<icon video="shield_arg_m_standard_01_mk1_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="shield_otas_m_standard_01_mk2" name="{19530002,503}" description="{20106,2042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="62115" average="69017" max="75918"/>
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="40"/>
+					<ware ware="fieldcoils" amount="15"/>
+					<ware ware="shieldcomponents" amount="25"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_m_standard_01_mk2_macro"/>
+			<icon video="shield_arg_m_standard_01_mk2_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.31"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="shield_otas_m_standard_02_mk1" name="{19530002,502}" description="{20106,2002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="12838" average="14264" max="15691"/>
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="20"/>
+					<ware ware="fieldcoils" amount="3"/>
+					<ware ware="shieldcomponents" amount="5"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_m_standard_02_mk1_macro"/>
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="shield_otas_m_standard_02_mk2" name="{19530002,503}" description="{20106,2042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="61597" average="68441" max="75285"/>
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="40"/>
+					<ware ware="fieldcoils" amount="15"/>
+					<ware ware="shieldcomponents" amount="25"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_m_standard_02_mk2_macro"/>
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.31"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="shield_otas_s_standard_01_mk1" name="{19530002,504}" description="{20106,1002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="1218" average="1354" max="1489"/>
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="5"/>
+					<ware ware="shieldcomponents" amount="1"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_s_standard_01_mk1_macro"/>
+			<icon video="shield_arg_s_standard_01_mk1_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="shield_otas_s_standard_01_mk2" name="{19530002,505}" description="{20106,1042}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="10186" average="11318" max="12449"/>
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="10"/>
+					<ware ware="fieldcoils" amount="2"/>
+					<ware ware="shieldcomponents" amount="5"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_s_standard_01_mk2_macro"/>
+			<icon video="shield_arg_s_standard_01_mk2_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.31"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="shield_otas_s_standard_01_mk3" name="{19530002,506}" description="{20106,1082}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="49892" average="55436" max="60979"/>
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="20"/>
+					<ware ware="fieldcoils" amount="10"/>
+					<ware ware="shieldcomponents" amount="25"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_s_standard_01_mk3_macro"/>
+			<icon video="shield_arg_s_standard_01_mk3_video_macro" />
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0.41"/>
+			<owner faction="otas"/>
+		</ware>
+		<ware id="shield_otas_xl_standard_01_mk1" name="{19530002,507}" description="{20106,4002}" group="shields" transport="equipment" volume="1" tags="equipment shield">
+			<price min="225671" average="250745" max="275820"/>
+			<production time="20" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="150"/>
+					<ware ware="fieldcoils" amount="82"/>
+					<ware ware="shieldcomponents" amount="30"/>
+				</primary>
+			</production>
+			<component ref="shield_otas_xl_standard_01_mk1_macro"/>
+			<restriction licence="generaluseequipment"/>
+			<use threshold="0"/>
+			<owner faction="otas"/>
+		</ware>
+	</add>		
+		
+		
+		<!--SHIPS-->
 	<add sel="//wares">
 		<ware id="ship_arg_m_orthrus" name="{4837251,112510}" description="{4837251,112511}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
 			<price min="354000" average="416470" max="478940" />
@@ -246,9 +665,10 @@
 			<owner faction="fallensplit" />
 			<owner faction="freesplit" />
 		</ware>
-	</add>
+	</add>		
 		<!--TURRETS-->
 		<!--WEAPONS-->
+
 
 	<!--OTAS CHANGES-->
 	<!--TURRETS-->
@@ -279,7 +699,7 @@
 	<replace sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/@tags">equipment engine noblueprint noplayerblueprint</replace>
 	<replace sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/owner[@faction='court']/@faction">ownerless</replace>
 	<remove sel="/wares/ware[@id='engine_spl_s_combat_01_mk4']/owner[@faction='split']"/>
-	
+
 
 	<!--Illegal-->
 	<add sel="/wares/ware[@id='inv_agidevice_01']">
@@ -324,13 +744,13 @@
 	<add sel="/wares/ware[@id='spaceweed']">
 		<illegal factions="enclave strongarms atreus"/>
 	</add>
-	
-	
+
+
 	<!--Hidden Modules-->
 	<replace sel="/wares/ware[@id='module_ter_stor_container_m_tradestation']/@tags">module</replace>
 	<replace sel="/wares/ware[@id='module_ter_stor_liquid_s_tradestation']/@tags">module</replace>
-	
-	
+
+
 	<!--STATION MODULES-->
 	<!--ARGON-->
 	<add sel="/wares/ware[@id='module_arg_conn_base_01']">
@@ -414,7 +834,7 @@
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_arg_dock_tradestation_02']">
 		<owner faction="enclave"/>
 		<owner faction="otas"/>
@@ -485,7 +905,7 @@
 	<add sel="/wares/ware[@id='module_arg_prod_spacefuel_01']">
 		<owner faction="enclave"/>
 		<owner faction="hatikvah"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_arg_prod_wheat_01']">
 		<owner faction="enclave"/>
 		<owner faction="otas"/>
@@ -612,7 +1032,7 @@
 	<add sel="/wares/ware[@id='module_par_prod_sojahusk_01']">
 		<owner faction="alliance"/>
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_par_stor_container_l_01']">
 		<owner faction="alliance"/>
 		<owner faction="xaar"/>
@@ -738,25 +1158,25 @@
 	</add>
 	<add sel="/wares/ware[@id='module_ter_build_l_01']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_ter_build_xl_01']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_ter_conn_base_01']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_ter_conn_base_02']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_ter_conn_base_03']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_ter_conn_cross_01']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_ter_conn_vertical_01']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_ter_conn_vertical_02']">
 		<owner faction="aldrin"/>
 	</add>
@@ -1034,7 +1454,7 @@
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
 		<owner faction="xaar"/>
-	</add>		
+	</add>
 	<add sel="/wares/ware[@id='module_gen_equip_dockarea_m_01']">
 		<owner faction="enclave"/>
 		<owner faction="otas"/>
@@ -1076,7 +1496,7 @@
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_gen_prod_advancedcomposites_01']">
 		<owner faction="atreus"/>
 		<owner faction="enclave"/>
@@ -1139,7 +1559,7 @@
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_gen_prod_graphene_01']">
 		<owner faction="atreus"/>
 		<owner faction="enclave"/>
@@ -1219,7 +1639,7 @@
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
 		<owner faction="xaar"/>
-	</add>		
+	</add>
 	<add sel="/wares/ware[@id='module_gen_prod_shieldcomponents_01']">
 		<owner faction="atreus"/>
 		<owner faction="enclave"/>
@@ -1247,7 +1667,7 @@
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='module_gen_prod_superfluidcoolant_01']">
 		<owner faction="atreus"/>
 		<owner faction="enclave"/>
@@ -1277,7 +1697,7 @@
 		<owner faction="xaar"/>
 	</add>
 
-	
+
 	<!--ENGINES-->
 	<add sel="/wares/ware[@id='engine_arg_l_allround_01_mk1']">
 		<owner faction="enclave"/>
@@ -1338,10 +1758,10 @@
 	</add>
 	<add sel="/wares/ware[@id='engine_arg_xl_allround_01_mk1']">
 		<owner faction="enclave"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='engine_arg_xl_travel_01_mk1']">
 		<owner faction="enclave"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='engine_bor_l_travel_01_mk1']">
 		<owner faction="atreus"/>
 	</add>
@@ -1425,10 +1845,10 @@
 	</add>
 	<add sel="/wares/ware[@id='engine_par_xl_allround_01_mk1']">
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='engine_par_xl_travel_01_mk1']">
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='engine_spl_l_allround_01_mk1']">
 		<owner faction="strongarms"/>
 	</add>
@@ -1488,7 +1908,7 @@
 	</add>
 	<add sel="/wares/ware[@id='engine_spl_xl_allround_01_mk1']">
 		<owner faction="strongarms"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='engine_spl_xl_travel_01_mk1']">
 		<owner faction="strongarms"/>
 	</add>
@@ -1551,15 +1971,15 @@
 	</add>
 	<add sel="/wares/ware[@id='engine_ter_s_travel_01_mk3']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='engine_ter_xl_allround_01_mk1']">
 		<owner faction="aldrin"/>
 	</add>
 	<add sel="/wares/ware[@id='engine_ter_xl_travel_01_mk1']">
 		<owner faction="aldrin"/>
-	</add>	
-	
-	
+	</add>
+
+
 	<!--SHIELDS-->
 	<add sel="/wares/ware[@id='shield_arg_l_standard_01_mk1']">
 		<owner faction="enclave"/>
@@ -1572,7 +1992,7 @@
 	</add>
 	<add sel="/wares/ware[@id='shield_arg_m_standard_01_mk2']">
 		<owner faction="enclave"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='shield_arg_m_standard_02_mk1']">
 		<owner faction="enclave"/>
 	</add>
@@ -1590,7 +2010,7 @@
 	</add>
 	<add sel="/wares/ware[@id='shield_arg_xl_standard_01_mk1']">
 		<owner faction="enclave"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='shield_bor_l_standard_01_mk1']">
 		<owner faction="atreus"/>
 	</add>
@@ -1617,7 +2037,7 @@
 	</add>
 	<add sel="/wares/ware[@id='shield_bor_m_standard_02_mk3']">
 		<owner faction="atreus"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='shield_bor_s_standard_01_mk1']">
 		<owner faction="atreus"/>
 	</add>
@@ -1644,7 +2064,7 @@
 	</add>
 	<add sel="/wares/ware[@id='shield_par_m_standard_01_mk2']">
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='shield_par_m_standard_02_mk1']">
 		<owner faction="xaar"/>
 	</add>
@@ -1662,7 +2082,7 @@
 	</add>
 	<add sel="/wares/ware[@id='shield_par_xl_standard_01_mk1']">
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='shield_spl_l_standard_01_mk1']">
 		<owner faction="strongarms"/>
 	</add>
@@ -1734,17 +2154,17 @@
 	</add>
 	<add sel="/wares/ware[@id='shield_ter_xl_standard_01_mk2']">
 		<owner faction="aldrin"/>
-	</add>	
-	
-	
+	</add>
+
+
 	<!--SHIPS-->
 	<add sel="/wares/ware[@id='ship_arg_l_miner_liquid_01_b']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_l_miner_solid_01_b']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_l_trans_container_02_b']">
 		<owner faction="enclave"/>
@@ -1757,48 +2177,48 @@
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_m_miner_liquid_01_b']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_m_miner_solid_01_b']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
-	</add>	
+		<owner faction="otas"/>
+	</add>
 	<add sel="/wares/ware[@id='ship_arg_m_trans_container_01_b']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_m_trans_container_02_b']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_s_heavyfighter_02_a']">
-		<owner faction="enclave"/>	
+		<owner faction="enclave"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_s_miner_solid_01_a']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_s_scout_01_b']">
 		<owner faction="enclave"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_s_trans_container_01_b']">
-		<owner faction="otas"/>		
-	</add>	
+		<owner faction="otas"/>
+	</add>
 	<add sel="/wares/ware[@id='ship_arg_s_trans_container_02_b']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_xl_builder_01_b']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_arg_xl_resupplier_01_b']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
-	</add>	
+		<owner faction="otas"/>
+	</add>
 	<add sel="/wares/ware[@id='ship_arg_xs_police_01_a']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='ship_bor_l_carrier_01_a']">
 		<owner faction="atreus"/>
@@ -1847,7 +2267,7 @@
 	</add>
 	<add sel="/wares/ware[@id='ship_bor_xl_resupplier_01_a']">
 		<owner faction="atreus"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='ship_bor_xs_police_01_a']">
 		<owner faction="atreus"/>
 	</add>
@@ -1855,7 +2275,7 @@
 		<owner faction="freesplit"/>
 		<owner faction="split"/>
 		<owner faction="enclave"/>
-		<owner faction="atreus"/>		
+		<owner faction="atreus"/>
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
 		<owner faction="xaar"/>
@@ -1881,7 +2301,7 @@
 	</add>
 	<add sel="/wares/ware[@id='ship_par_m_trans_container_01_b']">
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='ship_par_m_trans_container_02_b']">
 		<owner faction="xaar"/>
 	</add>
@@ -1902,7 +2322,7 @@
 	</add>
 	<add sel="/wares/ware[@id='ship_par_xl_resupplier_02_a']">
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='ship_par_xs_police_01_a']">
 		<owner faction="xaar"/>
 	</add>
@@ -1935,7 +2355,7 @@
 	</add>
 	<add sel="/wares/ware[@id='ship_spl_s_scout_01_a']">
 		<owner faction="strongarms"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='ship_spl_s_trans_container_01_a']">
 		<owner faction="strongarms"/>
 	</add>
@@ -1944,7 +2364,7 @@
 	</add>
 	<add sel="/wares/ware[@id='ship_spl_xl_resupplier_01_a']">
 		<owner faction="strongarms"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='ship_spl_xs_police_01_a']">
 		<owner faction="strongarms"/>
 	</add>
@@ -1968,83 +2388,83 @@
 	</add>
 	<add sel="/wares/ware[@id='ship_ter_xl_resupplier_01_a']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='ship_ter_xs_police_01_a']">
 		<owner faction="aldrin"/>
-	</add>		
+	</add>
 
 
 	<!--TURRETS-->
 	<add sel="/wares/ware[@id='turret_arg_l_beam_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_l_dumbfire_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_l_guided_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_l_laser_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_l_mining_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_l_plasma_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_beam_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_beam_02_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_dumbfire_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_dumbfire_02_mk1']">
 		<owner faction="atreus"/>
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_flak_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_flak_02_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_gatling_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_gatling_02_mk1']">
 		<owner faction="atreus"/>
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_guided_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_guided_02_mk1']">
 		<owner faction="atreus"/>
 		<owner faction="enclave"/>
-		<owner faction="otas"/>		
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_laser_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_laser_02_mk1']">
 		<owner faction="atreus"/>
@@ -2053,7 +2473,7 @@
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_mining_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_mining_02_mk1']">
 		<owner faction="atreus"/>
@@ -2062,15 +2482,15 @@
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_plasma_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_plasma_02_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_shotgun_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_shotgun_02_mk1']">
 		<owner faction="atreus"/>
@@ -2079,7 +2499,7 @@
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_shotgun_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_bor_l_disruptor_01_mk1']">
 		<owner faction="atreus"/>
@@ -2182,7 +2602,7 @@
 	</add>
 	<add sel="/wares/ware[@id='turret_par_m_plasma_02_mk1']">
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='turret_par_m_shotgun_01_mk1']">
 		<owner faction="xaar"/>
 	</add>
@@ -2248,7 +2668,7 @@
 	</add>
 	<add sel="/wares/ware[@id='turret_spl_m_mining_02_mk1']">
 		<owner faction="strongarms"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='turret_spl_m_plasma_01_mk1']">
 		<owner faction="strongarms"/>
 	</add>
@@ -2314,7 +2734,7 @@
 	</add>
 	<add sel="/wares/ware[@id='turret_ter_m_mining_02_mk1']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	
 	
 	<!--WEAPONS-->
@@ -2327,15 +2747,15 @@
 		<owner faction="otas"/>
 		<owner faction="split"/>
 		<owner faction="strongarms"/>
-		<owner faction="xaar"/>		
+		<owner faction="xaar"/>
 	</add>
 	<add sel="/wares/ware[@id='weapon_arg_l_destroyer_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='weapon_arg_m_ion_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='weapon_arg_m_ion_01_mk2']">
 		<owner faction="enclave"/>
@@ -2343,11 +2763,11 @@
 	</add>
 	<add sel="/wares/ware[@id='weapon_arg_s_ion_01_mk1']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='weapon_arg_s_ion_01_mk2']">
 		<owner faction="enclave"/>
-		<owner faction="otas"/>	
+		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='weapon_bor_l_beam_01_mk1']">
 		<owner faction="atreus"/>
@@ -2375,12 +2795,12 @@
 	</add>
 	<add sel="/wares/ware[@id='weapon_bor_s_mining_01_mk1']">
 		<owner faction="atreus"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='weapon_gen_m_beam_01_mk1']">
 		<owner faction="enclave"/>
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
-		<owner faction="xaar"/>	
+		<owner faction="xaar"/>
 	</add>
 	<add sel="/wares/ware[@id='weapon_gen_m_beam_01_mk2']">
 		<owner faction="enclave"/>
@@ -2468,7 +2888,7 @@
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='weapon_gen_s_beam_01_mk1']">
 		<owner faction="enclave"/>
 		<owner faction="otas"/>
@@ -2597,7 +3017,7 @@
 	</add>
 	<add sel="/wares/ware[@id='weapon_par_s_railgun_01_mk2']">
 		<owner faction="xaar"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='weapon_spl_m_gatling_01_mk1']">
 		<owner faction="strongarms"/>
 	</add>
@@ -2612,7 +3032,7 @@
 	</add>
 	<add sel="/wares/ware[@id='weapon_spl_m_shotgun_01_mk1']">
 		<owner faction="strongarms"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='weapon_spl_m_shotgun_01_mk2']">
 		<owner faction="strongarms"/>
 	</add>
@@ -2651,7 +3071,7 @@
 	</add>
 	<add sel="/wares/ware[@id='weapon_ter_m_beam_01_mk2']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='weapon_ter_m_gatling_01_mk1']">
 		<owner faction="aldrin"/>
 	</add>
@@ -2678,53 +3098,306 @@
 	</add>
 	<add sel="/wares/ware[@id='weapon_ter_s_laser_01_mk1']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	<add sel="/wares/ware[@id='weapon_ter_s_laser_01_mk2']">
 		<owner faction="aldrin"/>
-	</add>	
+	</add>
 	
 	
 	<!--VRO-->
+		<!--Missiles-->
+	<add sel="/wares/ware[@id='missile_aurora']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_banshee']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_beluga']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_blizzard']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_cyclone']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_disruptor']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_dragonfly']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_firefly']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>	
+	</add>
+	<add sel="/wares/ware[@id='missile_firestorm']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_flail']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_flycatcher']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_hornet']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_hurricane']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_interceptor']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_mosquito']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_phantom']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_poltergeist']">
+		<owner faction="aldrin"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_rapier']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>	
+	</add>	
+	<add sel="/wares/ware[@id='missile_rgw']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_scatter']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_serpentnest']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_shadow']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_silkworm']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_spectre']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_starburst']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_tempest']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_thunderbolt']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_tomahawk']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_tornado']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_typhoon']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_wasp']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_wildfire']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_windstalker']">
+		<owner faction="aldrin"/>
+		<owner faction="atreus"/>
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='missile_wraith']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+		<!--Turrets-->
+	<add sel="/wares/ware[@id='turret_arg_l_cruise']">
+		<owner faction="enclave"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_arg_l_flak']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_arg_l_ppc']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_ma_01']">
+		<owner faction="enclave"/>
 		<owner faction="otas"/>
 	</add>
 	<add sel="/wares/ware[@id='turret_arg_m_ma_02']">
-		<owner faction="otas"/>	
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
 	</add>
-	<add sel="/wares/ware[@id='turret_arg_l_ppc']">
-		<owner faction="otas"/>	
+	<add sel="/wares/ware[@id='turret_bor_l_projector']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_par_m_ma_01']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_par_m_ma_02']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_par_l_cruise']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_par_l_flak']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_par_l_tri']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_par_l_tribeam']">
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_spl_l_flak']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_spl_l_madr']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_spl_multilauncher']">
+		<owner faction="strongarms"/>
+	</add>
+	<add sel="/wares/ware[@id='turret_ter_l_rotorypulse']">
+		<owner faction="aldrin"/>
+	</add>
+		<!--Weapons-->
+	<add sel="/wares/ware[@id='weapon_arg_l_ppc']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_bor_m_proton']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_bor_s_proton_macro']">
+		<owner faction="atreus"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_cig']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
+	</add>
+	<add sel="/wares/ware[@id='weapon_gen_m_isr']">
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
 	</add>
 	<add sel="/wares/ware[@id='weapon_gen_m_ma']">
-		<owner faction="otas"/>	
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
 	</add>
 	<add sel="/wares/ware[@id='weapon_gen_m_plasmabomb']">
-		<owner faction="otas"/>	
+		<owner faction="enclave"/>
+		<owner faction="otas"/>
+		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
 	</add>
-	<add sel="/wares/ware[@id='weapon_arg_l_ppc']">
-		<owner faction="otas"/>	
+	<add sel="/wares/ware[@id='weapon_spl_l_shell']">
+		<owner faction="strongarms"/>
 	</add>
-	<add sel="/wares/ware[@id='missile_blizzard']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='missile_tornado']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='missile_cyclone']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='missile_hurricane']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='missile_tempest']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='missile_typhoon']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='missile_firestorm']">
-		<owner faction="otas"/>	
-	</add>
-	<add sel="/wares/ware[@id='missile_rgw']">
-		<owner faction="otas"/>	
+	<add sel="/wares/ware[@id='weapon_ter_l_graviton']">
+		<owner faction="aldrin"/>
 	</add>
 </diff>

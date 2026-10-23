@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <macros>
 	<macro name="engine_otas_m_travel_01_mk3_macro" class="engine">
-		<component ref="engine_otas_m_travel_01_mk3"/>
+		<component ref="engine_gen_m_virtual_01"/>
 		<properties>
 			<identification name="{19530002,610}" basename="{20107,1401}" shortname="{20107,1485}" makerrace="otas" description="{19530002,6081}" mk="3"/>
-<boost duration="14.805" recharge="96" thrust="2.68" acceleration="2.165" attack="0.25" release="2.5" coast="1.25" />
-<travel charge="0.25" thrust="28.75" attack="21" release="10" />
-<thrust forward="1394" reverse="1428.5" />
-      <angular />
-      <hull integrated="1" />
-      <effects>
-        <boosting ref="arg_boost_fx_m" />
-        <traveling ref="gen_traveldrive_fx_m" />
-      </effects>
-      <sounds>
-        <enginedetail ref="enginedetail_ship_m_01" />
-      </sounds>
-      <decelerationcurve>
-        <point position="1.01" value="1" />
-        <point position="1.25" value="2.2" />
-        <point position="1.75" value="5" />
-        <point position="2.1" value="8" />
-        <point position="2.5" value="12" />
-      </decelerationcurve>
-      <strafecurve>
-        <point position="1.01" value="1" />
-        <point position="1.25" value="3" />
-        <point position="1.75" value="6" />
-        <point position="2.1" value="8" />
-        <point position="2.5" value="12" />
-      </strafecurve>
+			<boost duration="14.805" recharge="96" thrust="2.68" acceleration="2.165" attack="0.25" release="2.5" coast="1.25"/>
+			<travel charge="0.25" thrust="28.75" attack="21" release="10"/>
+			<thrust forward="1394" reverse="1428.5"/>
+			<angular/>
+			<hull integrated="1"/>
+			<effects>
+				<boosting ref="gen_m_boosteffect_01"/>
+				<traveling ref="gen_traveldrive_fx_m"/>
+			</effects>
+			<sounds>
+				<enginedetail ref="enginedetail_ship_m_01"/>
+			</sounds>
+			<decelerationcurve>
+				<point position="1.01" value="1"/>
+				<point position="1.25" value="2.2"/>
+				<point position="1.75" value="5"/>
+				<point position="2.1" value="8"/>
+				<point position="2.5" value="12"/>
+			</decelerationcurve>
+			<strafecurve>
+				<point position="1.01" value="1"/>
+				<point position="1.25" value="3"/>
+				<point position="1.75" value="6"/>
+				<point position="2.1" value="8"/>
+				<point position="2.5" value="12"/>
+			</strafecurve>
 		</properties>
 	</macro>
 </macros>
