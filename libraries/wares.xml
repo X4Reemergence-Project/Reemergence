@@ -44,6 +44,43 @@
 	<add sel="//wares">
 		<!--ENGINES-->
 		<!--MODULES-->
+			<!--Scaleplate Den-->
+		<ware id="module_hab_sca_l_01" name="{4837253,42030}" description="{4837253,42001}" transport="container" volume="1" tags="module">
+			<price min="15822621" average="18614848" max="21407075" />
+			<production time="120" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="claytronics" amount="242" />
+					<ware ware="energycells" amount="664" />
+				</primary>
+			</production>
+			<component ref="hab_sca_l_01_macro" />
+			<restriction licence="station_gen_basic" />
+			<owner faction="scaleplate" />
+		</ware>
+		<ware id="module_hab_sca_m_01" name="{4837253,42020}" description="{4837253,42001}" transport="container" volume="1" tags="module">
+			<price min="10530453" average="12388768" max="14247083" />
+			<production time="90" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="claytronics" amount="161" />
+					<ware ware="energycells" amount="443" />
+				</primary>
+			</production>
+			<component ref="hab_sca_m_01_macro" />
+			<restriction licence="station_gen_basic" />
+			<owner faction="scaleplate" />
+		</ware>
+		<ware id="module_hab_sca_s_01" name="{4837253,42010}" description="{4837253,42001}" transport="container" volume="1" tags="module">
+			<price min="7471187" average="8789632" max="10108077" />
+			<production time="30" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="claytronics" amount="114" />
+					<ware ware="energycells" amount="313" />
+				</primary>
+			</production>
+			<component ref="hab_sca_s_01_macro" />
+			<restriction licence="station_gen_basic" />
+			<owner faction="scaleplate" />
+		</ware>		
 			<!--Yaki Haven-->
 		<ware id="module_yaki_hab_l_01" name="{4837253,46030}" description="{4837253,46001}" transport="container" volume="1" tags="module">
 			<price min="16627714" average="19562016" max="22496318" />
@@ -79,6 +116,21 @@
 			</production>
 			<component ref="hab_yaki_s_01_macro" />
 			<restriction licence="militaryequipment" />
+			<owner faction="yaki" />
+		</ware>
+			<!--Production-->
+		<ware id="module_prod_gen_stimulants" name="{4837253,10040}" description="{4837253,10041}" transport="container" volume="1" tags="module"> 
+			<price min="1735171" average="2041378" max="2347585" />
+			<production time="120" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="claytronics" amount="425" />
+					<ware ware="energycells" amount="638" />
+				</primary>
+			</production>
+			<component ref="prod_gen_stimulants_macro" />
+			<restriction licence="station_gen_basic" />
+			<owner faction="enclave" />
+			<owner faction="otas" />
 			<owner faction="yaki" />
 		</ware>		
 	</add>
@@ -385,8 +437,10 @@
 		<owner faction="scaleplate"/>
 		<owner faction="yaki"/>
 		<owner faction="atreus"/>
+		<owner faction="enclave"/>
 		<owner faction="otas"/>
 		<owner faction="strongarms"/>
+		<owner faction="xaar"/>
 	</add>
 	<add sel="/wares/ware[@id='module_arg_pier_tradestation_01']">
 		<owner faction="enclave"/>
