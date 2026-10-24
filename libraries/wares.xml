@@ -553,11 +553,12 @@
 			<use threshold="0"/>
 			<owner faction="otas"/>
 		</ware>
-	</add>		
-		
-		
+	</add>
+
+
 		<!--SHIPS-->
 	<add sel="//wares">
+			<!-- Argon ships -->
 		<ware id="ship_arg_m_orthrus" name="{4837251,112510}" description="{4837251,112511}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
 			<price min="354000" average="416470" max="478940" />
 			<production time="20" amount="1" method="default" name="{20206,101}">
@@ -570,49 +571,9 @@
 			<restriction licence="generaluseship" />
 			<owner faction="argon" />
 			<owner faction="antigone" />
-		</ware>	
-		<ware id="ship_tel_m_jacana" name="{4837251,122510}" description="{4837251,122511}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
-			<price min="419716" average="493784" max="567851" />
-			<production time="31" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="161" />
-					<ware ware="hullparts" amount="283" />
-				</primary>
-			</production>
-			<component ref="ship_tel_m_jacana_macro" amount="1" />
-			<restriction licence="generaluseship" />
-			<owner faction="teladi" />
-			<owner faction="ministry" />
 		</ware>
-		<ware id="ship_par_m_helianthus" name="{4837251,132510}" description="{4837251,132511}" group="ships_paranid" transport="ship" size="ship" volume="1" tags="ship">
-			<price min="389386" average="458100" max="526816" />
-			<production time="31" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="120" />
-					<ware ware="hullparts" amount="210" />
-				</primary>
-			</production>
-			<component ref="ship_par_m_helianthus_macro" amount="1" />
-			<restriction licence="generaluseship" />
-			<owner faction="paranid" />
-			<owner faction="holyorder" />
-			<owner faction="trinity" />
-		</ware>
-		<ware id="ship_spl_m_crocodile" name="{4837251,142510}" description="{4837251,142511}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
-			<price min="317679" average="373740" max="429801" />
-			<production time="31" amount="1" method="default" name="{20206,101}">
-				<primary>
-					<ware ware="energycells" amount="126" />
-					<ware ware="hullparts" amount="300" />
-				</primary>
-			</production>
-			<component ref="ship_spl_m_crocodile_macro" amount="1" />
-			<restriction licence="generaluseship" />
-			<owner faction="split" />
-			<owner faction="fallensplit" />
-			<owner faction="freesplit" />
-		</ware>	
-		<ware id="ship_bor_m_pleco" name="{20101,51501}" description="{4837251,152511}" group="ships_boron" transport="ship" size="ship" volume="1" tags="ship">
+			<!-- Boron ships -->
+		<ware id="ship_bor_m_pleco" name="{4837251,152510}" description="{4837251,152511}" group="ships_boron" transport="ship" size="ship" volume="1" tags="ship">
 			<price min="302277" average="355620" max="408963" />
 			<production time="31" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -638,6 +599,74 @@
 			<restriction licence="militaryship" />
 			<owner faction="boron" />
 		</ware>
+		<ware id="ship_bor_xl_hammerhead" name="{4837251,254110}" description="{4837251,254111}" group="ships_boron" transport="ship" volume="1" tags="ship">
+			<price min="39000000" average="43000000" max="47000000" />
+			<production time="550" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="40000" />
+					<ware ware="hullparts" amount="25800" />
+					<ware ware="water" amount="16000" />
+				</primary>
+			</production>
+			<component ref="ship_bor_xl_hammerhead_macro" amount="1" />
+			<restriction licence="capitalship" />
+			<owner faction="atreus" />
+		</ware>
+			<!-- Paranid ships -->
+		<ware id="ship_par_m_helianthus" name="{4837251,132510}" description="{4837251,132511}" group="ships_paranid" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="389386" average="458100" max="526816" />
+			<production time="31" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="120" />
+					<ware ware="hullparts" amount="210" />
+				</primary>
+			</production>
+			<component ref="ship_par_m_helianthus_macro" amount="1" />
+			<restriction licence="generaluseship" />
+			<owner faction="paranid" />
+			<owner faction="holyorder" />
+			<owner faction="trinity" />
+		</ware>
+			<!-- Pirate ships -->
+		<ware id="ship_vig_l_pardal" name="{4837251,493010}" description="{4837251,493011}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="2987157" average="3253862" max="3578066" />
+			<production time="100" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="489" />
+					<ware ware="hullparts" amount="2225" />
+				</primary>
+			</production>
+			<component ref="ship_vig_l_pardal_macro" amount="1" />
+			<restriction licence="militaryequipment" />
+			<owner faction="loanshark" />
+		</ware>
+		<ware id="ship_vig_l_mascarino" name="{4837251,493510}" description="{4837251,493511}" group="ships_argon" transport="ship" volume="1" tags="ship">
+			<price min="4306024" average="6171220" max="8036416" />
+			<production time="207" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="844" />
+					<ware ware="hullparts" amount="5841" />
+				</primary>
+			</production>
+			<component ref="ship_vig_l_mascarino_macro" />
+			<restriction licence="capitalship" />
+			<owner faction="loanshark" />
+		</ware>
+			<!-- Split ships -->
+		<ware id="ship_spl_m_crocodile" name="{4837251,142510}" description="{4837251,142511}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="317679" average="373740" max="429801" />
+			<production time="31" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="126" />
+					<ware ware="hullparts" amount="300" />
+				</primary>
+			</production>
+			<component ref="ship_spl_m_crocodile_macro" amount="1" />
+			<restriction licence="generaluseship" />
+			<owner faction="split" />
+			<owner faction="fallensplit" />
+			<owner faction="freesplit" />
+		</ware>
 		<ware id="ship_spl_l_adder" name="{4837251,143020}" description="{4837251,143021}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
 			<price min="6195057" average="6858890" max="7522724" />
 			<production time="90" amount="1" method="default" name="{20206,101}">
@@ -648,9 +677,9 @@
 			</production>
 			<component ref="ship_spl_l_adder_macro" amount="1" />
 			<restriction licence="militaryship" />
-			<owner faction="court" />	  
+			<owner faction="court" />
 			<owner faction="split" />
-		</ware>	
+		</ware>
 		<ware id="ship_spl_l_cheetah" name="{4837251,243510}" description="{4837251,243511}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
 			<price min="6195057" average="6858890" max="7522724" />
 			<production time="90" amount="1" method="default" name="{20206,101}">
@@ -665,8 +694,52 @@
 			<owner faction="fallensplit" />
 			<owner faction="freesplit" />
 		</ware>
-	</add>		
+			<!-- Teladi ships -->
+		<ware id="ship_tel_m_jacana" name="{4837251,122510}" description="{4837251,122511}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="419716" average="493784" max="567851" />
+			<production time="31" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="161" />
+					<ware ware="hullparts" amount="283" />
+				</primary>
+			</production>
+			<component ref="ship_tel_m_jacana_macro" amount="1" />
+			<restriction licence="generaluseship" />
+			<owner faction="teladi" />
+			<owner faction="ministry" />
+		</ware>
+		<ware id="ship_tel_xl_ostrich" name="{4837251,124710}" description="{4837251,124711}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="19447804" average="22879769" max="26311735" />
+			<production time="492" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="hullparts" amount="10744" />
+					<ware ware="energycells" amount="2686" />
+				</primary>
+			</production>
+			<component ref="ship_tel_xl_ostrich_macro" amount="1" />
+			<restriction licence="capitalship" />
+			<owner faction="teladi" />
+		</ware>
+			<!-- Terran ships -->
+		<ware id="ship_ter_xl_kagawa" name="{4837251,164710}" description="{4837251,164711}" group="ships_terran" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="21208075" average="24950676" max="28693277" />
+			<production time="492" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="computronicsubstrate" amount="590" />
+					<ware ware="energycells" amount="2716" />
+					<ware ware="metallicmicrolattice" amount="1238" />
+				</primary>
+			</production>
+			<component ref="ship_ter_xl_kagawa_macro" amount="1" />
+			<restriction licence="capitalship" />
+			<owner faction="pioneers" />
+		</ware>
+	</add>
+
+
 		<!--TURRETS-->
+
+
 		<!--WEAPONS-->
 
 
@@ -691,7 +764,7 @@
 	<replace sel="/wares/ware[@id='ship_otas_s_solano']/owner[@faction='argon']/@faction">otas</replace>
 
 
-	<!--VANILLA CHANGES-->	
+	<!--VANILLA CHANGES-->
 	<!--Split Mk4 Engines-->
 	<replace sel="/wares/ware[@id='engine_spl_m_combat_01_mk4']/@tags">equipment engine noblueprint noplayerblueprint</replace>
 	<replace sel="/wares/ware[@id='engine_spl_m_combat_01_mk4']/owner[@faction='court']/@faction">ownerless</replace>
