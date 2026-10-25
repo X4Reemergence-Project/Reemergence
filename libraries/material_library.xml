@@ -1,26 +1,158 @@
 <?xml version='1.0' encoding='utf-8'?>
 <diff>
-  <add sel="/materiallibrary" pos="prepend">
-    <collection name="p1characters">
-      <material name="p1_char_arg_m_otas_jumper_orange" shader="p1_character" blendmode="NONE" preview="none">
-        <properties>
-          <property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\otas\textures\char_arg_m_otas_jumper_orange_diff" />
-          <property type="BitMap" name="normal_map" value="assets\characters\argon\textures\char_arg_m_hubworker_suit_01_normal" />
-          <property type="BitMap" name="smooth_map" value="assets\characters\argon\textures\char_arg_m_hubworker_suit_01_smooth" />
-          <property type="BitMap" name="metal_map" value="assets\characters\argon\textures\char_arg_m_hubworker_suit_01_metal" />
-          <property type="BitMap" name="color_glow_map" value="assets\characters\argon\textures\char_arg_m_hubworker_suit_01_glow" />
-          <property type="Float" name="color_glowStr" value="1.5" />
-          <property type="Float" name="smoothness" value="1.0" />
-          <property type="Float" name="metallness" value="1.0" />
-          <property type="Float" name="diffuseStr" value="1.0" />
-          <property type="Float" name="normalStr" value="1.0" />
-          <property type="Color" name="fresnel_color" r="230" g="99" b="40" a="255" value="(color 138 165 185)" />
-          <property type="Float" name="fresnel_strength" value="0.0" />
-          <property type="Float" name="fresnel_power" value="2.5" />
-          <property type="Float" name="face_rim_strength" value="0.0" />
-          <property type="Float" name="face_rim_power" value="0.75" />
-        </properties>
-      </material>
-    </collection>
-  </add>
+	<add sel="/materiallibrary" pos="prepend">
+		<collection name="recharacters">
+			<material name="p1_char_arg_m_uniform_pants" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\otas\textures\char_arg_m_uniform_pants"/>
+					<property type="BitMap" name="normal_map" value="assets\characters\argon\textures\char_arg_m_diplomat_pants_01_normal"/>
+					<property type="BitMap" name="metal_map" value="assets\characters\argon\textures\char_arg_f_diplomat_pants_01_metal"/>
+					<property type="BitMap" name="smooth_map" value="assets\characters\argon\textures\char_arg_m_diplomat_pants_01_smooth"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="1.0"/>
+					<property type="Float" name="Smoothness" value="1.0"/>
+					<property type="Float" name="Metallness" value="1.0"/>
+					<property type="Float" name="environmentStr" value="1.0"/>
+				</properties>
+			</material>
+			<material name="p1_char_arg_m_otas_uniform" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\otas\textures\char_arg_m_otas_uniform"/>
+					<property type="BitMap" name="normal_map" value="assets\characters\argon\textures\char_arg_m_uniform_shirt_crew_01_normal"/>
+					<property type="BitMap" name="smooth_map" value="assets\characters\argon\textures\char_arg_m_uniform_shirt_crew_01_smooth"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="1.0"/>
+					<property type="Float" name="Smoothness" value="1.0"/>
+					<property type="Float" name="Metallness" value="0.0"/>
+					<property type="Float" name="environmentStr" value="1.0"/>
+				</properties>
+			</material>
+			<material name="p1_char_arg_f_uniform_pants" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\otas\textures\char_arg_f_uniform_pants"/>
+					<property type="BitMap" name="normal_map" value="assets\characters\argon\textures\char_arg_f_diplomat_pants_01_normal"/>
+					<property type="BitMap" name="metal_map" value="assets\characters\argon\textures\char_arg_f_diplomat_pants_01_metal"/>
+					<property type="BitMap" name="smooth_map" value="assets\characters\argon\textures\char_arg_f_diplomat_pants_01_smooth"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="1.0"/>
+					<property type="Float" name="Smoothness" value="1.0"/>
+					<property type="Float" name="Metallness" value="1.0"/>
+					<property type="Float" name="environmentStr" value="1.0"/>
+				</properties>
+			</material>
+			<material name="p1_char_arg_f_otas_uniform" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\otas\textures\char_arg_f_otas_uniform"/>
+					<property type="BitMap" name="normal_map" value="assets\characters\argon\textures\char_arg_f_uniform_shirt_crew_01_normal"/>
+					<property type="BitMap" name="smooth_map" value="assets\characters\argon\textures\char_arg_f_uniform_shirt_crew_01_smooth"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="1.0"/>
+					<property type="Float" name="Smoothness" value="1.0"/>
+					<property type="Float" name="Metallness" value="0.0"/>
+					<property type="Float" name="environmentStr" value="1.0"/>
+				</properties>
+			</material>
+			<material name="p1_char_faction_otas_logo" shader="p1_character" blendmode="ALPHA8_GBLEND" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\otas\textures\faction_otas_logo"/>
+					<property type="BitMap" name="normal_map" value="extensions\reemergence\assets\characters\otas\textures\faction_otas_logo_normal"/>
+					<!--property type="BitMap" name="metal_map" value="assets\characters\argon\textures\char_arg_f_diplomat_pants_01_metal" /-->
+					<property type="BitMap" name="smooth_map" value="extensions\reemergence\assets\characters\otas\textures\faction_otas_logo_smooth"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="1.0"/>
+					<property type="Float" name="Smoothness" value="1.0"/>
+					<property type="Float" name="Metallness" value="0.0"/>
+					<property type="Float" name="environmentStr" value="1.0"/>
+				</properties>
+			</material>
+		</collection>
+		<!-- New Stuff -->
+		<collection name="characters_bodies">
+			<material name="ar_m_battlesuit" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\test\textures\swat_body_fixed\ar_m_battlesuit_diffuse"/>
+					<property type="BitMap" name="normal_map" value="extensions\reemergence\assets\characters\test\textures\swat_body_fixed\ar_m_battlesuit_normal"/>
+					<property type="BitMap" name="smooth_map" value="extensions\reemergence\assets\characters\test\textures\swat_body_fixed\ar_m_battlesuit_smooth"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="0.5"/>
+					<property type="Float" name="Smooth" value="0.5"/>
+					<property type="Float" name="Metallness" value="0.0"/>
+					<property type="Float" name="environmentStr" value="0.0"/>
+				</properties>
+			</material>
+			<material name="ar_m_prop_brille" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\test\textures\swat_body_fixed\ar_m_prop_brille_diffuse"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="0.5"/>
+					<property type="Float" name="Smooth" value="0.5"/>
+					<property type="Float" name="Metallness" value="0.0"/>
+					<property type="Float" name="environmentStr" value="0.0"/>
+				</properties>
+			</material>
+			<material name="ar_m_battlesuit_props" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\test\textures\swat_body_fixed\ar_m_battlesuit_props_diffuse"/>
+					<property type="BitMap" name="normal_map" value="extensions\reemergence\assets\characters\test\textures\swat_body_fixed\ar_m_battlesuit_props_normal"/>
+					<property type="BitMap" name="smooth_map" value="extensions\reemergence\assets\characters\test\textures\swat_body_fixed\ar_m_battlesuit_props_smooth"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="0.5"/>
+					<property type="Float" name="Smooth" value="0.5"/>
+					<property type="Float" name="Metallness" value="0.0"/>
+					<property type="Float" name="environmentStr" value="0.0"/>
+				</properties>
+			</material>
+		</collection>
+		<collection name="custom">
+			<material name="deus_ex_helmet" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\test\textures\deus_ex_head\deus_ex_helmet_diffuse"/>
+					<property type="BitMap" name="normal_map" value="extensions\reemergence\assets\characters\test\textures\deus_ex_head\deus_ex_helmet_normal"/>
+					<property type="BitMap" name="smooth_map" value="extensions\reemergence\assets\characters\test\textures\deus_ex_head\deus_ex_helmet_smooth"/>
+					<property type="BitMap" name="color_glow_map" value="extensions\reemergence\assets\characters\test\textures\deus_ex_head\deus_ex_helmet_emissive"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="0.5"/>
+					<property type="Float" name="Smooth" value="0.5"/>
+					<property type="Float" name="Metallness" value="0.0"/>
+					<property type="Float" name="environmentStr" value="0.0"/>
+					<property type="Float" name="color_glowstr" value="2.5"/>
+				</properties>
+			</material>
+		</collection>
+		<collection name="characters_heads">
+			<material name="argon_eyeball_blue" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\test\textures\deus_ex_head\argon_eyeball_blue_diffuse"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="0.5"/>
+					<property type="Float" name="Smooth" value="0.5"/>
+					<property type="Float" name="Metallness" value="0.0"/>
+					<property type="Float" name="environmentStr" value="0.0"/>
+				</properties>
+			</material>
+		</collection>
+		<collection name="characters_bodies">
+			<material name="ar_m_prop_brille" shader="p1_character" blendmode="NONE" preview="none">
+				<properties>
+					<property type="BitMap" name="diffuse_map" value="extensions\reemergence\assets\characters\test\textures\deus_ex_head\ar_m_prop_brille_diffuse"/>
+					<property type="Float" name="diffuseStr" value="1.0"/>
+					<property type="Float" name="normalStr" value="1.0"/>
+					<property type="Float" name="specularStr" value="0.5"/>
+					<property type="Float" name="Smooth" value="0.5"/>
+					<property type="Float" name="Metallness" value="0.0"/>
+					<property type="Float" name="environmentStr" value="0.0"/>
+				</properties>
+			</material>
+		</collection>
+	</add>
 </diff>
