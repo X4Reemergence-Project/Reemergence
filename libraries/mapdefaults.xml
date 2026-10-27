@@ -4230,10 +4230,8 @@
 	<remove sel="/defaults/dataset[@macro='Cluster_40_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_nividium_low_average']"/>
 	<!--Second Contact XI-->
 	<add sel="/defaults/dataset[@macro='Cluster_41_Sector001_macro']/properties/worlds/world" type="@factor">0.1</add>
-	<add sel="/defaults/dataset[@macro='Cluster_41_Sector001_macro']/properties/area" pos="before">
-		<resourceareas>
-			<resourcearea amount="2" ref="sphere_medium_nividium_low_average"/>
-		</resourceareas>
+	<add sel="/defaults/dataset[@macro='Cluster_41_Sector001_macro']/properties/resourceareas">
+		<resourcearea amount="2" ref="sphere_medium_nividium_low_average"/>
 	</add>
 	<!--Hewa's Twin III/IV-->
 	<replace sel="/defaults/dataset[@macro='Cluster_42_Sector001_macro']/properties/worlds/world/@factor">0.15</replace>
