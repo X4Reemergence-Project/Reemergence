@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="prod_gen_stimulants_macro" class="production">
+    <component ref="prod_gen_stimulants" />
+    <properties>
+      <identification name="{4837253,10040}" shortname="{20104,15803}" description="{4837253,10041}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+          <set ref="piratebase" />		  
+        </sets>
+      </build>
+      <explosiondamage value="2000" shield="10000" />
+      <hull max="300000" />
+      <secrecy level="2" />	  
+      <production wares="stimulants">
+        <queue ware="stimulants" />
+      </production>
+      <workforce max="300" />
+    </properties>
+  </macro>
+</macros>
