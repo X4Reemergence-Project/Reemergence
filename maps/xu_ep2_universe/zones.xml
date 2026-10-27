@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<diff>	
+<diff>
 	<!-- CLUSTER 001 - Grand Exchange I/III/IV-->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector001_macro']/connections/connection[@name='connection_ClusterGate001To005']" />		
-	<remove sel="/macros/macro[@name='Zone003_Cluster_01_Sector001_macro']/connections/connection[@name='connection_ClusterGate001To004']" />	
+	<remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector001_macro']/connections/connection[@name='connection_ClusterGate001To005']" />
+	<remove sel="/macros/macro[@name='Zone003_Cluster_01_Sector001_macro']/connections/connection[@name='connection_ClusterGate001To004']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_01_Sector001_macro']/connections"><!--Montalaar-->
 		<connection name="connection_ClusterGate001ToREM58" ref="gates">
 			<offset>
@@ -21,8 +21,8 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
-	<remove sel="/macros/macro[@name='Zone003_Cluster_01_Sector003_macro']/connections/connection[@name='connection_ClusterGate001To002']" />	
+	</add>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_01_Sector003_macro']/connections/connection[@name='connection_ClusterGate001To002']" />
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_01_Sector003_macro" class="zone"><!--CEO's Wellspring-->
 			<component ref="standardzone"/>
@@ -50,19 +50,19 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 
-	
+
 	<!-- CLUSTER 002 - Eighteen Billion -->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_02_Sector001_macro']/connections/connection[@name='connection_ClusterGate002To001']" /><!--Grand Exchange IV-->		
+	<remove sel="/macros/macro[@name='Zone001_Cluster_02_Sector001_macro']/connections/connection[@name='connection_ClusterGate002To001']" /><!--Grand Exchange IV-->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_02_Sector001_macro']/connections/connection[@name='connection_ClusterGate002To003']/offset"><!--Memory of Profit IX-->
 		<offset>
 			<position x="0" y="0" z="22750" />
 			<quaternion qx="0" qy="0.9848078" qz="0" qw="-0.1736482" />
 		</offset>
 	</replace>
-	<remove sel="/macros/macro[@name='Zone003_Cluster_02_Sector001_macro']/connections/connection[@name='connection_ClusterGate002To008']" />	
-	<remove sel="/macros/macro[@name='Zone004_Cluster_02_Sector001_macro']/connections/connection[@name='connection_ClusterGate002To501']" />	
+	<remove sel="/macros/macro[@name='Zone003_Cluster_02_Sector001_macro']/connections/connection[@name='connection_ClusterGate002To008']" />
+	<remove sel="/macros/macro[@name='Zone004_Cluster_02_Sector001_macro']/connections/connection[@name='connection_ClusterGate002To501']" />
 	<add sel="/macros/macro[@name='Zone004_Cluster_02_Sector001_macro']/connections"><!--Path to Profit-->
 		<connection name="connection_ClusterGate002To005" ref="gates">
 			<offset>
@@ -71,21 +71,21 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 003 - Memory of Profit IX -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_03_Sector001_macro']/connections/connection[@name='connection_ClusterGate003To039']/offset"><!--Memory of Profit X-->
 		<offset>
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone002_Cluster_03_Sector001_macro']/connections/connection[@name='connection_ClusterGate003To002']/offset"><!--Eighteen Billion-->
 		<offset>
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0.258819" qz="0" qw="0.9659258" />
 		</offset>
-	</replace>	
+	</replace>
 	<remove sel="/macros/macro[@name='Zone003_Cluster_03_Sector001_macro']/connections/connection[@name='connection_ClusterGate003To009']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_03_Sector001_macro']/connections"><!--Inactive-->
 		<connection name="connection_ClusterGate003To" ref="gates">
@@ -98,7 +98,7 @@
 	</add>
 
 
-	<!-- CLUSTER 004 - Nopileos' Fortune II/IV-->	
+	<!-- CLUSTER 004 - Nopileos' Fortune II/IV-->
 	<remove sel="/macros/macro[@name='Zone001_Cluster_04_Sector002_macro']/connections/connection[@name='connection_ClusterGate004To001']" />
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_04_Sector001_macro" class="zone"><!--Loomanckstrat's Legacy-->
@@ -113,10 +113,10 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 	<replace sel="/macros/macro[@name='Zone001_Cluster_04_Sector002_macro']/connections/connection[@name='connection_ClusterGate004To022']/offset"><!--Pious Mists II-->
-		<offset>		
-			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />			
+		<offset>
+			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
 	</replace>
 	<add sel="//macros">
@@ -179,9 +179,9 @@
 				<connection ref="SHCon4_gate"/>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 005 - Path to Profit -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_05_Sector001_macro']/connections/connection[@name='connection_ClusterGate005To001']/offset"><!--Grand Exchange IV-->
 		<offset>
@@ -189,7 +189,7 @@
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
 	</replace>
-	<remove sel="/macros/macro[@name='Zone004_Cluster_05_Sector001_macro']/connections/connection[@name='connection_ClusterGate005To725']" />		
+	<remove sel="/macros/macro[@name='Zone004_Cluster_05_Sector001_macro']/connections/connection[@name='connection_ClusterGate005To725']" />
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_05_Sector001_macro" class="zone"><!--Belt of Aguilar-->
 			<component ref="standardzone"/>
@@ -231,7 +231,7 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
+	</add>
 
 
 	<!-- CLUSTER 006 - Black Hole Sun IV/V-->
@@ -242,8 +242,8 @@
 		</offset>
 	</replace>
 	<remove sel="/macros/macro[@name='Zone004_Cluster_06_Sector001_macro']/connections/connection[@name='connection_ClusterGate006To503']" />
-	<remove sel="/macros/macro[@name='Zone003_Cluster_06_Sector002_macro']/connections/connection[@name='connection_ClusterGate006To725']" />		
-	<remove sel="/macros/macro[@name='Zone004_Cluster_06_Sector002_macro']/connections/connection[@name='connection_ClusterGate006To001']" />	
+	<remove sel="/macros/macro[@name='Zone003_Cluster_06_Sector002_macro']/connections/connection[@name='connection_ClusterGate006To725']" />
+	<remove sel="/macros/macro[@name='Zone004_Cluster_06_Sector002_macro']/connections/connection[@name='connection_ClusterGate006To001']" />
 	<add sel="/macros/macro[@name='Zone004_Cluster_06_Sector002_macro']/connections"><!--Belt of Aguilar-->
 		<connection name="connection_ClusterGate006ToREM77" ref="gates">
 			<offset>
@@ -266,16 +266,16 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 007 - The Reach -->
 	<replace sel="/macros/macro[@name='Zone003_Cluster_07_Sector001_macro']/connections/connection[@name='connection_ClusterGate007To014']/offset"><!--Argon Prime-->
 		<offset>
-			<position x="0" y="0" z="-22750" />		
+			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
-	</replace>	
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_07_Sector001_macro" class="zone"><!--Elena's Fortune II-->
 			<component ref="standardzone"/>
@@ -289,16 +289,16 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 008 - Silent Witness I -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_08_Sector001_macro']/connections/connection[@name='connection_ClusterGate008To044']/offset"><!--Silent Witness XI-->
 		<offset>
 			<position x="-14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 		</offset>
-	</replace>		
+	</replace>
 	<remove sel="/macros/macro[@name='Zone002_Cluster_08_Sector001_macro']/connections/connection[@name='connection_ClusterGate008To034']" />
 	<add sel="/macros/macro[@name='Zone002_Cluster_08_Sector001_macro']/connections"><!--Light of Heart-->
 		<connection name="connection_ClusterGate008ToREM57" ref="gates">
@@ -308,7 +308,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
+	</add>
 	<remove sel="/macros/macro[@name='Zone003_Cluster_08_Sector001_macro']/connections/connection[@name='connection_ClusterGate008To002']" />
 	<remove sel="/macros/macro[@name='Zone004_Cluster_08_Sector001_macro']/connections/connection[@name='connection_ClusterGate008To029']" />
 	<add sel="/macros/macro[@name='Zone004_Cluster_08_Sector001_macro']/connections"><!--Red Light-->
@@ -319,7 +319,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>			
+	</add>
 	<remove sel="/macros/macro[@name='Zone006_Cluster_08_Sector001_macro']/connections/connection[@name='connection_ClusterGate008To501']" /><!--Void of Opportunity-->	
 	<add sel="/macros/macro[@name='Zone006_Cluster_08_Sector001_macro']/connections">
 		<connection name="connection_ClusterGate008To725" ref="gates">
@@ -330,15 +330,15 @@
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
 	</add>
-	
-	
+
+
 	<!-- CLUSTER 009 - Bright Promise -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_09_Sector001_macro']/connections/connection[@name='connection_ClusterGate009To034']/offset"><!--Profit Center Alpha-->
 		<offset>
 			<position x="-14750" y="0" z="14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
-	</replace>		
+	</replace>
 	<remove sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections/connection[@name='connection_ClusterGate009To018']" />
 	<add sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections"><!--Blue Profit-->
 		<connection name="connection_ClusterGate009ToREM43" ref="gates">
@@ -349,7 +349,7 @@
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
 	</add>
-	<remove sel="/macros/macro[@name='Zone003_Cluster_09_Sector001_macro']/connections/connection[@name='connection_ClusterGate009To003']" />	
+	<remove sel="/macros/macro[@name='Zone003_Cluster_09_Sector001_macro']/connections/connection[@name='connection_ClusterGate009To003']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_09_Sector001_macro']/connections"><!--Hewa's Twin V-->
 		<connection name="connection_ClusterGate009To043" ref="gates">
 			<offset>
@@ -373,10 +373,9 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 
-	
-	
+
 	<!-- CLUSTER 010 - Unholy Retribution -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_10_Sector001_macro']/connections/connection[@name='connection_ClusterGate010To022']/offset"><!--Pious Mists II-->
 		<offset>
@@ -389,17 +388,17 @@
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
-	</replace>	
-	
-	
+	</replace>
+
+
 	<!-- CLUSTER 011 - Pontifex's Claim -->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@name='connection_ClusterGate011To024']" />	
+	<remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@name='connection_ClusterGate011To024']" />
 	<replace sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@name='connection_ClusterGate011To022']/offset"><!--Pious Mists II-->
 		<offset>
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
-	</replace>		
+	</replace>
 	<!--Disabled in 2.0 - Holy Vision
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_11_Sector001_macro" class="zone">
@@ -457,11 +456,11 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 012 - True Sight -->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_12_Sector001_macro']/connections/connection[@name='connection_ClusterGate012To024']" />	
+	<remove sel="/macros/macro[@name='Zone001_Cluster_12_Sector001_macro']/connections/connection[@name='connection_ClusterGate012To024']" />
 	<add sel="/macros/macro[@name='Zone001_Cluster_12_Sector001_macro']/connections"><!--Pontifex's Claim-->
 		<connection name="connection_ClusterGate012To011" ref="gates">
 			<offset>
@@ -472,10 +471,10 @@
 		</connection>
 	</add>
 	<replace sel="/macros/macro[@name='Zone003_Cluster_12_Sector001_macro']/connections/connection[@name='connection_ClusterGate012To013']/offset"><!--Second Contact II-->
-		<offset>	
+		<offset>
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
-	</replace>	
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_12_Sector001_macro" class="zone"><!--Holy Vision-->
 			<component ref="standardzone"/>
@@ -503,24 +502,24 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 013 - Second Contact II -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_13_Sector001_macro']/connections/connection[@name='connection_ClusterGate013To006']/offset"><!--Black Hole Sun IV-->
 		<offset>
-			<position x="0" y="7500" z="-22750" />		
+			<position x="0" y="7500" z="-22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
 	</replace>
 	<remove sel="/macros/macro[@name='Zone002_Cluster_13_Sector001_macro']/connections/connection[@name='connection_ClusterGate013To012']" />
-	<remove sel="/macros/macro[@name='Zone002_Cluster_13_Sector001_macro']/connections/connection[@name='connection_ClusterGate013To040']" />		
-	<remove sel="/macros/macro[@name='Zone002_Cluster_13_Sector001_macro']/connections/connection[@name='connection_ClusterGate013To027']" />	
+	<remove sel="/macros/macro[@name='Zone002_Cluster_13_Sector001_macro']/connections/connection[@name='connection_ClusterGate013To040']" />
+	<remove sel="/macros/macro[@name='Zone002_Cluster_13_Sector001_macro']/connections/connection[@name='connection_ClusterGate013To027']" />
 	<remove sel="/macros/macro[@name='Zone003_Cluster_13_Sector001_macro']/connections/connection[@name='connection_ClusterGate013To014']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_13_Sector001_macro']/connections"><!--Ringo Moon-->
 		<connection name="connection_ClusterGate013ToREM89" ref="gates">
 			<offset>
-				<position x="-14750" y="0" z="-14750" />		
+				<position x="-14750" y="0" z="-14750" />
 				<quaternion qx="0" qy="0.5372996" qz="0" qw="0.8433914 " />
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
@@ -532,7 +531,7 @@
 			<connections>
 				<connection name="connection_ClusterGate013To012" ref="gates">
 					<offset>
-						<position x="14750" y="0" z="-14750" />		
+						<position x="14750" y="0" z="-14750" />
 						<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 					</offset>
 					<macro ref="props_gates_anc_gate_macro" connection="space"/>
@@ -546,31 +545,31 @@
 			<connections>
 				<connection name="connection_ClusterGate013To040" ref="gates">
 					<offset>
-						<position x="-14750" y="0" z="14750" />		
+						<position x="-14750" y="0" z="14750" />
 						<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 					</offset>
 					<macro ref="props_gates_orb_accelerator_01_macro" connection="space"/>
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 014 - Argon Prime -->
 	<remove sel="/macros/macro[@name='Zone001_Cluster_14_Sector001_macro']/connections/connection[@name='connection_ClusterGate014To013']" />
 	<add sel="/macros/macro[@name='Zone001_Cluster_14_Sector001_macro']/connections"><!--Ringo Moon-->
 		<connection name="connection_ClusterGate014ToREM89" ref="gates">
 			<offset>
-				<position x="14750" y="0" z="14750" />		
+				<position x="14750" y="0" z="14750" />
 				<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>		
+	</add>
 	<replace sel="/macros/macro[@name='Zone002_Cluster_14_Sector001_macro']/connections/connection[@name='connection_ClusterGate014To007']/offset"><!--The Reach-->
 		<offset>
 			<position x="-19750" y="0" z="-3750" />
-			<quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068" />		
+			<quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068" />
 		</offset>
 	</replace>
 	<remove sel="/macros/macro[@name='Zone002_Cluster_14_Sector001_macro']/connections/connection[@name='connection_ClusterGate014To706']" />
@@ -588,7 +587,7 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 	<add sel="//macros">
 		<macro name="Zone_Gate2_Cluster_14_Sector001_macro" class="zone"><!--Hatikvah's Faith-->
 			<component ref="standardzone"/>
@@ -602,17 +601,17 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
-	<!-- CLUSTER 015 - Ianamus Zura IV/VII-->	
+	</add>
+
+
+	<!-- CLUSTER 015 - Ianamus Zura IV/VII-->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_15_Sector001_macro']/connections/connection[@name='connection_ClusterGate015To016']/offset"><!--Matrix #451-->
 		<offset>
 			<position x="-22750" y="0" z="0" />
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068" />
 		</offset>
 	</replace>
-	<remove sel="/macros/macro[@name='Zone004_Cluster_15_Sector001_macro']/connections/connection[@name='connection_ClusterGate015To009']" />	
+	<remove sel="/macros/macro[@name='Zone004_Cluster_15_Sector001_macro']/connections/connection[@name='connection_ClusterGate015To009']" />
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_15_Sector001_macro" class="zone"><!--Thuruk's Demise II-->
 			<component ref="standardzone"/>
@@ -641,31 +640,31 @@
 		<macro name="Zone004_Cluster_15_Sector002_macro" class="zone">
 			<component ref="standardzone"/>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 016 - Matrix #451 -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_16_Sector001_macro']/connections/connection[@name='connection_ClusterGate016To015']/offset"><!--Ianamus Zura IV-->
 		<offset>
 			<position x="14750" y="0" z="14750" />
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
-	</replace>	
+	</replace>
 	<remove sel="/macros/macro[@name='Zone003_Cluster_16_Sector001_macro']/connections/connection[@name='connection_ClusterGate016To407']" />
 	<replace sel="/macros/macro[@name='Zone004_Cluster_16_Sector001_macro']/connections/connection[@name='connection_ClusterGate016To017']/offset"><!--Matrix #9-->
 		<offset>
 			<position x="-14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 		</offset>
-	</replace>	
-	
-	
+	</replace>
+
+
 	<!-- CLUSTER 017 - Matrix #9 -->
 	<replace sel="/macros/macro[@name='Zone004_Cluster_17_Sector001_macro']/connections/connection[@name='connection_ClusterGate017To016']/offset"><!--Matrix #451-->
 		<offset>
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
-	</replace>	
+	</replace>
 	<remove sel="/macros/macro[@name='Zone004_Cluster_17_Sector001_macro']/connections/connection[@name='connection_ClusterGate017To421']" />
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_17_Sector001_macro" class="zone"><!--Tkr's Deprivation-->
@@ -680,23 +679,23 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 018 - Trinity Sanctum III -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_18_Sector001_macro']/connections/connection[@name='connection_ClusterGate018To019']/offset"><!--Hewa's Twin I-->
 		<offset>
 			<position x="14750" y="0" z="0" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
-	</replace>		
+	</replace>
 	<remove sel="/macros/macro[@name='Zone003_Cluster_18_Sector001_macro']/connections/connection[@name='connection_ClusterGate018To009']" />
 	<replace sel="/macros/macro[@name='Zone003_Cluster_18_Sector001_macro']/connections/connection[@name='connection_ClusterGate018To047']/offset"><!--Trinity Sanctum VII-->
 		<offset>
 			<position x="22750" y="0" z="0" />
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone005_Cluster_18_Sector001_macro']/connections/connection[@name='connection_ClusterGate018To010']/offset"><!--Unholy Retribution-->
 		<offset>
 			<position x="22750" y="0" z="0" />
@@ -716,16 +715,16 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
+	</add>
 
-	
+
 	<!-- CLUSTER 019 - Hewa's Twin I/II -->
 	<replace sel="/macros/macro[@name='Zone003_Cluster_19_Sector001_macro']/connections/connection[@name='connection_ClusterGate019To018']/offset"><!--Trinity Sanctum III-->
 		<offset>
 			<position x="-22750" y="0" z="0" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
-	</replace>	
+	</replace>
 	<remove sel="/macros/macro[@name='Zone002_Cluster_19_Sector001_macro']/connections/connection[@name='connection_ClusterGate019To042']" />
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_19_Sector001_macro" class="zone"><!--Ministry of Finance-->
@@ -740,7 +739,7 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_19_Sector002_macro" class="zone"><!--Hewa's Twin III-->
 			<component ref="standardzone"/>
@@ -755,9 +754,9 @@
 			</connections>
 		</macro>
 	</add>
-	<remove sel="/macros/macro[@name='Zone003_Cluster_19_Sector002_macro']/connections/connection[@name='connection_ClusterGate019To020']" />		
-	
-	
+	<remove sel="/macros/macro[@name='Zone003_Cluster_19_Sector002_macro']/connections/connection[@name='connection_ClusterGate019To020']" />
+
+
 	<!-- CLUSTER 020 - Company Regard -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_20_Sector001_macro']/connections/connection[@name='connection_ClusterGate020To050']/offset"><!--Turquoise Sea X-->
 		<offset>
@@ -765,7 +764,7 @@
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
 	</replace>
-	<remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@name='connection_ClusterGate020To019']" />		
+	<remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@name='connection_ClusterGate020To019']" />
 	<replace sel="/macros/macro[@name='Zone004_Cluster_20_Sector001_macro']/connections/connection[@name='connection_ClusterGate020To021']/offset"><!--Scale Plate Green VII-->
 		<offset>
 			<position x="14750" y="0" z="-14750" />
@@ -785,17 +784,17 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 021 - Scale Plate Green I/VII-->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_21_Sector001_macro']/connections/connection[@name='connection_ClusterGate021To020']" />			
+	<remove sel="/macros/macro[@name='Zone001_Cluster_21_Sector001_macro']/connections/connection[@name='connection_ClusterGate021To020']" />
 	<replace sel="/macros/macro[@name='Zone003_Cluster_21_Sector002_macro']/connections/connection[@name='connection_ClusterGate021To050']/offset"><!--Turquoise Sea X-->
 		<offset>
 			<position x="14750" y="0" z="14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
-	</replace>		
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_21_Sector002_macro" class="zone"><!--Company Regard-->
 			<component ref="standardzone"/>
@@ -809,9 +808,9 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 022 - Pious Mists II -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_22_Sector001_macro']/connections/connection[@name='connection_ClusterGate022To004']/offset"><!--Nopileos' Fortune IV-->
 		<offset>
@@ -819,14 +818,14 @@
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 		</offset>
 	</replace>
-	<remove sel="/macros/macro[@name='Zone002_Cluster_22_Sector001_macro']/connections/connection[@name='connection_ClusterGate022To037']" />	
+	<remove sel="/macros/macro[@name='Zone002_Cluster_22_Sector001_macro']/connections/connection[@name='connection_ClusterGate022To037']" />
 	<replace sel="/macros/macro[@name='Zone002_Cluster_22_Sector001_macro']/connections/connection[@name='connection_ClusterGate022To010']/offset"><!--Unholy Retribution-->
 		<offset>
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
-	</replace>	
-	<remove sel="/macros/macro[@name='Zone003_Cluster_22_Sector001_macro']/connections/connection[@name='connection_ClusterGate022To038']" />		
+	</replace>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_22_Sector001_macro']/connections/connection[@name='connection_ClusterGate022To038']" />
 	<replace sel="/macros/macro[@name='Zone003_Cluster_22_Sector001_macro']/connections/connection[@name='connection_ClusterGate022To023']/offset"><!--Sacred Relic-->
 		<offset>
 			<position x="22750" y="0" z="0" />
@@ -838,7 +837,7 @@
 			<position x="-14750" y="0" z="14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
-	</replace>	
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_22_Sector001_macro" class="zone"><!--Pious Mists IV-->
 			<component ref="standardzone"/>
@@ -866,9 +865,9 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 
-	
+
 	<!-- CLUSTER 023 - Sacred Relic -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_23_Sector001_macro']/connections/connection[@name='connection_ClusterGate023To022']/offset"><!--Pious Mists II-->
 		<offset>
@@ -881,7 +880,7 @@
 			<position x="14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.1736482" qz="0" qw="-0.9848078" />
 		</offset>
-	</replace>	
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_23_Sector001_macro" class="zone"><!--Sanctum Verge-->
 			<component ref="standardzone"/>
@@ -895,25 +894,25 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 024 - Holy Vision -->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_24_Sector001_macro']/connections/connection[@name='connection_ClusterGate024To725']" />	
+	<remove sel="/macros/macro[@name='Zone001_Cluster_24_Sector001_macro']/connections/connection[@name='connection_ClusterGate024To725']" />
 	<replace sel="/macros/macro[@name='Zone002_Cluster_24_Sector001_macro']/connections/connection[@name='connection_ClusterGate024To012']/offset"><!--True Sight-->
 		<offset>
 			<position x="-14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 		</offset>
-	</replace>		
+	</replace>
 	<replace sel="/macros/macro[@name='Zone003_Cluster_24_Sector001_macro']/connections/connection[@name='connection_ClusterGate024To025']/offset"><!--Faulty Logic VII-->
 		<offset>
 			<position x="-10500" y="7500" z="10500" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
 	</replace>
-	<remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@name='connection_ClusterGate024To011']" />	
-	<remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@name='connection_ClusterGate024To036']" />		
+	<remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@name='connection_ClusterGate024To011']" />
+	<remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@name='connection_ClusterGate024To036']" />
 	<add sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections"><!--Fierce Clarity-->
 		<connection name="connection_ClusterGate024ToREM29" ref="gates">
 			<offset>
@@ -935,16 +934,16 @@
 					<macro ref="props_gates_anc_gate_macro" connection="space">
 					<properties>
             			<state active="false" />
-					</properties>									
-					</macro>				
+					</properties>
+					</macro>
 				</connection>
 			</connections>
 		</macro>
-	</add>		
+	</add>
 
-	
+
 	<!-- CLUSTER 025 - Faulty Logic I/VII-->
-	<remove sel="/macros/macro[@name='Zone003_Cluster_25_Sector001_macro']/connections/connection[@name='connection_ClusterGate025To024']" />		
+	<remove sel="/macros/macro[@name='Zone003_Cluster_25_Sector001_macro']/connections/connection[@name='connection_ClusterGate025To024']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_25_Sector001_macro']/connections"><!--Atiya's Misfortune I-->
 		<connection name="connection_ClusterGate025To026" ref="gates">
 			<offset>
@@ -954,7 +953,7 @@
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
 	</add>
-	<remove sel="/macros/macro[@name='Zone003_Cluster_25_Sector002_macro']/connections/connection[@name='connection_ClusterGate025To026']" />		
+	<remove sel="/macros/macro[@name='Zone003_Cluster_25_Sector002_macro']/connections/connection[@name='connection_ClusterGate025To026']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_25_Sector002_macro']/connections"><!--Holy Vision-->
 		<connection name="connection_ClusterGate025To024" ref="gates">
 			<offset>
@@ -965,25 +964,25 @@
 		</connection>
 	</add>
 
-	
+
 	<!-- CLUSTER 026 - Atiya's Misfortune I/III-->
 	<replace sel="/macros/macro[@name='Zone004_Cluster_26_Sector001_macro']/connections/connection[@name='connection_ClusterGate026To049']/offset"><!--Frontier Edge-->
 		<offset>
 			<position x="-22750" y="0" z="0" />
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068" />
 		</offset>
-	</replace>		
-	<remove sel="/macros/macro[@name='Zone003_Cluster_26_Sector002_macro']/connections/connection[@name='connection_ClusterGate026To715']" />	
+	</replace>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_26_Sector002_macro']/connections/connection[@name='connection_ClusterGate026To715']" />
 	<replace sel="/macros/macro[@name='Zone003_Cluster_26_Sector002_macro']/connections/connection[@name='connection_ClusterGate026To025']/offset"><!--Faulty Logic I-->
 		<offset>
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
-	</replace>			
+	</replace>
 
-	
+
 	<!-- CLUSTER 027 - The Void -->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_27_Sector001_macro']/connections/connection[@name='connection_ClusterGate027To013']" />		
+	<remove sel="/macros/macro[@name='Zone001_Cluster_27_Sector001_macro']/connections/connection[@name='connection_ClusterGate027To013']" />
 	<add sel="/macros/macro[@name='Zone001_Cluster_27_Sector001_macro']/connections"><!--Second Contact VII-->
 		<connection name="connection_ClusterGate027To040" ref="gates">
 			<offset>
@@ -992,14 +991,14 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
+	</add>
 	<replace sel="/macros/macro[@name='Zone003_Cluster_27_Sector001_macro']/connections/connection[@name='connection_ClusterGate027To028']/offset"><!--Antigone Memorial-->
 		<offset>
 			<position x="-22750" y="0" z="0" />
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="0.7071068" />
 		</offset>
-	</replace>		
-	<remove sel="/macros/macro[@name='Zone004_Cluster_27_Sector001_macro']/connections/connection[@name='connection_ClusterGate027To049']" />		
+	</replace>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_27_Sector001_macro']/connections/connection[@name='connection_ClusterGate027To049']" />
 	<replace sel="/macros/macro[@name='Zone005_Cluster_27_Sector001_macro']/connections/connection[@name='connection_ClusterGate027To048']/offset"><!--Getsu Fune-->
 		<offset>
 			<position x="0" y="0" z="22750" />
@@ -1019,29 +1018,29 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 
-	
-	<!-- CLUSTER 028 - Antigone Memorial -->	
+
+	<!-- CLUSTER 028 - Antigone Memorial -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_28_Sector001_macro']/connections/connection[@name='connection_ClusterGate028To027']/offset"><!--The Void-->
 		<offset>
 			<position x="12750" y="0" z="-15750" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone004_Cluster_28_Sector001_macro']/connections/connection[@name='connection_ClusterGate028To113']/offset"><!--Segaris-->
 		<offset>
 			<position x="-22750" y="0" z="0" />
-			<quaternion qx="0" qy="0.819152" qz="0" qw="0.5735764" />			
+			<quaternion qx="0" qy="0.819152" qz="0" qw="0.5735764" />
 		</offset>
-	</replace>	
+	</replace>
 
-	
+
 	<!-- CLUSTER 029 - Hatikvah's Choice I/III-->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_29_Sector001_macro']/connections/connection[@name='connection_ClusterGate029To030']/offset"><!--Morning Star III-->
-		<offset>	
+		<offset>
 			<position x="-17750" y="0" z="17750" />
-			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />				
+			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
 	</replace>
 	<remove sel="/macros/macro[@name='Zone002_Cluster_29_Sector001_macro']/connections/connection[@name='connection_ClusterGate029To008']" />
@@ -1055,16 +1054,16 @@
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
 	</add>
-	<remove sel="/macros/macro[@name='Zone003_Cluster_29_Sector001_macro']/connections/connection[@name='connection_ClusterGate029To014']" />		
-	
-	
-	<!-- CLUSTER 030 - Morning Star III -->	
+	<remove sel="/macros/macro[@name='Zone003_Cluster_29_Sector001_macro']/connections/connection[@name='connection_ClusterGate029To014']" />
+
+
+	<!-- CLUSTER 030 - Morning Star III -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_30_Sector001_macro']/connections/connection[@name='connection_ClusterGate030To029']/offset"><!--Hatikvah's Choice I-->
 		<offset>
 			<position x="14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone002_Cluster_30_Sector001_macro']/connections/connection[@name='connection_ClusterGate030To046']/offset"><!--Morning Star IV-->
 		<offset>
 			<position x="-14750" y="0" z="14750" />
@@ -1080,7 +1079,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
+	</add>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_30_Sector001_macro" class="zone"><!--Argon Prime-->
 			<component ref="standardzone"/>
@@ -1094,19 +1093,19 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
+	</add>
 
-	
+
 	<!-- CLUSTER 031 - Heretics End -->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_31_Sector001_macro']/connections/connection[@name='connection_ClusterGate031To030']" />	
+	<remove sel="/macros/macro[@name='Zone001_Cluster_31_Sector001_macro']/connections/connection[@name='connection_ClusterGate031To030']" />
 	<replace sel="/macros/macro[@name='Zone002_Cluster_31_Sector001_macro']/connections/connection[@name='connection_ClusterGate031To403']/offset"><!--Wretched Skies V-->
 		<offset>
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
 	</replace>
-	<replace sel="/macros/macro[@name='Zone005_Cluster_31_Sector001_macro']/connections/connection[@name='connection_ClusterGate031To601b']/macro/@ref">props_gates_anc_gate_macro</replace>	
-	<remove sel="/macros/macro[@name='Zone005_Cluster_31_Sector001_macro']/connections/connection/macro/properties"/>		
+	<replace sel="/macros/macro[@name='Zone005_Cluster_31_Sector001_macro']/connections/connection[@name='connection_ClusterGate031To601b']/macro/@ref">props_gates_anc_gate_macro</replace>
+	<remove sel="/macros/macro[@name='Zone005_Cluster_31_Sector001_macro']/connections/connection/macro/properties"/>
 	<replace sel="/macros/macro[@name='Zone005_Cluster_31_Sector001_macro']/connections/connection[@name='connection_ClusterGate031To601b']/offset"><!--Watchful Gaze-->
 		<offset>
 			<position x="-22750" y="0" z="0" />
@@ -1126,9 +1125,9 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 032 - Tharka's Cascade XV/XVII-->
 	<remove sel="/macros/macro[@name='Zone003_Cluster_32_Sector001_macro']/connections/connection[@name='connection_ClusterGate032To401']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_32_Sector001_macro']/connections"><!--Family Kritt-->
@@ -1155,7 +1154,7 @@
 			</connections>
 		</macro>
 	</add>
-	<remove sel="/macros/macro[@name='Zone004_Cluster_32_Sector001_macro']/connections/connection[@name='connection_ClusterGate032To029']" />	
+	<remove sel="/macros/macro[@name='Zone004_Cluster_32_Sector001_macro']/connections/connection[@name='connection_ClusterGate032To029']" />
 	<add sel="/macros/macro[@name='Zone004_Cluster_32_Sector001_macro']/connections"><!--Cloudbase South West-->
 		<connection name="connection_ClusterGate032ToREM80" ref="gates">
 			<offset>
@@ -1164,7 +1163,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
+	</add>
 	<remove sel="/macros/macro[@name='Zone003_Cluster_32_Sector002_macro']/connections/connection[@name='connection_ClusterGate032To033']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_32_Sector002_macro']/connections"><!--Matrix #714-->
 		<connection name="connection_ClusterGate032ToREM12" ref="gates">
@@ -1176,8 +1175,8 @@
 		</connection>
 	</add>
 
-	
-	<!-- CLUSTER 033 - Matrix #79B -->	
+
+	<!-- CLUSTER 033 - Matrix #79B -->
 	<remove sel="/macros/macro[@name='Zone001_Cluster_33_Sector001_macro']/connections/connection[@name='connection_ClusterGate033To032']" />
 	<add sel="/macros/macro[@name='Zone001_Cluster_33_Sector001_macro']/connections"><!--Savage Spur I-->
 		<connection name="connection_ClusterGate033To112" ref="gates">
@@ -1198,8 +1197,8 @@
 			<macro ref="props_gates_orb_accelerator_01_macro" connection="space" />
 		</connection>
 	</add>
-	
-	
+
+
 	<!-- CLUSTER 034 - Profit Center Alpha -->
 	<remove sel="/macros/macro[@name='Zone003_Cluster_34_Sector001_macro']/connections/connection[@name='connection_ClusterGate034To008']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_34_Sector001_macro']/connections"><!--Light of Heart-->
@@ -1210,7 +1209,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
+	</add>
 	<remove sel="/macros/macro[@name='Zone004_Cluster_34_Sector001_macro']/connections/connection[@name='connection_ClusterGate034to420']" />
 	<add sel="/macros/macro[@name='Zone004_Cluster_34_Sector001_macro']/connections"><!--Trinity Sanctum III-->
 		<connection name="connection_ClusterGate034To018" ref="gates">
@@ -1240,16 +1239,16 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 035 - Lasting Vengeance -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_35_Sector001_macro']/connections/connection[@name='connection_ClusterGate035To036']/offset"><!--Cardinal's Redress-->
 		<offset>
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
-	</replace>	
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_35_Sector001_macro" class="zone"><!--Duke's Citadel-->
 			<component ref="standardzone"/>
@@ -1264,27 +1263,27 @@
 			</connections>
 		</macro>
 	</add>
-	
-	
+
+
 	<!-- CLUSTER 036 - Cardinal's Redress -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_36_Sector001_macro']/connections/connection[@name='connection_ClusterGate036To024']/offset"><!--Holy Vision-->
 		<offset>
 			<position x="-14750" y="0" z="-13200" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone004_Cluster_36_Sector001_macro']/connections/connection[@name='connection_ClusterGate036To035']/offset"><!--Lasting Vengeance-->
 		<offset>
 			<position x="0" y="0" z="22750" />
 			<quaternion qx="0" qy="1" qz="0" qw="0" />
 		</offset>
-	</replace>		
+	</replace>
 	<replace sel="/macros/macro[@name='Zone005_Cluster_36_Sector001_macro']/connections/connection[@name='connection_ClusterGate036To714']/offset"><!--Freedom's Reach-->
 		<offset>
 			<position x="14750" y="0" z="14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
-	</replace>		
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_36_Sector001_macro" class="zone"><!--Prior's Void II-->
 			<component ref="standardzone"/>
@@ -1300,37 +1299,37 @@
 		</macro>
 	</add>
 
-	
+
 	<!-- CLUSTER 037 - Pious Mists IV -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_37_Sector001_macro']/connections/connection[@name='connection_ClusterGate037To022']/offset"><!--Pious Mists II-->
 		<offset>
 			<position x="-13000" y="0" z="-17000" />
 			<quaternion qx="0" qy="0.5" qz="0" qw="0.8660254" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone003_Cluster_37_Sector001_macro']/connections/connection[@name='connection_ClusterGate037To038']/offset"><!--Pious Mists XI-->
 		<offset>
 			<position x="21000" y="0" z="-9500" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="-0.9238795" />
 		</offset>
 	</replace>
-	
-	
+
+
 	<!-- CLUSTER 038 - Pious Mists XI -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_38_Sector001_macro']/connections/connection[@name='connection_ClusterGate038To037']/offset"><!--Pious Mists IV-->
 		<offset>
 			<position x="-14750" y="0" z="14750" />
 			<quaternion qx="0" qy="1" qz="0" qw="0" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone005_Cluster_38_Sector001_macro']/connections/connection[@name='connection_ClusterGate038To022']/offset"><!--Pious Mists II-->
 		<offset>
 			<position x="-14750" y="0" z="14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
-	</replace>	
+	</replace>
 
-	
+
 	<!-- CLUSTER 039 - Memory of Profit X -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_39_Sector001_macro']/connections/connection[@name='connection_ClusterGate039To003']/offset"><!--Memory of Profit IX-->
 		<offset>
@@ -1343,9 +1342,9 @@
 			<position x="0" y="0" z="22750" />
 			<quaternion qx="0" qy="1" qz="0" qw="0" />
 		</offset>
-	</replace>	
+	</replace>
 
-	
+
 	<!-- CLUSTER 040 - Second Contact VII -->	
 	<replace sel="/macros/macro[@name='Zone001_Cluster_40_Sector001_macro']/connections/connection[@name='connection_ClusterGate040To013']/offset"><!--Second Contact II-->
 		<offset>
@@ -1372,16 +1371,16 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 
-	
+
 	<!-- CLUSTER 041 - Second Contact XI -->
 	<replace sel="/macros/macro[@name='Zone004_Cluster_41_Sector001_macro']/connections/connection[@name='connection_ClusterGate041To040']/offset"><!--Second Contact VII-->
 		<offset>
 			<position x="22750" y="0" z="0" />
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
-	</replace>		
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_41_Sector001_macro" class="zone"><!--Power Circle V-->
 			<component ref="standardzone"/>
@@ -1409,11 +1408,11 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 042 - Hewa's Twin III/IV -->
-	<remove sel="/macros/macro[@name='Zone003_Cluster_42_Sector001_macro']/connections/connection[@name='connection_ClusterGate042To019']" />	
+	<remove sel="/macros/macro[@name='Zone003_Cluster_42_Sector001_macro']/connections/connection[@name='connection_ClusterGate042To019']" />
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_42_Sector001_macro" class="zone"><!--Hewa's Twin II-->
 			<component ref="standardzone"/>
@@ -1427,16 +1426,16 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 
-	
+
 	<!-- CLUSTER 043 - Hewa's Twin V -->
 	<replace sel="/macros/macro[@name='Zone003_Cluster_43_Sector001_macro']/connections/connection[@name='connection_ClusterGate043To042']/offset"><!--Hewa's Twin III-->
 		<offset>
 			<position x="22750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
-	</replace>		
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_43_Sector001_macro" class="zone"><!--Bright Promise-->
 			<component ref="standardzone"/>
@@ -1464,31 +1463,31 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 044 - Silent Witness XI -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_44_Sector001_macro']/connections/connection[@name='connection_ClusterGate044To045']/offset"><!--Silent Witness XII-->
 		<offset>
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone004_Cluster_44_Sector001_macro']/connections/connection[@name='connection_ClusterGate044To008']/offset"><!--Silent Witness I-->
 		<offset>
 			<position x="14750" y="0" z="14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
-	</replace>	
+	</replace>
 
-	
+
 	<!-- CLUSTER 045 - Silent Witness XII -->
 	<replace sel="/macros/macro[@name='Zone003_Cluster_45_Sector001_macro']/connections/connection[@name='connection_ClusterGate045To044']/offset"><!--Silent Witness XI-->
 		<offset>
 			<position x="14750" y="0" z="14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
-	</replace>		
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_45_Sector001_macro" class="zone"><!--Kha'ak Sector Alpha-->
 			<component ref="standardzone"/>
@@ -1516,9 +1515,9 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 046 - Morning Star IV -->
 	<replace sel="/macros/macro[@name='Zone003_Cluster_46_Sector001_macro']/connections/connection[@name='connection_ClusterGate046To030']/offset"><!--Morning Star III-->
 		<offset>
@@ -1539,16 +1538,16 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 
-	
+
 	<!-- CLUSTER 047 - Trinity Sanctum VII -->
 	<replace sel="/macros/macro[@name='Zone002_Cluster_47_Sector001_macro']/connections/connection[@name='connection_ClusterGate047To018']/offset"><!--Trinity III-->
 		<offset>
 			<position x="-14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.3007058" qz="0" qw="0.953717" />
 		</offset>
-	</replace>		
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_47_Sector001_macro" class="zone"><!--Perdition's End-->
 			<component ref="standardzone"/>
@@ -1563,21 +1562,21 @@
 			</connections>
 		</macro>
 	</add>
-	
-	
+
+
 	<!-- CLUSTER 048 - Getsu Fune -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_48_Sector001_macro']/connections/connection[@name='connection_ClusterGate048To100']/offset"><!--Asteroid Belt-->
 		<offset>
 			<position x="0" y="0" z="-14750" />
 			<quaternion qx="0" qy="1" qz="0" qw="0" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone003_Cluster_48_Sector001_macro']/connections/connection[@name='connection_ClusterGate048To027']/offset"><!--The Void-->
 		<offset>
 			<position x="0" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.2164396" qz="0" qw="0.976296" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone004_Cluster_48_Sector001_macro']/connections/connection[@name='connection_ClusterGate048To112']/offset"><!--Savage Spur I-->
 		<offset>
 			<position x="-14750" y="0" z="-14750" />
@@ -1598,7 +1597,7 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
+	</add>
 	<add sel="//macros">
 		<macro name="Zone_Gate2_Cluster_48_Sector001_macro" class="zone"><!--Teladi Gain-->
 			<component ref="standardzone"/>
@@ -1612,18 +1611,18 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
-	
-	
+	</add>
+
+
 	<!-- CLUSTER 049 - Frontier Edge -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_49_Sector001_macro']/connections/connection[@name='connection_ClusterGate049To026']/offset"><!--Atiya's Misfortune I-->
 		<offset>
 			<position x="14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
-	</replace>		
-	<remove sel="/macros/macro[@name='Zone002_Cluster_49_Sector001_macro']/connections/connection[@name='connection_ClusterGate049To720']" />		
-	<remove sel="/macros/macro[@name='Zone003_Cluster_49_Sector001_macro']/connections/connection[@name='connection_ClusterGate049To027']" />		
+	</replace>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_49_Sector001_macro']/connections/connection[@name='connection_ClusterGate049To720']" />
+	<remove sel="/macros/macro[@name='Zone003_Cluster_49_Sector001_macro']/connections/connection[@name='connection_ClusterGate049To027']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_49_Sector001_macro']/connections"><!--Three Worlds-->
 		<connection name="connection_ClusterGate049ToREM11" ref="gates">
 			<offset>
@@ -1633,9 +1632,9 @@
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
 	</add>
-	
-	
-	<!-- CLUSTER 050 - Turquoise Sea IX/X-->	
+
+
+	<!-- CLUSTER 050 - Turquoise Sea IX/X-->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_50_Sector002_macro']/connections/connection[@name='connection_ClusterGate050To020']/offset"><!--Company Regard-->
 		<offset>
 			<position x="-22750" y="0" z="0" />
@@ -1647,7 +1646,7 @@
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
-	</replace>	
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate2_Cluster_50_Sector001_macro" class="zone"><!--Shadows of Giants VII-->
 			<component ref="standardzone"/>
@@ -1657,12 +1656,12 @@
 						<position x="22750" y="3100" z="0"/>
 						<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 					</offset>
-					<macro ref="props_gates_anc_gate_macro" connection="space"/>					
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
 				</connection>
 			</connections>
 		</macro>
 	</add>
-	
+
 
   <!-- CLUSTER 709 - Cardinal's Domain --> 	
 	<replace sel="/macros/macro[@name='Zone001_Cluster_709_Sector001_macro']/connections/connection[@name='connection_ClusterGate709To023']/offset"><!--Sacred Relic-->
@@ -1670,14 +1669,14 @@
 			<position x="0" y="0" z="22750" />
 			<quaternion qx="0" qy="1" qz="0" qw="0" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone002_Cluster_709_Sector001_macro']/connections/connection[@name='connection_ClusterGate709To710']/offset"><!--Moo-Kye's Revenge-->
 		<offset>
 			<position x="-14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 		</offset>
 	</replace>
-	<remove sel="/macros/macro[@name='Zone004_Cluster_709_Sector001_macro']/connections/connection[@name='connection_ClusterGate709To723']" />		
+	<remove sel="/macros/macro[@name='Zone004_Cluster_709_Sector001_macro']/connections/connection[@name='connection_ClusterGate709To723']" />
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_709_Sector001_macro" class="zone"><!--Clarity's End-->
 			<component ref="standardzone"/>
@@ -1691,17 +1690,17 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	  
-	
-	
-  <!-- CLUSTER 710 - Moo-Kye's Revenge --> 
+	</add>
+
+
+  <!-- CLUSTER 710 - Moo-Kye's Revenge -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_710_Sector001_macro']/connections/connection[@name='connection_ClusterGate710To711']/offset"><!--Mi Ton's Refuge-->
 		<offset>
 			<position x="-14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.3826834" qz="0" qw="0.9238795" />
 		</offset>
 	</replace>
-	<remove sel="/macros/macro[@name='Zone002_Cluster_710_Sector001_macro']/connections/connection[@name='connection_ClusterGate710To']" />		
+	<remove sel="/macros/macro[@name='Zone002_Cluster_710_Sector001_macro']/connections/connection[@name='connection_ClusterGate710To']" />
 	<replace sel="/macros/macro[@name='Zone005_Cluster_710_Sector001_macro']/connections/connection[@name='connection_ClusterGate710To709']/offset"><!--Cardinal's Domain-->
 		<offset>
 			<position x="14750" y="0" z="14750" />
@@ -1721,22 +1720,22 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>		
-	
-	
+	</add>
+
+
   <!-- CLUSTER 711 - Mi Ton's Refuge -->
 	<replace sel="/macros/macro[@name='Zone004_Cluster_711_Sector001_macro']/connections/connection[@name='connection_ClusterGate711To712']/offset"><!--Loomanckstrat's Legacy-->
 		<offset>
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone005_Cluster_711_Sector001_macro']/connections/connection[@name='connection_ClusterGate711To710']/offset"><!--Moo-Kye's Revenge-->
 		<offset>
 			<position x="-14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="-0.3826834" />
 		</offset>
-	</replace>		
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_711_Sector001_macro" class="zone"><!--CEO's Wellspring-->
 			<component ref="standardzone"/>
@@ -1750,22 +1749,22 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	  
-	
-	
+	</add>
+
+
   <!-- CLUSTER 712 - Loomanckstrat's Legacy -->
 	<replace sel="/macros/macro[@name='Zone003_Cluster_712_Sector001_macro']/connections/connection[@name='connection_ClusterGate712To711']/offset"><!--Mi Ton's Refuge-->
 		<offset>
 			<position x="0" y="0" z="22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone004_Cluster_712_Sector001_macro']/connections/connection[@name='connection_ClusterGate712To713']/offset"><!--CEO's Doubt-->
 		<offset>
 			<position x="14750" y="0" z="-14750" />
 			<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 		</offset>
-	</replace>		
+	</replace>
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_712_Sector001_macro" class="zone"><!--Nopileos's Fortune II-->
 			<component ref="standardzone"/>
@@ -1779,18 +1778,18 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	 
+	</add>
 
-	
+
   <!-- CLUSTER 713 - CEO's Doubt -->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_713_Sector001_macro']/connections/connection[@name='connection_ClusterGate713To']" /> 
+	<remove sel="/macros/macro[@name='Zone001_Cluster_713_Sector001_macro']/connections/connection[@name='connection_ClusterGate713To']" />
 	<add sel="/macros/macro[@name='Zone001_Cluster_713_Sector001_macro']/connections"><!--Pontifex's Claim-->
 		<connection name="connection_ClusterGate713To011" ref="gates">
 			<offset>
 				<position x="-14750" y="0" z="14750" />
 				<quaternion qx="0" qy="0.9238795" qz="0" qw="0.3826834" />
 			</offset>
-			<macro ref="props_gates_anc_gate_macro" connection="space" />			
+			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
 	</add>
 	<replace sel="/macros/macro[@name='Zone003_Cluster_713_Sector001_macro']/connections/connection[@name='connection_ClusterGate713To712']/offset"><!--Loomanckstrat's Legacy-->
@@ -1798,27 +1797,26 @@
 			<position x="27750" y="0" z="0" />
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
-	</replace>	
+	</replace>
 	<replace sel="/macros/macro[@name='Zone004_Cluster_713_Sector001_macro']/connections/connection[@name='connection_ClusterGate713To039']/offset"><!--Memory of Profit X-->
 		<offset>
 			<position x="0" y="0" z="-22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
-	</replace>		
- 
-	
-	
+	</replace>
+
+
   <!-- CLUSTER 714 - Freedom's Reach -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_714_Sector001_macro']/connections/connection[@name='connection_ClusterGate714To036']/offset"><!--Cardinal's Redress-->
 		<offset>
 			<position x="0" y="0" z="22750" />
 			<quaternion qx="0" qy="0" qz="0" qw="1" />
 		</offset>
-	</replace>  
-	
-	
+	</replace>
+
+
   <!-- CLUSTER 715 - Mists of Artemis -->
-	<remove sel="/macros/macro[@name='Zone001_Cluster_715_Sector001_macro']/connections/connection[@name='connection_ClusterGate715To026']" /><!--Atiya's Misfortune III-->   
+	<remove sel="/macros/macro[@name='Zone001_Cluster_715_Sector001_macro']/connections/connection[@name='connection_ClusterGate715To026']" /><!--Atiya's Misfortune III-->
 	<add sel="//macros">
 		<macro name="Zone_Gate1_Cluster_715_Sector001_macro" class="zone"><!--Kha'ak Sector Alpha-->
 			<component ref="standardzone"/>
@@ -1835,15 +1833,15 @@
 	</add>
 
 
-  <!-- CLUSTER 720 - Ore Belt --> 
+  <!-- CLUSTER 720 - Ore Belt -->
 	<replace sel="/macros/macro[@name='Zone001_Cluster_720_Sector001_macro']/connections/connection[@name='connection_ClusterGate720To730']/offset"><!--Third Redemption-->
 		<offset>
 			<position x="27750" y="0" z="0" />
 			<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068" />
 		</offset>
-	</replace>   
-	<remove sel="/macros/macro[@name='Zone002_Cluster_720_Sector001_macro']/connections/connection[@name='connection_ClusterGate720To049']" /> 
-	<remove sel="/macros/macro[@name='Zone003_Cluster_720_Sector001_macro']/connections/connection[@name='connection_ClusterGate720To722']" /> 
+	</replace>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_720_Sector001_macro']/connections/connection[@name='connection_ClusterGate720To049']" />
+	<remove sel="/macros/macro[@name='Zone003_Cluster_720_Sector001_macro']/connections/connection[@name='connection_ClusterGate720To722']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_720_Sector001_macro']/connections"><!--Zyarth's Stand-->
 		<connection name="connection_ClusterGate720ToREM60" ref="gates">
 			<offset>
@@ -1852,14 +1850,14 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
+	</add>
 	<replace sel="/macros/macro[@name='Zone005_Cluster_720_Sector001_macro']/connections/connection[@name='connection_ClusterGate720To721']/offset"><!--Adventure's Promise-->
 		<offset>
 			<position x="0" y="0" z="27750" />
 			<quaternion qx="0" qy="1" qz="0" qw="0" />
 		</offset>
-	</replace> 
-	
+	</replace>
+
 
   <!-- CLUSTER 721 - Adventure's Promise -->
 	<remove sel="/macros/macro[@name='Zone001_Cluster_721_Sector001_macro']/connections/connection[@name='connection_ClusterGate721To608']" />
@@ -1871,7 +1869,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
+	</add>
 	<replace sel="/macros/macro[@name='Zone003_Cluster_721_Sector001_macro']/connections/connection[@name='connection_ClusterGate721To720']/offset"><!--Ore Belt-->
 		<offset>
 			<position x="0" y="0" z="-27750" />
@@ -1901,7 +1899,7 @@
 				</connection>
 			</connections>
 		</macro>
-	</add>	
+	</add>
 
 
   <!-- CLUSTER 722 - Sanctum Verge -->
@@ -1914,7 +1912,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>		
+	</add>
 	<remove sel="/macros/macro[@name='Zone003_Cluster_722_Sector001_macro']/connections/connection[@name='connection_ClusterGate722To723']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_722_Sector001_macro']/connections"><!--Sacred Relic-->
 		<connection name="connection_ClusterGate722To023" ref="gates">
@@ -1940,7 +1938,7 @@
 			<position x="14750" y="0" z="14750" />
 			<quaternion qx="0" qy="0.8433914" qz="0" qw="-0.5372996" />
 		</offset>
-	</replace>	
+	</replace>
 
 
   <!-- CLUSTER 723 - Tempting Fumes -->
@@ -1963,7 +1961,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>  
+	</add>
 	<remove sel="/macros/macro[@name='Zone004_Cluster_723_Sector001_macro']/connections/connection[@name='connection_ClusterGate723To722']" />
 	<add sel="/macros/macro[@name='Zone004_Cluster_723_Sector001_macro']/connections"><!--Matrix #597-->
 		<connection name="connection_ClusterGate723ToREM86" ref="gates">
@@ -1973,10 +1971,10 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>  	
+	</add>
 
 
-  <!-- CLUSTER 724 - Circle of Deceit -->  
+  <!-- CLUSTER 724 - Circle of Deceit -->
 	<remove sel="/macros/macro[@name='Zone001_Cluster_724_Sector001_macro']/connections/connection[@name='connection_ClusterGate724To115']" />
 	<add sel="/macros/macro[@name='Zone001_Cluster_724_Sector001_macro']/connections"><!--Gaian Prophecy-->
 		<connection name="connection_ClusterGate724To114" ref="gates">
@@ -1995,7 +1993,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
+	</add>
 	<remove sel="/macros/macro[@name='Zone003_Cluster_724_Sector001_macro']/connections/connection[@name='connection_ClusterGate724To722']" />
 	<add sel="/macros/macro[@name='Zone003_Cluster_724_Sector001_macro']/connections"><!--Tebathimanckatt's Legacy-->
 		<connection name="connection_ClusterGate724ToREM74" ref="gates">
@@ -2005,7 +2003,7 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>		
+	</add>
 
 
   <!-- CLUSTER 725 - Void of Opportunity -->
@@ -2019,7 +2017,7 @@
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
 	</add>
-	<remove sel="/macros/macro[@name='Zone002_Cluster_725_Sector001_macro']/connections/connection[@name='connection_ClusterGate725To005']" />	
+	<remove sel="/macros/macro[@name='Zone002_Cluster_725_Sector001_macro']/connections/connection[@name='connection_ClusterGate725To005']" />
 	<remove sel="/macros/macro[@name='Zone005_Cluster_725_Sector001_macro']/connections/connection[@name='connection_ClusterGate725To024']" />
 	<add sel="/macros/macro[@name='Zone005_Cluster_725_Sector001_macro']/connections"><!--Silent Witness I-->
 		<connection name="connection_ClusterGate725To008" ref="gates">
@@ -2029,122 +2027,122 @@
 			</offset>
 			<macro ref="props_gates_anc_gate_macro" connection="space" />
 		</connection>
-	</add>	
-  
-	
+	</add>
+ 
+
 	<!--Remove Highways-->
-  <remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_01_Sector003_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_01_Sector003_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_03_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_03_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_06_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_06_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_06_Sector002_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_06_Sector002_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_08_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_08_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_08_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_08_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_12_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_12_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_12_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_12_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_13_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_13_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_13_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_13_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_15_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_15_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_15_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_15_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone005_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone005_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone005_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_19_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_19_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway04Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway04Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_21_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_21_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_21_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_21_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_22_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_22_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_22_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_22_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway04Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway04Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_25_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_25_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_25_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_25_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_25_Sector002_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_25_Sector002_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone005_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone005_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone005_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_29_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_29_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_29_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_29_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_32_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_32_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_32_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone004_Cluster_32_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_32_Sector002_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone001_Cluster_32_Sector002_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_32_Sector002_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone002_Cluster_32_Sector002_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone005_Cluster_34_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone005_Cluster_34_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_34_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
-  <remove sel="/macros/macro[@name='Zone003_Cluster_34_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>	
+	<remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_01_Sector002_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_01_Sector003_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_01_Sector003_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_03_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_03_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_06_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_06_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_06_Sector002_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_06_Sector002_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_08_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_08_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_08_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_08_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_09_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_10_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_11_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_12_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_12_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_12_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_12_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_13_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_13_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_13_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_13_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_14_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_15_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_15_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_15_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_15_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone005_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone005_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone005_Cluster_18_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_19_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_19_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway04Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_20_Sector001_macro']/connections/connection[@ref='Highway04Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_21_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_21_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_21_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_21_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_22_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_22_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_22_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_22_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway04Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_24_Sector001_macro']/connections/connection[@ref='Highway04Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_25_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_25_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_25_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_25_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_25_Sector002_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_25_Sector002_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone005_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone005_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone005_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway03Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway03Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_28_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_29_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_29_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_29_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_29_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_32_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_32_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_32_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone004_Cluster_32_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_32_Sector002_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone001_Cluster_32_Sector002_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_32_Sector002_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone002_Cluster_32_Sector002_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone005_Cluster_34_Sector001_macro']/connections/connection[@ref='Highway02Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone005_Cluster_34_Sector001_macro']/connections/connection[@ref='Highway01Connection02_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_34_Sector001_macro']/connections/connection[@ref='Highway01Connection01_gate']"/>
+	<remove sel="/macros/macro[@name='Zone003_Cluster_34_Sector001_macro']/connections/connection[@ref='Highway02Connection02_gate']"/>
 </diff>

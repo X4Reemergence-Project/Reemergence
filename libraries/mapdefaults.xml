@@ -3979,20 +3979,20 @@
 
 
 	<!--Basegame-->
-	<add sel="/defaults/dataset[@macro='Cluster_03_Sector001_macro']/properties/area" type="@tags">nmmc</add>	
+	<add sel="/defaults/dataset[@macro='Cluster_03_Sector001_macro']/properties/area" type="@tags">nmmc</add>
 	<remove sel="//dataset[@macro='Cluster_44_macro']/properties/area/@factionlogic"/>
-	<remove sel="//dataset[@macro='Cluster_45_macro']/properties/area/@factionlogic"/>	
+	<remove sel="//dataset[@macro='Cluster_45_macro']/properties/area/@factionlogic"/>
 	<!--Music-->
 	<add sel="/defaults/dataset[@macro='Cluster_03_Sector001_macro']/properties">
 		<sounds>
 			<music ref="music_nmmc" />
 		</sounds>
-	</add>		
+	</add>
 	<add sel="/defaults/dataset[@macro='Cluster_23_Sector001_macro']/properties">
 		<sounds>
 			<music ref="music_alliance" />
 		</sounds>
-	</add>	
+	</add>
 	<add sel="/defaults/dataset[@macro='Cluster_29_Sector002_macro']/properties">
 		<sounds>
 			<music ref="music_hatikvah" />
@@ -4004,7 +4004,7 @@
 		<worlds>
 			<world part="planet001" factor="0.1"/>
 		</worlds>
-	</add> 
+	</add>
 	<add sel="/defaults/dataset[@macro='Cluster_01_Sector002_macro']/properties">
 		<worlds>
 			<world part="planet001" factor="0.15"/>
@@ -4014,7 +4014,7 @@
 		<worlds>
 			<world part="planet001" factor="0.75"/>
 		</worlds>
-	</add>  
+	</add>
 	<!--Nopileos' Fortune II/VI-->
 	<replace sel="/defaults/dataset[@macro='Cluster_04_macro']/properties/system/planets/planet">
 		<planet name="{20003,40001} {20403,101}(a)" class="{1042,14101}(Earth Analog)" geology="{1042,15021}(Mountains)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="272767500" settlements="{1042,16041}(Multiple Cities)" part="planet001">
@@ -4023,10 +4023,10 @@
 	<add sel="/defaults/dataset[@macro='Cluster_04_macro']/properties/system/planets">
 		<planet name="{20003,40001} {20403,102}(b)" class="{1042,14101}(Earth Analog)" geology="{1042,15121}(Swamp)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="204577500" settlements="{1042,16041}(Multiple Cities)" part="part_earthlike001">
 		</planet>
-	</add> 
+	</add>
 	<remove sel="/defaults/dataset[@macro='Cluster_04_Sector001_macro']/properties/worlds/world[@part='planet001']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_04_Sector002_macro']/properties/worlds"/> 
-	<!--Nopileos' Fortune I - Duke's Stronghold-->	
+	<remove sel="/defaults/dataset[@macro='Cluster_04_Sector002_macro']/properties/worlds"/>
+	<!--Nopileos' Fortune I - Duke's Stronghold-->
 	<add sel="/defaults//dataset[@macro='Cluster_04_Sector002_macro']" pos="after">
 		<dataset macro="Cluster_04_Sector003_macro">
 			<properties>
@@ -4037,7 +4037,7 @@
 				</worlds>
 			</properties>
 		</dataset>
-	</add>	
+	</add>
 	<!--Path to Profit-->
 	<replace sel="/defaults/dataset[@macro='Cluster_05_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_05_macro']/properties/system/planets/planet/@settlements">{4837255,14}(Mining Facilities)</replace>
@@ -4046,9 +4046,9 @@
 		<worlds>
 			<world part="planet001"/>
 		</worlds>
-	</add>  
+	</add>
 	<!--Black Hole Sun IV/V-->
-	<replace sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/identification/@image">enc_new_cluster06</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/identification/@image">enc_new_cluster06</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/system/planets/planet/moons/moon/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/system/planets/planet/moons/moon/@settlements">{1042,16041}(Multiple Cities)</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_06_macro']/properties/system/planets/planet/moons/moon" type="@maxpopulation">167946576</add>
@@ -4056,9 +4056,9 @@
 	<remove sel="/defaults/dataset[@macro='Cluster_06_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_methane_medium_veryslow']"/>
 	<replace sel="/defaults/dataset[@macro='Cluster_06_Sector002_macro']/properties/worlds/world/@part">Sphere001</replace>
 	<remove sel="/defaults/dataset[@macro='Cluster_06_Sector002_macro']/properties/worlds/world/@factor"/>
-	<replace sel="/defaults/dataset[@macro='Cluster_06_Sector002_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_methane_medium_veryslow']/@amount">5</replace>		
+	<replace sel="/defaults/dataset[@macro='Cluster_06_Sector002_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_methane_medium_veryslow']/@amount">5</replace>
 	<!--The Reach-->
-	<replace sel="/defaults/dataset[@macro='Cluster_07_macro']/properties/system/planets/planet/@maxpopulation">470011030</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_07_macro']/properties/system/planets/planet/@maxpopulation">470011030</replace>
 	<!--Silent Witness I-->
 	<replace sel="/defaults/dataset[@macro='Cluster_08_macro']/properties/system/planets/planet/@settlements">{4837255,13}(Orbital Cities)</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_08_macro']/properties/system/planets/planet" type="@maxpopulation">83499337</add>
@@ -4066,14 +4066,14 @@
 		<worlds>
 			<world part="planet001"/>
 		</worlds>
-	</add>  
+	</add>
 	<!--Bright Promise-->
-	<replace sel="/defaults/dataset[@macro='Cluster_09_macro']/properties/system/planets/planet/@maxpopulation">577056</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_09_macro']/properties/system/planets/planet/@maxpopulation">577056</replace>
 	<!--Unholy Retribution-->
-	<replace sel="/defaults/dataset[@macro='Cluster_10_macro']/properties/system/planets/planet/moons/moon/@maxpopulation">55024850</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_10_macro']/properties/system/planets/planet/moons/moon/@maxpopulation">55024850</replace>
 	<!--Pontifex's Claim-->
 	<replace sel="/defaults/dataset[@macro='Cluster_11_macro']/properties/system/planets/planet/@maxpopulation">229656036</replace>
-	<replace sel="/defaults/dataset[@macro='Cluster_11_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_11_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>
 	<!--True Sight-->
 	<replace sel="/defaults/dataset[@macro='Cluster_12_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_12_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>
@@ -4082,16 +4082,16 @@
 		<worlds>
 			<world part="planet001"/>
 		</worlds>
-	</add>  
+	</add>
 	<!--Second Contact II-->
 	<replace sel="/defaults/dataset[@macro='Cluster_13_macro']/properties/system/planets/planet/@maxpopulation">1084233330</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_13_macro']/properties/system/planets/planet/@settlements">{1042,16041}(Multiple Cities)</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_13_macro']/properties/system/planets/planet/moons">
 		<moon name="Beacon" geology="{1042,15091}(Craters)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
 	</add>
-	<add sel="/defaults/dataset[@macro='Cluster_13_Sector001_macro']/properties/worlds/world" type="@factor">0.15</add>  
+	<add sel="/defaults/dataset[@macro='Cluster_13_Sector001_macro']/properties/worlds/world" type="@factor">0.15</add>
 	<!--Argon Prime-->
-	<replace sel="/defaults/dataset[@macro='Cluster_14_macro']/properties/system/planets/planet/@maxpopulation">5388113907</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_14_macro']/properties/system/planets/planet/@maxpopulation">5388113907</replace>
 	<!--Ianamus Zura IV/VII-->
 	<replace sel="/defaults/dataset[@macro='Cluster_15_macro']/properties/system/planets/planet/@maxpopulation">5822051013</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_15_Sector001_macro']/properties/worlds/world" type="@factor">0.95</add>
@@ -4102,7 +4102,7 @@
 	<remove sel="/defaults/dataset[@macro='Cluster_17_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_small_methane_low_veryfast']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_17_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_nividium_high_fast']"/>
 	<!--Trinity Sanctum III-->
-	<replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/identification/@image">enc_new_cluster18</replace>   
+	<replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/identification/@image">enc_new_cluster18</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/suns/sun/@class">{1042,13121}(Blue Giant)</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/@name">{20003,180001} {20403,101}(a)</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_18_macro']/properties/system/planets/planet/@class">{1042,14031}(Terrestrial)</replace>
@@ -4124,9 +4124,9 @@
 		</worlds>
 	</add>
 	<!--Hewa's Twin I/II-->
-	<replace sel="/defaults/dataset[@macro='Cluster_19_macro']/properties/system/planets/planet/@maxpopulation">827929510</replace>   
+	<replace sel="/defaults/dataset[@macro='Cluster_19_macro']/properties/system/planets/planet/@maxpopulation">827929510</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_19_Sector001_macro']/properties/worlds/world" type="@factor">0.5</add>
-	<replace sel="/defaults/dataset[@macro='Cluster_19_Sector002_macro']/properties/worlds/world/@factor">0.3</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_19_Sector002_macro']/properties/worlds/world/@factor">0.3</replace>
 	<!--Company Regard-->
 	<replace sel="/defaults/dataset[@macro='Cluster_20_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_20_macro']/properties/system/planets/planet/@settlements">{1042,16091}(Agora Ouranos)</replace>
@@ -4135,7 +4135,7 @@
 		<worlds>
 			<world part="planet001"/>
 		</worlds>
-	</add>  
+	</add>
 	<!--Pious Mists II-->
 	<replace sel="/defaults/dataset[@macro='Cluster_22_macro']/properties/system/planets/planet/@geology">{1042,15111}(Desert)</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_22_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
@@ -4145,13 +4145,13 @@
 		<worlds>
 			<world part="planet"/>
 		</worlds>
-	</add>  
+	</add>
 	<!--Sacred Relic-->
-	<replace sel="/defaults/dataset[@macro='Cluster_23_macro']/properties/system/planets/planet/@maxpopulation">484628403</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_23_macro']/properties/system/planets/planet/@maxpopulation">484628403</replace>
 	<!--Holy Vision-->
-	<replace sel="/defaults/dataset[@macro='Cluster_24_macro']/properties/system/planets/planet/@maxpopulation">3297217038</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_24_macro']/properties/system/planets/planet/@maxpopulation">3297217038</replace>
 	<!--Fauly Logic I/VII-->
-	<replace sel="/defaults/dataset[@macro='Cluster_25_macro']/properties/identification/@image">enc_new_cluster25</replace>   
+	<replace sel="/defaults/dataset[@macro='Cluster_25_macro']/properties/identification/@image">enc_new_cluster25</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_25_macro']/properties/system">
 		<planets>
 			<planet name="{20003,250001}{20403,101}(a)" class="{1042,14031}(Terrestrial)" geology="{4837255,11}(Toxic)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)" part="part_earthlike001">
@@ -4172,7 +4172,7 @@
 			<world part="Moon1"/>
 			<world part="Moon2"/>
 		</worlds>
-	</add> 
+	</add>
 	<!--The Void-->
 	<replace sel="/defaults/dataset[@macro='Cluster_27_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_27_macro']/properties/system/planets/planet/@settlements">{4837255,13}(Orbital Cities)</replace>
@@ -4181,9 +4181,9 @@
 		<worlds>
 			<world part="planet001"/>
 		</worlds>
-	</add>  
+	</add>
 	<!--Antigone Memorial-->
-	<replace sel="/defaults/dataset[@macro='Cluster_28_macro']/properties/system/planets/planet/@maxpopulation">3366400865</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_28_macro']/properties/system/planets/planet/@maxpopulation">3366400865</replace>
 	<!--Hatikvah's Choice I/III-->
 	<replace sel="/defaults/dataset[@macro='Cluster_29_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_29_macro']/properties/system/planets/planet/@settlements">{4837255,13}(Orbital Cities)</replace>
@@ -4197,18 +4197,18 @@
 		<worlds>
 			<world part="planet001" factor="0.95"/>
 		</worlds>
-	</add>  
+	</add>
 	<!--Morningstar III-->
-	<replace sel="/defaults/dataset[@macro='Cluster_30_macro']/properties/system/planets/planet/@maxpopulation">94479594</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_30_macro']/properties/system/planets/planet/@maxpopulation">94479594</replace>
 	<!--Heretic's End-->
-	<replace sel="/defaults/dataset[@macro='Cluster_31_macro']/properties/system/planets/planet/@maxpopulation">147192381</replace>  
-	<!--Profit Center Alpha-->  
-	<replace sel="/defaults/dataset[@macro='Cluster_34_macro']/properties/system/planets/planet/@maxpopulation">1725063168</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_31_macro']/properties/system/planets/planet/@maxpopulation">147192381</replace>
+	<!--Profit Center Alpha-->
+	<replace sel="/defaults/dataset[@macro='Cluster_34_macro']/properties/system/planets/planet/@maxpopulation">1725063168</replace>
 	<!--Lasting Vengeance-->
 	<replace sel="/defaults/dataset[@macro='Cluster_35_macro']/properties/system/planets/planet/@maxpopulation">313486337</replace>
 	<remove sel="/defaults/dataset[@macro='Cluster_35_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_ore_high_slow']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_35_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_small_ore_medium_average']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_35_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_ore_low_fast']"/>		
+	<remove sel="/defaults/dataset[@macro='Cluster_35_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_ore_low_fast']"/>
 	<!--Cardinal's Redress-->
 	<replace sel="/defaults/dataset[@macro='Cluster_36_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_36_macro']/properties/system/planets/planet/@settlements">{4837255,14}(Mining Facilities)</replace>
@@ -4224,56 +4224,64 @@
 			<resourcearea amount="3" ref="sphere_medium_rawscrap_medium_average"/>
 			<resourcearea amount="5" ref="sphere_small_rawscrap_high_slow"/>
 		</resourceareas>
-	</add>	
+	</add>
 	<!--Second Contact VII-->
-	<add sel="/defaults/dataset[@macro='Cluster_40_Sector001_macro']/properties/worlds/world" type="@factor">0.75</add>  
+	<add sel="/defaults/dataset[@macro='Cluster_40_Sector001_macro']/properties/worlds/world" type="@factor">0.75</add>
+	<remove sel="/defaults/dataset[@macro='Cluster_40_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_nividium_low_average']"/>
 	<!--Second Contact XI-->
-	<add sel="/defaults/dataset[@macro='Cluster_41_Sector001_macro']/properties/worlds/world" type="@factor">0.1</add>  
-	<!--Hewa's Twin III/IV-->  
+	<add sel="/defaults/dataset[@macro='Cluster_41_Sector001_macro']/properties/worlds/world" type="@factor">0.1</add>
+	<add sel="/defaults/dataset[@macro='Cluster_41_Sector001_macro']/properties/area" pos="before">
+		<resourceareas>
+			<resourcearea amount="2" ref="sphere_medium_nividium_low_average"/>
+		</resourceareas>
+	</add>
+	<!--Hewa's Twin III/IV-->
 	<replace sel="/defaults/dataset[@macro='Cluster_42_Sector001_macro']/properties/worlds/world/@factor">0.15</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_42_Sector002_macro']/properties/worlds/world/@factor">0.035</replace>
 	<!--Hewa's Twin V-->
-	<replace sel="/defaults/dataset[@macro='Cluster_43_Sector001_macro']/properties/worlds/world/@factor">0.025</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_43_Sector001_macro']/properties/worlds/world/@factor">0.025</replace>
 	<!--Morning Star IV-->
-	<add sel="/defaults/dataset[@macro='Cluster_46_Sector001_macro']/properties/worlds/world" type="@factor">0.305</add> 
+	<add sel="/defaults/dataset[@macro='Cluster_46_Sector001_macro']/properties/worlds/world" type="@factor">0.305</add>
 	<!--Frontier Edge-->
-	<replace sel="/defaults/dataset[@macro='Cluster_49_Sector001_macro']/properties/area/@sunlight">0.93</replace>	
+	<replace sel="/defaults/dataset[@macro='Cluster_49_Sector001_macro']/properties/area/@sunlight">0.93</replace>
+	<remove sel="/defaults/dataset[@macro='Cluster_49_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_helium_medium_veryslow']"/>
+	<remove sel="/defaults/dataset[@macro='Cluster_49_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_huge_methane_veryhigh_veryslow']"/>
 	<!--Cardinal's Domain-->
 	<replace sel="/defaults/dataset[@macro='cluster_709_macro']/properties/system/planets/planet/@maxpopulation">1643811946</replace>
-	<remove sel="/defaults/dataset[@macro='cluster_709_Sector001_macro']/properties/worlds/world/@factor"/>  
+	<remove sel="/defaults/dataset[@macro='cluster_709_Sector001_macro']/properties/worlds/world/@factor"/>
 	<!--Moo-Kye's Revenge-->
-	<add sel="/defaults/dataset[@macro='cluster_710_Sector001_macro']/properties/area" type="@factionlogic">false</add>		
+	<add sel="/defaults/dataset[@macro='cluster_710_Sector001_macro']/properties/area" type="@factionlogic">false</add>
 	<replace sel="/defaults/dataset[@macro='cluster_710_macro']/properties/system/planets/planet[@name='{20003,7100001} {20403,101}(a)']/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='cluster_710_macro']/properties/system/planets/planet[@name='{20003,7100001} {20403,101}(a)']/@settlements">{1042,16101}(Small Settlements)</replace>
 	<add sel="/defaults/dataset[@macro='cluster_710_macro']/properties/system/planets/planet[@name='{20003,7100001} {20403,101}(a)']" type="@maxpopulation">28101320</add>
 	<!--Mi Ton's Refuge-->
-	<add sel="/defaults/dataset[@macro='cluster_711_Sector001_macro']/properties/area" type="@factionlogic">false</add>		
+	<add sel="/defaults/dataset[@macro='cluster_711_Sector001_macro']/properties/area" type="@factionlogic">false</add>
 	<replace sel="/defaults/dataset[@macro='cluster_711_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='cluster_711_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>
 	<add sel="/defaults/dataset[@macro='cluster_711_macro']/properties/system/planets/planet" type="@maxpopulation">63624376</add>
 	<!--Loomanckstrat's Legacy-->
-	<add sel="/defaults/dataset[@macro='cluster_712_Sector001_macro']/properties/area" type="@factionlogic">false</add>		
+	<add sel="/defaults/dataset[@macro='cluster_712_Sector001_macro']/properties/area" type="@factionlogic">false</add>
 	<add sel="/defaults/dataset[@macro='cluster_712_macro']/properties/system">
 		<planets>
 			<planet name="{1042,12041}(Asteroids)" class="{1042,12041}(Asteroids)" geology="{1042,12041}(Asteroids)" atmosphere="{1042,10011}(None)" population="{1042,10021}" maxpopulation="13537924" settlements="{4837255,12}(Asteroid Settlements)" part="part_loomanckstratslegacy"/>
 		</planets>
-	</add> 
+	</add>
 	<!--CEO's Doubt-->
 	<replace sel="/defaults/dataset[@macro='cluster_713_macro']/properties/system/planets/planet[@name='{20003,7130001} {20403,101}(a)']/@maxpopulation">102067239</replace>
 	<remove sel="/defaults/dataset[@macro='cluster_713_Sector001_macro']/properties/worlds/world/@factor"/>
 	<!--Freedom's Reach-->
-	<add sel="/defaults/dataset[@macro='cluster_714_Sector001_macro']/properties/area" type="@factionlogic">false</add>		
+	<add sel="/defaults/dataset[@macro='cluster_714_Sector001_macro']/properties/area" type="@factionlogic">false</add>
 	<replace sel="/defaults/dataset[@macro='cluster_714_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='cluster_714_macro']/properties/system/planets/planet/@settlements">{1042,16031}(Research Outpost)</replace>
 	<add sel="/defaults/dataset[@macro='cluster_714_macro']/properties/system/planets/planet" type="@maxpopulation">2072163</add>
 	<!--Mists of Artemmis-->
-	<add sel="/defaults/dataset[@macro='cluster_715_Sector001_macro']/properties/area" type="@factionlogic">false</add>		
+	<add sel="/defaults/dataset[@macro='cluster_715_Sector001_macro']/properties/area" type="@factionlogic">false</add>
 	<!--Ore Belt-->
 	<replace sel="/defaults/dataset[@macro='cluster_720_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='cluster_720_macro']/properties/system/planets/planet/@settlements">{1042,16041}(Multiple Cities)</replace>
 	<add sel="/defaults/dataset[@macro='cluster_720_macro']/properties/system/planets/planet" type="@maxpopulation">51801022</add>
 	<!--Tempting Fumes-->
-	<add sel="/defaults/dataset[@macro='cluster_723_Sector001_macro']/properties/area" type="@factionlogic">false</add>	
+	<add sel="/defaults/dataset[@macro='cluster_723_Sector001_macro']/properties/area" type="@factionlogic">false</add>
 	<!--Void of Opportunity-->
 	<add sel="/defaults/dataset[@macro='cluster_725_macro']/properties/system">
 		<planets>
@@ -4284,12 +4292,12 @@
 			</planet>
 		</planets>
 	</add>
-	<replace sel="/defaults/dataset[@macro='cluster_725_Sector001_macro']/properties/worlds/world/@part">planet</replace>	
+	<replace sel="/defaults/dataset[@macro='cluster_725_Sector001_macro']/properties/worlds/world/@part">planet</replace>
 	
 
-	<!--Split DLC-->	
+	<!--Split DLC-->
 	<add sel="/defaults/dataset[@macro='Cluster_419_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
-	<add sel="/defaults/dataset[@macro='Cluster_420_Sector001_macro']/properties/area" type="@tags">splitdlc</add>	
+	<add sel="/defaults/dataset[@macro='Cluster_420_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
 	<add sel="/defaults/dataset[@macro='Cluster_422_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
 	<add sel="/defaults/dataset[@macro='Cluster_423_Sector001_macro']/properties/area" type="@tags">splitdlc</add>
 	<add sel="/defaults/dataset[@macro='Cluster_423_Sector002_macro']/properties/area" type="@tags">splitdlc</add>
@@ -4303,13 +4311,13 @@
 			<world part="part_gasgiant" factor="0.05"/>
 		</worlds>
 	</add>
-	<!--Family Zhin-->  
+	<!--Family Zhin-->
 	<replace sel="/defaults/dataset[@macro='Cluster_401_macro']/properties/system/planets/planet/moons/moon/@maxpopulation">53661408</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_401_macro']/properties/system/planets/planet/moons/moon/@settlements">{4837255,14}(Mining Facilities)</replace>
 	<remove sel="/defaults/dataset[@macro='Cluster_401_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_methane_high_veryslow']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_401_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_nividium_low_slow']"/>
 	<!--Family Kritt I-->
-	<replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/identification/@image">enc_new_cluster402</replace>   
+	<replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/identification/@image">enc_new_cluster402</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/@class">{1042,14101}(Earth Analog)</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/@geology">{1042,15131}(Forest)</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_402_macro']/properties/system/planets/planet/@atmosphere">{1042,11071}(Nitrogen/Oxygen)</replace>
@@ -4324,8 +4332,8 @@
 			<moon name="{20003,4020001} {20403,101}(a) {20402,1}(II)" geology="{1042,15091}(Craters)" atmosphere="{1042,11081}(Carbon Dioxide)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
 		</moons>
 	</add>
-	<replace sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties/identification/@name">{4837254,2024}</replace> 
-	<replace sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties/identification/@description">{4837254,2025}</replace>   	
+	<replace sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties/identification/@name">{4837254,2024}</replace>
+	<replace sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties/identification/@description">{4837254,2025}</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties">
 		<worlds>
 			<world part="part_earthlike001"/>
@@ -4333,8 +4341,8 @@
 	</add>
 	<remove sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_small_ice_high_slow']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_ice_medium_average']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_ice_low_fast']"/>		
-	<!--Family Kritt VI-->	
+	<remove sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_ice_low_fast']"/>
+	<!--Family Kritt VI-->
 	<add sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']" pos="after">
 		<dataset macro="Cluster_402_Sector002_macro">
 			<properties>
@@ -4342,7 +4350,7 @@
 				<area sunlight="0.85" economy="1.0" security="0.75" tags="allowrandomanomaly"/>
 				<sounds>
 					<music ref="music_dlc_split_soundtrack_loyal_families" />
-				</sounds>				
+				</sounds>
 				<worlds>
 					<world part="part_earthlike001" factor="0.25"/>
 				</worlds>
@@ -4351,11 +4359,11 @@
 					<resourcearea amount="5" ref="sphere_small_ice_high_slow" />
 					<resourcearea amount="3" ref="sphere_tiny_ice_medium_average" />
 					<resourcearea amount="3" ref="sphere_tiny_ice_low_fast" />
-				</resourceareas>				
+				</resourceareas>
 			</properties>
 		</dataset>
-	</add>	
-	<!--Family Kritt VIII-->	
+	</add>
+	<!--Family Kritt VIII-->
 	<add sel="/defaults/dataset[@macro='Cluster_402_Sector001_macro']" pos="after">
 		<dataset macro="Cluster_402_Sector003_macro">
 			<properties>
@@ -4363,13 +4371,13 @@
 				<area sunlight="0.81" economy="1.0" security="0.75" tags="allowrandomanomaly"/>
 				<sounds>
 					<music ref="music_dlc_split_soundtrack_loyal_families" />
-				</sounds>				
+				</sounds>
 				<worlds>
 					<world part="part_earthlike001" factor="0.1"/>
 				</worlds>
 			</properties>
 		</dataset>
-	</add>	
+	</add>
 	<!--Wretched Skies V-->
 	<add sel="/defaults/dataset[@macro='Cluster_403_Sector001_macro']/properties">
 		<worlds>
@@ -4386,9 +4394,9 @@
 		<worlds>
 			<world part="part_sun"/>
 		</worlds>
-	</add>  
+	</add>
 	<!--Family Tkr-->
-	<replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/identification/@image">enc_new_cluster407</replace>   
+	<replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/identification/@image">enc_new_cluster407</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@name">{20003,4070001} {20403,101}(a)</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@class">{1042,14031}(Terrestrial)</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_407_macro']/properties/system/planets/planet/@geology">{1042,15131}(Forest)</replace>
@@ -4422,7 +4430,7 @@
 			<resourcearea amount="2" ref="sphere_large_hydrogen_low_fast"/>
 			<resourcearea amount="1" ref="sphere_medium_hydrogen_medium_average"/>
 		</resourceareas>
-	</add>	
+	</add>
 	<!--Tharka's Ravine XXIV-->
 	<replace sel="/defaults/dataset[@macro='Cluster_409_macro']/properties/system/planets/planet[@name='{20003,4090001} {20403,105}(e)']/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_409_macro']/properties/system/planets/planet[@name='{20003,4090001} {20403,105}(e)']/@settlements">{4837255,13}(Orbital Cities)</replace>
@@ -4444,7 +4452,7 @@
 	</add>
 	<!--Guiding Star V-->
 	<replace sel="/defaults/dataset[@macro='Cluster_416_Sector001_macro']/properties/area/@sunlight">1.42</replace>
-	<replace sel="/defaults/dataset[@macro='Cluster_416_Sector001_macro']/properties/area/@security">0.75</replace>  
+	<replace sel="/defaults/dataset[@macro='Cluster_416_Sector001_macro']/properties/area/@security">0.75</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_416_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_416_macro']/properties/system/planets/planet/@settlements">{1042,16081}(Sky City)</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_416_macro']/properties/system/planets/planet" type="@maxpopulation">234202120</add>
@@ -4462,10 +4470,10 @@
 		<resourcearea amount="2" ref="sphere_large_silicon_medium_average"/>
 		<resourcearea amount="4" ref="sphere_medium_silicon_medium_average"/>
 		<resourcearea amount="3" ref="sphere_small_silicon_high_slow"/>
-	</add>	
+	</add>
 	<!--Eleventh Hour-->
-	<replace sel="/defaults/dataset[@macro='Cluster_417_Sector001_macro']/properties/area/@security">0.5</replace>  
-	<add sel="/defaults/dataset[@macro='Cluster_417_Sector001_macro']/properties/area" type="@extensionexclusivejobs">false</add>  
+	<replace sel="/defaults/dataset[@macro='Cluster_417_Sector001_macro']/properties/area/@security">0.5</replace>
+	<add sel="/defaults/dataset[@macro='Cluster_417_Sector001_macro']/properties/area" type="@extensionexclusivejobs">false</add>
 	<!--Family Nhuut-->
 	<replace sel="/defaults/dataset[@macro='Cluster_418_macro']/properties/system/planets/planet/@maxpopulation">447528984</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_418_macro']/properties/system/planets/planet/moons/moon[@name='{20003,4180001} {20403,103}(c) {20402,1}(I)']/@maxpopulation">111881246</replace>
@@ -4489,9 +4497,9 @@
 	<!--Emperor's Pride-->
 	<replace sel="/defaults/dataset[@macro='Cluster_424_macro']/properties/system/planets/planet/@population">{1042,10011}(None)</replace>
 	<remove sel="/defaults/dataset[@macro='Cluster_424_macro']/properties/system/planets/planet/@maxpopulation"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties/worlds/world/@factor"/>  
+	<remove sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties/worlds/world/@factor"/>
 
-	
+
 	<!--Terran DLC-->
 	<!--Asteroid Belt-->
 	<add sel="/defaults/dataset[@macro='Cluster_100_Sector001_macro']/properties">
@@ -4501,8 +4509,8 @@
 	</add>
 	<remove sel="/defaults/dataset[@macro='Cluster_100_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_helium_high_slow']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_100_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_helium_medium_average']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_100_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_helium_medium_veryfast']"/>		
-	<!--Sol System-->  
+	<remove sel="/defaults/dataset[@macro='Cluster_100_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_helium_medium_veryfast']"/>
+	<!--Sol System-->
 	<replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7017}(Mercury)']/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7017}(Mercury)']/@settlements">{4837255,14}(Mining Facilities)</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets/planet[@name='{20005,7017}(Mercury)']" type="@maxpopulation">83130194</add>
@@ -4577,17 +4585,17 @@
 				<moon name="Dysnomia" geology="{1042,15071}(Rocks)" atmosphere="{1042,10011}(None)" population="{1042,16011}(Uninhabited)" settlements="{1042,10011}(None)"/>
 			</moons>
 		</planet>
-	</add>		
+	</add>
 	<add sel="/defaults/dataset[@macro='Cluster_106_macro']/properties/system/planets">
 		<planet name="{4837254,30}(Kuiper Belt)" class="{1042,12041}(Asteroids)" geology="{1042,12041}(Asteroids)" atmosphere="{1042,10011}(None)" population="{1042,10021}" maxpopulation="4492245" settlements="{1042,16021}(Mining Colonies)" part="part_asteroid001"/>
-	</add> 
+	</add>
 	<!--Jupiter-->
 	<add sel="/defaults/dataset[@macro='Cluster_107_Sector001_macro']/properties">
 		<worlds>
 			<world part="part_jupiter"/>
 		</worlds>
 	</add>
-	<!--Io-->	
+	<!--Io-->
 	<add sel="/defaults/dataset[@macro='Cluster_107_Sector001_macro']" pos="after">
 		<dataset macro="Cluster_107_Sector002_macro">
 			<properties>
@@ -4595,14 +4603,14 @@
 				<area sunlight="0.08" economy="1.0" security="0.25" tags="allowrandomanomaly"/>
 				<sounds>
 					<music ref="music_dlc_terran_soundtrack_jupiter_saturn" />
-				</sounds>				
+				</sounds>
 				<worlds>
 					<world part="part_io"/>
 				</worlds>
 			</properties>
 		</dataset>
-	</add>	
-	<!--Ganymede-->	
+	</add>
+	<!--Ganymede-->
 	<add sel="/defaults/dataset[@macro='Cluster_107_Sector001_macro']" pos="after">
 		<dataset macro="Cluster_107_Sector003_macro">
 			<properties>
@@ -4610,20 +4618,20 @@
 				<area sunlight="0.09" economy="1.0" security="1.0" tags="allowrandomanomaly"/>
 				<sounds>
 					<music ref="music_dlc_terran_soundtrack_jupiter_saturn" />
-				</sounds>				
+				</sounds>
 				<worlds>
 					<world part="part_ganymede"/>
 				</worlds>
 			</properties>
 		</dataset>
-	</add>		
+	</add>
 	<!--Saturn-->
 	<replace sel="/defaults/dataset[@macro='Cluster_108_Sector001_macro']/properties/identification/@name">{20005,7019}</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_108_Sector001_macro']/properties">
 		<worlds>
 			<world part="part_saturn"/>
 		</worlds>
-	</add> 
+	</add>
 	<!--Titan-->
 	<add sel="/defaults/dataset[@macro='Cluster_108_Sector002_macro']/properties">
 		<worlds>
@@ -4632,23 +4640,23 @@
 	</add>
 	<remove sel="/defaults/dataset[@macro='Cluster_108_Sector002_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_hydrogen_veryhigh_slow']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_108_Sector002_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_hydrogen_high_average']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_108_Sector002_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_hydrogen_medium_veryfast']"/>	
+	<remove sel="/defaults/dataset[@macro='Cluster_108_Sector002_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_hydrogen_medium_veryfast']"/>
 	<!--Rings of Saturn (Saturn II)-->
-	<replace sel="/defaults/dataset[@macro='Cluster_108_Sector003_macro']/properties/identification/@name">{4837254,2003}</replace>		
+	<replace sel="/defaults/dataset[@macro='Cluster_108_Sector003_macro']/properties/identification/@name">{4837254,2003}</replace>
 	<add sel="/defaults/dataset[@macro='Cluster_108_Sector003_macro']/properties">
 		<worlds>
 			<world part="part_saturn_rings"/>
 		</worlds>
 	</add>
 	<remove sel="/defaults/dataset[@macro='Cluster_108_Sector003_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_hydrogen_high_slow']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_108_Sector003_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_hydrogen_medium_average']"/>	
-	<!--Uranus-->  
+	<remove sel="/defaults/dataset[@macro='Cluster_108_Sector003_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_hydrogen_medium_average']"/>
+	<!--Uranus-->
 	<add sel="/defaults/dataset[@macro='Cluster_109_Sector001_macro']/properties">
 		<worlds>
 			<world part="part_uranus"/>
 		</worlds>
 	</add>
-	<!--Oberon-->	
+	<!--Oberon-->
 	<add sel="/defaults/dataset[@macro='Cluster_109_Sector001_macro']" pos="after">
 		<dataset macro="Cluster_109_Sector002_macro">
 			<properties>
@@ -4664,18 +4672,18 @@
 					<!--Gas-->
 					<resourcearea amount="1" ref="sphere_large_helium_high_slow" />
 					<resourcearea amount="2" ref="sphere_medium_helium_medium_average" />
-				</resourceareas>				
+				</resourceareas>
 			</properties>
 		</dataset>
-	</add>		
-	<!--Neptune-->  
+	</add>
+	<!--Neptune-->
 	<add sel="/defaults/dataset[@macro='Cluster_110_Sector001_macro']/properties">
 		<worlds>
 			<world part="part_neptune"/>
 		</worlds>
 	</add>
 	<remove sel="/defaults/dataset[@macro='Cluster_110_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_huge_helium_veryhigh_slow']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_110_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_helium_medium_average']"/>	
+	<remove sel="/defaults/dataset[@macro='Cluster_110_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_helium_medium_average']"/>
 	<!--Pluto-->
 	<add sel="/defaults/dataset[@macro='Cluster_111_Sector001_macro']/properties">
 		<worlds>
@@ -4688,15 +4696,15 @@
 	<remove sel="/defaults/dataset[@macro='Cluster_113_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_helium_high_slow']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_113_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_helium_medium_average']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_113_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_ore_veryhigh_slow']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_113_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_ore_high_average']"/>	
+	<remove sel="/defaults/dataset[@macro='Cluster_113_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_ore_high_average']"/>
 	<!--Gaian Prophecy-->
 	<remove sel="/defaults/dataset[@macro='Cluster_114_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_silicon_veryhigh_slow']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_114_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_medium_silicon_high_average']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_114_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_silicon_medium_fast']"/>	
+	<remove sel="/defaults/dataset[@macro='Cluster_114_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_silicon_medium_fast']"/>
 	<!--Brennan's Triumph-->
 	<replace sel="/defaults/dataset[@macro='Cluster_115_macro']/properties/system/planets/planet[@name='{20005,9052}(Taurus)']/@maxpopulation">259458997</replace>
 	<!--Oort Cloud-->
-	<add sel="/defaults/dataset[@macro='Cluster_116_Sector001_macro']/properties/area" type="@factionlogic">false</add>	
+	<add sel="/defaults/dataset[@macro='Cluster_116_Sector001_macro']/properties/area" type="@factionlogic">false</add>
 	<remove sel="/defaults/dataset[@macro='Cluster_116_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_ore_veryhigh_slow']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_116_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_ore_high_average']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_116_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_ore_medium_fast']"/>
@@ -4710,7 +4718,7 @@
 	<remove sel="/defaults/dataset[@macro='Cluster_116_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_small_ice_medium_fast']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_116_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_huge_nividium_medium_veryfast']"/>
 
-	
+
 	<!--Pirate DLC-->
 	<!--Windfall-->
 	<replace sel="/defaults/dataset[@macro='Cluster_501_macro']/properties/system/planets/planet/@geology">{1042,15021}(Mountains)</replace>
@@ -4727,7 +4735,7 @@
 	<remove sel="/defaults/dataset[@macro='Cluster_503_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_ice_medium_average']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_503_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_small_ice_low_fast']"/>
 
-	
+
 	<!--Boron DLC-->
 	<!--Remove Boron Sector's DLC jobs lock-->
 	<!-- This is currently disabled as VRO completes this step
@@ -4739,7 +4747,7 @@
 	<remove sel="//dataset[@macro='Cluster_606_macro']/properties/area/@extensionexclusivejobs"/>
 	<remove sel="//dataset[@macro='Cluster_607_macro']/properties/area/@extensionexclusivejobs"/>
 	<remove sel="//dataset[@macro='Cluster_608_macro']/properties/area/@extensionexclusivejobs"/>
-	<remove sel="//dataset[@macro='Cluster_609_macro']/properties/area/@extensionexclusivejobs"/>  
+	<remove sel="//dataset[@macro='Cluster_609_macro']/properties/area/@extensionexclusivejobs"/>
 	-->
 	<!--Watchful Gaze-->
 	<remove sel="/defaults/dataset[@macro='Cluster_601_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_huge_helium_veryhigh_slow'][@amount='1']"/>
@@ -4758,34 +4766,34 @@
 	<add sel="/defaults/dataset[@macro='Cluster_601_Sector001_macro']/properties/resourceareas">
         <resourcearea amount="2" ref="sphere_small_helium_medium_average" />
         <resourcearea amount="2" ref="sphere_small_hydrogen_medium_average" />
-        <resourcearea amount="2" ref="sphere_small_methane_medium_average" />	
+        <resourcearea amount="2" ref="sphere_small_methane_medium_average" />
         <resourcearea amount="1" ref="sphere_small_ore_medium_average" />
         <resourcearea amount="2" ref="sphere_small_ore_low_fast" />
         <resourcearea amount="1" ref="sphere_small_silicon_medium_average" />
         <resourcearea amount="2" ref="sphere_small_silicon_low_fast" />
-	</add>		
+	</add>
 	<!--Barren Shores-->
 	<replace sel="/defaults/dataset[@macro='Cluster_602_macro']/properties/system/planets/planet/@maxpopulation">313256369</replace>
 	<remove sel="/defaults/dataset[@macro='Cluster_602_Sector001_macro']/properties/worlds/world/@factor"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_602_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_huge_ore_veryhigh_slow']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_602_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_small_ore_medium_average']"/>	
-	<!--Great Reef-->  
+	<remove sel="/defaults/dataset[@macro='Cluster_602_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_small_ore_medium_average']"/>
+	<!--Great Reef-->
 	<replace sel="/defaults/dataset[@macro='Cluster_603_macro']/properties/system/planets/planet[@name='{20005,9069}(Nakshatra)']/@maxpopulation">744376645</replace>
 	<remove sel="/defaults/dataset[@macro='Cluster_603_Sector001_macro']/properties/worlds/world/@factor"/>
-	<!--Ocean of Fantasy--> 	
+	<!--Ocean of Fantasy-->
 	<add sel="/defaults/dataset[@macro='Cluster_604_Sector001_macro']/properties/resourceareas">
         <resourcearea amount="2" ref="sphere_large_ore_low_fast"/>
         <resourcearea amount="4" ref="sphere_medium_ore_medium_average"/>
         <resourcearea amount="4" ref="sphere_small_ore_veryhigh_veryslow"/>
-	</add>	
+	</add>
 	<!--Kingdom End I-->
 	<replace sel="/defaults/dataset[@macro='Cluster_606_macro']/properties/system/planets/planet/@maxpopulation">6366704060</replace>
 	<replace sel="/defaults/dataset[@macro='Cluster_606_Sector001_macro']/properties/worlds/world/@factor">0.8</replace>
 	<!--Reflected Stars-->
 	<replace sel="/defaults/dataset[@macro='Cluster_606_Sector002_macro']/properties/worlds/world/@factor">0.11</replace>
-	<!--Towering Wave-->  
-	<replace sel="/defaults/dataset[@macro='Cluster_606_Sector003_macro']/properties/worlds/world/@factor">0.09</replace>	
-	<!--Atreus' Clouds-->	
+	<!--Towering Wave-->
+	<replace sel="/defaults/dataset[@macro='Cluster_606_Sector003_macro']/properties/worlds/world/@factor">0.09</replace>
+	<!--Atreus' Clouds-->
 	<replace sel="/defaults/dataset[@macro='Cluster_608_macro']/properties/system/planets/planet/@maxpopulation">1102861148</replace>
 	<remove sel="/defaults/dataset[@macro='Cluster_608_Sector001_macro']/properties/worlds/world/@factor"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_608_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_silicon_medium_slow']"/>
@@ -4795,21 +4803,21 @@
 	<remove sel="/defaults/dataset[@macro='Cluster_609_Sector001_macro']/properties/worlds/world/@factor"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_609_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_large_ore_high_slow']"/>
 	<remove sel="/defaults/dataset[@macro='Cluster_609_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_small_ore_medium_average']"/>
-	<remove sel="/defaults/dataset[@macro='Cluster_609_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_ore_low_fast']"/>	
+	<remove sel="/defaults/dataset[@macro='Cluster_609_Sector001_macro']/properties/resourceareas/resourcearea[@ref='sphere_tiny_ore_low_fast']"/>
 
-	
-	<!--Timelines DLC-->  
+
+	<!--Timelines DLC-->
 	<!--President's End-->
 	<replace sel="/defaults/dataset[@macro='cluster_704_macro']/properties/system/planets/planet[@name='{20003,7040001} {20403,101}(a)']/@maxpopulation">396918524</replace>
-	<replace sel="/defaults/dataset[@macro='cluster_704_macro']/properties/system/planets/planet[@name='{20003,7040001} {20403,101}(a)']/@settlements">{1042,16071}(Megalopolis)</replace>  
+	<replace sel="/defaults/dataset[@macro='cluster_704_macro']/properties/system/planets/planet[@name='{20003,7040001} {20403,101}(a)']/@settlements">{1042,16071}(Megalopolis)</replace>
 	<!--Nopileos' Memorial-->
 	<replace sel="/defaults/dataset[@macro='cluster_705_macro']/properties/system/planets/planet/@population">{1042,10021}</replace>
 	<replace sel="/defaults/dataset[@macro='cluster_705_macro']/properties/system/planets/planet/@settlements">{1042,16101}(Small Settlements)</replace>
-	<add sel="/defaults/dataset[@macro='cluster_705_macro']/properties/system/planets/planet" type="@maxpopulation">23120196</add>  
-	<!--Hatikvah's Faith-->  
+	<add sel="/defaults/dataset[@macro='cluster_705_macro']/properties/system/planets/planet" type="@maxpopulation">23120196</add>
+	<!--Hatikvah's Faith-->
 	<replace sel="/defaults/dataset[@macro='cluster_706_macro']/properties/system/planets/planet[@name='{20003,7060001} {20403,101}(a)']/@maxpopulation">2032399</replace>
-	
-	
+
+
 	<!--Hyperion DLC-->
 	<!--Third Redemption-->
 	<add sel="/defaults/dataset[@macro='Cluster_730_macro']/properties/system">
@@ -4822,9 +4830,9 @@
 		<worlds>
 			<world part="planet001b"/>
 		</worlds>
-	</add>	
-	
-	
+	</add>
+
+
 	<!--Envoy DLC-->
 	<!--Scarlet Star-->
 
@@ -4834,7 +4842,7 @@
 	<add sel="/defaults/dataset[@macro='Cluster_21_Sector001_macro']/properties/area" type="@tags">systemanalyst</add>
 	<add sel="/defaults/dataset[@macro='Cluster_26_Sector001_macro']/properties/area" type="@tags">systemanalyst</add>
 	<add sel="/defaults/dataset[@macro='Cluster_33_Sector001_macro']/properties/area" type="@tags">systemanalyst</add>
-	<add sel="/defaults/dataset[@macro='Cluster_112_Sector001_macro']/properties/area" type="@tags">systemanalyst</add>	  
+	<add sel="/defaults/dataset[@macro='Cluster_112_Sector001_macro']/properties/area" type="@tags">systemanalyst</add>
 	<add sel="/defaults/dataset[@macro='Cluster_415_Sector001_macro']/properties/area" type="@tags">systemanalyst</add>
 	<add sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties/area" type="@tags">systemanalyst</add>
 </diff>

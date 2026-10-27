@@ -2,21 +2,39 @@
 <diff>
 	<add sel="//soundlibrary">
 
-		<!--VOICE-->  
+		<!--VOICE-->
+		<sound id="4837251_normal" description="Ships" repeat="1" is3d="1" preload="0">
+			<sample start="extensions\reemergence\voice\4837251\normal"/>
+			<effects>
+				<reverb room="sewer pipe" roomsize="10" drymix="5" density="90"/>
+			</effects>
+		</sound>
+		<sound id="4837252_normal" description="Equipment" repeat="1" is3d="1" preload="0">
+			<sample start="extensions\reemergence\voice\4837252\normal"/>
+			<effects>
+				<reverb room="sewer pipe" roomsize="10" drymix="5" density="90"/>
+			</effects>
+		</sound>
+		<sound id="4837253_normal" description="Modules" repeat="1" is3d="1" preload="0">
+			<sample start="extensions\reemergence\voice\4837253\normal"/>
+			<effects>
+				<reverb room="sewer pipe" roomsize="10" drymix="5" density="90"/>
+			</effects>
+		</sound>
 		<sound id="4837254_normal" description="Sectors" repeat="1" is3d="1" preload="0">
 			<sample start="extensions\reemergence\voice\4837254\normal"/>
 			<effects>
 				<reverb room="sewer pipe" roomsize="10" drymix="5" density="90"/>
-			</effects>			
+			</effects>
 		</sound>
 		<sound id="4837255_normal" description="Misc" repeat="1" is3d="1" preload="0">
 			<sample start="extensions\reemergence\voice\4837255\normal"/>
 			<effects>
 				<reverb room="sewer pipe" roomsize="10" drymix="5" density="90"/>
-			</effects>			
+			</effects>
 		</sound>
-		
-		<!--MUSIC-->	
+
+		<!--MUSIC-->
 		<sound id="music_menu_main_re_music" description="Start Menu Music" repeat="-1" is3d="0" preload="0">
 			<sample start="extensions\reemergence\music\X3TC-EarthBattle"/>
 			<volume start="0.3"/>
@@ -26,26 +44,26 @@
 		</sound>
 		<sound id="music_re_arg_dlcs" description="Combination of all tracks used for Argon" repeat="-1" is3d="0" preload="0">
 			<sample selection="random">
-				<select weight="1" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>			
+				<select weight="1" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>
 				<select weight="1" start="music\cluster\07. Alexei Galygin - Planetesimals"/>
-				<select weight="1" start="music\cluster\09. Alexei Zakharov - Peril and Promise"/>				
+				<select weight="1" start="music\cluster\09. Alexei Zakharov - Peril and Promise"/>
 				<select weight="1" start="music\cluster\p1_amb_04"/>
 				<select weight="1" start="music\cluster\p1_amb_07"/>
 				<select weight="1" start="music\legacy\Alexei Zakharov - HOL_04"/>
 				<select weight="1" start="music\legacy\Alexei Zakharov - HOL_08"/>
-				<select weight="1" start="music\legacy\Alexei Zakharov - HOL_09"/>	  
+				<select weight="1" start="music\legacy\Alexei Zakharov - HOL_09"/>
 				<select weight="1" start="music\legacy\Alexei Zakharov - Rebirth - Ambience 1"/>
 				<select weight="1" start="music\legacy\Alexei Zakharov - Rebirth - Neutral 2"/>
 				<select weight="1" start="music\legacy\Alexei Zakharov - Rebirth - Neutral 5"/>
 				<select weight="1" start="music\legacy\Alexei Zakharov - Rebirth - Neutral 11"/>
-				<select weight="1" start="music\legacy\Alexei Zakharov - Rebirth - Neutral 15"/>		
-				<select weight="1" start="music\legacy\Alexei Zakharov - teladi_outpost_02"/>		
+				<select weight="1" start="music\legacy\Alexei Zakharov - Rebirth - Neutral 15"/>
+				<select weight="1" start="music\legacy\Alexei Zakharov - teladi_outpost_02"/>
 				<select weight="1" start="music\legacy\Alexei Zakharov - teladi_outpost_04"/>
 				<select weight="1" start="extensions\ego_dlc_split\music\cluster\02. Alexei Zakharov - Federation Lost"/>
 				<select weight="1" start="extensions\ego_dlc_split\music\cluster\09. Alexei Zakharov - Assembled for Eternity"/>
-				<select weight="1" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Last Harbour"/>				
+				<select weight="1" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Last Harbour"/>
 				<select weight="1" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_07_ashes"/>
-				<select weight="1" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem"/>		
+				<select weight="1" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem"/>
 			</sample>
 			<volume start="0.3"/>
 			<effects>
@@ -54,76 +72,76 @@
 		</sound>
 		<sound id="music_aldrin" description="Aldrin music tracks" repeat="-1" is3d="0" preload="0">
 			<sample selection="random">
-				<select weight="1" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>				
+				<select weight="1" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>
 				<select weight="1" start="music\cluster\07. Alexei Galygin - Planetesimals"/>
-				<select weight="1" start="music\cluster\09. Alexei Zakharov - Peril and Promise"/>				
-				<select weight="1" start="extensions\ego_dlc_terran\music\2. Alexei Zakharov - Wings of the Wind"/>			
+				<select weight="1" start="music\cluster\09. Alexei Zakharov - Peril and Promise"/>
+				<select weight="1" start="extensions\ego_dlc_terran\music\2. Alexei Zakharov - Wings of the Wind"/>
 				<select weight="1" start="extensions\ego_dlc_terran\music\3. Alexei Zakharov - The Traverse"/>
 				<select weight="1" start="extensions\ego_dlc_terran\music\6. Alexei Zakharov - Savage Soul"/>
 				<select weight="1" start="extensions\ego_dlc_terran\music\7. Alexei Zakharov - Citadel Rim"/>
 				<select weight="1" start="extensions\ego_dlc_terran\music\9. Alexei Zakharov - Forsaking the Void"/>
-				<select weight="1" start="extensions\ego_dlc_terran\music\12. Alexei Zakharov - Open Your Eyes"/>		
+				<select weight="1" start="extensions\ego_dlc_terran\music\12. Alexei Zakharov - Open Your Eyes"/>
 				<select weight="1" start="extensions\ego_dlc_terran\music\13. Alexei Zakharov - Distant Dawn"/>
 				<select weight="1" start="extensions\ego_dlc_terran\music\14. Alexei Zakharov - Insomnia"/>
 				<select weight="1" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Last Harbour"/>
-				<select weight="1" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem"/>					
+				<select weight="1" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem"/>
 			</sample>
 			<volume start="0.3"/>
 			<effects>
 				<fade in="1.66667" out="0.666667"/>
 			</effects>
-		</sound>		
+		</sound>
 		<sound id="music_hatikvah" description="Hatikvah's Choice III - Hatikvah's" repeat="-1" is3d="0" preload="0">
-			<sample start="extensions\reemergence\music\Seconds_to_Eclipse"/>		
+			<sample start="extensions\reemergence\music\Seconds_to_Eclipse"/>
 			<volume start="2.5" />
 			<effects>
 				<fade in="1.66667" out="1.666667"/>
 			</effects>
-		</sound>	
+		</sound>
 		<sound id="music_alliance" description="Sacred Relic - Alliance" repeat="-1" is3d="0" preload="0">
-			<sample start="music\Special\Foundations"/>		
+			<sample start="music\Special\Foundations"/>
 			<volume start="0.75" />
 			<effects>
 				<fade in="1.66667" out="1.666667"/>
 			</effects>
-		</sound>		
+		</sound>
 		<sound id="music_legends_home" description="Legend's Home - OTAS" repeat="-1" is3d="0" preload="0">
-			<sample start="extensions\reemergence\music\Black_Halo"/>	
+			<sample start="extensions\reemergence\music\Black_Halo"/>
 			<volume start="1.0" />
 			<effects>
 				<fade in="1.66667" out="1.666667"/>
 			</effects>
-		</sound>	
+		</sound>
 		<sound id="music_aguilar" description="Belt of Aguilar - Jonferco" repeat="-1" is3d="0" preload="0">
-			<sample start="extensions\reemergence\music\Argon_Prime"/>		
+			<sample start="extensions\reemergence\music\Argon_Prime"/>
 			<volume start="0.5" />
 			<effects>
 				<fade in="1.66667" out="1.666667"/>
 			</effects>
-		</sound>	
+		</sound>
 		<sound id="music_thyns_exvacation" description="Thyn's Excavation - Strong Arms" repeat="-1" is3d="0" preload="0">
-			<sample start="extensions\reemergence\music\War2"/>		
+			<sample start="extensions\reemergence\music\War2"/>
 			<volume start="3.0" />
 			<effects>
 				<fade in="1.66667" out="1.666667"/>
 			</effects>
 		</sound>
 		<sound id="music_nmmc" description="Memory of Profit IX - NMMC" repeat="-1" is3d="0" preload="0">
-			<sample start="extensions\reemergence\music\36. Alexei Zakharov - Eighteen Billion"/>	
+			<sample start="extensions\reemergence\music\36. Alexei Zakharov - Eighteen Billion"/>
 			<volume start="0.5" />
 			<effects>
 				<fade in="1.66667" out="1.666667"/>
 			</effects>
-		</sound>	
+		</sound>
 		<sound id="music_queens_harbour" description="Queen's Harbour - Atreus" repeat="-1" is3d="0" preload="0">
-			<sample start="extensions\reemergence\music\empire_dawn"/>	
+			<sample start="extensions\reemergence\music\empire_dawn"/>
 			<volume start="1.0" />
 			<effects>
 				<fade in="1.66667" out="1.666667"/>
 			</effects>
-		</sound>	
+		</sound>
 		<sound id="music_atf" description="ATF" repeat="-1" is3d="0" preload="0">
-			<sample start="extensions\reemergence\music\ATF"/>	
+			<sample start="extensions\reemergence\music\ATF"/>
 			<volume start="0.5" />
 			<effects>
 				<fade in="1.66667" out="1.666667" />
@@ -163,44 +181,44 @@
 			<effects>
 				<fade in="1.66667" out="0.666667"/>
 			</effects>
-		</sound>	
+		</sound>
 	</add>
 	<!-- Added variety to Vanilla soundtracks -->
 	<add sel="/soundlibrary/sound[@id='music_soundtrack_argon']/sample">
-		<select weight="5" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>		
+		<select weight="5" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>
 		<select weight="5" start="music\cluster\07. Alexei Galygin - Planetesimals" />
 		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_07_ashes" />
-		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem" />		
-	</add>	
+		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem" />
+	</add>
 	<add sel="/soundlibrary/sound[@id='music_soundtrack_paranid']/sample">
 		<select weight="5" start="music\cluster\04. Alexei Zakharov - Veils of Wisdom" />
-		<select weight="5" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>		
+		<select weight="5" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>
 		<select weight="5" start="music\cluster\06. Alexei Zakharov - Right of Passage" />
-		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Stigma Bound" />		
-	</add>	
+		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Stigma Bound" />
+	</add>
 	<add sel="/soundlibrary/sound[@id='music_dlc_split_soundtrack_periphery']/sample">
 		<select weight="5" start="music\cluster\07. Alexei Galygin - Planetesimals" />
-		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Nameless Drifter" />		
+		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Nameless Drifter" />
 		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_10_gamma_epsilon" />
-		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem" />		
+		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem" />
 	</add>
 	<add sel="/soundlibrary/sound[@id='music_dlc_split_soundtrack_patriarchy']/sample">
-		<select weight="5" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>		
+		<select weight="5" start="music\Cluster\05. Alexei Zakharov - A Glimpse of Forever"/>
 		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Guiding Star" />
 		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_10_gamma_epsilon" />
-		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem" />		
+		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem" />
 	</add>
 	<add sel="/soundlibrary/sound[@id='music_dlc_split_soundtrack_loyal_families']/sample">
 		<select weight="5" start="music\cluster\07. Alexei Galygin - Planetesimals" />
 		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Stigma Bound" />
-		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem" />		
+		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_01_stardust_requiem" />
 	</add>	
 	<add sel="/soundlibrary/sound[@id='music_dlc_terran_soundtrack_pioneers']/sample">
-		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_07_ashes"/>	
-		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Guiding Star" />	
+		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_07_ashes"/>
+		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Guiding Star" />
 	</add>
 	<add sel="/soundlibrary/sound[@id='music_dlc_terran_soundtrack_brennans_triumph']/sample">
-		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_07_ashes"/>	
-		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Guiding Star" />	
+		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_07_ashes"/>
+		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Guiding Star" />
 	</add>
 </diff>
