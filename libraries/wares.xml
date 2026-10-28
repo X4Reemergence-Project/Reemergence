@@ -1017,6 +1017,7 @@
 
 
 		<!--WEAPONS-->
+	<add sel="//wares">
 		<ware id="weapon_gen_s_repairbeam" name="{20113,1001}" description="{20113,1002}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
 			<price min="32092" average="35658" max="39223" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
@@ -1028,6 +1029,21 @@
 			<restriction licence="generaluseequipment" />
 			<use threshold="0" />
 		</ware>
+		<ware id="weapon_xen_m_xentorp" name="{20105,2654} {1001,9020}" description="{20105,2652}" group="weapons" transport="equipment" volume="1" tags="noplayerblueprint equipment weapon">
+			<price min="1039" average="1088" max="1136" />
+			<production time="5" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="5" />
+					<ware ware="ore" amount="5" />
+					<ware ware="silicon" amount="5" />
+				</primary>
+			</production>
+			<component ref="weapon_xen_m_xentorp_macro" amount="1" />
+			<restriction licence="generaluseequipment" />
+			<use threshold="0" factions="xenon" />
+			<owner faction="xenon" />
+		</ware>
+	</add>
 
 
 	<!--OTAS CHANGES-->
