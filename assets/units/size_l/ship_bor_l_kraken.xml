@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exported on 2026-10-29 19:17:47 from Blender-->
+<components>
+	<component name="ship_bor_l_kraken" class="ship_l">
+		<source geometry="extensions\reemergence\assets\units\size_l\ship_bor_l_kraken_data"/>
+		<layers>
+			<layer>
+				<waypoints>
+					<waypoint name="mt_in_waypoint_1" tags="dynamicmasstraffic end speed_normal typedock " x="0" y="-37.17745" z="53.27199" qx="0" qy="0" qz="0" qw="-1">
+						<links>
+							<link ref=""/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_in_waypoint_2_left" tags="closelink dynamicmasstraffic speed_normal start typenormal " x="-200" y="-20.17745" z="42.66338" qx="-0.507858" qy="-0.4644253" qz="-0.4920165" qw="-0.5332065">
+						<links>
+							<link ref=""/>
+							<link ref="mt_in_waypoint_1"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_in_waypoint_2_right" tags="closelink dynamicmasstraffic speed_normal start typenormal " x="-200" y="-20.17745" z="69.66338" qx="-0.539797" qy="-0.4993146" qz="-0.4567485" qw="-0.5006845">
+						<links>
+							<link ref=""/>
+							<link ref="mt_in_waypoint_1"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_out_waypoint_1" tags="dynamicmasstraffic speed_normal start typedock " x="0" y="-37.17745" z="59.4658" qx="0.4998288" qy="0.5402597" qz="-0.5001711" qw="-0.4562013">
+						<links>
+							<link ref=""/>
+							<link ref="mt_out_waypoint_2_right"/>
+							<link ref="mt_out_waypoint_2_left"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_out_waypoint_2_left" tags="closelink dynamicmasstraffic end speed_normal typenormal " x="-200" y="-54.17745" z="42.66338" qx="0" qy="0" qz="0" qw="-1">
+						<links>
+							<link ref=""/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_out_waypoint_2_right" tags="closelink dynamicmasstraffic end speed_normal typenormal " x="-200" y="-54.17745" z="69.66338" qx="0" qy="0" qz="0" qw="-1">
+						<links>
+							<link ref=""/>
+						</links>
+					</waypoint>
+				</waypoints>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="space" tags="ship_l ship"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="con_cockpit" tags="cockpit cockpit_visible ">
+				<offset>
+					<position x="0" y="40" z="0"/>
+				</offset>
+			</connection>
+			<connection name="con_countermeasures001" tags="countermeasures ">
+				<offset>
+					<position x="34.11105" y="-35.90235" z="-6.459431"/>
+					<quaternion qx="-0.3799282" qy="-0.5963678" qz="0.3799282" qw="-0.5963678"/>
+				</offset>
+			</connection>
+			<connection name="con_countermeasures002" tags="countermeasures ">
+				<offset>
+					<position x="-34.1111" y="-35.90235" z="-6.459431"/>
+					<quaternion qx="-0.3799282" qy="0.5963678" qz="-0.3799282" qw="-0.5963678"/>
+				</offset>
+			</connection>
+			<connection name="con_dock_xs" tags="dock_xs ">
+				<offset>
+					<position x="0" y="30.4792" z="-153.907"/>
+					<quaternion qx="0.7071068" qy="0" qz="0" qw="-0.7071068"/>
+				</offset>
+			</connection>
+			<connection name="con_playercontrol" tags="playercontrol "/>
+			<connection name="con_shipstorage_m" tags="dockingbay "/>
+			<connection name="con_shipstorage_s" tags="dockingbay "/>
+			<connection name="con_shipstorage_xs" tags="dockingbay "/>
+			<connection name="con_storage_01" tags="storage "/>
+			<connection name="con_storage_02" tags="storage "/>
+			<connection name="con_storage_03" tags="storage "/>
+			<connection name="ConnectionFordetail_m" tags="detail_m forceoutline nocollision part ">
+				<parts>
+					<part name="detail_m">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2boron.bor_p2_alphatexture_01"/>
+									<material id="2" ref="p2boron.bor_p2_hulltexture_01"/>
+									<material id="3" ref="p2boron.bor_p2_hullpattern_02"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="40.34902" y="42.61269" z="349.0385"/>
+							<center x="0.0001478195" y="-3.581501" z="-11.73819"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionFordetail_s" tags="detail_s forceoutline nocollision part ">
+				<parts>
+					<part name="detail_s">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2boron.bor_p2_alphatexture_01"/>
+									<material id="2" ref="p2boron.bor_p2_hulltexture_01"/>
+									<material id="3" ref="p2boron.bor_p2_hullpattern_02"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="53.93959" y="43.45599" z="445.866"/>
+							<center x="2.861023e-06" y="6.036694" z="52.1956"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForfx_licence" tags="detail_l forceoutline fx nocollision part ">
+				<parts>
+					<part name="fx_licence">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2paint.pnt_p2_logo_01"/>
+									<material id="2" ref="p2paint.pnt_p2_tailnumber_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="73.50894" y="11.02382" z="215.4233"/>
+							<center x="-0.3831844" y="16.90048" z="63.38417"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_main" tags="part ">
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2boron.bor_p2_fx_01"/>
+									<material id="2" ref="p2boron.bor_p2_hullpattern_02"/>
+									<material id="3" ref="p2boron.bor_p2_hullpattern_03"/>
+									<material id="4" ref="p2boron.bor_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+							<lod index="1">
+								<materials>
+									<material id="1" ref="p2boron.bor_p2_fx_01"/>
+									<material id="2" ref="p2boron.bor_p2_hullpattern_02"/>
+									<material id="3" ref="p2boron.bor_p2_hullpattern_03"/>
+									<material id="4" ref="p2boron.bor_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+							<lod index="2">
+								<materials>
+									<material id="1" ref="p2boron.bor_p2_fx_01"/>
+									<material id="2" ref="p2boron.bor_p2_hullpattern_02"/>
+									<material id="3" ref="p2boron.bor_p2_hullpattern_03"/>
+									<material id="4" ref="p2boron.bor_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+							<lod index="3">
+								<materials>
+									<material id="1" ref="p2boron.bor_p2_hullpattern_03"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="78.79414" y="55.38185" z="371.6196"/>
+							<center x="0" y="-0.4270477" z="-17.55479"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="con_dockarea_01" tags="dockarea ">
+				<offset>
+					<position x="0" y="31.97922" z="-129.9067"/>
+				</offset>
+			</connection>
+			<connection name="engine_l" group="engine " tags="boron engine large ">
+				<offset>
+					<position x="0" y="17.81358" z="-252.6633"/>
+				</offset>
+			</connection>
+			<connection name="shield_l" tags="advanced large shield ">
+				<offset>
+					<position x="0" y="32.48354" z="-163.8235"/>
+					<quaternion qx="0" qy="0.7071068" qz="0" qw="-0.7071068"/>
+				</offset>
+			</connection>
+			<connection name="shield_m_hittable001" group="engine " tags="advanced hittable medium shield ">
+				<offset>
+					<position x="3.511109" y="32.47413" z="-180.4893"/>
+					<quaternion qx="0" qy="-1" qz="0" qw="-1.629207e-07"/>
+				</offset>
+			</connection>
+			<connection name="shield_m_hittable002" group="engine " tags="advanced hittable medium shield ">
+				<offset>
+					<position x="-3.511109" y="32.47413" z="-180.4893"/>
+					<quaternion qx="0" qy="-1" qz="0" qw="-1.629207e-07"/>
+				</offset>
+			</connection>
+			<connection name="weapon_main_cannon001" tags="mandatory boron component large weapon">
+				<offset>
+					<position x="0" y="16.70055" z="-4"/>
+				</offset>
+			</connection>
+			<connection name="weapon_main_cannon002" tags="mandatory boron component large weapon">
+				<offset>
+					<position x="0" y="-9.942862" z="335.5"/>
+				</offset>
+			</connection>
+		</connections>
+	</component>
+</components>
