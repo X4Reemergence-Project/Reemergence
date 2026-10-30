@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+	<macro name="ship_ald_s_spitfyre_macro" class="ship_s">
+		<component ref="ship_ald_s_spitfyre"/>
+		<properties>
+			<identification name="{4837251,371210}" basename="{4837251,371210}" makerrace="terran" description="{4837251,371211}" icon="ship_s_fighter_01"/>
+			<software>
+				<software ware="software_dockmk2" compatible="1"/>
+				<software ware="software_flightassistmk1" default="1"/>
+				<software ware="software_scannerlongrangemk1" default="1"/>
+				<software ware="software_scannerlongrangemk2" compatible="1"/>
+				<software ware="software_scannerobjectmk1" default="1"/>
+				<software ware="software_scannerobjectmk2" compatible="1"/>
+				<software ware="software_targetmk1" default="1"/>
+				<software ware="software_trademk1" compatible="1"/>
+			</software>
+			<jerk>
+				<forward accel="0.6" decel="0.8" ratio="4" />
+				<forward_boost accel="0.5" ratio="3" />
+				<forward_travel accel="0.4" decel="0.9" ratio="4" />
+				<strafe value="0.6" />
+				<angular value="0.7" />
+			</jerk>
+			<storage missile="0" unit="0" deployable="5" countermeasure="12"/>
+			<hull max="7500"/>
+			<secrecy level="2"/>
+			<glow engine="1"/>
+			<steeringcurve>
+				<point position="1.01" value="1" />
+				<point position="1.2" value="0.8" />
+				<point position="1.65" value="0.6" />
+				<point position="2" value="0.32" />
+				<point position="2.4" value="0.22" />
+				<point position="2.7" value="0.19" />
+			</steeringcurve>
+			<purpose primary="fight"/>
+			<people capacity="1"/>
+			<sounds>
+				<shipdetail ref="shipdetail_ship_01"/>
+			</sounds>
+			<physics mass="7.335">
+				<inertia pitch="1.478" yaw="1.478" roll="1.626"/>
+				<drag forward="3.664" reverse="9.835" horizontal="3.564" vertical="3.564" pitch="2.907" yaw="2.907" roll="2.907"/>
+			</physics>
+			<thruster tags="small"/>
+			<ship type="fighter"/>
+			<radar range="60000" />
+			<modifiers>
+				<weapon heat="0.85" />
+			</modifiers>
+			<sound_occlusion inside="0.5"/>
+		</properties>
+		<connections>
+			<connection ref="con_cockpit_01">
+				<macro ref="cockpit_gen_virtual_01_macro" connection="ship"/>
+			</connection>
+			<connection ref="con_dock_xs">
+				<macro ref="dock_ald_xs_flat_macro" connection="Connection_component"/>
+			</connection>
+			<connection ref="con_shipstorage_xs_01">
+				<macro ref="shipstorage_gen_xs_01_macro" connection="object"/>
+			</connection>
+			<connection ref="con_storage_01">
+				<macro ref="storage_ald_container_50_macro" connection="ShipConnection"/>
+			</connection>
+		</connections>
+	</macro>
+</macros>

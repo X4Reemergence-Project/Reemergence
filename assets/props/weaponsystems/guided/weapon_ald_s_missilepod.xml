@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component name="weapon_ald_s_missilepod" class="missilelauncher">
+		<source geometry="extensions\reemergence\assets\props\weaponsystems\guided\weapon_ald_s_missilepod_data"/>
+		<layers>
+			<layer/>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="con_rocket" tags="rocket ">
+				<offset>
+					<position x="1.145575e-08" y="0.2620771" z="2.247085"/>
+				</offset>
+			</connection>
+			<connection name="con_weapon" tags="component spitfyremissile small missile weapon "/>
+			<connection name="ConnectionFordetail_m_decal" tags="detail_m forceoutline nocollision part ">
+				<parts>
+					<part name="detail_m_decal">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1paint.paint_p1_decal_01"/>
+									<material id="2" ref="p2generic.gen_p2_decal_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.5478057" y="0.6489598" z="1.108942"/>
+							<center x="1.490116e-08" y="0.04788834" z="1.355513"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_main" tags="forceoutline part platformcollision ">
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+							<lod index="1">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+							<lod index="2">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+							<lod index="3">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="0.6043658" y="0.6464779" z="1.2556"/>
+							<center x="-1.490116e-08" y="0.04692218" z="1.2556"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+		</connections>
+	</component>
+</components>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+	<macro name="bullet_ald_xl_castalia_macro" class="bullet">
+		<component ref="bullet_ald_xl_castalia"/>
+		<properties>
+			<bullet speed="2.997925e+08" lifetime="1.5" range="20000" amount="1" barrelamount="2" icon="weapon_beam_mk2" maxhits="1" ricochet="0" scale="1" attach="1"/> <!-- chargetime="0.5" requirefullcharge="1" firewhenfullcharge="1" -->
+			<damagecurves>
+				<distance>
+					<point position="0.7" value="1"/>
+					<point position="1" value="0.1"/>
+				</distance>
+			</damagecurves>
+			<reload time="12"/>
+			<damage value="12625" noshield="1225" repair="0"/>
+			<effects>
+				<impact ref="impact_ter_xl_laser_01_mk1" inside="impact_ter_xl_laser_01_mk1_inside"/>
+				<bigobjectimpact ref="impact_ter_xl_laser_01_mk1_bigobject" inside="impact_ter_xl_laser_01_mk1_bigobject_inside"/>
+				<launch ref="startshooting_atf_xl_beam_01_mk1"/>
+			</effects>
+			<sounds>
+				<firing ref="startshooting_atf_xl_beam_01_mk1"/>
+			</sounds>
+			<weapon system="turret_midrange"/>
+		</properties>
+	</macro>
+</macros>

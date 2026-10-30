@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component name="turret_ald_xl_castalia" class="turret">
+		<source geometry="extensions\reemergence\assets\props\weaponsystems\capital\turret_ald_xl_castalia_data"/>
+		<layers>
+			<layer/>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="con_aimtarget_01" tags="aimtarget ">
+				<offset>
+					<position x="0" y="13.1435" z="0"/>
+				</offset>
+			</connection>
+			<connection name="con_turret_laser_xl" tags="combat component extralarge turret castalia"/>
+			<connection name="ConnectionForpart_socket" tags="animation part ">
+				<offset>
+					<position x="0" y="0" z="0"/>
+				</offset>
+				<animations>
+					<animation name="turret_active" start="1" end="2"/>
+					<animation name="turret_deactivating" start="2" end="73"/>
+					<animation name="turret_inactive" start="73" end="74"/>
+					<animation name="turret_activating" start="74" end="170"/>
+				</animations>
+				<parts>
+					<part name="part_socket" wreck="part_socket_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+							<lod index="1">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+							<lod index="2">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+							<lod index="3">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="49" y="0.500001" z="49"/>
+							<center x="0" y="0.4999988" z="0"/>
+						</size>
+						<size_raw>
+							<max x="49" y="0.500001" z="49"/>
+							<center x="0" y="0.4999988" z="0"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_rotator" tags="forceoutline iklink nocollision part " parent="part_socket">
+				<offset>
+					<position x="0" y="1" z="0"/>
+				</offset>
+				<restrictions>
+					<restriction type="rotation_y"/>
+				</restrictions>
+				<parts>
+					<part name="part_rotator" wreck="part_rotator_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+									<material id="3" ref="p2generic.gen_p2_alphatexture_01"/>
+								</materials>
+							</lod>
+							<lod index="1">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+									<material id="3" ref="p2generic.gen_p2_alphatexture_01"/>
+								</materials>
+							</lod>
+							<lod index="2">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+									<material id="3" ref="p2generic.gen_p2_alphatexture_01"/>
+								</materials>
+							</lod>
+							<lod index="3">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+									<material id="3" ref="p2generic.gen_p2_alphatexture_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="56.30466" y="14.98085" z="60.69299"/>
+							<center x="0" y="14.98084" z="1.511723"/>
+						</size>
+						<size_raw>
+							<max x="56.30466" y="14.98085" z="60.69299"/>
+							<center x="0" y="14.98084" z="1.511724"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForanim_glowfx" tags="animation iklink nocollision part textureanimation forceoutline" parent="part_rotator">
+				<parts>
+					<part name="anim_glowfx">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_gradient_colour"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="39.57" y="1.820529" z="4.055029"/>
+							<center x="-0.4112015" y="29.29525" z="2.877634"/>
+						</size>
+						<size_raw>
+							<max x="39.57" y="1.820529" z="4.055029"/>
+							<center x="-0.4112005" y="29.29525" z="2.877634"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="1" value="0"/>
+									<key frame="2" value="0"/>
+									<key frame="30" value="0"/>
+									<key frame="60" value="-0.4"/>
+									<key frame="73" value="-0.4"/>
+									<key frame="74" value="-0.4"/>
+									<key frame="90" value="-0.4"/>
+									<key frame="110" value="0"/>
+									<key frame="150" value="0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_cover_L" tags="animation forceoutline iklink nocollision part " parent="part_rotator">
+				<offset>
+					<position x="13.465" y="0" z="0"/>
+				</offset>
+				<parts>
+					<part name="part_cover_L">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="13.93513" y="9.202126" z="50.55302"/>
+							<center x="-27.40442" y="20.05268" z="8.479813"/>
+						</size>
+						<size_raw>
+							<max x="7.202625" y="9.202126" z="50.55302"/>
+							<center x="-20.67192" y="20.05268" z="8.479813"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_cover_R" tags="animation forceoutline iklink nocollision part " parent="part_rotator">
+				<offset>
+					<position x="-13.465" y="0" z="0"/>
+				</offset>
+				<parts>
+					<part name="part_cover_R">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="13.93512" y="9.202126" z="50.55302"/>
+							<center x="27.40452" y="20.05268" z="8.479813"/>
+						</size>
+						<size_raw>
+							<max x="7.202624" y="9.202126" z="50.55302"/>
+							<center x="20.67202" y="20.05268" z="8.479813"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_elevation_gear" tags="animation forceoutline iklink nocollision part " parent="part_rotator">
+				<offset>
+					<position x="-20.73577" y="25.03198" z="-30.04059"/>
+				</offset>
+				<parts>
+					<part name="part_elevation_gear">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="26.93357" y="13.8331" z="7.005407"/>
+							<center x="20.73577" y="-10.72439" z="3.895409"/>
+						</size>
+						<size_raw>
+							<max x="26.93357" y="9.172194" z="7.005408"/>
+							<center x="20.73577" y="-6.063484" z="3.895409"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_gun" tags="animation forceoutline iklink nocollision part " parent="part_rotator">
+				<offset>
+					<position x="-20.73577" y="25.03198" z="-30.04059"/>
+				</offset>
+				<restrictions>
+					<restriction type="rotation_x">
+						<limits>
+							<min value="-5.1"/>
+							<max value="60"/>
+						</limits>
+					</restriction>
+				</restrictions>
+				<parts>
+					<part name="part_gun">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+									<material id="3" ref="p2generic.gen_p2_alphatexture_01"/>
+									<material id="4" ref="p1paint.paint_p1_decal_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="26.90958" y="16.03441" z="29.46789"/>
+							<center x="20.73577" y="-8.486864" z="20.28702"/>
+						</size>
+						<size_raw>
+							<max x="26.90958" y="11.3735" z="29.46789"/>
+							<center x="20.73577" y="-3.825958" z="20.28702"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForanim_glowfx_gun" tags="animation forceoutline iklink nocollision part textureanimation forceoutline" parent="part_gun">
+				<offset>
+					<position x="0" y="1.385218" z="75.1479"/>
+				</offset>
+				<parts>
+					<part name="anim_glowfx_gun">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_gradient_colour"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="21.35828" y="5.08222" z="0"/>
+							<center x="16.18957" y="0.4013653" z="-46.2847"/>
+						</size>
+						<size_raw>
+							<max x="21.35828" y="0.4213111" z="0"/>
+							<center x="16.18957" y="5.062275" z="-46.2847"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="1" value="0"/>
+									<key frame="2" value="0"/>
+									<key frame="30" value="0"/>
+									<key frame="60" value="-0.4"/>
+									<key frame="73" value="-0.4"/>
+									<key frame="74" value="-0.4"/>
+									<key frame="90" value="-0.4"/>
+									<key frame="110" value="0"/>
+									<key frame="150" value="0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_barrel" tags="animation forceoutline iklink nocollision part " parent="part_gun">
+				<parts>
+					<part name="part_barrel">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+									<material id="3" ref="p1paint.paint_p1_decal_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="25.5135" y="9.60939" z="46.14517"/>
+							<center x="20.73577" y="-5.60317" z="37.54549"/>
+						</size>
+						<size_raw>
+							<max x="25.5135" y="4.948482" z="30.64517"/>
+							<center x="20.73577" y="-0.942262" z="53.04548"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="con_laser_01" tags="laser " parent="part_barrel">
+				<offset>
+					<position x="0" y="1.386274" z="83.61706"/>
+				</offset>
+			</connection>
+			<connection name="con_laser_02" tags="laser " parent="part_barrel">
+				<offset>
+					<position x="41.75431" y="1.386274" z="83.61706"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionForanim_glowfx_muzzle" tags="animation iklink nocollision part textureanimation forceoutline" parent="part_barrel">
+				<offset>
+					<position x="0" y="1.385218" z="75.1479"/>
+				</offset>
+				<parts>
+					<part name="anim_glowfx_muzzle">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_gradient_colour"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="21.88498" y="5.810115" z="15.55961"/>
+							<center x="20.73577" y="-4.660908" z="-7.089722"/>
+						</size>
+						<size_raw>
+							<max x="21.88498" y="1.149207" z="0.05961037"/>
+							<center x="20.73577" y="0" z="8.410278"/>
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="1" value="0"/>
+									<key frame="2" value="0"/>
+									<key frame="7" value="0"/>
+									<key frame="25" value="-0.4"/>
+									<key frame="73" value="-0.4"/>
+									<key frame="74" value="-0.4"/>
+									<key frame="114" value="-0.4"/>
+									<key frame="134" value="0"/>
+									<key frame="150" value="0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_accelerator_brace" tags="animation forceoutline iklink nocollision part " parent="part_barrel">
+				<offset>
+					<position x="0" y="0" z="9.003845"/>
+				</offset>
+				<parts>
+					<part name="part_accelerator_brace">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+									<material id="3" ref="p2generic.gen_p2_alphatexture_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="24.12658" y="7.624837" z="27.34227"/>
+							<center x="20.73577" y="-3.25466" z="56.17849"/>
+						</size>
+						<size_raw>
+							<max x="24.12658" y="2.963928" z="7.340347"/>
+							<center x="20.73577" y="1.406248" z="76.18041"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_outer_lower_end" tags="animation forceoutline iklink nocollision part " parent="part_barrel">
+				<parts>
+					<part name="part_outer_lower_end">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="26.24129" y="7.749864" z="42.66564"/>
+							<center x="20.73577" y="-7.796953" z="65.74882"/>
+						</size>
+						<size_raw>
+							<max x="26.24129" y="2.776455" z="13.66564"/>
+							<center x="20.73577" y="-2.823543" z="94.74881"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_outer_outer_accel_brace" tags="animation forceoutline iklink nocollision part " parent="part_barrel">
+				<offset>
+					<position x="0" y="0" z="27"/>
+				</offset>
+				<parts>
+					<part name="part_outer_outer_accel_brace">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+									<material id="3" ref="p2generic.gen_p2_alphatexture_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="25.51349" y="8.030354" z="58.8639"/>
+							<center x="20.73577" y="-3.276777" z="22.99956"/>
+						</size>
+						<size_raw>
+							<max x="25.51349" y="3.369445" z="29.8639"/>
+							<center x="20.73577" y="1.38413" z="51.99957"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_outer_upper_frame" tags="animation forceoutline iklink nocollision part " parent="part_barrel">
+				<offset>
+					<position x="0" y="0" z="27"/>
+				</offset>
+				<parts>
+					<part name="part_outer_upper_frame">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+									<material id="3" ref="p2generic.gen_p2_alphatexture_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="25.5135" y="7.550293" z="50.58319"/>
+							<center x="20.73577" y="-1.515841" z="30.72458"/>
+						</size>
+						<size_raw>
+							<max x="25.5135" y="2.889385" z="21.58319"/>
+							<center x="20.73577" y="3.145068" z="59.72458"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_upper_frame_inner" tags="animation forceoutline iklink nocollision part " parent="part_barrel">
+				<parts>
+					<part name="part_upper_frame_inner">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hulltexture_01"/>
+									<material id="2" ref="p2generic.gen_p2_fx_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="25.58732" y="6.119427" z="33.09885"/>
+							<center x="20.73577" y="0.3105717" z="33.00525"/>
+						</size>
+						<size_raw>
+							<max x="25.58732" y="1.458518" z="17.59885"/>
+							<center x="20.73577" y="4.14148" z="48.50525"/>
+						</size_raw>
+					</part>
+				</parts>
+			</connection>
+		</connections>
+	</component>
+</components>
