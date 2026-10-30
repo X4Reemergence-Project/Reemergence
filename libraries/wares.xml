@@ -915,6 +915,32 @@
 			<owner faction="trinity" />
 			<owner faction="xaar" />			
 		</ware>
+		<ware id="ship_par_l_apollo" name="{4837251,132210}" description="{4837251,132211}" group="ships_paranid" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="6128500" average="7210000" max="8291500" />
+			<production time="240" amount="1" method="default" name="{20206,901}">
+				<primary>
+					<ware ware="energycells" amount="847" />
+					<ware ware="hullparts" amount="3388" />
+				</primary>
+			</production>
+			<component ref="ship_par_l_apollo_macro" amount="1" />
+			<restriction licence="capitalship" />
+			<owner faction="paranid" />
+			<owner faction="trinity" />
+		</ware>
+		<ware id="ship_par_l_artemis" name="{4837251,133310}" description="{4837251,133311}" group="ships_paranid" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="4060875" average="4777500" max="5494125" />
+			<production time="120" amount="1" method="default" name="{20206,901}">
+				<primary>
+					<ware ware="energycells" amount="561" />
+					<ware ware="hullparts" amount="2244" />
+				</primary>
+			</production>
+			<component ref="ship_par_l_artemis_macro" amount="1" />
+			<restriction licence="capitalship" />
+			<owner faction="paranid" />
+			<owner faction="trinity" />
+		</ware>
 			<!-- Pirate ships -->
 		<ware id="ship_vig_l_pardal" name="{4837251,493010}" description="{4837251,493011}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
 			<price min="2987157" average="3253862" max="3578066" />
@@ -1126,6 +1152,21 @@
 
 		<!--WEAPONS-->
 	<add sel="//wares">
+		<ware id="missile_par_l_prism" name="{4837252,5133510}" description="{4837252,5133511}" group="missiles" transport="equipment" volume="1" tags="equipment missile">
+			<price min="71122" average="80821" max="90520" />
+			<production time="9" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="225"/>
+					<ware ware="missilecomponents" amount="110"/>
+					<ware ware="smartchips" amount="45"/>
+				</primary>
+			</production>
+			<component ref="missile_par_l_prism_macro" amount="1" />
+			<container ref="sm_gen_pickup_equipment_01_macro"/>
+			<restriction licence="militaryequipment" />
+			<use threshold="0" />
+			<owner faction="xaar" />
+		</ware>	
 		<ware id="weapon_gen_s_repairbeam" name="{20113,1001}" description="{20113,1002}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
 			<price min="32092" average="35658" max="39223" />
 			<production time="10" amount="1" method="default" name="{20206,101}">
@@ -1150,6 +1191,20 @@
 			<restriction licence="generaluseequipment" />
 			<use threshold="0" factions="xenon" />
 			<owner faction="xenon" />
+		</ware>
+		<ware id="weapon_par_l_apollo" name="{4837252,1133510}" description="{4837252,1133511}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+			<price min="1100201" average="1211335" max="1322468" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="advancedelectronics" amount="43" />
+					<ware ware="energycells" amount="173" />
+					<ware ware="weaponcomponents" amount="86" />
+				</primary>
+			</production>
+			<component ref="weapon_par_l_apollo_macro" amount="1" />
+			<restriction licence="capitalequipment" />
+			<use threshold="0" />
+			<owner faction="xaar" />
 		</ware>
 	</add>
 
