@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+	<macro name="weapon_bor_l_kraken_macro" class="weapon">
+		<component ref="weapon_bor_l_kraken"/>
+		<properties>
+			<identification name="{4837252,1254010}" basename="{4837252,1254010}" makerrace="boron" description="{4837252,1254011}" />
+			<bullet class="bullet_bor_l_kraken_macro"/>
+			<heat overheat="40000" cooldelay="2" coolrate="2000" reenable="1" />
+			<rotationspeed max="10"/>
+			<rotationacceleration max="3"/>
+			<hull max="10000" threshold="0.2"/>
+			<effects>
+				<firing start="muzzle_bor_l_beam_01_mk1" stop="stopshooting_bor_l_beam_01_mk1"/>
+			</effects>
+			<sounds>
+				<firing ref="weapon_bor_l_beam_01_mk1_charge"/>
+			</sounds>
+		</properties>
+	</macro>
+</macros>
