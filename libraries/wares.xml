@@ -1157,6 +1157,31 @@
 			<owner faction="teladi" />
 			<owner faction="ministry" />
 		</ware-->
+      <ware id="ship_tel_l_cassowary" name="{4837251,123310}" description="{4837251,123311}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="4095221" average="4550000" max="4920010" />
+			<production time="90" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="1100" />
+					<ware ware="hullparts" amount="3250" />
+				</primary>
+			</production>
+			<component ref="ship_tel_l_cassowary_macro" amount="1" />
+			<restriction licence="militaryequipment" />
+			<owner faction="teladi" />
+			<owner faction="ministry" />
+      </ware>
+      <ware id="ship_tel_l_roc" name="{4837251,123310}" description="{4837251,123311}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
+            <price min="7834365" average="9216900" max="10599435" />
+            <production time="120" amount="1" method="default" name="{20206,901}">
+                  <primary>
+                        <ware ware="hullparts" amount="4328" />
+                        <ware ware="energycells" amount="1082" />
+                  </primary>
+            </production>
+            <component ref="ship_tel_l_roc_macro" amount="1" />
+			<restriction licence="capitalequipment" />
+			<owner faction="ministry" />
+      </ware>
 		<ware id="ship_tel_xl_ostrich" name="{4837251,124710}" description="{4837251,124711}" group="ships_teladi" transport="ship" size="ship" volume="1" tags="ship">
 			<price min="19447804" average="22879769" max="26311735" />
 			<production time="492" amount="1" method="default" name="{20206,101}">
@@ -1288,6 +1313,21 @@
 			<use threshold="0" />
 			<owner faction="xaar" />
 		</ware>
+		<ware id="missile_tel_l_hornet" name="{4837252,5123510}" description="{4837252,5123511}" group="missiles" transport="equipment" volume="1" tags="equipment missile">
+			<price min="71122" average="80821" max="90520" />
+			<production time="9" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="225"/>
+					<ware ware="missilecomponents" amount="110"/>
+					<ware ware="smartchips" amount="45"/>
+				</primary>
+			</production>
+			<component ref="missile_tel_l_hornet_macro" amount="1" />
+			<container ref="sm_gen_pickup_equipment_01_macro"/>
+			<restriction licence="militaryequipment" />
+			<use threshold="0" />
+			<owner faction="ministry" />
+		</ware>
 		<ware id="weapon_ald_s_missilepod" name="{4837252,1371510}" description="{4837252,1371511}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
 		  <price min="8277" average="9197" max="10117" />
 			<production time="5" amount="1" method="default" name="{20206,901}">
@@ -1354,6 +1394,20 @@
 			<restriction licence="capitalequipment" />
 			<use threshold="0" />
 			<owner faction="xaar" />
+		</ware>
+		<ware id="weapon_tel_l_roc" name="{4837252,1123510}" description="{4837252,1123511}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
+			<price min="1100201" average="1211335" max="1322468" />
+			<production time="10" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="advancedelectronics" amount="43" />
+					<ware ware="energycells" amount="173" />
+					<ware ware="weaponcomponents" amount="86" />
+				</primary>
+			</production>
+			<component ref="weapon_tel_l_roc_macro" amount="1" />
+			<restriction licence="capitalequipment" />
+			<use threshold="0" />
+			<owner faction="ministry" />
 		</ware>
 	</add>
 
@@ -3831,12 +3885,7 @@
 		<owner faction="enclave"/>
 		<owner faction="otas"/>
 	</add>
-	<add sel="/wares/ware[@id='missile_hornet']">
-		<owner faction="enclave"/>
-		<owner faction="otas"/>
-		<owner faction="strongarms"/>
-		<owner faction="xaar"/>
-	</add>
+	<remove sel="//wares/ware[@id='missile_hornet']" />
 	<add sel="/wares/ware[@id='missile_hurricane']">
 		<owner faction="enclave"/>
 		<owner faction="otas"/>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+	<macro name="missile_tel_l_hornet_macro" class="missile">
+		<component ref="missile_tel_l_hornet"/>
+		<properties>
+			<identification name="{4837252,5123510}" basename="{4837252,5123510}" description="{4837252,5123511}"/>
+			<ammunition value="1"/>
+			<missile amount="6" barrelamount="1" lifetime="60" range="66000" swarm="0" guided="1" icon="hud_ms_torpedo_heavy_mk1" tags="hornet" targetable="1"/>
+			<explosiondamage value="80000"/>
+			<reload time="60"/>
+			<hull max="270"/>
+			<effects>
+				<explosion ref="explosion_missile_aoe_large"/> <!--200m AoE from VRO-->
+				<launch ref="muzzle_gen_cruise"/>
+			</effects>
+			<weapon system="torpedo"/>
+			<countermeasure resilience="0.85"/>
+			<physics mass="10">
+				<inertia pitch="10" yaw="10" roll="10" />
+				<drag forward="0.3" reverse="1.8" horizontal="1.8" vertical="1.8" pitch="0.9" yaw="0.9" roll="0.9" />
+			</physics>
+			<lock time="3" range="38000"/>
+		</properties>
+		<connections>
+			<connection ref="con_engine01">
+				<macro ref="engine_missile_guided_mk1_macro" connection="ship"/>
+			</connection>
+		</connections>
+	</macro>
+</macros>
