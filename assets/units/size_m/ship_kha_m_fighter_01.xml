@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+	<replace sel="/components/component/connections/connection[@name='con_primaryweapon_01']/@name">con_turret_01</replace>
+	<replace sel="/components/component/connections/connection[@name='con_turret_01']/@tags">combat medium turret meshless </replace>
+	<replace sel="/components/component/connections/connection[@name='con_turret_01']/offset/position/@x">34.3</replace>
+	<replace sel="/components/component/connections/connection[@name='con_turret_01']/offset/position/@y">-24.4</replace>
+	<replace sel="/components/component/connections/connection[@name='con_turret_01']/offset/position/@z">-17</replace>
+	<replace sel="/components/component/connections/connection[@name='con_primaryweapon_02']/@name">con_turret_02</replace>
+	<replace sel="/components/component/connections/connection[@name='con_turret_02']/@tags">combat medium turret meshless </replace>
+	<replace sel="/components/component/connections/connection[@name='con_turret_02']/offset/position/@x">-34.3</replace>
+	<replace sel="/components/component/connections/connection[@name='con_turret_02']/offset/position/@y">-24.4</replace>
+	<replace sel="/components/component/connections/connection[@name='con_turret_02']/offset/position/@z">-17</replace>
+	<add sel="//components/component[@name='ship_kha_m_fighter_01']/connections">
+		<connection name="con_turret_03" tags="combat medium turret meshless ">
+			<offset>
+				<position x="0" y="35" z="-17"/>
+			</offset>
+		</connection>
+	</add>
+</diff>
