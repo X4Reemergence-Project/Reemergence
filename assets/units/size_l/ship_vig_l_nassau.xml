@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exported on 2026-11-07 15:23:08 from Blender-->
+<components>
+	<component name="ship_vig_l_nassau" class="ship_l">
+		<source geometry="extensions\reemergence\assets\units\size_l\ship_vig_l_nassau_data"/>
+		<layers>
+			<layer>
+				<waypoints>
+					<waypoint name="mt_in_1" tags="dynamicmasstraffic end speed_normal typedock " x="-72" y="-10" z="95" qx="0" qy="0" qz="0" qw="-1">
+						<links>
+							<link ref=""/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_in_2" tags="dynamicmasstraffic speed_normal typenormal " x="-72" y="40" z="95" qx="-0.5" qy="0.5" qz="-0.5" qw="-0.5">
+						<links>
+							<link ref=""/>
+							<link ref="mt_in_1"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_in_3" tags="dynamicmasstraffic speed_normal typenormal " x="-100" y="40" z="230" qx="-0.7034133" qy="-0.7034133" qz="-0.07217851" qw="-0.07217851">
+						<links>
+							<link ref=""/>
+							<link ref="mt_in_2"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_in_4_left" tags="closelink dynamicmasstraffic speed_normal start typenormal " x="-13.50002" y="0" z="400" qx="0.7009569" qy="0.6669349" qz="-0.09305634" qw="-0.2349422">
+						<links>
+							<link ref=""/>
+							<link ref="mt_in_3"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_in_4_right" tags="closelink dynamicmasstraffic speed_normal start typenormal " y="0" z="400" qx="0.6933305" qy="0.6537502" qz="-0.1388983" qw="-0.2694638">
+						<links>
+							<link ref=""/>
+							<link ref="mt_in_3"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_out_1" tags="dynamicmasstraffic speed_normal start typedock " x="-72" y="-10" z="105" qx="0.5" qy="0.5" qz="0.5" qw="-0.5">
+						<links>
+							<link ref=""/>
+							<link ref="mt_out_2"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_out_2" tags="dynamicmasstraffic speed_normal typenormal " x="-72" y="30" z="105" qx="0.07775234" qy="0.07775234" qz="-0.702819" qw="-0.702819">
+						<links>
+							<link ref=""/>
+							<link ref="mt_out_3"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_out_3" tags="dynamicmasstraffic speed_normal typenormal " x="-100" y="30" z="230" qx="-0.3050538" qy="-0.1005091" qz="-0.6379202" qw="-0.6999271">
+						<links>
+							<link ref=""/>
+							<link ref="mt_out_4_left"/>
+							<link ref="mt_out_4_right"/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_out_4_left" tags="closelink end dynamicmasstraffic speed_normal typenormal " x="-13.50002" y="-34" z="400" qx="0.01460604" qy="-0.3574851" qz="-0.7069559" qw="-0.6100856">
+						<links>
+							<link ref=""/>
+						</links>
+					</waypoint>
+					<waypoint name="mt_out_4_right" tags="closelink end dynamicmasstraffic speed_normal typenormal " x="13.49998" y="-34" z="400" qx="0.2133393" qy="-0.2133393" qz="-0.674156" qw="-0.6741561">
+						<links>
+							<link ref=""/>
+						</links>
+					</waypoint>
+				</waypoints>
+				<lights>
+					<omni name="omni_cargo001" shadow="1" r="255" g="231" b="199" intensity="1.189207" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-93.60708" y="1.274785" z="1.601665"/>
+						</offset>
+					</omni>
+					<omni name="omni_cargo002" shadow="1" r="255" g="231" b="199" intensity="1.189207" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-93.60708" y="1.274815" z="-29.49843"/>
+						</offset>
+					</omni>
+					<omni name="omni_cargo003" shadow="1" r="255" g="231" b="199" intensity="1.189207" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-93.60708" y="1.27483" z="-60.59841"/>
+						</offset>
+					</omni>
+					<omni name="omni_cargo004" shadow="1" r="255" g="231" b="199" intensity="1.189207" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="93.6071" y="1.274785" z="1.601665"/>
+						</offset>
+					</omni>
+					<omni name="omni_cargo005" shadow="1" r="255" g="231" b="199" intensity="1.189207" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="93.6071" y="1.274815" z="-29.49843"/>
+						</offset>
+					</omni>
+					<omni name="omni_cargo006" shadow="1" r="255" g="231" b="199" intensity="1.189207" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="93.6071" y="1.27483" z="-60.59841"/>
+						</offset>
+					</omni>
+					<omni name="omni_droneport" shadow="1" r="0" g="89" b="211" intensity="1.391579" specularintensity="1" range="50" shadowrange="50" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-71.80711" y="8.017973" z="99.65529"/>
+						</offset>
+					</omni>
+					<spot name="spot" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-81.83032" y="24.39279" z="14.66571"/>
+							<quaternion qx="0" qy="0" qz="0.4226183" qw="-0.9063078"/>
+						</offset>
+					</spot>
+					<spot name="spot001" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-81.4492" y="23.79202" z="-44.3291"/>
+							<quaternion qx="0" qy="0" qz="0.4226183" qw="-0.9063078"/>
+						</offset>
+					</spot>
+					<spot name="spot002" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-81.46616" y="24.55546" z="-74.70801"/>
+							<quaternion qx="0" qy="0" qz="0.4226183" qw="-0.9063078"/>
+						</offset>
+					</spot>
+					<spot name="spot003" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="81.45047" y="24.39279" z="14.66571"/>
+							<quaternion qx="0.4226183" qy="-0.9063078" qz="1.847323e-08" qw="-3.961597e-08"/>
+						</offset>
+					</spot>
+					<spot name="spot004" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="81.83159" y="23.79202" z="-44.3291"/>
+							<quaternion qx="0.4226183" qy="-0.9063078" qz="1.847323e-08" qw="-3.961597e-08"/>
+						</offset>
+					</spot>
+					<spot name="spot005" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="81.81464" y="24.55546" z="-74.70801"/>
+							<quaternion qx="0.4226183" qy="-0.9063078" qz="1.847323e-08" qw="-3.961597e-08"/>
+						</offset>
+					</spot>
+					<spot name="spot006" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-81.59825" y="-22.27072" z="10.96985"/>
+							<quaternion qx="0" qy="0" qz="0.9063078" qw="-0.4226183"/>
+						</offset>
+					</spot>
+					<spot name="spot007" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-81.46616" y="-22.10803" z="-74.70801"/>
+							<quaternion qx="0" qy="0" qz="0.9063078" qw="-0.4226183"/>
+						</offset>
+					</spot>
+					<spot name="spot008" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="81.59952" y="-22.27075" z="10.96997"/>
+							<quaternion qx="0.9063078" qy="-0.4226183" qz="3.961597e-08" qw="-1.847323e-08"/>
+						</offset>
+					</spot>
+					<spot name="spot009" angle="45.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="2.514867" specularintensity="1" range="25" shadowrange="25" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="81.81464" y="-22.10803" z="-74.70801"/>
+							<quaternion qx="0.9063078" qy="-0.4226183" qz="3.961597e-08" qw="-1.847323e-08"/>
+						</offset>
+					</spot>
+					<spot name="spot010" angle="120.0" gradientindex="1" shadow="0" r="255" g="231" b="199" intensity="1.451959" specularintensity="1" range="75" shadowrange="75" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-7.629395e-06" y="-103.7187" z="41.6535"/>
+							<quaternion qx="-1" qy="0" qz="0" qw="-4.371139e-08"/>
+						</offset>
+					</spot>
+					<spot name="spot011" angle="120.0" gradientindex="1" shadow="1" r="255" g="231" b="199" intensity="2.295749" specularintensity="1" range="30" shadowrange="30" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-80.36354" y="-19.21379" z="203.4931"/>
+							<quaternion qx="-0.6087614" qy="0.7933534" qz="1.292537e-07" qw="-9.917981e-08"/>
+						</offset>
+					</spot>
+					<spot name="spot012" angle="60.0" gradientindex="1" shadow="1" r="255" g="231" b="199" intensity="2.295749" specularintensity="1" range="30" shadowrange="30" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-79.5994" y="-19.21379" z="165.4785"/>
+							<quaternion qx="-0.6087614" qy="0.7933534" qz="1.292537e-07" qw="-9.917981e-08"/>
+						</offset>
+					</spot>
+					<spot name="spot013" angle="120.0" gradientindex="1" shadow="1" r="255" g="231" b="199" intensity="2.295749" specularintensity="1" range="30" shadowrange="30" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="33.41434" y="34.55099" z="195.5499"/>
+							<quaternion qx="-0.6087614" qy="0.7933534" qz="1.292537e-07" qw="-9.917981e-08"/>
+						</offset>
+					</spot>
+					<spot name="spot014" angle="60.0" gradientindex="1" shadow="1" r="255" g="231" b="199" intensity="1.778279" specularintensity="1" range="50" shadowrange="50" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="34.00349" y="34.24723" z="225.635"/>
+							<quaternion qx="-0.5372996" qy="0.8433915" qz="2.37946e-07" qw="-1.515883e-07"/>
+						</offset>
+					</spot>
+					<spot name="spot015" angle="60.0" gradientindex="1" shadow="1" r="255" g="231" b="199" intensity="1.778279" specularintensity="1" range="50" shadowrange="50" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-79.9781" y="21.28018" z="165.5146"/>
+							<quaternion qx="-0.7933533" qy="0.6087614" qz="3.168899e-07" qw="-4.129789e-07"/>
+						</offset>
+					</spot>
+					<spot name="spot016" angle="60.0" gradientindex="1" shadow="1" r="255" g="231" b="199" intensity="1.778279" specularintensity="1" range="50" shadowrange="50" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-79.55435" y="20.74576" z="190.2374"/>
+							<quaternion qx="-0.6427875" qy="0.7660445" qz="3.074437e-07" qw="-2.579759e-07"/>
+						</offset>
+					</spot>
+					<arealight name="ego_area" areax="15" areay="130" radius="0" spotattenuation="0" shadow="0" r="0" g="65" b="255" intensity="2" specularintensity="1" range="50" shadowrange="50" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="129.566" y="43.88004" z="180.4086"/>
+							<quaternion qx="0" qy="0" qz="-0.1305258" qw="-0.9914449"/>
+						</offset>
+					</arealight>
+					<arealight name="ego_area001" areax="15" areay="130" radius="0" spotattenuation="0" shadow="0" r="0" g="65" b="255" intensity="2" specularintensity="1" range="50" shadowrange="50" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="152.6041" y="-40.76826" z="180.4086"/>
+							<quaternion qx="0" qy="0" qz="0.9914449" qw="-0.1305254"/>
+						</offset>
+					</arealight>
+					<arealight name="ego_area002" areax="40" areay="110" radius="0" spotattenuation="0" shadow="0" r="0" g="65" b="255" intensity="2" specularintensity="1" range="30" shadowrange="30" lighteffect="1" lenseffect="none" trigger="0">
+						<offset>
+							<position x="-126.3" y="1.274761" z="142.7405"/>
+							<quaternion qx="0" qy="0" qz="0.7071068" qw="-0.7071068"/>
+						</offset>
+					</arealight>
+				</lights>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="space" tags="ship_l ship"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="con_cockpit" tags="cockpit cockpit_visible ">
+				<offset>
+					<position x="50" y="25" z="240"/>
+				</offset>
+			</connection>
+			<connection name="con_countermeasures001" tags="countermeasures ">
+				<offset>
+					<position x="-100.7058" y="7.746092e-06" z="-166.0815"/>
+					<quaternion qx="0" qy="0.9238796" qz="0" qw="-0.3826835"/>
+				</offset>
+			</connection>
+			<connection name="con_countermeasures002" tags="countermeasures ">
+				<offset>
+					<position x="100.7058" y="-7.746092e-06" z="-166.0815"/>
+					<quaternion qx="0" qy="-0.9238796" qz="0" qw="-0.3826835"/>
+				</offset>
+			</connection>
+			<connection name="con_dock_xs" tags="dock_xs ">
+				<offset>
+					<position x="-71.90088" y="25.25044" z="99.75243"/>
+					<quaternion qx="0.7010573" qy="0.09229594" qz="-0.09229597" qw="-0.7010574"/>
+				</offset>
+			</connection>
+			<connection name="con_dockarea_m001" tags="dockarea ">
+				<offset>
+					<position x="141.083" y="1.503785" z="180.4085"/>
+					<quaternion qx="0" qy="0" qz="0.6087614" qw="-0.7933534"/>
+				</offset>
+			</connection>
+			<connection name="con_dockingarea_invisible001" tags="dockarea ">
+				<offset>
+					<position x="-131" y="1.274761" z="192.7405"/>
+					<quaternion qx="0.5000002" qy="-0.5000002" qz="-0.4999998" qw="-0.4999998"/>
+				</offset>
+			</connection>
+			<connection name="con_dockingarea_invisible002" tags="dockarea ">
+				<offset>
+					<position x="-131" y="1.274761" z="142.7405"/>
+					<quaternion qx="0.5000002" qy="-0.5000002" qz="-0.4999998" qw="-0.4999999"/>
+				</offset>
+			</connection>
+			<connection name="con_dockingarea_invisible003" tags="dockarea ">
+				<offset>
+					<position x="-131" y="1.274776" z="92.74046"/>
+					<quaternion qx="0.5000002" qy="-0.5000002" qz="-0.4999998" qw="-0.4999999"/>
+				</offset>
+			</connection>
+			<connection name="con_playercontrol" tags="playercontrol ">
+				<offset>
+					<position x="0" y="0" z="-100"/>
+				</offset>
+			</connection>
+			<connection name="con_shipstorage_m" tags="dockingbay ">
+				<offset>
+					<position x="0" y="0" z="-100"/>
+				</offset>
+			</connection>
+			<connection name="con_shipstorage_s" tags="dockingbay ">
+				<offset>
+					<position x="0" y="0" z="-100"/>
+				</offset>
+			</connection>
+			<connection name="con_shipstorage_xs" tags="dockingbay ">
+				<offset>
+					<position x="0" y="0" z="-100"/>
+				</offset>
+			</connection>
+			<connection name="con_storage_01" tags="storage ">
+				<offset>
+					<position x="0" y="0" z="-100"/>
+				</offset>
+			</connection>
+			<connection name="con_storage_02" tags="storage ">
+				<offset>
+					<position x="0" y="0" z="-100"/>
+				</offset>
+			</connection>
+			<connection name="con_storage_03" tags="storage ">
+				<offset>
+					<position x="0" y="0" z="-100"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionForanim_poslights" tags="detail_m forceoutline nocollision part ">
+				<parts>
+					<part name="anim_poslights">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1effects.p1_gradient_colour"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="141.7111" y="58.50577" z="247.4782"/>
+							<center x="3.259052" y="5.280953" z="79.32428"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionFordetail_l_main" tags="detail_l forceoutline nocollision part ">
+				<parts>
+					<part name="detail_l_main">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture_01_aged"/>
+									<material id="2" ref="generic.generic_p1_alphatexture"/>
+									<material id="3" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="143.7528" y="75.00932" z="201.466"/>
+							<center x="17.09394" y="-25.77086" z="47.25192"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionFordetail_m_main" tags="detail_m forceoutline nocollision part ">
+				<parts>
+					<part name="detail_m_main">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture_01_aged"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+									<material id="3" ref="generic.generic_p1_alphatexture"/>
+									<material id="4" ref="p1effects.p1_lightcone_soft"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="148.0451" y="79.9664" z="262.8342"/>
+							<center x="9.830566" y="-23.62415" z="103.6871"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionFordetail_s_main" tags="detail_s forceoutline nocollision part ">
+				<parts>
+					<part name="detail_s_main">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture_01_aged"/>
+									<material id="2" ref="generic.generic_p1_alphatexture"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="125.4624" y="42.20335" z="197.632"/>
+							<center x="14.0989" y="0.6801929" z="105.9337"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionFordetail_xl_main" tags="detail_xl forceoutline nocollision part ">
+				<parts>
+					<part name="detail_xl_main">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture_01_aged"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="144.335" y="59.893" z="170.2024"/>
+							<center x="17.0961" y="-3.488328" z="74.48225"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForfx_licence" tags="detail_l fx nocollision part ">
+				<offset>
+					<position x="0" y="134.4853" z="0"/>
+				</offset>
+				<parts>
+					<part name="fx_licence">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p1paint.paint_idcode"/>
+									<material id="2" ref="p1paint.paint_logo"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="68.58736" y="75.65054" z="118.0805"/>
+							<center x="-28.34303" y="-147.7362" z="-3.351505"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="ConnectionForpart_main" tags="part ">
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture_01_aged"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+							<lod index="1">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture_01_aged"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+							<lod index="2">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture_01_aged"/>
+									<material id="2" ref="generic.generic_p1_fx"/>
+								</materials>
+							</lod>
+							<lod index="3">
+								<materials>
+									<material id="1" ref="generic.generic_p1_hulltexture_01_aged"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="111.4665" y="91.0741" z="216.4377"/>
+							<center x="-7.629395e-06" y="-28.77448" z="48.46178"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="engine_xl" group="engine " tags="standard engine extralarge platformcollision ">
+				<offset>
+					<position x="1.525879e-05" y="-19.59544" z="-155.8599"/>
+				</offset>
+			</connection>
+			<connection name="shield_l" tags="standard hittable large shield ">
+				<offset>
+					<position x="0" y="-106.5879" z="-51.84097"/>
+					<quaternion qx="-1" qy="-2.8213e-07" qz="-1.629207e-07" qw="0"/>
+				</offset>
+			</connection>
+			<connection name="shield_m_hittable" group="turret_l " tags="standard hittable medium shield ">
+				<offset>
+					<position x="-44.50679" y="30.7882" z="263.1423"/>
+					<quaternion qx="-0.579228" qy="0.4055798" qz="0.5792279" qw="-0.4055798"/>
+				</offset>
+			</connection>
+			<connection name="shield_m_hittable001" group="engine " tags="standard hittable medium shield ">
+				<offset>
+					<position x="0.4283794" y="55.29328" z="-143.7574"/>
+				</offset>
+			</connection>
+			<connection name="shield_m_hittable002" group="turret_m_left " tags="standard hittable medium shield ">
+				<offset>
+					<position x="-102.6947" y="-0.6013106" z="-94.58405"/>
+					<quaternion qx="-0.5" qy="0.5" qz="-0.5" qw="-0.5000001"/>
+				</offset>
+			</connection>
+			<connection name="shield_m_hittable003" group="turret_m_right " tags="standard hittable medium shield ">
+				<offset>
+					<position x="102.695" y="-0.6013106" z="-94.58405"/>
+					<quaternion qx="-0.5" qy="-0.5" qz="0.5" qw="-0.5"/>
+				</offset>
+			</connection>
+			<connection name="turret_l_basic" group="turret_l " tags="standard combat large turret ">
+				<offset>
+					<position x="-44.50679" y="44.48092" z="229.4923"/>
+				</offset>
+			</connection>
+			<connection name="turret_m_basic_hittable001" group="turret_m_left " tags="standard combat hittable medium turret ">
+				<offset>
+					<position x="-102.7457" y="-0.6013106" z="-111.8828"/>
+					<quaternion qx="-0.7071068" qy="0.7071068" qz="3.090862e-08" qw="-3.090862e-08"/>
+				</offset>
+			</connection>
+			<connection name="turret_m_basic_hittable002" group="turret_m_left " tags="standard combat hittable medium turret ">
+				<offset>
+					<position x="-102.7457" y="-0.6013106" z="-130.8828"/>
+					<quaternion qx="-0.7071068" qy="0.7071068" qz="3.090862e-08" qw="-3.090862e-08"/>
+				</offset>
+			</connection>
+			<connection name="turret_m_basic_hittable003" group="turret_m_left " tags="standard combat hittable medium turret ">
+				<offset>
+					<position x="-102.7457" y="-0.6013106" z="-149.8828"/>
+					<quaternion qx="-0.7071068" qy="0.7071068" qz="3.090862e-08" qw="-3.090862e-08"/>
+				</offset>
+			</connection>
+			<connection name="turret_m_basic_hittable004" group="turret_m_right " tags="standard combat hittable medium turret ">
+				<offset>
+					<position x="102.7457" y="-0.6013236" z="-111.8828"/>
+					<quaternion qx="-0.7071068" qy="-0.7071068" qz="-3.090862e-08" qw="-3.090862e-08"/>
+				</offset>
+			</connection>
+			<connection name="turret_m_basic_hittable005" group="turret_m_right " tags="standard combat hittable medium turret ">
+				<offset>
+					<position x="102.7457" y="-0.6013236" z="-130.8828"/>
+					<quaternion qx="-0.7071068" qy="-0.7071068" qz="-3.090862e-08" qw="-3.090862e-08"/>
+				</offset>
+			</connection>
+			<connection name="turret_m_basic_hittable006" group="turret_m_right " tags="standard combat hittable medium turret ">
+				<offset>
+					<position x="102.7457" y="-0.6013236" z="-149.8828"/>
+					<quaternion qx="-0.7071068" qy="-0.7071068" qz="-3.090862e-08" qw="-3.090862e-08"/>
+				</offset>
+			</connection>
+			<!-- CARRIER SPECIFIC -->
+			<connection name="con_buildmodule" tags="buildmodule"/>
+			<connection name="con_shiptradernpc" value="-1" tags="shiptrader "/>
+		</connections>
+	</component>
+</components>

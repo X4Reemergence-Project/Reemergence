@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components>
+	<component name="bullet_bor_l_kraken" class="bullet">
+		<source geometry="extensions\ego_dlc_boron\assets\fx\weaponfx\bullet_bor_l_laser_01_mk1_data"/>
+		<layers>
+			<layer/>
+		</layers>
+		<connections>
+			<connection name="space" tags="bullet"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="con_laser_01" tags="laser ">
+				<offset>
+					<quaternion qx="-2.19e-08" qy="0" qz="0" qw="-1"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionForpart_bullet" tags="animation part textureanimation ">
+				<offset>
+					<quaternion qx="-2.19e-08" qy="0" qz="0" qw="-1"/>
+				</offset>
+				<animations>
+					<animation name="loop_random" start="1" end="21"/>
+				</animations>
+				<parts>
+					<part name="part_bullet">
+						<size>
+							<max x="33.06341" y="33.06341" z="294.7263"/>
+							<center x="-3.8147e-06" y="1.14441e-05" z="-70.14279"/>
+						</size>
+						<uv_animations>
+							<uv_animation rotaroundcenter="1" mapchannel="2">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="1" value="0"/>
+									<key frame="21" value="-1"/>
+								</uv_property>
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="1" value="0"/>
+									<key frame="21" value="0"/>
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+		</connections>
+	</component>
+</components>

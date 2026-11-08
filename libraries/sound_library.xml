@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diff>
 	<add sel="//soundlibrary">
-
 		<!--VOICE-->
 		<sound id="4837251_normal" description="Ships" repeat="1" is3d="1" preload="0">
 			<sample start="extensions\reemergence\voice\4837251\normal"/>
@@ -220,5 +219,41 @@
 	<add sel="/soundlibrary/sound[@id='music_dlc_terran_soundtrack_brennans_triumph']/sample">
 		<select weight="5" start="extensions\ego_dlc_timelines\music\x4_timelines_ost_07_ashes"/>
 		<select weight="5" start="extensions\ego_dlc_pirate\music\Cluster\Alexei Zakharov - Guiding Star" />
+	</add>
+
+	<add sel="//soundlibrary">
+	<!--TURRETS / WEAPONS-->
+		<!--XL-->
+		<!--L-->
+		<sound id="kha_l_beam" description="Khaak L Beam sound" repeat="-1" is3d="1" preload="1">
+			<sample start="extensions\reemergence\sfx\weapons\khaak\kha_l_beam"/>
+			<volume start="0.8" distance="5">
+				<distancecurve>
+					<point distance="0.0" volume="1.0"/>
+					<point distance="0.05" volume="0.2"/>
+					<point distance="0.5" volume="0.1"/>
+					<point distance="1.0" volume="0.0"/>
+				</distancecurve>
+			</volume>
+			<effects>
+				<fade in="0.2" out="0.2"/>
+			</effects>
+		</sound>
+		<!--M-->
+		<sound id="kha_m_beam" description="Khaak M Beam sound" repeat="-1" is3d="1" preload="1">
+			<sample start="extensions\reemergence\sfx\weapons\khaak\kha_m_beam"/>
+			<volume start="0.8" distance="5">
+				<distancecurve>
+					<point distance="0.0" volume="1.0"/>
+					<point distance="0.05" volume="0.2"/>
+					<point distance="0.5" volume="0.1"/>
+					<point distance="1.0" volume="0.0"/>
+				</distancecurve>
+			</volume>
+			<effects>
+				<fade in="0.2" out="0.2"/>
+			</effects>
+		</sound>
+		<!--S-->
 	</add>
 </diff>

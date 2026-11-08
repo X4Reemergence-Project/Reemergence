@@ -886,6 +886,18 @@
 			<restriction licence="capitalship" />
 			<owner faction="enclave" />
 		</ware>
+		<ware id="ship_arg_l_nyx" name="{4837251,313020}" description="{4837251,313021}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
+			<price min="4006156" average="4713125" max="5420094" />
+			<production time="182" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="1008" />
+					<ware ware="hullparts" amount="4433" />
+				</primary>
+			</production>
+			<component ref="ship_arg_l_nyx_macro" amount="1" />
+			<restriction licence="capitalship" />
+			<owner faction="enclave" />
+		</ware>
 		<ware id="ship_arg_xl_daedalus" name="{4837251,314410}" description="{4837251,314411}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
 			<price min="88893000" average="104580000" max="120267000" />
 			<production time="900" amount="1" method="default" name="{20206,101}">
@@ -1047,7 +1059,31 @@
 			<owner faction="trinity" />
 		</ware>
 			<!-- Pirate ships -->
-		<ware id="ship_vig_l_pardal" name="{4837251,493010}" description="{4837251,493011}" group="ships_argon" transport="ship" size="ship" volume="1" tags="ship">
+		<ware id="ship_vig_l_mascarino" name="{4837251,493510}" description="{4837251,493511}" transport="ship" volume="1" tags="ship">
+			<price min="4306024" average="6171220" max="8036416" />
+			<production time="207" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="844" />
+					<ware ware="hullparts" amount="5841" />
+				</primary>
+			</production>
+			<component ref="ship_vig_l_mascarino_macro" amount="1" />
+			<restriction licence="capitalship" />
+			<owner faction="loanshark" />
+		</ware>
+		<ware id="ship_vig_l_nassau" name="{4837251,494610}" description="{4837251,494611}" transport="ship" volume="1" tags="ship">
+			<price min="17625600" average="20736000" max="23846400" />
+			<production time="180" amount="1" method="default" name="{20206,101}">
+				<primary>
+					<ware ware="energycells" amount="2434" />
+					<ware ware="hullparts" amount="9736" />
+				</primary>
+			</production>
+			<component ref="ship_vig_l_nassau_macro" amount="1" />
+			<restriction licence="capitalequipment" />
+			<owner faction="scavenger" />
+		</ware>
+		<ware id="ship_vig_l_pardal" name="{4837251,493010}" description="{4837251,493011}" transport="ship" volume="1" tags="ship">
 			<price min="2987157" average="3253862" max="3578066" />
 			<production time="100" amount="1" method="default" name="{20206,101}">
 				<primary>
@@ -1059,17 +1095,18 @@
 			<restriction licence="militaryequipment" />
 			<owner faction="loanshark" />
 		</ware>
-		<ware id="ship_vig_l_mascarino" name="{4837251,493510}" description="{4837251,493511}" group="ships_argon" transport="ship" volume="1" tags="ship">
-			<price min="4306024" average="6171220" max="8036416" />
-			<production time="207" amount="1" method="default" name="{20206,101}">
+		<ware id="ship_vig_l_tortuga" name="{4837251,494910}" description="{4837251,494911}" transport="ship" volume="1" tags="ship">
+			<price min="28900000" average="34000000" max="39100000" />
+			<production time="360" amount="1" method="default" name="{20206,101}">
 				<primary>
-					<ware ware="energycells" amount="844" />
-					<ware ware="hullparts" amount="5841" />
+					<ware ware="energycells" amount="3991" />
+					<ware ware="hullparts" amount="15964" />
 				</primary>
 			</production>
-			<component ref="ship_vig_l_mascarino_macro" amount="1" />
-			<restriction licence="capitalship" />
+			<component ref="ship_vig_l_tortuga_macro" amount="1" />
+			<restriction licence="capitalequipment" />
 			<owner faction="loanshark" />
+			<owner faction="scavenger" />
 		</ware>
 			<!-- Split ships -->
 		<!--ware id="ship_spl_m_boa_personnel" name="{4837251,142730}" description="{4837251,142731}" group="ships_split" transport="ship" size="ship" volume="1" tags="ship">
