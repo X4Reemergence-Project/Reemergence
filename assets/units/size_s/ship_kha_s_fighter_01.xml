@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff> <!-- PROTECTOR -->
+	<replace  sel="/components/component/connections/connection[@name='con_primaryweapon_01']/@tags">combat platformcollision small standard weapon</replace>
+	<replace  sel="/components/component/connections/connection[@name='con_primaryweapon_02']/@tags">combat platformcollision small standard weapon</replace>
+	<add sel="/components/component/connections/connection[@name='con_dockpos']" pos="before">
+		<connection name="con_primaryweapon_03" tags="combat platformcollision small standard weapon">
+			<offset>
+				<position x="0" y="6" z="0"/>
+			</offset>
+		</connection>
+	</add>
+</diff>

@@ -979,6 +979,17 @@
 			<owner faction="atreus" />
 		</ware>
 			<!-- Kha'ak ships -->
+		<ware id="ship_kha_s_soldier" name="{4837251,531310}" description="{4837251,531311}" transport="ship" volume="1" tags="ship"> <!--tags="noplayerblueprint ship"-->
+			<price min="1" average="1" max="1" />
+			<production time="900" amount="1" method="xenon" name="{20206,601}" > <!--tags="noplayerbuild"-->
+				<primary>
+					<ware ware="nividium" amount="1" />
+				</primary>
+			</production>
+			<component ref="ship_kha_s_soldier_macro" />
+			<restriction licence="generaluseship" />
+			<owner faction="khaak" />
+		</ware>
 		<ware id="ship_kha_l_ruiner" name="{4837251,533310}" description="{4837251,533311}" transport="ship" volume="1" tags="ship"> <!--tags="noplayerblueprint ship"-->
 			<price min="1" average="1" max="1" />
 			<production time="900" amount="1" method="xenon" name="{20206,601}" > <!--tags="noplayerbuild"-->
@@ -1316,9 +1327,9 @@
 
 		<!--TURRETS-->
 	<add sel="//wares">
-		<ware id="turret_kha_m_meshless" name="{20105,4804}" description="{20105,4802}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+		<ware id="turret_kha_m_defender" name="{4837252,1532110}" description="{4837252,1532111}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
 			<price min="0" average="0" max="0" />
-			<component ref="turret_kha_m_meshless_macro" amount="1" />
+			<component ref="turret_kha_m_defender_macro" amount="1" />
 			<restriction licence="militaryequipment" />
 			<use threshold="0" factions="khaak" />
 			<owner faction="khaak" />
@@ -1396,6 +1407,17 @@
 			<component ref="weapon_gen_s_repairbeam_macro" amount="1" />
 			<restriction licence="generaluseequipment" />
 			<use threshold="0" />
+		</ware>
+		<ware id="weapon_kha_s_soldier" name="{4837252,1531010}" description="{4837252,1531011}" group="weapons" transport="equipment" volume="1" tags="equipment weapon"> <!--tags="equipment noplayerblueprint weapon"-->
+			<price min="1" average="1" max="1" />
+			<production time="900" amount="1" method="xenon" name="{20206,601}" > <!--tags="noplayerbuild"-->
+				<primary>
+					<ware ware="nividium" amount="1" />
+				</primary>
+			</production>
+			<component ref="ship_kha_l_ruiner_macro" />
+			<restriction licence="generaluseship" />
+			<owner faction="khaak" />
 		</ware>
 		<ware id="weapon_xen_m_xentorp" name="{20105,2654} {1001,9020}" description="{20105,2652}" group="weapons" transport="equipment" volume="1" tags="equipment weapon">
 			<price min="1039" average="1088" max="1136" />

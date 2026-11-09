@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+	<replace sel="//macros">
+		<macros>
+			<macro name="engine_kha_s_combat_01_mk1_macro" class="engine">
+				<component ref="engine_kha_s_combat_01_mk1"/>
+				<properties>
+					<identification name="{20107,1694}" basename="{20107,1691}" shortname="{20107,1695}" makerrace="khaak" description="{20107,1692}" mk="1" />
+					<boost duration="20" recharge="150" thrust="4" acceleration="5" attack="0.25" release="0" coast="0"/>
+					<travel charge="1" thrust="19" attack="15" release="10"/>
+					<thrust forward="600" reverse="770"/>
+					<hull integrated="1" scrapware="rawkhaakscrap" />
+					<effects>
+						<traveling ref="gen_traveldrive_fx_s"/>
+					</effects>
+					<sounds>
+						<enginedetail ref="enginedetail_ship_khaak_s_01"/>
+					</sounds>
+					<decelerationcurve>
+						<point position="1.01" value="1" />
+						<point position="1.25" value="5" />
+						<point position="1.75" value="8" />
+						<point position="2.1" value="10" />
+						<point position="2.5" value="12" />
+					</decelerationcurve>
+					<strafecurve>
+						<point position="1.01" value="1" />
+						<point position="1.25" value="5" />
+						<point position="1.75" value="8" />
+						<point position="2.1" value="10" />
+						<point position="2.5" value="12" />
+					</strafecurve>
+				</properties>
+			</macro>
+		</macros>
+	</replace>
+</diff>

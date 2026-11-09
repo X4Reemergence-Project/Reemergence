@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exported on 2026-11-08 16:48:14 from Blender-->
+<components>
+	<component name="ship_kha_s_soldier" class="ship_s">
+		<source geometry="extensions\reemergence\assets\units\size_s\ship_kha_s_soldier_data"/>
+		<layers>
+			<layer>
+				<lights>
+					<omni name="xu_omni_01_01" shadow="0" r="227" g="72" b="255" intensity="0.5" specularintensity="1" range="24.2" shadowrange="24.2" lighteffect="1" trigger="0">
+						<offset>
+							<position x="9.159555" y="10.66149" z="-2.565064"/>
+						</offset>
+					</omni>
+					<omni name="xu_omni_01_02" shadow="0" r="227" g="72" b="255" intensity="0.5" specularintensity="1" range="24.2" shadowrange="24.2" lighteffect="1" trigger="0">
+						<offset>
+							<position x="-9.15956" y="10.66149" z="-2.565064"/>
+						</offset>
+					</omni>
+					<omni name="xu_omni_01_03" shadow="0" r="227" g="72" b="255" intensity="0.5" specularintensity="1" range="24.2" shadowrange="24.2" lighteffect="1" trigger="0">
+						<offset>
+							<position x="9.159555" y="-10.6615" z="-2.565064"/>
+						</offset>
+					</omni>
+					<omni name="xu_omni_01_04" shadow="0" r="227" g="72" b="255" intensity="0.5" specularintensity="1" range="24.2" shadowrange="24.2" lighteffect="1" trigger="0">
+						<offset>
+							<position x="-9.15956" y="-10.6615" z="-2.565064"/>
+						</offset>
+					</omni>
+					<omni name="xu_omni_02" shadow="0" r="240" g="155" b="255" intensity="1" specularintensity="1" range="32.5" shadowrange="32.5" lighteffect="1" trigger="0"/>
+				</lights>
+				<trailemitters>
+					<emitter name="wingtip_vortex_ship_s_01" type="wingtip_vortex_ship_s_01">
+						<offset>
+							<position x="-25.86928" y="0" z="-6.451624"/>
+						</offset>
+					</emitter>
+					<emitter name="wingtip_vortex_ship_s_02" type="wingtip_vortex_ship_s_01">
+						<offset>
+							<position x="25.8693" y="0" z="-6.451624"/>
+						</offset>
+					</emitter>
+					<emitter name="wingtip_vortex_ship_s_03" type="wingtip_vortex_ship_s_01">
+						<offset>
+							<position x="0" y="15.83884" z="-15.58926"/>
+						</offset>
+					</emitter>
+					<emitter name="wingtip_vortex_ship_s_04" type="wingtip_vortex_ship_s_01">
+						<offset>
+							<position x="0" y="-15.8388" z="-15.58926"/>
+						</offset>
+					</emitter>
+				</trailemitters>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="space" tags="ship_s ship" />
+			<connection name="position" tags="position" value="1" />
+			<connection name="con_cockpit" tags="cockpit cockpit_visible ">
+				<offset>
+					<position x="0" y="6.276038" z="1.789678"/>
+				</offset>
+			</connection>
+			<connection name="con_control01" tags="control pilot npc sit " value="-1">
+				<offset>
+					<position x="0" y="7.096049" z="-0.9371017"/>
+				</offset>
+			</connection>
+			<connection name="con_dockpos" tags="dockpos ">
+				<offset>
+					<position x="-1.4209e-06" y="-16.4066" z="16.58593"/>
+				</offset>
+			</connection>
+			<connection name="con_storage01" tags="storage ">
+				<offset>
+					<position x="0.07785034" y="5.252662" z="-3.31752"/>
+				</offset>
+			</connection>
+			<connection name="con_countermeasures_01" tags="countermeasures ">
+				<offset>
+					<position x="0" y="-15.82042" z="-15.02719"/>
+					<quaternion qx="-0.8433913" qy="0" qz="0" qw="-0.5372998"/>
+				</offset>
+			</connection>
+			<connection name="con_countermeasures_02" tags="countermeasures ">
+				<offset>
+					<position x="0" y="15.8204" z="-15.02719"/>
+					<quaternion qx="0.8660256" qy="0" qz="0" qw="-0.4999999"/>
+				</offset>
+			</connection>
+			<connection name="con_engine_01" tags="engine platformcollision small standard ">
+				<offset>
+					<position x="-8.463877" y="0" z="-12.05868" />
+					<quaternion qx="-0.1227878" qy="-0.1227878" qz="-0.6963643" qw="-0.6963643" />
+				</offset>
+			</connection>
+			<connection name="con_engine_02" tags="engine platformcollision small standard ">
+				<offset>
+					<position x="8.46388" y="0" z="-12.05868" />
+					<quaternion qx="-0.1227878" qy="0.1227878" qz="0.6963643" qw="-0.6963643" />
+				</offset>
+			</connection>
+			<connection name="con_shield_01" tags="shield small standard ">
+				<offset>
+					<position x="-0.06976318" y="-3.567032" z="-7.76886"/>
+					<quaternion qx="-1" qy="-8.74e-08" qz="0" qw="-7.54979e-08"/>
+				</offset>
+			</connection>
+			<connection name="con_shield_02" tags="shield small standard ">
+				<offset>
+					<position x="-0.06976318" y="3.56703" z="-7.76886"/>
+					<quaternion qx="-1" qy="-8.74e-08" qz="0" qw="-7.54979e-08"/>
+				</offset>
+			</connection>
+			<connection name="con_primaryweapon_01" tags="combat platformcollision small standard weapon ">
+				<offset>
+					<position x="14.8383" y="0" z="1.71376"/>
+				</offset>
+			</connection>
+			<connection name="con_primaryweapon_02" tags="combat platformcollision small standard weapon ">
+				<offset>
+					<position x="-14.8383" y="0" z="1.71376"/>
+				</offset>
+			</connection>
+			<connection name="con_primaryweapon_03" tags="combat platformcollision small soldier weapon ">
+				<offset>
+					<position x="0" y="0" z="7.508736"/>
+				</offset>
+			</connection>
+			<connection name="ConnectionForpart_main" tags="part ">
+				<parts>
+					<part name="part_main" wreck="part_main_wreck">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hullpattern_01"/>
+									<material id="2" ref="p2fx.fx_p2_gradientcolour_01"/>
+								</materials>
+							</lod>
+							<lod index="1">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hullpattern_01"/>
+									<material id="2" ref="p2fx.fx_p2_gradientcolour_01"/>
+								</materials>
+							</lod>
+							<lod index="2">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hullpattern_01"/>
+									<material id="2" ref="p2fx.fx_p2_gradientcolour_01"/>
+								</materials>
+							</lod>
+							<lod index="3">
+								<materials>
+									<material id="1" ref="p2generic.gen_p2_hullpattern_01"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="25.86641" y="16.31347" z="13.00829"/>
+							<center x="4.768372e-07" y="0" z="-2.581906"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+		</connections>
+	</component>
+</components>
