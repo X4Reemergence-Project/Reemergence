@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <macros>
 	<macro name="bullet_kha_s_soldier_macro" class="bullet">
-		<component ref="bullet_kha_m_beam_01"/>
+		<component ref="bullet_par_l_laser_01_mk1"/>
 		<properties>
-			<bullet speed="50000" lifetime="0.75" range="7000" amount="1" barrelamount="1" icon="weapon_beam_mk2" maxhits="1" ricochet="0" scale="1" attach="1" />
-			<heat initial="1000" value="200"/>
+			<bullet speed="1300" lifetime="4.25" range="5525" amount="1" barrelamount="1" icon="weapon_laser_mk1" timediff="0.05" angle="0.2" maxhits="1" ricochet="0" scale="0" attach="0" />
+			<heat value="2555" />
 			<reload time="3.75"/>
-			<damage value="1600" repair="0" shielddisruption="10">
-				<multiplier traveldrive="1.5" />
+			<damage value="500" hull="1500" >
+				<multiplier surfaceelement="1.5" />
 			</damage>
 			<effects>
-				<bigobjectimpact inside="impact_kha_m_beam_01_mk1_bigobject_inside" ref="impact_kha_m_beam_01_mk1_bigobject" />
-				<impact inside="impact_kha_m_beam_01_mk1_inside" ref="impact_kha_m_beam_01_mk1" />
-				<launch ref="muzzle_kha_m_beam_01_mk1" />
+				<bigobjectimpact inside="impact_par_l_laser_01_mk1_bigobject_inside" ref="impact_par_l_laser_01_mk1_bigobject" />
+				<impact inside="impact_par_l_laser_01_mk1_inside" ref="impact_par_l_laser_01_mk1" />
+				<launch ref="muzzle_par_l_laser_01_mk1" />
 			</effects>
-			<sounds>
-				<ambient ref="kha_m_beam"/>
-			</sounds>
 			<weapon system="weapon_standard"/>
 		</properties>
 	</macro>

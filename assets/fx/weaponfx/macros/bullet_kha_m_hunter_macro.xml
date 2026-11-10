@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+	<macro name="bullet_kha_m_hunter_macro" class="bullet">
+		<component ref="bullet_par_l_laser_01_mk1"/>
+		<properties>
+			<ammunition value="3" reload="10" />
+			<bullet speed="1300" lifetime="6" range="7800" amount="1" barrelamount="1" icon="weapon_plasma_mk1" timediff="0.05" angle="0.2" maxhits="1" ricochet="0" scale="0" attach="0" selfdestruct="0" />
+			<heat value="2275" />
+			<reload time="0.6" />
+			<damage value="500" hull="7000" shielddisruption="10" >
+				<multiplier surfaceelement="1.5" />
+			</damage>
+			<effects>
+				<bigobjectimpact inside="impact_par_l_laser_01_mk1_bigobject_inside" ref="impact_par_l_laser_01_mk1_bigobject" />
+				<impact inside="impact_par_l_laser_01_mk1_inside" ref="impact_par_l_laser_01_mk1" />
+				<launch ref="muzzle_par_l_laser_01_mk1" />
+			</effects>
+			<weapon system="weapon_standard"/>
+		</properties>
+	</macro>
+</macros>

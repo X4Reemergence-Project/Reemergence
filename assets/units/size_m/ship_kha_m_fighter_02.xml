@@ -1,10 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<diff> <!-- HIVE GUARD / WARRIOR -->
-	<add sel="//components/component[@name='ship_kha_m_fighter_02']/connections">
-		<connection name="con_primaryweapon_02" tags="combat medium platformcollision standard weapon">
-			<offset>
-				<position x="3.549e-07" y="16.45548" z="9.964773" />
-			</offset>
-		</connection>
-	</add>
+<diff> <!-- HIVE GUARD / HUNTER -->
+	<replace sel="/components/component/connections/connection[@name='con_shield_01']/@tags">medium shield advanced unhittable </replace>
+	<replace sel="/components/component/connections/connection[@name='con_primaryweapon_01']/@tags">weapon medium combat hunter </replace>
 </diff>
